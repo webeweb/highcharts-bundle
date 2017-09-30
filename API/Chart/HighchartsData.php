@@ -1,0 +1,826 @@
+<?php
+
+/*
+ * This file is part of the HighchartsBundle.
+ *
+ * (c) 2017 WBW
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace WBW\HighchartsBundle\API\Chart;
+
+use JsonSerializable;
+
+/**
+ * Highcharts data.
+ *
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package HighchartsBundle\API\Chart
+ * @version 5.0.14
+ * @final
+ */
+final class HighchartsData implements JsonSerializable {
+
+	/**
+	 * Columns.
+	 *
+	 * @var array
+	 * @since 4.0
+	 */
+	private $columns;
+
+	/**
+	 * Complete.
+	 *
+	 * @var string
+	 * @since 4.0
+	 */
+	private $complete;
+
+	/**
+	 * Csv.
+	 *
+	 * @var string
+	 * @since 4.0
+	 */
+	private $csv;
+
+	/**
+	 * Date format.
+	 *
+	 * @var string
+	 * @since 4.0
+	 */
+	private $dateFormat;
+
+	/**
+	 * Decimal point.
+	 *
+	 * @var string
+	 * @since 4.1.0
+	 */
+	private $decimalPoint = ".";
+
+	/**
+	 * End column.
+	 *
+	 * @var integer
+	 * @since 4.0
+	 */
+	private $endColumn;
+
+	/**
+	 * End row.
+	 *
+	 * @var integer
+	 * @since 4.0.4
+	 */
+	private $endRow;
+
+	/**
+	 * First row as names.
+	 *
+	 * @var boolean
+	 * @since 4.1.0
+	 */
+	private $firstRowAsNames = true;
+
+	/**
+	 * Google spreadsheet key.
+	 *
+	 * @var string
+	 * @since 4.0
+	 */
+	private $googleSpreadsheetKey;
+
+	/**
+	 * Google spreadsheet worksheet.
+	 *
+	 * @var string
+	 * @since 4.0
+	 */
+	private $googleSpreadsheetWorksheet;
+
+	/**
+	 * Item delimiter.
+	 *
+	 * @var string
+	 * @since 4.0
+	 */
+	private $itemDelimiter;
+
+	/**
+	 * Line delimiter.
+	 *
+	 * @var string
+	 * @since 4.0
+	 */
+	private $lineDelimiter = "\\n";
+
+	/**
+	 * Parse date.
+	 *
+	 * @var string
+	 * @since 4.0
+	 */
+	private $parseDate;
+
+	/**
+	 * Parsed.
+	 *
+	 * @var string
+	 * @since 4.0
+	 */
+	private $parsed;
+
+	/**
+	 * Rows.
+	 *
+	 * @var array
+	 * @since 4.0
+	 */
+	private $rows;
+
+	/**
+	 * Series mapping.
+	 *
+	 * @var array
+	 * @since 4.0.4
+	 */
+	private $seriesMapping;
+
+	/**
+	 * Start column.
+	 *
+	 * @var integer
+	 * @since 4.0
+	 */
+	private $startColumn = 0;
+
+	/**
+	 * Start row.
+	 *
+	 * @var integer
+	 * @since 4.0
+	 */
+	private $startRow = 0;
+
+	/**
+	 * Switch rows and columns.
+	 *
+	 * @var boolean
+	 * @since 4.0
+	 */
+	private $switchRowsAndColumns = false;
+
+	/**
+	 * Table.
+	 *
+	 * @var string
+	 * @since 4.0
+	 */
+	private $table;
+
+	/**
+	 * Constructor.
+	 *
+	 * @param boolean $ignoreDefaultValues Ignore the default values.
+	 */
+	public function __construct($ignoreDefaultValues = true) {
+		if ($ignoreDefaultValues === true) {
+			$this->clear();
+		}
+	}
+
+	/**
+	 * Clear.
+	 */
+	public function clear() {
+
+		// Check the columns.
+		if (!is_null($this->columns)) {
+			$this->columns = null;
+		}
+
+		// Check the complete.
+		if (!is_null($this->complete)) {
+			$this->complete = null;
+		}
+
+		// Check the csv.
+		if (!is_null($this->csv)) {
+			$this->csv = null;
+		}
+
+		// Check the date format.
+		if (!is_null($this->dateFormat)) {
+			$this->dateFormat = null;
+		}
+
+		// Check the decimal point.
+		if (!is_null($this->decimalPoint)) {
+			$this->decimalPoint = null;
+		}
+
+		// Check the end column.
+		if (!is_null($this->endColumn)) {
+			$this->endColumn = null;
+		}
+
+		// Check the end row.
+		if (!is_null($this->endRow)) {
+			$this->endRow = null;
+		}
+
+		// Check the first row as names.
+		if (!is_null($this->firstRowAsNames)) {
+			$this->firstRowAsNames = null;
+		}
+
+		// Check the google spreadsheet key.
+		if (!is_null($this->googleSpreadsheetKey)) {
+			$this->googleSpreadsheetKey = null;
+		}
+
+		// Check the google spreadsheet worksheet.
+		if (!is_null($this->googleSpreadsheetWorksheet)) {
+			$this->googleSpreadsheetWorksheet = null;
+		}
+
+		// Check the item delimiter.
+		if (!is_null($this->itemDelimiter)) {
+			$this->itemDelimiter = null;
+		}
+
+		// Check the line delimiter.
+		if (!is_null($this->lineDelimiter)) {
+			$this->lineDelimiter = null;
+		}
+
+		// Check the parse date.
+		if (!is_null($this->parseDate)) {
+			$this->parseDate = null;
+		}
+
+		// Check the parsed.
+		if (!is_null($this->parsed)) {
+			$this->parsed = null;
+		}
+
+		// Check the rows.
+		if (!is_null($this->rows)) {
+			$this->rows = null;
+		}
+
+		// Check the series mapping.
+		if (!is_null($this->seriesMapping)) {
+			$this->seriesMapping = null;
+		}
+
+		// Check the start column.
+		if (!is_null($this->startColumn)) {
+			$this->startColumn = null;
+		}
+
+		// Check the start row.
+		if (!is_null($this->startRow)) {
+			$this->startRow = null;
+		}
+
+		// Check the switch rows and columns.
+		if (!is_null($this->switchRowsAndColumns)) {
+			$this->switchRowsAndColumns = null;
+		}
+
+		// Check the table.
+		if (!is_null($this->table)) {
+			$this->table = null;
+		}
+	}
+
+	/**
+	 * Get the columns.
+	 *
+	 * @return array Returns the columns.
+	 */
+	public function getColumns() {
+		return $this->columns;
+	}
+
+	/**
+	 * Get the complete.
+	 *
+	 * @return string Returns the complete.
+	 */
+	public function getComplete() {
+		return $this->complete;
+	}
+
+	/**
+	 * Get the csv.
+	 *
+	 * @return string Returns the csv.
+	 */
+	public function getCsv() {
+		return $this->csv;
+	}
+
+	/**
+	 * Get the date format.
+	 *
+	 * @return string Returns the date format.
+	 */
+	public function getDateFormat() {
+		return $this->dateFormat;
+	}
+
+	/**
+	 * Get the decimal point.
+	 *
+	 * @return string Returns the decimal point.
+	 */
+	public function getDecimalPoint() {
+		return $this->decimalPoint;
+	}
+
+	/**
+	 * Get the end column.
+	 *
+	 * @return integer Returns the end column.
+	 */
+	public function getEndColumn() {
+		return $this->endColumn;
+	}
+
+	/**
+	 * Get the end row.
+	 *
+	 * @return integer Returns the end row.
+	 */
+	public function getEndRow() {
+		return $this->endRow;
+	}
+
+	/**
+	 * Get the first row as names.
+	 *
+	 * @return boolean Returns the first row as names.
+	 */
+	public function getFirstRowAsNames() {
+		return $this->firstRowAsNames;
+	}
+
+	/**
+	 * Get the google spreadsheet key.
+	 *
+	 * @return string Returns the google spreadsheet key.
+	 */
+	public function getGoogleSpreadsheetKey() {
+		return $this->googleSpreadsheetKey;
+	}
+
+	/**
+	 * Get the google spreadsheet worksheet.
+	 *
+	 * @return string Returns the google spreadsheet worksheet.
+	 */
+	public function getGoogleSpreadsheetWorksheet() {
+		return $this->googleSpreadsheetWorksheet;
+	}
+
+	/**
+	 * Get the item delimiter.
+	 *
+	 * @return string Returns the item delimiter.
+	 */
+	public function getItemDelimiter() {
+		return $this->itemDelimiter;
+	}
+
+	/**
+	 * Get the line delimiter.
+	 *
+	 * @return string Returns the line delimiter.
+	 */
+	public function getLineDelimiter() {
+		return $this->lineDelimiter;
+	}
+
+	/**
+	 * Get the parse date.
+	 *
+	 * @return string Returns the parse date.
+	 */
+	public function getParseDate() {
+		return $this->parseDate;
+	}
+
+	/**
+	 * Get the parsed.
+	 *
+	 * @return string Returns the parsed.
+	 */
+	public function getParsed() {
+		return $this->parsed;
+	}
+
+	/**
+	 * Get the rows.
+	 *
+	 * @return array Returns the rows.
+	 */
+	public function getRows() {
+		return $this->rows;
+	}
+
+	/**
+	 * Get the series mapping.
+	 *
+	 * @return array Returns the series mapping.
+	 */
+	public function getSeriesMapping() {
+		return $this->seriesMapping;
+	}
+
+	/**
+	 * Get the start column.
+	 *
+	 * @return integer Returns the start column.
+	 */
+	public function getStartColumn() {
+		return $this->startColumn;
+	}
+
+	/**
+	 * Get the start row.
+	 *
+	 * @return integer Returns the start row.
+	 */
+	public function getStartRow() {
+		return $this->startRow;
+	}
+
+	/**
+	 * Get the switch rows and columns.
+	 *
+	 * @return boolean Returns the switch rows and columns.
+	 */
+	public function getSwitchRowsAndColumns() {
+		return $this->switchRowsAndColumns;
+	}
+
+	/**
+	 * Get the table.
+	 *
+	 * @return string Returns the table.
+	 */
+	public function getTable() {
+		return $this->table;
+	}
+
+	/**
+	 * Serialize this instance.
+	 *
+	 * @return array Returns an array representing this instance.
+	 */
+	public function jsonSerialize() {
+		return $this->toArray();
+	}
+
+	/**
+	 * Set the columns.
+	 *
+	 * @param array $columns The columns.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setColumns(array $columns = null) {
+		$this->columns = $columns;
+		return $this;
+	}
+
+	/**
+	 * Set the complete.
+	 *
+	 * @param string $complete The complete.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setComplete($complete) {
+		$this->complete = $complete;
+		return $this;
+	}
+
+	/**
+	 * Set the csv.
+	 *
+	 * @param string $csv The csv.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setCsv($csv) {
+		$this->csv = $csv;
+		return $this;
+	}
+
+	/**
+	 * Set the date format.
+	 *
+	 * @param string $dateFormat The date format.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setDateFormat($dateFormat) {
+		$this->dateFormat = $dateFormat;
+		return $this;
+	}
+
+	/**
+	 * Set the decimal point.
+	 *
+	 * @param string $decimalPoint The decimal point.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setDecimalPoint($decimalPoint) {
+		$this->decimalPoint = $decimalPoint;
+		return $this;
+	}
+
+	/**
+	 * Set the end column.
+	 *
+	 * @param integer $endColumn The end column.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setEndColumn($endColumn) {
+		$this->endColumn = $endColumn;
+		return $this;
+	}
+
+	/**
+	 * Set the end row.
+	 *
+	 * @param integer $endRow The end row.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setEndRow($endRow) {
+		$this->endRow = $endRow;
+		return $this;
+	}
+
+	/**
+	 * Set the first row as names.
+	 *
+	 * @param boolean $firstRowAsNames The first row as names.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setFirstRowAsNames($firstRowAsNames) {
+		$this->firstRowAsNames = $firstRowAsNames;
+		return $this;
+	}
+
+	/**
+	 * Set the google spreadsheet key.
+	 *
+	 * @param string $googleSpreadsheetKey The google spreadsheet key.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setGoogleSpreadsheetKey($googleSpreadsheetKey) {
+		$this->googleSpreadsheetKey = $googleSpreadsheetKey;
+		return $this;
+	}
+
+	/**
+	 * Set the google spreadsheet worksheet.
+	 *
+	 * @param string $googleSpreadsheetWorksheet The google spreadsheet worksheet.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setGoogleSpreadsheetWorksheet($googleSpreadsheetWorksheet) {
+		$this->googleSpreadsheetWorksheet = $googleSpreadsheetWorksheet;
+		return $this;
+	}
+
+	/**
+	 * Set the item delimiter.
+	 *
+	 * @param string $itemDelimiter The item delimiter.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setItemDelimiter($itemDelimiter) {
+		$this->itemDelimiter = $itemDelimiter;
+		return $this;
+	}
+
+	/**
+	 * Set the line delimiter.
+	 *
+	 * @param string $lineDelimiter The line delimiter.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setLineDelimiter($lineDelimiter) {
+		$this->lineDelimiter = $lineDelimiter;
+		return $this;
+	}
+
+	/**
+	 * Set the parse date.
+	 *
+	 * @param string $parseDate The parse date.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setParseDate($parseDate) {
+		$this->parseDate = $parseDate;
+		return $this;
+	}
+
+	/**
+	 * Set the parsed.
+	 *
+	 * @param string $parsed The parsed.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setParsed($parsed) {
+		$this->parsed = $parsed;
+		return $this;
+	}
+
+	/**
+	 * Set the rows.
+	 *
+	 * @param array $rows The rows.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setRows(array $rows = null) {
+		$this->rows = $rows;
+		return $this;
+	}
+
+	/**
+	 * Set the series mapping.
+	 *
+	 * @param array $seriesMapping The series mapping.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setSeriesMapping(array $seriesMapping = null) {
+		$this->seriesMapping = $seriesMapping;
+		return $this;
+	}
+
+	/**
+	 * Set the start column.
+	 *
+	 * @param integer $startColumn The start column.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setStartColumn($startColumn) {
+		$this->startColumn = $startColumn;
+		return $this;
+	}
+
+	/**
+	 * Set the start row.
+	 *
+	 * @param integer $startRow The start row.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setStartRow($startRow) {
+		$this->startRow = $startRow;
+		return $this;
+	}
+
+	/**
+	 * Set the switch rows and columns.
+	 *
+	 * @param boolean $switchRowsAndColumns The switch rows and columns.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setSwitchRowsAndColumns($switchRowsAndColumns) {
+		$this->switchRowsAndColumns = $switchRowsAndColumns;
+		return $this;
+	}
+
+	/**
+	 * Set the table.
+	 *
+	 * @param string $table The table.
+	 * @return HighchartsData Returns the highcharts data.
+	 */
+	public function setTable($table) {
+		$this->table = $table;
+		return $this;
+	}
+
+	/**
+	 * Convert into an array representing this instance.
+	 *
+	 * @return array Returns an array representing this instance.
+	 */
+	public function toArray() {
+
+		// Initialize the output.
+		$output = [];
+
+		// Check the columns.
+		if (!is_null($this->columns)) {
+			$output["columns"] = $this->columns;
+		}
+
+		// Check the complete.
+		if (!is_null($this->complete)) {
+			$output["complete"] = $this->complete;
+		}
+
+		// Check the csv.
+		if (!is_null($this->csv)) {
+			$output["csv"] = $this->csv;
+		}
+
+		// Check the date format.
+		if (!is_null($this->dateFormat)) {
+			$output["dateFormat"] = $this->dateFormat;
+		}
+
+		// Check the decimal point.
+		if (!is_null($this->decimalPoint)) {
+			$output["decimalPoint"] = $this->decimalPoint;
+		}
+
+		// Check the end column.
+		if (!is_null($this->endColumn)) {
+			$output["endColumn"] = $this->endColumn;
+		}
+
+		// Check the end row.
+		if (!is_null($this->endRow)) {
+			$output["endRow"] = $this->endRow;
+		}
+
+		// Check the first row as names.
+		if (!is_null($this->firstRowAsNames)) {
+			$output["firstRowAsNames"] = $this->firstRowAsNames;
+		}
+
+		// Check the google spreadsheet key.
+		if (!is_null($this->googleSpreadsheetKey)) {
+			$output["googleSpreadsheetKey"] = $this->googleSpreadsheetKey;
+		}
+
+		// Check the google spreadsheet worksheet.
+		if (!is_null($this->googleSpreadsheetWorksheet)) {
+			$output["googleSpreadsheetWorksheet"] = $this->googleSpreadsheetWorksheet;
+		}
+
+		// Check the item delimiter.
+		if (!is_null($this->itemDelimiter)) {
+			$output["itemDelimiter"] = $this->itemDelimiter;
+		}
+
+		// Check the line delimiter.
+		if (!is_null($this->lineDelimiter)) {
+			$output["lineDelimiter"] = $this->lineDelimiter;
+		}
+
+		// Check the parse date.
+		if (!is_null($this->parseDate)) {
+			$output["parseDate"] = $this->parseDate;
+		}
+
+		// Check the parsed.
+		if (!is_null($this->parsed)) {
+			$output["parsed"] = $this->parsed;
+		}
+
+		// Check the rows.
+		if (!is_null($this->rows)) {
+			$output["rows"] = $this->rows;
+		}
+
+		// Check the series mapping.
+		if (!is_null($this->seriesMapping)) {
+			$output["seriesMapping"] = $this->seriesMapping;
+		}
+
+		// Check the start column.
+		if (!is_null($this->startColumn)) {
+			$output["startColumn"] = $this->startColumn;
+		}
+
+		// Check the start row.
+		if (!is_null($this->startRow)) {
+			$output["startRow"] = $this->startRow;
+		}
+
+		// Check the switch rows and columns.
+		if (!is_null($this->switchRowsAndColumns)) {
+			$output["switchRowsAndColumns"] = $this->switchRowsAndColumns;
+		}
+
+		// Check the table.
+		if (!is_null($this->table)) {
+			$output["table"] = $this->table;
+		}
+
+		// Return the output.
+		return $output;
+	}
+}
+
