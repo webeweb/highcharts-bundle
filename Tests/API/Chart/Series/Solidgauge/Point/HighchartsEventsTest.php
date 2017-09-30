@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts events test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\Series\Solidgauge\Point
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Series\Solidgauge\Point
  * @version 5.0.14
  */
 final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {

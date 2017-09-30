@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Line\Point\HighchartsEvents;
  * Highcharts point.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Line
+ * @package WBW\HighchartsBundle\API\Chart\Series\Line
  * @version 5.0.14
  * @final
  */

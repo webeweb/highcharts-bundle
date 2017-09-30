@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts button options.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Navigation
+ * @package WBW\HighchartsBundle\API\Chart\Navigation
  * @version 5.0.14
  * @final
  */

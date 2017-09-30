@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Funnel\States\HighchartsHover;
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Funnel
+ * @package WBW\HighchartsBundle\API\Chart\Series\Funnel
  * @version 5.0.14
  * @final
  */

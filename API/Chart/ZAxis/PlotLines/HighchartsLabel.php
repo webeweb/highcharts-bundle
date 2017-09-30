@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts label.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\ZAxis\PlotLines
+ * @package WBW\HighchartsBundle\API\Chart\ZAxis\PlotLines
  * @version 5.0.14
  * @final
  */

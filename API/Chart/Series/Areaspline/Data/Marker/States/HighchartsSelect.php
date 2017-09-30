@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts select.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Areaspline\Data\Marker\States
+ * @package WBW\HighchartsBundle\API\Chart\Series\Areaspline\Data\Marker\States
  * @version 5.0.14
  * @final
  */

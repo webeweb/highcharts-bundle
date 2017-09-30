@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\HighchartsStates;
  * Highcharts marker.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Scatter\Data
+ * @package WBW\HighchartsBundle\API\Chart\Series\Scatter\Data
  * @version 5.0.14
  * @final
  */

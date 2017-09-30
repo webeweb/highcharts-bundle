@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Treemap\Data\HighchartsEvents;
  * Highcharts data.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Treemap
+ * @package WBW\HighchartsBundle\API\Chart\Series\Treemap
  * @version 5.0.14
  * @final
  */

@@ -21,7 +21,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsTooltip;
  * Highcharts boxplot.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series
+ * @package WBW\HighchartsBundle\API\Chart\Series
  * @version 5.0.14
  * @final
  */

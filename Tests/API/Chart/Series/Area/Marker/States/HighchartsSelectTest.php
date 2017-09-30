@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts select test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\Series\Area\Marker\States
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Series\Area\Marker\States
  * @version 5.0.14
  */
 final class HighchartsSelectTest extends PHPUnit_Framework_TestCase {

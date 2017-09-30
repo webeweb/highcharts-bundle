@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts position.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Credits
+ * @package WBW\HighchartsBundle\API\Chart\Credits
  * @version 5.0.14
  * @final
  */

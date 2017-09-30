@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Heatmap\States\HighchartsHover;
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Heatmap
+ * @package WBW\HighchartsBundle\API\Chart\Series\Heatmap
  * @version 5.0.14
  * @final
  */

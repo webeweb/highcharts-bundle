@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Solidgauge\Data\HighchartsEvents;
  * Highcharts data.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Solidgauge
+ * @package WBW\HighchartsBundle\API\Chart\Series\Solidgauge
  * @version 5.0.14
  * @final
  */

@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\Point\HighchartsEvents;
  * Highcharts point.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Treemap
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap
  * @version 5.0.14
  * @final
  */

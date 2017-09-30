@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts position.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Chart\ResetZoomButton
+ * @package WBW\HighchartsBundle\API\Chart\Chart\ResetZoomButton
  * @version 5.0.14
  * @final
  */

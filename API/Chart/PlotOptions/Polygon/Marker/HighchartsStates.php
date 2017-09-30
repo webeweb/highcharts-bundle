@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\States\HighchartsS
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker
  * @version 5.0.14
  * @final
  */

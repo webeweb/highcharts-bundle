@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\States\Hover\HighchartsMar
  * Highcharts hover.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Spline\States
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\States
  * @version 5.0.14
  * @final
  */

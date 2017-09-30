@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\States\HighchartsHover;
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Errorbar
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar
  * @version 5.0.14
  * @final
  */

@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts tooltip.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Pyramid
+ * @package WBW\HighchartsBundle\API\Chart\Series\Pyramid
  * @version 5.0.14
  * @final
  */

@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Columnrange\Point\HighchartsEvent
  * Highcharts point.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Columnrange
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Columnrange
  * @version 5.0.14
  * @final
  */

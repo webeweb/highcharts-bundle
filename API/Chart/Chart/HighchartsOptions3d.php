@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame;
  * Highcharts options3d.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Chart
+ * @package WBW\HighchartsBundle\API\Chart\Chart
  * @version 5.0.14
  * @final
  */

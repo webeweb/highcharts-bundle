@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Series\States\Hover\HighchartsMar
  * Highcharts hover.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Series\States
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Series\States
  * @version 5.0.14
  * @final
  */

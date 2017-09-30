@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts bottom.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Chart\Options3d\Frame
+ * @package WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame
  * @version 5.0.14
  * @final
  */

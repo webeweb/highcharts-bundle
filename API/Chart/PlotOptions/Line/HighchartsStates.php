@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Line\States\HighchartsHover;
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Line
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Line
  * @version 5.0.14
  * @final
  */

@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts data test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\Series\Bar
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Series\Bar
  * @version 5.0.14
  */
 final class HighchartsDataTest extends PHPUnit_Framework_TestCase {

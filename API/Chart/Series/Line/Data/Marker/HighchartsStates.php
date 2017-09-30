@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Line\Data\Marker\States\HighchartsSele
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Line\Data\Marker
+ * @package WBW\HighchartsBundle\API\Chart\Series\Line\Data\Marker
  * @version 5.0.14
  * @final
  */

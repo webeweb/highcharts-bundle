@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Boxplot\States\HighchartsHover;
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Boxplot
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Boxplot
  * @version 5.0.14
  * @final
  */

@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts context button test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\Exporting\Buttons
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Exporting\Buttons
  * @version 5.0.14
  */
 final class HighchartsContextButtonTest extends PHPUnit_Framework_TestCase {

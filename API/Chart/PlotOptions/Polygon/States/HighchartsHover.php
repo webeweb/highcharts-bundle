@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\States\Hover\HighchartsMa
  * Highcharts hover.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Polygon\States
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\States
  * @version 5.0.14
  * @final
  */

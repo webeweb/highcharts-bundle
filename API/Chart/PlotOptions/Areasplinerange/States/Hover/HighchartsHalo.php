@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts halo.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Areasplinerange\States\Hover
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Areasplinerange\States\Hover
  * @version 5.0.14
  * @final
  */

@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Areaspline\Data\Marker\HighchartsState
  * Highcharts marker.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Areaspline\Data
+ * @package WBW\HighchartsBundle\API\Chart\Series\Areaspline\Data
  * @version 5.0.14
  * @final
  */

@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts global test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Options
+ * @package WBW\HighchartsBundle\Tests\API\Options
  * @version 5.0.14
  */
 final class HighchartsGlobalTest extends PHPUnit_Framework_TestCase {

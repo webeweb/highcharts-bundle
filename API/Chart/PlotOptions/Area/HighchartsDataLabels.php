@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts data labels.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Area
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Area
  * @version 5.0.14
  * @final
  */

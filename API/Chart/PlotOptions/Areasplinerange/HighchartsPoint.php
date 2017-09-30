@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Areasplinerange\Point\HighchartsE
  * Highcharts point.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Areasplinerange
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Areasplinerange
  * @version 5.0.14
  * @final
  */

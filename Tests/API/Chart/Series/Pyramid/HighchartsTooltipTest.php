@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts tooltip test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\Series\Pyramid
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Series\Pyramid
  * @version 5.0.14
  */
 final class HighchartsTooltipTest extends PHPUnit_Framework_TestCase {

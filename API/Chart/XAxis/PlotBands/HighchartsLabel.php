@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts label.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\XAxis\PlotBands
+ * @package WBW\HighchartsBundle\API\Chart\XAxis\PlotBands
  * @version 5.0.14
  * @final
  */

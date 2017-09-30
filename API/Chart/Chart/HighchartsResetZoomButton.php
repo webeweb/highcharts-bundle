@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition;
  * Highcharts reset zoom button.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Chart
+ * @package WBW\HighchartsBundle\API\Chart\Chart
  * @version 5.0.14
  * @final
  */

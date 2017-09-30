@@ -20,7 +20,7 @@ use WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton;
  * Highcharts chart.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart
+ * @package WBW\HighchartsBundle\API\Chart
  * @version 5.0.14
  * @final
  */

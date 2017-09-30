@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\States\HighchartsHover;
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Pyramid
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid
  * @version 5.0.14
  * @final
  */

@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\States\Hover\Highchart
  * Highcharts hover.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Areaspline\States
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\States
  * @version 5.0.14
  * @final
  */

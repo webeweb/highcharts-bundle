@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\Point\HighchartsEvents
  * Highcharts point.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Solidgauge
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Solidgauge
  * @version 5.0.14
  * @final
  */

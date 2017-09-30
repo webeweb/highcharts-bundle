@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts items.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Labels
+ * @package WBW\HighchartsBundle\API\Chart\Labels
  * @version 5.0.14
  * @final
  */

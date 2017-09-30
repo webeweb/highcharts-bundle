@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts funnel test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\PlotOptions
+ * @package WBW\HighchartsBundle\Tests\API\Chart\PlotOptions
  * @version 5.0.14
  */
 final class HighchartsFunnelTest extends PHPUnit_Framework_TestCase {

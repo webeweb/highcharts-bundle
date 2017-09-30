@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts levels test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\PlotOptions\Treemap
+ * @package WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Treemap
  * @version 5.0.14
  */
 final class HighchartsLevelsTest extends PHPUnit_Framework_TestCase {

@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts zones test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\Series\Columnrange
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Series\Columnrange
  * @version 5.0.14
  */
 final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {

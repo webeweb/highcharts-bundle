@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts events.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Arearange\Data
+ * @package WBW\HighchartsBundle\API\Chart\Series\Arearange\Data
  * @version 5.0.14
  * @final
  */

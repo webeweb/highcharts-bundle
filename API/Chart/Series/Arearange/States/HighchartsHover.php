@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Arearange\States\Hover\HighchartsMarke
  * Highcharts hover.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Arearange\States
+ * @package WBW\HighchartsBundle\API\Chart\Series\Arearange\States
  * @version 5.0.14
  * @final
  */

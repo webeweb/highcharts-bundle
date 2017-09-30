@@ -22,7 +22,7 @@ use WBW\HighchartsBundle\API\Chart\YAxis\HighchartsTitle;
  * Highcharts y axis.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart
+ * @package WBW\HighchartsBundle\API\Chart
  * @version 5.0.14
  * @final
  */

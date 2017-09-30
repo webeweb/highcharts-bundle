@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts halo.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Column\States\Hover
+ * @package WBW\HighchartsBundle\API\Chart\Series\Column\States\Hover
  * @version 5.0.14
  * @final
  */

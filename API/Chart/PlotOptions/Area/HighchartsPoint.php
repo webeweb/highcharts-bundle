@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Area\Point\HighchartsEvents;
  * Highcharts point.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Area
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Area
  * @version 5.0.14
  * @final
  */

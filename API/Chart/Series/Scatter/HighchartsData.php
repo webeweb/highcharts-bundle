@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Scatter\Data\HighchartsMarker;
  * Highcharts data.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Scatter
+ * @package WBW\HighchartsBundle\API\Chart\Series\Scatter
  * @version 5.0.14
  * @final
  */

@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Spline\Marker\HighchartsStates;
  * Highcharts marker.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Spline
+ * @package WBW\HighchartsBundle\API\Chart\Series\Spline
  * @version 5.0.14
  * @final
  */

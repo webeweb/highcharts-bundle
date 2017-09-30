@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Polygon\States\HighchartsHover;
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Polygon
+ * @package WBW\HighchartsBundle\API\Chart\Series\Polygon
  * @version 5.0.14
  * @final
  */

@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts plot lines test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\ZAxis
+ * @package WBW\HighchartsBundle\Tests\API\Chart\ZAxis
  * @version 5.0.14
  */
 final class HighchartsPlotLinesTest extends PHPUnit_Framework_TestCase {

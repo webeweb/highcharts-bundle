@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Areaspline\Marker\States\HighchartsSel
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Areaspline\Marker
+ * @package WBW\HighchartsBundle\API\Chart\Series\Areaspline\Marker
  * @version 5.0.14
  * @final
  */

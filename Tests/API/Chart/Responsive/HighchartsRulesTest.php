@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts rules test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\Responsive
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Responsive
  * @version 5.0.14
  */
 final class HighchartsRulesTest extends PHPUnit_Framework_TestCase {

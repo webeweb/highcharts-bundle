@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts hover test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\Series\Areaspline\Data\Marker\States
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Series\Areaspline\Data\Marker\States
  * @version 5.0.14
  */
 final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {

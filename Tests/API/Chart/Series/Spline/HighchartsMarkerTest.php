@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts marker test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\Series\Spline
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Series\Spline
  * @version 5.0.14
  */
 final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {

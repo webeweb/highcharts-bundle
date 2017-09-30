@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition;
  * Highcharts rules.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Responsive
+ * @package WBW\HighchartsBundle\API\Chart\Responsive
  * @version 5.0.14
  * @final
  */

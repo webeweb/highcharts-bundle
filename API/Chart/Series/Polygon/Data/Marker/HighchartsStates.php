@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Polygon\Data\Marker\States\HighchartsS
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Polygon\Data\Marker
+ * @package WBW\HighchartsBundle\API\Chart\Series\Polygon\Data\Marker
  * @version 5.0.14
  * @final
  */

@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\States\HighchartsHover;
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Spline
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Spline
  * @version 5.0.14
  * @final
  */

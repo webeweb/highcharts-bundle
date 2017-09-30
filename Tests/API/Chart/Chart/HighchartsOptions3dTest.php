@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts options3d test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\Chart
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Chart
  * @version 5.0.14
  */
 final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {

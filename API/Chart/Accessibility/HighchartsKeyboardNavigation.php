@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts keyboard navigation.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Accessibility
+ * @package WBW\HighchartsBundle\API\Chart\Accessibility
  * @version 5.0.14
  * @final
  */

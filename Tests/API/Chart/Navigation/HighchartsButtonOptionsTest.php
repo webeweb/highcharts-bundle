@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts button options test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\Navigation
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Navigation
  * @version 5.0.14
  */
 final class HighchartsButtonOptionsTest extends PHPUnit_Framework_TestCase {

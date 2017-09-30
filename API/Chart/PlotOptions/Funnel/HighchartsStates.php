@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover;
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Funnel
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel
  * @version 5.0.14
  * @final
  */

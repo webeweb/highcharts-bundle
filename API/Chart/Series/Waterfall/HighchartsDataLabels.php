@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts data labels.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Waterfall
+ * @package WBW\HighchartsBundle\API\Chart\Series\Waterfall
  * @version 5.0.14
  * @final
  */

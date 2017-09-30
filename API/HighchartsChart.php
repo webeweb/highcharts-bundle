@@ -35,7 +35,7 @@ use WBW\HighchartsBundle\API\Chart\HighchartsZAxis;
  * Highcharts chart.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API
+ * @package WBW\HighchartsBundle\API
  * @version 5.0.14
  * @final
  */

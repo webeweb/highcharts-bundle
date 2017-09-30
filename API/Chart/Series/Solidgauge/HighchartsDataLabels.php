@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts data labels.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Solidgauge
+ * @package WBW\HighchartsBundle\API\Chart\Series\Solidgauge
  * @version 5.0.14
  * @final
  */

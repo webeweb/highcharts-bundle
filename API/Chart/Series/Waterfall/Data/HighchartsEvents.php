@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts events.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Waterfall\Data
+ * @package WBW\HighchartsBundle\API\Chart\Series\Waterfall\Data
  * @version 5.0.14
  * @final
  */

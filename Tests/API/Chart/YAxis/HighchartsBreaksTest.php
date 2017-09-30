@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts breaks test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\YAxis
+ * @package WBW\HighchartsBundle\Tests\API\Chart\YAxis
  * @version 5.0.14
  */
 final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {

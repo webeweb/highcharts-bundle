@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Waterfall\States\Hover\HighchartsMarke
  * Highcharts hover.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Waterfall\States
+ * @package WBW\HighchartsBundle\API\Chart\Series\Waterfall\States
  * @version 5.0.14
  * @final
  */

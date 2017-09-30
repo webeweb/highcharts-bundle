@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts navigation.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Legend
+ * @package WBW\HighchartsBundle\API\Chart\Legend
  * @version 5.0.14
  * @final
  */

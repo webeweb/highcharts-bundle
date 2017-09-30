@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Column\States\HighchartsHover;
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Column
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Column
  * @version 5.0.14
  * @final
  */

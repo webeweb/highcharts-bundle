@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\States\Hover\HighchartsM
  * Highcharts hover.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Errorbar\States
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\States
  * @version 5.0.14
  * @final
  */

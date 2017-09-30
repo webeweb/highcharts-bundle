@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Spline\States\Hover\HighchartsMarker;
  * Highcharts hover.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Spline\States
+ * @package WBW\HighchartsBundle\API\Chart\Series\Spline\States
  * @version 5.0.14
  * @final
  */

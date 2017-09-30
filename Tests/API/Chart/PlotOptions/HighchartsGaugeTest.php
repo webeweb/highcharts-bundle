@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts gauge test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\PlotOptions
+ * @package WBW\HighchartsBundle\Tests\API\Chart\PlotOptions
  * @version 5.0.14
  */
 final class HighchartsGaugeTest extends PHPUnit_Framework_TestCase {

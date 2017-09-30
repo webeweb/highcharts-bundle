@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\States\HighchartsHover;
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Pie
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Pie
  * @version 5.0.14
  * @final
  */

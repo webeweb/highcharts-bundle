@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Columnrange\States\Hover\Highchar
  * Highcharts hover.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Columnrange\States
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Columnrange\States
  * @version 5.0.14
  * @final
  */

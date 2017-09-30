@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton;
  * Highcharts buttons.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Exporting
+ * @package WBW\HighchartsBundle\API\Chart\Exporting
  * @version 5.0.14
  * @final
  */

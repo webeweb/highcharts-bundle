@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Arearange\Data\HighchartsEvents;
  * Highcharts data.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Arearange
+ * @package WBW\HighchartsBundle\API\Chart\Series\Arearange
  * @version 5.0.14
  * @final
  */

@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Pie\Data\HighchartsEvents;
  * Highcharts data.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Pie
+ * @package WBW\HighchartsBundle\API\Chart\Series\Pie
  * @version 5.0.14
  * @final
  */

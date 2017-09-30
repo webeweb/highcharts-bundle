@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts dial.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Gauge
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge
  * @version 5.0.14
  * @final
  */

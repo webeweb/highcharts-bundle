@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts marker.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Scatter\States\Hover
+ * @package WBW\HighchartsBundle\API\Chart\Series\Scatter\States\Hover
  * @version 5.0.14
  * @final
  */

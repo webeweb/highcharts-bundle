@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\XAxis\PlotBands\HighchartsLabel;
  * Highcharts plot bands.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\XAxis
+ * @package WBW\HighchartsBundle\API\Chart\XAxis
  * @version 5.0.14
  * @final
  */

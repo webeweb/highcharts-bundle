@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts background.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Pane
+ * @package WBW\HighchartsBundle\API\Chart\Pane
  * @version 5.0.14
  * @final
  */

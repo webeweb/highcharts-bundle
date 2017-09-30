@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Gauge\Point\HighchartsEvents;
  * Highcharts point.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Gauge
+ * @package WBW\HighchartsBundle\API\Chart\Series\Gauge
  * @version 5.0.14
  * @final
  */

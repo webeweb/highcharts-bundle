@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts position test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\NoData
+ * @package WBW\HighchartsBundle\Tests\API\Chart\NoData
  * @version 5.0.14
  */
 final class HighchartsPositionTest extends PHPUnit_Framework_TestCase {

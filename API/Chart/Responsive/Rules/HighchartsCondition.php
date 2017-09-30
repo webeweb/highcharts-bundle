@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts condition.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Responsive\Rules
+ * @package WBW\HighchartsBundle\API\Chart\Responsive\Rules
  * @version 5.0.14
  * @final
  */

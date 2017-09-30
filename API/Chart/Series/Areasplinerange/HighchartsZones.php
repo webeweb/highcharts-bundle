@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts zones.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Areasplinerange
+ * @package WBW\HighchartsBundle\API\Chart\Series\Areasplinerange
  * @version 5.0.14
  * @final
  */

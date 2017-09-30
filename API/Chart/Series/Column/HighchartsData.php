@@ -18,7 +18,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Column\Data\HighchartsEvents;
  * Highcharts data.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Column
+ * @package WBW\HighchartsBundle\API\Chart\Series\Column
  * @version 5.0.14
  * @final
  */

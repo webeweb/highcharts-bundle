@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Area\Marker\States\HighchartsSelect;
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Area\Marker
+ * @package WBW\HighchartsBundle\API\Chart\Series\Area\Marker
  * @version 5.0.14
  * @final
  */

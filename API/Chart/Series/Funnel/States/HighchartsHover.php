@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\Series\Funnel\States\Hover\HighchartsMarker;
  * Highcharts hover.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Funnel\States
+ * @package WBW\HighchartsBundle\API\Chart\Series\Funnel\States
  * @version 5.0.14
  * @final
  */

@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Area\Marker\States\HighchartsSele
  * Highcharts states.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\PlotOptions\Area\Marker
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Area\Marker
  * @version 5.0.14
  * @final
  */

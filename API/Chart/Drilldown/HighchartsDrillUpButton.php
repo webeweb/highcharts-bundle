@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts drill up button.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Drilldown
+ * @package WBW\HighchartsBundle\API\Chart\Drilldown
  * @version 5.0.14
  * @final
  */

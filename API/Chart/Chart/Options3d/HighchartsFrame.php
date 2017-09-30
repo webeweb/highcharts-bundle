@@ -21,7 +21,7 @@ use WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsTop;
  * Highcharts frame.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Chart\Options3d
+ * @package WBW\HighchartsBundle\API\Chart\Chart\Options3d
  * @version 5.0.14
  * @final
  */

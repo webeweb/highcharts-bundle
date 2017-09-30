@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts label test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\ZAxis\PlotBands
+ * @package WBW\HighchartsBundle\Tests\API\Chart\ZAxis\PlotBands
  * @version 5.0.14
  */
 final class HighchartsLabelTest extends PHPUnit_Framework_TestCase {

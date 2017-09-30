@@ -19,7 +19,7 @@ use WBW\HighchartsBundle\API\Options\HighchartsLang;
  * Highcharts options.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API
+ * @package WBW\HighchartsBundle\API
  * @version 5.0.14
  * @final
  */

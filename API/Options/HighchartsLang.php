@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts lang.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Options
+ * @package WBW\HighchartsBundle\API\Options
  * @version 5.0.14
  * @final
  */

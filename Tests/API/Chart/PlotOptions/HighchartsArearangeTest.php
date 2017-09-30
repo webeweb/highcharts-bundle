@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts arearange test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\PlotOptions
+ * @package WBW\HighchartsBundle\Tests\API\Chart\PlotOptions
  * @version 5.0.14
  */
 final class HighchartsArearangeTest extends PHPUnit_Framework_TestCase {

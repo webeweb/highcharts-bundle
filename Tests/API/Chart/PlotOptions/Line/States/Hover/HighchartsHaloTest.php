@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts halo test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\PlotOptions\Line\States\Hover
+ * @package WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Line\States\Hover
  * @version 5.0.14
  */
 final class HighchartsHaloTest extends PHPUnit_Framework_TestCase {

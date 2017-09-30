@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
  * Highcharts drill up button test.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\Tests\API\Chart\Drilldown
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Drilldown
  * @version 5.0.14
  */
 final class HighchartsDrillUpButtonTest extends PHPUnit_Framework_TestCase {

@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts hover.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Series\Treemap\States
+ * @package WBW\HighchartsBundle\API\Chart\Series\Treemap\States
  * @version 5.0.14
  * @final
  */

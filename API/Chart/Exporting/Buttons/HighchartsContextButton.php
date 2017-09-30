@@ -17,7 +17,7 @@ use JsonSerializable;
  * Highcharts context button.
  *
  * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package HighchartsBundle\API\Chart\Exporting\Buttons
+ * @package WBW\HighchartsBundle\API\Chart\Exporting\Buttons
  * @version 5.0.14
  * @final
  */
