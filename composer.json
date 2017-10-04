@@ -3,12 +3,12 @@
 	"type": "symfony-bundle",
 	"description": "Integrate HighchartsJS with Symfony2",
 	"keywords": ["webeweb", "bundle", "symfony", "highcharts"],
-	"homepage": "http://github.com/webeweb/WBWHighchartssBundle",
+	"homepage": "http://github.com/webeweb/WBWHighchartsBundle",
 	"license": "LGPL",
 	"authors": [
 		{
 			"name": "webeweb",
-			"homepage": "http://github.com/webeweb/WBWHighchartssBundle"
+			"homepage": "http://github.com/webeweb/WBWHighchartsBundle"
 		}
 	],
 	"require": {
