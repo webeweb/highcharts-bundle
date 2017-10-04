@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -96,6 +96,8 @@ final class HighchartsMarker implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -304,7 +306,15 @@ final class HighchartsMarker implements JsonSerializable {
 	 * @return HighchartsMarker Returns the highcharts marker.
 	 */
 	public function setSymbol($symbol) {
-		$this->symbol = $symbol;
+		switch ($symbol) {
+			case "circle":
+			case "diamond":
+			case "square":
+			case "triangle":
+			case "triangle-down":
+				$this->symbol = $symbol;
+				break;
+		}
 		return $this;
 	}
 
@@ -372,5 +382,5 @@ final class HighchartsMarker implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

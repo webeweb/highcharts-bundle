@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -58,7 +58,7 @@ final class HighchartsLevels implements JsonSerializable {
 	/**
 	 * Data labels.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 4.1.0
 	 */
 	private $dataLabels;
@@ -100,6 +100,8 @@ final class HighchartsLevels implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -183,7 +185,7 @@ final class HighchartsLevels implements JsonSerializable {
 	/**
 	 * Get the data labels.
 	 *
-	 * @return Object Returns the data labels.
+	 * @return array Returns the data labels.
 	 */
 	public function getDataLabels() {
 		return $this->dataLabels;
@@ -272,10 +274,10 @@ final class HighchartsLevels implements JsonSerializable {
 	/**
 	 * Set the data labels.
 	 *
-	 * @param Object $dataLabels The data labels.
+	 * @param array $dataLabels The data labels.
 	 * @return HighchartsLevels Returns the highcharts levels.
 	 */
-	public function setDataLabels($dataLabels) {
+	public function setDataLabels(array $dataLabels = null) {
 		$this->dataLabels = $dataLabels;
 		return $this;
 	}
@@ -287,7 +289,14 @@ final class HighchartsLevels implements JsonSerializable {
 	 * @return HighchartsLevels Returns the highcharts levels.
 	 */
 	public function setLayoutAlgorithm($layoutAlgorithm) {
-		$this->layoutAlgorithm = $layoutAlgorithm;
+		switch ($layoutAlgorithm) {
+			case "sliceAndDice":
+			case "squarified":
+			case "strip":
+			case "stripes":
+				$this->layoutAlgorithm = $layoutAlgorithm;
+				break;
+		}
 		return $this;
 	}
 
@@ -298,7 +307,12 @@ final class HighchartsLevels implements JsonSerializable {
 	 * @return HighchartsLevels Returns the highcharts levels.
 	 */
 	public function setLayoutStartingDirection($layoutStartingDirection) {
-		$this->layoutStartingDirection = $layoutStartingDirection;
+		switch ($layoutStartingDirection) {
+			case "horizontal":
+			case "vertical":
+				$this->layoutStartingDirection = $layoutStartingDirection;
+				break;
+		}
 		return $this;
 	}
 
@@ -366,5 +380,5 @@ final class HighchartsLevels implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -319,6 +319,8 @@ final class HighchartsLegend implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -878,7 +880,13 @@ final class HighchartsLegend implements JsonSerializable {
 	 * @return HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setAlign($align) {
-		$this->align = $align;
+		switch ($align) {
+			case "center":
+			case "left":
+			case "right":
+				$this->align = $align;
+				break;
+		}
 		return $this;
 	}
 
@@ -1054,7 +1062,12 @@ final class HighchartsLegend implements JsonSerializable {
 	 * @return HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setLayout($layout) {
-		$this->layout = $layout;
+		switch ($layout) {
+			case "horizontal":
+			case "vertical":
+				$this->layout = $layout;
+				break;
+		}
 		return $this;
 	}
 
@@ -1242,7 +1255,13 @@ final class HighchartsLegend implements JsonSerializable {
 	 * @return HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setVerticalAlign($verticalAlign) {
-		$this->verticalAlign = $verticalAlign;
+		switch ($verticalAlign) {
+			case "bottom":
+			case "middle":
+			case "top":
+				$this->verticalAlign = $verticalAlign;
+				break;
+		}
 		return $this;
 	}
 
@@ -1472,5 +1491,5 @@ final class HighchartsLegend implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

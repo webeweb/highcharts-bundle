@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -196,6 +196,8 @@ final class HighchartsData implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -529,7 +531,17 @@ final class HighchartsData implements JsonSerializable {
 	 * @return HighchartsData Returns the highcharts data.
 	 */
 	public function setDateFormat($dateFormat) {
-		$this->dateFormat = $dateFormat;
+		switch ($dateFormat) {
+			case null:
+			case "YYYY-mm-dd":
+			case "dd/mm/YY":
+			case "dd/mm/YYYY":
+			case "dd/mm/YYYY":
+			case "mm/dd/YY":
+			case "mm/dd/YYYY":
+				$this->dateFormat = $dateFormat;
+				break;
+		}
 		return $this;
 	}
 
@@ -822,5 +834,5 @@ final class HighchartsData implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

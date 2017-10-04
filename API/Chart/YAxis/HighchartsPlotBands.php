@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -56,7 +56,7 @@ final class HighchartsPlotBands implements JsonSerializable {
 	/**
 	 * Events.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 1.2
 	 */
 	private $events;
@@ -134,6 +134,8 @@ final class HighchartsPlotBands implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -242,7 +244,7 @@ final class HighchartsPlotBands implements JsonSerializable {
 	/**
 	 * Get the events.
 	 *
-	 * @return Object Returns the events.
+	 * @return array Returns the events.
 	 */
 	public function getEvents() {
 		return $this->events;
@@ -386,10 +388,10 @@ final class HighchartsPlotBands implements JsonSerializable {
 	/**
 	 * Set the events.
 	 *
-	 * @param Object $events The events.
+	 * @param array $events The events.
 	 * @return HighchartsPlotBands Returns the highcharts plot bands.
 	 */
-	public function setEvents($events) {
+	public function setEvents(array $events = null) {
 		$this->events = $events;
 		return $this;
 	}
@@ -560,5 +562,5 @@ final class HighchartsPlotBands implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

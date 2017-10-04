@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -12,10 +12,8 @@
 namespace WBW\HighchartsBundle\API\Chart\Series;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Series\Solidgauge\HighchartsDataLabels;
 use WBW\HighchartsBundle\API\Chart\Series\Solidgauge\HighchartsEvents;
 use WBW\HighchartsBundle\API\Chart\Series\Solidgauge\HighchartsPoint;
-use WBW\HighchartsBundle\API\Chart\Series\Solidgauge\HighchartsTooltip;
 
 /**
  * Highcharts solidgauge.
@@ -74,7 +72,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
 	/**
 	 * Data labels.
 	 *
-	 * @var HighchartsDataLabels
+	 * @var array
 	 * @since 2.3.0
 	 */
 	private $dataLabels;
@@ -253,7 +251,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
 	/**
 	 * Tooltip.
 	 *
-	 * @var HighchartsTooltip
+	 * @var array
 	 * @since 2.3
 	 */
 	private $tooltip;
@@ -314,6 +312,8 @@ final class HighchartsSolidgauge implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -349,7 +349,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
 
 		// Check the data labels.
 		if (!is_null($this->dataLabels)) {
-			$this->dataLabels->clear();
+			$this->dataLabels = null;
 		}
 
 		// Check the description.
@@ -464,7 +464,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
 
 		// Check the tooltip.
 		if (!is_null($this->tooltip)) {
-			$this->tooltip->clear();
+			$this->tooltip = null;
 		}
 
 		// Check the type.
@@ -555,7 +555,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
 	/**
 	 * Get the data labels.
 	 *
-	 * @return HighchartsDataLabels Returns the data labels.
+	 * @return array Returns the data labels.
 	 */
 	public function getDataLabels() {
 		return $this->dataLabels;
@@ -762,7 +762,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
 	/**
 	 * Get the tooltip.
 	 *
-	 * @return HighchartsTooltip Returns the tooltip.
+	 * @return array Returns the tooltip.
 	 */
 	public function getTooltip() {
 		return $this->tooltip;
@@ -832,16 +832,6 @@ final class HighchartsSolidgauge implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new data labels.
-	 *
-	 * @return HighchartsDataLabels Returns the data labels.
-	 */
-	public function newDataLabels() {
-		$this->dataLabels = new HighchartsDataLabels();
-		return $this->dataLabels;
-	}
-
-	/**
 	 * Create a new events.
 	 *
 	 * @return HighchartsEvents Returns the events.
@@ -859,16 +849,6 @@ final class HighchartsSolidgauge implements JsonSerializable {
 	public function newPoint() {
 		$this->point = new HighchartsPoint();
 		return $this->point;
-	}
-
-	/**
-	 * Create a new tooltip.
-	 *
-	 * @return HighchartsTooltip Returns the tooltip.
-	 */
-	public function newTooltip() {
-		$this->tooltip = new HighchartsTooltip();
-		return $this->tooltip;
 	}
 
 	/**
@@ -922,7 +902,16 @@ final class HighchartsSolidgauge implements JsonSerializable {
 	 * @return HighchartsSolidgauge Returns the highcharts solidgauge.
 	 */
 	public function setCursor($cursor) {
-		$this->cursor = $cursor;
+		switch ($cursor) {
+			case null:
+			case "crosshair":
+			case "default":
+			case "help":
+			case "none":
+			case "pointer":
+				$this->cursor = $cursor;
+				break;
+		}
 		return $this;
 	}
 
@@ -940,10 +929,10 @@ final class HighchartsSolidgauge implements JsonSerializable {
 	/**
 	 * Set the data labels.
 	 *
-	 * @param HighchartsDataLabels $dataLabels The data labels.
+	 * @param array $dataLabels The data labels.
 	 * @return HighchartsSolidgauge Returns the highcharts solidgauge.
 	 */
-	public function setDataLabels(HighchartsDataLabels $dataLabels = null) {
+	public function setDataLabels(array $dataLabels = null) {
 		$this->dataLabels = $dataLabels;
 		return $this;
 	}
@@ -999,7 +988,12 @@ final class HighchartsSolidgauge implements JsonSerializable {
 	 * @return HighchartsSolidgauge Returns the highcharts solidgauge.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
-		$this->findNearestPointBy = $findNearestPointBy;
+		switch ($findNearestPointBy) {
+			case "x":
+			case "xy":
+				$this->findNearestPointBy = $findNearestPointBy;
+				break;
+		}
 		return $this;
 	}
 
@@ -1065,7 +1059,12 @@ final class HighchartsSolidgauge implements JsonSerializable {
 	 * @return HighchartsSolidgauge Returns the highcharts solidgauge.
 	 */
 	public function setLinecap($linecap) {
-		$this->linecap = $linecap;
+		switch ($linecap) {
+			case "round":
+			case "square":
+				$this->linecap = $linecap;
+				break;
+		}
 		return $this;
 	}
 
@@ -1120,7 +1119,12 @@ final class HighchartsSolidgauge implements JsonSerializable {
 	 * @return HighchartsSolidgauge Returns the highcharts solidgauge.
 	 */
 	public function setRounded($rounded) {
-		$this->rounded = $rounded;
+		switch ($rounded) {
+			case false:
+			case true:
+				$this->rounded = $rounded;
+				break;
+		}
 		return $this;
 	}
 
@@ -1193,10 +1197,10 @@ final class HighchartsSolidgauge implements JsonSerializable {
 	/**
 	 * Set the tooltip.
 	 *
-	 * @param HighchartsTooltip $tooltip The tooltip.
+	 * @param array $tooltip The tooltip.
 	 * @return HighchartsSolidgauge Returns the highcharts solidgauge.
 	 */
-	public function setTooltip(HighchartsTooltip $tooltip = null) {
+	public function setTooltip(array $tooltip = null) {
 		$this->tooltip = $tooltip;
 		return $this;
 	}
@@ -1208,7 +1212,27 @@ final class HighchartsSolidgauge implements JsonSerializable {
 	 * @return HighchartsSolidgauge Returns the highcharts solidgauge.
 	 */
 	public function setType($type) {
-		$this->type = $type;
+		switch ($type) {
+			case null:
+			case "area":
+			case "arearange":
+			case "areaspline":
+			case "areasplinerange":
+			case "boxplot":
+			case "bubble":
+			case "column":
+			case "columnrange":
+			case "errorbar":
+			case "funnel":
+			case "gauge":
+			case "line":
+			case "pie":
+			case "scatter":
+			case "spline":
+			case "waterfall":
+				$this->type = $type;
+				break;
+		}
 		return $this;
 	}
 
@@ -1309,7 +1333,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
 
 		// Check the data labels.
 		if (!is_null($this->dataLabels)) {
-			$output["dataLabels"] = $this->dataLabels->toArray();
+			$output["dataLabels"] = $this->dataLabels;
 		}
 
 		// Check the description.
@@ -1424,7 +1448,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
 
 		// Check the tooltip.
 		if (!is_null($this->tooltip)) {
-			$output["tooltip"] = $this->tooltip->toArray();
+			$output["tooltip"] = $this->tooltip;
 		}
 
 		// Check the type.
@@ -1460,5 +1484,5 @@ final class HighchartsSolidgauge implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Treemap;
 
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsLevels;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsLevels;
 
 /**
  * Highcharts levels test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsLevelsTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsLevels(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -40,35 +55,35 @@ final class HighchartsLevelsTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81"];
 		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with border dash style');
 
-		$obj->setBorderWidth(89);
+		$obj->setBorderWidth(44);
 
-		$res3 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 89];
+		$res3 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 44];
 		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with border width');
 
 		$obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
-		$res4 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 89, "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
+		$res4 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 44, "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
 		$this->assertEquals($res4, $obj->toArray(), 'The method toArray() does not return the expected array with color');
 
-		$obj->setDataLabels("d4d108fe6659fac79420fa083ef3adf2");
+		$obj->setDataLabels(["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"]);
 
-		$res5 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 89, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"];
+		$res5 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 44, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"]];
 		$this->assertEquals($res5, $obj->toArray(), 'The method toArray() does not return the expected array with data labels');
 
-		$obj->setLayoutAlgorithm("6edfdba422db433d39b1aca27fe07c46");
+		$obj->setLayoutAlgorithm("strip");
 
-		$res6 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 89, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => "d4d108fe6659fac79420fa083ef3adf2", "layoutAlgorithm" => "6edfdba422db433d39b1aca27fe07c46"];
+		$res6 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 44, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "layoutAlgorithm" => "strip"];
 		$this->assertEquals($res6, $obj->toArray(), 'The method toArray() does not return the expected array with layout algorithm');
 
-		$obj->setLayoutStartingDirection("017174c02e64d1035636c0e0ca66286e");
+		$obj->setLayoutStartingDirection("horizontal");
 
-		$res7 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 89, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => "d4d108fe6659fac79420fa083ef3adf2", "layoutAlgorithm" => "6edfdba422db433d39b1aca27fe07c46", "layoutStartingDirection" => "017174c02e64d1035636c0e0ca66286e"];
+		$res7 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 44, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "layoutAlgorithm" => "strip", "layoutStartingDirection" => "horizontal"];
 		$this->assertEquals($res7, $obj->toArray(), 'The method toArray() does not return the expected array with layout starting direction');
 
-		$obj->setLevel(90);
+		$obj->setLevel(62);
 
-		$res8 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 89, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => "d4d108fe6659fac79420fa083ef3adf2", "layoutAlgorithm" => "6edfdba422db433d39b1aca27fe07c46", "layoutStartingDirection" => "017174c02e64d1035636c0e0ca66286e", "level" => 90];
+		$res8 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 44, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "layoutAlgorithm" => "strip", "layoutStartingDirection" => "horizontal", "level" => 62];
 		$this->assertEquals($res8, $obj->toArray(), 'The method toArray() does not return the expected array with level');
 	}
-}
 
+}

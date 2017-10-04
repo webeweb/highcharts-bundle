@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\Chart;
 
-use WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents;
 
 /**
  * Highcharts events test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsEvents(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -85,5 +100,5 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 		$res11 = ["addSeries" => "2a12e68b66ba3a0ab168c1ab1d3a0588", "afterPrint" => "6e9249730f6d40e35aed0e957a7d82ea", "beforePrint" => "74c828520c5583314685b27d6963c154", "click" => "a8affc088cbca89fa20dbd98c91362e4", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "drillup" => "e4d1aecbb5d06c101b0038fd3c0a2f16", "drillupall" => "af30f9f8132eb100a93f2cf9fd5a80ee", "load" => "ec4d1eb36b22d19728e9d1d23ca84d1c", "redraw" => "daa55f45b87ef593dd961238ee16d83f", "render" => "9e5f0bb330344d580b9e30d338d6ab6d", "selection" => "ef5714e0519bfaa645cdff7d28843b70"];
 		$this->assertEquals($res11, $obj->toArray(), 'The method toArray() does not return the expected array with selection');
 	}
-}
 
+}

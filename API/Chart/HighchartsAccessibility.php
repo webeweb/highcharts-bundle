@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation;
 
 /**
  * Highcharts accessibility.
@@ -43,7 +42,7 @@ final class HighchartsAccessibility implements JsonSerializable {
 	/**
 	 * Keyboard navigation.
 	 *
-	 * @var HighchartsKeyboardNavigation
+	 * @var array
 	 * @since 5.0.0
 	 */
 	private $keyboardNavigation;
@@ -117,6 +116,8 @@ final class HighchartsAccessibility implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -132,7 +133,7 @@ final class HighchartsAccessibility implements JsonSerializable {
 
 		// Check the keyboard navigation.
 		if (!is_null($this->keyboardNavigation)) {
-			$this->keyboardNavigation->clear();
+			$this->keyboardNavigation = null;
 		}
 
 		// Check the on table anchor click.
@@ -192,7 +193,7 @@ final class HighchartsAccessibility implements JsonSerializable {
 	/**
 	 * Get the keyboard navigation.
 	 *
-	 * @return HighchartsKeyboardNavigation Returns the keyboard navigation.
+	 * @return array Returns the keyboard navigation.
 	 */
 	public function getKeyboardNavigation() {
 		return $this->keyboardNavigation;
@@ -271,16 +272,6 @@ final class HighchartsAccessibility implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new keyboard navigation.
-	 *
-	 * @return HighchartsKeyboardNavigation Returns the keyboard navigation.
-	 */
-	public function newKeyboardNavigation() {
-		$this->keyboardNavigation = new HighchartsKeyboardNavigation();
-		return $this->keyboardNavigation;
-	}
-
-	/**
 	 * Set the describe single series.
 	 *
 	 * @param boolean $describeSingleSeries The describe single series.
@@ -305,10 +296,10 @@ final class HighchartsAccessibility implements JsonSerializable {
 	/**
 	 * Set the keyboard navigation.
 	 *
-	 * @param HighchartsKeyboardNavigation $keyboardNavigation The keyboard navigation.
+	 * @param array $keyboardNavigation The keyboard navigation.
 	 * @return HighchartsAccessibility Returns the highcharts accessibility.
 	 */
-	public function setKeyboardNavigation(HighchartsKeyboardNavigation $keyboardNavigation = null) {
+	public function setKeyboardNavigation(array $keyboardNavigation = null) {
 		$this->keyboardNavigation = $keyboardNavigation;
 		return $this;
 	}
@@ -412,7 +403,7 @@ final class HighchartsAccessibility implements JsonSerializable {
 
 		// Check the keyboard navigation.
 		if (!is_null($this->keyboardNavigation)) {
-			$output["keyboardNavigation"] = $this->keyboardNavigation->toArray();
+			$output["keyboardNavigation"] = $this->keyboardNavigation;
 		}
 
 		// Check the on table anchor click.
@@ -453,5 +444,5 @@ final class HighchartsAccessibility implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

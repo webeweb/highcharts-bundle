@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart;
 
-use WBW\HighchartsBundle\API\Chart\HighchartsNoData;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\HighchartsNoData;
 
 /**
  * Highcharts no data test.
@@ -24,19 +24,34 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsNoDataTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsNoData(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
 		$obj = new HighchartsNoData(false);
 
-		$res = ["style" => ["fontSize" => "12px", "fontWeight" => "bold", "color" => "#666666"], "useHTML" => false];
+		$res = ["position" => ["x" => 0, "y" => 0, "align" => "center", "verticalAlign" => "middle"], "style" => ["fontSize" => "12px", "fontWeight" => "bold", "color" => "#666666"], "useHTML" => false];
 		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
 
-		$obj->setAttr("815be97df65d6c4b510cd07189c5347a");
+		$obj->setAttr(["attr" => "815be97df65d6c4b510cd07189c5347a"]);
 
-		$res1 = ["style" => ["fontSize" => "12px", "fontWeight" => "bold", "color" => "#666666"], "useHTML" => false, "attr" => "815be97df65d6c4b510cd07189c5347a"];
+		$res1 = ["position" => ["x" => 0, "y" => 0, "align" => "center", "verticalAlign" => "middle"], "style" => ["fontSize" => "12px", "fontWeight" => "bold", "color" => "#666666"], "useHTML" => false, "attr" => ["attr" => "815be97df65d6c4b510cd07189c5347a"]];
 		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with attr');
 	}
-}
 
+}

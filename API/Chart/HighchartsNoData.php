@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\NoData\HighchartsPosition;
 
 /**
  * Highcharts no data.
@@ -27,7 +26,7 @@ final class HighchartsNoData implements JsonSerializable {
 	/**
 	 * Attr.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 3.0.8
 	 */
 	private $attr;
@@ -35,10 +34,10 @@ final class HighchartsNoData implements JsonSerializable {
 	/**
 	 * Position.
 	 *
-	 * @var HighchartsPosition
+	 * @var array
 	 * @since 3.0.8
 	 */
-	private $position;
+	private $position = ["x" => 0, "y" => 0, "align" => "center", "verticalAlign" => "middle"];
 
 	/**
 	 * Style.
@@ -69,6 +68,8 @@ final class HighchartsNoData implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -79,7 +80,7 @@ final class HighchartsNoData implements JsonSerializable {
 
 		// Check the position.
 		if (!is_null($this->position)) {
-			$this->position->clear();
+			$this->position = null;
 		}
 
 		// Check the style.
@@ -96,7 +97,7 @@ final class HighchartsNoData implements JsonSerializable {
 	/**
 	 * Get the attr.
 	 *
-	 * @return Object Returns the attr.
+	 * @return array Returns the attr.
 	 */
 	public function getAttr() {
 		return $this->attr;
@@ -105,7 +106,7 @@ final class HighchartsNoData implements JsonSerializable {
 	/**
 	 * Get the position.
 	 *
-	 * @return HighchartsPosition Returns the position.
+	 * @return array Returns the position.
 	 */
 	public function getPosition() {
 		return $this->position;
@@ -139,22 +140,12 @@ final class HighchartsNoData implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new position.
-	 *
-	 * @return HighchartsPosition Returns the position.
-	 */
-	public function newPosition() {
-		$this->position = new HighchartsPosition();
-		return $this->position;
-	}
-
-	/**
 	 * Set the attr.
 	 *
-	 * @param Object $attr The attr.
+	 * @param array $attr The attr.
 	 * @return HighchartsNoData Returns the highcharts no data.
 	 */
-	public function setAttr($attr) {
+	public function setAttr(array $attr = null) {
 		$this->attr = $attr;
 		return $this;
 	}
@@ -162,10 +153,10 @@ final class HighchartsNoData implements JsonSerializable {
 	/**
 	 * Set the position.
 	 *
-	 * @param HighchartsPosition $position The position.
+	 * @param array $position The position.
 	 * @return HighchartsNoData Returns the highcharts no data.
 	 */
-	public function setPosition(HighchartsPosition $position = null) {
+	public function setPosition(array $position = null) {
 		$this->position = $position;
 		return $this;
 	}
@@ -209,7 +200,7 @@ final class HighchartsNoData implements JsonSerializable {
 
 		// Check the position.
 		if (!is_null($this->position)) {
-			$output["position"] = $this->position->toArray();
+			$output["position"] = $this->position;
 		}
 
 		// Check the style.
@@ -225,5 +216,5 @@ final class HighchartsNoData implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

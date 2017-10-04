@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -12,11 +12,9 @@
 namespace WBW\HighchartsBundle\API\Chart\PlotOptions;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Areasplinerange\HighchartsDataLabels;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\Areasplinerange\HighchartsEvents;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\Areasplinerange\HighchartsPoint;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\Areasplinerange\HighchartsStates;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Areasplinerange\HighchartsTooltip;
 
 /**
  * Highcharts areasplinerange.
@@ -106,7 +104,7 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 	/**
 	 * Data labels.
 	 *
-	 * @var HighchartsDataLabels
+	 * @var array
 	 * @since 2.3.0
 	 */
 	private $dataLabels;
@@ -326,7 +324,7 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 	/**
 	 * Tooltip.
 	 *
-	 * @var HighchartsTooltip
+	 * @var array
 	 * @since 2.3
 	 */
 	private $tooltip;
@@ -383,6 +381,8 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -438,7 +438,7 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 
 		// Check the data labels.
 		if (!is_null($this->dataLabels)) {
-			$this->dataLabels->clear();
+			$this->dataLabels = null;
 		}
 
 		// Check the description.
@@ -583,7 +583,7 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 
 		// Check the tooltip.
 		if (!is_null($this->tooltip)) {
-			$this->tooltip->clear();
+			$this->tooltip = null;
 		}
 
 		// Check the track by area.
@@ -705,7 +705,7 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 	/**
 	 * Get the data labels.
 	 *
-	 * @return HighchartsDataLabels Returns the data labels.
+	 * @return array Returns the data labels.
 	 */
 	public function getDataLabels() {
 		return $this->dataLabels;
@@ -966,7 +966,7 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 	/**
 	 * Get the tooltip.
 	 *
-	 * @return HighchartsTooltip Returns the tooltip.
+	 * @return array Returns the tooltip.
 	 */
 	public function getTooltip() {
 		return $this->tooltip;
@@ -1027,16 +1027,6 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new data labels.
-	 *
-	 * @return HighchartsDataLabels Returns the data labels.
-	 */
-	public function newDataLabels() {
-		$this->dataLabels = new HighchartsDataLabels();
-		return $this->dataLabels;
-	}
-
-	/**
 	 * Create a new events.
 	 *
 	 * @return HighchartsEvents Returns the events.
@@ -1064,16 +1054,6 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 	public function newStates() {
 		$this->states = new HighchartsStates();
 		return $this->states;
-	}
-
-	/**
-	 * Create a new tooltip.
-	 *
-	 * @return HighchartsTooltip Returns the tooltip.
-	 */
-	public function newTooltip() {
-		$this->tooltip = new HighchartsTooltip();
-		return $this->tooltip;
 	}
 
 	/**
@@ -1171,7 +1151,16 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 	 * @return HighchartsAreasplinerange Returns the highcharts areasplinerange.
 	 */
 	public function setCursor($cursor) {
-		$this->cursor = $cursor;
+		switch ($cursor) {
+			case null:
+			case "crosshair":
+			case "default":
+			case "help":
+			case "none":
+			case "pointer":
+				$this->cursor = $cursor;
+				break;
+		}
 		return $this;
 	}
 
@@ -1182,17 +1171,31 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 	 * @return HighchartsAreasplinerange Returns the highcharts areasplinerange.
 	 */
 	public function setDashStyle($dashStyle) {
-		$this->dashStyle = $dashStyle;
+		switch ($dashStyle) {
+			case "Dash":
+			case "DashDot":
+			case "Dot":
+			case "LongDash":
+			case "LongDashDot":
+			case "LongDashDotDot":
+			case "ShortDash":
+			case "ShortDashDot":
+			case "ShortDashDotDot":
+			case "ShortDot":
+			case "Solid":
+				$this->dashStyle = $dashStyle;
+				break;
+		}
 		return $this;
 	}
 
 	/**
 	 * Set the data labels.
 	 *
-	 * @param HighchartsDataLabels $dataLabels The data labels.
+	 * @param array $dataLabels The data labels.
 	 * @return HighchartsAreasplinerange Returns the highcharts areasplinerange.
 	 */
-	public function setDataLabels(HighchartsDataLabels $dataLabels = null) {
+	public function setDataLabels(array $dataLabels = null) {
 		$this->dataLabels = $dataLabels;
 		return $this;
 	}
@@ -1270,7 +1273,12 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 	 * @return HighchartsAreasplinerange Returns the highcharts areasplinerange.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
-		$this->findNearestPointBy = $findNearestPointBy;
+		switch ($findNearestPointBy) {
+			case "x":
+			case "xy":
+				$this->findNearestPointBy = $findNearestPointBy;
+				break;
+		}
 		return $this;
 	}
 
@@ -1325,7 +1333,12 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 	 * @return HighchartsAreasplinerange Returns the highcharts areasplinerange.
 	 */
 	public function setLinecap($linecap) {
-		$this->linecap = $linecap;
+		switch ($linecap) {
+			case "round":
+			case "square":
+				$this->linecap = $linecap;
+				break;
+		}
 		return $this;
 	}
 
@@ -1402,7 +1415,14 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 	 * @return HighchartsAreasplinerange Returns the highcharts areasplinerange.
 	 */
 	public function setPointIntervalUnit($pointIntervalUnit) {
-		$this->pointIntervalUnit = $pointIntervalUnit;
+		switch ($pointIntervalUnit) {
+			case null:
+			case "day":
+			case "month":
+			case "year":
+				$this->pointIntervalUnit = $pointIntervalUnit;
+				break;
+		}
 		return $this;
 	}
 
@@ -1413,7 +1433,13 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 	 * @return HighchartsAreasplinerange Returns the highcharts areasplinerange.
 	 */
 	public function setPointPlacement($pointPlacement) {
-		$this->pointPlacement = $pointPlacement;
+		switch ($pointPlacement) {
+			case null:
+			case "between":
+			case "on":
+				$this->pointPlacement = $pointPlacement;
+				break;
+		}
 		return $this;
 	}
 
@@ -1508,10 +1534,10 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 	/**
 	 * Set the tooltip.
 	 *
-	 * @param HighchartsTooltip $tooltip The tooltip.
+	 * @param array $tooltip The tooltip.
 	 * @return HighchartsAreasplinerange Returns the highcharts areasplinerange.
 	 */
-	public function setTooltip(HighchartsTooltip $tooltip = null) {
+	public function setTooltip(array $tooltip = null) {
 		$this->tooltip = $tooltip;
 		return $this;
 	}
@@ -1633,7 +1659,7 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 
 		// Check the data labels.
 		if (!is_null($this->dataLabels)) {
-			$output["dataLabels"] = $this->dataLabels->toArray();
+			$output["dataLabels"] = $this->dataLabels;
 		}
 
 		// Check the description.
@@ -1778,7 +1804,7 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 
 		// Check the tooltip.
 		if (!is_null($this->tooltip)) {
-			$output["tooltip"] = $this->tooltip->toArray();
+			$output["tooltip"] = $this->tooltip;
 		}
 
 		// Check the track by area.
@@ -1809,5 +1835,5 @@ final class HighchartsAreasplinerange implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Bubble\Marker\States;
 
-use WBW\HighchartsBundle\API\Chart\Series\Bubble\Marker\States\HighchartsSelect;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\Series\Bubble\Marker\States\HighchartsSelect;
 
 /**
  * Highcharts select test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsSelectTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsSelect(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -38,10 +53,10 @@ final class HighchartsSelectTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["enabled" => true, "lineColor" => "#000000", "lineWidth" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
 		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with fill color');
 
-		$obj->setRadius(19);
+		$obj->setRadius(91);
 
-		$res2 = ["enabled" => true, "lineColor" => "#000000", "lineWidth" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "radius" => 19];
+		$res2 = ["enabled" => true, "lineColor" => "#000000", "lineWidth" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "radius" => 91];
 		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with radius');
 	}
-}
 
+}

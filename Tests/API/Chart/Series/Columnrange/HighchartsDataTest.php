@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,9 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Columnrange;
 
-use WBW\HighchartsBundle\API\Chart\Series\Columnrange\HighchartsData;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\Series\Columnrange\HighchartsData;
+use WBW\HighchartsBundle\API\Chart\Series\Columnrange\Data\HighchartsEvents;
 
 /**
  * Highcharts data test.
@@ -24,7 +25,35 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsData(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
+	 * Tests the newEvents() method.
+	 *
+	 * @return void.
+	 */
+	public function testNewEvents() {
+
+		$obj = new HighchartsData(false);
+
+		$res = $obj->newEvents();
+		$this->assertInstanceOf(HighchartsEvents::class, $res, 'The method newEvents() does not return the expected class');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -43,55 +72,60 @@ final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
 		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with color');
 
-		$obj->setColorIndex(1);
+		$obj->setColorIndex(80);
 
-		$res3 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 1];
+		$res3 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 80];
 		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with color index');
 
-		$obj->setDataLabels("d4d108fe6659fac79420fa083ef3adf2");
+		$obj->setDataLabels(["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"]);
 
-		$res4 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 1, "dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"];
+		$res4 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 80, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"]];
 		$this->assertEquals($res4, $obj->toArray(), 'The method toArray() does not return the expected array with data labels');
 
 		$obj->setDescription("67daf92c833c41c95db874e18fcb2786");
 
-		$res5 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 1, "dataLabels" => "d4d108fe6659fac79420fa083ef3adf2", "description" => "67daf92c833c41c95db874e18fcb2786"];
+		$res5 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 80, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786"];
 		$this->assertEquals($res5, $obj->toArray(), 'The method toArray() does not return the expected array with description');
 
 		$obj->setDrilldown("e3fd48c72943315f737d8a814fda4fd1");
 
-		$res6 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 1, "dataLabels" => "d4d108fe6659fac79420fa083ef3adf2", "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1"];
+		$res6 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 80, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1"];
 		$this->assertEquals($res6, $obj->toArray(), 'The method toArray() does not return the expected array with drilldown');
 
-		$obj->setHigh(37);
+		$obj->newEvents();
 
-		$res7 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 1, "dataLabels" => "d4d108fe6659fac79420fa083ef3adf2", "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "high" => 37];
-		$this->assertEquals($res7, $obj->toArray(), 'The method toArray() does not return the expected array with high');
+		$res7 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 80, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => []];
+		$this->assertEquals($res7, $obj->toArray(), 'The method toArray() does not return the expected array with events');
+
+		$obj->setHigh(69);
+
+		$res8 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 80, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 69];
+		$this->assertEquals($res8, $obj->toArray(), 'The method toArray() does not return the expected array with high');
 
 		$obj->setId("b80bb7740288fda1f201890375a60c8f");
 
-		$res8 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 1, "dataLabels" => "d4d108fe6659fac79420fa083ef3adf2", "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "high" => 37, "id" => "b80bb7740288fda1f201890375a60c8f"];
-		$this->assertEquals($res8, $obj->toArray(), 'The method toArray() does not return the expected array with id');
+		$res9 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 80, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 69, "id" => "b80bb7740288fda1f201890375a60c8f"];
+		$this->assertEquals($res9, $obj->toArray(), 'The method toArray() does not return the expected array with id');
 
-		$obj->setLabelrank(87);
+		$obj->setLabelrank(24);
 
-		$res9 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 1, "dataLabels" => "d4d108fe6659fac79420fa083ef3adf2", "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "high" => 37, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 87];
-		$this->assertEquals($res9, $obj->toArray(), 'The method toArray() does not return the expected array with labelrank');
+		$res10 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 80, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 69, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 24];
+		$this->assertEquals($res10, $obj->toArray(), 'The method toArray() does not return the expected array with labelrank');
 
-		$obj->setLow(57);
+		$obj->setLow(88);
 
-		$res10 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 1, "dataLabels" => "d4d108fe6659fac79420fa083ef3adf2", "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "high" => 37, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 87, "low" => 57];
-		$this->assertEquals($res10, $obj->toArray(), 'The method toArray() does not return the expected array with low');
+		$res11 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 80, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 69, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 24, "low" => 88];
+		$this->assertEquals($res11, $obj->toArray(), 'The method toArray() does not return the expected array with low');
 
 		$obj->setName("b068931cc450442b63f5b3d276ea4297");
 
-		$res11 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 1, "dataLabels" => "d4d108fe6659fac79420fa083ef3adf2", "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "high" => 37, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 87, "low" => 57, "name" => "b068931cc450442b63f5b3d276ea4297"];
-		$this->assertEquals($res11, $obj->toArray(), 'The method toArray() does not return the expected array with name');
+		$res12 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 80, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 69, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 24, "low" => 88, "name" => "b068931cc450442b63f5b3d276ea4297"];
+		$this->assertEquals($res12, $obj->toArray(), 'The method toArray() does not return the expected array with name');
 
-		$obj->setX(20);
+		$obj->setX(55);
 
-		$res12 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 1, "dataLabels" => "d4d108fe6659fac79420fa083ef3adf2", "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "high" => 37, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 87, "low" => 57, "name" => "b068931cc450442b63f5b3d276ea4297", "x" => 20];
-		$this->assertEquals($res12, $obj->toArray(), 'The method toArray() does not return the expected array with x');
+		$res13 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 80, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 69, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 24, "low" => 88, "name" => "b068931cc450442b63f5b3d276ea4297", "x" => 55];
+		$this->assertEquals($res13, $obj->toArray(), 'The method toArray() does not return the expected array with x');
 	}
-}
 
+}

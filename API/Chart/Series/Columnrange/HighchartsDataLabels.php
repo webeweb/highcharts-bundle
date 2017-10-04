@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -246,6 +246,8 @@ final class HighchartsDataLabels implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -644,7 +646,13 @@ final class HighchartsDataLabels implements JsonSerializable {
 	 * @return HighchartsDataLabels Returns the highcharts data labels.
 	 */
 	public function setAlign($align) {
-		$this->align = $align;
+		switch ($align) {
+			case "center":
+			case "left":
+			case "right":
+				$this->align = $align;
+				break;
+		}
 		return $this;
 	}
 
@@ -798,7 +806,12 @@ final class HighchartsDataLabels implements JsonSerializable {
 	 * @return HighchartsDataLabels Returns the highcharts data labels.
 	 */
 	public function setOverflow($overflow) {
-		$this->overflow = $overflow;
+		switch ($overflow) {
+			case "justify":
+			case "none":
+				$this->overflow = $overflow;
+				break;
+		}
 		return $this;
 	}
 
@@ -875,7 +888,13 @@ final class HighchartsDataLabels implements JsonSerializable {
 	 * @return HighchartsDataLabels Returns the highcharts data labels.
 	 */
 	public function setVerticalAlign($verticalAlign) {
-		$this->verticalAlign = $verticalAlign;
+		switch ($verticalAlign) {
+			case "bottom":
+			case "middle":
+			case "top":
+				$this->verticalAlign = $verticalAlign;
+				break;
+		}
 		return $this;
 	}
 
@@ -1082,5 +1101,5 @@ final class HighchartsDataLabels implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\Exporting\Buttons;
 
-use WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton;
 
 /**
  * Highcharts context button test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsContextButtonTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsContextButton(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -48,10 +63,10 @@ final class HighchartsContextButtonTest extends PHPUnit_Framework_TestCase {
 		$res3 = ["align" => "right", "enabled" => true, "height" => 20, "symbol" => "menu", "symbolFill" => "#666666", "symbolSize" => 14, "symbolStroke" => "#666666", "symbolStrokeWidth" => 1, "symbolX" => 12.5, "symbolY" => 10.5, "verticalAlign" => "top", "width" => 24, "x" => -10, "y" => 0, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
 		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with text');
 
-		$obj->setTheme("f484570d7cf557020e11ace406901b10");
+		$obj->setTheme(["theme" => "f484570d7cf557020e11ace406901b10"]);
 
-		$res4 = ["align" => "right", "enabled" => true, "height" => 20, "symbol" => "menu", "symbolFill" => "#666666", "symbolSize" => 14, "symbolStroke" => "#666666", "symbolStrokeWidth" => 1, "symbolX" => 12.5, "symbolY" => 10.5, "verticalAlign" => "top", "width" => 24, "x" => -10, "y" => 0, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => "f484570d7cf557020e11ace406901b10"];
+		$res4 = ["align" => "right", "enabled" => true, "height" => 20, "symbol" => "menu", "symbolFill" => "#666666", "symbolSize" => 14, "symbolStroke" => "#666666", "symbolStrokeWidth" => 1, "symbolX" => 12.5, "symbolY" => 10.5, "verticalAlign" => "top", "width" => 24, "x" => -10, "y" => 0, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"]];
 		$this->assertEquals($res4, $obj->toArray(), 'The method toArray() does not return the expected array with theme');
 	}
-}
 
+}

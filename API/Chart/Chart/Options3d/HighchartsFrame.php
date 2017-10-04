@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -15,7 +15,6 @@ use JsonSerializable;
 use WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack;
 use WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom;
 use WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide;
-use WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsTop;
 
 /**
  * Highcharts frame.
@@ -54,7 +53,7 @@ final class HighchartsFrame implements JsonSerializable {
 	/**
 	 * Top.
 	 *
-	 * @var HighchartsTop
+	 * @var array
 	 * @since 5.0.12
 	 */
 	private $top;
@@ -72,6 +71,8 @@ final class HighchartsFrame implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -92,7 +93,7 @@ final class HighchartsFrame implements JsonSerializable {
 
 		// Check the top.
 		if (!is_null($this->top)) {
-			$this->top->clear();
+			$this->top = null;
 		}
 	}
 
@@ -126,7 +127,7 @@ final class HighchartsFrame implements JsonSerializable {
 	/**
 	 * Get the top.
 	 *
-	 * @return HighchartsTop Returns the top.
+	 * @return array Returns the top.
 	 */
 	public function getTop() {
 		return $this->top;
@@ -172,16 +173,6 @@ final class HighchartsFrame implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new top.
-	 *
-	 * @return HighchartsTop Returns the top.
-	 */
-	public function newTop() {
-		$this->top = new HighchartsTop();
-		return $this->top;
-	}
-
-	/**
 	 * Set the back.
 	 *
 	 * @param HighchartsBack $back The back.
@@ -217,10 +208,10 @@ final class HighchartsFrame implements JsonSerializable {
 	/**
 	 * Set the top.
 	 *
-	 * @param HighchartsTop $top The top.
+	 * @param array $top The top.
 	 * @return HighchartsFrame Returns the highcharts frame.
 	 */
-	public function setTop(HighchartsTop $top = null) {
+	public function setTop(array $top = null) {
 		$this->top = $top;
 		return $this;
 	}
@@ -252,11 +243,11 @@ final class HighchartsFrame implements JsonSerializable {
 
 		// Check the top.
 		if (!is_null($this->top)) {
-			$output["top"] = $this->top->toArray();
+			$output["top"] = $this->top;
 		}
 
 		// Return the output.
 		return $output;
 	}
-}
 
+}

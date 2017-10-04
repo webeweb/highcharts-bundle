@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Polygon\Marker\States;
 
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\States\HighchartsHover;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\States\HighchartsHover;
 
 /**
  * Highcharts hover test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsHover(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -38,10 +53,10 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["enabled" => true, "lineColor" => "#ffffff", "lineWidth" => 0, "lineWidthPlus" => 1, "radiusPlus" => 2, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
 		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with fill color');
 
-		$obj->setRadius(3);
+		$obj->setRadius(53);
 
-		$res2 = ["enabled" => true, "lineColor" => "#ffffff", "lineWidth" => 0, "lineWidthPlus" => 1, "radiusPlus" => 2, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "radius" => 3];
+		$res2 = ["enabled" => true, "lineColor" => "#ffffff", "lineWidth" => 0, "lineWidthPlus" => 1, "radiusPlus" => 2, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "radius" => 53];
 		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with radius');
 	}
-}
 
+}

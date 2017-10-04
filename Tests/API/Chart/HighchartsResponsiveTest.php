@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart;
 
-use WBW\HighchartsBundle\API\Chart\HighchartsResponsive;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\HighchartsResponsive;
 
 /**
  * Highcharts responsive test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsResponsiveTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsResponsive(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -35,5 +50,5 @@ final class HighchartsResponsiveTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["rules" => ["rules" => "a4f86f7bfc24194b276c22e0ef158197"]];
 		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with rules');
 	}
-}
 
+}

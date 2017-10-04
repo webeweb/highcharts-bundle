@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -99,7 +99,7 @@ final class HighchartsLang implements JsonSerializable {
 	 *
 	 * @var array
 	 */
-	private $months = [ "January" , "February" , "March" , "April" , "May" , "June" , "July" , "August" , "September" , "October" , "November" , "December"];
+	private $months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 	/**
 	 * No data.
@@ -123,7 +123,7 @@ final class HighchartsLang implements JsonSerializable {
 	 * @var array
 	 * @since 2.3.0
 	 */
-	private $numericSymbols = [ "k" , "M" , "G" , "T" , "P" , "E"];
+	private $numericSymbols = ["k", "M", "G", "T", "P", "E"];
 
 	/**
 	 * Print chart.
@@ -154,7 +154,7 @@ final class HighchartsLang implements JsonSerializable {
 	 *
 	 * @var array
 	 */
-	private $shortMonths = [ "Jan" , "Feb" , "Mar" , "Apr" , "May" , "Jun" , "Jul" , "Aug" , "Sep" , "Oct" , "Nov" , "Dec"];
+	private $shortMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 	/**
 	 * Short weekdays.
@@ -192,6 +192,8 @@ final class HighchartsLang implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -818,5 +820,5 @@ final class HighchartsLang implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

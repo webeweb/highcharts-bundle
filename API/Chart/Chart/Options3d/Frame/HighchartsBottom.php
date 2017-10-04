@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -60,6 +60,8 @@ final class HighchartsBottom implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -144,7 +146,14 @@ final class HighchartsBottom implements JsonSerializable {
 	 * @return HighchartsBottom Returns the highcharts bottom.
 	 */
 	public function setVisible($visible) {
-		$this->visible = $visible;
+		switch ($visible) {
+			case false:
+			case true:
+			case "auto":
+			case "default":
+				$this->visible = $visible;
+				break;
+		}
 		return $this;
 	}
 
@@ -176,5 +185,5 @@ final class HighchartsBottom implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

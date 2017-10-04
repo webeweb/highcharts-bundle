@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -17,24 +17,12 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreaspline;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreasplinerange;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBar;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBoxplot;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumnrange;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsFunnel;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsGauge;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsLine;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsScatter;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSeries;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSpline;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall;
 
 /**
  * Highcharts plot options.
@@ -86,7 +74,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Boxplot.
 	 *
-	 * @var HighchartsBoxplot
+	 * @var array
 	 * @since 3.0
 	 */
 	private $boxplot;
@@ -94,7 +82,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Bubble.
 	 *
-	 * @var HighchartsBubble
+	 * @var array
 	 * @since 3.0
 	 */
 	private $bubble;
@@ -109,7 +97,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Columnrange.
 	 *
-	 * @var HighchartsColumnrange
+	 * @var array
 	 * @since 2.3.0
 	 */
 	private $columnrange;
@@ -117,7 +105,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Errorbar.
 	 *
-	 * @var HighchartsErrorbar
+	 * @var array
 	 * @since 3.0
 	 */
 	private $errorbar;
@@ -125,7 +113,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Funnel.
 	 *
-	 * @var HighchartsFunnel
+	 * @var array
 	 * @since 3.0
 	 */
 	private $funnel;
@@ -133,7 +121,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Gauge.
 	 *
-	 * @var HighchartsGauge
+	 * @var array
 	 * @since 2.3.0
 	 */
 	private $gauge;
@@ -141,7 +129,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Heatmap.
 	 *
-	 * @var HighchartsHeatmap
+	 * @var array
 	 * @since 4.0
 	 */
 	private $heatmap;
@@ -163,7 +151,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Polygon.
 	 *
-	 * @var HighchartsPolygon
+	 * @var array
 	 * @since 4.1.0
 	 */
 	private $polygon;
@@ -171,7 +159,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Pyramid.
 	 *
-	 * @var HighchartsPyramid
+	 * @var array
 	 * @since 3.0.10
 	 */
 	private $pyramid;
@@ -193,7 +181,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Solidgauge.
 	 *
-	 * @var HighchartsSolidgauge
+	 * @var array
 	 * @since 4.0
 	 */
 	private $solidgauge;
@@ -208,7 +196,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Treemap.
 	 *
-	 * @var HighchartsTreemap
+	 * @var array
 	 * @since 4.1.0
 	 */
 	private $treemap;
@@ -216,7 +204,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Waterfall.
 	 *
-	 * @var HighchartsWaterfall
+	 * @var array
 	 * @since 3.0
 	 */
 	private $waterfall;
@@ -234,6 +222,8 @@ final class HighchartsPlotOptions implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -264,12 +254,12 @@ final class HighchartsPlotOptions implements JsonSerializable {
 
 		// Check the boxplot.
 		if (!is_null($this->boxplot)) {
-			$this->boxplot->clear();
+			$this->boxplot = null;
 		}
 
 		// Check the bubble.
 		if (!is_null($this->bubble)) {
-			$this->bubble->clear();
+			$this->bubble = null;
 		}
 
 		// Check the column.
@@ -279,27 +269,27 @@ final class HighchartsPlotOptions implements JsonSerializable {
 
 		// Check the columnrange.
 		if (!is_null($this->columnrange)) {
-			$this->columnrange->clear();
+			$this->columnrange = null;
 		}
 
 		// Check the errorbar.
 		if (!is_null($this->errorbar)) {
-			$this->errorbar->clear();
+			$this->errorbar = null;
 		}
 
 		// Check the funnel.
 		if (!is_null($this->funnel)) {
-			$this->funnel->clear();
+			$this->funnel = null;
 		}
 
 		// Check the gauge.
 		if (!is_null($this->gauge)) {
-			$this->gauge->clear();
+			$this->gauge = null;
 		}
 
 		// Check the heatmap.
 		if (!is_null($this->heatmap)) {
-			$this->heatmap->clear();
+			$this->heatmap = null;
 		}
 
 		// Check the line.
@@ -314,12 +304,12 @@ final class HighchartsPlotOptions implements JsonSerializable {
 
 		// Check the polygon.
 		if (!is_null($this->polygon)) {
-			$this->polygon->clear();
+			$this->polygon = null;
 		}
 
 		// Check the pyramid.
 		if (!is_null($this->pyramid)) {
-			$this->pyramid->clear();
+			$this->pyramid = null;
 		}
 
 		// Check the scatter.
@@ -334,7 +324,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 
 		// Check the solidgauge.
 		if (!is_null($this->solidgauge)) {
-			$this->solidgauge->clear();
+			$this->solidgauge = null;
 		}
 
 		// Check the spline.
@@ -344,12 +334,12 @@ final class HighchartsPlotOptions implements JsonSerializable {
 
 		// Check the treemap.
 		if (!is_null($this->treemap)) {
-			$this->treemap->clear();
+			$this->treemap = null;
 		}
 
 		// Check the waterfall.
 		if (!is_null($this->waterfall)) {
-			$this->waterfall->clear();
+			$this->waterfall = null;
 		}
 	}
 
@@ -401,7 +391,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the boxplot.
 	 *
-	 * @return HighchartsBoxplot Returns the boxplot.
+	 * @return array Returns the boxplot.
 	 */
 	public function getBoxplot() {
 		return $this->boxplot;
@@ -410,7 +400,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the bubble.
 	 *
-	 * @return HighchartsBubble Returns the bubble.
+	 * @return array Returns the bubble.
 	 */
 	public function getBubble() {
 		return $this->bubble;
@@ -428,7 +418,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the columnrange.
 	 *
-	 * @return HighchartsColumnrange Returns the columnrange.
+	 * @return array Returns the columnrange.
 	 */
 	public function getColumnrange() {
 		return $this->columnrange;
@@ -437,7 +427,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the errorbar.
 	 *
-	 * @return HighchartsErrorbar Returns the errorbar.
+	 * @return array Returns the errorbar.
 	 */
 	public function getErrorbar() {
 		return $this->errorbar;
@@ -446,7 +436,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the funnel.
 	 *
-	 * @return HighchartsFunnel Returns the funnel.
+	 * @return array Returns the funnel.
 	 */
 	public function getFunnel() {
 		return $this->funnel;
@@ -455,7 +445,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the gauge.
 	 *
-	 * @return HighchartsGauge Returns the gauge.
+	 * @return array Returns the gauge.
 	 */
 	public function getGauge() {
 		return $this->gauge;
@@ -464,7 +454,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the heatmap.
 	 *
-	 * @return HighchartsHeatmap Returns the heatmap.
+	 * @return array Returns the heatmap.
 	 */
 	public function getHeatmap() {
 		return $this->heatmap;
@@ -491,7 +481,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the polygon.
 	 *
-	 * @return HighchartsPolygon Returns the polygon.
+	 * @return array Returns the polygon.
 	 */
 	public function getPolygon() {
 		return $this->polygon;
@@ -500,7 +490,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the pyramid.
 	 *
-	 * @return HighchartsPyramid Returns the pyramid.
+	 * @return array Returns the pyramid.
 	 */
 	public function getPyramid() {
 		return $this->pyramid;
@@ -527,7 +517,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the solidgauge.
 	 *
-	 * @return HighchartsSolidgauge Returns the solidgauge.
+	 * @return array Returns the solidgauge.
 	 */
 	public function getSolidgauge() {
 		return $this->solidgauge;
@@ -545,7 +535,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the treemap.
 	 *
-	 * @return HighchartsTreemap Returns the treemap.
+	 * @return array Returns the treemap.
 	 */
 	public function getTreemap() {
 		return $this->treemap;
@@ -554,7 +544,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the waterfall.
 	 *
-	 * @return HighchartsWaterfall Returns the waterfall.
+	 * @return array Returns the waterfall.
 	 */
 	public function getWaterfall() {
 		return $this->waterfall;
@@ -620,26 +610,6 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new boxplot.
-	 *
-	 * @return HighchartsBoxplot Returns the boxplot.
-	 */
-	public function newBoxplot() {
-		$this->boxplot = new HighchartsBoxplot();
-		return $this->boxplot;
-	}
-
-	/**
-	 * Create a new bubble.
-	 *
-	 * @return HighchartsBubble Returns the bubble.
-	 */
-	public function newBubble() {
-		$this->bubble = new HighchartsBubble();
-		return $this->bubble;
-	}
-
-	/**
 	 * Create a new column.
 	 *
 	 * @return HighchartsColumn Returns the column.
@@ -647,56 +617,6 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	public function newColumn() {
 		$this->column = new HighchartsColumn();
 		return $this->column;
-	}
-
-	/**
-	 * Create a new columnrange.
-	 *
-	 * @return HighchartsColumnrange Returns the columnrange.
-	 */
-	public function newColumnrange() {
-		$this->columnrange = new HighchartsColumnrange();
-		return $this->columnrange;
-	}
-
-	/**
-	 * Create a new errorbar.
-	 *
-	 * @return HighchartsErrorbar Returns the errorbar.
-	 */
-	public function newErrorbar() {
-		$this->errorbar = new HighchartsErrorbar();
-		return $this->errorbar;
-	}
-
-	/**
-	 * Create a new funnel.
-	 *
-	 * @return HighchartsFunnel Returns the funnel.
-	 */
-	public function newFunnel() {
-		$this->funnel = new HighchartsFunnel();
-		return $this->funnel;
-	}
-
-	/**
-	 * Create a new gauge.
-	 *
-	 * @return HighchartsGauge Returns the gauge.
-	 */
-	public function newGauge() {
-		$this->gauge = new HighchartsGauge();
-		return $this->gauge;
-	}
-
-	/**
-	 * Create a new heatmap.
-	 *
-	 * @return HighchartsHeatmap Returns the heatmap.
-	 */
-	public function newHeatmap() {
-		$this->heatmap = new HighchartsHeatmap();
-		return $this->heatmap;
 	}
 
 	/**
@@ -720,26 +640,6 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new polygon.
-	 *
-	 * @return HighchartsPolygon Returns the polygon.
-	 */
-	public function newPolygon() {
-		$this->polygon = new HighchartsPolygon();
-		return $this->polygon;
-	}
-
-	/**
-	 * Create a new pyramid.
-	 *
-	 * @return HighchartsPyramid Returns the pyramid.
-	 */
-	public function newPyramid() {
-		$this->pyramid = new HighchartsPyramid();
-		return $this->pyramid;
-	}
-
-	/**
 	 * Create a new scatter.
 	 *
 	 * @return HighchartsScatter Returns the scatter.
@@ -760,16 +660,6 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new solidgauge.
-	 *
-	 * @return HighchartsSolidgauge Returns the solidgauge.
-	 */
-	public function newSolidgauge() {
-		$this->solidgauge = new HighchartsSolidgauge();
-		return $this->solidgauge;
-	}
-
-	/**
 	 * Create a new spline.
 	 *
 	 * @return HighchartsSpline Returns the spline.
@@ -777,26 +667,6 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	public function newSpline() {
 		$this->spline = new HighchartsSpline();
 		return $this->spline;
-	}
-
-	/**
-	 * Create a new treemap.
-	 *
-	 * @return HighchartsTreemap Returns the treemap.
-	 */
-	public function newTreemap() {
-		$this->treemap = new HighchartsTreemap();
-		return $this->treemap;
-	}
-
-	/**
-	 * Create a new waterfall.
-	 *
-	 * @return HighchartsWaterfall Returns the waterfall.
-	 */
-	public function newWaterfall() {
-		$this->waterfall = new HighchartsWaterfall();
-		return $this->waterfall;
 	}
 
 	/**
@@ -857,10 +727,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the boxplot.
 	 *
-	 * @param HighchartsBoxplot $boxplot The boxplot.
+	 * @param array $boxplot The boxplot.
 	 * @return HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setBoxplot(HighchartsBoxplot $boxplot = null) {
+	public function setBoxplot(array $boxplot = null) {
 		$this->boxplot = $boxplot;
 		return $this;
 	}
@@ -868,10 +738,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the bubble.
 	 *
-	 * @param HighchartsBubble $bubble The bubble.
+	 * @param array $bubble The bubble.
 	 * @return HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setBubble(HighchartsBubble $bubble = null) {
+	public function setBubble(array $bubble = null) {
 		$this->bubble = $bubble;
 		return $this;
 	}
@@ -890,10 +760,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the columnrange.
 	 *
-	 * @param HighchartsColumnrange $columnrange The columnrange.
+	 * @param array $columnrange The columnrange.
 	 * @return HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setColumnrange(HighchartsColumnrange $columnrange = null) {
+	public function setColumnrange(array $columnrange = null) {
 		$this->columnrange = $columnrange;
 		return $this;
 	}
@@ -901,10 +771,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the errorbar.
 	 *
-	 * @param HighchartsErrorbar $errorbar The errorbar.
+	 * @param array $errorbar The errorbar.
 	 * @return HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setErrorbar(HighchartsErrorbar $errorbar = null) {
+	public function setErrorbar(array $errorbar = null) {
 		$this->errorbar = $errorbar;
 		return $this;
 	}
@@ -912,10 +782,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the funnel.
 	 *
-	 * @param HighchartsFunnel $funnel The funnel.
+	 * @param array $funnel The funnel.
 	 * @return HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setFunnel(HighchartsFunnel $funnel = null) {
+	public function setFunnel(array $funnel = null) {
 		$this->funnel = $funnel;
 		return $this;
 	}
@@ -923,10 +793,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the gauge.
 	 *
-	 * @param HighchartsGauge $gauge The gauge.
+	 * @param array $gauge The gauge.
 	 * @return HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setGauge(HighchartsGauge $gauge = null) {
+	public function setGauge(array $gauge = null) {
 		$this->gauge = $gauge;
 		return $this;
 	}
@@ -934,10 +804,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the heatmap.
 	 *
-	 * @param HighchartsHeatmap $heatmap The heatmap.
+	 * @param array $heatmap The heatmap.
 	 * @return HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setHeatmap(HighchartsHeatmap $heatmap = null) {
+	public function setHeatmap(array $heatmap = null) {
 		$this->heatmap = $heatmap;
 		return $this;
 	}
@@ -967,10 +837,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the polygon.
 	 *
-	 * @param HighchartsPolygon $polygon The polygon.
+	 * @param array $polygon The polygon.
 	 * @return HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setPolygon(HighchartsPolygon $polygon = null) {
+	public function setPolygon(array $polygon = null) {
 		$this->polygon = $polygon;
 		return $this;
 	}
@@ -978,10 +848,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the pyramid.
 	 *
-	 * @param HighchartsPyramid $pyramid The pyramid.
+	 * @param array $pyramid The pyramid.
 	 * @return HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setPyramid(HighchartsPyramid $pyramid = null) {
+	public function setPyramid(array $pyramid = null) {
 		$this->pyramid = $pyramid;
 		return $this;
 	}
@@ -1011,10 +881,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the solidgauge.
 	 *
-	 * @param HighchartsSolidgauge $solidgauge The solidgauge.
+	 * @param array $solidgauge The solidgauge.
 	 * @return HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setSolidgauge(HighchartsSolidgauge $solidgauge = null) {
+	public function setSolidgauge(array $solidgauge = null) {
 		$this->solidgauge = $solidgauge;
 		return $this;
 	}
@@ -1033,10 +903,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the treemap.
 	 *
-	 * @param HighchartsTreemap $treemap The treemap.
+	 * @param array $treemap The treemap.
 	 * @return HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setTreemap(HighchartsTreemap $treemap = null) {
+	public function setTreemap(array $treemap = null) {
 		$this->treemap = $treemap;
 		return $this;
 	}
@@ -1044,10 +914,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the waterfall.
 	 *
-	 * @param HighchartsWaterfall $waterfall The waterfall.
+	 * @param array $waterfall The waterfall.
 	 * @return HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setWaterfall(HighchartsWaterfall $waterfall = null) {
+	public function setWaterfall(array $waterfall = null) {
 		$this->waterfall = $waterfall;
 		return $this;
 	}
@@ -1089,12 +959,12 @@ final class HighchartsPlotOptions implements JsonSerializable {
 
 		// Check the boxplot.
 		if (!is_null($this->boxplot)) {
-			$output["boxplot"] = $this->boxplot->toArray();
+			$output["boxplot"] = $this->boxplot;
 		}
 
 		// Check the bubble.
 		if (!is_null($this->bubble)) {
-			$output["bubble"] = $this->bubble->toArray();
+			$output["bubble"] = $this->bubble;
 		}
 
 		// Check the column.
@@ -1104,27 +974,27 @@ final class HighchartsPlotOptions implements JsonSerializable {
 
 		// Check the columnrange.
 		if (!is_null($this->columnrange)) {
-			$output["columnrange"] = $this->columnrange->toArray();
+			$output["columnrange"] = $this->columnrange;
 		}
 
 		// Check the errorbar.
 		if (!is_null($this->errorbar)) {
-			$output["errorbar"] = $this->errorbar->toArray();
+			$output["errorbar"] = $this->errorbar;
 		}
 
 		// Check the funnel.
 		if (!is_null($this->funnel)) {
-			$output["funnel"] = $this->funnel->toArray();
+			$output["funnel"] = $this->funnel;
 		}
 
 		// Check the gauge.
 		if (!is_null($this->gauge)) {
-			$output["gauge"] = $this->gauge->toArray();
+			$output["gauge"] = $this->gauge;
 		}
 
 		// Check the heatmap.
 		if (!is_null($this->heatmap)) {
-			$output["heatmap"] = $this->heatmap->toArray();
+			$output["heatmap"] = $this->heatmap;
 		}
 
 		// Check the line.
@@ -1139,12 +1009,12 @@ final class HighchartsPlotOptions implements JsonSerializable {
 
 		// Check the polygon.
 		if (!is_null($this->polygon)) {
-			$output["polygon"] = $this->polygon->toArray();
+			$output["polygon"] = $this->polygon;
 		}
 
 		// Check the pyramid.
 		if (!is_null($this->pyramid)) {
-			$output["pyramid"] = $this->pyramid->toArray();
+			$output["pyramid"] = $this->pyramid;
 		}
 
 		// Check the scatter.
@@ -1159,7 +1029,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 
 		// Check the solidgauge.
 		if (!is_null($this->solidgauge)) {
-			$output["solidgauge"] = $this->solidgauge->toArray();
+			$output["solidgauge"] = $this->solidgauge;
 		}
 
 		// Check the spline.
@@ -1169,16 +1039,16 @@ final class HighchartsPlotOptions implements JsonSerializable {
 
 		// Check the treemap.
 		if (!is_null($this->treemap)) {
-			$output["treemap"] = $this->treemap->toArray();
+			$output["treemap"] = $this->treemap;
 		}
 
 		// Check the waterfall.
 		if (!is_null($this->waterfall)) {
-			$output["waterfall"] = $this->waterfall->toArray();
+			$output["waterfall"] = $this->waterfall;
 		}
 
 		// Return the output.
 		return $output;
 	}
-}
 
+}

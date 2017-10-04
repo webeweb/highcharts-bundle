@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,9 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Columnrange\States;
 
-use WBW\HighchartsBundle\API\Chart\Series\Columnrange\States\HighchartsHover;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\Series\Columnrange\States\HighchartsHover;
+use WBW\HighchartsBundle\API\Chart\Series\Columnrange\States\Hover\HighchartsMarker;
 
 /**
  * Highcharts hover test.
@@ -24,7 +25,35 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsHover(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
+	 * Tests the newMarker() method.
+	 *
+	 * @return void.
+	 */
+	public function testNewMarker() {
+
+		$obj = new HighchartsHover(false);
+
+		$res = $obj->newMarker();
+		$this->assertInstanceOf(HighchartsMarker::class, $res, 'The method newMarker() does not return the expected class');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -32,6 +61,11 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 
 		$res = ["animation" => ["duration" => 50], "enabled" => true, "lineWidth" => 2, "lineWidthPlus" => 1];
 		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
-	}
-}
 
+		$obj->setHalo(["halo" => "57f842286171094855e51fc3a541c1e2"]);
+
+		$res1 = ["animation" => ["duration" => 50], "enabled" => true, "lineWidth" => 2, "lineWidthPlus" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"]];
+		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with halo');
+	}
+
+}

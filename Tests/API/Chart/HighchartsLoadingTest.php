@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart;
 
-use WBW\HighchartsBundle\API\Chart\HighchartsLoading;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\HighchartsLoading;
 
 /**
  * Highcharts loading test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsLoadingTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsLoading(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -33,5 +48,5 @@ final class HighchartsLoadingTest extends PHPUnit_Framework_TestCase {
 		$res = ["hideDuration" => 100, "labelStyle" => ["fontWeight" => "bold", "position" => "relative", "top" => "45%"], "showDuration" => 100, "style" => ["position" => "absolute", "backgroundColor" => "#ffffff", "opacity" => 0.5, "textAlign" => "center"]];
 		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
 	}
-}
 
+}

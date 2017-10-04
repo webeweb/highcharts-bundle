@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -42,7 +42,7 @@ final class HighchartsExporting implements JsonSerializable {
 	/**
 	 * Chart options.
 	 *
-	 * @var Object
+	 * @var array
 	 */
 	private $chartOptions;
 
@@ -81,7 +81,7 @@ final class HighchartsExporting implements JsonSerializable {
 	/**
 	 * Form attributes.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 3.0.8
 	 */
 	private $formAttributes;
@@ -97,7 +97,7 @@ final class HighchartsExporting implements JsonSerializable {
 	/**
 	 * Menu item definitions.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 5.0.13
 	 */
 	private $menuItemDefinitions;
@@ -171,6 +171,8 @@ final class HighchartsExporting implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -281,7 +283,7 @@ final class HighchartsExporting implements JsonSerializable {
 	/**
 	 * Get the chart options.
 	 *
-	 * @return Object Returns the chart options.
+	 * @return array Returns the chart options.
 	 */
 	public function getChartOptions() {
 		return $this->chartOptions;
@@ -326,7 +328,7 @@ final class HighchartsExporting implements JsonSerializable {
 	/**
 	 * Get the form attributes.
 	 *
-	 * @return Object Returns the form attributes.
+	 * @return array Returns the form attributes.
 	 */
 	public function getFormAttributes() {
 		return $this->formAttributes;
@@ -344,7 +346,7 @@ final class HighchartsExporting implements JsonSerializable {
 	/**
 	 * Get the menu item definitions.
 	 *
-	 * @return Object Returns the menu item definitions.
+	 * @return array Returns the menu item definitions.
 	 */
 	public function getMenuItemDefinitions() {
 		return $this->menuItemDefinitions;
@@ -457,10 +459,10 @@ final class HighchartsExporting implements JsonSerializable {
 	/**
 	 * Set the chart options.
 	 *
-	 * @param Object $chartOptions The chart options.
+	 * @param array $chartOptions The chart options.
 	 * @return HighchartsExporting Returns the highcharts exporting.
 	 */
-	public function setChartOptions($chartOptions) {
+	public function setChartOptions(array $chartOptions = null) {
 		$this->chartOptions = $chartOptions;
 		return $this;
 	}
@@ -512,10 +514,10 @@ final class HighchartsExporting implements JsonSerializable {
 	/**
 	 * Set the form attributes.
 	 *
-	 * @param Object $formAttributes The form attributes.
+	 * @param array $formAttributes The form attributes.
 	 * @return HighchartsExporting Returns the highcharts exporting.
 	 */
-	public function setFormAttributes($formAttributes) {
+	public function setFormAttributes(array $formAttributes = null) {
 		$this->formAttributes = $formAttributes;
 		return $this;
 	}
@@ -534,10 +536,10 @@ final class HighchartsExporting implements JsonSerializable {
 	/**
 	 * Set the menu item definitions.
 	 *
-	 * @param Object $menuItemDefinitions The menu item definitions.
+	 * @param array $menuItemDefinitions The menu item definitions.
 	 * @return HighchartsExporting Returns the highcharts exporting.
 	 */
-	public function setMenuItemDefinitions($menuItemDefinitions) {
+	public function setMenuItemDefinitions(array $menuItemDefinitions = null) {
 		$this->menuItemDefinitions = $menuItemDefinitions;
 		return $this;
 	}
@@ -593,7 +595,14 @@ final class HighchartsExporting implements JsonSerializable {
 	 * @return HighchartsExporting Returns the highcharts exporting.
 	 */
 	public function setType($type) {
-		$this->type = $type;
+		switch ($type) {
+			case "application/pdf":
+			case "image/jpeg":
+			case "image/png":
+			case "image/svg+xml":
+				$this->type = $type;
+				break;
+		}
 		return $this;
 	}
 
@@ -717,5 +726,5 @@ final class HighchartsExporting implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

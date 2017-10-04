@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\ZAxis;
 
-use WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle;
 
 /**
  * Highcharts title test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsTitle(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -33,25 +48,25 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 		$res = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0];
 		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
 
-		$obj->setMargin(62);
+		$obj->setMargin(64);
 
-		$res1 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 62];
+		$res1 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 64];
 		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with margin');
 
-		$obj->setOffset(84);
+		$obj->setOffset(99);
 
-		$res2 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 62, "offset" => 84];
+		$res2 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 64, "offset" => 99];
 		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with offset');
 
 		$obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
 
-		$res3 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 62, "offset" => 84, "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
+		$res3 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 64, "offset" => 99, "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
 		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with text');
 
-		$obj->setY(89);
+		$obj->setY(10);
 
-		$res4 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 62, "offset" => 84, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "y" => 89];
+		$res4 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 64, "offset" => 99, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "y" => 10];
 		$this->assertEquals($res4, $obj->toArray(), 'The method toArray() does not return the expected array with y');
 	}
-}
 
+}

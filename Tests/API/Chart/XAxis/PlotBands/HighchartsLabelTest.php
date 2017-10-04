@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\XAxis\PlotBands;
 
-use WBW\HighchartsBundle\API\Chart\XAxis\PlotBands\HighchartsLabel;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\XAxis\PlotBands\HighchartsLabel;
 
 /**
  * Highcharts label test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsLabelTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsLabel(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -33,30 +48,30 @@ final class HighchartsLabelTest extends PHPUnit_Framework_TestCase {
 		$res = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top"];
 		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
 
-		$obj->setStyle("a1b01e734b573fca08eb1a65e6df9a38");
+		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-		$res1 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => "a1b01e734b573fca08eb1a65e6df9a38"];
+		$res1 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
 		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with style');
 
 		$obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
 
-		$res2 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => "a1b01e734b573fca08eb1a65e6df9a38", "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
+		$res2 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
 		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with text');
 
 		$obj->setTextAlign("6e1fcbf7c065b2e7fef4cdc9bae3fe53");
 
-		$res3 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => "a1b01e734b573fca08eb1a65e6df9a38", "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53"];
+		$res3 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53"];
 		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with text align');
 
-		$obj->setX(15);
+		$obj->setX(1);
 
-		$res4 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => "a1b01e734b573fca08eb1a65e6df9a38", "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 15];
+		$res4 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 1];
 		$this->assertEquals($res4, $obj->toArray(), 'The method toArray() does not return the expected array with x');
 
-		$obj->setY(55);
+		$obj->setY(18);
 
-		$res5 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => "a1b01e734b573fca08eb1a65e6df9a38", "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 15, "y" => 55];
+		$res5 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 1, "y" => 18];
 		$this->assertEquals($res5, $obj->toArray(), 'The method toArray() does not return the expected array with y');
 	}
-}
 
+}

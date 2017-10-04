@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -130,7 +130,7 @@ final class HighchartsContextButton implements JsonSerializable {
 	/**
 	 * Theme.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 3.0
 	 */
 	private $theme;
@@ -180,6 +180,8 @@ final class HighchartsContextButton implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -394,7 +396,7 @@ final class HighchartsContextButton implements JsonSerializable {
 	/**
 	 * Get the theme.
 	 *
-	 * @return Object Returns the theme.
+	 * @return array Returns the theme.
 	 */
 	public function getTheme() {
 		return $this->theme;
@@ -452,7 +454,13 @@ final class HighchartsContextButton implements JsonSerializable {
 	 * @return HighchartsContextButton Returns the highcharts context button.
 	 */
 	public function setAlign($align) {
-		$this->align = $align;
+		switch ($align) {
+			case "center":
+			case "left":
+			case "right":
+				$this->align = $align;
+				break;
+		}
 		return $this;
 	}
 
@@ -507,7 +515,16 @@ final class HighchartsContextButton implements JsonSerializable {
 	 * @return HighchartsContextButton Returns the highcharts context button.
 	 */
 	public function setSymbol($symbol) {
-		$this->symbol = $symbol;
+		switch ($symbol) {
+			case "circle":
+			case "diamond":
+			case "menu":
+			case "square":
+			case "triangle":
+			case "triangle-down":
+				$this->symbol = $symbol;
+				break;
+		}
 		return $this;
 	}
 
@@ -591,10 +608,10 @@ final class HighchartsContextButton implements JsonSerializable {
 	/**
 	 * Set the theme.
 	 *
-	 * @param Object $theme The theme.
+	 * @param array $theme The theme.
 	 * @return HighchartsContextButton Returns the highcharts context button.
 	 */
-	public function setTheme($theme) {
+	public function setTheme(array $theme = null) {
 		$this->theme = $theme;
 		return $this;
 	}
@@ -606,7 +623,13 @@ final class HighchartsContextButton implements JsonSerializable {
 	 * @return HighchartsContextButton Returns the highcharts context button.
 	 */
 	public function setVerticalAlign($verticalAlign) {
-		$this->verticalAlign = $verticalAlign;
+		switch ($verticalAlign) {
+			case "bottom":
+			case "middle":
+			case "top":
+				$this->verticalAlign = $verticalAlign;
+				break;
+		}
 		return $this;
 	}
 
@@ -746,5 +769,5 @@ final class HighchartsContextButton implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

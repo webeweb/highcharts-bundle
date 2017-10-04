@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -26,7 +26,7 @@ final class HighchartsGlobal implements JsonSerializable {
 	/**
 	 * Date.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 4.0.4
 	 */
 	private $date;
@@ -91,6 +91,8 @@ final class HighchartsGlobal implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -133,7 +135,7 @@ final class HighchartsGlobal implements JsonSerializable {
 	/**
 	 * Get the date.
 	 *
-	 * @return Object Returns the date.
+	 * @return array Returns the date.
 	 */
 	public function getDate() {
 		return $this->date;
@@ -206,10 +208,10 @@ final class HighchartsGlobal implements JsonSerializable {
 	/**
 	 * Set the date.
 	 *
-	 * @param Object $date The date.
+	 * @param array $date The date.
 	 * @return HighchartsGlobal Returns the highcharts global.
 	 */
-	public function setDate($date) {
+	public function setDate(array $date = null) {
 		$this->date = $date;
 		return $this;
 	}
@@ -324,5 +326,5 @@ final class HighchartsGlobal implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

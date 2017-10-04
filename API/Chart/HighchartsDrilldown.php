@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton;
 
 /**
  * Highcharts drilldown.
@@ -59,7 +58,7 @@ final class HighchartsDrilldown implements JsonSerializable {
 	/**
 	 * Drill up button.
 	 *
-	 * @var HighchartsDrillUpButton
+	 * @var array
 	 * @since 3.0.8
 	 */
 	private $drillUpButton;
@@ -85,6 +84,8 @@ final class HighchartsDrilldown implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -110,7 +111,7 @@ final class HighchartsDrilldown implements JsonSerializable {
 
 		// Check the drill up button.
 		if (!is_null($this->drillUpButton)) {
-			$this->drillUpButton->clear();
+			$this->drillUpButton = null;
 		}
 
 		// Check the series.
@@ -158,7 +159,7 @@ final class HighchartsDrilldown implements JsonSerializable {
 	/**
 	 * Get the drill up button.
 	 *
-	 * @return HighchartsDrillUpButton Returns the drill up button.
+	 * @return array Returns the drill up button.
 	 */
 	public function getDrillUpButton() {
 		return $this->drillUpButton;
@@ -180,16 +181,6 @@ final class HighchartsDrilldown implements JsonSerializable {
 	 */
 	public function jsonSerialize() {
 		return $this->toArray();
-	}
-
-	/**
-	 * Create a new drill up button.
-	 *
-	 * @return HighchartsDrillUpButton Returns the drill up button.
-	 */
-	public function newDrillUpButton() {
-		$this->drillUpButton = new HighchartsDrillUpButton();
-		return $this->drillUpButton;
 	}
 
 	/**
@@ -239,10 +230,10 @@ final class HighchartsDrilldown implements JsonSerializable {
 	/**
 	 * Set the drill up button.
 	 *
-	 * @param HighchartsDrillUpButton $drillUpButton The drill up button.
+	 * @param array $drillUpButton The drill up button.
 	 * @return HighchartsDrilldown Returns the highcharts drilldown.
 	 */
-	public function setDrillUpButton(HighchartsDrillUpButton $drillUpButton = null) {
+	public function setDrillUpButton(array $drillUpButton = null) {
 		$this->drillUpButton = $drillUpButton;
 		return $this;
 	}
@@ -290,7 +281,7 @@ final class HighchartsDrilldown implements JsonSerializable {
 
 		// Check the drill up button.
 		if (!is_null($this->drillUpButton)) {
-			$output["drillUpButton"] = $this->drillUpButton->toArray();
+			$output["drillUpButton"] = $this->drillUpButton;
 		}
 
 		// Check the series.
@@ -301,5 +292,5 @@ final class HighchartsDrilldown implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -125,6 +125,8 @@ final class HighchartsSeries implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -405,7 +407,27 @@ final class HighchartsSeries implements JsonSerializable {
 	 * @return HighchartsSeries Returns the highcharts series.
 	 */
 	public function setType($type) {
-		$this->type = $type;
+		switch ($type) {
+			case null:
+			case "area":
+			case "arearange":
+			case "areaspline":
+			case "areasplinerange":
+			case "boxplot":
+			case "bubble":
+			case "column":
+			case "columnrange":
+			case "errorbar":
+			case "funnel":
+			case "gauge":
+			case "line":
+			case "pie":
+			case "scatter":
+			case "spline":
+			case "waterfall":
+				$this->type = $type;
+				break;
+		}
 		return $this;
 	}
 
@@ -505,5 +527,5 @@ final class HighchartsSeries implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

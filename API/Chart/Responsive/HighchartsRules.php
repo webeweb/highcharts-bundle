@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\Responsive;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition;
 
 /**
  * Highcharts rules.
@@ -27,7 +26,7 @@ final class HighchartsRules implements JsonSerializable {
 	/**
 	 * Chart options.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 5.0.0
 	 */
 	private $chartOptions;
@@ -35,7 +34,7 @@ final class HighchartsRules implements JsonSerializable {
 	/**
 	 * Condition.
 	 *
-	 * @var HighchartsCondition
+	 * @var array
 	 * @since 5.0.0
 	 */
 	private $condition;
@@ -53,6 +52,8 @@ final class HighchartsRules implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -63,14 +64,14 @@ final class HighchartsRules implements JsonSerializable {
 
 		// Check the condition.
 		if (!is_null($this->condition)) {
-			$this->condition->clear();
+			$this->condition = null;
 		}
 	}
 
 	/**
 	 * Get the chart options.
 	 *
-	 * @return Object Returns the chart options.
+	 * @return array Returns the chart options.
 	 */
 	public function getChartOptions() {
 		return $this->chartOptions;
@@ -79,7 +80,7 @@ final class HighchartsRules implements JsonSerializable {
 	/**
 	 * Get the condition.
 	 *
-	 * @return HighchartsCondition Returns the condition.
+	 * @return array Returns the condition.
 	 */
 	public function getCondition() {
 		return $this->condition;
@@ -95,22 +96,12 @@ final class HighchartsRules implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new condition.
-	 *
-	 * @return HighchartsCondition Returns the condition.
-	 */
-	public function newCondition() {
-		$this->condition = new HighchartsCondition();
-		return $this->condition;
-	}
-
-	/**
 	 * Set the chart options.
 	 *
-	 * @param Object $chartOptions The chart options.
+	 * @param array $chartOptions The chart options.
 	 * @return HighchartsRules Returns the highcharts rules.
 	 */
-	public function setChartOptions($chartOptions) {
+	public function setChartOptions(array $chartOptions = null) {
 		$this->chartOptions = $chartOptions;
 		return $this;
 	}
@@ -118,10 +109,10 @@ final class HighchartsRules implements JsonSerializable {
 	/**
 	 * Set the condition.
 	 *
-	 * @param HighchartsCondition $condition The condition.
+	 * @param array $condition The condition.
 	 * @return HighchartsRules Returns the highcharts rules.
 	 */
-	public function setCondition(HighchartsCondition $condition = null) {
+	public function setCondition(array $condition = null) {
 		$this->condition = $condition;
 		return $this;
 	}
@@ -143,11 +134,11 @@ final class HighchartsRules implements JsonSerializable {
 
 		// Check the condition.
 		if (!is_null($this->condition)) {
-			$output["condition"] = $this->condition->toArray();
+			$output["condition"] = $this->condition;
 		}
 
 		// Return the output.
 		return $output;
 	}
-}
 
+}

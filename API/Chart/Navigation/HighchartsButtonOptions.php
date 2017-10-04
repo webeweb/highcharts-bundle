@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -106,7 +106,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	/**
 	 * Theme.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 3.0
 	 */
 	private $theme;
@@ -148,6 +148,8 @@ final class HighchartsButtonOptions implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -315,7 +317,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	/**
 	 * Get the theme.
 	 *
-	 * @return Object Returns the theme.
+	 * @return array Returns the theme.
 	 */
 	public function getTheme() {
 		return $this->theme;
@@ -364,7 +366,13 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * @return HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setAlign($align) {
-		$this->align = $align;
+		switch ($align) {
+			case "center":
+			case "left":
+			case "right":
+				$this->align = $align;
+				break;
+		}
 		return $this;
 	}
 
@@ -470,10 +478,10 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	/**
 	 * Set the theme.
 	 *
-	 * @param Object $theme The theme.
+	 * @param array $theme The theme.
 	 * @return HighchartsButtonOptions Returns the highcharts button options.
 	 */
-	public function setTheme($theme) {
+	public function setTheme(array $theme = null) {
 		$this->theme = $theme;
 		return $this;
 	}
@@ -485,7 +493,13 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * @return HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setVerticalAlign($verticalAlign) {
-		$this->verticalAlign = $verticalAlign;
+		switch ($verticalAlign) {
+			case "bottom":
+			case "middle":
+			case "top":
+				$this->verticalAlign = $verticalAlign;
+				break;
+		}
 		return $this;
 	}
 
@@ -594,5 +608,5 @@ final class HighchartsButtonOptions implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -16,7 +16,6 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsDataLabels;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsEvents;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsPoint;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsStates;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsTooltip;
 
 /**
  * Highcharts pyramid.
@@ -266,7 +265,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Tooltip.
 	 *
-	 * @var HighchartsTooltip
+	 * @var array
 	 * @since 2.3
 	 */
 	private $tooltip;
@@ -315,6 +314,8 @@ final class HighchartsPyramid implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -475,7 +476,7 @@ final class HighchartsPyramid implements JsonSerializable {
 
 		// Check the tooltip.
 		if (!is_null($this->tooltip)) {
-			$this->tooltip->clear();
+			$this->tooltip = null;
 		}
 
 		// Check the visible.
@@ -781,7 +782,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Get the tooltip.
 	 *
-	 * @return HighchartsTooltip Returns the tooltip.
+	 * @return array Returns the tooltip.
 	 */
 	public function getTooltip() {
 		return $this->tooltip;
@@ -870,16 +871,6 @@ final class HighchartsPyramid implements JsonSerializable {
 	public function newStates() {
 		$this->states = new HighchartsStates();
 		return $this->states;
-	}
-
-	/**
-	 * Create a new tooltip.
-	 *
-	 * @return HighchartsTooltip Returns the tooltip.
-	 */
-	public function newTooltip() {
-		$this->tooltip = new HighchartsTooltip();
-		return $this->tooltip;
 	}
 
 	/**
@@ -977,7 +968,16 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * @return HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setCursor($cursor) {
-		$this->cursor = $cursor;
+		switch ($cursor) {
+			case null:
+			case "crosshair":
+			case "default":
+			case "help":
+			case "none":
+			case "pointer":
+				$this->cursor = $cursor;
+				break;
+		}
 		return $this;
 	}
 
@@ -1054,7 +1054,12 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * @return HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
-		$this->findNearestPointBy = $findNearestPointBy;
+		switch ($findNearestPointBy) {
+			case "x":
+			case "xy":
+				$this->findNearestPointBy = $findNearestPointBy;
+				break;
+		}
 		return $this;
 	}
 
@@ -1226,10 +1231,10 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Set the tooltip.
 	 *
-	 * @param HighchartsTooltip $tooltip The tooltip.
+	 * @param array $tooltip The tooltip.
 	 * @return HighchartsPyramid Returns the highcharts pyramid.
 	 */
-	public function setTooltip(HighchartsTooltip $tooltip = null) {
+	public function setTooltip(array $tooltip = null) {
 		$this->tooltip = $tooltip;
 		return $this;
 	}
@@ -1445,7 +1450,7 @@ final class HighchartsPyramid implements JsonSerializable {
 
 		// Check the tooltip.
 		if (!is_null($this->tooltip)) {
-			$output["tooltip"] = $this->tooltip->toArray();
+			$output["tooltip"] = $this->tooltip;
 		}
 
 		// Check the visible.
@@ -1471,5 +1476,5 @@ final class HighchartsPyramid implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

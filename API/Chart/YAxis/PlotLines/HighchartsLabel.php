@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -42,7 +42,7 @@ final class HighchartsLabel implements JsonSerializable {
 	/**
 	 * Style.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 2.1
 	 */
 	private $style;
@@ -108,6 +108,8 @@ final class HighchartsLabel implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -178,7 +180,7 @@ final class HighchartsLabel implements JsonSerializable {
 	/**
 	 * Get the style.
 	 *
-	 * @return Object Returns the style.
+	 * @return array Returns the style.
 	 */
 	public function getStyle() {
 		return $this->style;
@@ -272,10 +274,10 @@ final class HighchartsLabel implements JsonSerializable {
 	/**
 	 * Set the style.
 	 *
-	 * @param Object $style The style.
+	 * @param array $style The style.
 	 * @return HighchartsLabel Returns the highcharts label.
 	 */
-	public function setStyle($style) {
+	public function setStyle(array $style = null) {
 		$this->style = $style;
 		return $this;
 	}
@@ -320,7 +322,13 @@ final class HighchartsLabel implements JsonSerializable {
 	 * @return HighchartsLabel Returns the highcharts label.
 	 */
 	public function setVerticalAlign($verticalAlign) {
-		$this->verticalAlign = $verticalAlign;
+		switch ($verticalAlign) {
+			case "bottom":
+			case "middle":
+			case "top":
+				$this->verticalAlign = $verticalAlign;
+				break;
+		}
 		return $this;
 	}
 
@@ -404,5 +412,5 @@ final class HighchartsLabel implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

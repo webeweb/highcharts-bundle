@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\States;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\States\Hover\HighchartsHalo;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\States\Hover\HighchartsMarker;
 
 /**
@@ -44,7 +43,7 @@ final class HighchartsHover implements JsonSerializable {
 	/**
 	 * Halo.
 	 *
-	 * @var HighchartsHalo
+	 * @var array
 	 * @since 4.0
 	 */
 	private $halo;
@@ -85,6 +84,8 @@ final class HighchartsHover implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -100,7 +101,7 @@ final class HighchartsHover implements JsonSerializable {
 
 		// Check the halo.
 		if (!is_null($this->halo)) {
-			$this->halo->clear();
+			$this->halo = null;
 		}
 
 		// Check the line width.
@@ -140,7 +141,7 @@ final class HighchartsHover implements JsonSerializable {
 	/**
 	 * Get the halo.
 	 *
-	 * @return HighchartsHalo Returns the halo.
+	 * @return array Returns the halo.
 	 */
 	public function getHalo() {
 		return $this->halo;
@@ -184,16 +185,6 @@ final class HighchartsHover implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new halo.
-	 *
-	 * @return HighchartsHalo Returns the halo.
-	 */
-	public function newHalo() {
-		$this->halo = new HighchartsHalo();
-		return $this->halo;
-	}
-
-	/**
 	 * Create a new marker.
 	 *
 	 * @return HighchartsMarker Returns the marker.
@@ -228,10 +219,10 @@ final class HighchartsHover implements JsonSerializable {
 	/**
 	 * Set the halo.
 	 *
-	 * @param HighchartsHalo $halo The halo.
+	 * @param array $halo The halo.
 	 * @return HighchartsHover Returns the highcharts hover.
 	 */
-	public function setHalo(HighchartsHalo $halo = null) {
+	public function setHalo(array $halo = null) {
 		$this->halo = $halo;
 		return $this;
 	}
@@ -292,7 +283,7 @@ final class HighchartsHover implements JsonSerializable {
 
 		// Check the halo.
 		if (!is_null($this->halo)) {
-			$output["halo"] = $this->halo->toArray();
+			$output["halo"] = $this->halo;
 		}
 
 		// Check the line width.
@@ -308,5 +299,5 @@ final class HighchartsHover implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -405,6 +405,8 @@ final class HighchartsTreemap implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -1133,7 +1135,12 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * @return HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setAllowDrillToNode($allowDrillToNode) {
-		$this->allowDrillToNode = $allowDrillToNode;
+		switch ($allowDrillToNode) {
+			case "false":
+			case "true":
+				$this->allowDrillToNode = $allowDrillToNode;
+				break;
+		}
 		return $this;
 	}
 
@@ -1287,7 +1294,16 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * @return HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setCursor($cursor) {
-		$this->cursor = $cursor;
+		switch ($cursor) {
+			case null:
+			case "crosshair":
+			case "default":
+			case "help":
+			case "none":
+			case "pointer":
+				$this->cursor = $cursor;
+				break;
+		}
 		return $this;
 	}
 
@@ -1353,7 +1369,12 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * @return HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
-		$this->findNearestPointBy = $findNearestPointBy;
+		switch ($findNearestPointBy) {
+			case "x":
+			case "xy":
+				$this->findNearestPointBy = $findNearestPointBy;
+				break;
+		}
 		return $this;
 	}
 
@@ -1386,7 +1407,12 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * @return HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setInteractByLeaf($interactByLeaf) {
-		$this->interactByLeaf = $interactByLeaf;
+		switch ($interactByLeaf) {
+			case false:
+			case true:
+				$this->interactByLeaf = $interactByLeaf;
+				break;
+		}
 		return $this;
 	}
 
@@ -1408,7 +1434,14 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * @return HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setLayoutAlgorithm($layoutAlgorithm) {
-		$this->layoutAlgorithm = $layoutAlgorithm;
+		switch ($layoutAlgorithm) {
+			case "sliceAndDice":
+			case "squarified":
+			case "strip":
+			case "stripes":
+				$this->layoutAlgorithm = $layoutAlgorithm;
+				break;
+		}
 		return $this;
 	}
 
@@ -1419,7 +1452,12 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * @return HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setLayoutStartingDirection($layoutStartingDirection) {
-		$this->layoutStartingDirection = $layoutStartingDirection;
+		switch ($layoutStartingDirection) {
+			case "horizontal":
+			case "vertical":
+				$this->layoutStartingDirection = $layoutStartingDirection;
+				break;
+		}
 		return $this;
 	}
 
@@ -1430,7 +1468,12 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * @return HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setLevelIsConstant($levelIsConstant) {
-		$this->levelIsConstant = $levelIsConstant;
+		switch ($levelIsConstant) {
+			case "false":
+			case "true":
+				$this->levelIsConstant = $levelIsConstant;
+				break;
+		}
 		return $this;
 	}
 
@@ -1891,5 +1934,5 @@ final class HighchartsTreemap implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

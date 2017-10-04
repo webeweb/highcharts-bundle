@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -124,6 +124,8 @@ final class HighchartsStackLabels implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -298,7 +300,13 @@ final class HighchartsStackLabels implements JsonSerializable {
 	 * @return HighchartsStackLabels Returns the highcharts stack labels.
 	 */
 	public function setAlign($align) {
-		$this->align = $align;
+		switch ($align) {
+			case "center":
+			case "left":
+			case "right":
+				$this->align = $align;
+				break;
+		}
 		return $this;
 	}
 
@@ -364,7 +372,13 @@ final class HighchartsStackLabels implements JsonSerializable {
 	 * @return HighchartsStackLabels Returns the highcharts stack labels.
 	 */
 	public function setTextAlign($textAlign) {
-		$this->textAlign = $textAlign;
+		switch ($textAlign) {
+			case "center":
+			case "left":
+			case "right":
+				$this->textAlign = $textAlign;
+				break;
+		}
 		return $this;
 	}
 
@@ -386,7 +400,13 @@ final class HighchartsStackLabels implements JsonSerializable {
 	 * @return HighchartsStackLabels Returns the highcharts stack labels.
 	 */
 	public function setVerticalAlign($verticalAlign) {
-		$this->verticalAlign = $verticalAlign;
+		switch ($verticalAlign) {
+			case "bottom":
+			case "middle":
+			case "top":
+				$this->verticalAlign = $verticalAlign;
+				break;
+		}
 		return $this;
 	}
 
@@ -480,5 +500,5 @@ final class HighchartsStackLabels implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

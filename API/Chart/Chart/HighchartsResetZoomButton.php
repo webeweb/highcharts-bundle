@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\Chart;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition;
 
 /**
  * Highcharts reset zoom button.
@@ -27,7 +26,7 @@ final class HighchartsResetZoomButton implements JsonSerializable {
 	/**
 	 * Position.
 	 *
-	 * @var HighchartsPosition
+	 * @var array
 	 * @since 2.2
 	 */
 	private $position;
@@ -43,7 +42,7 @@ final class HighchartsResetZoomButton implements JsonSerializable {
 	/**
 	 * Theme.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 2.2
 	 */
 	private $theme;
@@ -61,12 +60,14 @@ final class HighchartsResetZoomButton implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
 		// Check the position.
 		if (!is_null($this->position)) {
-			$this->position->clear();
+			$this->position = null;
 		}
 
 		// Check the relative to.
@@ -83,7 +84,7 @@ final class HighchartsResetZoomButton implements JsonSerializable {
 	/**
 	 * Get the position.
 	 *
-	 * @return HighchartsPosition Returns the position.
+	 * @return array Returns the position.
 	 */
 	public function getPosition() {
 		return $this->position;
@@ -101,7 +102,7 @@ final class HighchartsResetZoomButton implements JsonSerializable {
 	/**
 	 * Get the theme.
 	 *
-	 * @return Object Returns the theme.
+	 * @return array Returns the theme.
 	 */
 	public function getTheme() {
 		return $this->theme;
@@ -117,22 +118,12 @@ final class HighchartsResetZoomButton implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new position.
-	 *
-	 * @return HighchartsPosition Returns the position.
-	 */
-	public function newPosition() {
-		$this->position = new HighchartsPosition();
-		return $this->position;
-	}
-
-	/**
 	 * Set the position.
 	 *
-	 * @param HighchartsPosition $position The position.
+	 * @param array $position The position.
 	 * @return HighchartsResetZoomButton Returns the highcharts reset zoom button.
 	 */
-	public function setPosition(HighchartsPosition $position = null) {
+	public function setPosition(array $position = null) {
 		$this->position = $position;
 		return $this;
 	}
@@ -144,17 +135,22 @@ final class HighchartsResetZoomButton implements JsonSerializable {
 	 * @return HighchartsResetZoomButton Returns the highcharts reset zoom button.
 	 */
 	public function setRelativeTo($relativeTo) {
-		$this->relativeTo = $relativeTo;
+		switch ($relativeTo) {
+			case "chart":
+			case "plot":
+				$this->relativeTo = $relativeTo;
+				break;
+		}
 		return $this;
 	}
 
 	/**
 	 * Set the theme.
 	 *
-	 * @param Object $theme The theme.
+	 * @param array $theme The theme.
 	 * @return HighchartsResetZoomButton Returns the highcharts reset zoom button.
 	 */
-	public function setTheme($theme) {
+	public function setTheme(array $theme = null) {
 		$this->theme = $theme;
 		return $this;
 	}
@@ -171,7 +167,7 @@ final class HighchartsResetZoomButton implements JsonSerializable {
 
 		// Check the position.
 		if (!is_null($this->position)) {
-			$output["position"] = $this->position->toArray();
+			$output["position"] = $this->position;
 		}
 
 		// Check the relative to.
@@ -187,5 +183,5 @@ final class HighchartsResetZoomButton implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

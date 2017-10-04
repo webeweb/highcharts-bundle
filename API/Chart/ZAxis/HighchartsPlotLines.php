@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -50,7 +50,7 @@ final class HighchartsPlotLines implements JsonSerializable {
 	/**
 	 * Events.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 1.2
 	 */
 	private $events;
@@ -104,6 +104,8 @@ final class HighchartsPlotLines implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -183,7 +185,7 @@ final class HighchartsPlotLines implements JsonSerializable {
 	/**
 	 * Get the events.
 	 *
-	 * @return Object Returns the events.
+	 * @return array Returns the events.
 	 */
 	public function getEvents() {
 		return $this->events;
@@ -282,17 +284,31 @@ final class HighchartsPlotLines implements JsonSerializable {
 	 * @return HighchartsPlotLines Returns the highcharts plot lines.
 	 */
 	public function setDashStyle($dashStyle) {
-		$this->dashStyle = $dashStyle;
+		switch ($dashStyle) {
+			case "Dash":
+			case "DashDot":
+			case "Dot":
+			case "LongDash":
+			case "LongDashDot":
+			case "LongDashDotDot":
+			case "ShortDash":
+			case "ShortDashDot":
+			case "ShortDashDotDot":
+			case "ShortDot":
+			case "Solid":
+				$this->dashStyle = $dashStyle;
+				break;
+		}
 		return $this;
 	}
 
 	/**
 	 * Set the events.
 	 *
-	 * @param Object $events The events.
+	 * @param array $events The events.
 	 * @return HighchartsPlotLines Returns the highcharts plot lines.
 	 */
-	public function setEvents($events) {
+	public function setEvents(array $events = null) {
 		$this->events = $events;
 		return $this;
 	}
@@ -410,5 +426,5 @@ final class HighchartsPlotLines implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

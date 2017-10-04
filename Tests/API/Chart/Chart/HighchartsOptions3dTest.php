@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,9 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\Chart;
 
-use WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d;
+use WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame;
 
 /**
  * Highcharts options3d test.
@@ -24,7 +25,35 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsOptions3d(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
+	 * Tests the newFrame() method.
+	 *
+	 * @return void.
+	 */
+	public function testNewFrame() {
+
+		$obj = new HighchartsOptions3d(false);
+
+		$res = $obj->newFrame();
+		$this->assertInstanceOf(HighchartsFrame::class, $res, 'The method newFrame() does not return the expected class');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -33,10 +62,15 @@ final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
 		$res = ["alpha" => 0, "beta" => 0, "depth" => 100, "enabled" => false, "fitToPlot" => true, "viewDistance" => 100];
 		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
 
-		$obj->setAxisLabelPosition("f5be39961e2efb6763713e42abe9fe7b");
+		$obj->setAxisLabelPosition("auto");
 
-		$res1 = ["alpha" => 0, "beta" => 0, "depth" => 100, "enabled" => false, "fitToPlot" => true, "viewDistance" => 100, "axisLabelPosition" => "f5be39961e2efb6763713e42abe9fe7b"];
+		$res1 = ["alpha" => 0, "beta" => 0, "depth" => 100, "enabled" => false, "fitToPlot" => true, "viewDistance" => 100, "axisLabelPosition" => "auto"];
 		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with axis label position');
-	}
-}
 
+		$obj->newFrame();
+
+		$res2 = ["alpha" => 0, "beta" => 0, "depth" => 100, "enabled" => false, "fitToPlot" => true, "viewDistance" => 100, "axisLabelPosition" => "auto", "frame" => []];
+		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with frame');
+	}
+
+}

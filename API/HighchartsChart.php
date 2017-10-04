@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -23,7 +23,6 @@ use WBW\HighchartsBundle\API\Chart\HighchartsLegend;
 use WBW\HighchartsBundle\API\Chart\HighchartsLoading;
 use WBW\HighchartsBundle\API\Chart\HighchartsNavigation;
 use WBW\HighchartsBundle\API\Chart\HighchartsNoData;
-use WBW\HighchartsBundle\API\Chart\HighchartsPane;
 use WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions;
 use WBW\HighchartsBundle\API\Chart\HighchartsResponsive;
 use WBW\HighchartsBundle\API\Chart\HighchartsSubtitle;
@@ -61,7 +60,7 @@ final class HighchartsChart implements JsonSerializable {
 	 *
 	 * @var array
 	 */
-	private $colors = [ "#7cb5ec" , "#434348" , "#90ed7d" , "#f7a35c" , "#8085e9" , "#f15c80" , "#e4d354" , "#2b908f" , "#f45b5b" , "#91e8e1"];
+	private $colors = ["#7cb5ec", "#434348", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"];
 
 	/**
 	 * Credits.
@@ -81,7 +80,7 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Defs.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 5.0.0
 	 */
 	private $defs;
@@ -140,7 +139,7 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Pane.
 	 *
-	 * @var HighchartsPane
+	 * @var array
 	 * @since 2.3.0
 	 */
 	private $pane;
@@ -223,6 +222,8 @@ final class HighchartsChart implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -293,7 +294,7 @@ final class HighchartsChart implements JsonSerializable {
 
 		// Check the pane.
 		if (!is_null($this->pane)) {
-			$this->pane->clear();
+			$this->pane = null;
 		}
 
 		// Check the plot options.
@@ -390,7 +391,7 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Get the defs.
 	 *
-	 * @return Object Returns the defs.
+	 * @return array Returns the defs.
 	 */
 	public function getDefs() {
 		return $this->defs;
@@ -462,7 +463,7 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Get the pane.
 	 *
-	 * @return HighchartsPane Returns the pane.
+	 * @return array Returns the pane.
 	 */
 	public function getPane() {
 		return $this->pane;
@@ -669,16 +670,6 @@ final class HighchartsChart implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new pane.
-	 *
-	 * @return HighchartsPane Returns the pane.
-	 */
-	public function newPane() {
-		$this->pane = new HighchartsPane();
-		return $this->pane;
-	}
-
-	/**
 	 * Create a new plot options.
 	 *
 	 * @return HighchartsPlotOptions Returns the plot options.
@@ -796,10 +787,10 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Set the defs.
 	 *
-	 * @param Object $defs The defs.
+	 * @param array $defs The defs.
 	 * @return HighchartsChart Returns the highcharts chart.
 	 */
-	public function setDefs($defs) {
+	public function setDefs(array $defs = null) {
 		$this->defs = $defs;
 		return $this;
 	}
@@ -884,10 +875,10 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Set the pane.
 	 *
-	 * @param HighchartsPane $pane The pane.
+	 * @param array $pane The pane.
 	 * @return HighchartsChart Returns the highcharts chart.
 	 */
-	public function setPane(HighchartsPane $pane = null) {
+	public function setPane(array $pane = null) {
 		$this->pane = $pane;
 		return $this;
 	}
@@ -1068,7 +1059,7 @@ final class HighchartsChart implements JsonSerializable {
 
 		// Check the pane.
 		if (!is_null($this->pane)) {
-			$output["pane"] = $this->pane->toArray();
+			$output["pane"] = $this->pane;
 		}
 
 		// Check the plot options.
@@ -1119,5 +1110,5 @@ final class HighchartsChart implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

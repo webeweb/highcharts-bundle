@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -332,7 +332,7 @@ final class HighchartsChart implements JsonSerializable {
 	 *
 	 * @var array
 	 */
-	private $style = ["fontFamily" => "\"Lucida Grande\", \"Lucida Sans Unicode\", Verdana, Arial, Helvetica, sans-serif","fontSize" => "12px"];
+	private $style = ["fontFamily" => "\"Lucida Grande\", \"Lucida Sans Unicode\", Verdana, Arial, Helvetica, sans-serif", "fontSize" => "12px"];
 
 	/**
 	 * Type.
@@ -377,6 +377,8 @@ final class HighchartsChart implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -1147,7 +1149,16 @@ final class HighchartsChart implements JsonSerializable {
 	 * @deprecated
 	 */
 	public function setDefaultSeriesType($defaultSeriesType) {
-		$this->defaultSeriesType = $defaultSeriesType;
+		switch ($defaultSeriesType) {
+			case "area":
+			case "areaspline":
+			case "column":
+			case "line":
+			case "pie":
+			case "spline":
+				$this->defaultSeriesType = $defaultSeriesType;
+				break;
+		}
 		return $this;
 	}
 
@@ -1279,7 +1290,15 @@ final class HighchartsChart implements JsonSerializable {
 	 * @return HighchartsChart Returns the highcharts chart.
 	 */
 	public function setPanKey($panKey) {
-		$this->panKey = $panKey;
+		switch ($panKey) {
+			case null:
+			case "alt":
+			case "ctrl":
+			case "meta":
+			case "shift":
+				$this->panKey = $panKey;
+				break;
+		}
 		return $this;
 	}
 
@@ -1301,7 +1320,13 @@ final class HighchartsChart implements JsonSerializable {
 	 * @return HighchartsChart Returns the highcharts chart.
 	 */
 	public function setPinchType($pinchType) {
-		$this->pinchType = $pinchType;
+		switch ($pinchType) {
+			case "x":
+			case "xy":
+			case "y":
+				$this->pinchType = $pinchType;
+				break;
+		}
 		return $this;
 	}
 
@@ -1510,7 +1535,32 @@ final class HighchartsChart implements JsonSerializable {
 	 * @return HighchartsChart Returns the highcharts chart.
 	 */
 	public function setType($type) {
-		$this->type = $type;
+		switch ($type) {
+			case "area":
+			case "arearange":
+			case "areaspline":
+			case "areasplinerange":
+			case "bar":
+			case "boxplot":
+			case "bubble":
+			case "column":
+			case "columnrange":
+			case "errorbar":
+			case "funnel":
+			case "gauge":
+			case "heatmap":
+			case "line":
+			case "pie":
+			case "polygon":
+			case "pyramid":
+			case "scatter":
+			case "solidgauge":
+			case "spline":
+			case "treemap":
+			case "waterfall":
+				$this->type = $type;
+				break;
+		}
 		return $this;
 	}
 
@@ -1543,7 +1593,14 @@ final class HighchartsChart implements JsonSerializable {
 	 * @return HighchartsChart Returns the highcharts chart.
 	 */
 	public function setZoomType($zoomType) {
-		$this->zoomType = $zoomType;
+		switch ($zoomType) {
+			case null:
+			case "x":
+			case "xy":
+			case "y":
+				$this->zoomType = $zoomType;
+				break;
+		}
 		return $this;
 	}
 
@@ -1780,5 +1837,5 @@ final class HighchartsChart implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

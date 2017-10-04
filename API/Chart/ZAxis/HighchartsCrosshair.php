@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -84,6 +84,8 @@ final class HighchartsCrosshair implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -210,7 +212,21 @@ final class HighchartsCrosshair implements JsonSerializable {
 	 * @return HighchartsCrosshair Returns the highcharts crosshair.
 	 */
 	public function setDashStyle($dashStyle) {
-		$this->dashStyle = $dashStyle;
+		switch ($dashStyle) {
+			case "Dash":
+			case "DashDot":
+			case "Dot":
+			case "LongDash":
+			case "LongDashDot":
+			case "LongDashDotDot":
+			case "ShortDash":
+			case "ShortDashDot":
+			case "ShortDashDotDot":
+			case "ShortDot":
+			case "Solid":
+				$this->dashStyle = $dashStyle;
+				break;
+		}
 		return $this;
 	}
 
@@ -290,5 +306,5 @@ final class HighchartsCrosshair implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

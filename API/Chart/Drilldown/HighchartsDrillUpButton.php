@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -26,7 +26,7 @@ final class HighchartsDrillUpButton implements JsonSerializable {
 	/**
 	 * Position.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 3.0.8
 	 */
 	private $position;
@@ -42,7 +42,7 @@ final class HighchartsDrillUpButton implements JsonSerializable {
 	/**
 	 * Theme.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 3.0.8
 	 */
 	private $theme;
@@ -60,6 +60,8 @@ final class HighchartsDrillUpButton implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -82,7 +84,7 @@ final class HighchartsDrillUpButton implements JsonSerializable {
 	/**
 	 * Get the position.
 	 *
-	 * @return Object Returns the position.
+	 * @return array Returns the position.
 	 */
 	public function getPosition() {
 		return $this->position;
@@ -100,7 +102,7 @@ final class HighchartsDrillUpButton implements JsonSerializable {
 	/**
 	 * Get the theme.
 	 *
-	 * @return Object Returns the theme.
+	 * @return array Returns the theme.
 	 */
 	public function getTheme() {
 		return $this->theme;
@@ -118,10 +120,10 @@ final class HighchartsDrillUpButton implements JsonSerializable {
 	/**
 	 * Set the position.
 	 *
-	 * @param Object $position The position.
+	 * @param array $position The position.
 	 * @return HighchartsDrillUpButton Returns the highcharts drill up button.
 	 */
-	public function setPosition($position) {
+	public function setPosition(array $position = null) {
 		$this->position = $position;
 		return $this;
 	}
@@ -140,10 +142,10 @@ final class HighchartsDrillUpButton implements JsonSerializable {
 	/**
 	 * Set the theme.
 	 *
-	 * @param Object $theme The theme.
+	 * @param array $theme The theme.
 	 * @return HighchartsDrillUpButton Returns the highcharts drill up button.
 	 */
-	public function setTheme($theme) {
+	public function setTheme(array $theme = null) {
 		$this->theme = $theme;
 		return $this;
 	}
@@ -176,5 +178,5 @@ final class HighchartsDrillUpButton implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

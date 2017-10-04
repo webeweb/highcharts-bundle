@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\XAxis;
 
-use WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair;
 
 /**
  * Highcharts crosshair test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsCrosshairTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsCrosshair(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -43,10 +58,10 @@ final class HighchartsCrosshairTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["dashStyle" => "Solid", "snap" => true, "zIndex" => 2, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
 		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with color');
 
-		$obj->setWidth(34);
+		$obj->setWidth(94);
 
-		$res3 = ["dashStyle" => "Solid", "snap" => true, "zIndex" => 2, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "width" => 34];
+		$res3 = ["dashStyle" => "Solid", "snap" => true, "zIndex" => 2, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "width" => 94];
 		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with width');
 	}
-}
 
+}

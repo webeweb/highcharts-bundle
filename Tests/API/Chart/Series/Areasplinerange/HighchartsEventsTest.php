@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Areasplinerange;
 
-use WBW\HighchartsBundle\API\Chart\Series\Areasplinerange\HighchartsEvents;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\Series\Areasplinerange\HighchartsEvents;
 
 /**
  * Highcharts events test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsEvents(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -70,5 +85,5 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 		$res8 = ["afterAnimate" => "ebdf113b6f659f6f3ea3c6b93e658235", "checkboxClick" => "27e3160a9be50f7b44b7bb9086d94964", "click" => "a8affc088cbca89fa20dbd98c91362e4", "hide" => "a88f05b6c963e145a45b58c47cd42a41", "legendItemClick" => "56c962f18312c892a25fdf27904bd24b", "mouseOut" => "efc487f286f5bca976fafe58cb6e7895", "mouseOver" => "1f1a5f011c50a092eb06446d724dd573", "show" => "a7dd12b1dab17d25467b0b0a4c8d4a92"];
 		$this->assertEquals($res8, $obj->toArray(), 'The method toArray() does not return the expected array with show');
 	}
-}
 
+}

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\Legend;
 
-use WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle;
 
 /**
  * Highcharts title test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsTitle(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -38,5 +53,5 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["style" => ["fontWeight" => "bold"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
 		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with text');
 	}
-}
 
+}

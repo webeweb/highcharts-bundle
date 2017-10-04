@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Credits\HighchartsPosition;
 
 /**
  * Highcharts credits.
@@ -41,7 +40,7 @@ final class HighchartsCredits implements JsonSerializable {
 	/**
 	 * Position.
 	 *
-	 * @var HighchartsPosition
+	 * @var array
 	 * @since 2.1
 	 */
 	private $position;
@@ -73,6 +72,8 @@ final class HighchartsCredits implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -88,7 +89,7 @@ final class HighchartsCredits implements JsonSerializable {
 
 		// Check the position.
 		if (!is_null($this->position)) {
-			$this->position->clear();
+			$this->position = null;
 		}
 
 		// Check the style.
@@ -123,7 +124,7 @@ final class HighchartsCredits implements JsonSerializable {
 	/**
 	 * Get the position.
 	 *
-	 * @return HighchartsPosition Returns the position.
+	 * @return array Returns the position.
 	 */
 	public function getPosition() {
 		return $this->position;
@@ -157,16 +158,6 @@ final class HighchartsCredits implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new position.
-	 *
-	 * @return HighchartsPosition Returns the position.
-	 */
-	public function newPosition() {
-		$this->position = new HighchartsPosition();
-		return $this->position;
-	}
-
-	/**
 	 * Set the enabled.
 	 *
 	 * @param boolean $enabled The enabled.
@@ -191,10 +182,10 @@ final class HighchartsCredits implements JsonSerializable {
 	/**
 	 * Set the position.
 	 *
-	 * @param HighchartsPosition $position The position.
+	 * @param array $position The position.
 	 * @return HighchartsCredits Returns the highcharts credits.
 	 */
-	public function setPosition(HighchartsPosition $position = null) {
+	public function setPosition(array $position = null) {
 		$this->position = $position;
 		return $this;
 	}
@@ -243,7 +234,7 @@ final class HighchartsCredits implements JsonSerializable {
 
 		// Check the position.
 		if (!is_null($this->position)) {
-			$output["position"] = $this->position->toArray();
+			$output["position"] = $this->position;
 		}
 
 		// Check the style.
@@ -259,5 +250,5 @@ final class HighchartsCredits implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

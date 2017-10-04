@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -76,6 +76,8 @@ final class HighchartsCondition implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -252,5 +254,5 @@ final class HighchartsCondition implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

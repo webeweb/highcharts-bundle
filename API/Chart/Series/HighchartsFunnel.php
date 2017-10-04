@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -16,7 +16,6 @@ use WBW\HighchartsBundle\API\Chart\Series\Funnel\HighchartsDataLabels;
 use WBW\HighchartsBundle\API\Chart\Series\Funnel\HighchartsEvents;
 use WBW\HighchartsBundle\API\Chart\Series\Funnel\HighchartsPoint;
 use WBW\HighchartsBundle\API\Chart\Series\Funnel\HighchartsStates;
-use WBW\HighchartsBundle\API\Chart\Series\Funnel\HighchartsTooltip;
 
 /**
  * Highcharts funnel.
@@ -318,7 +317,7 @@ final class HighchartsFunnel implements JsonSerializable {
 	/**
 	 * Tooltip.
 	 *
-	 * @var HighchartsTooltip
+	 * @var array
 	 * @since 2.3
 	 */
 	private $tooltip;
@@ -381,6 +380,8 @@ final class HighchartsFunnel implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -576,7 +577,7 @@ final class HighchartsFunnel implements JsonSerializable {
 
 		// Check the tooltip.
 		if (!is_null($this->tooltip)) {
-			$this->tooltip->clear();
+			$this->tooltip = null;
 		}
 
 		// Check the type.
@@ -955,7 +956,7 @@ final class HighchartsFunnel implements JsonSerializable {
 	/**
 	 * Get the tooltip.
 	 *
-	 * @return HighchartsTooltip Returns the tooltip.
+	 * @return array Returns the tooltip.
 	 */
 	public function getTooltip() {
 		return $this->tooltip;
@@ -1065,16 +1066,6 @@ final class HighchartsFunnel implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new tooltip.
-	 *
-	 * @return HighchartsTooltip Returns the tooltip.
-	 */
-	public function newTooltip() {
-		$this->tooltip = new HighchartsTooltip();
-		return $this->tooltip;
-	}
-
-	/**
 	 * Set the allow point select.
 	 *
 	 * @param boolean $allowPointSelect The allow point select.
@@ -1169,7 +1160,16 @@ final class HighchartsFunnel implements JsonSerializable {
 	 * @return HighchartsFunnel Returns the highcharts funnel.
 	 */
 	public function setCursor($cursor) {
-		$this->cursor = $cursor;
+		switch ($cursor) {
+			case null:
+			case "crosshair":
+			case "default":
+			case "help":
+			case "none":
+			case "pointer":
+				$this->cursor = $cursor;
+				break;
+		}
 		return $this;
 	}
 
@@ -1257,7 +1257,12 @@ final class HighchartsFunnel implements JsonSerializable {
 	 * @return HighchartsFunnel Returns the highcharts funnel.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
-		$this->findNearestPointBy = $findNearestPointBy;
+		switch ($findNearestPointBy) {
+			case "x":
+			case "xy":
+				$this->findNearestPointBy = $findNearestPointBy;
+				break;
+		}
 		return $this;
 	}
 
@@ -1495,10 +1500,10 @@ final class HighchartsFunnel implements JsonSerializable {
 	/**
 	 * Set the tooltip.
 	 *
-	 * @param HighchartsTooltip $tooltip The tooltip.
+	 * @param array $tooltip The tooltip.
 	 * @return HighchartsFunnel Returns the highcharts funnel.
 	 */
-	public function setTooltip(HighchartsTooltip $tooltip = null) {
+	public function setTooltip(array $tooltip = null) {
 		$this->tooltip = $tooltip;
 		return $this;
 	}
@@ -1510,7 +1515,27 @@ final class HighchartsFunnel implements JsonSerializable {
 	 * @return HighchartsFunnel Returns the highcharts funnel.
 	 */
 	public function setType($type) {
-		$this->type = $type;
+		switch ($type) {
+			case null:
+			case "area":
+			case "arearange":
+			case "areaspline":
+			case "areasplinerange":
+			case "boxplot":
+			case "bubble":
+			case "column":
+			case "columnrange":
+			case "errorbar":
+			case "funnel":
+			case "gauge":
+			case "line":
+			case "pie":
+			case "scatter":
+			case "spline":
+			case "waterfall":
+				$this->type = $type;
+				break;
+		}
 		return $this;
 	}
 
@@ -1771,7 +1796,7 @@ final class HighchartsFunnel implements JsonSerializable {
 
 		// Check the tooltip.
 		if (!is_null($this->tooltip)) {
-			$output["tooltip"] = $this->tooltip->toArray();
+			$output["tooltip"] = $this->tooltip;
 		}
 
 		// Check the type.
@@ -1807,5 +1832,5 @@ final class HighchartsFunnel implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -26,7 +26,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	/**
 	 * Date time label formats.
 	 *
-	 * @var Object
+	 * @var array
 	 */
 	private $dateTimeLabelFormats;
 
@@ -146,6 +146,8 @@ final class HighchartsTooltip implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -223,7 +225,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	/**
 	 * Get the date time label formats.
 	 *
-	 * @return Object Returns the date time label formats.
+	 * @return array Returns the date time label formats.
 	 */
 	public function getDateTimeLabelFormats() {
 		return $this->dateTimeLabelFormats;
@@ -358,10 +360,10 @@ final class HighchartsTooltip implements JsonSerializable {
 	/**
 	 * Set the date time label formats.
 	 *
-	 * @param Object $dateTimeLabelFormats The date time label formats.
+	 * @param array $dateTimeLabelFormats The date time label formats.
 	 * @return HighchartsTooltip Returns the highcharts tooltip.
 	 */
-	public function setDateTimeLabelFormats($dateTimeLabelFormats) {
+	public function setDateTimeLabelFormats(array $dateTimeLabelFormats = null) {
 		$this->dateTimeLabelFormats = $dateTimeLabelFormats;
 		return $this;
 	}
@@ -592,5 +594,5 @@ final class HighchartsTooltip implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

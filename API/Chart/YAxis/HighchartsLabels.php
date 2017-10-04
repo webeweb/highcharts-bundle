@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -170,6 +170,8 @@ final class HighchartsLabels implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -443,7 +445,13 @@ final class HighchartsLabels implements JsonSerializable {
 	 * @return HighchartsLabels Returns the highcharts labels.
 	 */
 	public function setAlign($align) {
-		$this->align = $align;
+		switch ($align) {
+			case "center":
+			case "left":
+			case "right":
+				$this->align = $align;
+				break;
+		}
 		return $this;
 	}
 
@@ -521,7 +529,12 @@ final class HighchartsLabels implements JsonSerializable {
 	 * @deprecated
 	 */
 	public function setOverflow($overflow) {
-		$this->overflow = $overflow;
+		switch ($overflow) {
+			case null:
+			case "justify":
+				$this->overflow = $overflow;
+				break;
+		}
 		return $this;
 	}
 
@@ -733,5 +746,5 @@ final class HighchartsLabels implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

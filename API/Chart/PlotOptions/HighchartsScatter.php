@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -17,7 +17,6 @@ use WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter\HighchartsEvents;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter\HighchartsMarker;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter\HighchartsPoint;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter\HighchartsStates;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter\HighchartsTooltip;
 
 /**
  * Highcharts scatter.
@@ -296,7 +295,7 @@ final class HighchartsScatter implements JsonSerializable {
 	/**
 	 * Tooltip.
 	 *
-	 * @var HighchartsTooltip
+	 * @var array
 	 * @since 2.3
 	 */
 	private $tooltip;
@@ -345,6 +344,8 @@ final class HighchartsScatter implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -525,7 +526,7 @@ final class HighchartsScatter implements JsonSerializable {
 
 		// Check the tooltip.
 		if (!is_null($this->tooltip)) {
-			$this->tooltip->clear();
+			$this->tooltip = null;
 		}
 
 		// Check the turbo threshold.
@@ -867,7 +868,7 @@ final class HighchartsScatter implements JsonSerializable {
 	/**
 	 * Get the tooltip.
 	 *
-	 * @return HighchartsTooltip Returns the tooltip.
+	 * @return array Returns the tooltip.
 	 */
 	public function getTooltip() {
 		return $this->tooltip;
@@ -969,16 +970,6 @@ final class HighchartsScatter implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new tooltip.
-	 *
-	 * @return HighchartsTooltip Returns the tooltip.
-	 */
-	public function newTooltip() {
-		$this->tooltip = new HighchartsTooltip();
-		return $this->tooltip;
-	}
-
-	/**
 	 * Set the allow point select.
 	 *
 	 * @param boolean $allowPointSelect The allow point select.
@@ -1062,7 +1053,16 @@ final class HighchartsScatter implements JsonSerializable {
 	 * @return HighchartsScatter Returns the highcharts scatter.
 	 */
 	public function setCursor($cursor) {
-		$this->cursor = $cursor;
+		switch ($cursor) {
+			case null:
+			case "crosshair":
+			case "default":
+			case "help":
+			case "none":
+			case "pointer":
+				$this->cursor = $cursor;
+				break;
+		}
 		return $this;
 	}
 
@@ -1073,7 +1073,21 @@ final class HighchartsScatter implements JsonSerializable {
 	 * @return HighchartsScatter Returns the highcharts scatter.
 	 */
 	public function setDashStyle($dashStyle) {
-		$this->dashStyle = $dashStyle;
+		switch ($dashStyle) {
+			case "Dash":
+			case "DashDot":
+			case "Dot":
+			case "LongDash":
+			case "LongDashDot":
+			case "LongDashDotDot":
+			case "ShortDash":
+			case "ShortDashDot":
+			case "ShortDashDotDot":
+			case "ShortDot":
+			case "Solid":
+				$this->dashStyle = $dashStyle;
+				break;
+		}
 		return $this;
 	}
 
@@ -1139,7 +1153,12 @@ final class HighchartsScatter implements JsonSerializable {
 	 * @return HighchartsScatter Returns the highcharts scatter.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
-		$this->findNearestPointBy = $findNearestPointBy;
+		switch ($findNearestPointBy) {
+			case "x":
+			case "xy":
+				$this->findNearestPointBy = $findNearestPointBy;
+				break;
+		}
 		return $this;
 	}
 
@@ -1249,7 +1268,14 @@ final class HighchartsScatter implements JsonSerializable {
 	 * @return HighchartsScatter Returns the highcharts scatter.
 	 */
 	public function setPointIntervalUnit($pointIntervalUnit) {
-		$this->pointIntervalUnit = $pointIntervalUnit;
+		switch ($pointIntervalUnit) {
+			case null:
+			case "day":
+			case "month":
+			case "year":
+				$this->pointIntervalUnit = $pointIntervalUnit;
+				break;
+		}
 		return $this;
 	}
 
@@ -1366,10 +1392,10 @@ final class HighchartsScatter implements JsonSerializable {
 	/**
 	 * Set the tooltip.
 	 *
-	 * @param HighchartsTooltip $tooltip The tooltip.
+	 * @param array $tooltip The tooltip.
 	 * @return HighchartsScatter Returns the highcharts scatter.
 	 */
-	public function setTooltip(HighchartsTooltip $tooltip = null) {
+	public function setTooltip(array $tooltip = null) {
 		$this->tooltip = $tooltip;
 		return $this;
 	}
@@ -1605,7 +1631,7 @@ final class HighchartsScatter implements JsonSerializable {
 
 		// Check the tooltip.
 		if (!is_null($this->tooltip)) {
-			$output["tooltip"] = $this->tooltip->toArray();
+			$output["tooltip"] = $this->tooltip;
 		}
 
 		// Check the turbo threshold.
@@ -1631,5 +1657,5 @@ final class HighchartsScatter implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

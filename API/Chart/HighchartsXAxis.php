@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -84,7 +84,7 @@ final class HighchartsXAxis implements JsonSerializable {
 	/**
 	 * Date time label formats.
 	 *
-	 * @var Object
+	 * @var array
 	 */
 	private $dateTimeLabelFormats;
 
@@ -504,6 +504,8 @@ final class HighchartsXAxis implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -889,7 +891,7 @@ final class HighchartsXAxis implements JsonSerializable {
 	/**
 	 * Get the date time label formats.
 	 *
-	 * @return Object Returns the date time label formats.
+	 * @return array Returns the date time label formats.
 	 */
 	public function getDateTimeLabelFormats() {
 		return $this->dateTimeLabelFormats;
@@ -1520,10 +1522,10 @@ final class HighchartsXAxis implements JsonSerializable {
 	/**
 	 * Set the date time label formats.
 	 *
-	 * @param Object $dateTimeLabelFormats The date time label formats.
+	 * @param array $dateTimeLabelFormats The date time label formats.
 	 * @return HighchartsXAxis Returns the highcharts x axis.
 	 */
-	public function setDateTimeLabelFormats($dateTimeLabelFormats) {
+	public function setDateTimeLabelFormats(array $dateTimeLabelFormats = null) {
 		$this->dateTimeLabelFormats = $dateTimeLabelFormats;
 		return $this;
 	}
@@ -1590,7 +1592,21 @@ final class HighchartsXAxis implements JsonSerializable {
 	 * @return HighchartsXAxis Returns the highcharts x axis.
 	 */
 	public function setGridLineDashStyle($gridLineDashStyle) {
-		$this->gridLineDashStyle = $gridLineDashStyle;
+		switch ($gridLineDashStyle) {
+			case "Dash":
+			case "DashDot":
+			case "Dot":
+			case "LongDash":
+			case "LongDashDot":
+			case "LongDashDotDot":
+			case "ShortDash":
+			case "ShortDashDot":
+			case "ShortDashDotDot":
+			case "ShortDot":
+			case "Solid":
+				$this->gridLineDashStyle = $gridLineDashStyle;
+				break;
+		}
 		return $this;
 	}
 
@@ -1767,7 +1783,21 @@ final class HighchartsXAxis implements JsonSerializable {
 	 * @return HighchartsXAxis Returns the highcharts x axis.
 	 */
 	public function setMinorGridLineDashStyle($minorGridLineDashStyle) {
-		$this->minorGridLineDashStyle = $minorGridLineDashStyle;
+		switch ($minorGridLineDashStyle) {
+			case "Dash":
+			case "DashDot":
+			case "Dot":
+			case "LongDash":
+			case "LongDashDot":
+			case "LongDashDotDot":
+			case "ShortDash":
+			case "ShortDashDot":
+			case "ShortDashDotDot":
+			case "ShortDot":
+			case "Solid":
+				$this->minorGridLineDashStyle = $minorGridLineDashStyle;
+				break;
+		}
 		return $this;
 	}
 
@@ -1822,7 +1852,12 @@ final class HighchartsXAxis implements JsonSerializable {
 	 * @return HighchartsXAxis Returns the highcharts x axis.
 	 */
 	public function setMinorTickPosition($minorTickPosition) {
-		$this->minorTickPosition = $minorTickPosition;
+		switch ($minorTickPosition) {
+			case "inside":
+			case "outside":
+				$this->minorTickPosition = $minorTickPosition;
+				break;
+		}
 		return $this;
 	}
 
@@ -2031,7 +2066,12 @@ final class HighchartsXAxis implements JsonSerializable {
 	 * @return HighchartsXAxis Returns the highcharts x axis.
 	 */
 	public function setTickPosition($tickPosition) {
-		$this->tickPosition = $tickPosition;
+		switch ($tickPosition) {
+			case "inside":
+			case "outside":
+				$this->tickPosition = $tickPosition;
+				break;
+		}
 		return $this;
 	}
 
@@ -2075,7 +2115,13 @@ final class HighchartsXAxis implements JsonSerializable {
 	 * @return HighchartsXAxis Returns the highcharts x axis.
 	 */
 	public function setTickmarkPlacement($tickmarkPlacement) {
-		$this->tickmarkPlacement = $tickmarkPlacement;
+		switch ($tickmarkPlacement) {
+			case null:
+			case "between":
+			case "on":
+				$this->tickmarkPlacement = $tickmarkPlacement;
+				break;
+		}
 		return $this;
 	}
 
@@ -2097,7 +2143,14 @@ final class HighchartsXAxis implements JsonSerializable {
 	 * @return HighchartsXAxis Returns the highcharts x axis.
 	 */
 	public function setType($type) {
-		$this->type = $type;
+		switch ($type) {
+			case "category":
+			case "datetime":
+			case "linear":
+			case "logarithmic":
+				$this->type = $type;
+				break;
+		}
 		return $this;
 	}
 
@@ -2457,5 +2510,5 @@ final class HighchartsXAxis implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

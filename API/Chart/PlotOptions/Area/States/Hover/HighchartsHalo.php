@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -26,7 +26,7 @@ final class HighchartsHalo implements JsonSerializable {
 	/**
 	 * Attributes.
 	 *
-	 * @var Object
+	 * @var array
 	 * @since 4.0
 	 */
 	private $attributes;
@@ -60,6 +60,8 @@ final class HighchartsHalo implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -82,7 +84,7 @@ final class HighchartsHalo implements JsonSerializable {
 	/**
 	 * Get the attributes.
 	 *
-	 * @return Object Returns the attributes.
+	 * @return array Returns the attributes.
 	 */
 	public function getAttributes() {
 		return $this->attributes;
@@ -118,10 +120,10 @@ final class HighchartsHalo implements JsonSerializable {
 	/**
 	 * Set the attributes.
 	 *
-	 * @param Object $attributes The attributes.
+	 * @param array $attributes The attributes.
 	 * @return HighchartsHalo Returns the highcharts halo.
 	 */
-	public function setAttributes($attributes) {
+	public function setAttributes(array $attributes = null) {
 		$this->attributes = $attributes;
 		return $this;
 	}
@@ -176,5 +178,5 @@ final class HighchartsHalo implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

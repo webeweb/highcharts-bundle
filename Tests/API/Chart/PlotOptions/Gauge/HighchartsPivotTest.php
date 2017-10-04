@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Gauge;
 
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot;
 
 /**
  * Highcharts pivot test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsPivotTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsPivot(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -33,5 +48,5 @@ final class HighchartsPivotTest extends PHPUnit_Framework_TestCase {
 		$res = ["backgroundColor" => "#000000", "borderColor" => "#cccccc", "borderWidth" => 0, "radius" => 5];
 		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
 	}
-}
 
+}

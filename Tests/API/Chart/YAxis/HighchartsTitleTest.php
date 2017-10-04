@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\YAxis;
 
-use WBW\HighchartsBundle\API\Chart\YAxis\HighchartsTitle;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\YAxis\HighchartsTitle;
 
 /**
  * Highcharts title test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsTitle(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -33,15 +48,15 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 		$res = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0];
 		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
 
-		$obj->setOffset(4);
+		$obj->setOffset(95);
 
-		$res1 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 4];
+		$res1 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 95];
 		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with offset');
 
-		$obj->setY(32);
+		$obj->setY(46);
 
-		$res2 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 4, "y" => 32];
+		$res2 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 95, "y" => 46];
 		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with y');
 	}
-}
 
+}

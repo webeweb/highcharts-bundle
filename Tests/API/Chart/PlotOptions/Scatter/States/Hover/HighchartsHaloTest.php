@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Scatter\States\Hover;
 
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter\States\Hover\HighchartsHalo;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter\States\Hover\HighchartsHalo;
 
 /**
  * Highcharts halo test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsHaloTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsHalo(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -33,10 +48,10 @@ final class HighchartsHaloTest extends PHPUnit_Framework_TestCase {
 		$res = ["opacity" => 0.25, "size" => 10];
 		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
 
-		$obj->setAttributes("736b91750e516139acc13c5eb6564f92");
+		$obj->setAttributes(["attributes" => "736b91750e516139acc13c5eb6564f92"]);
 
-		$res1 = ["opacity" => 0.25, "size" => 10, "attributes" => "736b91750e516139acc13c5eb6564f92"];
+		$res1 = ["opacity" => 0.25, "size" => 10, "attributes" => ["attributes" => "736b91750e516139acc13c5eb6564f92"]];
 		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with attributes');
 	}
-}
 
+}

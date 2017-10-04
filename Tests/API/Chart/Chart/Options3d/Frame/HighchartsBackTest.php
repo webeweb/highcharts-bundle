@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -11,8 +11,8 @@
 
 namespace WBW\HighchartsBundle\Tests\API\Chart\Chart\Options3d\Frame;
 
-use WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack;
 use PHPUnit_Framework_TestCase;
+use WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack;
 
 /**
  * Highcharts back test.
@@ -24,7 +24,22 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsBackTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new HighchartsBack(false);
+
+		$obj->clear();
+		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+	}
+
+	/**
 	 * Test the toArray() method.
+	 *
+	 * @return void
 	 */
 	public function testToArray() {
 
@@ -33,5 +48,5 @@ final class HighchartsBackTest extends PHPUnit_Framework_TestCase {
 		$res = ["color" => "transparent", "size" => 1, "visible" => "default"];
 		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
 	}
-}
 
+}

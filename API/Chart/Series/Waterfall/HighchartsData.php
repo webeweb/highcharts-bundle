@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -50,7 +50,7 @@ final class HighchartsData implements JsonSerializable {
 	/**
 	 * Data labels.
 	 *
-	 * @var Object
+	 * @var array
 	 */
 	private $dataLabels;
 
@@ -147,6 +147,8 @@ final class HighchartsData implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -256,7 +258,7 @@ final class HighchartsData implements JsonSerializable {
 	/**
 	 * Get the data labels.
 	 *
-	 * @return Object Returns the data labels.
+	 * @return array Returns the data labels.
 	 */
 	public function getDataLabels() {
 		return $this->dataLabels;
@@ -416,10 +418,10 @@ final class HighchartsData implements JsonSerializable {
 	/**
 	 * Set the data labels.
 	 *
-	 * @param Object $dataLabels The data labels.
+	 * @param array $dataLabels The data labels.
 	 * @return HighchartsData Returns the highcharts data.
 	 */
-	public function setDataLabels($dataLabels) {
+	public function setDataLabels(array $dataLabels = null) {
 		$this->dataLabels = $dataLabels;
 		return $this;
 	}
@@ -633,5 +635,5 @@ final class HighchartsData implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

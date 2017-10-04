@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -92,6 +92,8 @@ final class HighchartsBackground implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -276,7 +278,12 @@ final class HighchartsBackground implements JsonSerializable {
 	 * @return HighchartsBackground Returns the highcharts background.
 	 */
 	public function setShape($shape) {
-		$this->shape = $shape;
+		switch ($shape) {
+			case "arc":
+			case "solid":
+				$this->shape = $shape;
+				break;
+		}
 		return $this;
 	}
 
@@ -328,5 +335,5 @@ final class HighchartsBackground implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

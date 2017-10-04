@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -12,12 +12,8 @@
 namespace WBW\HighchartsBundle\API\Chart\PlotOptions;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDataLabels;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsEvents;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot;
 use WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsTooltip;
 
 /**
  * Highcharts gauge.
@@ -76,7 +72,7 @@ final class HighchartsGauge implements JsonSerializable {
 	/**
 	 * Data labels.
 	 *
-	 * @var HighchartsDataLabels
+	 * @var array
 	 * @since 2.3.0
 	 */
 	private $dataLabels;
@@ -92,7 +88,7 @@ final class HighchartsGauge implements JsonSerializable {
 	/**
 	 * Dial.
 	 *
-	 * @var HighchartsDial
+	 * @var array
 	 * @since 2.3.0
 	 */
 	private $dial;
@@ -170,7 +166,7 @@ final class HighchartsGauge implements JsonSerializable {
 	/**
 	 * Pivot.
 	 *
-	 * @var HighchartsPivot
+	 * @var array
 	 * @since 2.3.0
 	 */
 	private $pivot;
@@ -241,7 +237,7 @@ final class HighchartsGauge implements JsonSerializable {
 	/**
 	 * Tooltip.
 	 *
-	 * @var HighchartsTooltip
+	 * @var array
 	 * @since 2.3
 	 */
 	private $tooltip;
@@ -274,6 +270,8 @@ final class HighchartsGauge implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -309,7 +307,7 @@ final class HighchartsGauge implements JsonSerializable {
 
 		// Check the data labels.
 		if (!is_null($this->dataLabels)) {
-			$this->dataLabels->clear();
+			$this->dataLabels = null;
 		}
 
 		// Check the description.
@@ -319,7 +317,7 @@ final class HighchartsGauge implements JsonSerializable {
 
 		// Check the dial.
 		if (!is_null($this->dial)) {
-			$this->dial->clear();
+			$this->dial = null;
 		}
 
 		// Check the enable mouse tracking.
@@ -369,7 +367,7 @@ final class HighchartsGauge implements JsonSerializable {
 
 		// Check the pivot.
 		if (!is_null($this->pivot)) {
-			$this->pivot->clear();
+			$this->pivot = null;
 		}
 
 		// Check the point.
@@ -414,7 +412,7 @@ final class HighchartsGauge implements JsonSerializable {
 
 		// Check the tooltip.
 		if (!is_null($this->tooltip)) {
-			$this->tooltip->clear();
+			$this->tooltip = null;
 		}
 
 		// Check the visible.
@@ -485,7 +483,7 @@ final class HighchartsGauge implements JsonSerializable {
 	/**
 	 * Get the data labels.
 	 *
-	 * @return HighchartsDataLabels Returns the data labels.
+	 * @return array Returns the data labels.
 	 */
 	public function getDataLabels() {
 		return $this->dataLabels;
@@ -503,7 +501,7 @@ final class HighchartsGauge implements JsonSerializable {
 	/**
 	 * Get the dial.
 	 *
-	 * @return HighchartsDial Returns the dial.
+	 * @return array Returns the dial.
 	 */
 	public function getDial() {
 		return $this->dial;
@@ -593,7 +591,7 @@ final class HighchartsGauge implements JsonSerializable {
 	/**
 	 * Get the pivot.
 	 *
-	 * @return HighchartsPivot Returns the pivot.
+	 * @return array Returns the pivot.
 	 */
 	public function getPivot() {
 		return $this->pivot;
@@ -674,7 +672,7 @@ final class HighchartsGauge implements JsonSerializable {
 	/**
 	 * Get the tooltip.
 	 *
-	 * @return HighchartsTooltip Returns the tooltip.
+	 * @return array Returns the tooltip.
 	 */
 	public function getTooltip() {
 		return $this->tooltip;
@@ -708,26 +706,6 @@ final class HighchartsGauge implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new data labels.
-	 *
-	 * @return HighchartsDataLabels Returns the data labels.
-	 */
-	public function newDataLabels() {
-		$this->dataLabels = new HighchartsDataLabels();
-		return $this->dataLabels;
-	}
-
-	/**
-	 * Create a new dial.
-	 *
-	 * @return HighchartsDial Returns the dial.
-	 */
-	public function newDial() {
-		$this->dial = new HighchartsDial();
-		return $this->dial;
-	}
-
-	/**
 	 * Create a new events.
 	 *
 	 * @return HighchartsEvents Returns the events.
@@ -738,16 +716,6 @@ final class HighchartsGauge implements JsonSerializable {
 	}
 
 	/**
-	 * Create a new pivot.
-	 *
-	 * @return HighchartsPivot Returns the pivot.
-	 */
-	public function newPivot() {
-		$this->pivot = new HighchartsPivot();
-		return $this->pivot;
-	}
-
-	/**
 	 * Create a new point.
 	 *
 	 * @return HighchartsPoint Returns the point.
@@ -755,16 +723,6 @@ final class HighchartsGauge implements JsonSerializable {
 	public function newPoint() {
 		$this->point = new HighchartsPoint();
 		return $this->point;
-	}
-
-	/**
-	 * Create a new tooltip.
-	 *
-	 * @return HighchartsTooltip Returns the tooltip.
-	 */
-	public function newTooltip() {
-		$this->tooltip = new HighchartsTooltip();
-		return $this->tooltip;
 	}
 
 	/**
@@ -829,17 +787,26 @@ final class HighchartsGauge implements JsonSerializable {
 	 * @return HighchartsGauge Returns the highcharts gauge.
 	 */
 	public function setCursor($cursor) {
-		$this->cursor = $cursor;
+		switch ($cursor) {
+			case null:
+			case "crosshair":
+			case "default":
+			case "help":
+			case "none":
+			case "pointer":
+				$this->cursor = $cursor;
+				break;
+		}
 		return $this;
 	}
 
 	/**
 	 * Set the data labels.
 	 *
-	 * @param HighchartsDataLabels $dataLabels The data labels.
+	 * @param array $dataLabels The data labels.
 	 * @return HighchartsGauge Returns the highcharts gauge.
 	 */
-	public function setDataLabels(HighchartsDataLabels $dataLabels = null) {
+	public function setDataLabels(array $dataLabels = null) {
 		$this->dataLabels = $dataLabels;
 		return $this;
 	}
@@ -858,10 +825,10 @@ final class HighchartsGauge implements JsonSerializable {
 	/**
 	 * Set the dial.
 	 *
-	 * @param HighchartsDial $dial The dial.
+	 * @param array $dial The dial.
 	 * @return HighchartsGauge Returns the highcharts gauge.
 	 */
-	public function setDial(HighchartsDial $dial = null) {
+	public function setDial(array $dial = null) {
 		$this->dial = $dial;
 		return $this;
 	}
@@ -906,7 +873,12 @@ final class HighchartsGauge implements JsonSerializable {
 	 * @return HighchartsGauge Returns the highcharts gauge.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
-		$this->findNearestPointBy = $findNearestPointBy;
+		switch ($findNearestPointBy) {
+			case "x":
+			case "xy":
+				$this->findNearestPointBy = $findNearestPointBy;
+				break;
+		}
 		return $this;
 	}
 
@@ -968,10 +940,10 @@ final class HighchartsGauge implements JsonSerializable {
 	/**
 	 * Set the pivot.
 	 *
-	 * @param HighchartsPivot $pivot The pivot.
+	 * @param array $pivot The pivot.
 	 * @return HighchartsGauge Returns the highcharts gauge.
 	 */
-	public function setPivot(HighchartsPivot $pivot = null) {
+	public function setPivot(array $pivot = null) {
 		$this->pivot = $pivot;
 		return $this;
 	}
@@ -1067,10 +1039,10 @@ final class HighchartsGauge implements JsonSerializable {
 	/**
 	 * Set the tooltip.
 	 *
-	 * @param HighchartsTooltip $tooltip The tooltip.
+	 * @param array $tooltip The tooltip.
 	 * @return HighchartsGauge Returns the highcharts gauge.
 	 */
-	public function setTooltip(HighchartsTooltip $tooltip = null) {
+	public function setTooltip(array $tooltip = null) {
 		$this->tooltip = $tooltip;
 		return $this;
 	}
@@ -1139,7 +1111,7 @@ final class HighchartsGauge implements JsonSerializable {
 
 		// Check the data labels.
 		if (!is_null($this->dataLabels)) {
-			$output["dataLabels"] = $this->dataLabels->toArray();
+			$output["dataLabels"] = $this->dataLabels;
 		}
 
 		// Check the description.
@@ -1149,7 +1121,7 @@ final class HighchartsGauge implements JsonSerializable {
 
 		// Check the dial.
 		if (!is_null($this->dial)) {
-			$output["dial"] = $this->dial->toArray();
+			$output["dial"] = $this->dial;
 		}
 
 		// Check the enable mouse tracking.
@@ -1199,7 +1171,7 @@ final class HighchartsGauge implements JsonSerializable {
 
 		// Check the pivot.
 		if (!is_null($this->pivot)) {
-			$output["pivot"] = $this->pivot->toArray();
+			$output["pivot"] = $this->pivot;
 		}
 
 		// Check the point.
@@ -1244,7 +1216,7 @@ final class HighchartsGauge implements JsonSerializable {
 
 		// Check the tooltip.
 		if (!is_null($this->tooltip)) {
-			$output["tooltip"] = $this->tooltip->toArray();
+			$output["tooltip"] = $this->tooltip;
 		}
 
 		// Check the visible.
@@ -1260,5 +1232,5 @@ final class HighchartsGauge implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}

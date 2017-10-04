@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the HighchartsBundle.
+ * This file is part of the WBWHighchartsBundle package.
  *
  * (c) 2017 WBW
  *
@@ -64,6 +64,8 @@ final class HighchartsPosition implements JsonSerializable {
 
 	/**
 	 * Clear.
+	 *
+	 * @return void
 	 */
 	public function clear() {
 
@@ -151,7 +153,13 @@ final class HighchartsPosition implements JsonSerializable {
 	 * @return HighchartsPosition Returns the highcharts position.
 	 */
 	public function setVerticalAlign($verticalAlign) {
-		$this->verticalAlign = $verticalAlign;
+		switch ($verticalAlign) {
+			case "bottom":
+			case "middle":
+			case "top":
+				$this->verticalAlign = $verticalAlign;
+				break;
+		}
 		return $this;
 	}
 
@@ -210,5 +218,5 @@ final class HighchartsPosition implements JsonSerializable {
 		// Return the output.
 		return $output;
 	}
-}
 
+}
