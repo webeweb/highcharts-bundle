@@ -1,0 +1,9 @@
+# .travis.yml
+language: php
+
+php:
+    - 7.0
+    - 7.1
+
+install:
+  - composer update --dev --prefer-source
