@@ -8,4 +8,4 @@ php:
 install:
   - composer update --dev --prefer-source
 
-script: phpunit
+script: phpunit --configuration phpunit.xml.dist
