@@ -7,3 +7,5 @@ php:
 
 install:
   - composer update --dev --prefer-source
+
+script: phpunit
