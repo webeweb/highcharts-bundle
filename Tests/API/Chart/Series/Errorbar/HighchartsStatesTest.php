@@ -34,7 +34,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsStates(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -47,7 +47,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsStates(false);
 
 		$res = $obj->newHover();
-		$this->assertInstanceOf(HighchartsHover::class, $res, 'The method newHover() does not return the expected class');
+		$this->assertInstanceOf(HighchartsHover::class, $res, "The method newHover() does not return the expected class");
 	}
 
 	/**
@@ -62,7 +62,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 		$obj->newHover();
 
 		$res1 = ["hover" => []];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with hover');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with hover");
 	}
 
 }

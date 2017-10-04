@@ -33,7 +33,7 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsZones(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -48,27 +48,27 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
 		$obj->setClassName("6f66e878c62db60568a3487869695820");
 
 		$res1 = ["className" => "6f66e878c62db60568a3487869695820"];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with class name');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with class name");
 
 		$obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
 		$res2 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with color');
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with color");
 
 		$obj->setDashStyle("5ad5e24042182b1974cdf57345defe8e");
 
 		$res3 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e"];
-		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with dash style');
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with dash style");
 
 		$obj->setFillColor("1fde055d3ff900e04ca08bc82066d7fd");
 
 		$res4 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
-		$this->assertEquals($res4, $obj->toArray(), 'The method toArray() does not return the expected array with fill color');
+		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-		$obj->setValue(34);
+		$obj->setValue(50);
 
-		$res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "value" => 34];
-		$this->assertEquals($res5, $obj->toArray(), 'The method toArray() does not return the expected array with value');
+		$res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "value" => 50];
+		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with value");
 	}
 
 }

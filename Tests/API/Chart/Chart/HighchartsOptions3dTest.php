@@ -34,7 +34,7 @@ final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsOptions3d(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -47,7 +47,7 @@ final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsOptions3d(false);
 
 		$res = $obj->newFrame();
-		$this->assertInstanceOf(HighchartsFrame::class, $res, 'The method newFrame() does not return the expected class');
+		$this->assertInstanceOf(HighchartsFrame::class, $res, "The method newFrame() does not return the expected class");
 	}
 
 	/**
@@ -60,17 +60,17 @@ final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsOptions3d(false);
 
 		$res = ["alpha" => 0, "beta" => 0, "depth" => 100, "enabled" => false, "fitToPlot" => true, "viewDistance" => 100];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setAxisLabelPosition("auto");
 
 		$res1 = ["alpha" => 0, "beta" => 0, "depth" => 100, "enabled" => false, "fitToPlot" => true, "viewDistance" => 100, "axisLabelPosition" => "auto"];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with axis label position');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with axis label position");
 
 		$obj->newFrame();
 
 		$res2 = ["alpha" => 0, "beta" => 0, "depth" => 100, "enabled" => false, "fitToPlot" => true, "viewDistance" => 100, "axisLabelPosition" => "auto", "frame" => []];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with frame');
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with frame");
 	}
 
 }

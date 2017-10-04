@@ -33,7 +33,7 @@ final class HighchartsRulesTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsRules(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -48,12 +48,12 @@ final class HighchartsRulesTest extends PHPUnit_Framework_TestCase {
 		$obj->setChartOptions(["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"]);
 
 		$res1 = ["chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"]];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with chart options');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with chart options");
 
 		$obj->setCondition(["condition" => "3f9178c25b78ed8bed19091bcb62e266"]);
 
 		$res2 = ["chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "condition" => ["condition" => "3f9178c25b78ed8bed19091bcb62e266"]];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with condition');
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with condition");
 	}
 
 }

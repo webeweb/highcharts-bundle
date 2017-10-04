@@ -33,7 +33,7 @@ final class HighchartsPaneTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsPane(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,22 +46,22 @@ final class HighchartsPaneTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsPane(false);
 
 		$res = ["center" => ["50%", "50%"], "size" => "85%"];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setBackground(["background" => "d229bbf31eaeebc7c88897732d8b932d"]);
 
 		$res1 = ["center" => ["50%", "50%"], "size" => "85%", "background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"]];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with background');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with background");
 
-		$obj->setEndAngle(38);
+		$obj->setEndAngle(33);
 
-		$res2 = ["center" => ["50%", "50%"], "size" => "85%", "background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "endAngle" => 38];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with end angle');
+		$res2 = ["center" => ["50%", "50%"], "size" => "85%", "background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "endAngle" => 33];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with end angle");
 
-		$obj->setStartAngle(9);
+		$obj->setStartAngle(71);
 
-		$res3 = ["center" => ["50%", "50%"], "size" => "85%", "background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "endAngle" => 38, "startAngle" => 9];
-		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with start angle');
+		$res3 = ["center" => ["50%", "50%"], "size" => "85%", "background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "endAngle" => 33, "startAngle" => 71];
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with start angle");
 	}
 
 }

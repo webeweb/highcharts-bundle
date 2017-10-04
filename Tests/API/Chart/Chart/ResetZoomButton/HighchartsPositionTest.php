@@ -33,7 +33,7 @@ final class HighchartsPositionTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsPosition(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,12 +46,12 @@ final class HighchartsPositionTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsPosition(false);
 
 		$res = ["verticalAlign" => "top", "x" => -10, "y" => 10];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setAlign("f792d1afb0399dce47533bead9d71a8a");
 
 		$res1 = ["verticalAlign" => "top", "x" => -10, "y" => 10, "align" => "f792d1afb0399dce47533bead9d71a8a"];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with align');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with align");
 	}
 
 }

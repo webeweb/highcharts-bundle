@@ -33,7 +33,7 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsLabels(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,12 +46,12 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsLabels(false);
 
 		$res = ["style" => ["color" => "#333333"]];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setItems(["items" => "691d502cfd0e0626cd3b058e5682ad1c"]);
 
 		$res1 = ["style" => ["color" => "#333333"], "items" => ["items" => "691d502cfd0e0626cd3b058e5682ad1c"]];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with items');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with items");
 	}
 
 }

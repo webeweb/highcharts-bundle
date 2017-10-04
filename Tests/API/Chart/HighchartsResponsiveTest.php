@@ -33,7 +33,7 @@ final class HighchartsResponsiveTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsResponsive(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -48,7 +48,7 @@ final class HighchartsResponsiveTest extends PHPUnit_Framework_TestCase {
 		$obj->setRules(["rules" => "a4f86f7bfc24194b276c22e0ef158197"]);
 
 		$res1 = ["rules" => ["rules" => "a4f86f7bfc24194b276c22e0ef158197"]];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with rules');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with rules");
 	}
 
 }

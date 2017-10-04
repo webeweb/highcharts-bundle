@@ -34,7 +34,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsPoint(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -47,7 +47,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsPoint(false);
 
 		$res = $obj->newEvents();
-		$this->assertInstanceOf(HighchartsEvents::class, $res, 'The method newEvents() does not return the expected class');
+		$this->assertInstanceOf(HighchartsEvents::class, $res, "The method newEvents() does not return the expected class");
 	}
 
 	/**
@@ -62,7 +62,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 		$obj->newEvents();
 
 		$res1 = ["events" => []];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with events');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with events");
 	}
 
 }

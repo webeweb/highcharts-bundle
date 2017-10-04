@@ -33,7 +33,7 @@ final class HighchartsCrosshairTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsCrosshair(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,22 +46,22 @@ final class HighchartsCrosshairTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsCrosshair(false);
 
 		$res = ["dashStyle" => "Solid", "snap" => true, "zIndex" => 2];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setClassName("6f66e878c62db60568a3487869695820");
 
 		$res1 = ["dashStyle" => "Solid", "snap" => true, "zIndex" => 2, "className" => "6f66e878c62db60568a3487869695820"];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with class name');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with class name");
 
 		$obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
 		$res2 = ["dashStyle" => "Solid", "snap" => true, "zIndex" => 2, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with color');
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with color");
 
-		$obj->setWidth(98);
+		$obj->setWidth(26);
 
-		$res3 = ["dashStyle" => "Solid", "snap" => true, "zIndex" => 2, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "width" => 98];
-		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with width');
+		$res3 = ["dashStyle" => "Solid", "snap" => true, "zIndex" => 2, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "width" => 26];
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with width");
 	}
 
 }

@@ -33,7 +33,7 @@ final class HighchartsKeyboardNavigationTest extends PHPUnit_Framework_TestCase 
 		$obj = new HighchartsKeyboardNavigation(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,7 +46,7 @@ final class HighchartsKeyboardNavigationTest extends PHPUnit_Framework_TestCase 
 		$obj = new HighchartsKeyboardNavigation(false);
 
 		$res = ["enabled" => true, "skipNullPoints" => false, "tabThroughChartElements" => true];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 }

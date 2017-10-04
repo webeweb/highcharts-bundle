@@ -33,7 +33,7 @@ final class HighchartsLoadingTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsLoading(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,7 +46,7 @@ final class HighchartsLoadingTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsLoading(false);
 
 		$res = ["hideDuration" => 100, "labelStyle" => ["fontWeight" => "bold", "position" => "relative", "top" => "45%"], "showDuration" => 100, "style" => ["position" => "absolute", "backgroundColor" => "#ffffff", "opacity" => 0.5, "textAlign" => "center"]];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 }

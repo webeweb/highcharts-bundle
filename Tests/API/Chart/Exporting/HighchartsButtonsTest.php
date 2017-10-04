@@ -34,7 +34,7 @@ final class HighchartsButtonsTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsButtons(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -47,7 +47,7 @@ final class HighchartsButtonsTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsButtons(false);
 
 		$res = $obj->newContextButton();
-		$this->assertInstanceOf(HighchartsContextButton::class, $res, 'The method newContextButton() does not return the expected class');
+		$this->assertInstanceOf(HighchartsContextButton::class, $res, "The method newContextButton() does not return the expected class");
 	}
 
 	/**
@@ -62,7 +62,7 @@ final class HighchartsButtonsTest extends PHPUnit_Framework_TestCase {
 		$obj->newContextButton();
 
 		$res1 = ["contextButton" => []];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with context button');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with context button");
 	}
 
 }

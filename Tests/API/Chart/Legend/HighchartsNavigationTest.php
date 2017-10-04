@@ -33,7 +33,7 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsNavigation(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,12 +46,12 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsNavigation(false);
 
 		$res = ["activeColor" => "#003399", "animation" => true, "arrowSize" => 12, "enabled" => true, "inactiveColor" => "#cccccc"];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
 		$res1 = ["activeColor" => "#003399", "animation" => true, "arrowSize" => 12, "enabled" => true, "inactiveColor" => "#cccccc", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with style');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with style");
 	}
 
 }

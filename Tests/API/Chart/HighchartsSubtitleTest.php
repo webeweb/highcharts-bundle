@@ -33,7 +33,7 @@ final class HighchartsSubtitleTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsSubtitle(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,22 +46,22 @@ final class HighchartsSubtitleTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsSubtitle(false);
 
 		$res = ["align" => "center", "floating" => false, "style" => ["color" => "#666666"], "useHTML" => false, "widthAdjust" => -44, "x" => 0];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
 
 		$res1 = ["align" => "center", "floating" => false, "style" => ["color" => "#666666"], "useHTML" => false, "widthAdjust" => -44, "x" => 0, "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with text');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with text");
 
 		$obj->setVerticalAlign("bottom");
 
 		$res2 = ["align" => "center", "floating" => false, "style" => ["color" => "#666666"], "useHTML" => false, "widthAdjust" => -44, "x" => 0, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "verticalAlign" => "bottom"];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with vertical align');
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
 
-		$obj->setY(66);
+		$obj->setY(15);
 
-		$res3 = ["align" => "center", "floating" => false, "style" => ["color" => "#666666"], "useHTML" => false, "widthAdjust" => -44, "x" => 0, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "verticalAlign" => "bottom", "y" => 66];
-		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with y');
+		$res3 = ["align" => "center", "floating" => false, "style" => ["color" => "#666666"], "useHTML" => false, "widthAdjust" => -44, "x" => 0, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "verticalAlign" => "bottom", "y" => 15];
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with y");
 	}
 
 }

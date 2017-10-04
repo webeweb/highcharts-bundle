@@ -33,7 +33,7 @@ final class HighchartsLabelTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsLabel(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,37 +46,37 @@ final class HighchartsLabelTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsLabel(false);
 
 		$res = ["align" => "left", "useHTML" => false, "verticalAlign" => "top"];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
-		$obj->setRotation(38);
+		$obj->setRotation(9);
 
-		$res1 = ["align" => "left", "useHTML" => false, "verticalAlign" => "top", "rotation" => 38];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with rotation');
+		$res1 = ["align" => "left", "useHTML" => false, "verticalAlign" => "top", "rotation" => 9];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with rotation");
 
 		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-		$res2 = ["align" => "left", "useHTML" => false, "verticalAlign" => "top", "rotation" => 38, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with style');
+		$res2 = ["align" => "left", "useHTML" => false, "verticalAlign" => "top", "rotation" => 9, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with style");
 
 		$obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
 
-		$res3 = ["align" => "left", "useHTML" => false, "verticalAlign" => "top", "rotation" => 38, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
-		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with text');
+		$res3 = ["align" => "left", "useHTML" => false, "verticalAlign" => "top", "rotation" => 9, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with text");
 
 		$obj->setTextAlign("6e1fcbf7c065b2e7fef4cdc9bae3fe53");
 
-		$res4 = ["align" => "left", "useHTML" => false, "verticalAlign" => "top", "rotation" => 38, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53"];
-		$this->assertEquals($res4, $obj->toArray(), 'The method toArray() does not return the expected array with text align');
+		$res4 = ["align" => "left", "useHTML" => false, "verticalAlign" => "top", "rotation" => 9, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53"];
+		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with text align");
 
-		$obj->setX(42);
+		$obj->setX(69);
 
-		$res5 = ["align" => "left", "useHTML" => false, "verticalAlign" => "top", "rotation" => 38, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 42];
-		$this->assertEquals($res5, $obj->toArray(), 'The method toArray() does not return the expected array with x');
+		$res5 = ["align" => "left", "useHTML" => false, "verticalAlign" => "top", "rotation" => 9, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 69];
+		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with x");
 
-		$obj->setY(75);
+		$obj->setY(87);
 
-		$res6 = ["align" => "left", "useHTML" => false, "verticalAlign" => "top", "rotation" => 38, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 42, "y" => 75];
-		$this->assertEquals($res6, $obj->toArray(), 'The method toArray() does not return the expected array with y');
+		$res6 = ["align" => "left", "useHTML" => false, "verticalAlign" => "top", "rotation" => 9, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 69, "y" => 87];
+		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with y");
 	}
 
 }

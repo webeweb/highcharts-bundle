@@ -33,7 +33,7 @@ final class HighchartsBackTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsBack(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,7 +46,7 @@ final class HighchartsBackTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsBack(false);
 
 		$res = ["color" => "transparent", "size" => 1, "visible" => "default"];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 }

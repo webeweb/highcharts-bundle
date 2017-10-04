@@ -33,7 +33,7 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsBreaks(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,17 +46,17 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsBreaks(false);
 
 		$res = ["breakSize" => 0, "repeat" => 0];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
-		$obj->setFrom(51);
+		$obj->setFrom(60);
 
-		$res1 = ["breakSize" => 0, "repeat" => 0, "from" => 51];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with from');
+		$res1 = ["breakSize" => 0, "repeat" => 0, "from" => 60];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with from");
 
-		$obj->setTo(45);
+		$obj->setTo(66);
 
-		$res2 = ["breakSize" => 0, "repeat" => 0, "from" => 51, "to" => 45];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with to');
+		$res2 = ["breakSize" => 0, "repeat" => 0, "from" => 60, "to" => 66];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with to");
 	}
 
 }

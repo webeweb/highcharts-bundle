@@ -33,7 +33,7 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsHover(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,17 +46,17 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsHover(false);
 
 		$res = ["enabled" => true, "lineColor" => "#ffffff", "lineWidth" => 0, "lineWidthPlus" => 1, "radiusPlus" => 2];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setFillColor("1fde055d3ff900e04ca08bc82066d7fd");
 
 		$res1 = ["enabled" => true, "lineColor" => "#ffffff", "lineWidth" => 0, "lineWidthPlus" => 1, "radiusPlus" => 2, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with fill color');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-		$obj->setRadius(82);
+		$obj->setRadius(85);
 
-		$res2 = ["enabled" => true, "lineColor" => "#ffffff", "lineWidth" => 0, "lineWidthPlus" => 1, "radiusPlus" => 2, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "radius" => 82];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with radius');
+		$res2 = ["enabled" => true, "lineColor" => "#ffffff", "lineWidth" => 0, "lineWidthPlus" => 1, "radiusPlus" => 2, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "radius" => 85];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with radius");
 	}
 
 }

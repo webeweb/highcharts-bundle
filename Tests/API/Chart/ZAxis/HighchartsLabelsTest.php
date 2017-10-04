@@ -33,7 +33,7 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsLabels(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,32 +46,32 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsLabels(false);
 
 		$res = ["autoRotation" => [-45], "autoRotationLimit" => 80, "distance" => 15, "enabled" => true, "format" => "{value}", "padding" => 5, "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666", "cursor" => "default", "fontSize" => "11px"], "useHTML" => false, "x" => 0, "zIndex" => 7];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setAlign("right");
 
 		$res1 = ["autoRotation" => [-45], "autoRotationLimit" => 80, "distance" => 15, "enabled" => true, "format" => "{value}", "padding" => 5, "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666", "cursor" => "default", "fontSize" => "11px"], "useHTML" => false, "x" => 0, "zIndex" => 7, "align" => "right"];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with align');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with align");
 
 		$obj->setFormatter("f2ffc59487832cbad265a8fef2133592");
 
 		$res2 = ["autoRotation" => [-45], "autoRotationLimit" => 80, "distance" => 15, "enabled" => true, "format" => "{value}", "padding" => 5, "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666", "cursor" => "default", "fontSize" => "11px"], "useHTML" => false, "x" => 0, "zIndex" => 7, "align" => "right", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with formatter');
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with formatter");
 
-		$obj->setStaggerLines(5);
+		$obj->setStaggerLines(8);
 
-		$res3 = ["autoRotation" => [-45], "autoRotationLimit" => 80, "distance" => 15, "enabled" => true, "format" => "{value}", "padding" => 5, "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666", "cursor" => "default", "fontSize" => "11px"], "useHTML" => false, "x" => 0, "zIndex" => 7, "align" => "right", "formatter" => "f2ffc59487832cbad265a8fef2133592", "staggerLines" => 5];
-		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with stagger lines');
+		$res3 = ["autoRotation" => [-45], "autoRotationLimit" => 80, "distance" => 15, "enabled" => true, "format" => "{value}", "padding" => 5, "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666", "cursor" => "default", "fontSize" => "11px"], "useHTML" => false, "x" => 0, "zIndex" => 7, "align" => "right", "formatter" => "f2ffc59487832cbad265a8fef2133592", "staggerLines" => 8];
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with stagger lines");
 
-		$obj->setStep(1);
+		$obj->setStep(98);
 
-		$res4 = ["autoRotation" => [-45], "autoRotationLimit" => 80, "distance" => 15, "enabled" => true, "format" => "{value}", "padding" => 5, "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666", "cursor" => "default", "fontSize" => "11px"], "useHTML" => false, "x" => 0, "zIndex" => 7, "align" => "right", "formatter" => "f2ffc59487832cbad265a8fef2133592", "staggerLines" => 5, "step" => 1];
-		$this->assertEquals($res4, $obj->toArray(), 'The method toArray() does not return the expected array with step');
+		$res4 = ["autoRotation" => [-45], "autoRotationLimit" => 80, "distance" => 15, "enabled" => true, "format" => "{value}", "padding" => 5, "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666", "cursor" => "default", "fontSize" => "11px"], "useHTML" => false, "x" => 0, "zIndex" => 7, "align" => "right", "formatter" => "f2ffc59487832cbad265a8fef2133592", "staggerLines" => 8, "step" => 98];
+		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with step");
 
-		$obj->setY(55);
+		$obj->setY(26);
 
-		$res5 = ["autoRotation" => [-45], "autoRotationLimit" => 80, "distance" => 15, "enabled" => true, "format" => "{value}", "padding" => 5, "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666", "cursor" => "default", "fontSize" => "11px"], "useHTML" => false, "x" => 0, "zIndex" => 7, "align" => "right", "formatter" => "f2ffc59487832cbad265a8fef2133592", "staggerLines" => 5, "step" => 1, "y" => 55];
-		$this->assertEquals($res5, $obj->toArray(), 'The method toArray() does not return the expected array with y');
+		$res5 = ["autoRotation" => [-45], "autoRotationLimit" => 80, "distance" => 15, "enabled" => true, "format" => "{value}", "padding" => 5, "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666", "cursor" => "default", "fontSize" => "11px"], "useHTML" => false, "x" => 0, "zIndex" => 7, "align" => "right", "formatter" => "f2ffc59487832cbad265a8fef2133592", "staggerLines" => 8, "step" => 98, "y" => 26];
+		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with y");
 	}
 
 }

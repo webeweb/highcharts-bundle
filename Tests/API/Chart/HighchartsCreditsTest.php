@@ -33,7 +33,7 @@ final class HighchartsCreditsTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsCredits(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,12 +46,12 @@ final class HighchartsCreditsTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsCredits(false);
 
 		$res = ["enabled" => true, "href" => "http://www.highcharts.com", "style" => ["cursor" => "pointer", "color" => "#999999", "fontSize" => "10px"], "text" => "Highcharts.com"];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setPosition(["position" => "4757fe07fd492a8be0ea6a760d683d6e"]);
 
 		$res1 = ["enabled" => true, "href" => "http://www.highcharts.com", "style" => ["cursor" => "pointer", "color" => "#999999", "fontSize" => "10px"], "text" => "Highcharts.com", "position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"]];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with position');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with position");
 	}
 
 }

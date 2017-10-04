@@ -33,7 +33,7 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsTitle(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,17 +46,17 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsTitle(false);
 
 		$res = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
-		$obj->setOffset(95);
+		$obj->setOffset(93);
 
-		$res1 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 95];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with offset');
+		$res1 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 93];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with offset");
 
-		$obj->setY(46);
+		$obj->setY(63);
 
-		$res2 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 95, "y" => 46];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with y');
+		$res2 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 93, "y" => 63];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with y");
 	}
 
 }

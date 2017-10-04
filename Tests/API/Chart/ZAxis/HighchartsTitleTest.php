@@ -33,7 +33,7 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsTitle(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,27 +46,27 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsTitle(false);
 
 		$res = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
-		$obj->setMargin(64);
+		$obj->setMargin(25);
 
-		$res1 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 64];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with margin');
+		$res1 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 25];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with margin");
 
-		$obj->setOffset(99);
+		$obj->setOffset(41);
 
-		$res2 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 64, "offset" => 99];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with offset');
+		$res2 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 25, "offset" => 41];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with offset");
 
 		$obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
 
-		$res3 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 64, "offset" => 99, "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
-		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with text');
+		$res3 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 25, "offset" => 41, "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with text");
 
-		$obj->setY(10);
+		$obj->setY(92);
 
-		$res4 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 64, "offset" => 99, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "y" => 10];
-		$this->assertEquals($res4, $obj->toArray(), 'The method toArray() does not return the expected array with y');
+		$res4 = ["align" => "middle", "reserveSpace" => true, "rotation" => 0, "style" => ["color" => "#666666"], "x" => 0, "margin" => 25, "offset" => 41, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "y" => 92];
+		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with y");
 	}
 
 }

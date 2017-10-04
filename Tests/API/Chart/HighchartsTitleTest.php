@@ -33,7 +33,7 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsTitle(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,17 +46,17 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsTitle(false);
 
 		$res = ["align" => "center", "floating" => false, "margin" => 15, "style" => ["color" => "#333333", "fontSize" => "18px"], "text" => "Chart title", "useHTML" => false, "widthAdjust" => -44, "x" => 0];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setVerticalAlign("bottom");
 
 		$res1 = ["align" => "center", "floating" => false, "margin" => 15, "style" => ["color" => "#333333", "fontSize" => "18px"], "text" => "Chart title", "useHTML" => false, "widthAdjust" => -44, "x" => 0, "verticalAlign" => "bottom"];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with vertical align');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
 
-		$obj->setY(36);
+		$obj->setY(48);
 
-		$res2 = ["align" => "center", "floating" => false, "margin" => 15, "style" => ["color" => "#333333", "fontSize" => "18px"], "text" => "Chart title", "useHTML" => false, "widthAdjust" => -44, "x" => 0, "verticalAlign" => "bottom", "y" => 36];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with y');
+		$res2 = ["align" => "center", "floating" => false, "margin" => 15, "style" => ["color" => "#333333", "fontSize" => "18px"], "text" => "Chart title", "useHTML" => false, "widthAdjust" => -44, "x" => 0, "verticalAlign" => "bottom", "y" => 48];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with y");
 	}
 
 }

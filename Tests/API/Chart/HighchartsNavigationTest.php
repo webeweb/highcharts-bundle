@@ -34,7 +34,7 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsNavigation(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -47,7 +47,7 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsNavigation(false);
 
 		$res = $obj->newButtonOptions();
-		$this->assertInstanceOf(HighchartsButtonOptions::class, $res, 'The method newButtonOptions() does not return the expected class');
+		$this->assertInstanceOf(HighchartsButtonOptions::class, $res, "The method newButtonOptions() does not return the expected class");
 	}
 
 	/**
@@ -60,12 +60,12 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsNavigation(false);
 
 		$res = ["menuItemHoverStyle" => ["background" => "#335cad", "color" => "#ffffff"], "menuItemStyle" => ["padding" => "0.5em 1em", "color" => "#333333", "background" => "none"], "menuStyle" => ["border" => "1px solid #999999", "background" => "#ffffff", "padding" => "5px 0"]];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->newButtonOptions();
 
 		$res1 = ["menuItemHoverStyle" => ["background" => "#335cad", "color" => "#ffffff"], "menuItemStyle" => ["padding" => "0.5em 1em", "color" => "#333333", "background" => "none"], "menuStyle" => ["border" => "1px solid #999999", "background" => "#ffffff", "padding" => "5px 0"], "buttonOptions" => []];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with button options');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with button options");
 	}
 
 }

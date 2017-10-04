@@ -34,7 +34,7 @@ final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsData(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -47,7 +47,7 @@ final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsData(false);
 
 		$res = $obj->newEvents();
-		$this->assertInstanceOf(HighchartsEvents::class, $res, 'The method newEvents() does not return the expected class');
+		$this->assertInstanceOf(HighchartsEvents::class, $res, "The method newEvents() does not return the expected class");
 	}
 
 	/**
@@ -60,62 +60,62 @@ final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsData(false);
 
 		$res = ["selected" => false];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setClassName("6f66e878c62db60568a3487869695820");
 
 		$res1 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820"];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with class name');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with class name");
 
 		$obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
 		$res2 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with color');
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with color");
 
-		$obj->setColorIndex(84);
+		$obj->setColorIndex(85);
 
-		$res3 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 84];
-		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with color index');
+		$res3 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 85];
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with color index");
 
 		$obj->setDescription("67daf92c833c41c95db874e18fcb2786");
 
-		$res4 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 84, "description" => "67daf92c833c41c95db874e18fcb2786"];
-		$this->assertEquals($res4, $obj->toArray(), 'The method toArray() does not return the expected array with description');
+		$res4 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 85, "description" => "67daf92c833c41c95db874e18fcb2786"];
+		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with description");
 
 		$obj->newEvents();
 
-		$res5 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 84, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => []];
-		$this->assertEquals($res5, $obj->toArray(), 'The method toArray() does not return the expected array with events');
+		$res5 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 85, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => []];
+		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with events");
 
-		$obj->setHigh(90);
+		$obj->setHigh(12);
 
-		$res6 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 84, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => [], "high" => 90];
-		$this->assertEquals($res6, $obj->toArray(), 'The method toArray() does not return the expected array with high');
+		$res6 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 85, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => [], "high" => 12];
+		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with high");
 
 		$obj->setId("b80bb7740288fda1f201890375a60c8f");
 
-		$res7 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 84, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => [], "high" => 90, "id" => "b80bb7740288fda1f201890375a60c8f"];
-		$this->assertEquals($res7, $obj->toArray(), 'The method toArray() does not return the expected array with id');
+		$res7 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 85, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => [], "high" => 12, "id" => "b80bb7740288fda1f201890375a60c8f"];
+		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with id");
 
-		$obj->setLabelrank(32);
+		$obj->setLabelrank(58);
 
-		$res8 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 84, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => [], "high" => 90, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 32];
-		$this->assertEquals($res8, $obj->toArray(), 'The method toArray() does not return the expected array with labelrank');
+		$res8 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 85, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => [], "high" => 12, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 58];
+		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with labelrank");
 
-		$obj->setLow(87);
+		$obj->setLow(14);
 
-		$res9 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 84, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => [], "high" => 90, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 32, "low" => 87];
-		$this->assertEquals($res9, $obj->toArray(), 'The method toArray() does not return the expected array with low');
+		$res9 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 85, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => [], "high" => 12, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 58, "low" => 14];
+		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with low");
 
 		$obj->setName("b068931cc450442b63f5b3d276ea4297");
 
-		$res10 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 84, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => [], "high" => 90, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 32, "low" => 87, "name" => "b068931cc450442b63f5b3d276ea4297"];
-		$this->assertEquals($res10, $obj->toArray(), 'The method toArray() does not return the expected array with name');
+		$res10 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 85, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => [], "high" => 12, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 58, "low" => 14, "name" => "b068931cc450442b63f5b3d276ea4297"];
+		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with name");
 
-		$obj->setX(59);
+		$obj->setX(11);
 
-		$res11 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 84, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => [], "high" => 90, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 32, "low" => 87, "name" => "b068931cc450442b63f5b3d276ea4297", "x" => 59];
-		$this->assertEquals($res11, $obj->toArray(), 'The method toArray() does not return the expected array with x');
+		$res11 = ["selected" => false, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 85, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => [], "high" => 12, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 58, "low" => 14, "name" => "b068931cc450442b63f5b3d276ea4297", "x" => 11];
+		$this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with x");
 	}
 
 }

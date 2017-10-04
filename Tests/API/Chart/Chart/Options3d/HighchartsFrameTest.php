@@ -36,7 +36,7 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsFrame(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -49,7 +49,7 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsFrame(false);
 
 		$res = $obj->newBack();
-		$this->assertInstanceOf(HighchartsBack::class, $res, 'The method newBack() does not return the expected class');
+		$this->assertInstanceOf(HighchartsBack::class, $res, "The method newBack() does not return the expected class");
 	}
 
 	/**
@@ -62,7 +62,7 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsFrame(false);
 
 		$res = $obj->newBottom();
-		$this->assertInstanceOf(HighchartsBottom::class, $res, 'The method newBottom() does not return the expected class');
+		$this->assertInstanceOf(HighchartsBottom::class, $res, "The method newBottom() does not return the expected class");
 	}
 
 	/**
@@ -75,7 +75,7 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsFrame(false);
 
 		$res = $obj->newSide();
-		$this->assertInstanceOf(HighchartsSide::class, $res, 'The method newSide() does not return the expected class');
+		$this->assertInstanceOf(HighchartsSide::class, $res, "The method newSide() does not return the expected class");
 	}
 
 	/**
@@ -90,22 +90,22 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 		$obj->newBack();
 
 		$res1 = ["back" => []];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with back');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with back");
 
 		$obj->newBottom();
 
 		$res2 = ["back" => [], "bottom" => []];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with bottom');
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with bottom");
 
 		$obj->newSide();
 
 		$res3 = ["back" => [], "bottom" => [], "side" => []];
-		$this->assertEquals($res3, $obj->toArray(), 'The method toArray() does not return the expected array with side');
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with side");
 
 		$obj->setTop(["top" => "b28354b543375bfa94dabaeda722927f"]);
 
 		$res4 = ["back" => [], "bottom" => [], "side" => [], "top" => ["top" => "b28354b543375bfa94dabaeda722927f"]];
-		$this->assertEquals($res4, $obj->toArray(), 'The method toArray() does not return the expected array with top');
+		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with top");
 	}
 
 }

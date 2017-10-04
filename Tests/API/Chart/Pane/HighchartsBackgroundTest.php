@@ -33,7 +33,7 @@ final class HighchartsBackgroundTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsBackground(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,12 +46,12 @@ final class HighchartsBackgroundTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsBackground(false);
 
 		$res = ["borderColor" => "#cccccc", "borderWidth" => 1, "className" => "highcharts-pane", "innerRadius" => "0", "outerRadius" => "105%", "shape" => "solid"];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setBackgroundColor("930f2a43179a7ae5fc25ed873223e99f");
 
 		$res1 = ["borderColor" => "#cccccc", "borderWidth" => 1, "className" => "highcharts-pane", "innerRadius" => "0", "outerRadius" => "105%", "shape" => "solid", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f"];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with background color');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with background color");
 	}
 
 }

@@ -35,7 +35,7 @@ final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsOptions(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -48,7 +48,7 @@ final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsOptions(false);
 
 		$res = $obj->newGlobal();
-		$this->assertInstanceOf(HighchartsGlobal::class, $res, 'The method newGlobal() does not return the expected class');
+		$this->assertInstanceOf(HighchartsGlobal::class, $res, "The method newGlobal() does not return the expected class");
 	}
 
 	/**
@@ -61,7 +61,7 @@ final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsOptions(false);
 
 		$res = $obj->newLang();
-		$this->assertInstanceOf(HighchartsLang::class, $res, 'The method newLang() does not return the expected class');
+		$this->assertInstanceOf(HighchartsLang::class, $res, "The method newLang() does not return the expected class");
 	}
 
 	/**
@@ -76,12 +76,12 @@ final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj->newGlobal();
 
 		$res1 = ["global" => []];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with global');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with global");
 
 		$obj->newLang();
 
 		$res2 = ["global" => [], "lang" => []];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with lang');
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with lang");
 	}
 
 }

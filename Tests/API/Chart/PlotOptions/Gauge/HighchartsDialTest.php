@@ -33,7 +33,7 @@ final class HighchartsDialTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsDial(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,7 +46,7 @@ final class HighchartsDialTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsDial(false);
 
 		$res = ["backgroundColor" => "#000000", "baseLength" => "70%", "baseWidth" => 3, "borderColor" => "#cccccc", "borderWidth" => 0, "radius" => "80%", "rearLength" => "10%", "topWidth" => 1];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 }

@@ -34,7 +34,7 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsHover(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -47,7 +47,7 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsHover(false);
 
 		$res = $obj->newMarker();
-		$this->assertInstanceOf(HighchartsMarker::class, $res, 'The method newMarker() does not return the expected class');
+		$this->assertInstanceOf(HighchartsMarker::class, $res, "The method newMarker() does not return the expected class");
 	}
 
 	/**
@@ -60,12 +60,12 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsHover(false);
 
 		$res = ["animation" => ["duration" => 50], "enabled" => true, "lineWidth" => 2, "lineWidthPlus" => 1];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setHalo(["halo" => "57f842286171094855e51fc3a541c1e2"]);
 
 		$res1 = ["animation" => ["duration" => 50], "enabled" => true, "lineWidth" => 2, "lineWidthPlus" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"]];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with halo');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with halo");
 	}
 
 }

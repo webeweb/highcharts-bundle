@@ -33,7 +33,7 @@ final class HighchartsDrillUpButtonTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsDrillUpButton(false);
 
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
 	}
 
 	/**
@@ -46,17 +46,17 @@ final class HighchartsDrillUpButtonTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsDrillUpButton(false);
 
 		$res = ["relativeTo" => "plotBox"];
-		$this->assertEquals($res, $obj->toArray(), 'The method toArray() does not return the expected array');
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
 		$obj->setPosition(["position" => "4757fe07fd492a8be0ea6a760d683d6e"]);
 
 		$res1 = ["relativeTo" => "plotBox", "position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"]];
-		$this->assertEquals($res1, $obj->toArray(), 'The method toArray() does not return the expected array with position');
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with position");
 
 		$obj->setTheme(["theme" => "f484570d7cf557020e11ace406901b10"]);
 
 		$res2 = ["relativeTo" => "plotBox", "position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"], "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"]];
-		$this->assertEquals($res2, $obj->toArray(), 'The method toArray() does not return the expected array with theme');
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with theme");
 	}
 
 }
