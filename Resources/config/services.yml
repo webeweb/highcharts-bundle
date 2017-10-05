@@ -1,2 +1,8 @@
 # Resources/config/services.yml
 services:
+
+    wbwhighchartsbundle.twig.extension.highcharts:
+        class: WBW\HighchartsBundle\Twig\Extension\HighchartsTwigExtension
+        arguments: ['@service_container']
+        tags:
+          - { name: twig.extension }
