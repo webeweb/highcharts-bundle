@@ -66,6 +66,7 @@ final class HighchartsTwigExtension extends Twig_Extension {
 	public function getFunctions() {
 		return [
 			new Twig_SimpleFunction('highchartsChart', [$this, 'highchartsChartFunction'], ['is_safe' => ['html']]),
+			new Twig_SimpleFunction('highchartsScript', [$this, 'highchartsScriptFunction'], ['is_safe' => ['html']]),
 			new Twig_SimpleFunction('highchartsSetOptions', [$this, 'highchartsSetOptionsFunction'], ['is_safe' => ['html']]),
 		];
 	}
