@@ -16,6 +16,7 @@ use Twig_Extension;
 use Twig_SimpleFunction;
 use WBW\HighchartsBundle\API\HighchartsChart;
 use WBW\HighchartsBundle\API\HighchartsOptions;
+use WBW\HighchartsBundle\Exception\HighchartsFileNotFoundException;
 use WBW\HighchartsBundle\Wrapper\HighchartsWrapper;
 
 /**
@@ -70,6 +71,15 @@ final class HighchartsTwigExtension extends Twig_Extension {
 	}
 
 	/**
+	 * Get the resources directory.
+	 *
+	 * @return string Returns the resources directory.
+	 */
+	private function getResourcesDirectory() {
+		return __DIR__ . "/../../Resources";
+	}
+
+	/**
 	 * Displays an Highcharts.chart().
 	 *
 	 * @param string $selector The selector.
@@ -88,10 +98,33 @@ final class HighchartsTwigExtension extends Twig_Extension {
 			$output[] = $this->wrapper->unwrap(json_encode($chart));
 		}
 		$output[]	 = ");\n";
-		$output[]	 = "</script>\n";
+		$output[]	 = "</script>";
 
 		// Return the output.
 		return implode("", $output);
+	}
+
+	/**
+	 * Displays an Highcharts script.
+	 *
+	 * @param string $script The scriptname.
+	 * @param string $subdirectory The sub directory.
+	 * @return string Returns the Highcharts script.
+	 * @throws HighchartsFileNotFoundException Throws an Highcharts file not found exception if the script is not found.
+	 */
+	public function highchartsScript($script, $subdirectory = "code") {
+
+		// Initialize the filename.
+		$filename = implode("/", [$subdirectory, $script . ".js"]);
+
+		// Initialize and check the filepath.
+		$filepath = $this->getResourcesDirectory() . "/public/" . $filename;
+		if (!file_exists($filepath)) {
+			throw new HighchartsFileNotFoundException($filename);
+		}
+
+		// Initialize the output.
+		return "<script src=\"/bundles/wbwhighcharts/" . $filename . "\" type=\"text/javascript\"></script>";
 	}
 
 	/**
@@ -112,7 +145,7 @@ final class HighchartsTwigExtension extends Twig_Extension {
 			$output[] = $this->wrapper->unwrap(json_encode($options));
 		}
 		$output[]	 = ");\n";
-		$output[]	 = "</script>\n";
+		$output[]	 = "</script>";
 
 		// Return the output.
 		return implode("", $output);

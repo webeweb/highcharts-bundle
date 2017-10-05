@@ -24,10 +24,10 @@ final class HighchartsFileNotFoundException extends AbstractHighchartsException 
 	/**
 	 * Constructor.
 	 *
-	 * @param string $filepath The file path.
+	 * @param string $filename The file name.
 	 */
-	public function __construct($filepath) {
-		parent::__construct("The file \"" . $filepath . "\" was not found");
+	public function __construct($filename) {
+		parent::__construct("The file \"" . $filename . "\" was not found");
 	}
 
 }
