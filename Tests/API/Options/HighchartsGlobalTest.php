@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Options;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Options\HighchartsGlobal;
 
 /**
  * Highcharts global test.
@@ -30,7 +29,7 @@ final class HighchartsGlobalTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsGlobal(false);
+		$obj = new \WBW\HighchartsBundle\API\Options\HighchartsGlobal(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsGlobalTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsGlobal(false);
+		$obj = new \WBW\HighchartsBundle\API\Options\HighchartsGlobal(false);
 
 		$res = ["VMLRadialGradientURL" => "http://code.highcharts.com/{version}/gfx/vml-radial-gradient.png", "timezoneOffset" => 0, "useUTC" => true];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

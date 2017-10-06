@@ -12,10 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\PlotOptions;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsDataLabels;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsEvents;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsPoint;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsStates;
 
 /**
  * Highcharts pyramid.
@@ -98,7 +94,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Data labels.
 	 *
-	 * @var HighchartsDataLabels
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsDataLabels
 	 */
 	private $dataLabels;
 
@@ -128,7 +124,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Events.
 	 *
-	 * @var HighchartsEvents
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsEvents
 	 */
 	private $events;
 
@@ -191,7 +187,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Point.
 	 *
-	 * @var HighchartsPoint
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsPoint
 	 */
 	private $point;
 
@@ -251,7 +247,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * States.
 	 *
-	 * @var HighchartsStates
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsStates
 	 */
 	private $states;
 
@@ -584,7 +580,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Get the data labels.
 	 *
-	 * @return HighchartsDataLabels Returns the data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsDataLabels Returns the data labels.
 	 */
 	public function getDataLabels() {
 		return $this->dataLabels;
@@ -620,7 +616,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Get the events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsEvents Returns the events.
 	 */
 	public function getEvents() {
 		return $this->events;
@@ -692,7 +688,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Get the point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsPoint Returns the point.
 	 */
 	public function getPoint() {
 		return $this->point;
@@ -764,7 +760,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Get the states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsStates Returns the states.
 	 */
 	public function getStates() {
 		return $this->states;
@@ -836,40 +832,40 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Create a new data labels.
 	 *
-	 * @return HighchartsDataLabels Returns the data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsDataLabels Returns the data labels.
 	 */
 	public function newDataLabels() {
-		$this->dataLabels = new HighchartsDataLabels();
+		$this->dataLabels = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsDataLabels();
 		return $this->dataLabels;
 	}
 
 	/**
 	 * Create a new events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsEvents Returns the events.
 	 */
 	public function newEvents() {
-		$this->events = new HighchartsEvents();
+		$this->events = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsEvents();
 		return $this->events;
 	}
 
 	/**
 	 * Create a new point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsPoint Returns the point.
 	 */
 	public function newPoint() {
-		$this->point = new HighchartsPoint();
+		$this->point = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsPoint();
 		return $this->point;
 	}
 
 	/**
 	 * Create a new states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsStates Returns the states.
 	 */
 	public function newStates() {
-		$this->states = new HighchartsStates();
+		$this->states = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsStates();
 		return $this->states;
 	}
 
@@ -877,7 +873,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the allow point select.
 	 *
 	 * @param boolean $allowPointSelect The allow point select.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setAllowPointSelect($allowPointSelect) {
 		$this->allowPointSelect = $allowPointSelect;
@@ -888,7 +884,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the animation limit.
 	 *
 	 * @param integer $animationLimit The animation limit.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setAnimationLimit($animationLimit) {
 		$this->animationLimit = $animationLimit;
@@ -899,7 +895,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the border color.
 	 *
 	 * @param string $borderColor The border color.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setBorderColor($borderColor) {
 		$this->borderColor = $borderColor;
@@ -910,7 +906,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the border width.
 	 *
 	 * @param integer $borderWidth The border width.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setBorderWidth($borderWidth) {
 		$this->borderWidth = $borderWidth;
@@ -921,7 +917,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the center.
 	 *
 	 * @param array $center The center.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setCenter(array $center = null) {
 		$this->center = $center;
@@ -932,7 +928,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the class name.
 	 *
 	 * @param string $className The class name.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setClassName($className) {
 		$this->className = $className;
@@ -943,7 +939,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the color index.
 	 *
 	 * @param integer $colorIndex The color index.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setColorIndex($colorIndex) {
 		$this->colorIndex = $colorIndex;
@@ -954,7 +950,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the colors.
 	 *
 	 * @param array $colors The colors.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setColors(array $colors = null) {
 		$this->colors = $colors;
@@ -965,7 +961,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the cursor.
 	 *
 	 * @param string $cursor The cursor.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setCursor($cursor) {
 		switch ($cursor) {
@@ -984,10 +980,10 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Set the data labels.
 	 *
-	 * @param HighchartsDataLabels $dataLabels The data labels.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsDataLabels $dataLabels The data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
-	public function setDataLabels(HighchartsDataLabels $dataLabels = null) {
+	public function setDataLabels(\WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsDataLabels $dataLabels = null) {
 		$this->dataLabels = $dataLabels;
 		return $this;
 	}
@@ -996,7 +992,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the depth.
 	 *
 	 * @param integer $depth The depth.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setDepth($depth) {
 		$this->depth = $depth;
@@ -1007,7 +1003,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the description.
 	 *
 	 * @param string $description The description.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setDescription($description) {
 		$this->description = $description;
@@ -1018,7 +1014,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the enable mouse tracking.
 	 *
 	 * @param boolean $enableMouseTracking The enable mouse tracking.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setEnableMouseTracking($enableMouseTracking) {
 		$this->enableMouseTracking = $enableMouseTracking;
@@ -1028,10 +1024,10 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Set the events.
 	 *
-	 * @param HighchartsEvents $events The events.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsEvents $events The events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
-	public function setEvents(HighchartsEvents $events = null) {
+	public function setEvents(\WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsEvents $events = null) {
 		$this->events = $events;
 		return $this;
 	}
@@ -1040,7 +1036,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the expose element to a11y.
 	 *
 	 * @param boolean $exposeElementToA11y The expose element to a11y.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setExposeElementToA11y($exposeElementToA11y) {
 		$this->exposeElementToA11y = $exposeElementToA11y;
@@ -1051,7 +1047,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the find nearest point by.
 	 *
 	 * @param string $findNearestPointBy The find nearest point by.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
 		switch ($findNearestPointBy) {
@@ -1067,7 +1063,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the get extremes from all.
 	 *
 	 * @param boolean $getExtremesFromAll The get extremes from all.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setGetExtremesFromAll($getExtremesFromAll) {
 		$this->getExtremesFromAll = $getExtremesFromAll;
@@ -1078,7 +1074,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the height.
 	 *
 	 * @param integer|string $height The height.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setHeight($height) {
 		$this->height = $height;
@@ -1089,7 +1085,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the keys.
 	 *
 	 * @param array $keys The keys.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setKeys(array $keys = null) {
 		$this->keys = $keys;
@@ -1100,7 +1096,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the linked to.
 	 *
 	 * @param string $linkedTo The linked to.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setLinkedTo($linkedTo) {
 		$this->linkedTo = $linkedTo;
@@ -1111,7 +1107,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the min size.
 	 *
 	 * @param integer $minSize The min size.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setMinSize($minSize) {
 		$this->minSize = $minSize;
@@ -1121,10 +1117,10 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Set the point.
 	 *
-	 * @param HighchartsPoint $point The point.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsPoint $point The point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
-	public function setPoint(HighchartsPoint $point = null) {
+	public function setPoint(\WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsPoint $point = null) {
 		$this->point = $point;
 		return $this;
 	}
@@ -1133,7 +1129,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the point description formatter.
 	 *
 	 * @param string $pointDescriptionFormatter The point description formatter.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setPointDescriptionFormatter($pointDescriptionFormatter) {
 		$this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -1144,7 +1140,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the reversed.
 	 *
 	 * @param boolean $reversed The reversed.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setReversed($reversed) {
 		$this->reversed = $reversed;
@@ -1155,7 +1151,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the selected.
 	 *
 	 * @param boolean $selected The selected.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setSelected($selected) {
 		$this->selected = $selected;
@@ -1166,7 +1162,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the shadow.
 	 *
 	 * @param boolean|array $shadow The shadow.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setShadow($shadow) {
 		$this->shadow = $shadow;
@@ -1177,7 +1173,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the show in legend.
 	 *
 	 * @param boolean $showInLegend The show in legend.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setShowInLegend($showInLegend) {
 		$this->showInLegend = $showInLegend;
@@ -1188,7 +1184,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the skip keyboard navigation.
 	 *
 	 * @param boolean $skipKeyboardNavigation The skip keyboard navigation.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setSkipKeyboardNavigation($skipKeyboardNavigation) {
 		$this->skipKeyboardNavigation = $skipKeyboardNavigation;
@@ -1199,7 +1195,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the sliced offset.
 	 *
 	 * @param integer $slicedOffset The sliced offset.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setSlicedOffset($slicedOffset) {
 		$this->slicedOffset = $slicedOffset;
@@ -1209,10 +1205,10 @@ final class HighchartsPyramid implements JsonSerializable {
 	/**
 	 * Set the states.
 	 *
-	 * @param HighchartsStates $states The states.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsStates $states The states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
-	public function setStates(HighchartsStates $states = null) {
+	public function setStates(\WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsStates $states = null) {
 		$this->states = $states;
 		return $this;
 	}
@@ -1221,7 +1217,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the sticky tracking.
 	 *
 	 * @param boolean $stickyTracking The sticky tracking.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setStickyTracking($stickyTracking) {
 		$this->stickyTracking = $stickyTracking;
@@ -1232,7 +1228,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the tooltip.
 	 *
 	 * @param array $tooltip The tooltip.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setTooltip(array $tooltip = null) {
 		$this->tooltip = $tooltip;
@@ -1243,7 +1239,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the visible.
 	 *
 	 * @param boolean $visible The visible.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setVisible($visible) {
 		$this->visible = $visible;
@@ -1254,7 +1250,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the width.
 	 *
 	 * @param integer|string $width The width.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setWidth($width) {
 		$this->width = $width;
@@ -1265,7 +1261,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the zone axis.
 	 *
 	 * @param string $zoneAxis The zone axis.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setZoneAxis($zoneAxis) {
 		$this->zoneAxis = $zoneAxis;
@@ -1276,7 +1272,7 @@ final class HighchartsPyramid implements JsonSerializable {
 	 * Set the zones.
 	 *
 	 * @param array $zones The zones.
-	 * @return HighchartsPyramid Returns the highcharts pyramid.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid Returns the highcharts pyramid.
 	 */
 	public function setZones(array $zones = null) {
 		$this->zones = $zones;

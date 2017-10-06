@@ -12,8 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Bubble;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker;
-use WBW\HighchartsBundle\API\Chart\Series\Bubble\Marker\HighchartsStates;
 
 /**
  * Highcharts marker test.
@@ -31,7 +29,7 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsMarker(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -44,10 +42,10 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewStates() {
 
-		$obj = new HighchartsMarker(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker(false);
 
 		$res = $obj->newStates();
-		$this->assertInstanceOf(HighchartsStates::class, $res, "The method newStates() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Series\Bubble\Marker\HighchartsStates::class, $res, "The method newStates() does not return the expected class");
 	}
 
 	/**
@@ -57,34 +55,34 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsMarker(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker(false);
 
 		$res = ["lineColor" => "#ffffff", "lineWidth" => 0, "symbol" => "circle"];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
-		$obj->setEnabled(0);
+		$obj->setEnabled(1);
 
-		$res1 = ["lineColor" => "#ffffff", "lineWidth" => 0, "symbol" => "circle", "enabled" => 0];
+		$res1 = ["lineColor" => "#ffffff", "lineWidth" => 0, "symbol" => "circle", "enabled" => 1];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
 		$obj->setFillColor("1fde055d3ff900e04ca08bc82066d7fd");
 
-		$res2 = ["lineColor" => "#ffffff", "lineWidth" => 0, "symbol" => "circle", "enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
+		$res2 = ["lineColor" => "#ffffff", "lineWidth" => 0, "symbol" => "circle", "enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-		$obj->setHeight(57);
+		$obj->setHeight(16);
 
-		$res3 = ["lineColor" => "#ffffff", "lineWidth" => 0, "symbol" => "circle", "enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 57];
+		$res3 = ["lineColor" => "#ffffff", "lineWidth" => 0, "symbol" => "circle", "enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 16];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with height");
 
 		$obj->newStates();
 
-		$res4 = ["lineColor" => "#ffffff", "lineWidth" => 0, "symbol" => "circle", "enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 57, "states" => []];
+		$res4 = ["lineColor" => "#ffffff", "lineWidth" => 0, "symbol" => "circle", "enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 16, "states" => []];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with states");
 
-		$obj->setWidth(83);
+		$obj->setWidth(33);
 
-		$res5 = ["lineColor" => "#ffffff", "lineWidth" => 0, "symbol" => "circle", "enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 57, "states" => [], "width" => 83];
+		$res5 = ["lineColor" => "#ffffff", "lineWidth" => 0, "symbol" => "circle", "enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 16, "states" => [], "width" => 33];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with width");
 	}
 

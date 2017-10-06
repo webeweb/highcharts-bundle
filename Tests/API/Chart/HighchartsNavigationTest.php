@@ -12,8 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\HighchartsNavigation;
-use WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions;
 
 /**
  * Highcharts navigation test.
@@ -31,7 +29,7 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsNavigation(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsNavigation(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -44,10 +42,10 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewButtonOptions() {
 
-		$obj = new HighchartsNavigation(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsNavigation(false);
 
 		$res = $obj->newButtonOptions();
-		$this->assertInstanceOf(HighchartsButtonOptions::class, $res, "The method newButtonOptions() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions::class, $res, "The method newButtonOptions() does not return the expected class");
 	}
 
 	/**
@@ -57,7 +55,7 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsNavigation(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsNavigation(false);
 
 		$res = ["menuItemHoverStyle" => ["background" => "#335cad", "color" => "#ffffff"], "menuItemStyle" => ["padding" => "0.5em 1em", "color" => "#333333", "background" => "none"], "menuStyle" => ["border" => "1px solid #999999", "background" => "#ffffff", "padding" => "5px 0"]];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

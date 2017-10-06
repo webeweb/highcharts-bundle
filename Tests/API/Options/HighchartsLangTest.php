@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Options;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Options\HighchartsLang;
 
 /**
  * Highcharts lang test.
@@ -30,7 +29,7 @@ final class HighchartsLangTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsLang(false);
+		$obj = new \WBW\HighchartsBundle\API\Options\HighchartsLang(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsLangTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsLang(false);
+		$obj = new \WBW\HighchartsBundle\API\Options\HighchartsLang(false);
 
 		$res = ["contextButtonTitle" => "Chart context menu", "decimalPoint" => ".", "downloadJPEG" => "Download JPEG image", "downloadPDF" => "Download PDF document", "downloadPNG" => "Download PNG image", "downloadSVG" => "Download SVG vector image", "drillUpText" => "Back to {series.name}", "loading" => "Loading...", "months" => ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "noData" => "No data to display", "numericSymbolMagnitude" => 1000, "numericSymbols" => ["k", "M", "G", "T", "P", "E"], "printChart" => "Print chart", "resetZoom" => "Reset zoom", "resetZoomTitle" => "Reset zoom level 1:1", "shortMonths" => ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], "weekdays" => ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

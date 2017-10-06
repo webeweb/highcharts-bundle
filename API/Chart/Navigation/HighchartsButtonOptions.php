@@ -363,7 +363,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * Set the align.
 	 *
 	 * @param string $align The align.
-	 * @return HighchartsButtonOptions Returns the highcharts button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setAlign($align) {
 		switch ($align) {
@@ -380,7 +380,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * Set the enabled.
 	 *
 	 * @param boolean $enabled The enabled.
-	 * @return HighchartsButtonOptions Returns the highcharts button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setEnabled($enabled) {
 		$this->enabled = $enabled;
@@ -391,7 +391,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * Set the height.
 	 *
 	 * @param integer $height The height.
-	 * @return HighchartsButtonOptions Returns the highcharts button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setHeight($height) {
 		$this->height = $height;
@@ -402,7 +402,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * Set the symbol fill.
 	 *
 	 * @param string $symbolFill The symbol fill.
-	 * @return HighchartsButtonOptions Returns the highcharts button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setSymbolFill($symbolFill) {
 		$this->symbolFill = $symbolFill;
@@ -413,7 +413,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * Set the symbol size.
 	 *
 	 * @param integer $symbolSize The symbol size.
-	 * @return HighchartsButtonOptions Returns the highcharts button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setSymbolSize($symbolSize) {
 		$this->symbolSize = $symbolSize;
@@ -424,7 +424,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * Set the symbol stroke.
 	 *
 	 * @param string $symbolStroke The symbol stroke.
-	 * @return HighchartsButtonOptions Returns the highcharts button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setSymbolStroke($symbolStroke) {
 		$this->symbolStroke = $symbolStroke;
@@ -435,7 +435,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * Set the symbol stroke width.
 	 *
 	 * @param integer $symbolStrokeWidth The symbol stroke width.
-	 * @return HighchartsButtonOptions Returns the highcharts button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setSymbolStrokeWidth($symbolStrokeWidth) {
 		$this->symbolStrokeWidth = $symbolStrokeWidth;
@@ -446,7 +446,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * Set the symbol x.
 	 *
 	 * @param integer $symbolX The symbol x.
-	 * @return HighchartsButtonOptions Returns the highcharts button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setSymbolX($symbolX) {
 		$this->symbolX = $symbolX;
@@ -457,7 +457,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * Set the symbol y.
 	 *
 	 * @param integer $symbolY The symbol y.
-	 * @return HighchartsButtonOptions Returns the highcharts button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setSymbolY($symbolY) {
 		$this->symbolY = $symbolY;
@@ -468,7 +468,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * Set the text.
 	 *
 	 * @param string $text The text.
-	 * @return HighchartsButtonOptions Returns the highcharts button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setText($text) {
 		$this->text = $text;
@@ -479,7 +479,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * Set the theme.
 	 *
 	 * @param array $theme The theme.
-	 * @return HighchartsButtonOptions Returns the highcharts button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setTheme(array $theme = null) {
 		$this->theme = $theme;
@@ -490,7 +490,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * Set the vertical align.
 	 *
 	 * @param string $verticalAlign The vertical align.
-	 * @return HighchartsButtonOptions Returns the highcharts button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setVerticalAlign($verticalAlign) {
 		switch ($verticalAlign) {
@@ -507,7 +507,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * Set the width.
 	 *
 	 * @param integer $width The width.
-	 * @return HighchartsButtonOptions Returns the highcharts button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setWidth($width) {
 		$this->width = $width;
@@ -518,7 +518,7 @@ final class HighchartsButtonOptions implements JsonSerializable {
 	 * Set the y.
 	 *
 	 * @param integer $y The y.
-	 * @return HighchartsButtonOptions Returns the highcharts button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the highcharts button options.
 	 */
 	public function setY($y) {
 		$this->y = $y;

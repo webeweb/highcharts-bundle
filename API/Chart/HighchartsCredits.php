@@ -161,7 +161,7 @@ final class HighchartsCredits implements JsonSerializable {
 	 * Set the enabled.
 	 *
 	 * @param boolean $enabled The enabled.
-	 * @return HighchartsCredits Returns the highcharts credits.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
 	 */
 	public function setEnabled($enabled) {
 		$this->enabled = $enabled;
@@ -172,7 +172,7 @@ final class HighchartsCredits implements JsonSerializable {
 	 * Set the href.
 	 *
 	 * @param string $href The href.
-	 * @return HighchartsCredits Returns the highcharts credits.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
 	 */
 	public function setHref($href) {
 		$this->href = $href;
@@ -183,7 +183,7 @@ final class HighchartsCredits implements JsonSerializable {
 	 * Set the position.
 	 *
 	 * @param array $position The position.
-	 * @return HighchartsCredits Returns the highcharts credits.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
 	 */
 	public function setPosition(array $position = null) {
 		$this->position = $position;
@@ -194,7 +194,7 @@ final class HighchartsCredits implements JsonSerializable {
 	 * Set the style.
 	 *
 	 * @param array $style The style.
-	 * @return HighchartsCredits Returns the highcharts credits.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
 	 */
 	public function setStyle(array $style = null) {
 		$this->style = $style;
@@ -205,7 +205,7 @@ final class HighchartsCredits implements JsonSerializable {
 	 * Set the text.
 	 *
 	 * @param string $text The text.
-	 * @return HighchartsCredits Returns the highcharts credits.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
 	 */
 	public function setText($text) {
 		$this->text = $text;

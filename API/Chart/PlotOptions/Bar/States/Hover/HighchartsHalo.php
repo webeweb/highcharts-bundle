@@ -121,7 +121,7 @@ final class HighchartsHalo implements JsonSerializable {
 	 * Set the attributes.
 	 *
 	 * @param array $attributes The attributes.
-	 * @return HighchartsHalo Returns the highcharts halo.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bar\States\Hover\HighchartsHalo Returns the highcharts halo.
 	 */
 	public function setAttributes(array $attributes = null) {
 		$this->attributes = $attributes;
@@ -132,7 +132,7 @@ final class HighchartsHalo implements JsonSerializable {
 	 * Set the opacity.
 	 *
 	 * @param integer $opacity The opacity.
-	 * @return HighchartsHalo Returns the highcharts halo.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bar\States\Hover\HighchartsHalo Returns the highcharts halo.
 	 */
 	public function setOpacity($opacity) {
 		$this->opacity = $opacity;
@@ -143,7 +143,7 @@ final class HighchartsHalo implements JsonSerializable {
 	 * Set the size.
 	 *
 	 * @param integer $size The size.
-	 * @return HighchartsHalo Returns the highcharts halo.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bar\States\Hover\HighchartsHalo Returns the highcharts halo.
 	 */
 	public function setSize($size) {
 		$this->size = $size;

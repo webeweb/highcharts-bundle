@@ -12,17 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArea;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreaspline;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreasplinerange;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBar;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsLine;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsScatter;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSeries;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSpline;
 
 /**
  * Highcharts plot options.
@@ -37,14 +26,14 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Area.
 	 *
-	 * @var HighchartsArea
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArea
 	 */
 	private $area;
 
 	/**
 	 * Arearange.
 	 *
-	 * @var HighchartsArearange
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange
 	 * @since 2.3.0
 	 */
 	private $arearange;
@@ -52,14 +41,14 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Areaspline.
 	 *
-	 * @var HighchartsAreaspline
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreaspline
 	 */
 	private $areaspline;
 
 	/**
 	 * Areasplinerange.
 	 *
-	 * @var HighchartsAreasplinerange
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreasplinerange
 	 * @since 2.3.0
 	 */
 	private $areasplinerange;
@@ -67,7 +56,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Bar.
 	 *
-	 * @var HighchartsBar
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBar
 	 */
 	private $bar;
 
@@ -90,7 +79,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Column.
 	 *
-	 * @var HighchartsColumn
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn
 	 */
 	private $column;
 
@@ -137,14 +126,14 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Line.
 	 *
-	 * @var HighchartsLine
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsLine
 	 */
 	private $line;
 
 	/**
 	 * Pie.
 	 *
-	 * @var HighchartsPie
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie
 	 */
 	private $pie;
 
@@ -167,14 +156,14 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Scatter.
 	 *
-	 * @var HighchartsScatter
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsScatter
 	 */
 	private $scatter;
 
 	/**
 	 * Series.
 	 *
-	 * @var HighchartsSeries
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSeries
 	 */
 	private $series;
 
@@ -189,7 +178,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Spline.
 	 *
-	 * @var HighchartsSpline
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSpline
 	 */
 	private $spline;
 
@@ -346,7 +335,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the area.
 	 *
-	 * @return HighchartsArea Returns the area.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArea Returns the area.
 	 */
 	public function getArea() {
 		return $this->area;
@@ -355,7 +344,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the arearange.
 	 *
-	 * @return HighchartsArearange Returns the arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the arearange.
 	 */
 	public function getArearange() {
 		return $this->arearange;
@@ -364,7 +353,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the areaspline.
 	 *
-	 * @return HighchartsAreaspline Returns the areaspline.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreaspline Returns the areaspline.
 	 */
 	public function getAreaspline() {
 		return $this->areaspline;
@@ -373,7 +362,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the areasplinerange.
 	 *
-	 * @return HighchartsAreasplinerange Returns the areasplinerange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreasplinerange Returns the areasplinerange.
 	 */
 	public function getAreasplinerange() {
 		return $this->areasplinerange;
@@ -382,7 +371,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the bar.
 	 *
-	 * @return HighchartsBar Returns the bar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBar Returns the bar.
 	 */
 	public function getBar() {
 		return $this->bar;
@@ -409,7 +398,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the column.
 	 *
-	 * @return HighchartsColumn Returns the column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the column.
 	 */
 	public function getColumn() {
 		return $this->column;
@@ -463,7 +452,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the line.
 	 *
-	 * @return HighchartsLine Returns the line.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsLine Returns the line.
 	 */
 	public function getLine() {
 		return $this->line;
@@ -472,7 +461,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the pie.
 	 *
-	 * @return HighchartsPie Returns the pie.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the pie.
 	 */
 	public function getPie() {
 		return $this->pie;
@@ -499,7 +488,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the scatter.
 	 *
-	 * @return HighchartsScatter Returns the scatter.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsScatter Returns the scatter.
 	 */
 	public function getScatter() {
 		return $this->scatter;
@@ -508,7 +497,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the series.
 	 *
-	 * @return HighchartsSeries Returns the series.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSeries Returns the series.
 	 */
 	public function getSeries() {
 		return $this->series;
@@ -526,7 +515,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Get the spline.
 	 *
-	 * @return HighchartsSpline Returns the spline.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSpline Returns the spline.
 	 */
 	public function getSpline() {
 		return $this->spline;
@@ -562,120 +551,120 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Create a new area.
 	 *
-	 * @return HighchartsArea Returns the area.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArea Returns the area.
 	 */
 	public function newArea() {
-		$this->area = new HighchartsArea();
+		$this->area = new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArea();
 		return $this->area;
 	}
 
 	/**
 	 * Create a new arearange.
 	 *
-	 * @return HighchartsArearange Returns the arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the arearange.
 	 */
 	public function newArearange() {
-		$this->arearange = new HighchartsArearange();
+		$this->arearange = new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange();
 		return $this->arearange;
 	}
 
 	/**
 	 * Create a new areaspline.
 	 *
-	 * @return HighchartsAreaspline Returns the areaspline.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreaspline Returns the areaspline.
 	 */
 	public function newAreaspline() {
-		$this->areaspline = new HighchartsAreaspline();
+		$this->areaspline = new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreaspline();
 		return $this->areaspline;
 	}
 
 	/**
 	 * Create a new areasplinerange.
 	 *
-	 * @return HighchartsAreasplinerange Returns the areasplinerange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreasplinerange Returns the areasplinerange.
 	 */
 	public function newAreasplinerange() {
-		$this->areasplinerange = new HighchartsAreasplinerange();
+		$this->areasplinerange = new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreasplinerange();
 		return $this->areasplinerange;
 	}
 
 	/**
 	 * Create a new bar.
 	 *
-	 * @return HighchartsBar Returns the bar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBar Returns the bar.
 	 */
 	public function newBar() {
-		$this->bar = new HighchartsBar();
+		$this->bar = new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBar();
 		return $this->bar;
 	}
 
 	/**
 	 * Create a new column.
 	 *
-	 * @return HighchartsColumn Returns the column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the column.
 	 */
 	public function newColumn() {
-		$this->column = new HighchartsColumn();
+		$this->column = new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn();
 		return $this->column;
 	}
 
 	/**
 	 * Create a new line.
 	 *
-	 * @return HighchartsLine Returns the line.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsLine Returns the line.
 	 */
 	public function newLine() {
-		$this->line = new HighchartsLine();
+		$this->line = new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsLine();
 		return $this->line;
 	}
 
 	/**
 	 * Create a new pie.
 	 *
-	 * @return HighchartsPie Returns the pie.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the pie.
 	 */
 	public function newPie() {
-		$this->pie = new HighchartsPie();
+		$this->pie = new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie();
 		return $this->pie;
 	}
 
 	/**
 	 * Create a new scatter.
 	 *
-	 * @return HighchartsScatter Returns the scatter.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsScatter Returns the scatter.
 	 */
 	public function newScatter() {
-		$this->scatter = new HighchartsScatter();
+		$this->scatter = new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsScatter();
 		return $this->scatter;
 	}
 
 	/**
 	 * Create a new series.
 	 *
-	 * @return HighchartsSeries Returns the series.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSeries Returns the series.
 	 */
 	public function newSeries() {
-		$this->series = new HighchartsSeries();
+		$this->series = new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSeries();
 		return $this->series;
 	}
 
 	/**
 	 * Create a new spline.
 	 *
-	 * @return HighchartsSpline Returns the spline.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSpline Returns the spline.
 	 */
 	public function newSpline() {
-		$this->spline = new HighchartsSpline();
+		$this->spline = new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSpline();
 		return $this->spline;
 	}
 
 	/**
 	 * Set the area.
 	 *
-	 * @param HighchartsArea $area The area.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArea $area The area.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setArea(HighchartsArea $area = null) {
+	public function setArea(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArea $area = null) {
 		$this->area = $area;
 		return $this;
 	}
@@ -683,10 +672,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the arearange.
 	 *
-	 * @param HighchartsArearange $arearange The arearange.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange $arearange The arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setArearange(HighchartsArearange $arearange = null) {
+	public function setArearange(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange $arearange = null) {
 		$this->arearange = $arearange;
 		return $this;
 	}
@@ -694,10 +683,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the areaspline.
 	 *
-	 * @param HighchartsAreaspline $areaspline The areaspline.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreaspline $areaspline The areaspline.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setAreaspline(HighchartsAreaspline $areaspline = null) {
+	public function setAreaspline(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreaspline $areaspline = null) {
 		$this->areaspline = $areaspline;
 		return $this;
 	}
@@ -705,10 +694,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the areasplinerange.
 	 *
-	 * @param HighchartsAreasplinerange $areasplinerange The areasplinerange.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreasplinerange $areasplinerange The areasplinerange.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setAreasplinerange(HighchartsAreasplinerange $areasplinerange = null) {
+	public function setAreasplinerange(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreasplinerange $areasplinerange = null) {
 		$this->areasplinerange = $areasplinerange;
 		return $this;
 	}
@@ -716,10 +705,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the bar.
 	 *
-	 * @param HighchartsBar $bar The bar.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBar $bar The bar.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setBar(HighchartsBar $bar = null) {
+	public function setBar(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBar $bar = null) {
 		$this->bar = $bar;
 		return $this;
 	}
@@ -728,7 +717,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	 * Set the boxplot.
 	 *
 	 * @param array $boxplot The boxplot.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
 	public function setBoxplot(array $boxplot = null) {
 		$this->boxplot = $boxplot;
@@ -739,7 +728,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	 * Set the bubble.
 	 *
 	 * @param array $bubble The bubble.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
 	public function setBubble(array $bubble = null) {
 		$this->bubble = $bubble;
@@ -749,10 +738,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the column.
 	 *
-	 * @param HighchartsColumn $column The column.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn $column The column.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setColumn(HighchartsColumn $column = null) {
+	public function setColumn(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn $column = null) {
 		$this->column = $column;
 		return $this;
 	}
@@ -761,7 +750,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	 * Set the columnrange.
 	 *
 	 * @param array $columnrange The columnrange.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
 	public function setColumnrange(array $columnrange = null) {
 		$this->columnrange = $columnrange;
@@ -772,7 +761,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	 * Set the errorbar.
 	 *
 	 * @param array $errorbar The errorbar.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
 	public function setErrorbar(array $errorbar = null) {
 		$this->errorbar = $errorbar;
@@ -783,7 +772,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	 * Set the funnel.
 	 *
 	 * @param array $funnel The funnel.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
 	public function setFunnel(array $funnel = null) {
 		$this->funnel = $funnel;
@@ -794,7 +783,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	 * Set the gauge.
 	 *
 	 * @param array $gauge The gauge.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
 	public function setGauge(array $gauge = null) {
 		$this->gauge = $gauge;
@@ -805,7 +794,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	 * Set the heatmap.
 	 *
 	 * @param array $heatmap The heatmap.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
 	public function setHeatmap(array $heatmap = null) {
 		$this->heatmap = $heatmap;
@@ -815,10 +804,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the line.
 	 *
-	 * @param HighchartsLine $line The line.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsLine $line The line.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setLine(HighchartsLine $line = null) {
+	public function setLine(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsLine $line = null) {
 		$this->line = $line;
 		return $this;
 	}
@@ -826,10 +815,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the pie.
 	 *
-	 * @param HighchartsPie $pie The pie.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie $pie The pie.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setPie(HighchartsPie $pie = null) {
+	public function setPie(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie $pie = null) {
 		$this->pie = $pie;
 		return $this;
 	}
@@ -838,7 +827,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	 * Set the polygon.
 	 *
 	 * @param array $polygon The polygon.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
 	public function setPolygon(array $polygon = null) {
 		$this->polygon = $polygon;
@@ -849,7 +838,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	 * Set the pyramid.
 	 *
 	 * @param array $pyramid The pyramid.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
 	public function setPyramid(array $pyramid = null) {
 		$this->pyramid = $pyramid;
@@ -859,10 +848,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the scatter.
 	 *
-	 * @param HighchartsScatter $scatter The scatter.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsScatter $scatter The scatter.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setScatter(HighchartsScatter $scatter = null) {
+	public function setScatter(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsScatter $scatter = null) {
 		$this->scatter = $scatter;
 		return $this;
 	}
@@ -870,10 +859,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the series.
 	 *
-	 * @param HighchartsSeries $series The series.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSeries $series The series.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setSeries(HighchartsSeries $series = null) {
+	public function setSeries(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSeries $series = null) {
 		$this->series = $series;
 		return $this;
 	}
@@ -882,7 +871,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	 * Set the solidgauge.
 	 *
 	 * @param array $solidgauge The solidgauge.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
 	public function setSolidgauge(array $solidgauge = null) {
 		$this->solidgauge = $solidgauge;
@@ -892,10 +881,10 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	/**
 	 * Set the spline.
 	 *
-	 * @param HighchartsSpline $spline The spline.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSpline $spline The spline.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
-	public function setSpline(HighchartsSpline $spline = null) {
+	public function setSpline(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSpline $spline = null) {
 		$this->spline = $spline;
 		return $this;
 	}
@@ -904,7 +893,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	 * Set the treemap.
 	 *
 	 * @param array $treemap The treemap.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
 	public function setTreemap(array $treemap = null) {
 		$this->treemap = $treemap;
@@ -915,7 +904,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	 * Set the waterfall.
 	 *
 	 * @param array $waterfall The waterfall.
-	 * @return HighchartsPlotOptions Returns the highcharts plot options.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the highcharts plot options.
 	 */
 	public function setWaterfall(array $waterfall = null) {
 		$this->waterfall = $waterfall;

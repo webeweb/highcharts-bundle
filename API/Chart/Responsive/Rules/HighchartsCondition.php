@@ -165,7 +165,7 @@ final class HighchartsCondition implements JsonSerializable {
 	 * Set the callback.
 	 *
 	 * @param string $callback The callback.
-	 * @return HighchartsCondition Returns the highcharts condition.
+	 * @return \WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
 	 */
 	public function setCallback($callback) {
 		$this->callback = $callback;
@@ -176,7 +176,7 @@ final class HighchartsCondition implements JsonSerializable {
 	 * Set the max height.
 	 *
 	 * @param integer $maxHeight The max height.
-	 * @return HighchartsCondition Returns the highcharts condition.
+	 * @return \WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
 	 */
 	public function setMaxHeight($maxHeight) {
 		$this->maxHeight = $maxHeight;
@@ -187,7 +187,7 @@ final class HighchartsCondition implements JsonSerializable {
 	 * Set the max width.
 	 *
 	 * @param integer $maxWidth The max width.
-	 * @return HighchartsCondition Returns the highcharts condition.
+	 * @return \WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
 	 */
 	public function setMaxWidth($maxWidth) {
 		$this->maxWidth = $maxWidth;
@@ -198,7 +198,7 @@ final class HighchartsCondition implements JsonSerializable {
 	 * Set the min height.
 	 *
 	 * @param integer $minHeight The min height.
-	 * @return HighchartsCondition Returns the highcharts condition.
+	 * @return \WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
 	 */
 	public function setMinHeight($minHeight) {
 		$this->minHeight = $minHeight;
@@ -209,7 +209,7 @@ final class HighchartsCondition implements JsonSerializable {
 	 * Set the min width.
 	 *
 	 * @param integer $minWidth The min width.
-	 * @return HighchartsCondition Returns the highcharts condition.
+	 * @return \WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
 	 */
 	public function setMinWidth($minWidth) {
 		$this->minWidth = $minWidth;

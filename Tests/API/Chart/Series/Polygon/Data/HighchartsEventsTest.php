@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Polygon\Data;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Series\Polygon\Data\HighchartsEvents;
 
 /**
  * Highcharts events test.
@@ -30,7 +29,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsEvents(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Polygon\Data\HighchartsEvents(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsEvents(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Polygon\Data\HighchartsEvents(false);
 
 		$obj->setClick("a8affc088cbca89fa20dbd98c91362e4");
 

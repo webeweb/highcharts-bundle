@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\XAxis;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\XAxis\PlotLines\HighchartsLabel;
 
 /**
  * Highcharts plot lines.
@@ -65,7 +64,7 @@ final class HighchartsPlotLines implements JsonSerializable {
 	/**
 	 * Label.
 	 *
-	 * @var HighchartsLabel
+	 * @var \WBW\HighchartsBundle\API\Chart\XAxis\PlotLines\HighchartsLabel
 	 */
 	private $label;
 
@@ -203,7 +202,7 @@ final class HighchartsPlotLines implements JsonSerializable {
 	/**
 	 * Get the label.
 	 *
-	 * @return HighchartsLabel Returns the label.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\PlotLines\HighchartsLabel Returns the label.
 	 */
 	public function getLabel() {
 		return $this->label;
@@ -248,10 +247,10 @@ final class HighchartsPlotLines implements JsonSerializable {
 	/**
 	 * Create a new label.
 	 *
-	 * @return HighchartsLabel Returns the label.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\PlotLines\HighchartsLabel Returns the label.
 	 */
 	public function newLabel() {
-		$this->label = new HighchartsLabel();
+		$this->label = new \WBW\HighchartsBundle\API\Chart\XAxis\PlotLines\HighchartsLabel();
 		return $this->label;
 	}
 
@@ -259,7 +258,7 @@ final class HighchartsPlotLines implements JsonSerializable {
 	 * Set the class name.
 	 *
 	 * @param string $className The class name.
-	 * @return HighchartsPlotLines Returns the highcharts plot lines.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsPlotLines Returns the highcharts plot lines.
 	 */
 	public function setClassName($className) {
 		$this->className = $className;
@@ -270,7 +269,7 @@ final class HighchartsPlotLines implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsPlotLines Returns the highcharts plot lines.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsPlotLines Returns the highcharts plot lines.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -281,7 +280,7 @@ final class HighchartsPlotLines implements JsonSerializable {
 	 * Set the dash style.
 	 *
 	 * @param string $dashStyle The dash style.
-	 * @return HighchartsPlotLines Returns the highcharts plot lines.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsPlotLines Returns the highcharts plot lines.
 	 */
 	public function setDashStyle($dashStyle) {
 		switch ($dashStyle) {
@@ -306,7 +305,7 @@ final class HighchartsPlotLines implements JsonSerializable {
 	 * Set the events.
 	 *
 	 * @param array $events The events.
-	 * @return HighchartsPlotLines Returns the highcharts plot lines.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsPlotLines Returns the highcharts plot lines.
 	 */
 	public function setEvents(array $events = null) {
 		$this->events = $events;
@@ -317,7 +316,7 @@ final class HighchartsPlotLines implements JsonSerializable {
 	 * Set the id.
 	 *
 	 * @param string $id The id.
-	 * @return HighchartsPlotLines Returns the highcharts plot lines.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsPlotLines Returns the highcharts plot lines.
 	 */
 	public function setId($id) {
 		$this->id = $id;
@@ -327,10 +326,10 @@ final class HighchartsPlotLines implements JsonSerializable {
 	/**
 	 * Set the label.
 	 *
-	 * @param HighchartsLabel $label The label.
-	 * @return HighchartsPlotLines Returns the highcharts plot lines.
+	 * @param \WBW\HighchartsBundle\API\Chart\XAxis\PlotLines\HighchartsLabel $label The label.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsPlotLines Returns the highcharts plot lines.
 	 */
-	public function setLabel(HighchartsLabel $label = null) {
+	public function setLabel(\WBW\HighchartsBundle\API\Chart\XAxis\PlotLines\HighchartsLabel $label = null) {
 		$this->label = $label;
 		return $this;
 	}
@@ -339,7 +338,7 @@ final class HighchartsPlotLines implements JsonSerializable {
 	 * Set the value.
 	 *
 	 * @param integer $value The value.
-	 * @return HighchartsPlotLines Returns the highcharts plot lines.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsPlotLines Returns the highcharts plot lines.
 	 */
 	public function setValue($value) {
 		$this->value = $value;
@@ -350,7 +349,7 @@ final class HighchartsPlotLines implements JsonSerializable {
 	 * Set the width.
 	 *
 	 * @param integer $width The width.
-	 * @return HighchartsPlotLines Returns the highcharts plot lines.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsPlotLines Returns the highcharts plot lines.
 	 */
 	public function setWidth($width) {
 		$this->width = $width;
@@ -361,7 +360,7 @@ final class HighchartsPlotLines implements JsonSerializable {
 	 * Set the z index.
 	 *
 	 * @param integer $zIndex The z index.
-	 * @return HighchartsPlotLines Returns the highcharts plot lines.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsPlotLines Returns the highcharts plot lines.
 	 */
 	public function setZIndex($zIndex) {
 		$this->zIndex = $zIndex;

@@ -160,7 +160,7 @@ final class HighchartsSelect implements JsonSerializable {
 	 * Set the enabled.
 	 *
 	 * @param boolean $enabled The enabled.
-	 * @return HighchartsSelect Returns the highcharts select.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\Data\Marker\States\HighchartsSelect Returns the highcharts select.
 	 */
 	public function setEnabled($enabled) {
 		$this->enabled = $enabled;
@@ -171,7 +171,7 @@ final class HighchartsSelect implements JsonSerializable {
 	 * Set the fill color.
 	 *
 	 * @param string $fillColor The fill color.
-	 * @return HighchartsSelect Returns the highcharts select.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\Data\Marker\States\HighchartsSelect Returns the highcharts select.
 	 */
 	public function setFillColor($fillColor) {
 		$this->fillColor = $fillColor;
@@ -182,7 +182,7 @@ final class HighchartsSelect implements JsonSerializable {
 	 * Set the line color.
 	 *
 	 * @param string $lineColor The line color.
-	 * @return HighchartsSelect Returns the highcharts select.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\Data\Marker\States\HighchartsSelect Returns the highcharts select.
 	 */
 	public function setLineColor($lineColor) {
 		$this->lineColor = $lineColor;
@@ -193,7 +193,7 @@ final class HighchartsSelect implements JsonSerializable {
 	 * Set the line width.
 	 *
 	 * @param integer $lineWidth The line width.
-	 * @return HighchartsSelect Returns the highcharts select.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\Data\Marker\States\HighchartsSelect Returns the highcharts select.
 	 */
 	public function setLineWidth($lineWidth) {
 		$this->lineWidth = $lineWidth;
@@ -204,7 +204,7 @@ final class HighchartsSelect implements JsonSerializable {
 	 * Set the radius.
 	 *
 	 * @param integer $radius The radius.
-	 * @return HighchartsSelect Returns the highcharts select.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\Data\Marker\States\HighchartsSelect Returns the highcharts select.
 	 */
 	public function setRadius($radius) {
 		$this->radius = $radius;

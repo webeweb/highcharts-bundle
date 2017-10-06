@@ -143,7 +143,7 @@ final class HighchartsPivot implements JsonSerializable {
 	 * Set the background color.
 	 *
 	 * @param string $backgroundColor The background color.
-	 * @return HighchartsPivot Returns the highcharts pivot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPivot Returns the highcharts pivot.
 	 */
 	public function setBackgroundColor($backgroundColor) {
 		$this->backgroundColor = $backgroundColor;
@@ -154,7 +154,7 @@ final class HighchartsPivot implements JsonSerializable {
 	 * Set the border color.
 	 *
 	 * @param string $borderColor The border color.
-	 * @return HighchartsPivot Returns the highcharts pivot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPivot Returns the highcharts pivot.
 	 */
 	public function setBorderColor($borderColor) {
 		$this->borderColor = $borderColor;
@@ -165,7 +165,7 @@ final class HighchartsPivot implements JsonSerializable {
 	 * Set the border width.
 	 *
 	 * @param integer $borderWidth The border width.
-	 * @return HighchartsPivot Returns the highcharts pivot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPivot Returns the highcharts pivot.
 	 */
 	public function setBorderWidth($borderWidth) {
 		$this->borderWidth = $borderWidth;
@@ -176,7 +176,7 @@ final class HighchartsPivot implements JsonSerializable {
 	 * Set the radius.
 	 *
 	 * @param integer $radius The radius.
-	 * @return HighchartsPivot Returns the highcharts pivot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPivot Returns the highcharts pivot.
 	 */
 	public function setRadius($radius) {
 		$this->radius = $radius;

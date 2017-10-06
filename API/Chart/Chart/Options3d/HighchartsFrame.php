@@ -12,9 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\Chart\Options3d;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack;
-use WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom;
-use WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide;
 
 /**
  * Highcharts frame.
@@ -29,7 +26,7 @@ final class HighchartsFrame implements JsonSerializable {
 	/**
 	 * Back.
 	 *
-	 * @var HighchartsBack
+	 * @var \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack
 	 * @since 4.0
 	 */
 	private $back;
@@ -37,7 +34,7 @@ final class HighchartsFrame implements JsonSerializable {
 	/**
 	 * Bottom.
 	 *
-	 * @var HighchartsBottom
+	 * @var \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom
 	 * @since 4.0
 	 */
 	private $bottom;
@@ -45,7 +42,7 @@ final class HighchartsFrame implements JsonSerializable {
 	/**
 	 * Side.
 	 *
-	 * @var HighchartsSide
+	 * @var \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide
 	 * @since 4.0
 	 */
 	private $side;
@@ -100,7 +97,7 @@ final class HighchartsFrame implements JsonSerializable {
 	/**
 	 * Get the back.
 	 *
-	 * @return HighchartsBack Returns the back.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack Returns the back.
 	 */
 	public function getBack() {
 		return $this->back;
@@ -109,7 +106,7 @@ final class HighchartsFrame implements JsonSerializable {
 	/**
 	 * Get the bottom.
 	 *
-	 * @return HighchartsBottom Returns the bottom.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the bottom.
 	 */
 	public function getBottom() {
 		return $this->bottom;
@@ -118,7 +115,7 @@ final class HighchartsFrame implements JsonSerializable {
 	/**
 	 * Get the side.
 	 *
-	 * @return HighchartsSide Returns the side.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide Returns the side.
 	 */
 	public function getSide() {
 		return $this->side;
@@ -145,40 +142,40 @@ final class HighchartsFrame implements JsonSerializable {
 	/**
 	 * Create a new back.
 	 *
-	 * @return HighchartsBack Returns the back.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack Returns the back.
 	 */
 	public function newBack() {
-		$this->back = new HighchartsBack();
+		$this->back = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack();
 		return $this->back;
 	}
 
 	/**
 	 * Create a new bottom.
 	 *
-	 * @return HighchartsBottom Returns the bottom.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the bottom.
 	 */
 	public function newBottom() {
-		$this->bottom = new HighchartsBottom();
+		$this->bottom = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom();
 		return $this->bottom;
 	}
 
 	/**
 	 * Create a new side.
 	 *
-	 * @return HighchartsSide Returns the side.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide Returns the side.
 	 */
 	public function newSide() {
-		$this->side = new HighchartsSide();
+		$this->side = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide();
 		return $this->side;
 	}
 
 	/**
 	 * Set the back.
 	 *
-	 * @param HighchartsBack $back The back.
-	 * @return HighchartsFrame Returns the highcharts frame.
+	 * @param \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack $back The back.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the highcharts frame.
 	 */
-	public function setBack(HighchartsBack $back = null) {
+	public function setBack(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack $back = null) {
 		$this->back = $back;
 		return $this;
 	}
@@ -186,10 +183,10 @@ final class HighchartsFrame implements JsonSerializable {
 	/**
 	 * Set the bottom.
 	 *
-	 * @param HighchartsBottom $bottom The bottom.
-	 * @return HighchartsFrame Returns the highcharts frame.
+	 * @param \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom $bottom The bottom.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the highcharts frame.
 	 */
-	public function setBottom(HighchartsBottom $bottom = null) {
+	public function setBottom(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom $bottom = null) {
 		$this->bottom = $bottom;
 		return $this;
 	}
@@ -197,10 +194,10 @@ final class HighchartsFrame implements JsonSerializable {
 	/**
 	 * Set the side.
 	 *
-	 * @param HighchartsSide $side The side.
-	 * @return HighchartsFrame Returns the highcharts frame.
+	 * @param \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide $side The side.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the highcharts frame.
 	 */
-	public function setSide(HighchartsSide $side = null) {
+	public function setSide(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide $side = null) {
 		$this->side = $side;
 		return $this;
 	}
@@ -209,7 +206,7 @@ final class HighchartsFrame implements JsonSerializable {
 	 * Set the top.
 	 *
 	 * @param array $top The top.
-	 * @return HighchartsFrame Returns the highcharts frame.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the highcharts frame.
 	 */
 	public function setTop(array $top = null) {
 		$this->top = $top;

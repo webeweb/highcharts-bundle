@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Funnel\States\Hover;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\Hover\HighchartsHalo;
 
 /**
  * Highcharts halo test.
@@ -30,7 +29,7 @@ final class HighchartsHaloTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsHalo(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\Hover\HighchartsHalo(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsHaloTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsHalo(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\Hover\HighchartsHalo(false);
 
 		$res = ["opacity" => 0.25, "size" => 10];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

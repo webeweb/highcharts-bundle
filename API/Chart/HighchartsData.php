@@ -495,7 +495,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the columns.
 	 *
 	 * @param array $columns The columns.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setColumns(array $columns = null) {
 		$this->columns = $columns;
@@ -506,7 +506,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the complete.
 	 *
 	 * @param string $complete The complete.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setComplete($complete) {
 		$this->complete = $complete;
@@ -517,7 +517,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the csv.
 	 *
 	 * @param string $csv The csv.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setCsv($csv) {
 		$this->csv = $csv;
@@ -528,7 +528,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the date format.
 	 *
 	 * @param string $dateFormat The date format.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setDateFormat($dateFormat) {
 		switch ($dateFormat) {
@@ -549,7 +549,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the decimal point.
 	 *
 	 * @param string $decimalPoint The decimal point.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setDecimalPoint($decimalPoint) {
 		$this->decimalPoint = $decimalPoint;
@@ -560,7 +560,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the end column.
 	 *
 	 * @param integer $endColumn The end column.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setEndColumn($endColumn) {
 		$this->endColumn = $endColumn;
@@ -571,7 +571,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the end row.
 	 *
 	 * @param integer $endRow The end row.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setEndRow($endRow) {
 		$this->endRow = $endRow;
@@ -582,7 +582,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the first row as names.
 	 *
 	 * @param boolean $firstRowAsNames The first row as names.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setFirstRowAsNames($firstRowAsNames) {
 		$this->firstRowAsNames = $firstRowAsNames;
@@ -593,7 +593,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the google spreadsheet key.
 	 *
 	 * @param string $googleSpreadsheetKey The google spreadsheet key.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setGoogleSpreadsheetKey($googleSpreadsheetKey) {
 		$this->googleSpreadsheetKey = $googleSpreadsheetKey;
@@ -604,7 +604,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the google spreadsheet worksheet.
 	 *
 	 * @param string $googleSpreadsheetWorksheet The google spreadsheet worksheet.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setGoogleSpreadsheetWorksheet($googleSpreadsheetWorksheet) {
 		$this->googleSpreadsheetWorksheet = $googleSpreadsheetWorksheet;
@@ -615,7 +615,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the item delimiter.
 	 *
 	 * @param string $itemDelimiter The item delimiter.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setItemDelimiter($itemDelimiter) {
 		$this->itemDelimiter = $itemDelimiter;
@@ -626,7 +626,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the line delimiter.
 	 *
 	 * @param string $lineDelimiter The line delimiter.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setLineDelimiter($lineDelimiter) {
 		$this->lineDelimiter = $lineDelimiter;
@@ -637,7 +637,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the parse date.
 	 *
 	 * @param string $parseDate The parse date.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setParseDate($parseDate) {
 		$this->parseDate = $parseDate;
@@ -648,7 +648,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the parsed.
 	 *
 	 * @param string $parsed The parsed.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setParsed($parsed) {
 		$this->parsed = $parsed;
@@ -659,7 +659,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the rows.
 	 *
 	 * @param array $rows The rows.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setRows(array $rows = null) {
 		$this->rows = $rows;
@@ -670,7 +670,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the series mapping.
 	 *
 	 * @param array $seriesMapping The series mapping.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setSeriesMapping(array $seriesMapping = null) {
 		$this->seriesMapping = $seriesMapping;
@@ -681,7 +681,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the start column.
 	 *
 	 * @param integer $startColumn The start column.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setStartColumn($startColumn) {
 		$this->startColumn = $startColumn;
@@ -692,7 +692,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the start row.
 	 *
 	 * @param integer $startRow The start row.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setStartRow($startRow) {
 		$this->startRow = $startRow;
@@ -703,7 +703,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the switch rows and columns.
 	 *
 	 * @param boolean $switchRowsAndColumns The switch rows and columns.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setSwitchRowsAndColumns($switchRowsAndColumns) {
 		$this->switchRowsAndColumns = $switchRowsAndColumns;
@@ -714,7 +714,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the table.
 	 *
 	 * @param string $table The table.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the highcharts data.
 	 */
 	public function setTable($table) {
 		$this->table = $table;

@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Drilldown;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton;
 
 /**
  * Highcharts drill up button test.
@@ -30,7 +29,7 @@ final class HighchartsDrillUpButtonTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsDrillUpButton(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsDrillUpButtonTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsDrillUpButton(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton(false);
 
 		$res = ["relativeTo" => "plotBox"];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

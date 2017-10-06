@@ -12,8 +12,6 @@
 namespace WBW\HighchartsBundle\API;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Options\HighchartsGlobal;
-use WBW\HighchartsBundle\API\Options\HighchartsLang;
 
 /**
  * Highcharts options.
@@ -28,14 +26,14 @@ final class HighchartsOptions implements JsonSerializable {
 	/**
 	 * Global.
 	 *
-	 * @var HighchartsGlobal
+	 * @var \WBW\HighchartsBundle\API\Options\HighchartsGlobal
 	 */
 	private $global;
 
 	/**
 	 * Lang.
 	 *
-	 * @var HighchartsLang
+	 * @var \WBW\HighchartsBundle\API\Options\HighchartsLang
 	 */
 	private $lang;
 
@@ -71,7 +69,7 @@ final class HighchartsOptions implements JsonSerializable {
 	/**
 	 * Get the global.
 	 *
-	 * @return HighchartsGlobal Returns the global.
+	 * @return \WBW\HighchartsBundle\API\Options\HighchartsGlobal Returns the global.
 	 */
 	public function getGlobal() {
 		return $this->global;
@@ -80,7 +78,7 @@ final class HighchartsOptions implements JsonSerializable {
 	/**
 	 * Get the lang.
 	 *
-	 * @return HighchartsLang Returns the lang.
+	 * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the lang.
 	 */
 	public function getLang() {
 		return $this->lang;
@@ -98,30 +96,30 @@ final class HighchartsOptions implements JsonSerializable {
 	/**
 	 * Create a new global.
 	 *
-	 * @return HighchartsGlobal Returns the global.
+	 * @return \WBW\HighchartsBundle\API\Options\HighchartsGlobal Returns the global.
 	 */
 	public function newGlobal() {
-		$this->global = new HighchartsGlobal();
+		$this->global = new \WBW\HighchartsBundle\API\Options\HighchartsGlobal();
 		return $this->global;
 	}
 
 	/**
 	 * Create a new lang.
 	 *
-	 * @return HighchartsLang Returns the lang.
+	 * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the lang.
 	 */
 	public function newLang() {
-		$this->lang = new HighchartsLang();
+		$this->lang = new \WBW\HighchartsBundle\API\Options\HighchartsLang();
 		return $this->lang;
 	}
 
 	/**
 	 * Set the global.
 	 *
-	 * @param HighchartsGlobal $global The global.
-	 * @return HighchartsOptions Returns the highcharts options.
+	 * @param \WBW\HighchartsBundle\API\Options\HighchartsGlobal $global The global.
+	 * @return \WBW\HighchartsBundle\API\HighchartsOptions Returns the highcharts options.
 	 */
-	public function setGlobal(HighchartsGlobal $global = null) {
+	public function setGlobal(\WBW\HighchartsBundle\API\Options\HighchartsGlobal $global = null) {
 		$this->global = $global;
 		return $this;
 	}
@@ -129,10 +127,10 @@ final class HighchartsOptions implements JsonSerializable {
 	/**
 	 * Set the lang.
 	 *
-	 * @param HighchartsLang $lang The lang.
-	 * @return HighchartsOptions Returns the highcharts options.
+	 * @param \WBW\HighchartsBundle\API\Options\HighchartsLang $lang The lang.
+	 * @return \WBW\HighchartsBundle\API\HighchartsOptions Returns the highcharts options.
 	 */
-	public function setLang(HighchartsLang $lang = null) {
+	public function setLang(\WBW\HighchartsBundle\API\Options\HighchartsLang $lang = null) {
 		$this->lang = $lang;
 		return $this;
 	}

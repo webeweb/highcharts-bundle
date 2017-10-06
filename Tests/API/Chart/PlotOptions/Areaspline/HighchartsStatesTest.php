@@ -12,8 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Areaspline;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\HighchartsStates;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\States\HighchartsHover;
 
 /**
  * Highcharts states test.
@@ -31,7 +29,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsStates(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\HighchartsStates(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -44,10 +42,10 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewHover() {
 
-		$obj = new HighchartsStates(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\HighchartsStates(false);
 
 		$res = $obj->newHover();
-		$this->assertInstanceOf(HighchartsHover::class, $res, "The method newHover() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\States\HighchartsHover::class, $res, "The method newHover() does not return the expected class");
 	}
 
 	/**
@@ -57,7 +55,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsStates(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\HighchartsStates(false);
 
 		$obj->newHover();
 

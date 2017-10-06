@@ -12,11 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\PlotOptions;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsDataLabels;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsEvents;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsMarker;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsPoint;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsStates;
 
 /**
  * Highcharts polygon.
@@ -99,7 +94,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Data labels.
 	 *
-	 * @var HighchartsDataLabels
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsDataLabels
 	 */
 	private $dataLabels;
 
@@ -121,7 +116,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Events.
 	 *
-	 * @var HighchartsEvents
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsEvents
 	 */
 	private $events;
 
@@ -175,7 +170,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Marker.
 	 *
-	 * @var HighchartsMarker
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsMarker
 	 */
 	private $marker;
 
@@ -190,7 +185,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Point.
 	 *
-	 * @var HighchartsPoint
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsPoint
 	 */
 	private $point;
 
@@ -265,7 +260,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * States.
 	 *
-	 * @var HighchartsStates
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsStates
 	 */
 	private $states;
 
@@ -608,7 +603,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Get the data labels.
 	 *
-	 * @return HighchartsDataLabels Returns the data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsDataLabels Returns the data labels.
 	 */
 	public function getDataLabels() {
 		return $this->dataLabels;
@@ -635,7 +630,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Get the events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsEvents Returns the events.
 	 */
 	public function getEvents() {
 		return $this->events;
@@ -698,7 +693,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Get the marker.
 	 *
-	 * @return HighchartsMarker Returns the marker.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsMarker Returns the marker.
 	 */
 	public function getMarker() {
 		return $this->marker;
@@ -716,7 +711,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Get the point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsPoint Returns the point.
 	 */
 	public function getPoint() {
 		return $this->point;
@@ -806,7 +801,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Get the states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsStates Returns the states.
 	 */
 	public function getStates() {
 		return $this->states;
@@ -878,50 +873,50 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Create a new data labels.
 	 *
-	 * @return HighchartsDataLabels Returns the data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsDataLabels Returns the data labels.
 	 */
 	public function newDataLabels() {
-		$this->dataLabels = new HighchartsDataLabels();
+		$this->dataLabels = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsDataLabels();
 		return $this->dataLabels;
 	}
 
 	/**
 	 * Create a new events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsEvents Returns the events.
 	 */
 	public function newEvents() {
-		$this->events = new HighchartsEvents();
+		$this->events = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsEvents();
 		return $this->events;
 	}
 
 	/**
 	 * Create a new marker.
 	 *
-	 * @return HighchartsMarker Returns the marker.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsMarker Returns the marker.
 	 */
 	public function newMarker() {
-		$this->marker = new HighchartsMarker();
+		$this->marker = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsMarker();
 		return $this->marker;
 	}
 
 	/**
 	 * Create a new point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsPoint Returns the point.
 	 */
 	public function newPoint() {
-		$this->point = new HighchartsPoint();
+		$this->point = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsPoint();
 		return $this->point;
 	}
 
 	/**
 	 * Create a new states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsStates Returns the states.
 	 */
 	public function newStates() {
-		$this->states = new HighchartsStates();
+		$this->states = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsStates();
 		return $this->states;
 	}
 
@@ -929,7 +924,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the allow point select.
 	 *
 	 * @param boolean $allowPointSelect The allow point select.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setAllowPointSelect($allowPointSelect) {
 		$this->allowPointSelect = $allowPointSelect;
@@ -940,7 +935,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the animation.
 	 *
 	 * @param boolean $animation The animation.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setAnimation($animation) {
 		$this->animation = $animation;
@@ -951,7 +946,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the animation limit.
 	 *
 	 * @param integer $animationLimit The animation limit.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setAnimationLimit($animationLimit) {
 		$this->animationLimit = $animationLimit;
@@ -962,7 +957,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the class name.
 	 *
 	 * @param string $className The class name.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setClassName($className) {
 		$this->className = $className;
@@ -973,7 +968,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -984,7 +979,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the color index.
 	 *
 	 * @param integer $colorIndex The color index.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setColorIndex($colorIndex) {
 		$this->colorIndex = $colorIndex;
@@ -995,7 +990,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the crop threshold.
 	 *
 	 * @param integer $cropThreshold The crop threshold.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setCropThreshold($cropThreshold) {
 		$this->cropThreshold = $cropThreshold;
@@ -1006,7 +1001,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the cursor.
 	 *
 	 * @param string $cursor The cursor.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setCursor($cursor) {
 		switch ($cursor) {
@@ -1026,7 +1021,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the dash style.
 	 *
 	 * @param string $dashStyle The dash style.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setDashStyle($dashStyle) {
 		switch ($dashStyle) {
@@ -1050,10 +1045,10 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Set the data labels.
 	 *
-	 * @param HighchartsDataLabels $dataLabels The data labels.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsDataLabels $dataLabels The data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
-	public function setDataLabels(HighchartsDataLabels $dataLabels = null) {
+	public function setDataLabels(\WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsDataLabels $dataLabels = null) {
 		$this->dataLabels = $dataLabels;
 		return $this;
 	}
@@ -1062,7 +1057,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the description.
 	 *
 	 * @param string $description The description.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setDescription($description) {
 		$this->description = $description;
@@ -1073,7 +1068,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the enable mouse tracking.
 	 *
 	 * @param boolean $enableMouseTracking The enable mouse tracking.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setEnableMouseTracking($enableMouseTracking) {
 		$this->enableMouseTracking = $enableMouseTracking;
@@ -1083,10 +1078,10 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Set the events.
 	 *
-	 * @param HighchartsEvents $events The events.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsEvents $events The events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
-	public function setEvents(HighchartsEvents $events = null) {
+	public function setEvents(\WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsEvents $events = null) {
 		$this->events = $events;
 		return $this;
 	}
@@ -1095,7 +1090,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the expose element to a11y.
 	 *
 	 * @param boolean $exposeElementToA11y The expose element to a11y.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setExposeElementToA11y($exposeElementToA11y) {
 		$this->exposeElementToA11y = $exposeElementToA11y;
@@ -1106,7 +1101,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the find nearest point by.
 	 *
 	 * @param string $findNearestPointBy The find nearest point by.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
 		switch ($findNearestPointBy) {
@@ -1122,7 +1117,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the get extremes from all.
 	 *
 	 * @param boolean $getExtremesFromAll The get extremes from all.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setGetExtremesFromAll($getExtremesFromAll) {
 		$this->getExtremesFromAll = $getExtremesFromAll;
@@ -1133,7 +1128,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the keys.
 	 *
 	 * @param array $keys The keys.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setKeys(array $keys = null) {
 		$this->keys = $keys;
@@ -1144,7 +1139,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the line width.
 	 *
 	 * @param integer $lineWidth The line width.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setLineWidth($lineWidth) {
 		$this->lineWidth = $lineWidth;
@@ -1155,7 +1150,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the linked to.
 	 *
 	 * @param string $linkedTo The linked to.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setLinkedTo($linkedTo) {
 		$this->linkedTo = $linkedTo;
@@ -1165,10 +1160,10 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Set the marker.
 	 *
-	 * @param HighchartsMarker $marker The marker.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsMarker $marker The marker.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
-	public function setMarker(HighchartsMarker $marker = null) {
+	public function setMarker(\WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsMarker $marker = null) {
 		$this->marker = $marker;
 		return $this;
 	}
@@ -1177,7 +1172,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the negative color.
 	 *
 	 * @param string $negativeColor The negative color.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setNegativeColor($negativeColor) {
 		$this->negativeColor = $negativeColor;
@@ -1187,10 +1182,10 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Set the point.
 	 *
-	 * @param HighchartsPoint $point The point.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsPoint $point The point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
-	public function setPoint(HighchartsPoint $point = null) {
+	public function setPoint(\WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsPoint $point = null) {
 		$this->point = $point;
 		return $this;
 	}
@@ -1199,7 +1194,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the point description formatter.
 	 *
 	 * @param string $pointDescriptionFormatter The point description formatter.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setPointDescriptionFormatter($pointDescriptionFormatter) {
 		$this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -1210,7 +1205,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the point interval.
 	 *
 	 * @param integer $pointInterval The point interval.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setPointInterval($pointInterval) {
 		$this->pointInterval = $pointInterval;
@@ -1221,7 +1216,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the point interval unit.
 	 *
 	 * @param string $pointIntervalUnit The point interval unit.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setPointIntervalUnit($pointIntervalUnit) {
 		switch ($pointIntervalUnit) {
@@ -1239,7 +1234,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the point start.
 	 *
 	 * @param integer $pointStart The point start.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setPointStart($pointStart) {
 		$this->pointStart = $pointStart;
@@ -1250,7 +1245,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the selected.
 	 *
 	 * @param boolean $selected The selected.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setSelected($selected) {
 		$this->selected = $selected;
@@ -1261,7 +1256,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the shadow.
 	 *
 	 * @param boolean|array $shadow The shadow.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setShadow($shadow) {
 		$this->shadow = $shadow;
@@ -1272,7 +1267,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the show checkbox.
 	 *
 	 * @param boolean $showCheckbox The show checkbox.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setShowCheckbox($showCheckbox) {
 		$this->showCheckbox = $showCheckbox;
@@ -1283,7 +1278,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the show in legend.
 	 *
 	 * @param boolean $showInLegend The show in legend.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setShowInLegend($showInLegend) {
 		$this->showInLegend = $showInLegend;
@@ -1294,7 +1289,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the skip keyboard navigation.
 	 *
 	 * @param boolean $skipKeyboardNavigation The skip keyboard navigation.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setSkipKeyboardNavigation($skipKeyboardNavigation) {
 		$this->skipKeyboardNavigation = $skipKeyboardNavigation;
@@ -1304,10 +1299,10 @@ final class HighchartsPolygon implements JsonSerializable {
 	/**
 	 * Set the states.
 	 *
-	 * @param HighchartsStates $states The states.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsStates $states The states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
-	public function setStates(HighchartsStates $states = null) {
+	public function setStates(\WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsStates $states = null) {
 		$this->states = $states;
 		return $this;
 	}
@@ -1316,7 +1311,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the sticky tracking.
 	 *
 	 * @param boolean $stickyTracking The sticky tracking.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setStickyTracking($stickyTracking) {
 		$this->stickyTracking = $stickyTracking;
@@ -1327,7 +1322,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the tooltip.
 	 *
 	 * @param array $tooltip The tooltip.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setTooltip(array $tooltip = null) {
 		$this->tooltip = $tooltip;
@@ -1338,7 +1333,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the turbo threshold.
 	 *
 	 * @param integer $turboThreshold The turbo threshold.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setTurboThreshold($turboThreshold) {
 		$this->turboThreshold = $turboThreshold;
@@ -1349,7 +1344,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the visible.
 	 *
 	 * @param boolean $visible The visible.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setVisible($visible) {
 		$this->visible = $visible;
@@ -1360,7 +1355,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the zone axis.
 	 *
 	 * @param string $zoneAxis The zone axis.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setZoneAxis($zoneAxis) {
 		$this->zoneAxis = $zoneAxis;
@@ -1371,7 +1366,7 @@ final class HighchartsPolygon implements JsonSerializable {
 	 * Set the zones.
 	 *
 	 * @param array $zones The zones.
-	 * @return HighchartsPolygon Returns the highcharts polygon.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon Returns the highcharts polygon.
 	 */
 	public function setZones(array $zones = null) {
 		$this->zones = $zones;

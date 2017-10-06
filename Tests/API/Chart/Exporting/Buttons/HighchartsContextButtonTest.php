@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Exporting\Buttons;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton;
 
 /**
  * Highcharts context button test.
@@ -30,7 +29,7 @@ final class HighchartsContextButtonTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsContextButton(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsContextButtonTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsContextButton(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(false);
 
 		$res = ["align" => "right", "enabled" => true, "height" => 20, "symbol" => "menu", "symbolFill" => "#666666", "symbolSize" => 14, "symbolStroke" => "#666666", "symbolStrokeWidth" => 1, "symbolX" => 12.5, "symbolY" => 10.5, "verticalAlign" => "top", "width" => 24, "x" => -10, "y" => 0];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

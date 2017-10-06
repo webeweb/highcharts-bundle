@@ -206,7 +206,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the click.
 	 *
 	 * @param string $click The click.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\Point\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setClick($click) {
 		$this->click = $click;
@@ -217,7 +217,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the mouse out.
 	 *
 	 * @param string $mouseOut The mouse out.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\Point\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setMouseOut($mouseOut) {
 		$this->mouseOut = $mouseOut;
@@ -228,7 +228,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the mouse over.
 	 *
 	 * @param string $mouseOver The mouse over.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\Point\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setMouseOver($mouseOver) {
 		$this->mouseOver = $mouseOver;
@@ -239,7 +239,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the remove.
 	 *
 	 * @param string $remove The remove.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\Point\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setRemove($remove) {
 		$this->remove = $remove;
@@ -250,7 +250,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the select.
 	 *
 	 * @param string $select The select.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\Point\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setSelect($select) {
 		$this->select = $select;
@@ -261,7 +261,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the unselect.
 	 *
 	 * @param string $unselect The unselect.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\Point\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setUnselect($unselect) {
 		$this->unselect = $unselect;
@@ -272,7 +272,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the update.
 	 *
 	 * @param string $update The update.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\Point\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setUpdate($update) {
 		$this->update = $update;

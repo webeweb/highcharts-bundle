@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Gauge;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot;
 
 /**
  * Highcharts pivot test.
@@ -30,7 +29,7 @@ final class HighchartsPivotTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsPivot(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsPivotTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsPivot(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(false);
 
 		$res = ["backgroundColor" => "#000000", "borderColor" => "#cccccc", "borderWidth" => 0, "radius" => 5];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

@@ -250,7 +250,7 @@ final class HighchartsSubtitle implements JsonSerializable {
 	 * Set the align.
 	 *
 	 * @param string $align The align.
-	 * @return HighchartsSubtitle Returns the highcharts subtitle.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle Returns the highcharts subtitle.
 	 */
 	public function setAlign($align) {
 		switch ($align) {
@@ -267,7 +267,7 @@ final class HighchartsSubtitle implements JsonSerializable {
 	 * Set the floating.
 	 *
 	 * @param boolean $floating The floating.
-	 * @return HighchartsSubtitle Returns the highcharts subtitle.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle Returns the highcharts subtitle.
 	 */
 	public function setFloating($floating) {
 		$this->floating = $floating;
@@ -278,7 +278,7 @@ final class HighchartsSubtitle implements JsonSerializable {
 	 * Set the style.
 	 *
 	 * @param array $style The style.
-	 * @return HighchartsSubtitle Returns the highcharts subtitle.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle Returns the highcharts subtitle.
 	 */
 	public function setStyle(array $style = null) {
 		$this->style = $style;
@@ -289,7 +289,7 @@ final class HighchartsSubtitle implements JsonSerializable {
 	 * Set the text.
 	 *
 	 * @param string $text The text.
-	 * @return HighchartsSubtitle Returns the highcharts subtitle.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle Returns the highcharts subtitle.
 	 */
 	public function setText($text) {
 		$this->text = $text;
@@ -300,7 +300,7 @@ final class HighchartsSubtitle implements JsonSerializable {
 	 * Set the use HTML.
 	 *
 	 * @param boolean $useHTML The use HTML.
-	 * @return HighchartsSubtitle Returns the highcharts subtitle.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle Returns the highcharts subtitle.
 	 */
 	public function setUseHTML($useHTML) {
 		$this->useHTML = $useHTML;
@@ -311,7 +311,7 @@ final class HighchartsSubtitle implements JsonSerializable {
 	 * Set the vertical align.
 	 *
 	 * @param string $verticalAlign The vertical align.
-	 * @return HighchartsSubtitle Returns the highcharts subtitle.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle Returns the highcharts subtitle.
 	 */
 	public function setVerticalAlign($verticalAlign) {
 		switch ($verticalAlign) {
@@ -328,7 +328,7 @@ final class HighchartsSubtitle implements JsonSerializable {
 	 * Set the width adjust.
 	 *
 	 * @param integer $widthAdjust The width adjust.
-	 * @return HighchartsSubtitle Returns the highcharts subtitle.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle Returns the highcharts subtitle.
 	 */
 	public function setWidthAdjust($widthAdjust) {
 		$this->widthAdjust = $widthAdjust;
@@ -339,7 +339,7 @@ final class HighchartsSubtitle implements JsonSerializable {
 	 * Set the x.
 	 *
 	 * @param integer $x The x.
-	 * @return HighchartsSubtitle Returns the highcharts subtitle.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle Returns the highcharts subtitle.
 	 */
 	public function setX($x) {
 		$this->x = $x;
@@ -350,7 +350,7 @@ final class HighchartsSubtitle implements JsonSerializable {
 	 * Set the y.
 	 *
 	 * @param integer $y The y.
-	 * @return HighchartsSubtitle Returns the highcharts subtitle.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle Returns the highcharts subtitle.
 	 */
 	public function setY($y) {
 		$this->y = $y;

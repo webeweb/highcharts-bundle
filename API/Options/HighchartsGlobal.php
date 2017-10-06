@@ -209,7 +209,7 @@ final class HighchartsGlobal implements JsonSerializable {
 	 * Set the date.
 	 *
 	 * @param array $date The date.
-	 * @return HighchartsGlobal Returns the highcharts global.
+	 * @return \WBW\HighchartsBundle\API\Options\HighchartsGlobal Returns the highcharts global.
 	 */
 	public function setDate(array $date = null) {
 		$this->date = $date;
@@ -220,7 +220,7 @@ final class HighchartsGlobal implements JsonSerializable {
 	 * Set the VML radial gradient URL.
 	 *
 	 * @param string $vMLRadialGradientURL The VML radial gradient URL.
-	 * @return HighchartsGlobal Returns the highcharts global.
+	 * @return \WBW\HighchartsBundle\API\Options\HighchartsGlobal Returns the highcharts global.
 	 */
 	public function setVMLRadialGradientURL($vMLRadialGradientURL) {
 		$this->vMLRadialGradientURL = $vMLRadialGradientURL;
@@ -231,7 +231,7 @@ final class HighchartsGlobal implements JsonSerializable {
 	 * Set the canvas tools URL.
 	 *
 	 * @param string $canvasToolsURL The canvas tools URL.
-	 * @return HighchartsGlobal Returns the highcharts global.
+	 * @return \WBW\HighchartsBundle\API\Options\HighchartsGlobal Returns the highcharts global.
 	 * @deprecated
 	 */
 	public function setCanvasToolsURL($canvasToolsURL) {
@@ -243,7 +243,7 @@ final class HighchartsGlobal implements JsonSerializable {
 	 * Set the get timezone offset.
 	 *
 	 * @param string $getTimezoneOffset The get timezone offset.
-	 * @return HighchartsGlobal Returns the highcharts global.
+	 * @return \WBW\HighchartsBundle\API\Options\HighchartsGlobal Returns the highcharts global.
 	 */
 	public function setGetTimezoneOffset($getTimezoneOffset) {
 		$this->getTimezoneOffset = $getTimezoneOffset;
@@ -254,7 +254,7 @@ final class HighchartsGlobal implements JsonSerializable {
 	 * Set the timezone.
 	 *
 	 * @param string $timezone The timezone.
-	 * @return HighchartsGlobal Returns the highcharts global.
+	 * @return \WBW\HighchartsBundle\API\Options\HighchartsGlobal Returns the highcharts global.
 	 */
 	public function setTimezone($timezone) {
 		$this->timezone = $timezone;
@@ -265,7 +265,7 @@ final class HighchartsGlobal implements JsonSerializable {
 	 * Set the timezone offset.
 	 *
 	 * @param integer $timezoneOffset The timezone offset.
-	 * @return HighchartsGlobal Returns the highcharts global.
+	 * @return \WBW\HighchartsBundle\API\Options\HighchartsGlobal Returns the highcharts global.
 	 */
 	public function setTimezoneOffset($timezoneOffset) {
 		$this->timezoneOffset = $timezoneOffset;
@@ -276,7 +276,7 @@ final class HighchartsGlobal implements JsonSerializable {
 	 * Set the use UTC.
 	 *
 	 * @param boolean $useUTC The use UTC.
-	 * @return HighchartsGlobal Returns the highcharts global.
+	 * @return \WBW\HighchartsBundle\API\Options\HighchartsGlobal Returns the highcharts global.
 	 */
 	public function setUseUTC($useUTC) {
 		$this->useUTC = $useUTC;

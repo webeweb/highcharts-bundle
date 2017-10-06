@@ -143,7 +143,7 @@ final class HighchartsNoData implements JsonSerializable {
 	 * Set the attr.
 	 *
 	 * @param array $attr The attr.
-	 * @return HighchartsNoData Returns the highcharts no data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsNoData Returns the highcharts no data.
 	 */
 	public function setAttr(array $attr = null) {
 		$this->attr = $attr;
@@ -154,7 +154,7 @@ final class HighchartsNoData implements JsonSerializable {
 	 * Set the position.
 	 *
 	 * @param array $position The position.
-	 * @return HighchartsNoData Returns the highcharts no data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsNoData Returns the highcharts no data.
 	 */
 	public function setPosition(array $position = null) {
 		$this->position = $position;
@@ -165,7 +165,7 @@ final class HighchartsNoData implements JsonSerializable {
 	 * Set the style.
 	 *
 	 * @param array $style The style.
-	 * @return HighchartsNoData Returns the highcharts no data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsNoData Returns the highcharts no data.
 	 */
 	public function setStyle(array $style = null) {
 		$this->style = $style;
@@ -176,7 +176,7 @@ final class HighchartsNoData implements JsonSerializable {
 	 * Set the use HTML.
 	 *
 	 * @param boolean $useHTML The use HTML.
-	 * @return HighchartsNoData Returns the highcharts no data.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsNoData Returns the highcharts no data.
 	 */
 	public function setUseHTML($useHTML) {
 		$this->useHTML = $useHTML;

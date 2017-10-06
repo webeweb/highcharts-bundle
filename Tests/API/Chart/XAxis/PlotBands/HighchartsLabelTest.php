@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\XAxis\PlotBands;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\XAxis\PlotBands\HighchartsLabel;
 
 /**
  * Highcharts label test.
@@ -30,7 +29,7 @@ final class HighchartsLabelTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsLabel(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\XAxis\PlotBands\HighchartsLabel(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsLabelTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsLabel(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\XAxis\PlotBands\HighchartsLabel(false);
 
 		$res = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top"];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
@@ -68,9 +67,9 @@ final class HighchartsLabelTest extends PHPUnit_Framework_TestCase {
 		$res4 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 58];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with x");
 
-		$obj->setY(73);
+		$obj->setY(22);
 
-		$res5 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 58, "y" => 73];
+		$res5 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 58, "y" => 22];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with y");
 	}
 

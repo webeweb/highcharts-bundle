@@ -683,7 +683,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the animation.
 	 *
 	 * @param boolean $animation The animation.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setAnimation($animation) {
 		$this->animation = $animation;
@@ -694,7 +694,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the background color.
 	 *
 	 * @param string $backgroundColor The background color.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setBackgroundColor($backgroundColor) {
 		$this->backgroundColor = $backgroundColor;
@@ -705,7 +705,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the border color.
 	 *
 	 * @param string $borderColor The border color.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setBorderColor($borderColor) {
 		$this->borderColor = $borderColor;
@@ -716,7 +716,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the border radius.
 	 *
 	 * @param integer $borderRadius The border radius.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setBorderRadius($borderRadius) {
 		$this->borderRadius = $borderRadius;
@@ -727,7 +727,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the border width.
 	 *
 	 * @param integer $borderWidth The border width.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setBorderWidth($borderWidth) {
 		$this->borderWidth = $borderWidth;
@@ -738,7 +738,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the crosshairs.
 	 *
 	 * @param mixed $crosshairs The crosshairs.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 * @deprecated
 	 */
 	public function setCrosshairs($crosshairs) {
@@ -750,7 +750,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the date time label formats.
 	 *
 	 * @param array $dateTimeLabelFormats The date time label formats.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setDateTimeLabelFormats(array $dateTimeLabelFormats = null) {
 		$this->dateTimeLabelFormats = $dateTimeLabelFormats;
@@ -761,7 +761,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the enabled.
 	 *
 	 * @param boolean $enabled The enabled.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setEnabled($enabled) {
 		$this->enabled = $enabled;
@@ -772,7 +772,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the follow pointer.
 	 *
 	 * @param boolean $followPointer The follow pointer.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setFollowPointer($followPointer) {
 		$this->followPointer = $followPointer;
@@ -783,7 +783,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the follow touch move.
 	 *
 	 * @param boolean $followTouchMove The follow touch move.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setFollowTouchMove($followTouchMove) {
 		$this->followTouchMove = $followTouchMove;
@@ -794,7 +794,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the footer format.
 	 *
 	 * @param string $footerFormat The footer format.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setFooterFormat($footerFormat) {
 		$this->footerFormat = $footerFormat;
@@ -805,7 +805,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the formatter.
 	 *
 	 * @param string $formatter The formatter.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setFormatter($formatter) {
 		$this->formatter = $formatter;
@@ -816,7 +816,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the header format.
 	 *
 	 * @param string $headerFormat The header format.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setHeaderFormat($headerFormat) {
 		$this->headerFormat = $headerFormat;
@@ -827,7 +827,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the hide delay.
 	 *
 	 * @param integer $hideDelay The hide delay.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setHideDelay($hideDelay) {
 		$this->hideDelay = $hideDelay;
@@ -838,7 +838,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the padding.
 	 *
 	 * @param integer $padding The padding.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setPadding($padding) {
 		$this->padding = $padding;
@@ -849,7 +849,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the point format.
 	 *
 	 * @param string $pointFormat The point format.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setPointFormat($pointFormat) {
 		$this->pointFormat = $pointFormat;
@@ -860,7 +860,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the point formatter.
 	 *
 	 * @param string $pointFormatter The point formatter.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setPointFormatter($pointFormatter) {
 		$this->pointFormatter = $pointFormatter;
@@ -871,7 +871,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the positioner.
 	 *
 	 * @param string $positioner The positioner.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setPositioner($positioner) {
 		$this->positioner = $positioner;
@@ -882,7 +882,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the shadow.
 	 *
 	 * @param boolean $shadow The shadow.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setShadow($shadow) {
 		$this->shadow = $shadow;
@@ -893,7 +893,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the shape.
 	 *
 	 * @param string $shape The shape.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setShape($shape) {
 		$this->shape = $shape;
@@ -904,7 +904,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the shared.
 	 *
 	 * @param boolean $shared The shared.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setShared($shared) {
 		$this->shared = $shared;
@@ -915,7 +915,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the snap.
 	 *
 	 * @param integer $snap The snap.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setSnap($snap) {
 		$this->snap = $snap;
@@ -926,7 +926,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the split.
 	 *
 	 * @param boolean $split The split.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setSplit($split) {
 		$this->split = $split;
@@ -937,7 +937,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the style.
 	 *
 	 * @param array $style The style.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setStyle(array $style = null) {
 		$this->style = $style;
@@ -948,7 +948,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the use HTML.
 	 *
 	 * @param boolean $useHTML The use HTML.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setUseHTML($useHTML) {
 		$this->useHTML = $useHTML;
@@ -959,7 +959,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the value decimals.
 	 *
 	 * @param integer $valueDecimals The value decimals.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setValueDecimals($valueDecimals) {
 		$this->valueDecimals = $valueDecimals;
@@ -970,7 +970,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the value prefix.
 	 *
 	 * @param string $valuePrefix The value prefix.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setValuePrefix($valuePrefix) {
 		$this->valuePrefix = $valuePrefix;
@@ -981,7 +981,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the value suffix.
 	 *
 	 * @param string $valueSuffix The value suffix.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setValueSuffix($valueSuffix) {
 		$this->valueSuffix = $valueSuffix;
@@ -992,7 +992,7 @@ final class HighchartsTooltip implements JsonSerializable {
 	 * Set the x date format.
 	 *
 	 * @param string $xDateFormat The x date format.
-	 * @return HighchartsTooltip Returns the highcharts tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the highcharts tooltip.
 	 */
 	public function setXDateFormat($xDateFormat) {
 		$this->xDateFormat = $xDateFormat;

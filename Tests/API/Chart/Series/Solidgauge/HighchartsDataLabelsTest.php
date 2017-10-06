@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Solidgauge;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Series\Solidgauge\HighchartsDataLabels;
 
 /**
  * Highcharts data labels test.
@@ -30,7 +29,7 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsDataLabels(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Solidgauge\HighchartsDataLabels(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsDataLabels(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Solidgauge\HighchartsDataLabels(false);
 
 		$res = ["align" => "center", "allowOverlap" => false, "borderColor" => "#cccccc", "borderRadius" => 3, "borderWidth" => 1, "crop" => true, "defer" => true, "enabled" => false, "format" => "{y}", "overflow" => "justify", "padding" => 5, "rotation" => 0, "shadow" => false, "shape" => "square", "style" => ["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], "useHTML" => false, "verticalAlign" => "top", "x" => 0, "y" => 15, "zIndex" => 2];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

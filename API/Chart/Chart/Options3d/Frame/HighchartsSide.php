@@ -99,7 +99,7 @@ final class HighchartsSide implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsSide Returns the highcharts side.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide Returns the highcharts side.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -110,7 +110,7 @@ final class HighchartsSide implements JsonSerializable {
 	 * Set the size.
 	 *
 	 * @param integer $size The size.
-	 * @return HighchartsSide Returns the highcharts side.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide Returns the highcharts side.
 	 */
 	public function setSize($size) {
 		$this->size = $size;

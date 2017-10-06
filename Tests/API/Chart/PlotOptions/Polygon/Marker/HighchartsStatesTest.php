@@ -12,9 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Polygon\Marker;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\HighchartsStates;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\States\HighchartsHover;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\States\HighchartsSelect;
 
 /**
  * Highcharts states test.
@@ -32,7 +29,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsStates(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\HighchartsStates(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -45,10 +42,10 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewHover() {
 
-		$obj = new HighchartsStates(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\HighchartsStates(false);
 
 		$res = $obj->newHover();
-		$this->assertInstanceOf(HighchartsHover::class, $res, "The method newHover() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\States\HighchartsHover::class, $res, "The method newHover() does not return the expected class");
 	}
 
 	/**
@@ -58,10 +55,10 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewSelect() {
 
-		$obj = new HighchartsStates(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\HighchartsStates(false);
 
 		$res = $obj->newSelect();
-		$this->assertInstanceOf(HighchartsSelect::class, $res, "The method newSelect() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\States\HighchartsSelect::class, $res, "The method newSelect() does not return the expected class");
 	}
 
 	/**
@@ -71,7 +68,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsStates(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\HighchartsStates(false);
 
 		$obj->newHover();
 

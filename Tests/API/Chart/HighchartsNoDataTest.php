@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\HighchartsNoData;
 
 /**
  * Highcharts no data test.
@@ -30,7 +29,7 @@ final class HighchartsNoDataTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsNoData(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsNoData(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsNoDataTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsNoData(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsNoData(false);
 
 		$res = ["position" => ["x" => 0, "y" => 0, "align" => "center", "verticalAlign" => "middle"], "style" => ["fontSize" => "12px", "fontWeight" => "bold", "color" => "#666666"], "useHTML" => false];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

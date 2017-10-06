@@ -253,7 +253,7 @@ final class HighchartsLabel implements JsonSerializable {
 	 * Set the align.
 	 *
 	 * @param string $align The align.
-	 * @return HighchartsLabel Returns the highcharts label.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel Returns the highcharts label.
 	 */
 	public function setAlign($align) {
 		$this->align = $align;
@@ -264,7 +264,7 @@ final class HighchartsLabel implements JsonSerializable {
 	 * Set the rotation.
 	 *
 	 * @param integer $rotation The rotation.
-	 * @return HighchartsLabel Returns the highcharts label.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel Returns the highcharts label.
 	 */
 	public function setRotation($rotation) {
 		$this->rotation = $rotation;
@@ -275,7 +275,7 @@ final class HighchartsLabel implements JsonSerializable {
 	 * Set the style.
 	 *
 	 * @param array $style The style.
-	 * @return HighchartsLabel Returns the highcharts label.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel Returns the highcharts label.
 	 */
 	public function setStyle(array $style = null) {
 		$this->style = $style;
@@ -286,7 +286,7 @@ final class HighchartsLabel implements JsonSerializable {
 	 * Set the text.
 	 *
 	 * @param string $text The text.
-	 * @return HighchartsLabel Returns the highcharts label.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel Returns the highcharts label.
 	 */
 	public function setText($text) {
 		$this->text = $text;
@@ -297,7 +297,7 @@ final class HighchartsLabel implements JsonSerializable {
 	 * Set the text align.
 	 *
 	 * @param string $textAlign The text align.
-	 * @return HighchartsLabel Returns the highcharts label.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel Returns the highcharts label.
 	 */
 	public function setTextAlign($textAlign) {
 		$this->textAlign = $textAlign;
@@ -308,7 +308,7 @@ final class HighchartsLabel implements JsonSerializable {
 	 * Set the use HTML.
 	 *
 	 * @param boolean $useHTML The use HTML.
-	 * @return HighchartsLabel Returns the highcharts label.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel Returns the highcharts label.
 	 */
 	public function setUseHTML($useHTML) {
 		$this->useHTML = $useHTML;
@@ -319,7 +319,7 @@ final class HighchartsLabel implements JsonSerializable {
 	 * Set the vertical align.
 	 *
 	 * @param string $verticalAlign The vertical align.
-	 * @return HighchartsLabel Returns the highcharts label.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel Returns the highcharts label.
 	 */
 	public function setVerticalAlign($verticalAlign) {
 		$this->verticalAlign = $verticalAlign;
@@ -330,7 +330,7 @@ final class HighchartsLabel implements JsonSerializable {
 	 * Set the x.
 	 *
 	 * @param integer $x The x.
-	 * @return HighchartsLabel Returns the highcharts label.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel Returns the highcharts label.
 	 */
 	public function setX($x) {
 		$this->x = $x;
@@ -341,7 +341,7 @@ final class HighchartsLabel implements JsonSerializable {
 	 * Set the y.
 	 *
 	 * @param integer $y The y.
-	 * @return HighchartsLabel Returns the highcharts label.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel Returns the highcharts label.
 	 */
 	public function setY($y) {
 		$this->y = $y;

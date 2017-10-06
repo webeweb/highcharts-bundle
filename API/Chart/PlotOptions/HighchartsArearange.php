@@ -12,9 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\PlotOptions;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsEvents;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsPoint;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsStates;
 
 /**
  * Highcharts arearange.
@@ -127,7 +124,7 @@ final class HighchartsArearange implements JsonSerializable {
 	/**
 	 * Events.
 	 *
-	 * @var HighchartsEvents
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsEvents
 	 */
 	private $events;
 
@@ -226,7 +223,7 @@ final class HighchartsArearange implements JsonSerializable {
 	/**
 	 * Point.
 	 *
-	 * @var HighchartsPoint
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsPoint
 	 */
 	private $point;
 
@@ -309,7 +306,7 @@ final class HighchartsArearange implements JsonSerializable {
 	/**
 	 * States.
 	 *
-	 * @var HighchartsStates
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsStates
 	 */
 	private $states;
 
@@ -745,7 +742,7 @@ final class HighchartsArearange implements JsonSerializable {
 	/**
 	 * Get the events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsEvents Returns the events.
 	 */
 	public function getEvents() {
 		return $this->events;
@@ -862,7 +859,7 @@ final class HighchartsArearange implements JsonSerializable {
 	/**
 	 * Get the point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsPoint Returns the point.
 	 */
 	public function getPoint() {
 		return $this->point;
@@ -961,7 +958,7 @@ final class HighchartsArearange implements JsonSerializable {
 	/**
 	 * Get the states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsStates Returns the states.
 	 */
 	public function getStates() {
 		return $this->states;
@@ -1051,30 +1048,30 @@ final class HighchartsArearange implements JsonSerializable {
 	/**
 	 * Create a new events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsEvents Returns the events.
 	 */
 	public function newEvents() {
-		$this->events = new HighchartsEvents();
+		$this->events = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsEvents();
 		return $this->events;
 	}
 
 	/**
 	 * Create a new point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsPoint Returns the point.
 	 */
 	public function newPoint() {
-		$this->point = new HighchartsPoint();
+		$this->point = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsPoint();
 		return $this->point;
 	}
 
 	/**
 	 * Create a new states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsStates Returns the states.
 	 */
 	public function newStates() {
-		$this->states = new HighchartsStates();
+		$this->states = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsStates();
 		return $this->states;
 	}
 
@@ -1082,7 +1079,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the allow point select.
 	 *
 	 * @param boolean $allowPointSelect The allow point select.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setAllowPointSelect($allowPointSelect) {
 		$this->allowPointSelect = $allowPointSelect;
@@ -1093,7 +1090,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the animation.
 	 *
 	 * @param boolean $animation The animation.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setAnimation($animation) {
 		$this->animation = $animation;
@@ -1104,7 +1101,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the animation limit.
 	 *
 	 * @param integer $animationLimit The animation limit.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setAnimationLimit($animationLimit) {
 		$this->animationLimit = $animationLimit;
@@ -1115,7 +1112,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the class name.
 	 *
 	 * @param string $className The class name.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setClassName($className) {
 		$this->className = $className;
@@ -1126,7 +1123,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -1137,7 +1134,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the color index.
 	 *
 	 * @param integer $colorIndex The color index.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setColorIndex($colorIndex) {
 		$this->colorIndex = $colorIndex;
@@ -1148,7 +1145,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the connect nulls.
 	 *
 	 * @param boolean $connectNulls The connect nulls.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setConnectNulls($connectNulls) {
 		$this->connectNulls = $connectNulls;
@@ -1159,7 +1156,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the crop threshold.
 	 *
 	 * @param integer $cropThreshold The crop threshold.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setCropThreshold($cropThreshold) {
 		$this->cropThreshold = $cropThreshold;
@@ -1170,7 +1167,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the cursor.
 	 *
 	 * @param string $cursor The cursor.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setCursor($cursor) {
 		switch ($cursor) {
@@ -1190,7 +1187,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the dash style.
 	 *
 	 * @param string $dashStyle The dash style.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setDashStyle($dashStyle) {
 		switch ($dashStyle) {
@@ -1215,7 +1212,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the data labels.
 	 *
 	 * @param array $dataLabels The data labels.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setDataLabels(array $dataLabels = null) {
 		$this->dataLabels = $dataLabels;
@@ -1226,7 +1223,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the description.
 	 *
 	 * @param string $description The description.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setDescription($description) {
 		$this->description = $description;
@@ -1237,7 +1234,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the enable mouse tracking.
 	 *
 	 * @param boolean $enableMouseTracking The enable mouse tracking.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setEnableMouseTracking($enableMouseTracking) {
 		$this->enableMouseTracking = $enableMouseTracking;
@@ -1247,10 +1244,10 @@ final class HighchartsArearange implements JsonSerializable {
 	/**
 	 * Set the events.
 	 *
-	 * @param HighchartsEvents $events The events.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsEvents $events The events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
-	public function setEvents(HighchartsEvents $events = null) {
+	public function setEvents(\WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsEvents $events = null) {
 		$this->events = $events;
 		return $this;
 	}
@@ -1259,7 +1256,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the expose element to a11y.
 	 *
 	 * @param boolean $exposeElementToA11y The expose element to a11y.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setExposeElementToA11y($exposeElementToA11y) {
 		$this->exposeElementToA11y = $exposeElementToA11y;
@@ -1270,7 +1267,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the fill color.
 	 *
 	 * @param string $fillColor The fill color.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setFillColor($fillColor) {
 		$this->fillColor = $fillColor;
@@ -1281,7 +1278,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the fill opacity.
 	 *
 	 * @param integer $fillOpacity The fill opacity.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setFillOpacity($fillOpacity) {
 		$this->fillOpacity = $fillOpacity;
@@ -1292,7 +1289,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the find nearest point by.
 	 *
 	 * @param string $findNearestPointBy The find nearest point by.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
 		switch ($findNearestPointBy) {
@@ -1308,7 +1305,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the get extremes from all.
 	 *
 	 * @param boolean $getExtremesFromAll The get extremes from all.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setGetExtremesFromAll($getExtremesFromAll) {
 		$this->getExtremesFromAll = $getExtremesFromAll;
@@ -1319,7 +1316,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the keys.
 	 *
 	 * @param array $keys The keys.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setKeys(array $keys = null) {
 		$this->keys = $keys;
@@ -1330,7 +1327,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the line color.
 	 *
 	 * @param string $lineColor The line color.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setLineColor($lineColor) {
 		$this->lineColor = $lineColor;
@@ -1341,7 +1338,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the line width.
 	 *
 	 * @param integer $lineWidth The line width.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setLineWidth($lineWidth) {
 		$this->lineWidth = $lineWidth;
@@ -1352,7 +1349,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the linecap.
 	 *
 	 * @param string $linecap The linecap.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setLinecap($linecap) {
 		switch ($linecap) {
@@ -1368,7 +1365,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the linked to.
 	 *
 	 * @param string $linkedTo The linked to.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setLinkedTo($linkedTo) {
 		$this->linkedTo = $linkedTo;
@@ -1379,7 +1376,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the negative color.
 	 *
 	 * @param string $negativeColor The negative color.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setNegativeColor($negativeColor) {
 		$this->negativeColor = $negativeColor;
@@ -1390,7 +1387,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the negative fill color.
 	 *
 	 * @param string $negativeFillColor The negative fill color.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setNegativeFillColor($negativeFillColor) {
 		$this->negativeFillColor = $negativeFillColor;
@@ -1400,10 +1397,10 @@ final class HighchartsArearange implements JsonSerializable {
 	/**
 	 * Set the point.
 	 *
-	 * @param HighchartsPoint $point The point.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsPoint $point The point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
-	public function setPoint(HighchartsPoint $point = null) {
+	public function setPoint(\WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsPoint $point = null) {
 		$this->point = $point;
 		return $this;
 	}
@@ -1412,7 +1409,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the point description formatter.
 	 *
 	 * @param string $pointDescriptionFormatter The point description formatter.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setPointDescriptionFormatter($pointDescriptionFormatter) {
 		$this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -1423,7 +1420,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the point interval.
 	 *
 	 * @param integer $pointInterval The point interval.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setPointInterval($pointInterval) {
 		$this->pointInterval = $pointInterval;
@@ -1434,7 +1431,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the point interval unit.
 	 *
 	 * @param string $pointIntervalUnit The point interval unit.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setPointIntervalUnit($pointIntervalUnit) {
 		switch ($pointIntervalUnit) {
@@ -1452,7 +1449,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the point placement.
 	 *
 	 * @param string|integer $pointPlacement The point placement.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setPointPlacement($pointPlacement) {
 		switch ($pointPlacement) {
@@ -1469,7 +1466,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the point start.
 	 *
 	 * @param integer $pointStart The point start.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setPointStart($pointStart) {
 		$this->pointStart = $pointStart;
@@ -1480,7 +1477,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the selected.
 	 *
 	 * @param boolean $selected The selected.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setSelected($selected) {
 		$this->selected = $selected;
@@ -1491,7 +1488,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the shadow.
 	 *
 	 * @param boolean|array $shadow The shadow.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setShadow($shadow) {
 		$this->shadow = $shadow;
@@ -1502,7 +1499,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the show checkbox.
 	 *
 	 * @param boolean $showCheckbox The show checkbox.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setShowCheckbox($showCheckbox) {
 		$this->showCheckbox = $showCheckbox;
@@ -1513,7 +1510,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the show in legend.
 	 *
 	 * @param boolean $showInLegend The show in legend.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setShowInLegend($showInLegend) {
 		$this->showInLegend = $showInLegend;
@@ -1524,7 +1521,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the skip keyboard navigation.
 	 *
 	 * @param boolean $skipKeyboardNavigation The skip keyboard navigation.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setSkipKeyboardNavigation($skipKeyboardNavigation) {
 		$this->skipKeyboardNavigation = $skipKeyboardNavigation;
@@ -1534,10 +1531,10 @@ final class HighchartsArearange implements JsonSerializable {
 	/**
 	 * Set the states.
 	 *
-	 * @param HighchartsStates $states The states.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsStates $states The states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
-	public function setStates(HighchartsStates $states = null) {
+	public function setStates(\WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsStates $states = null) {
 		$this->states = $states;
 		return $this;
 	}
@@ -1546,7 +1543,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the step.
 	 *
 	 * @param string $step The step.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setStep($step) {
 		switch ($step) {
@@ -1563,7 +1560,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the sticky tracking.
 	 *
 	 * @param boolean $stickyTracking The sticky tracking.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setStickyTracking($stickyTracking) {
 		$this->stickyTracking = $stickyTracking;
@@ -1574,7 +1571,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the tooltip.
 	 *
 	 * @param array $tooltip The tooltip.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setTooltip(array $tooltip = null) {
 		$this->tooltip = $tooltip;
@@ -1585,7 +1582,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the track by area.
 	 *
 	 * @param boolean $trackByArea The track by area.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setTrackByArea($trackByArea) {
 		$this->trackByArea = $trackByArea;
@@ -1596,7 +1593,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the turbo threshold.
 	 *
 	 * @param integer $turboThreshold The turbo threshold.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setTurboThreshold($turboThreshold) {
 		$this->turboThreshold = $turboThreshold;
@@ -1607,7 +1604,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the visible.
 	 *
 	 * @param boolean $visible The visible.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setVisible($visible) {
 		$this->visible = $visible;
@@ -1618,7 +1615,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the zone axis.
 	 *
 	 * @param string $zoneAxis The zone axis.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setZoneAxis($zoneAxis) {
 		$this->zoneAxis = $zoneAxis;
@@ -1629,7 +1626,7 @@ final class HighchartsArearange implements JsonSerializable {
 	 * Set the zones.
 	 *
 	 * @param array $zones The zones.
-	 * @return HighchartsArearange Returns the highcharts arearange.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange Returns the highcharts arearange.
 	 */
 	public function setZones(array $zones = null) {
 		$this->zones = $zones;

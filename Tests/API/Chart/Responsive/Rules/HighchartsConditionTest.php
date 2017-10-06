@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Responsive\Rules;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition;
 
 /**
  * Highcharts condition test.
@@ -30,7 +29,7 @@ final class HighchartsConditionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsCondition(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsConditionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsCondition(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(false);
 
 		$res = ["minHeight" => 0, "minWidth" => 0];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
@@ -53,14 +52,14 @@ final class HighchartsConditionTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["minHeight" => 0, "minWidth" => 0, "callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2"];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with callback");
 
-		$obj->setMaxHeight(82);
+		$obj->setMaxHeight(67);
 
-		$res2 = ["minHeight" => 0, "minWidth" => 0, "callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 82];
+		$res2 = ["minHeight" => 0, "minWidth" => 0, "callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 67];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with max height");
 
-		$obj->setMaxWidth(22);
+		$obj->setMaxWidth(71);
 
-		$res3 = ["minHeight" => 0, "minWidth" => 0, "callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 82, "maxWidth" => 22];
+		$res3 = ["minHeight" => 0, "minWidth" => 0, "callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 67, "maxWidth" => 71];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with max width");
 	}
 

@@ -12,9 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\HighchartsOptions;
-use WBW\HighchartsBundle\API\Options\HighchartsGlobal;
-use WBW\HighchartsBundle\API\Options\HighchartsLang;
 
 /**
  * Highcharts options test.
@@ -32,7 +29,7 @@ final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsOptions(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -45,10 +42,10 @@ final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewGlobal() {
 
-		$obj = new HighchartsOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsOptions(false);
 
 		$res = $obj->newGlobal();
-		$this->assertInstanceOf(HighchartsGlobal::class, $res, "The method newGlobal() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Options\HighchartsGlobal::class, $res, "The method newGlobal() does not return the expected class");
 	}
 
 	/**
@@ -58,10 +55,10 @@ final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewLang() {
 
-		$obj = new HighchartsOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsOptions(false);
 
 		$res = $obj->newLang();
-		$this->assertInstanceOf(HighchartsLang::class, $res, "The method newLang() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Options\HighchartsLang::class, $res, "The method newLang() does not return the expected class");
 	}
 
 	/**
@@ -71,7 +68,7 @@ final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsOptions(false);
 
 		$obj->newGlobal();
 

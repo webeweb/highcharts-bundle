@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Legend;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation;
 
 /**
  * Highcharts navigation test.
@@ -30,7 +29,7 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsNavigation(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsNavigation(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation(false);
 
 		$res = ["activeColor" => "#003399", "animation" => true, "arrowSize" => 12, "enabled" => true, "inactiveColor" => "#cccccc"];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

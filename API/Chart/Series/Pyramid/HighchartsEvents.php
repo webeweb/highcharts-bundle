@@ -228,7 +228,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the after animate.
 	 *
 	 * @param string $afterAnimate The after animate.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setAfterAnimate($afterAnimate) {
 		$this->afterAnimate = $afterAnimate;
@@ -239,7 +239,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the checkbox click.
 	 *
 	 * @param string $checkboxClick The checkbox click.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setCheckboxClick($checkboxClick) {
 		$this->checkboxClick = $checkboxClick;
@@ -250,7 +250,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the click.
 	 *
 	 * @param string $click The click.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setClick($click) {
 		$this->click = $click;
@@ -261,7 +261,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the hide.
 	 *
 	 * @param string $hide The hide.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setHide($hide) {
 		$this->hide = $hide;
@@ -272,7 +272,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the legend item click.
 	 *
 	 * @param string $legendItemClick The legend item click.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setLegendItemClick($legendItemClick) {
 		$this->legendItemClick = $legendItemClick;
@@ -283,7 +283,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the mouse out.
 	 *
 	 * @param string $mouseOut The mouse out.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setMouseOut($mouseOut) {
 		$this->mouseOut = $mouseOut;
@@ -294,7 +294,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the mouse over.
 	 *
 	 * @param string $mouseOver The mouse over.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setMouseOver($mouseOver) {
 		$this->mouseOver = $mouseOver;
@@ -305,7 +305,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the show.
 	 *
 	 * @param string $show The show.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setShow($show) {
 		$this->show = $show;

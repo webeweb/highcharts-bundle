@@ -314,7 +314,7 @@ final class HighchartsSeries implements JsonSerializable {
 	 * Set the data.
 	 *
 	 * @param array $data The data.
-	 * @return HighchartsSeries Returns the highcharts series.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSeries Returns the highcharts series.
 	 */
 	public function setData(array $data = null) {
 		$this->data = $data;
@@ -325,7 +325,7 @@ final class HighchartsSeries implements JsonSerializable {
 	 * Set the data parser.
 	 *
 	 * @param string $dataParser The data parser.
-	 * @return HighchartsSeries Returns the highcharts series.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSeries Returns the highcharts series.
 	 * @deprecated
 	 */
 	public function setDataParser($dataParser) {
@@ -337,7 +337,7 @@ final class HighchartsSeries implements JsonSerializable {
 	 * Set the data URL.
 	 *
 	 * @param string $dataURL The data URL.
-	 * @return HighchartsSeries Returns the highcharts series.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSeries Returns the highcharts series.
 	 * @deprecated
 	 */
 	public function setDataURL($dataURL) {
@@ -349,7 +349,7 @@ final class HighchartsSeries implements JsonSerializable {
 	 * Set the id.
 	 *
 	 * @param string $id The id.
-	 * @return HighchartsSeries Returns the highcharts series.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSeries Returns the highcharts series.
 	 */
 	public function setId($id) {
 		$this->id = $id;
@@ -360,7 +360,7 @@ final class HighchartsSeries implements JsonSerializable {
 	 * Set the index.
 	 *
 	 * @param integer $index The index.
-	 * @return HighchartsSeries Returns the highcharts series.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSeries Returns the highcharts series.
 	 */
 	public function setIndex($index) {
 		$this->index = $index;
@@ -371,7 +371,7 @@ final class HighchartsSeries implements JsonSerializable {
 	 * Set the legend index.
 	 *
 	 * @param integer $legendIndex The legend index.
-	 * @return HighchartsSeries Returns the highcharts series.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSeries Returns the highcharts series.
 	 */
 	public function setLegendIndex($legendIndex) {
 		$this->legendIndex = $legendIndex;
@@ -382,7 +382,7 @@ final class HighchartsSeries implements JsonSerializable {
 	 * Set the name.
 	 *
 	 * @param string $name The name.
-	 * @return HighchartsSeries Returns the highcharts series.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSeries Returns the highcharts series.
 	 */
 	public function setName($name) {
 		$this->name = $name;
@@ -393,7 +393,7 @@ final class HighchartsSeries implements JsonSerializable {
 	 * Set the stack.
 	 *
 	 * @param string $stack The stack.
-	 * @return HighchartsSeries Returns the highcharts series.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSeries Returns the highcharts series.
 	 */
 	public function setStack($stack) {
 		$this->stack = $stack;
@@ -404,7 +404,7 @@ final class HighchartsSeries implements JsonSerializable {
 	 * Set the type.
 	 *
 	 * @param string $type The type.
-	 * @return HighchartsSeries Returns the highcharts series.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSeries Returns the highcharts series.
 	 */
 	public function setType($type) {
 		switch ($type) {
@@ -435,7 +435,7 @@ final class HighchartsSeries implements JsonSerializable {
 	 * Set the x axis.
 	 *
 	 * @param integer|string $xAxis The x axis.
-	 * @return HighchartsSeries Returns the highcharts series.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSeries Returns the highcharts series.
 	 */
 	public function setXAxis($xAxis) {
 		$this->xAxis = $xAxis;
@@ -446,7 +446,7 @@ final class HighchartsSeries implements JsonSerializable {
 	 * Set the y axis.
 	 *
 	 * @param integer|string $yAxis The y axis.
-	 * @return HighchartsSeries Returns the highcharts series.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSeries Returns the highcharts series.
 	 */
 	public function setYAxis($yAxis) {
 		$this->yAxis = $yAxis;
@@ -457,7 +457,7 @@ final class HighchartsSeries implements JsonSerializable {
 	 * Set the z index.
 	 *
 	 * @param integer $zIndex The z index.
-	 * @return HighchartsSeries Returns the highcharts series.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsSeries Returns the highcharts series.
 	 */
 	public function setZIndex($zIndex) {
 		$this->zIndex = $zIndex;

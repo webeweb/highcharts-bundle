@@ -77,7 +77,7 @@ final class HighchartsResponsive implements JsonSerializable {
 	 * Set the rules.
 	 *
 	 * @param array $rules The rules.
-	 * @return HighchartsResponsive Returns the highcharts responsive.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsResponsive Returns the highcharts responsive.
 	 */
 	public function setRules(array $rules = null) {
 		$this->rules = $rules;

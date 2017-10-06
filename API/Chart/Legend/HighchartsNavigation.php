@@ -187,7 +187,7 @@ final class HighchartsNavigation implements JsonSerializable {
 	 * Set the active color.
 	 *
 	 * @param string $activeColor The active color.
-	 * @return HighchartsNavigation Returns the highcharts navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
 	 */
 	public function setActiveColor($activeColor) {
 		$this->activeColor = $activeColor;
@@ -198,7 +198,7 @@ final class HighchartsNavigation implements JsonSerializable {
 	 * Set the animation.
 	 *
 	 * @param boolean|array $animation The animation.
-	 * @return HighchartsNavigation Returns the highcharts navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
 	 */
 	public function setAnimation($animation) {
 		$this->animation = $animation;
@@ -209,7 +209,7 @@ final class HighchartsNavigation implements JsonSerializable {
 	 * Set the arrow size.
 	 *
 	 * @param integer $arrowSize The arrow size.
-	 * @return HighchartsNavigation Returns the highcharts navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
 	 */
 	public function setArrowSize($arrowSize) {
 		$this->arrowSize = $arrowSize;
@@ -220,7 +220,7 @@ final class HighchartsNavigation implements JsonSerializable {
 	 * Set the enabled.
 	 *
 	 * @param boolean $enabled The enabled.
-	 * @return HighchartsNavigation Returns the highcharts navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
 	 */
 	public function setEnabled($enabled) {
 		$this->enabled = $enabled;
@@ -231,7 +231,7 @@ final class HighchartsNavigation implements JsonSerializable {
 	 * Set the inactive color.
 	 *
 	 * @param string $inactiveColor The inactive color.
-	 * @return HighchartsNavigation Returns the highcharts navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
 	 */
 	public function setInactiveColor($inactiveColor) {
 		$this->inactiveColor = $inactiveColor;
@@ -242,7 +242,7 @@ final class HighchartsNavigation implements JsonSerializable {
 	 * Set the style.
 	 *
 	 * @param array $style The style.
-	 * @return HighchartsNavigation Returns the highcharts navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
 	 */
 	public function setStyle(array $style = null) {
 		$this->style = $style;

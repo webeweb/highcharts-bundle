@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\Chart;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame;
 
 /**
  * Highcharts options3d.
@@ -75,7 +74,7 @@ final class HighchartsOptions3d implements JsonSerializable {
 	/**
 	 * Frame.
 	 *
-	 * @var HighchartsFrame
+	 * @var \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame
 	 * @since 4.0
 	 */
 	private $frame;
@@ -204,7 +203,7 @@ final class HighchartsOptions3d implements JsonSerializable {
 	/**
 	 * Get the frame.
 	 *
-	 * @return HighchartsFrame Returns the frame.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the frame.
 	 */
 	public function getFrame() {
 		return $this->frame;
@@ -231,10 +230,10 @@ final class HighchartsOptions3d implements JsonSerializable {
 	/**
 	 * Create a new frame.
 	 *
-	 * @return HighchartsFrame Returns the frame.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the frame.
 	 */
 	public function newFrame() {
-		$this->frame = new HighchartsFrame();
+		$this->frame = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame();
 		return $this->frame;
 	}
 
@@ -242,7 +241,7 @@ final class HighchartsOptions3d implements JsonSerializable {
 	 * Set the alpha.
 	 *
 	 * @param integer $alpha The alpha.
-	 * @return HighchartsOptions3d Returns the highcharts options3d.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
 	 */
 	public function setAlpha($alpha) {
 		$this->alpha = $alpha;
@@ -253,7 +252,7 @@ final class HighchartsOptions3d implements JsonSerializable {
 	 * Set the axis label position.
 	 *
 	 * @param string $axisLabelPosition The axis label position.
-	 * @return HighchartsOptions3d Returns the highcharts options3d.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
 	 */
 	public function setAxisLabelPosition($axisLabelPosition) {
 		switch ($axisLabelPosition) {
@@ -269,7 +268,7 @@ final class HighchartsOptions3d implements JsonSerializable {
 	 * Set the beta.
 	 *
 	 * @param integer $beta The beta.
-	 * @return HighchartsOptions3d Returns the highcharts options3d.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
 	 */
 	public function setBeta($beta) {
 		$this->beta = $beta;
@@ -280,7 +279,7 @@ final class HighchartsOptions3d implements JsonSerializable {
 	 * Set the depth.
 	 *
 	 * @param integer $depth The depth.
-	 * @return HighchartsOptions3d Returns the highcharts options3d.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
 	 */
 	public function setDepth($depth) {
 		$this->depth = $depth;
@@ -291,7 +290,7 @@ final class HighchartsOptions3d implements JsonSerializable {
 	 * Set the enabled.
 	 *
 	 * @param boolean $enabled The enabled.
-	 * @return HighchartsOptions3d Returns the highcharts options3d.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
 	 */
 	public function setEnabled($enabled) {
 		$this->enabled = $enabled;
@@ -302,7 +301,7 @@ final class HighchartsOptions3d implements JsonSerializable {
 	 * Set the fit to plot.
 	 *
 	 * @param boolean $fitToPlot The fit to plot.
-	 * @return HighchartsOptions3d Returns the highcharts options3d.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
 	 */
 	public function setFitToPlot($fitToPlot) {
 		$this->fitToPlot = $fitToPlot;
@@ -312,10 +311,10 @@ final class HighchartsOptions3d implements JsonSerializable {
 	/**
 	 * Set the frame.
 	 *
-	 * @param HighchartsFrame $frame The frame.
-	 * @return HighchartsOptions3d Returns the highcharts options3d.
+	 * @param \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame $frame The frame.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
 	 */
-	public function setFrame(HighchartsFrame $frame = null) {
+	public function setFrame(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame $frame = null) {
 		$this->frame = $frame;
 		return $this;
 	}
@@ -324,7 +323,7 @@ final class HighchartsOptions3d implements JsonSerializable {
 	 * Set the view distance.
 	 *
 	 * @param integer $viewDistance The view distance.
-	 * @return HighchartsOptions3d Returns the highcharts options3d.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
 	 */
 	public function setViewDistance($viewDistance) {
 		$this->viewDistance = $viewDistance;

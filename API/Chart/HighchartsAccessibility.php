@@ -275,7 +275,7 @@ final class HighchartsAccessibility implements JsonSerializable {
 	 * Set the describe single series.
 	 *
 	 * @param boolean $describeSingleSeries The describe single series.
-	 * @return HighchartsAccessibility Returns the highcharts accessibility.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility Returns the highcharts accessibility.
 	 */
 	public function setDescribeSingleSeries($describeSingleSeries) {
 		$this->describeSingleSeries = $describeSingleSeries;
@@ -286,7 +286,7 @@ final class HighchartsAccessibility implements JsonSerializable {
 	 * Set the enabled.
 	 *
 	 * @param boolean $enabled The enabled.
-	 * @return HighchartsAccessibility Returns the highcharts accessibility.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility Returns the highcharts accessibility.
 	 */
 	public function setEnabled($enabled) {
 		$this->enabled = $enabled;
@@ -297,7 +297,7 @@ final class HighchartsAccessibility implements JsonSerializable {
 	 * Set the keyboard navigation.
 	 *
 	 * @param array $keyboardNavigation The keyboard navigation.
-	 * @return HighchartsAccessibility Returns the highcharts accessibility.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility Returns the highcharts accessibility.
 	 */
 	public function setKeyboardNavigation(array $keyboardNavigation = null) {
 		$this->keyboardNavigation = $keyboardNavigation;
@@ -308,7 +308,7 @@ final class HighchartsAccessibility implements JsonSerializable {
 	 * Set the on table anchor click.
 	 *
 	 * @param string $onTableAnchorClick The on table anchor click.
-	 * @return HighchartsAccessibility Returns the highcharts accessibility.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility Returns the highcharts accessibility.
 	 */
 	public function setOnTableAnchorClick($onTableAnchorClick) {
 		$this->onTableAnchorClick = $onTableAnchorClick;
@@ -319,7 +319,7 @@ final class HighchartsAccessibility implements JsonSerializable {
 	 * Set the point date format.
 	 *
 	 * @param string $pointDateFormat The point date format.
-	 * @return HighchartsAccessibility Returns the highcharts accessibility.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility Returns the highcharts accessibility.
 	 */
 	public function setPointDateFormat($pointDateFormat) {
 		$this->pointDateFormat = $pointDateFormat;
@@ -330,7 +330,7 @@ final class HighchartsAccessibility implements JsonSerializable {
 	 * Set the point date formatter.
 	 *
 	 * @param string $pointDateFormatter The point date formatter.
-	 * @return HighchartsAccessibility Returns the highcharts accessibility.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility Returns the highcharts accessibility.
 	 */
 	public function setPointDateFormatter($pointDateFormatter) {
 		$this->pointDateFormatter = $pointDateFormatter;
@@ -341,7 +341,7 @@ final class HighchartsAccessibility implements JsonSerializable {
 	 * Set the point description formatter.
 	 *
 	 * @param string $pointDescriptionFormatter The point description formatter.
-	 * @return HighchartsAccessibility Returns the highcharts accessibility.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility Returns the highcharts accessibility.
 	 */
 	public function setPointDescriptionFormatter($pointDescriptionFormatter) {
 		$this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -352,7 +352,7 @@ final class HighchartsAccessibility implements JsonSerializable {
 	 * Set the point description threshold.
 	 *
 	 * @param integer|boolean $pointDescriptionThreshold The point description threshold.
-	 * @return HighchartsAccessibility Returns the highcharts accessibility.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility Returns the highcharts accessibility.
 	 */
 	public function setPointDescriptionThreshold($pointDescriptionThreshold) {
 		$this->pointDescriptionThreshold = $pointDescriptionThreshold;
@@ -363,7 +363,7 @@ final class HighchartsAccessibility implements JsonSerializable {
 	 * Set the screen reader section formatter.
 	 *
 	 * @param string $screenReaderSectionFormatter The screen reader section formatter.
-	 * @return HighchartsAccessibility Returns the highcharts accessibility.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility Returns the highcharts accessibility.
 	 */
 	public function setScreenReaderSectionFormatter($screenReaderSectionFormatter) {
 		$this->screenReaderSectionFormatter = $screenReaderSectionFormatter;
@@ -374,7 +374,7 @@ final class HighchartsAccessibility implements JsonSerializable {
 	 * Set the series description formatter.
 	 *
 	 * @param string $seriesDescriptionFormatter The series description formatter.
-	 * @return HighchartsAccessibility Returns the highcharts accessibility.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility Returns the highcharts accessibility.
 	 */
 	public function setSeriesDescriptionFormatter($seriesDescriptionFormatter) {
 		$this->seriesDescriptionFormatter = $seriesDescriptionFormatter;

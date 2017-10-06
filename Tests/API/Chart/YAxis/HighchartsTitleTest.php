@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\YAxis;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\YAxis\HighchartsTitle;
 
 /**
  * Highcharts title test.
@@ -30,7 +29,7 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsTitle(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsTitle(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,19 +42,19 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsTitle(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsTitle(false);
 
 		$res = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
-		$obj->setOffset(93);
+		$obj->setOffset(24);
 
-		$res1 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 93];
+		$res1 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 24];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with offset");
 
-		$obj->setY(63);
+		$obj->setY(8);
 
-		$res2 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 93, "y" => 63];
+		$res2 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 24, "y" => 8];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with y");
 	}
 

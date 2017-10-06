@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Navigation;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions;
 
 /**
  * Highcharts button options test.
@@ -30,7 +29,7 @@ final class HighchartsButtonOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsButtonOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsButtonOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsButtonOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions(false);
 
 		$res = ["align" => "right", "enabled" => true, "height" => 20, "symbolFill" => "#666666", "symbolSize" => 14, "symbolStroke" => "#666666", "symbolStrokeWidth" => 1, "symbolX" => 12.5, "symbolY" => 10.5, "verticalAlign" => "top", "width" => 24, "y" => 0];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

@@ -12,8 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\YAxis;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines;
-use WBW\HighchartsBundle\API\Chart\YAxis\PlotLines\HighchartsLabel;
 
 /**
  * Highcharts plot lines test.
@@ -31,7 +29,7 @@ final class HighchartsPlotLinesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsPlotLines(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -44,10 +42,10 @@ final class HighchartsPlotLinesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewLabel() {
 
-		$obj = new HighchartsPlotLines(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines(false);
 
 		$res = $obj->newLabel();
-		$this->assertInstanceOf(HighchartsLabel::class, $res, "The method newLabel() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\YAxis\PlotLines\HighchartsLabel::class, $res, "The method newLabel() does not return the expected class");
 	}
 
 	/**
@@ -57,7 +55,7 @@ final class HighchartsPlotLinesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsPlotLines(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines(false);
 
 		$res = ["dashStyle" => "Solid"];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
@@ -87,19 +85,19 @@ final class HighchartsPlotLinesTest extends PHPUnit_Framework_TestCase {
 		$res5 = ["dashStyle" => "Solid", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "id" => "b80bb7740288fda1f201890375a60c8f", "label" => []];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with label");
 
-		$obj->setValue(35);
+		$obj->setValue(73);
 
-		$res6 = ["dashStyle" => "Solid", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "value" => 35];
+		$res6 = ["dashStyle" => "Solid", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "value" => 73];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with value");
 
-		$obj->setWidth(35);
+		$obj->setWidth(47);
 
-		$res7 = ["dashStyle" => "Solid", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "value" => 35, "width" => 35];
+		$res7 = ["dashStyle" => "Solid", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "value" => 73, "width" => 47];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with width");
 
-		$obj->setZIndex(81);
+		$obj->setZIndex(66);
 
-		$res8 = ["dashStyle" => "Solid", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "value" => 35, "width" => 35, "zIndex" => 81];
+		$res8 = ["dashStyle" => "Solid", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "value" => 73, "width" => 47, "zIndex" => 66];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with z index");
 	}
 

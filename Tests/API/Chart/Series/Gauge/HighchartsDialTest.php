@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Gauge;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsDial;
 
 /**
  * Highcharts dial test.
@@ -30,7 +29,7 @@ final class HighchartsDialTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsDial(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsDial(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsDialTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsDial(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsDial(false);
 
 		$res = ["backgroundColor" => "#000000", "baseLength" => "70%", "baseWidth" => 3, "borderColor" => "#cccccc", "borderWidth" => 0, "radius" => "80%", "rearLength" => "10%", "topWidth" => 1];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

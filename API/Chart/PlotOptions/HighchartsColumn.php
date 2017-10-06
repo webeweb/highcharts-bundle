@@ -12,10 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\PlotOptions;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsDataLabels;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsEvents;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsStates;
 
 /**
  * Highcharts column.
@@ -134,7 +130,7 @@ final class HighchartsColumn implements JsonSerializable {
 	/**
 	 * Data labels.
 	 *
-	 * @var HighchartsDataLabels
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsDataLabels
 	 */
 	private $dataLabels;
 
@@ -178,7 +174,7 @@ final class HighchartsColumn implements JsonSerializable {
 	/**
 	 * Events.
 	 *
-	 * @var HighchartsEvents
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsEvents
 	 */
 	private $events;
 
@@ -271,7 +267,7 @@ final class HighchartsColumn implements JsonSerializable {
 	/**
 	 * Point.
 	 *
-	 * @var HighchartsPoint
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint
 	 */
 	private $point;
 
@@ -392,7 +388,7 @@ final class HighchartsColumn implements JsonSerializable {
 	/**
 	 * States.
 	 *
-	 * @var HighchartsStates
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsStates
 	 */
 	private $states;
 
@@ -879,7 +875,7 @@ final class HighchartsColumn implements JsonSerializable {
 	/**
 	 * Get the data labels.
 	 *
-	 * @return HighchartsDataLabels Returns the data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsDataLabels Returns the data labels.
 	 */
 	public function getDataLabels() {
 		return $this->dataLabels;
@@ -933,7 +929,7 @@ final class HighchartsColumn implements JsonSerializable {
 	/**
 	 * Get the events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsEvents Returns the events.
 	 */
 	public function getEvents() {
 		return $this->events;
@@ -1041,7 +1037,7 @@ final class HighchartsColumn implements JsonSerializable {
 	/**
 	 * Get the point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint Returns the point.
 	 */
 	public function getPoint() {
 		return $this->point;
@@ -1185,7 +1181,7 @@ final class HighchartsColumn implements JsonSerializable {
 	/**
 	 * Get the states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsStates Returns the states.
 	 */
 	public function getStates() {
 		return $this->states;
@@ -1266,40 +1262,40 @@ final class HighchartsColumn implements JsonSerializable {
 	/**
 	 * Create a new data labels.
 	 *
-	 * @return HighchartsDataLabels Returns the data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsDataLabels Returns the data labels.
 	 */
 	public function newDataLabels() {
-		$this->dataLabels = new HighchartsDataLabels();
+		$this->dataLabels = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsDataLabels();
 		return $this->dataLabels;
 	}
 
 	/**
 	 * Create a new events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsEvents Returns the events.
 	 */
 	public function newEvents() {
-		$this->events = new HighchartsEvents();
+		$this->events = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsEvents();
 		return $this->events;
 	}
 
 	/**
 	 * Create a new point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint Returns the point.
 	 */
 	public function newPoint() {
-		$this->point = new HighchartsPoint();
+		$this->point = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint();
 		return $this->point;
 	}
 
 	/**
 	 * Create a new states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsStates Returns the states.
 	 */
 	public function newStates() {
-		$this->states = new HighchartsStates();
+		$this->states = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsStates();
 		return $this->states;
 	}
 
@@ -1307,7 +1303,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the allow point select.
 	 *
 	 * @param boolean $allowPointSelect The allow point select.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setAllowPointSelect($allowPointSelect) {
 		$this->allowPointSelect = $allowPointSelect;
@@ -1318,7 +1314,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the animation.
 	 *
 	 * @param boolean $animation The animation.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setAnimation($animation) {
 		$this->animation = $animation;
@@ -1329,7 +1325,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the animation limit.
 	 *
 	 * @param integer $animationLimit The animation limit.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setAnimationLimit($animationLimit) {
 		$this->animationLimit = $animationLimit;
@@ -1340,7 +1336,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the border color.
 	 *
 	 * @param string $borderColor The border color.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setBorderColor($borderColor) {
 		$this->borderColor = $borderColor;
@@ -1351,7 +1347,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the border radius.
 	 *
 	 * @param integer $borderRadius The border radius.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setBorderRadius($borderRadius) {
 		$this->borderRadius = $borderRadius;
@@ -1362,7 +1358,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the border width.
 	 *
 	 * @param integer $borderWidth The border width.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setBorderWidth($borderWidth) {
 		$this->borderWidth = $borderWidth;
@@ -1373,7 +1369,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the class name.
 	 *
 	 * @param string $className The class name.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setClassName($className) {
 		$this->className = $className;
@@ -1384,7 +1380,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -1395,7 +1391,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the color by point.
 	 *
 	 * @param boolean $colorByPoint The color by point.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setColorByPoint($colorByPoint) {
 		$this->colorByPoint = $colorByPoint;
@@ -1406,7 +1402,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the color index.
 	 *
 	 * @param integer $colorIndex The color index.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setColorIndex($colorIndex) {
 		$this->colorIndex = $colorIndex;
@@ -1417,7 +1413,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the colors.
 	 *
 	 * @param array $colors The colors.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setColors(array $colors = null) {
 		$this->colors = $colors;
@@ -1428,7 +1424,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the crisp.
 	 *
 	 * @param boolean $crisp The crisp.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setCrisp($crisp) {
 		$this->crisp = $crisp;
@@ -1439,7 +1435,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the crop threshold.
 	 *
 	 * @param integer $cropThreshold The crop threshold.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setCropThreshold($cropThreshold) {
 		$this->cropThreshold = $cropThreshold;
@@ -1450,7 +1446,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the cursor.
 	 *
 	 * @param string $cursor The cursor.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setCursor($cursor) {
 		switch ($cursor) {
@@ -1469,10 +1465,10 @@ final class HighchartsColumn implements JsonSerializable {
 	/**
 	 * Set the data labels.
 	 *
-	 * @param HighchartsDataLabels $dataLabels The data labels.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsDataLabels $dataLabels The data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
-	public function setDataLabels(HighchartsDataLabels $dataLabels = null) {
+	public function setDataLabels(\WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsDataLabels $dataLabels = null) {
 		$this->dataLabels = $dataLabels;
 		return $this;
 	}
@@ -1481,7 +1477,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the depth.
 	 *
 	 * @param integer $depth The depth.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setDepth($depth) {
 		$this->depth = $depth;
@@ -1492,7 +1488,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the description.
 	 *
 	 * @param string $description The description.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setDescription($description) {
 		$this->description = $description;
@@ -1503,7 +1499,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the edge color.
 	 *
 	 * @param string $edgeColor The edge color.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setEdgeColor($edgeColor) {
 		$this->edgeColor = $edgeColor;
@@ -1514,7 +1510,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the edge width.
 	 *
 	 * @param integer $edgeWidth The edge width.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setEdgeWidth($edgeWidth) {
 		$this->edgeWidth = $edgeWidth;
@@ -1525,7 +1521,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the enable mouse tracking.
 	 *
 	 * @param boolean $enableMouseTracking The enable mouse tracking.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setEnableMouseTracking($enableMouseTracking) {
 		$this->enableMouseTracking = $enableMouseTracking;
@@ -1535,10 +1531,10 @@ final class HighchartsColumn implements JsonSerializable {
 	/**
 	 * Set the events.
 	 *
-	 * @param HighchartsEvents $events The events.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsEvents $events The events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
-	public function setEvents(HighchartsEvents $events = null) {
+	public function setEvents(\WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsEvents $events = null) {
 		$this->events = $events;
 		return $this;
 	}
@@ -1547,7 +1543,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the expose element to a11y.
 	 *
 	 * @param boolean $exposeElementToA11y The expose element to a11y.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setExposeElementToA11y($exposeElementToA11y) {
 		$this->exposeElementToA11y = $exposeElementToA11y;
@@ -1558,7 +1554,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the find nearest point by.
 	 *
 	 * @param string $findNearestPointBy The find nearest point by.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
 		switch ($findNearestPointBy) {
@@ -1574,7 +1570,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the get extremes from all.
 	 *
 	 * @param boolean $getExtremesFromAll The get extremes from all.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setGetExtremesFromAll($getExtremesFromAll) {
 		$this->getExtremesFromAll = $getExtremesFromAll;
@@ -1585,7 +1581,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the group padding.
 	 *
 	 * @param integer $groupPadding The group padding.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setGroupPadding($groupPadding) {
 		$this->groupPadding = $groupPadding;
@@ -1596,7 +1592,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the group z padding.
 	 *
 	 * @param integer $groupZPadding The group z padding.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setGroupZPadding($groupZPadding) {
 		$this->groupZPadding = $groupZPadding;
@@ -1607,7 +1603,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the grouping.
 	 *
 	 * @param boolean $grouping The grouping.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setGrouping($grouping) {
 		$this->grouping = $grouping;
@@ -1618,7 +1614,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the keys.
 	 *
 	 * @param array $keys The keys.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setKeys(array $keys = null) {
 		$this->keys = $keys;
@@ -1629,7 +1625,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the linked to.
 	 *
 	 * @param string $linkedTo The linked to.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setLinkedTo($linkedTo) {
 		$this->linkedTo = $linkedTo;
@@ -1640,7 +1636,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the max point width.
 	 *
 	 * @param integer $maxPointWidth The max point width.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setMaxPointWidth($maxPointWidth) {
 		$this->maxPointWidth = $maxPointWidth;
@@ -1651,7 +1647,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the min point length.
 	 *
 	 * @param integer $minPointLength The min point length.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setMinPointLength($minPointLength) {
 		$this->minPointLength = $minPointLength;
@@ -1662,7 +1658,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the negative color.
 	 *
 	 * @param string $negativeColor The negative color.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setNegativeColor($negativeColor) {
 		$this->negativeColor = $negativeColor;
@@ -1672,10 +1668,10 @@ final class HighchartsColumn implements JsonSerializable {
 	/**
 	 * Set the point.
 	 *
-	 * @param HighchartsPoint $point The point.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint $point The point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
-	public function setPoint(HighchartsPoint $point = null) {
+	public function setPoint(\WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint $point = null) {
 		$this->point = $point;
 		return $this;
 	}
@@ -1684,7 +1680,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the point description formatter.
 	 *
 	 * @param string $pointDescriptionFormatter The point description formatter.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setPointDescriptionFormatter($pointDescriptionFormatter) {
 		$this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -1695,7 +1691,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the point interval.
 	 *
 	 * @param integer $pointInterval The point interval.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setPointInterval($pointInterval) {
 		$this->pointInterval = $pointInterval;
@@ -1706,7 +1702,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the point interval unit.
 	 *
 	 * @param string $pointIntervalUnit The point interval unit.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setPointIntervalUnit($pointIntervalUnit) {
 		switch ($pointIntervalUnit) {
@@ -1724,7 +1720,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the point padding.
 	 *
 	 * @param integer $pointPadding The point padding.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setPointPadding($pointPadding) {
 		$this->pointPadding = $pointPadding;
@@ -1735,7 +1731,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the point placement.
 	 *
 	 * @param string|integer $pointPlacement The point placement.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setPointPlacement($pointPlacement) {
 		switch ($pointPlacement) {
@@ -1752,7 +1748,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the point range.
 	 *
 	 * @param integer $pointRange The point range.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setPointRange($pointRange) {
 		$this->pointRange = $pointRange;
@@ -1763,7 +1759,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the point start.
 	 *
 	 * @param integer $pointStart The point start.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setPointStart($pointStart) {
 		$this->pointStart = $pointStart;
@@ -1774,7 +1770,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the point width.
 	 *
 	 * @param integer $pointWidth The point width.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setPointWidth($pointWidth) {
 		$this->pointWidth = $pointWidth;
@@ -1785,7 +1781,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the selected.
 	 *
 	 * @param boolean $selected The selected.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setSelected($selected) {
 		$this->selected = $selected;
@@ -1796,7 +1792,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the shadow.
 	 *
 	 * @param boolean|array $shadow The shadow.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setShadow($shadow) {
 		$this->shadow = $shadow;
@@ -1807,7 +1803,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the show checkbox.
 	 *
 	 * @param boolean $showCheckbox The show checkbox.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setShowCheckbox($showCheckbox) {
 		$this->showCheckbox = $showCheckbox;
@@ -1818,7 +1814,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the show in legend.
 	 *
 	 * @param boolean $showInLegend The show in legend.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setShowInLegend($showInLegend) {
 		$this->showInLegend = $showInLegend;
@@ -1829,7 +1825,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the skip keyboard navigation.
 	 *
 	 * @param boolean $skipKeyboardNavigation The skip keyboard navigation.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setSkipKeyboardNavigation($skipKeyboardNavigation) {
 		$this->skipKeyboardNavigation = $skipKeyboardNavigation;
@@ -1840,7 +1836,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the soft threshold.
 	 *
 	 * @param boolean $softThreshold The soft threshold.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setSoftThreshold($softThreshold) {
 		$this->softThreshold = $softThreshold;
@@ -1851,7 +1847,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the stacking.
 	 *
 	 * @param string $stacking The stacking.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setStacking($stacking) {
 		switch ($stacking) {
@@ -1867,10 +1863,10 @@ final class HighchartsColumn implements JsonSerializable {
 	/**
 	 * Set the states.
 	 *
-	 * @param HighchartsStates $states The states.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsStates $states The states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
-	public function setStates(HighchartsStates $states = null) {
+	public function setStates(\WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsStates $states = null) {
 		$this->states = $states;
 		return $this;
 	}
@@ -1879,7 +1875,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the sticky tracking.
 	 *
 	 * @param boolean $stickyTracking The sticky tracking.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setStickyTracking($stickyTracking) {
 		$this->stickyTracking = $stickyTracking;
@@ -1890,7 +1886,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the threshold.
 	 *
 	 * @param integer $threshold The threshold.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setThreshold($threshold) {
 		$this->threshold = $threshold;
@@ -1901,7 +1897,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the tooltip.
 	 *
 	 * @param array $tooltip The tooltip.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setTooltip(array $tooltip = null) {
 		$this->tooltip = $tooltip;
@@ -1912,7 +1908,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the turbo threshold.
 	 *
 	 * @param integer $turboThreshold The turbo threshold.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setTurboThreshold($turboThreshold) {
 		$this->turboThreshold = $turboThreshold;
@@ -1923,7 +1919,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the visible.
 	 *
 	 * @param boolean $visible The visible.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setVisible($visible) {
 		$this->visible = $visible;
@@ -1934,7 +1930,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the zone axis.
 	 *
 	 * @param string $zoneAxis The zone axis.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setZoneAxis($zoneAxis) {
 		$this->zoneAxis = $zoneAxis;
@@ -1945,7 +1941,7 @@ final class HighchartsColumn implements JsonSerializable {
 	 * Set the zones.
 	 *
 	 * @param array $zones The zones.
-	 * @return HighchartsColumn Returns the highcharts column.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn Returns the highcharts column.
 	 */
 	public function setZones(array $zones = null) {
 		$this->zones = $zones;

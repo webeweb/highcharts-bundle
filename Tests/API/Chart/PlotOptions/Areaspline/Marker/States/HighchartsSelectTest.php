@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Areaspline\Marker\States;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsSelect;
 
 /**
  * Highcharts select test.
@@ -30,7 +29,7 @@ final class HighchartsSelectTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsSelect(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsSelect(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsSelectTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsSelect(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsSelect(false);
 
 		$res = ["enabled" => true, "lineColor" => "#000000", "lineWidth" => 0];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
@@ -53,9 +52,9 @@ final class HighchartsSelectTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["enabled" => true, "lineColor" => "#000000", "lineWidth" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-		$obj->setRadius(0);
+		$obj->setRadius(19);
 
-		$res2 = ["enabled" => true, "lineColor" => "#000000", "lineWidth" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "radius" => 0];
+		$res2 = ["enabled" => true, "lineColor" => "#000000", "lineWidth" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "radius" => 19];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with radius");
 	}
 

@@ -12,11 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\PlotOptions;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsDataLabels;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsEvents;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsPoint;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsStates;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsTooltip;
 
 /**
  * Highcharts treemap.
@@ -146,7 +141,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Data labels.
 	 *
-	 * @var HighchartsDataLabels
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsDataLabels
 	 * @since 4.1.0
 	 */
 	private $dataLabels;
@@ -169,7 +164,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Events.
 	 *
-	 * @var HighchartsEvents
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsEvents
 	 */
 	private $events;
 
@@ -280,7 +275,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Point.
 	 *
-	 * @var HighchartsPoint
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsPoint
 	 */
 	private $point;
 
@@ -341,7 +336,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * States.
 	 *
-	 * @var HighchartsStates
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsStates
 	 */
 	private $states;
 
@@ -356,7 +351,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Tooltip.
 	 *
-	 * @var HighchartsTooltip
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsTooltip
 	 * @since 4.1.0
 	 */
 	private $tooltip;
@@ -784,7 +779,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Get the data labels.
 	 *
-	 * @return HighchartsDataLabels Returns the data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsDataLabels Returns the data labels.
 	 */
 	public function getDataLabels() {
 		return $this->dataLabels;
@@ -811,7 +806,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Get the events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsEvents Returns the events.
 	 */
 	public function getEvents() {
 		return $this->events;
@@ -937,7 +932,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Get the point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsPoint Returns the point.
 	 */
 	public function getPoint() {
 		return $this->point;
@@ -1009,7 +1004,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Get the states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsStates Returns the states.
 	 */
 	public function getStates() {
 		return $this->states;
@@ -1027,7 +1022,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Get the tooltip.
 	 *
-	 * @return HighchartsTooltip Returns the tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsTooltip Returns the tooltip.
 	 */
 	public function getTooltip() {
 		return $this->tooltip;
@@ -1081,50 +1076,50 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Create a new data labels.
 	 *
-	 * @return HighchartsDataLabels Returns the data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsDataLabels Returns the data labels.
 	 */
 	public function newDataLabels() {
-		$this->dataLabels = new HighchartsDataLabels();
+		$this->dataLabels = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsDataLabels();
 		return $this->dataLabels;
 	}
 
 	/**
 	 * Create a new events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsEvents Returns the events.
 	 */
 	public function newEvents() {
-		$this->events = new HighchartsEvents();
+		$this->events = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsEvents();
 		return $this->events;
 	}
 
 	/**
 	 * Create a new point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsPoint Returns the point.
 	 */
 	public function newPoint() {
-		$this->point = new HighchartsPoint();
+		$this->point = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsPoint();
 		return $this->point;
 	}
 
 	/**
 	 * Create a new states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsStates Returns the states.
 	 */
 	public function newStates() {
-		$this->states = new HighchartsStates();
+		$this->states = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsStates();
 		return $this->states;
 	}
 
 	/**
 	 * Create a new tooltip.
 	 *
-	 * @return HighchartsTooltip Returns the tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsTooltip Returns the tooltip.
 	 */
 	public function newTooltip() {
-		$this->tooltip = new HighchartsTooltip();
+		$this->tooltip = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsTooltip();
 		return $this->tooltip;
 	}
 
@@ -1132,7 +1127,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the allow drill to node.
 	 *
 	 * @param boolean $allowDrillToNode The allow drill to node.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setAllowDrillToNode($allowDrillToNode) {
 		switch ($allowDrillToNode) {
@@ -1148,7 +1143,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the allow point select.
 	 *
 	 * @param boolean $allowPointSelect The allow point select.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setAllowPointSelect($allowPointSelect) {
 		$this->allowPointSelect = $allowPointSelect;
@@ -1159,7 +1154,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the alternate starting direction.
 	 *
 	 * @param boolean $alternateStartingDirection The alternate starting direction.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setAlternateStartingDirection($alternateStartingDirection) {
 		$this->alternateStartingDirection = $alternateStartingDirection;
@@ -1170,7 +1165,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the animation.
 	 *
 	 * @param boolean $animation The animation.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setAnimation($animation) {
 		$this->animation = $animation;
@@ -1181,7 +1176,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the animation limit.
 	 *
 	 * @param integer $animationLimit The animation limit.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setAnimationLimit($animationLimit) {
 		$this->animationLimit = $animationLimit;
@@ -1192,7 +1187,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the border color.
 	 *
 	 * @param string $borderColor The border color.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setBorderColor($borderColor) {
 		$this->borderColor = $borderColor;
@@ -1203,7 +1198,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the border width.
 	 *
 	 * @param integer $borderWidth The border width.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setBorderWidth($borderWidth) {
 		$this->borderWidth = $borderWidth;
@@ -1214,7 +1209,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the class name.
 	 *
 	 * @param string $className The class name.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setClassName($className) {
 		$this->className = $className;
@@ -1225,7 +1220,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -1236,7 +1231,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the color by point.
 	 *
 	 * @param boolean $colorByPoint The color by point.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setColorByPoint($colorByPoint) {
 		$this->colorByPoint = $colorByPoint;
@@ -1247,7 +1242,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the color index.
 	 *
 	 * @param integer $colorIndex The color index.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setColorIndex($colorIndex) {
 		$this->colorIndex = $colorIndex;
@@ -1258,7 +1253,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the colors.
 	 *
 	 * @param array $colors The colors.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setColors(array $colors = null) {
 		$this->colors = $colors;
@@ -1269,7 +1264,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the crisp.
 	 *
 	 * @param boolean $crisp The crisp.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setCrisp($crisp) {
 		$this->crisp = $crisp;
@@ -1280,7 +1275,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the crop threshold.
 	 *
 	 * @param integer $cropThreshold The crop threshold.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setCropThreshold($cropThreshold) {
 		$this->cropThreshold = $cropThreshold;
@@ -1291,7 +1286,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the cursor.
 	 *
 	 * @param string $cursor The cursor.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setCursor($cursor) {
 		switch ($cursor) {
@@ -1310,10 +1305,10 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Set the data labels.
 	 *
-	 * @param HighchartsDataLabels $dataLabels The data labels.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsDataLabels $dataLabels The data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
-	public function setDataLabels(HighchartsDataLabels $dataLabels = null) {
+	public function setDataLabels(\WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsDataLabels $dataLabels = null) {
 		$this->dataLabels = $dataLabels;
 		return $this;
 	}
@@ -1322,7 +1317,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the description.
 	 *
 	 * @param string $description The description.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setDescription($description) {
 		$this->description = $description;
@@ -1333,7 +1328,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the enable mouse tracking.
 	 *
 	 * @param boolean $enableMouseTracking The enable mouse tracking.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setEnableMouseTracking($enableMouseTracking) {
 		$this->enableMouseTracking = $enableMouseTracking;
@@ -1343,10 +1338,10 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Set the events.
 	 *
-	 * @param HighchartsEvents $events The events.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsEvents $events The events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
-	public function setEvents(HighchartsEvents $events = null) {
+	public function setEvents(\WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsEvents $events = null) {
 		$this->events = $events;
 		return $this;
 	}
@@ -1355,7 +1350,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the expose element to a11y.
 	 *
 	 * @param boolean $exposeElementToA11y The expose element to a11y.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setExposeElementToA11y($exposeElementToA11y) {
 		$this->exposeElementToA11y = $exposeElementToA11y;
@@ -1366,7 +1361,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the find nearest point by.
 	 *
 	 * @param string $findNearestPointBy The find nearest point by.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
 		switch ($findNearestPointBy) {
@@ -1382,7 +1377,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the get extremes from all.
 	 *
 	 * @param boolean $getExtremesFromAll The get extremes from all.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setGetExtremesFromAll($getExtremesFromAll) {
 		$this->getExtremesFromAll = $getExtremesFromAll;
@@ -1393,7 +1388,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the ignore hidden point.
 	 *
 	 * @param boolean $ignoreHiddenPoint The ignore hidden point.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setIgnoreHiddenPoint($ignoreHiddenPoint) {
 		$this->ignoreHiddenPoint = $ignoreHiddenPoint;
@@ -1404,7 +1399,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the interact by leaf.
 	 *
 	 * @param boolean $interactByLeaf The interact by leaf.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setInteractByLeaf($interactByLeaf) {
 		switch ($interactByLeaf) {
@@ -1420,7 +1415,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the keys.
 	 *
 	 * @param array $keys The keys.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setKeys(array $keys = null) {
 		$this->keys = $keys;
@@ -1431,7 +1426,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the layout algorithm.
 	 *
 	 * @param string $layoutAlgorithm The layout algorithm.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setLayoutAlgorithm($layoutAlgorithm) {
 		switch ($layoutAlgorithm) {
@@ -1449,7 +1444,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the layout starting direction.
 	 *
 	 * @param string $layoutStartingDirection The layout starting direction.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setLayoutStartingDirection($layoutStartingDirection) {
 		switch ($layoutStartingDirection) {
@@ -1465,7 +1460,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the level is constant.
 	 *
 	 * @param boolean $levelIsConstant The level is constant.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setLevelIsConstant($levelIsConstant) {
 		switch ($levelIsConstant) {
@@ -1481,7 +1476,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the levels.
 	 *
 	 * @param array $levels The levels.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setLevels(array $levels = null) {
 		$this->levels = $levels;
@@ -1492,7 +1487,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the linked to.
 	 *
 	 * @param string $linkedTo The linked to.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setLinkedTo($linkedTo) {
 		$this->linkedTo = $linkedTo;
@@ -1503,7 +1498,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the max point width.
 	 *
 	 * @param integer $maxPointWidth The max point width.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setMaxPointWidth($maxPointWidth) {
 		$this->maxPointWidth = $maxPointWidth;
@@ -1514,7 +1509,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the opacity.
 	 *
 	 * @param integer $opacity The opacity.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setOpacity($opacity) {
 		$this->opacity = $opacity;
@@ -1524,10 +1519,10 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Set the point.
 	 *
-	 * @param HighchartsPoint $point The point.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsPoint $point The point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
-	public function setPoint(HighchartsPoint $point = null) {
+	public function setPoint(\WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsPoint $point = null) {
 		$this->point = $point;
 		return $this;
 	}
@@ -1536,7 +1531,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the point description formatter.
 	 *
 	 * @param string $pointDescriptionFormatter The point description formatter.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setPointDescriptionFormatter($pointDescriptionFormatter) {
 		$this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -1547,7 +1542,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the selected.
 	 *
 	 * @param boolean $selected The selected.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setSelected($selected) {
 		$this->selected = $selected;
@@ -1558,7 +1553,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the shadow.
 	 *
 	 * @param boolean|array $shadow The shadow.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setShadow($shadow) {
 		$this->shadow = $shadow;
@@ -1569,7 +1564,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the show checkbox.
 	 *
 	 * @param boolean $showCheckbox The show checkbox.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setShowCheckbox($showCheckbox) {
 		$this->showCheckbox = $showCheckbox;
@@ -1580,7 +1575,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the show in legend.
 	 *
 	 * @param boolean $showInLegend The show in legend.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setShowInLegend($showInLegend) {
 		$this->showInLegend = $showInLegend;
@@ -1591,7 +1586,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the skip keyboard navigation.
 	 *
 	 * @param boolean $skipKeyboardNavigation The skip keyboard navigation.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setSkipKeyboardNavigation($skipKeyboardNavigation) {
 		$this->skipKeyboardNavigation = $skipKeyboardNavigation;
@@ -1602,7 +1597,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the sort index.
 	 *
 	 * @param integer $sortIndex The sort index.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setSortIndex($sortIndex) {
 		$this->sortIndex = $sortIndex;
@@ -1612,10 +1607,10 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Set the states.
 	 *
-	 * @param HighchartsStates $states The states.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsStates $states The states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
-	public function setStates(HighchartsStates $states = null) {
+	public function setStates(\WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsStates $states = null) {
 		$this->states = $states;
 		return $this;
 	}
@@ -1624,7 +1619,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the sticky tracking.
 	 *
 	 * @param boolean $stickyTracking The sticky tracking.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setStickyTracking($stickyTracking) {
 		$this->stickyTracking = $stickyTracking;
@@ -1634,10 +1629,10 @@ final class HighchartsTreemap implements JsonSerializable {
 	/**
 	 * Set the tooltip.
 	 *
-	 * @param HighchartsTooltip $tooltip The tooltip.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsTooltip $tooltip The tooltip.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
-	public function setTooltip(HighchartsTooltip $tooltip = null) {
+	public function setTooltip(\WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsTooltip $tooltip = null) {
 		$this->tooltip = $tooltip;
 		return $this;
 	}
@@ -1646,7 +1641,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the turbo threshold.
 	 *
 	 * @param integer $turboThreshold The turbo threshold.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setTurboThreshold($turboThreshold) {
 		$this->turboThreshold = $turboThreshold;
@@ -1657,7 +1652,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the visible.
 	 *
 	 * @param boolean $visible The visible.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setVisible($visible) {
 		$this->visible = $visible;
@@ -1668,7 +1663,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the zone axis.
 	 *
 	 * @param string $zoneAxis The zone axis.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setZoneAxis($zoneAxis) {
 		$this->zoneAxis = $zoneAxis;
@@ -1679,7 +1674,7 @@ final class HighchartsTreemap implements JsonSerializable {
 	 * Set the zones.
 	 *
 	 * @param array $zones The zones.
-	 * @return HighchartsTreemap Returns the highcharts treemap.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsTreemap Returns the highcharts treemap.
 	 */
 	public function setZones(array $zones = null) {
 		$this->zones = $zones;

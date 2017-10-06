@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Boxplot;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsZones;
 
 /**
  * Highcharts zones test.
@@ -30,7 +29,7 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsZones(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsZones(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsZones(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsZones(false);
 
 		$obj->setClassName("6f66e878c62db60568a3487869695820");
 
@@ -65,9 +64,9 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
 		$res4 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-		$obj->setValue(45);
+		$obj->setValue(43);
 
-		$res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "value" => 45];
+		$res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "value" => 43];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with value");
 	}
 

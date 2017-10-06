@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\HighchartsLoading;
 
 /**
  * Highcharts loading test.
@@ -30,7 +29,7 @@ final class HighchartsLoadingTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsLoading(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLoading(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsLoadingTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsLoading(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLoading(false);
 
 		$res = ["hideDuration" => 100, "labelStyle" => ["fontWeight" => "bold", "position" => "relative", "top" => "45%"], "showDuration" => 100, "style" => ["position" => "absolute", "backgroundColor" => "#ffffff", "opacity" => 0.5, "textAlign" => "center"]];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

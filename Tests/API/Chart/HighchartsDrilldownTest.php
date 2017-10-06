@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\HighchartsDrilldown;
 
 /**
  * Highcharts drilldown test.
@@ -30,7 +29,7 @@ final class HighchartsDrilldownTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsDrilldown(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsDrilldown(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsDrilldownTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsDrilldown(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsDrilldown(false);
 
 		$res = ["activeAxisLabelStyle" => ["cursor" => "pointer", "color" => "#003399", "fontWeight" => "bold", "textDecoration" => "underline"], "activeDataLabelStyle" => ["cursor" => "pointer", "color" => "#003399", "fontWeight" => "bold", "textDecoration" => "underline"], "allowPointDrilldown" => true];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

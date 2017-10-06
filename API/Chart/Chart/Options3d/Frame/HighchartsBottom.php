@@ -121,7 +121,7 @@ final class HighchartsBottom implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsBottom Returns the highcharts bottom.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the highcharts bottom.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -132,7 +132,7 @@ final class HighchartsBottom implements JsonSerializable {
 	 * Set the size.
 	 *
 	 * @param integer $size The size.
-	 * @return HighchartsBottom Returns the highcharts bottom.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the highcharts bottom.
 	 */
 	public function setSize($size) {
 		$this->size = $size;
@@ -143,7 +143,7 @@ final class HighchartsBottom implements JsonSerializable {
 	 * Set the visible.
 	 *
 	 * @param boolean|string $visible The visible.
-	 * @return HighchartsBottom Returns the highcharts bottom.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the highcharts bottom.
 	 */
 	public function setVisible($visible) {
 		switch ($visible) {

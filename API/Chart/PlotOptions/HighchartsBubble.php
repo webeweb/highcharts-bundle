@@ -12,10 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\PlotOptions;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsDataLabels;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsEvents;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsPoint;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsStates;
 
 /**
  * Highcharts bubble.
@@ -98,7 +94,7 @@ final class HighchartsBubble implements JsonSerializable {
 	/**
 	 * Data labels.
 	 *
-	 * @var HighchartsDataLabels
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsDataLabels
 	 */
 	private $dataLabels;
 
@@ -128,7 +124,7 @@ final class HighchartsBubble implements JsonSerializable {
 	/**
 	 * Events.
 	 *
-	 * @var HighchartsEvents
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsEvents
 	 */
 	private $events;
 
@@ -213,7 +209,7 @@ final class HighchartsBubble implements JsonSerializable {
 	/**
 	 * Point.
 	 *
-	 * @var HighchartsPoint
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsPoint
 	 */
 	private $point;
 
@@ -312,7 +308,7 @@ final class HighchartsBubble implements JsonSerializable {
 	/**
 	 * States.
 	 *
-	 * @var HighchartsStates
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsStates
 	 */
 	private $states;
 
@@ -724,7 +720,7 @@ final class HighchartsBubble implements JsonSerializable {
 	/**
 	 * Get the data labels.
 	 *
-	 * @return HighchartsDataLabels Returns the data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsDataLabels Returns the data labels.
 	 */
 	public function getDataLabels() {
 		return $this->dataLabels;
@@ -760,7 +756,7 @@ final class HighchartsBubble implements JsonSerializable {
 	/**
 	 * Get the events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsEvents Returns the events.
 	 */
 	public function getEvents() {
 		return $this->events;
@@ -859,7 +855,7 @@ final class HighchartsBubble implements JsonSerializable {
 	/**
 	 * Get the point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsPoint Returns the point.
 	 */
 	public function getPoint() {
 		return $this->point;
@@ -976,7 +972,7 @@ final class HighchartsBubble implements JsonSerializable {
 	/**
 	 * Get the states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsStates Returns the states.
 	 */
 	public function getStates() {
 		return $this->states;
@@ -1075,40 +1071,40 @@ final class HighchartsBubble implements JsonSerializable {
 	/**
 	 * Create a new data labels.
 	 *
-	 * @return HighchartsDataLabels Returns the data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsDataLabels Returns the data labels.
 	 */
 	public function newDataLabels() {
-		$this->dataLabels = new HighchartsDataLabels();
+		$this->dataLabels = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsDataLabels();
 		return $this->dataLabels;
 	}
 
 	/**
 	 * Create a new events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsEvents Returns the events.
 	 */
 	public function newEvents() {
-		$this->events = new HighchartsEvents();
+		$this->events = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsEvents();
 		return $this->events;
 	}
 
 	/**
 	 * Create a new point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsPoint Returns the point.
 	 */
 	public function newPoint() {
-		$this->point = new HighchartsPoint();
+		$this->point = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsPoint();
 		return $this->point;
 	}
 
 	/**
 	 * Create a new states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsStates Returns the states.
 	 */
 	public function newStates() {
-		$this->states = new HighchartsStates();
+		$this->states = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsStates();
 		return $this->states;
 	}
 
@@ -1116,7 +1112,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the allow point select.
 	 *
 	 * @param boolean $allowPointSelect The allow point select.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setAllowPointSelect($allowPointSelect) {
 		$this->allowPointSelect = $allowPointSelect;
@@ -1127,7 +1123,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the animation.
 	 *
 	 * @param boolean $animation The animation.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setAnimation($animation) {
 		$this->animation = $animation;
@@ -1138,7 +1134,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the animation limit.
 	 *
 	 * @param integer $animationLimit The animation limit.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setAnimationLimit($animationLimit) {
 		$this->animationLimit = $animationLimit;
@@ -1149,7 +1145,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the class name.
 	 *
 	 * @param string $className The class name.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setClassName($className) {
 		$this->className = $className;
@@ -1160,7 +1156,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -1171,7 +1167,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the color index.
 	 *
 	 * @param integer $colorIndex The color index.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setColorIndex($colorIndex) {
 		$this->colorIndex = $colorIndex;
@@ -1182,7 +1178,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the crop threshold.
 	 *
 	 * @param integer $cropThreshold The crop threshold.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setCropThreshold($cropThreshold) {
 		$this->cropThreshold = $cropThreshold;
@@ -1193,7 +1189,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the cursor.
 	 *
 	 * @param string $cursor The cursor.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setCursor($cursor) {
 		switch ($cursor) {
@@ -1213,7 +1209,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the dash style.
 	 *
 	 * @param string $dashStyle The dash style.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setDashStyle($dashStyle) {
 		switch ($dashStyle) {
@@ -1237,10 +1233,10 @@ final class HighchartsBubble implements JsonSerializable {
 	/**
 	 * Set the data labels.
 	 *
-	 * @param HighchartsDataLabels $dataLabels The data labels.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsDataLabels $dataLabels The data labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
-	public function setDataLabels(HighchartsDataLabels $dataLabels = null) {
+	public function setDataLabels(\WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsDataLabels $dataLabels = null) {
 		$this->dataLabels = $dataLabels;
 		return $this;
 	}
@@ -1249,7 +1245,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the description.
 	 *
 	 * @param string $description The description.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setDescription($description) {
 		$this->description = $description;
@@ -1260,7 +1256,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the display negative.
 	 *
 	 * @param boolean $displayNegative The display negative.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setDisplayNegative($displayNegative) {
 		$this->displayNegative = $displayNegative;
@@ -1271,7 +1267,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the enable mouse tracking.
 	 *
 	 * @param boolean $enableMouseTracking The enable mouse tracking.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setEnableMouseTracking($enableMouseTracking) {
 		$this->enableMouseTracking = $enableMouseTracking;
@@ -1281,10 +1277,10 @@ final class HighchartsBubble implements JsonSerializable {
 	/**
 	 * Set the events.
 	 *
-	 * @param HighchartsEvents $events The events.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsEvents $events The events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
-	public function setEvents(HighchartsEvents $events = null) {
+	public function setEvents(\WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsEvents $events = null) {
 		$this->events = $events;
 		return $this;
 	}
@@ -1293,7 +1289,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the expose element to a11y.
 	 *
 	 * @param boolean $exposeElementToA11y The expose element to a11y.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setExposeElementToA11y($exposeElementToA11y) {
 		$this->exposeElementToA11y = $exposeElementToA11y;
@@ -1304,7 +1300,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the find nearest point by.
 	 *
 	 * @param string $findNearestPointBy The find nearest point by.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
 		switch ($findNearestPointBy) {
@@ -1320,7 +1316,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the get extremes from all.
 	 *
 	 * @param boolean $getExtremesFromAll The get extremes from all.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setGetExtremesFromAll($getExtremesFromAll) {
 		$this->getExtremesFromAll = $getExtremesFromAll;
@@ -1331,7 +1327,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the keys.
 	 *
 	 * @param array $keys The keys.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setKeys(array $keys = null) {
 		$this->keys = $keys;
@@ -1342,7 +1338,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the line width.
 	 *
 	 * @param integer $lineWidth The line width.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setLineWidth($lineWidth) {
 		$this->lineWidth = $lineWidth;
@@ -1353,7 +1349,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the linked to.
 	 *
 	 * @param string $linkedTo The linked to.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setLinkedTo($linkedTo) {
 		$this->linkedTo = $linkedTo;
@@ -1364,7 +1360,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the marker.
 	 *
 	 * @param array $marker The marker.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setMarker(array $marker = null) {
 		$this->marker = $marker;
@@ -1375,7 +1371,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the max size.
 	 *
 	 * @param string $maxSize The max size.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setMaxSize($maxSize) {
 		$this->maxSize = $maxSize;
@@ -1386,7 +1382,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the min size.
 	 *
 	 * @param string $minSize The min size.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setMinSize($minSize) {
 		$this->minSize = $minSize;
@@ -1397,7 +1393,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the negative color.
 	 *
 	 * @param string $negativeColor The negative color.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setNegativeColor($negativeColor) {
 		$this->negativeColor = $negativeColor;
@@ -1407,10 +1403,10 @@ final class HighchartsBubble implements JsonSerializable {
 	/**
 	 * Set the point.
 	 *
-	 * @param HighchartsPoint $point The point.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsPoint $point The point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
-	public function setPoint(HighchartsPoint $point = null) {
+	public function setPoint(\WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsPoint $point = null) {
 		$this->point = $point;
 		return $this;
 	}
@@ -1419,7 +1415,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the point description formatter.
 	 *
 	 * @param string $pointDescriptionFormatter The point description formatter.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setPointDescriptionFormatter($pointDescriptionFormatter) {
 		$this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -1430,7 +1426,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the point interval.
 	 *
 	 * @param integer $pointInterval The point interval.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setPointInterval($pointInterval) {
 		$this->pointInterval = $pointInterval;
@@ -1441,7 +1437,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the point interval unit.
 	 *
 	 * @param string $pointIntervalUnit The point interval unit.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setPointIntervalUnit($pointIntervalUnit) {
 		switch ($pointIntervalUnit) {
@@ -1459,7 +1455,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the point start.
 	 *
 	 * @param integer $pointStart The point start.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setPointStart($pointStart) {
 		$this->pointStart = $pointStart;
@@ -1470,7 +1466,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the selected.
 	 *
 	 * @param boolean $selected The selected.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setSelected($selected) {
 		$this->selected = $selected;
@@ -1481,7 +1477,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the shadow.
 	 *
 	 * @param boolean|array $shadow The shadow.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setShadow($shadow) {
 		$this->shadow = $shadow;
@@ -1492,7 +1488,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the show checkbox.
 	 *
 	 * @param boolean $showCheckbox The show checkbox.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setShowCheckbox($showCheckbox) {
 		$this->showCheckbox = $showCheckbox;
@@ -1503,7 +1499,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the show in legend.
 	 *
 	 * @param boolean $showInLegend The show in legend.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setShowInLegend($showInLegend) {
 		$this->showInLegend = $showInLegend;
@@ -1514,7 +1510,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the size by.
 	 *
 	 * @param string $sizeBy The size by.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setSizeBy($sizeBy) {
 		switch ($sizeBy) {
@@ -1530,7 +1526,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the size by absolute value.
 	 *
 	 * @param boolean $sizeByAbsoluteValue The size by absolute value.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setSizeByAbsoluteValue($sizeByAbsoluteValue) {
 		$this->sizeByAbsoluteValue = $sizeByAbsoluteValue;
@@ -1541,7 +1537,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the skip keyboard navigation.
 	 *
 	 * @param boolean $skipKeyboardNavigation The skip keyboard navigation.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setSkipKeyboardNavigation($skipKeyboardNavigation) {
 		$this->skipKeyboardNavigation = $skipKeyboardNavigation;
@@ -1552,7 +1548,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the soft threshold.
 	 *
 	 * @param boolean $softThreshold The soft threshold.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setSoftThreshold($softThreshold) {
 		$this->softThreshold = $softThreshold;
@@ -1562,10 +1558,10 @@ final class HighchartsBubble implements JsonSerializable {
 	/**
 	 * Set the states.
 	 *
-	 * @param HighchartsStates $states The states.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsStates $states The states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
-	public function setStates(HighchartsStates $states = null) {
+	public function setStates(\WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\HighchartsStates $states = null) {
 		$this->states = $states;
 		return $this;
 	}
@@ -1574,7 +1570,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the sticky tracking.
 	 *
 	 * @param boolean $stickyTracking The sticky tracking.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setStickyTracking($stickyTracking) {
 		$this->stickyTracking = $stickyTracking;
@@ -1585,7 +1581,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the threshold.
 	 *
 	 * @param integer $threshold The threshold.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setThreshold($threshold) {
 		$this->threshold = $threshold;
@@ -1596,7 +1592,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the tooltip.
 	 *
 	 * @param array $tooltip The tooltip.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setTooltip(array $tooltip = null) {
 		$this->tooltip = $tooltip;
@@ -1607,7 +1603,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the visible.
 	 *
 	 * @param boolean $visible The visible.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setVisible($visible) {
 		$this->visible = $visible;
@@ -1618,7 +1614,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the z max.
 	 *
 	 * @param integer $zMax The z max.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setZMax($zMax) {
 		$this->zMax = $zMax;
@@ -1629,7 +1625,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the z min.
 	 *
 	 * @param integer $zMin The z min.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setZMin($zMin) {
 		$this->zMin = $zMin;
@@ -1640,7 +1636,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the z threshold.
 	 *
 	 * @param integer $zThreshold The z threshold.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setZThreshold($zThreshold) {
 		$this->zThreshold = $zThreshold;
@@ -1651,7 +1647,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the zone axis.
 	 *
 	 * @param string $zoneAxis The zone axis.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setZoneAxis($zoneAxis) {
 		$this->zoneAxis = $zoneAxis;
@@ -1662,7 +1658,7 @@ final class HighchartsBubble implements JsonSerializable {
 	 * Set the zones.
 	 *
 	 * @param array $zones The zones.
-	 * @return HighchartsBubble Returns the highcharts bubble.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBubble Returns the highcharts bubble.
 	 */
 	public function setZones(array $zones = null) {
 		$this->zones = $zones;

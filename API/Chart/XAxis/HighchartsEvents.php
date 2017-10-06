@@ -164,7 +164,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the after breaks.
 	 *
 	 * @param string $afterBreaks The after breaks.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setAfterBreaks($afterBreaks) {
 		$this->afterBreaks = $afterBreaks;
@@ -175,7 +175,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the after set extremes.
 	 *
 	 * @param string $afterSetExtremes The after set extremes.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setAfterSetExtremes($afterSetExtremes) {
 		$this->afterSetExtremes = $afterSetExtremes;
@@ -186,7 +186,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the point break.
 	 *
 	 * @param string $pointBreak The point break.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setPointBreak($pointBreak) {
 		$this->pointBreak = $pointBreak;
@@ -197,7 +197,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the point in break.
 	 *
 	 * @param string $pointInBreak The point in break.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setPointInBreak($pointInBreak) {
 		$this->pointInBreak = $pointInBreak;
@@ -208,7 +208,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the set extremes.
 	 *
 	 * @param string $setExtremes The set extremes.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setSetExtremes($setExtremes) {
 		$this->setExtremes = $setExtremes;

@@ -12,24 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\HighchartsChart;
-use WBW\HighchartsBundle\API\Chart\HighchartsAccessibility;
-use WBW\HighchartsBundle\API\Chart\HighchartsChart as HighchartsChartChild;
-use WBW\HighchartsBundle\API\Chart\HighchartsCredits;
-use WBW\HighchartsBundle\API\Chart\HighchartsData;
-use WBW\HighchartsBundle\API\Chart\HighchartsDrilldown;
-use WBW\HighchartsBundle\API\Chart\HighchartsExporting;
-use WBW\HighchartsBundle\API\Chart\HighchartsLabels;
-use WBW\HighchartsBundle\API\Chart\HighchartsLegend;
-use WBW\HighchartsBundle\API\Chart\HighchartsLoading;
-use WBW\HighchartsBundle\API\Chart\HighchartsNavigation;
-use WBW\HighchartsBundle\API\Chart\HighchartsNoData;
-use WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions;
-use WBW\HighchartsBundle\API\Chart\HighchartsResponsive;
-use WBW\HighchartsBundle\API\Chart\HighchartsSubtitle;
-use WBW\HighchartsBundle\API\Chart\HighchartsTitle;
-use WBW\HighchartsBundle\API\Chart\HighchartsTooltip;
-use WBW\HighchartsBundle\API\Chart\HighchartsZAxis;
 
 /**
  * Highcharts chart test.
@@ -47,7 +29,7 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -60,10 +42,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewAccessibility() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newAccessibility();
-		$this->assertInstanceOf(HighchartsAccessibility::class, $res, "The method newAccessibility() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsAccessibility::class, $res, "The method newAccessibility() does not return the expected class");
 	}
 
 	/**
@@ -73,10 +55,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewChart() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newChart();
-		$this->assertInstanceOf(HighchartsChartChild::class, $res, "The method newChart() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsChart::class, $res, "The method newChart() does not return the expected class");
 	}
 
 	/**
@@ -86,10 +68,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewCredits() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newCredits();
-		$this->assertInstanceOf(HighchartsCredits::class, $res, "The method newCredits() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsCredits::class, $res, "The method newCredits() does not return the expected class");
 	}
 
 	/**
@@ -99,10 +81,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewData() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newData();
-		$this->assertInstanceOf(HighchartsData::class, $res, "The method newData() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsData::class, $res, "The method newData() does not return the expected class");
 	}
 
 	/**
@@ -112,10 +94,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewDrilldown() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newDrilldown();
-		$this->assertInstanceOf(HighchartsDrilldown::class, $res, "The method newDrilldown() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsDrilldown::class, $res, "The method newDrilldown() does not return the expected class");
 	}
 
 	/**
@@ -125,10 +107,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewExporting() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newExporting();
-		$this->assertInstanceOf(HighchartsExporting::class, $res, "The method newExporting() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsExporting::class, $res, "The method newExporting() does not return the expected class");
 	}
 
 	/**
@@ -138,10 +120,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewLabels() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newLabels();
-		$this->assertInstanceOf(HighchartsLabels::class, $res, "The method newLabels() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsLabels::class, $res, "The method newLabels() does not return the expected class");
 	}
 
 	/**
@@ -151,10 +133,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewLegend() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newLegend();
-		$this->assertInstanceOf(HighchartsLegend::class, $res, "The method newLegend() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsLegend::class, $res, "The method newLegend() does not return the expected class");
 	}
 
 	/**
@@ -164,10 +146,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewLoading() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newLoading();
-		$this->assertInstanceOf(HighchartsLoading::class, $res, "The method newLoading() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsLoading::class, $res, "The method newLoading() does not return the expected class");
 	}
 
 	/**
@@ -177,10 +159,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewNavigation() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newNavigation();
-		$this->assertInstanceOf(HighchartsNavigation::class, $res, "The method newNavigation() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsNavigation::class, $res, "The method newNavigation() does not return the expected class");
 	}
 
 	/**
@@ -190,10 +172,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewNoData() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newNoData();
-		$this->assertInstanceOf(HighchartsNoData::class, $res, "The method newNoData() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsNoData::class, $res, "The method newNoData() does not return the expected class");
 	}
 
 	/**
@@ -203,10 +185,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewPlotOptions() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newPlotOptions();
-		$this->assertInstanceOf(HighchartsPlotOptions::class, $res, "The method newPlotOptions() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions::class, $res, "The method newPlotOptions() does not return the expected class");
 	}
 
 	/**
@@ -216,10 +198,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewResponsive() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newResponsive();
-		$this->assertInstanceOf(HighchartsResponsive::class, $res, "The method newResponsive() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsResponsive::class, $res, "The method newResponsive() does not return the expected class");
 	}
 
 	/**
@@ -229,10 +211,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewSubtitle() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newSubtitle();
-		$this->assertInstanceOf(HighchartsSubtitle::class, $res, "The method newSubtitle() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsSubtitle::class, $res, "The method newSubtitle() does not return the expected class");
 	}
 
 	/**
@@ -242,10 +224,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewTitle() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newTitle();
-		$this->assertInstanceOf(HighchartsTitle::class, $res, "The method newTitle() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsTitle::class, $res, "The method newTitle() does not return the expected class");
 	}
 
 	/**
@@ -255,10 +237,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewTooltip() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newTooltip();
-		$this->assertInstanceOf(HighchartsTooltip::class, $res, "The method newTooltip() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsTooltip::class, $res, "The method newTooltip() does not return the expected class");
 	}
 
 	/**
@@ -268,10 +250,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewZAxis() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = $obj->newZAxis();
-		$this->assertInstanceOf(HighchartsZAxis::class, $res, "The method newZAxis() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsZAxis::class, $res, "The method newZAxis() does not return the expected class");
 	}
 
 	/**
@@ -281,7 +263,7 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsChart(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
 
 		$res = ["colors" => ["#7cb5ec", "#434348", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"]];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

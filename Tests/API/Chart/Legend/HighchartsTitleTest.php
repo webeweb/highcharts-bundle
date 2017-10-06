@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Legend;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle;
 
 /**
  * Highcharts title test.
@@ -30,7 +29,7 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsTitle(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsTitle(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle(false);
 
 		$res = ["style" => ["fontWeight" => "bold"]];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

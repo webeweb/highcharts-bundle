@@ -297,7 +297,7 @@ final class HighchartsStackLabels implements JsonSerializable {
 	 * Set the align.
 	 *
 	 * @param string $align The align.
-	 * @return HighchartsStackLabels Returns the highcharts stack labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels Returns the highcharts stack labels.
 	 */
 	public function setAlign($align) {
 		switch ($align) {
@@ -314,7 +314,7 @@ final class HighchartsStackLabels implements JsonSerializable {
 	 * Set the enabled.
 	 *
 	 * @param boolean $enabled The enabled.
-	 * @return HighchartsStackLabels Returns the highcharts stack labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels Returns the highcharts stack labels.
 	 */
 	public function setEnabled($enabled) {
 		$this->enabled = $enabled;
@@ -325,7 +325,7 @@ final class HighchartsStackLabels implements JsonSerializable {
 	 * Set the format.
 	 *
 	 * @param string $format The format.
-	 * @return HighchartsStackLabels Returns the highcharts stack labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels Returns the highcharts stack labels.
 	 */
 	public function setFormat($format) {
 		$this->format = $format;
@@ -336,7 +336,7 @@ final class HighchartsStackLabels implements JsonSerializable {
 	 * Set the formatter.
 	 *
 	 * @param string $formatter The formatter.
-	 * @return HighchartsStackLabels Returns the highcharts stack labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels Returns the highcharts stack labels.
 	 */
 	public function setFormatter($formatter) {
 		$this->formatter = $formatter;
@@ -347,7 +347,7 @@ final class HighchartsStackLabels implements JsonSerializable {
 	 * Set the rotation.
 	 *
 	 * @param integer $rotation The rotation.
-	 * @return HighchartsStackLabels Returns the highcharts stack labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels Returns the highcharts stack labels.
 	 */
 	public function setRotation($rotation) {
 		$this->rotation = $rotation;
@@ -358,7 +358,7 @@ final class HighchartsStackLabels implements JsonSerializable {
 	 * Set the style.
 	 *
 	 * @param array $style The style.
-	 * @return HighchartsStackLabels Returns the highcharts stack labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels Returns the highcharts stack labels.
 	 */
 	public function setStyle(array $style = null) {
 		$this->style = $style;
@@ -369,7 +369,7 @@ final class HighchartsStackLabels implements JsonSerializable {
 	 * Set the text align.
 	 *
 	 * @param string $textAlign The text align.
-	 * @return HighchartsStackLabels Returns the highcharts stack labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels Returns the highcharts stack labels.
 	 */
 	public function setTextAlign($textAlign) {
 		switch ($textAlign) {
@@ -386,7 +386,7 @@ final class HighchartsStackLabels implements JsonSerializable {
 	 * Set the use HTML.
 	 *
 	 * @param boolean $useHTML The use HTML.
-	 * @return HighchartsStackLabels Returns the highcharts stack labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels Returns the highcharts stack labels.
 	 */
 	public function setUseHTML($useHTML) {
 		$this->useHTML = $useHTML;
@@ -397,7 +397,7 @@ final class HighchartsStackLabels implements JsonSerializable {
 	 * Set the vertical align.
 	 *
 	 * @param string $verticalAlign The vertical align.
-	 * @return HighchartsStackLabels Returns the highcharts stack labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels Returns the highcharts stack labels.
 	 */
 	public function setVerticalAlign($verticalAlign) {
 		switch ($verticalAlign) {
@@ -414,7 +414,7 @@ final class HighchartsStackLabels implements JsonSerializable {
 	 * Set the x.
 	 *
 	 * @param integer $x The x.
-	 * @return HighchartsStackLabels Returns the highcharts stack labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels Returns the highcharts stack labels.
 	 */
 	public function setX($x) {
 		$this->x = $x;
@@ -425,7 +425,7 @@ final class HighchartsStackLabels implements JsonSerializable {
 	 * Set the y.
 	 *
 	 * @param integer $y The y.
-	 * @return HighchartsStackLabels Returns the highcharts stack labels.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels Returns the highcharts stack labels.
 	 */
 	public function setY($y) {
 		$this->y = $y;

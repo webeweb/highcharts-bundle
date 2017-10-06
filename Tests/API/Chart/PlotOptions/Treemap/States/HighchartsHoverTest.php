@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Treemap\States;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover;
 
 /**
  * Highcharts hover test.
@@ -30,7 +29,7 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsHover(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsHover(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover(false);
 
 		$res = ["animation" => ["duration" => 50], "brightness" => 0.1, "enabled" => true, "opacity" => 0.75];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

@@ -12,9 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents;
-use WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d;
-use WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton;
 
 /**
  * Highcharts chart.
@@ -102,7 +99,7 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Events.
 	 *
-	 * @var HighchartsEvents
+	 * @var \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents
 	 */
 	private $events;
 
@@ -170,7 +167,7 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Options3d.
 	 *
-	 * @var HighchartsOptions3d
+	 * @var \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d
 	 * @since 4.0
 	 */
 	private $options3d;
@@ -260,7 +257,7 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Reset zoom button.
 	 *
-	 * @var HighchartsResetZoomButton
+	 * @var \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton
 	 */
 	private $resetZoomButton;
 
@@ -702,7 +699,7 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Get the events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents Returns the events.
 	 */
 	public function getEvents() {
 		return $this->events;
@@ -783,7 +780,7 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Get the options3d.
 	 *
-	 * @return HighchartsOptions3d Returns the options3d.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the options3d.
 	 */
 	public function getOptions3d() {
 		return $this->options3d;
@@ -891,7 +888,7 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Get the reset zoom button.
 	 *
-	 * @return HighchartsResetZoomButton Returns the reset zoom button.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton Returns the reset zoom button.
 	 */
 	public function getResetZoomButton() {
 		return $this->resetZoomButton;
@@ -1026,30 +1023,30 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Create a new events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents Returns the events.
 	 */
 	public function newEvents() {
-		$this->events = new HighchartsEvents();
+		$this->events = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents();
 		return $this->events;
 	}
 
 	/**
 	 * Create a new options3d.
 	 *
-	 * @return HighchartsOptions3d Returns the options3d.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the options3d.
 	 */
 	public function newOptions3d() {
-		$this->options3d = new HighchartsOptions3d();
+		$this->options3d = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d();
 		return $this->options3d;
 	}
 
 	/**
 	 * Create a new reset zoom button.
 	 *
-	 * @return HighchartsResetZoomButton Returns the reset zoom button.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton Returns the reset zoom button.
 	 */
 	public function newResetZoomButton() {
-		$this->resetZoomButton = new HighchartsResetZoomButton();
+		$this->resetZoomButton = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton();
 		return $this->resetZoomButton;
 	}
 
@@ -1057,7 +1054,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the align ticks.
 	 *
 	 * @param boolean $alignTicks The align ticks.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setAlignTicks($alignTicks) {
 		$this->alignTicks = $alignTicks;
@@ -1068,7 +1065,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the animation.
 	 *
 	 * @param boolean|array $animation The animation.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setAnimation($animation) {
 		$this->animation = $animation;
@@ -1079,7 +1076,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the background color.
 	 *
 	 * @param string $backgroundColor The background color.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setBackgroundColor($backgroundColor) {
 		$this->backgroundColor = $backgroundColor;
@@ -1090,7 +1087,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the border color.
 	 *
 	 * @param string $borderColor The border color.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setBorderColor($borderColor) {
 		$this->borderColor = $borderColor;
@@ -1101,7 +1098,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the border radius.
 	 *
 	 * @param integer $borderRadius The border radius.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setBorderRadius($borderRadius) {
 		$this->borderRadius = $borderRadius;
@@ -1112,7 +1109,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the border width.
 	 *
 	 * @param integer $borderWidth The border width.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setBorderWidth($borderWidth) {
 		$this->borderWidth = $borderWidth;
@@ -1123,7 +1120,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the class name.
 	 *
 	 * @param string $className The class name.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setClassName($className) {
 		$this->className = $className;
@@ -1134,7 +1131,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the color count.
 	 *
 	 * @param integer $colorCount The color count.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setColorCount($colorCount) {
 		$this->colorCount = $colorCount;
@@ -1145,7 +1142,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the default series type.
 	 *
 	 * @param string $defaultSeriesType The default series type.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 * @deprecated
 	 */
 	public function setDefaultSeriesType($defaultSeriesType) {
@@ -1166,7 +1163,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the description.
 	 *
 	 * @param string $description The description.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setDescription($description) {
 		$this->description = $description;
@@ -1176,10 +1173,10 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Set the events.
 	 *
-	 * @param HighchartsEvents $events The events.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @param \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents $events The events.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
-	public function setEvents(HighchartsEvents $events = null) {
+	public function setEvents(\WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents $events = null) {
 		$this->events = $events;
 		return $this;
 	}
@@ -1188,7 +1185,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the height.
 	 *
 	 * @param integer|string $height The height.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setHeight($height) {
 		$this->height = $height;
@@ -1199,7 +1196,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the ignore hidden series.
 	 *
 	 * @param boolean $ignoreHiddenSeries The ignore hidden series.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setIgnoreHiddenSeries($ignoreHiddenSeries) {
 		$this->ignoreHiddenSeries = $ignoreHiddenSeries;
@@ -1210,7 +1207,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the inverted.
 	 *
 	 * @param boolean $inverted The inverted.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setInverted($inverted) {
 		$this->inverted = $inverted;
@@ -1221,7 +1218,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the margin.
 	 *
 	 * @param array $margin The margin.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setMargin(array $margin = null) {
 		$this->margin = $margin;
@@ -1232,7 +1229,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the margin bottom.
 	 *
 	 * @param integer $marginBottom The margin bottom.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setMarginBottom($marginBottom) {
 		$this->marginBottom = $marginBottom;
@@ -1243,7 +1240,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the margin left.
 	 *
 	 * @param integer $marginLeft The margin left.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setMarginLeft($marginLeft) {
 		$this->marginLeft = $marginLeft;
@@ -1254,7 +1251,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the margin right.
 	 *
 	 * @param integer $marginRight The margin right.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setMarginRight($marginRight) {
 		$this->marginRight = $marginRight;
@@ -1265,7 +1262,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the margin top.
 	 *
 	 * @param integer $marginTop The margin top.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setMarginTop($marginTop) {
 		$this->marginTop = $marginTop;
@@ -1275,10 +1272,10 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Set the options3d.
 	 *
-	 * @param HighchartsOptions3d $options3d The options3d.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @param \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d $options3d The options3d.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
-	public function setOptions3d(HighchartsOptions3d $options3d = null) {
+	public function setOptions3d(\WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d $options3d = null) {
 		$this->options3d = $options3d;
 		return $this;
 	}
@@ -1287,7 +1284,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the pan key.
 	 *
 	 * @param string $panKey The pan key.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setPanKey($panKey) {
 		switch ($panKey) {
@@ -1306,7 +1303,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the panning.
 	 *
 	 * @param boolean $panning The panning.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setPanning($panning) {
 		$this->panning = $panning;
@@ -1317,7 +1314,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the pinch type.
 	 *
 	 * @param string $pinchType The pinch type.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setPinchType($pinchType) {
 		switch ($pinchType) {
@@ -1334,7 +1331,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the plot background color.
 	 *
 	 * @param string $plotBackgroundColor The plot background color.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setPlotBackgroundColor($plotBackgroundColor) {
 		$this->plotBackgroundColor = $plotBackgroundColor;
@@ -1345,7 +1342,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the plot background image.
 	 *
 	 * @param string $plotBackgroundImage The plot background image.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setPlotBackgroundImage($plotBackgroundImage) {
 		$this->plotBackgroundImage = $plotBackgroundImage;
@@ -1356,7 +1353,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the plot border color.
 	 *
 	 * @param string $plotBorderColor The plot border color.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setPlotBorderColor($plotBorderColor) {
 		$this->plotBorderColor = $plotBorderColor;
@@ -1367,7 +1364,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the plot border width.
 	 *
 	 * @param integer $plotBorderWidth The plot border width.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setPlotBorderWidth($plotBorderWidth) {
 		$this->plotBorderWidth = $plotBorderWidth;
@@ -1378,7 +1375,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the plot shadow.
 	 *
 	 * @param boolean|array $plotShadow The plot shadow.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setPlotShadow($plotShadow) {
 		$this->plotShadow = $plotShadow;
@@ -1389,7 +1386,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the polar.
 	 *
 	 * @param boolean $polar The polar.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setPolar($polar) {
 		$this->polar = $polar;
@@ -1400,7 +1397,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the reflow.
 	 *
 	 * @param boolean $reflow The reflow.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setReflow($reflow) {
 		$this->reflow = $reflow;
@@ -1411,7 +1408,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the render to.
 	 *
 	 * @param string $renderTo The render to.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setRenderTo($renderTo) {
 		$this->renderTo = $renderTo;
@@ -1421,10 +1418,10 @@ final class HighchartsChart implements JsonSerializable {
 	/**
 	 * Set the reset zoom button.
 	 *
-	 * @param HighchartsResetZoomButton $resetZoomButton The reset zoom button.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @param \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton $resetZoomButton The reset zoom button.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
-	public function setResetZoomButton(HighchartsResetZoomButton $resetZoomButton = null) {
+	public function setResetZoomButton(\WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton $resetZoomButton = null) {
 		$this->resetZoomButton = $resetZoomButton;
 		return $this;
 	}
@@ -1433,7 +1430,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the selection marker fill.
 	 *
 	 * @param string $selectionMarkerFill The selection marker fill.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setSelectionMarkerFill($selectionMarkerFill) {
 		$this->selectionMarkerFill = $selectionMarkerFill;
@@ -1444,7 +1441,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the shadow.
 	 *
 	 * @param boolean|array $shadow The shadow.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setShadow($shadow) {
 		$this->shadow = $shadow;
@@ -1455,7 +1452,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the show axes.
 	 *
 	 * @param boolean $showAxes The show axes.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setShowAxes($showAxes) {
 		$this->showAxes = $showAxes;
@@ -1466,7 +1463,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the spacing.
 	 *
 	 * @param array $spacing The spacing.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setSpacing(array $spacing = null) {
 		$this->spacing = $spacing;
@@ -1477,7 +1474,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the spacing bottom.
 	 *
 	 * @param integer $spacingBottom The spacing bottom.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setSpacingBottom($spacingBottom) {
 		$this->spacingBottom = $spacingBottom;
@@ -1488,7 +1485,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the spacing left.
 	 *
 	 * @param integer $spacingLeft The spacing left.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setSpacingLeft($spacingLeft) {
 		$this->spacingLeft = $spacingLeft;
@@ -1499,7 +1496,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the spacing right.
 	 *
 	 * @param integer $spacingRight The spacing right.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setSpacingRight($spacingRight) {
 		$this->spacingRight = $spacingRight;
@@ -1510,7 +1507,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the spacing top.
 	 *
 	 * @param integer $spacingTop The spacing top.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setSpacingTop($spacingTop) {
 		$this->spacingTop = $spacingTop;
@@ -1521,7 +1518,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the style.
 	 *
 	 * @param array $style The style.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setStyle(array $style = null) {
 		$this->style = $style;
@@ -1532,7 +1529,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the type.
 	 *
 	 * @param string $type The type.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setType($type) {
 		switch ($type) {
@@ -1568,7 +1565,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the type description.
 	 *
 	 * @param string $typeDescription The type description.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setTypeDescription($typeDescription) {
 		$this->typeDescription = $typeDescription;
@@ -1579,7 +1576,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the width.
 	 *
 	 * @param integer $width The width.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setWidth($width) {
 		$this->width = $width;
@@ -1590,7 +1587,7 @@ final class HighchartsChart implements JsonSerializable {
 	 * Set the zoom type.
 	 *
 	 * @param string $zoomType The zoom type.
-	 * @return HighchartsChart Returns the highcharts chart.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the highcharts chart.
 	 */
 	public function setZoomType($zoomType) {
 		switch ($zoomType) {

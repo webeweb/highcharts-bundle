@@ -12,9 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\PlotOptions;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsEvents;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsPoint;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsStates;
 
 /**
  * Highcharts errorbar.
@@ -136,7 +133,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	/**
 	 * Events.
 	 *
-	 * @var HighchartsEvents
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsEvents
 	 */
 	private $events;
 
@@ -215,7 +212,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	/**
 	 * Point.
 	 *
-	 * @var HighchartsPoint
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsPoint
 	 */
 	private $point;
 
@@ -299,7 +296,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	/**
 	 * States.
 	 *
-	 * @var HighchartsStates
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsStates
 	 */
 	private $states;
 
@@ -786,7 +783,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	/**
 	 * Get the events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsEvents Returns the events.
 	 */
 	public function getEvents() {
 		return $this->events;
@@ -876,7 +873,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	/**
 	 * Get the point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsPoint Returns the point.
 	 */
 	public function getPoint() {
 		return $this->point;
@@ -975,7 +972,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	/**
 	 * Get the states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsStates Returns the states.
 	 */
 	public function getStates() {
 		return $this->states;
@@ -1101,30 +1098,30 @@ final class HighchartsErrorbar implements JsonSerializable {
 	/**
 	 * Create a new events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsEvents Returns the events.
 	 */
 	public function newEvents() {
-		$this->events = new HighchartsEvents();
+		$this->events = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsEvents();
 		return $this->events;
 	}
 
 	/**
 	 * Create a new point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsPoint Returns the point.
 	 */
 	public function newPoint() {
-		$this->point = new HighchartsPoint();
+		$this->point = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsPoint();
 		return $this->point;
 	}
 
 	/**
 	 * Create a new states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsStates Returns the states.
 	 */
 	public function newStates() {
-		$this->states = new HighchartsStates();
+		$this->states = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsStates();
 		return $this->states;
 	}
 
@@ -1132,7 +1129,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the allow point select.
 	 *
 	 * @param boolean $allowPointSelect The allow point select.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setAllowPointSelect($allowPointSelect) {
 		$this->allowPointSelect = $allowPointSelect;
@@ -1143,7 +1140,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the animation limit.
 	 *
 	 * @param integer $animationLimit The animation limit.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setAnimationLimit($animationLimit) {
 		$this->animationLimit = $animationLimit;
@@ -1154,7 +1151,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the class name.
 	 *
 	 * @param string $className The class name.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setClassName($className) {
 		$this->className = $className;
@@ -1165,7 +1162,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -1176,7 +1173,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the color by point.
 	 *
 	 * @param boolean $colorByPoint The color by point.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setColorByPoint($colorByPoint) {
 		$this->colorByPoint = $colorByPoint;
@@ -1187,7 +1184,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the color index.
 	 *
 	 * @param integer $colorIndex The color index.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setColorIndex($colorIndex) {
 		$this->colorIndex = $colorIndex;
@@ -1198,7 +1195,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the colors.
 	 *
 	 * @param array $colors The colors.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setColors(array $colors = null) {
 		$this->colors = $colors;
@@ -1209,7 +1206,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the crisp.
 	 *
 	 * @param boolean $crisp The crisp.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setCrisp($crisp) {
 		$this->crisp = $crisp;
@@ -1220,7 +1217,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the cursor.
 	 *
 	 * @param string $cursor The cursor.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setCursor($cursor) {
 		switch ($cursor) {
@@ -1240,7 +1237,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the depth.
 	 *
 	 * @param integer $depth The depth.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setDepth($depth) {
 		$this->depth = $depth;
@@ -1251,7 +1248,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the description.
 	 *
 	 * @param string $description The description.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setDescription($description) {
 		$this->description = $description;
@@ -1262,7 +1259,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the edge color.
 	 *
 	 * @param string $edgeColor The edge color.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setEdgeColor($edgeColor) {
 		$this->edgeColor = $edgeColor;
@@ -1273,7 +1270,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the edge width.
 	 *
 	 * @param integer $edgeWidth The edge width.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setEdgeWidth($edgeWidth) {
 		$this->edgeWidth = $edgeWidth;
@@ -1284,7 +1281,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the enable mouse tracking.
 	 *
 	 * @param boolean $enableMouseTracking The enable mouse tracking.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setEnableMouseTracking($enableMouseTracking) {
 		$this->enableMouseTracking = $enableMouseTracking;
@@ -1294,10 +1291,10 @@ final class HighchartsErrorbar implements JsonSerializable {
 	/**
 	 * Set the events.
 	 *
-	 * @param HighchartsEvents $events The events.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsEvents $events The events.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
-	public function setEvents(HighchartsEvents $events = null) {
+	public function setEvents(\WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsEvents $events = null) {
 		$this->events = $events;
 		return $this;
 	}
@@ -1306,7 +1303,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the expose element to a11y.
 	 *
 	 * @param boolean $exposeElementToA11y The expose element to a11y.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setExposeElementToA11y($exposeElementToA11y) {
 		$this->exposeElementToA11y = $exposeElementToA11y;
@@ -1317,7 +1314,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the find nearest point by.
 	 *
 	 * @param string $findNearestPointBy The find nearest point by.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
 		switch ($findNearestPointBy) {
@@ -1333,7 +1330,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the get extremes from all.
 	 *
 	 * @param boolean $getExtremesFromAll The get extremes from all.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setGetExtremesFromAll($getExtremesFromAll) {
 		$this->getExtremesFromAll = $getExtremesFromAll;
@@ -1344,7 +1341,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the group z padding.
 	 *
 	 * @param integer $groupZPadding The group z padding.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setGroupZPadding($groupZPadding) {
 		$this->groupZPadding = $groupZPadding;
@@ -1355,7 +1352,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the keys.
 	 *
 	 * @param array $keys The keys.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setKeys(array $keys = null) {
 		$this->keys = $keys;
@@ -1366,7 +1363,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the line width.
 	 *
 	 * @param integer $lineWidth The line width.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setLineWidth($lineWidth) {
 		$this->lineWidth = $lineWidth;
@@ -1377,7 +1374,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the linked to.
 	 *
 	 * @param string $linkedTo The linked to.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setLinkedTo($linkedTo) {
 		$this->linkedTo = $linkedTo;
@@ -1388,7 +1385,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the max point width.
 	 *
 	 * @param integer $maxPointWidth The max point width.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setMaxPointWidth($maxPointWidth) {
 		$this->maxPointWidth = $maxPointWidth;
@@ -1399,7 +1396,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the negative color.
 	 *
 	 * @param string $negativeColor The negative color.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setNegativeColor($negativeColor) {
 		$this->negativeColor = $negativeColor;
@@ -1409,10 +1406,10 @@ final class HighchartsErrorbar implements JsonSerializable {
 	/**
 	 * Set the point.
 	 *
-	 * @param HighchartsPoint $point The point.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsPoint $point The point.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
-	public function setPoint(HighchartsPoint $point = null) {
+	public function setPoint(\WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsPoint $point = null) {
 		$this->point = $point;
 		return $this;
 	}
@@ -1421,7 +1418,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the point description formatter.
 	 *
 	 * @param string $pointDescriptionFormatter The point description formatter.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setPointDescriptionFormatter($pointDescriptionFormatter) {
 		$this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -1432,7 +1429,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the point interval.
 	 *
 	 * @param integer $pointInterval The point interval.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setPointInterval($pointInterval) {
 		$this->pointInterval = $pointInterval;
@@ -1443,7 +1440,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the point interval unit.
 	 *
 	 * @param string $pointIntervalUnit The point interval unit.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setPointIntervalUnit($pointIntervalUnit) {
 		switch ($pointIntervalUnit) {
@@ -1461,7 +1458,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the point padding.
 	 *
 	 * @param integer $pointPadding The point padding.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setPointPadding($pointPadding) {
 		$this->pointPadding = $pointPadding;
@@ -1472,7 +1469,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the point placement.
 	 *
 	 * @param string|integer $pointPlacement The point placement.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setPointPlacement($pointPlacement) {
 		switch ($pointPlacement) {
@@ -1489,7 +1486,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the point range.
 	 *
 	 * @param integer $pointRange The point range.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setPointRange($pointRange) {
 		$this->pointRange = $pointRange;
@@ -1500,7 +1497,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the point start.
 	 *
 	 * @param integer $pointStart The point start.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setPointStart($pointStart) {
 		$this->pointStart = $pointStart;
@@ -1511,7 +1508,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the point width.
 	 *
 	 * @param integer $pointWidth The point width.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setPointWidth($pointWidth) {
 		$this->pointWidth = $pointWidth;
@@ -1522,7 +1519,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the selected.
 	 *
 	 * @param boolean $selected The selected.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setSelected($selected) {
 		$this->selected = $selected;
@@ -1533,7 +1530,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the skip keyboard navigation.
 	 *
 	 * @param boolean $skipKeyboardNavigation The skip keyboard navigation.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setSkipKeyboardNavigation($skipKeyboardNavigation) {
 		$this->skipKeyboardNavigation = $skipKeyboardNavigation;
@@ -1543,10 +1540,10 @@ final class HighchartsErrorbar implements JsonSerializable {
 	/**
 	 * Set the states.
 	 *
-	 * @param HighchartsStates $states The states.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsStates $states The states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
-	public function setStates(HighchartsStates $states = null) {
+	public function setStates(\WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsStates $states = null) {
 		$this->states = $states;
 		return $this;
 	}
@@ -1555,7 +1552,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the stem color.
 	 *
 	 * @param string $stemColor The stem color.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setStemColor($stemColor) {
 		$this->stemColor = $stemColor;
@@ -1566,7 +1563,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the stem dash style.
 	 *
 	 * @param string $stemDashStyle The stem dash style.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setStemDashStyle($stemDashStyle) {
 		switch ($stemDashStyle) {
@@ -1591,7 +1588,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the stem width.
 	 *
 	 * @param integer $stemWidth The stem width.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setStemWidth($stemWidth) {
 		$this->stemWidth = $stemWidth;
@@ -1602,7 +1599,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the sticky tracking.
 	 *
 	 * @param boolean $stickyTracking The sticky tracking.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setStickyTracking($stickyTracking) {
 		$this->stickyTracking = $stickyTracking;
@@ -1613,7 +1610,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the tooltip.
 	 *
 	 * @param array $tooltip The tooltip.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setTooltip(array $tooltip = null) {
 		$this->tooltip = $tooltip;
@@ -1624,7 +1621,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the turbo threshold.
 	 *
 	 * @param integer $turboThreshold The turbo threshold.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setTurboThreshold($turboThreshold) {
 		$this->turboThreshold = $turboThreshold;
@@ -1635,7 +1632,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the visible.
 	 *
 	 * @param boolean $visible The visible.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setVisible($visible) {
 		$this->visible = $visible;
@@ -1646,7 +1643,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the whisker color.
 	 *
 	 * @param string $whiskerColor The whisker color.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setWhiskerColor($whiskerColor) {
 		$this->whiskerColor = $whiskerColor;
@@ -1657,7 +1654,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the whisker length.
 	 *
 	 * @param integer|string $whiskerLength The whisker length.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setWhiskerLength($whiskerLength) {
 		$this->whiskerLength = $whiskerLength;
@@ -1668,7 +1665,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the whisker width.
 	 *
 	 * @param integer $whiskerWidth The whisker width.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setWhiskerWidth($whiskerWidth) {
 		$this->whiskerWidth = $whiskerWidth;
@@ -1679,7 +1676,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the zone axis.
 	 *
 	 * @param string $zoneAxis The zone axis.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setZoneAxis($zoneAxis) {
 		$this->zoneAxis = $zoneAxis;
@@ -1690,7 +1687,7 @@ final class HighchartsErrorbar implements JsonSerializable {
 	 * Set the zones.
 	 *
 	 * @param array $zones The zones.
-	 * @return HighchartsErrorbar Returns the highcharts errorbar.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsErrorbar Returns the highcharts errorbar.
 	 */
 	public function setZones(array $zones = null) {
 		$this->zones = $zones;

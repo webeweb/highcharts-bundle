@@ -99,7 +99,7 @@ final class HighchartsRules implements JsonSerializable {
 	 * Set the chart options.
 	 *
 	 * @param array $chartOptions The chart options.
-	 * @return HighchartsRules Returns the highcharts rules.
+	 * @return \WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules Returns the highcharts rules.
 	 */
 	public function setChartOptions(array $chartOptions = null) {
 		$this->chartOptions = $chartOptions;
@@ -110,7 +110,7 @@ final class HighchartsRules implements JsonSerializable {
 	 * Set the condition.
 	 *
 	 * @param array $condition The condition.
-	 * @return HighchartsRules Returns the highcharts rules.
+	 * @return \WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules Returns the highcharts rules.
 	 */
 	public function setCondition(array $condition = null) {
 		$this->condition = $condition;

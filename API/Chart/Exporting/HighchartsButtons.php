@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\Exporting;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton;
 
 /**
  * Highcharts buttons.
@@ -27,7 +26,7 @@ final class HighchartsButtons implements JsonSerializable {
 	/**
 	 * Context button.
 	 *
-	 * @var HighchartsContextButton
+	 * @var \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton
 	 */
 	private $contextButton;
 
@@ -58,7 +57,7 @@ final class HighchartsButtons implements JsonSerializable {
 	/**
 	 * Get the context button.
 	 *
-	 * @return HighchartsContextButton Returns the context button.
+	 * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the context button.
 	 */
 	public function getContextButton() {
 		return $this->contextButton;
@@ -76,20 +75,20 @@ final class HighchartsButtons implements JsonSerializable {
 	/**
 	 * Create a new context button.
 	 *
-	 * @return HighchartsContextButton Returns the context button.
+	 * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the context button.
 	 */
 	public function newContextButton() {
-		$this->contextButton = new HighchartsContextButton();
+		$this->contextButton = new \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton();
 		return $this->contextButton;
 	}
 
 	/**
 	 * Set the context button.
 	 *
-	 * @param HighchartsContextButton $contextButton The context button.
-	 * @return HighchartsButtons Returns the highcharts buttons.
+	 * @param \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton $contextButton The context button.
+	 * @return \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons Returns the highcharts buttons.
 	 */
-	public function setContextButton(HighchartsContextButton $contextButton = null) {
+	public function setContextButton(\WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton $contextButton = null) {
 		$this->contextButton = $contextButton;
 		return $this;
 	}

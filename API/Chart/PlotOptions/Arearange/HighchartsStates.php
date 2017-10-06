@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\States\HighchartsHover;
 
 /**
  * Highcharts states.
@@ -27,7 +26,7 @@ final class HighchartsStates implements JsonSerializable {
 	/**
 	 * Hover.
 	 *
-	 * @var HighchartsHover
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\States\HighchartsHover
 	 */
 	private $hover;
 
@@ -58,7 +57,7 @@ final class HighchartsStates implements JsonSerializable {
 	/**
 	 * Get the hover.
 	 *
-	 * @return HighchartsHover Returns the hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\States\HighchartsHover Returns the hover.
 	 */
 	public function getHover() {
 		return $this->hover;
@@ -76,20 +75,20 @@ final class HighchartsStates implements JsonSerializable {
 	/**
 	 * Create a new hover.
 	 *
-	 * @return HighchartsHover Returns the hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\States\HighchartsHover Returns the hover.
 	 */
 	public function newHover() {
-		$this->hover = new HighchartsHover();
+		$this->hover = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\States\HighchartsHover();
 		return $this->hover;
 	}
 
 	/**
 	 * Set the hover.
 	 *
-	 * @param HighchartsHover $hover The hover.
-	 * @return HighchartsStates Returns the highcharts states.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\States\HighchartsHover $hover The hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\HighchartsStates Returns the highcharts states.
 	 */
-	public function setHover(HighchartsHover $hover = null) {
+	public function setHover(\WBW\HighchartsBundle\API\Chart\PlotOptions\Arearange\States\HighchartsHover $hover = null) {
 		$this->hover = $hover;
 		return $this;
 	}

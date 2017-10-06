@@ -97,7 +97,7 @@ final class HighchartsTop implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsTop Returns the highcharts top.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsTop Returns the highcharts top.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -108,7 +108,7 @@ final class HighchartsTop implements JsonSerializable {
 	 * Set the size.
 	 *
 	 * @param integer $size The size.
-	 * @return HighchartsTop Returns the highcharts top.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsTop Returns the highcharts top.
 	 */
 	public function setSize($size) {
 		$this->size = $size;

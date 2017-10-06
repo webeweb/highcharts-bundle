@@ -99,7 +99,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the style.
 	 *
 	 * @param array $style The style.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setStyle(array $style = null) {
 		$this->style = $style;
@@ -110,7 +110,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the text.
 	 *
 	 * @param string $text The text.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setText($text) {
 		$this->text = $text;

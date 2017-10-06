@@ -12,8 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\HighchartsExporting;
-use WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons;
 
 /**
  * Highcharts exporting test.
@@ -31,7 +29,7 @@ final class HighchartsExportingTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsExporting(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsExporting(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -44,10 +42,10 @@ final class HighchartsExportingTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewButtons() {
 
-		$obj = new HighchartsExporting(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsExporting(false);
 
 		$res = $obj->newButtons();
-		$this->assertInstanceOf(HighchartsButtons::class, $res, "The method newButtons() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons::class, $res, "The method newButtons() does not return the expected class");
 	}
 
 	/**
@@ -57,7 +55,7 @@ final class HighchartsExportingTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsExporting(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsExporting(false);
 
 		$res = ["allowHTML" => false, "enabled" => true, "fallbackToExportServer" => true, "filename" => "chart", "libURL" => "https://code.highcharts.com/{version}/lib", "printMaxWidth" => 780, "scale" => 2, "type" => "image/png", "url" => "https://export.highcharts.com"];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
@@ -87,19 +85,19 @@ final class HighchartsExportingTest extends PHPUnit_Framework_TestCase {
 		$res5 = ["allowHTML" => false, "enabled" => true, "fallbackToExportServer" => true, "filename" => "chart", "libURL" => "https://code.highcharts.com/{version}/lib", "printMaxWidth" => 780, "scale" => 2, "type" => "image/png", "url" => "https://export.highcharts.com", "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"]];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with menu item definitions");
 
-		$obj->setSourceHeight(33);
+		$obj->setSourceHeight(79);
 
-		$res6 = ["allowHTML" => false, "enabled" => true, "fallbackToExportServer" => true, "filename" => "chart", "libURL" => "https://code.highcharts.com/{version}/lib", "printMaxWidth" => 780, "scale" => 2, "type" => "image/png", "url" => "https://export.highcharts.com", "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "sourceHeight" => 33];
+		$res6 = ["allowHTML" => false, "enabled" => true, "fallbackToExportServer" => true, "filename" => "chart", "libURL" => "https://code.highcharts.com/{version}/lib", "printMaxWidth" => 780, "scale" => 2, "type" => "image/png", "url" => "https://export.highcharts.com", "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "sourceHeight" => 79];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with source height");
 
-		$obj->setSourceWidth(7);
+		$obj->setSourceWidth(51);
 
-		$res7 = ["allowHTML" => false, "enabled" => true, "fallbackToExportServer" => true, "filename" => "chart", "libURL" => "https://code.highcharts.com/{version}/lib", "printMaxWidth" => 780, "scale" => 2, "type" => "image/png", "url" => "https://export.highcharts.com", "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "sourceHeight" => 33, "sourceWidth" => 7];
+		$res7 = ["allowHTML" => false, "enabled" => true, "fallbackToExportServer" => true, "filename" => "chart", "libURL" => "https://code.highcharts.com/{version}/lib", "printMaxWidth" => 780, "scale" => 2, "type" => "image/png", "url" => "https://export.highcharts.com", "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "sourceHeight" => 79, "sourceWidth" => 51];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with source width");
 
-		$obj->setWidth(2);
+		$obj->setWidth(44);
 
-		$res8 = ["allowHTML" => false, "enabled" => true, "fallbackToExportServer" => true, "filename" => "chart", "libURL" => "https://code.highcharts.com/{version}/lib", "printMaxWidth" => 780, "scale" => 2, "type" => "image/png", "url" => "https://export.highcharts.com", "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "sourceHeight" => 33, "sourceWidth" => 7, "width" => 2];
+		$res8 = ["allowHTML" => false, "enabled" => true, "fallbackToExportServer" => true, "filename" => "chart", "libURL" => "https://code.highcharts.com/{version}/lib", "printMaxWidth" => 780, "scale" => 2, "type" => "image/png", "url" => "https://export.highcharts.com", "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "sourceHeight" => 79, "sourceWidth" => 51, "width" => 44];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with width");
 	}
 

@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\NoData;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\NoData\HighchartsPosition;
 
 /**
  * Highcharts position test.
@@ -30,7 +29,7 @@ final class HighchartsPositionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsPosition(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\NoData\HighchartsPosition(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsPositionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsPosition(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\NoData\HighchartsPosition(false);
 
 		$res = ["align" => "center", "verticalAlign" => "middle", "x" => 0, "y" => 0];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

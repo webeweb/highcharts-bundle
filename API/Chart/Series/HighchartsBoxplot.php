@@ -12,9 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\Series;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsEvents;
-use WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsPoint;
-use WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates;
 
 /**
  * Highcharts boxplot.
@@ -142,7 +139,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	/**
 	 * Events.
 	 *
-	 * @var HighchartsEvents
+	 * @var \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsEvents
 	 */
 	private $events;
 
@@ -290,7 +287,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	/**
 	 * Point.
 	 *
-	 * @var HighchartsPoint
+	 * @var \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsPoint
 	 */
 	private $point;
 
@@ -389,7 +386,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	/**
 	 * States.
 	 *
-	 * @var HighchartsStates
+	 * @var \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates
 	 */
 	private $states;
 
@@ -993,7 +990,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	/**
 	 * Get the events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsEvents Returns the events.
 	 */
 	public function getEvents() {
 		return $this->events;
@@ -1164,7 +1161,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	/**
 	 * Get the point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsPoint Returns the point.
 	 */
 	public function getPoint() {
 		return $this->point;
@@ -1281,7 +1278,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	/**
 	 * Get the states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates Returns the states.
 	 */
 	public function getStates() {
 		return $this->states;
@@ -1443,30 +1440,30 @@ final class HighchartsBoxplot implements JsonSerializable {
 	/**
 	 * Create a new events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsEvents Returns the events.
 	 */
 	public function newEvents() {
-		$this->events = new HighchartsEvents();
+		$this->events = new \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsEvents();
 		return $this->events;
 	}
 
 	/**
 	 * Create a new point.
 	 *
-	 * @return HighchartsPoint Returns the point.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsPoint Returns the point.
 	 */
 	public function newPoint() {
-		$this->point = new HighchartsPoint();
+		$this->point = new \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsPoint();
 		return $this->point;
 	}
 
 	/**
 	 * Create a new states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates Returns the states.
 	 */
 	public function newStates() {
-		$this->states = new HighchartsStates();
+		$this->states = new \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates();
 		return $this->states;
 	}
 
@@ -1474,7 +1471,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the allow point select.
 	 *
 	 * @param boolean $allowPointSelect The allow point select.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setAllowPointSelect($allowPointSelect) {
 		$this->allowPointSelect = $allowPointSelect;
@@ -1485,7 +1482,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the animation limit.
 	 *
 	 * @param integer $animationLimit The animation limit.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setAnimationLimit($animationLimit) {
 		$this->animationLimit = $animationLimit;
@@ -1496,7 +1493,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the class name.
 	 *
 	 * @param string $className The class name.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setClassName($className) {
 		$this->className = $className;
@@ -1507,7 +1504,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -1518,7 +1515,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the color by point.
 	 *
 	 * @param boolean $colorByPoint The color by point.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setColorByPoint($colorByPoint) {
 		$this->colorByPoint = $colorByPoint;
@@ -1529,7 +1526,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the color index.
 	 *
 	 * @param integer $colorIndex The color index.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setColorIndex($colorIndex) {
 		$this->colorIndex = $colorIndex;
@@ -1540,7 +1537,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the colors.
 	 *
 	 * @param array $colors The colors.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setColors(array $colors = null) {
 		$this->colors = $colors;
@@ -1551,7 +1548,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the crisp.
 	 *
 	 * @param boolean $crisp The crisp.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setCrisp($crisp) {
 		$this->crisp = $crisp;
@@ -1562,7 +1559,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the cursor.
 	 *
 	 * @param string $cursor The cursor.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setCursor($cursor) {
 		switch ($cursor) {
@@ -1582,7 +1579,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the data.
 	 *
 	 * @param array $data The data.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setData(array $data = null) {
 		$this->data = $data;
@@ -1593,7 +1590,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the depth.
 	 *
 	 * @param integer $depth The depth.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setDepth($depth) {
 		$this->depth = $depth;
@@ -1604,7 +1601,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the description.
 	 *
 	 * @param string $description The description.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setDescription($description) {
 		$this->description = $description;
@@ -1615,7 +1612,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the edge color.
 	 *
 	 * @param string $edgeColor The edge color.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setEdgeColor($edgeColor) {
 		$this->edgeColor = $edgeColor;
@@ -1626,7 +1623,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the edge width.
 	 *
 	 * @param integer $edgeWidth The edge width.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setEdgeWidth($edgeWidth) {
 		$this->edgeWidth = $edgeWidth;
@@ -1637,7 +1634,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the enable mouse tracking.
 	 *
 	 * @param boolean $enableMouseTracking The enable mouse tracking.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setEnableMouseTracking($enableMouseTracking) {
 		$this->enableMouseTracking = $enableMouseTracking;
@@ -1647,10 +1644,10 @@ final class HighchartsBoxplot implements JsonSerializable {
 	/**
 	 * Set the events.
 	 *
-	 * @param HighchartsEvents $events The events.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @param \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsEvents $events The events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
-	public function setEvents(HighchartsEvents $events = null) {
+	public function setEvents(\WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsEvents $events = null) {
 		$this->events = $events;
 		return $this;
 	}
@@ -1659,7 +1656,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the expose element to a11y.
 	 *
 	 * @param boolean $exposeElementToA11y The expose element to a11y.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setExposeElementToA11y($exposeElementToA11y) {
 		$this->exposeElementToA11y = $exposeElementToA11y;
@@ -1670,7 +1667,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the fill color.
 	 *
 	 * @param string $fillColor The fill color.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setFillColor($fillColor) {
 		$this->fillColor = $fillColor;
@@ -1681,7 +1678,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the find nearest point by.
 	 *
 	 * @param string $findNearestPointBy The find nearest point by.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setFindNearestPointBy($findNearestPointBy) {
 		switch ($findNearestPointBy) {
@@ -1697,7 +1694,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the get extremes from all.
 	 *
 	 * @param boolean $getExtremesFromAll The get extremes from all.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setGetExtremesFromAll($getExtremesFromAll) {
 		$this->getExtremesFromAll = $getExtremesFromAll;
@@ -1708,7 +1705,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the group padding.
 	 *
 	 * @param integer $groupPadding The group padding.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setGroupPadding($groupPadding) {
 		$this->groupPadding = $groupPadding;
@@ -1719,7 +1716,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the group z padding.
 	 *
 	 * @param integer $groupZPadding The group z padding.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setGroupZPadding($groupZPadding) {
 		$this->groupZPadding = $groupZPadding;
@@ -1730,7 +1727,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the grouping.
 	 *
 	 * @param boolean $grouping The grouping.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setGrouping($grouping) {
 		$this->grouping = $grouping;
@@ -1741,7 +1738,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the id.
 	 *
 	 * @param string $id The id.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setId($id) {
 		$this->id = $id;
@@ -1752,7 +1749,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the index.
 	 *
 	 * @param integer $index The index.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setIndex($index) {
 		$this->index = $index;
@@ -1763,7 +1760,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the keys.
 	 *
 	 * @param array $keys The keys.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setKeys(array $keys = null) {
 		$this->keys = $keys;
@@ -1774,7 +1771,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the legend index.
 	 *
 	 * @param integer $legendIndex The legend index.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setLegendIndex($legendIndex) {
 		$this->legendIndex = $legendIndex;
@@ -1785,7 +1782,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the line width.
 	 *
 	 * @param integer $lineWidth The line width.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setLineWidth($lineWidth) {
 		$this->lineWidth = $lineWidth;
@@ -1796,7 +1793,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the linked to.
 	 *
 	 * @param string $linkedTo The linked to.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setLinkedTo($linkedTo) {
 		$this->linkedTo = $linkedTo;
@@ -1807,7 +1804,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the max point width.
 	 *
 	 * @param integer $maxPointWidth The max point width.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setMaxPointWidth($maxPointWidth) {
 		$this->maxPointWidth = $maxPointWidth;
@@ -1818,7 +1815,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the median color.
 	 *
 	 * @param string $medianColor The median color.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setMedianColor($medianColor) {
 		$this->medianColor = $medianColor;
@@ -1829,7 +1826,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the median width.
 	 *
 	 * @param integer $medianWidth The median width.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setMedianWidth($medianWidth) {
 		$this->medianWidth = $medianWidth;
@@ -1840,7 +1837,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the name.
 	 *
 	 * @param string $name The name.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setName($name) {
 		$this->name = $name;
@@ -1851,7 +1848,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the negative color.
 	 *
 	 * @param string $negativeColor The negative color.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setNegativeColor($negativeColor) {
 		$this->negativeColor = $negativeColor;
@@ -1861,10 +1858,10 @@ final class HighchartsBoxplot implements JsonSerializable {
 	/**
 	 * Set the point.
 	 *
-	 * @param HighchartsPoint $point The point.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @param \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsPoint $point The point.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
-	public function setPoint(HighchartsPoint $point = null) {
+	public function setPoint(\WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsPoint $point = null) {
 		$this->point = $point;
 		return $this;
 	}
@@ -1873,7 +1870,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the point description formatter.
 	 *
 	 * @param string $pointDescriptionFormatter The point description formatter.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setPointDescriptionFormatter($pointDescriptionFormatter) {
 		$this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -1884,7 +1881,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the point interval.
 	 *
 	 * @param integer $pointInterval The point interval.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setPointInterval($pointInterval) {
 		$this->pointInterval = $pointInterval;
@@ -1895,7 +1892,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the point interval unit.
 	 *
 	 * @param string $pointIntervalUnit The point interval unit.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setPointIntervalUnit($pointIntervalUnit) {
 		switch ($pointIntervalUnit) {
@@ -1913,7 +1910,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the point padding.
 	 *
 	 * @param integer $pointPadding The point padding.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setPointPadding($pointPadding) {
 		$this->pointPadding = $pointPadding;
@@ -1924,7 +1921,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the point placement.
 	 *
 	 * @param string|integer $pointPlacement The point placement.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setPointPlacement($pointPlacement) {
 		switch ($pointPlacement) {
@@ -1941,7 +1938,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the point range.
 	 *
 	 * @param integer $pointRange The point range.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setPointRange($pointRange) {
 		$this->pointRange = $pointRange;
@@ -1952,7 +1949,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the point start.
 	 *
 	 * @param integer $pointStart The point start.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setPointStart($pointStart) {
 		$this->pointStart = $pointStart;
@@ -1963,7 +1960,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the point width.
 	 *
 	 * @param integer $pointWidth The point width.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setPointWidth($pointWidth) {
 		$this->pointWidth = $pointWidth;
@@ -1974,7 +1971,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the selected.
 	 *
 	 * @param boolean $selected The selected.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setSelected($selected) {
 		$this->selected = $selected;
@@ -1985,7 +1982,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the show checkbox.
 	 *
 	 * @param boolean $showCheckbox The show checkbox.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setShowCheckbox($showCheckbox) {
 		$this->showCheckbox = $showCheckbox;
@@ -1996,7 +1993,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the show in legend.
 	 *
 	 * @param boolean $showInLegend The show in legend.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setShowInLegend($showInLegend) {
 		$this->showInLegend = $showInLegend;
@@ -2007,7 +2004,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the skip keyboard navigation.
 	 *
 	 * @param boolean $skipKeyboardNavigation The skip keyboard navigation.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setSkipKeyboardNavigation($skipKeyboardNavigation) {
 		$this->skipKeyboardNavigation = $skipKeyboardNavigation;
@@ -2017,10 +2014,10 @@ final class HighchartsBoxplot implements JsonSerializable {
 	/**
 	 * Set the states.
 	 *
-	 * @param HighchartsStates $states The states.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @param \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates $states The states.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
-	public function setStates(HighchartsStates $states = null) {
+	public function setStates(\WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates $states = null) {
 		$this->states = $states;
 		return $this;
 	}
@@ -2029,7 +2026,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the stem color.
 	 *
 	 * @param string $stemColor The stem color.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setStemColor($stemColor) {
 		$this->stemColor = $stemColor;
@@ -2040,7 +2037,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the stem dash style.
 	 *
 	 * @param string $stemDashStyle The stem dash style.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setStemDashStyle($stemDashStyle) {
 		switch ($stemDashStyle) {
@@ -2065,7 +2062,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the stem width.
 	 *
 	 * @param integer $stemWidth The stem width.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setStemWidth($stemWidth) {
 		$this->stemWidth = $stemWidth;
@@ -2076,7 +2073,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the sticky tracking.
 	 *
 	 * @param boolean $stickyTracking The sticky tracking.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setStickyTracking($stickyTracking) {
 		$this->stickyTracking = $stickyTracking;
@@ -2087,7 +2084,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the tooltip.
 	 *
 	 * @param array $tooltip The tooltip.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setTooltip(array $tooltip = null) {
 		$this->tooltip = $tooltip;
@@ -2098,7 +2095,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the turbo threshold.
 	 *
 	 * @param integer $turboThreshold The turbo threshold.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setTurboThreshold($turboThreshold) {
 		$this->turboThreshold = $turboThreshold;
@@ -2109,7 +2106,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the type.
 	 *
 	 * @param string $type The type.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setType($type) {
 		switch ($type) {
@@ -2140,7 +2137,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the visible.
 	 *
 	 * @param boolean $visible The visible.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setVisible($visible) {
 		$this->visible = $visible;
@@ -2151,7 +2148,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the whisker color.
 	 *
 	 * @param string $whiskerColor The whisker color.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setWhiskerColor($whiskerColor) {
 		$this->whiskerColor = $whiskerColor;
@@ -2162,7 +2159,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the whisker length.
 	 *
 	 * @param integer|string $whiskerLength The whisker length.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setWhiskerLength($whiskerLength) {
 		$this->whiskerLength = $whiskerLength;
@@ -2173,7 +2170,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the whisker width.
 	 *
 	 * @param integer $whiskerWidth The whisker width.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setWhiskerWidth($whiskerWidth) {
 		$this->whiskerWidth = $whiskerWidth;
@@ -2184,7 +2181,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the x axis.
 	 *
 	 * @param integer|string $xAxis The x axis.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setXAxis($xAxis) {
 		$this->xAxis = $xAxis;
@@ -2195,7 +2192,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the y axis.
 	 *
 	 * @param integer|string $yAxis The y axis.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setYAxis($yAxis) {
 		$this->yAxis = $yAxis;
@@ -2206,7 +2203,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the z index.
 	 *
 	 * @param integer $zIndex The z index.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setZIndex($zIndex) {
 		$this->zIndex = $zIndex;
@@ -2217,7 +2214,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the zone axis.
 	 *
 	 * @param string $zoneAxis The zone axis.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setZoneAxis($zoneAxis) {
 		$this->zoneAxis = $zoneAxis;
@@ -2228,7 +2225,7 @@ final class HighchartsBoxplot implements JsonSerializable {
 	 * Set the zones.
 	 *
 	 * @param array $zones The zones.
-	 * @return HighchartsBoxplot Returns the highcharts boxplot.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsBoxplot Returns the highcharts boxplot.
 	 */
 	public function setZones(array $zones = null) {
 		$this->zones = $zones;

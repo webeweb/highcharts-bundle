@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Columnrange;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Columnrange\HighchartsDataLabels;
 
 /**
  * Highcharts data labels test.
@@ -30,7 +29,7 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsDataLabels(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Columnrange\HighchartsDataLabels(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsDataLabels(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Columnrange\HighchartsDataLabels(false);
 
 		$res = ["align" => "center", "allowOverlap" => false, "borderRadius" => 0, "borderWidth" => 0, "crop" => true, "defer" => true, "enabled" => false, "format" => "{y}", "overflow" => "justify", "padding" => 5, "rotation" => 0, "shadow" => false, "shape" => "square", "style" => ["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], "useHTML" => false, "xHigh" => 0, "xLow" => 0, "yHigh" => -6, "yLow" => 16, "zIndex" => 6];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
@@ -73,14 +72,14 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
 		$res5 = ["align" => "center", "allowOverlap" => false, "borderRadius" => 0, "borderWidth" => 0, "crop" => true, "defer" => true, "enabled" => false, "format" => "{y}", "overflow" => "justify", "padding" => 5, "rotation" => 0, "shadow" => false, "shape" => "square", "style" => ["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], "useHTML" => false, "xHigh" => 0, "xLow" => 0, "yHigh" => -6, "yLow" => 16, "zIndex" => 6, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with formatter");
 
-		$obj->setInside(0);
+		$obj->setInside(1);
 
-		$res6 = ["align" => "center", "allowOverlap" => false, "borderRadius" => 0, "borderWidth" => 0, "crop" => true, "defer" => true, "enabled" => false, "format" => "{y}", "overflow" => "justify", "padding" => 5, "rotation" => 0, "shadow" => false, "shape" => "square", "style" => ["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], "useHTML" => false, "xHigh" => 0, "xLow" => 0, "yHigh" => -6, "yLow" => 16, "zIndex" => 6, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0];
+		$res6 = ["align" => "center", "allowOverlap" => false, "borderRadius" => 0, "borderWidth" => 0, "crop" => true, "defer" => true, "enabled" => false, "format" => "{y}", "overflow" => "justify", "padding" => 5, "rotation" => 0, "shadow" => false, "shape" => "square", "style" => ["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], "useHTML" => false, "xHigh" => 0, "xLow" => 0, "yHigh" => -6, "yLow" => 16, "zIndex" => 6, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with inside");
 
 		$obj->setVerticalAlign("bottom");
 
-		$res7 = ["align" => "center", "allowOverlap" => false, "borderRadius" => 0, "borderWidth" => 0, "crop" => true, "defer" => true, "enabled" => false, "format" => "{y}", "overflow" => "justify", "padding" => 5, "rotation" => 0, "shadow" => false, "shape" => "square", "style" => ["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], "useHTML" => false, "xHigh" => 0, "xLow" => 0, "yHigh" => -6, "yLow" => 16, "zIndex" => 6, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "verticalAlign" => "bottom"];
+		$res7 = ["align" => "center", "allowOverlap" => false, "borderRadius" => 0, "borderWidth" => 0, "crop" => true, "defer" => true, "enabled" => false, "format" => "{y}", "overflow" => "justify", "padding" => 5, "rotation" => 0, "shadow" => false, "shape" => "square", "style" => ["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], "useHTML" => false, "xHigh" => 0, "xLow" => 0, "yHigh" => -6, "yLow" => 16, "zIndex" => 6, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "verticalAlign" => "bottom"];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
 	}
 

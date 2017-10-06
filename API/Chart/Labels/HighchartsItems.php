@@ -97,7 +97,7 @@ final class HighchartsItems implements JsonSerializable {
 	 * Set the html.
 	 *
 	 * @param string $html The html.
-	 * @return HighchartsItems Returns the highcharts items.
+	 * @return \WBW\HighchartsBundle\API\Chart\Labels\HighchartsItems Returns the highcharts items.
 	 */
 	public function setHtml($html) {
 		$this->html = $html;
@@ -108,7 +108,7 @@ final class HighchartsItems implements JsonSerializable {
 	 * Set the style.
 	 *
 	 * @param array $style The style.
-	 * @return HighchartsItems Returns the highcharts items.
+	 * @return \WBW\HighchartsBundle\API\Chart\Labels\HighchartsItems Returns the highcharts items.
 	 */
 	public function setStyle(array $style = null) {
 		$this->style = $style;

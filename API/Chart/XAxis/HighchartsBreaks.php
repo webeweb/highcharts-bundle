@@ -143,7 +143,7 @@ final class HighchartsBreaks implements JsonSerializable {
 	 * Set the break size.
 	 *
 	 * @param integer $breakSize The break size.
-	 * @return HighchartsBreaks Returns the highcharts breaks.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks Returns the highcharts breaks.
 	 */
 	public function setBreakSize($breakSize) {
 		$this->breakSize = $breakSize;
@@ -154,7 +154,7 @@ final class HighchartsBreaks implements JsonSerializable {
 	 * Set the from.
 	 *
 	 * @param integer $from The from.
-	 * @return HighchartsBreaks Returns the highcharts breaks.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks Returns the highcharts breaks.
 	 */
 	public function setFrom($from) {
 		$this->from = $from;
@@ -165,7 +165,7 @@ final class HighchartsBreaks implements JsonSerializable {
 	 * Set the repeat.
 	 *
 	 * @param integer $repeat The repeat.
-	 * @return HighchartsBreaks Returns the highcharts breaks.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks Returns the highcharts breaks.
 	 */
 	public function setRepeat($repeat) {
 		$this->repeat = $repeat;
@@ -176,7 +176,7 @@ final class HighchartsBreaks implements JsonSerializable {
 	 * Set the to.
 	 *
 	 * @param integer $to The to.
-	 * @return HighchartsBreaks Returns the highcharts breaks.
+	 * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks Returns the highcharts breaks.
 	 */
 	public function setTo($to) {
 		$this->to = $to;

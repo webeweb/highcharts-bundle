@@ -165,7 +165,7 @@ final class HighchartsZones implements JsonSerializable {
 	 * Set the class name.
 	 *
 	 * @param string $className The class name.
-	 * @return HighchartsZones Returns the highcharts zones.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Line\HighchartsZones Returns the highcharts zones.
 	 */
 	public function setClassName($className) {
 		$this->className = $className;
@@ -176,7 +176,7 @@ final class HighchartsZones implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsZones Returns the highcharts zones.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Line\HighchartsZones Returns the highcharts zones.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -187,7 +187,7 @@ final class HighchartsZones implements JsonSerializable {
 	 * Set the dash style.
 	 *
 	 * @param string $dashStyle The dash style.
-	 * @return HighchartsZones Returns the highcharts zones.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Line\HighchartsZones Returns the highcharts zones.
 	 */
 	public function setDashStyle($dashStyle) {
 		$this->dashStyle = $dashStyle;
@@ -198,7 +198,7 @@ final class HighchartsZones implements JsonSerializable {
 	 * Set the fill color.
 	 *
 	 * @param string $fillColor The fill color.
-	 * @return HighchartsZones Returns the highcharts zones.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Line\HighchartsZones Returns the highcharts zones.
 	 */
 	public function setFillColor($fillColor) {
 		$this->fillColor = $fillColor;
@@ -209,7 +209,7 @@ final class HighchartsZones implements JsonSerializable {
 	 * Set the value.
 	 *
 	 * @param integer $value The value.
-	 * @return HighchartsZones Returns the highcharts zones.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Line\HighchartsZones Returns the highcharts zones.
 	 */
 	public function setValue($value) {
 		$this->value = $value;

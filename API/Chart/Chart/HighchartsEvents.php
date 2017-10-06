@@ -295,7 +295,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the add series.
 	 *
 	 * @param string $addSeries The add series.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setAddSeries($addSeries) {
 		$this->addSeries = $addSeries;
@@ -306,7 +306,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the after print.
 	 *
 	 * @param string $afterPrint The after print.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setAfterPrint($afterPrint) {
 		$this->afterPrint = $afterPrint;
@@ -317,7 +317,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the before print.
 	 *
 	 * @param string $beforePrint The before print.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setBeforePrint($beforePrint) {
 		$this->beforePrint = $beforePrint;
@@ -328,7 +328,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the click.
 	 *
 	 * @param string $click The click.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setClick($click) {
 		$this->click = $click;
@@ -339,7 +339,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the drilldown.
 	 *
 	 * @param string $drilldown The drilldown.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setDrilldown($drilldown) {
 		$this->drilldown = $drilldown;
@@ -350,7 +350,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the drillup.
 	 *
 	 * @param string $drillup The drillup.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setDrillup($drillup) {
 		$this->drillup = $drillup;
@@ -361,7 +361,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the drillupall.
 	 *
 	 * @param string $drillupall The drillupall.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setDrillupall($drillupall) {
 		$this->drillupall = $drillupall;
@@ -372,7 +372,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the load.
 	 *
 	 * @param string $load The load.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setLoad($load) {
 		$this->load = $load;
@@ -383,7 +383,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the redraw.
 	 *
 	 * @param string $redraw The redraw.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setRedraw($redraw) {
 		$this->redraw = $redraw;
@@ -394,7 +394,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the render.
 	 *
 	 * @param string $render The render.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setRender($render) {
 		$this->render = $render;
@@ -405,7 +405,7 @@ final class HighchartsEvents implements JsonSerializable {
 	 * Set the selection.
 	 *
 	 * @param string $selection The selection.
-	 * @return HighchartsEvents Returns the highcharts events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents Returns the highcharts events.
 	 */
 	public function setSelection($selection) {
 		$this->selection = $selection;

@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Chart\ResetZoomButton;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition;
 
 /**
  * Highcharts position test.
@@ -30,7 +29,7 @@ final class HighchartsPositionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsPosition(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsPositionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsPosition(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition(false);
 
 		$res = ["verticalAlign" => "top", "x" => -10, "y" => 10];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

@@ -12,8 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Chart;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d;
-use WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame;
 
 /**
  * Highcharts options3d test.
@@ -31,7 +29,7 @@ final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsOptions3d(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -44,10 +42,10 @@ final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewFrame() {
 
-		$obj = new HighchartsOptions3d(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(false);
 
 		$res = $obj->newFrame();
-		$this->assertInstanceOf(HighchartsFrame::class, $res, "The method newFrame() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame::class, $res, "The method newFrame() does not return the expected class");
 	}
 
 	/**
@@ -57,7 +55,7 @@ final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsOptions3d(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(false);
 
 		$res = ["alpha" => 0, "beta" => 0, "depth" => 100, "enabled" => false, "fitToPlot" => true, "viewDistance" => 100];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

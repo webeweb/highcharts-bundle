@@ -272,7 +272,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the align.
 	 *
 	 * @param string $align The align.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setAlign($align) {
 		switch ($align) {
@@ -289,7 +289,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the floating.
 	 *
 	 * @param boolean $floating The floating.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setFloating($floating) {
 		$this->floating = $floating;
@@ -300,7 +300,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the margin.
 	 *
 	 * @param integer $margin The margin.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setMargin($margin) {
 		$this->margin = $margin;
@@ -311,7 +311,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the style.
 	 *
 	 * @param array $style The style.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setStyle(array $style = null) {
 		$this->style = $style;
@@ -322,7 +322,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the text.
 	 *
 	 * @param string $text The text.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setText($text) {
 		$this->text = $text;
@@ -333,7 +333,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the use HTML.
 	 *
 	 * @param boolean $useHTML The use HTML.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setUseHTML($useHTML) {
 		$this->useHTML = $useHTML;
@@ -344,7 +344,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the vertical align.
 	 *
 	 * @param string $verticalAlign The vertical align.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setVerticalAlign($verticalAlign) {
 		switch ($verticalAlign) {
@@ -361,7 +361,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the width adjust.
 	 *
 	 * @param integer $widthAdjust The width adjust.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setWidthAdjust($widthAdjust) {
 		$this->widthAdjust = $widthAdjust;
@@ -372,7 +372,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the x.
 	 *
 	 * @param integer $x The x.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setX($x) {
 		$this->x = $x;
@@ -383,7 +383,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the y.
 	 *
 	 * @param integer $y The y.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setY($y) {
 		$this->y = $y;

@@ -12,8 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\YAxis;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands;
-use WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel;
 
 /**
  * Highcharts plot bands test.
@@ -31,7 +29,7 @@ final class HighchartsPlotBandsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsPlotBands(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -44,10 +42,10 @@ final class HighchartsPlotBandsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewLabel() {
 
-		$obj = new HighchartsPlotBands(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands(false);
 
 		$res = $obj->newLabel();
-		$this->assertInstanceOf(HighchartsLabel::class, $res, "The method newLabel() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel::class, $res, "The method newLabel() does not return the expected class");
 	}
 
 	/**
@@ -57,7 +55,7 @@ final class HighchartsPlotBandsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsPlotBands(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands(false);
 
 		$res = ["borderWidth" => 0, "outerRadius" => "100%", "thickness" => "10"];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
@@ -82,34 +80,34 @@ final class HighchartsPlotBandsTest extends PHPUnit_Framework_TestCase {
 		$res4 = ["borderWidth" => 0, "outerRadius" => "100%", "thickness" => "10", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"]];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with events");
 
-		$obj->setFrom(22);
+		$obj->setFrom(26);
 
-		$res5 = ["borderWidth" => 0, "outerRadius" => "100%", "thickness" => "10", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 22];
+		$res5 = ["borderWidth" => 0, "outerRadius" => "100%", "thickness" => "10", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 26];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with from");
 
 		$obj->setId("b80bb7740288fda1f201890375a60c8f");
 
-		$res6 = ["borderWidth" => 0, "outerRadius" => "100%", "thickness" => "10", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 22, "id" => "b80bb7740288fda1f201890375a60c8f"];
+		$res6 = ["borderWidth" => 0, "outerRadius" => "100%", "thickness" => "10", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 26, "id" => "b80bb7740288fda1f201890375a60c8f"];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with id");
 
-		$obj->setInnerRadius(30);
+		$obj->setInnerRadius(85);
 
-		$res7 = ["borderWidth" => 0, "outerRadius" => "100%", "thickness" => "10", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 22, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 30];
+		$res7 = ["borderWidth" => 0, "outerRadius" => "100%", "thickness" => "10", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 26, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 85];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with inner radius");
 
 		$obj->newLabel();
 
-		$res8 = ["borderWidth" => 0, "outerRadius" => "100%", "thickness" => "10", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 22, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 30, "label" => []];
+		$res8 = ["borderWidth" => 0, "outerRadius" => "100%", "thickness" => "10", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 26, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 85, "label" => []];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with label");
 
-		$obj->setTo(76);
+		$obj->setTo(13);
 
-		$res9 = ["borderWidth" => 0, "outerRadius" => "100%", "thickness" => "10", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 22, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 30, "label" => [], "to" => 76];
+		$res9 = ["borderWidth" => 0, "outerRadius" => "100%", "thickness" => "10", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 26, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 85, "label" => [], "to" => 13];
 		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with to");
 
-		$obj->setZIndex(14);
+		$obj->setZIndex(58);
 
-		$res10 = ["borderWidth" => 0, "outerRadius" => "100%", "thickness" => "10", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 22, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 30, "label" => [], "to" => 76, "zIndex" => 14];
+		$res10 = ["borderWidth" => 0, "outerRadius" => "100%", "thickness" => "10", "borderColor" => "97da935a74593c55d78be9d1295aa994", "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 26, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 85, "label" => [], "to" => 13, "zIndex" => 58];
 		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with z index");
 	}
 

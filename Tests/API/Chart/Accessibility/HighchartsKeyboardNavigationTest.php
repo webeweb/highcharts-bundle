@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Accessibility;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation;
 
 /**
  * Highcharts keyboard navigation test.
@@ -30,7 +29,7 @@ final class HighchartsKeyboardNavigationTest extends PHPUnit_Framework_TestCase 
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsKeyboardNavigation(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsKeyboardNavigationTest extends PHPUnit_Framework_TestCase 
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsKeyboardNavigation(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation(false);
 
 		$res = ["enabled" => true, "skipNullPoints" => false, "tabThroughChartElements" => true];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

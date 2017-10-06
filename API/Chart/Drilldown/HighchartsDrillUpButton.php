@@ -121,7 +121,7 @@ final class HighchartsDrillUpButton implements JsonSerializable {
 	 * Set the position.
 	 *
 	 * @param array $position The position.
-	 * @return HighchartsDrillUpButton Returns the highcharts drill up button.
+	 * @return \WBW\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton Returns the highcharts drill up button.
 	 */
 	public function setPosition(array $position = null) {
 		$this->position = $position;
@@ -132,7 +132,7 @@ final class HighchartsDrillUpButton implements JsonSerializable {
 	 * Set the relative to.
 	 *
 	 * @param string $relativeTo The relative to.
-	 * @return HighchartsDrillUpButton Returns the highcharts drill up button.
+	 * @return \WBW\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton Returns the highcharts drill up button.
 	 */
 	public function setRelativeTo($relativeTo) {
 		$this->relativeTo = $relativeTo;
@@ -143,7 +143,7 @@ final class HighchartsDrillUpButton implements JsonSerializable {
 	 * Set the theme.
 	 *
 	 * @param array $theme The theme.
-	 * @return HighchartsDrillUpButton Returns the highcharts drill up button.
+	 * @return \WBW\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton Returns the highcharts drill up button.
 	 */
 	public function setTheme(array $theme = null) {
 		$this->theme = $theme;

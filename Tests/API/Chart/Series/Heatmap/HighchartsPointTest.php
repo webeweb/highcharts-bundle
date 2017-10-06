@@ -12,8 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Heatmap;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsPoint;
-use WBW\HighchartsBundle\API\Chart\Series\Heatmap\Point\HighchartsEvents;
 
 /**
  * Highcharts point test.
@@ -31,7 +29,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsPoint(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsPoint(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -44,10 +42,10 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewEvents() {
 
-		$obj = new HighchartsPoint(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsPoint(false);
 
 		$res = $obj->newEvents();
-		$this->assertInstanceOf(HighchartsEvents::class, $res, "The method newEvents() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Series\Heatmap\Point\HighchartsEvents::class, $res, "The method newEvents() does not return the expected class");
 	}
 
 	/**
@@ -57,7 +55,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsPoint(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsPoint(false);
 
 		$obj->newEvents();
 

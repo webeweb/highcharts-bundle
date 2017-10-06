@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\PlotOptions\Spline;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\Marker\HighchartsStates;
 
 /**
  * Highcharts marker.
@@ -70,7 +69,7 @@ final class HighchartsMarker implements JsonSerializable {
 	/**
 	 * States.
 	 *
-	 * @var HighchartsStates
+	 * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\Marker\HighchartsStates
 	 */
 	private $states;
 
@@ -210,7 +209,7 @@ final class HighchartsMarker implements JsonSerializable {
 	/**
 	 * Get the states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\Marker\HighchartsStates Returns the states.
 	 */
 	public function getStates() {
 		return $this->states;
@@ -246,10 +245,10 @@ final class HighchartsMarker implements JsonSerializable {
 	/**
 	 * Create a new states.
 	 *
-	 * @return HighchartsStates Returns the states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\Marker\HighchartsStates Returns the states.
 	 */
 	public function newStates() {
-		$this->states = new HighchartsStates();
+		$this->states = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\Marker\HighchartsStates();
 		return $this->states;
 	}
 
@@ -257,7 +256,7 @@ final class HighchartsMarker implements JsonSerializable {
 	 * Set the enabled.
 	 *
 	 * @param boolean $enabled The enabled.
-	 * @return HighchartsMarker Returns the highcharts marker.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\HighchartsMarker Returns the highcharts marker.
 	 */
 	public function setEnabled($enabled) {
 		$this->enabled = $enabled;
@@ -268,7 +267,7 @@ final class HighchartsMarker implements JsonSerializable {
 	 * Set the fill color.
 	 *
 	 * @param string $fillColor The fill color.
-	 * @return HighchartsMarker Returns the highcharts marker.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\HighchartsMarker Returns the highcharts marker.
 	 */
 	public function setFillColor($fillColor) {
 		$this->fillColor = $fillColor;
@@ -279,7 +278,7 @@ final class HighchartsMarker implements JsonSerializable {
 	 * Set the height.
 	 *
 	 * @param integer $height The height.
-	 * @return HighchartsMarker Returns the highcharts marker.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\HighchartsMarker Returns the highcharts marker.
 	 */
 	public function setHeight($height) {
 		$this->height = $height;
@@ -290,7 +289,7 @@ final class HighchartsMarker implements JsonSerializable {
 	 * Set the line color.
 	 *
 	 * @param string $lineColor The line color.
-	 * @return HighchartsMarker Returns the highcharts marker.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\HighchartsMarker Returns the highcharts marker.
 	 */
 	public function setLineColor($lineColor) {
 		$this->lineColor = $lineColor;
@@ -301,7 +300,7 @@ final class HighchartsMarker implements JsonSerializable {
 	 * Set the line width.
 	 *
 	 * @param integer $lineWidth The line width.
-	 * @return HighchartsMarker Returns the highcharts marker.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\HighchartsMarker Returns the highcharts marker.
 	 */
 	public function setLineWidth($lineWidth) {
 		$this->lineWidth = $lineWidth;
@@ -312,7 +311,7 @@ final class HighchartsMarker implements JsonSerializable {
 	 * Set the radius.
 	 *
 	 * @param integer $radius The radius.
-	 * @return HighchartsMarker Returns the highcharts marker.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\HighchartsMarker Returns the highcharts marker.
 	 */
 	public function setRadius($radius) {
 		$this->radius = $radius;
@@ -322,10 +321,10 @@ final class HighchartsMarker implements JsonSerializable {
 	/**
 	 * Set the states.
 	 *
-	 * @param HighchartsStates $states The states.
-	 * @return HighchartsMarker Returns the highcharts marker.
+	 * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\Marker\HighchartsStates $states The states.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\HighchartsMarker Returns the highcharts marker.
 	 */
-	public function setStates(HighchartsStates $states = null) {
+	public function setStates(\WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\Marker\HighchartsStates $states = null) {
 		$this->states = $states;
 		return $this;
 	}
@@ -334,7 +333,7 @@ final class HighchartsMarker implements JsonSerializable {
 	 * Set the symbol.
 	 *
 	 * @param string $symbol The symbol.
-	 * @return HighchartsMarker Returns the highcharts marker.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\HighchartsMarker Returns the highcharts marker.
 	 */
 	public function setSymbol($symbol) {
 		switch ($symbol) {
@@ -354,7 +353,7 @@ final class HighchartsMarker implements JsonSerializable {
 	 * Set the width.
 	 *
 	 * @param integer $width The width.
-	 * @return HighchartsMarker Returns the highcharts marker.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Spline\HighchartsMarker Returns the highcharts marker.
 	 */
 	public function setWidth($width) {
 		$this->width = $width;

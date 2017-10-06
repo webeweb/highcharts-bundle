@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Pyramid;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsDataLabels;
 
 /**
  * Highcharts data labels test.
@@ -30,7 +29,7 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsDataLabels(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsDataLabels(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsDataLabels(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsDataLabels(false);
 
 		$res = ["borderRadius" => 0, "borderWidth" => 0, "connectorColor" => "{point.color}", "connectorPadding" => 5, "connectorWidth" => 1, "crop" => true, "defer" => true, "distance" => 30, "enabled" => true, "format" => "{y}", "overflow" => "justify", "padding" => 5, "rotation" => 0, "shadow" => false, "shape" => "square", "softConnector" => true, "style" => ["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], "useHTML" => false, "x" => 0, "y" => -6, "zIndex" => 6];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

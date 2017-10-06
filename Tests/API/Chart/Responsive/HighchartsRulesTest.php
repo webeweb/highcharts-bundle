@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Responsive;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules;
 
 /**
  * Highcharts rules test.
@@ -30,7 +29,7 @@ final class HighchartsRulesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsRules(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsRulesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsRules(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules(false);
 
 		$obj->setChartOptions(["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"]);
 

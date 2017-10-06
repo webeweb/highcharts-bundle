@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\YAxis;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels;
 
 /**
  * Highcharts stack labels test.
@@ -30,7 +29,7 @@ final class HighchartsStackLabelsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsStackLabels(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsStackLabelsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsStackLabels(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels(false);
 
 		$res = ["enabled" => false, "format" => "{total}", "rotation" => 0, "style" => ["color" => "#000000", "fontSize" => "11px", "fontWeight" => "bold", "textShadow" => "1px 1px contrast, -1px -1px contrast, -1px 1px contrast, 1px -1px contrast"], "useHTML" => false];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
@@ -68,14 +67,14 @@ final class HighchartsStackLabelsTest extends PHPUnit_Framework_TestCase {
 		$res4 = ["enabled" => false, "format" => "{total}", "rotation" => 0, "style" => ["color" => "#000000", "fontSize" => "11px", "fontWeight" => "bold", "textShadow" => "1px 1px contrast, -1px -1px contrast, -1px 1px contrast, 1px -1px contrast"], "useHTML" => false, "align" => "right", "formatter" => "f2ffc59487832cbad265a8fef2133592", "textAlign" => "right", "verticalAlign" => "bottom"];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
 
-		$obj->setX(56);
+		$obj->setX(66);
 
-		$res5 = ["enabled" => false, "format" => "{total}", "rotation" => 0, "style" => ["color" => "#000000", "fontSize" => "11px", "fontWeight" => "bold", "textShadow" => "1px 1px contrast, -1px -1px contrast, -1px 1px contrast, 1px -1px contrast"], "useHTML" => false, "align" => "right", "formatter" => "f2ffc59487832cbad265a8fef2133592", "textAlign" => "right", "verticalAlign" => "bottom", "x" => 56];
+		$res5 = ["enabled" => false, "format" => "{total}", "rotation" => 0, "style" => ["color" => "#000000", "fontSize" => "11px", "fontWeight" => "bold", "textShadow" => "1px 1px contrast, -1px -1px contrast, -1px 1px contrast, 1px -1px contrast"], "useHTML" => false, "align" => "right", "formatter" => "f2ffc59487832cbad265a8fef2133592", "textAlign" => "right", "verticalAlign" => "bottom", "x" => 66];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with x");
 
-		$obj->setY(21);
+		$obj->setY(76);
 
-		$res6 = ["enabled" => false, "format" => "{total}", "rotation" => 0, "style" => ["color" => "#000000", "fontSize" => "11px", "fontWeight" => "bold", "textShadow" => "1px 1px contrast, -1px -1px contrast, -1px 1px contrast, 1px -1px contrast"], "useHTML" => false, "align" => "right", "formatter" => "f2ffc59487832cbad265a8fef2133592", "textAlign" => "right", "verticalAlign" => "bottom", "x" => 56, "y" => 21];
+		$res6 = ["enabled" => false, "format" => "{total}", "rotation" => 0, "style" => ["color" => "#000000", "fontSize" => "11px", "fontWeight" => "bold", "textShadow" => "1px 1px contrast, -1px -1px contrast, -1px 1px contrast, 1px -1px contrast"], "useHTML" => false, "align" => "right", "formatter" => "f2ffc59487832cbad265a8fef2133592", "textAlign" => "right", "verticalAlign" => "bottom", "x" => 66, "y" => 76];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with y");
 	}
 

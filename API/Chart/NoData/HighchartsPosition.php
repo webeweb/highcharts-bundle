@@ -139,7 +139,7 @@ final class HighchartsPosition implements JsonSerializable {
 	 * Set the align.
 	 *
 	 * @param string $align The align.
-	 * @return HighchartsPosition Returns the highcharts position.
+	 * @return \WBW\HighchartsBundle\API\Chart\NoData\HighchartsPosition Returns the highcharts position.
 	 */
 	public function setAlign($align) {
 		switch ($align) {
@@ -156,7 +156,7 @@ final class HighchartsPosition implements JsonSerializable {
 	 * Set the vertical align.
 	 *
 	 * @param string $verticalAlign The vertical align.
-	 * @return HighchartsPosition Returns the highcharts position.
+	 * @return \WBW\HighchartsBundle\API\Chart\NoData\HighchartsPosition Returns the highcharts position.
 	 */
 	public function setVerticalAlign($verticalAlign) {
 		switch ($verticalAlign) {
@@ -173,7 +173,7 @@ final class HighchartsPosition implements JsonSerializable {
 	 * Set the x.
 	 *
 	 * @param integer $x The x.
-	 * @return HighchartsPosition Returns the highcharts position.
+	 * @return \WBW\HighchartsBundle\API\Chart\NoData\HighchartsPosition Returns the highcharts position.
 	 */
 	public function setX($x) {
 		$this->x = $x;
@@ -184,7 +184,7 @@ final class HighchartsPosition implements JsonSerializable {
 	 * Set the y.
 	 *
 	 * @param integer $y The y.
-	 * @return HighchartsPosition Returns the highcharts position.
+	 * @return \WBW\HighchartsBundle\API\Chart\NoData\HighchartsPosition Returns the highcharts position.
 	 */
 	public function setY($y) {
 		$this->y = $y;

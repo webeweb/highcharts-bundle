@@ -187,7 +187,7 @@ final class HighchartsDrilldown implements JsonSerializable {
 	 * Set the active axis label style.
 	 *
 	 * @param array $activeAxisLabelStyle The active axis label style.
-	 * @return HighchartsDrilldown Returns the highcharts drilldown.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsDrilldown Returns the highcharts drilldown.
 	 */
 	public function setActiveAxisLabelStyle(array $activeAxisLabelStyle = null) {
 		$this->activeAxisLabelStyle = $activeAxisLabelStyle;
@@ -198,7 +198,7 @@ final class HighchartsDrilldown implements JsonSerializable {
 	 * Set the active data label style.
 	 *
 	 * @param array $activeDataLabelStyle The active data label style.
-	 * @return HighchartsDrilldown Returns the highcharts drilldown.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsDrilldown Returns the highcharts drilldown.
 	 */
 	public function setActiveDataLabelStyle(array $activeDataLabelStyle = null) {
 		$this->activeDataLabelStyle = $activeDataLabelStyle;
@@ -209,7 +209,7 @@ final class HighchartsDrilldown implements JsonSerializable {
 	 * Set the allow point drilldown.
 	 *
 	 * @param boolean $allowPointDrilldown The allow point drilldown.
-	 * @return HighchartsDrilldown Returns the highcharts drilldown.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsDrilldown Returns the highcharts drilldown.
 	 */
 	public function setAllowPointDrilldown($allowPointDrilldown) {
 		$this->allowPointDrilldown = $allowPointDrilldown;
@@ -220,7 +220,7 @@ final class HighchartsDrilldown implements JsonSerializable {
 	 * Set the animation.
 	 *
 	 * @param boolean|array $animation The animation.
-	 * @return HighchartsDrilldown Returns the highcharts drilldown.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsDrilldown Returns the highcharts drilldown.
 	 */
 	public function setAnimation($animation) {
 		$this->animation = $animation;
@@ -231,7 +231,7 @@ final class HighchartsDrilldown implements JsonSerializable {
 	 * Set the drill up button.
 	 *
 	 * @param array $drillUpButton The drill up button.
-	 * @return HighchartsDrilldown Returns the highcharts drilldown.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsDrilldown Returns the highcharts drilldown.
 	 */
 	public function setDrillUpButton(array $drillUpButton = null) {
 		$this->drillUpButton = $drillUpButton;
@@ -242,7 +242,7 @@ final class HighchartsDrilldown implements JsonSerializable {
 	 * Set the series.
 	 *
 	 * @param array $series The series.
-	 * @return HighchartsDrilldown Returns the highcharts drilldown.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsDrilldown Returns the highcharts drilldown.
 	 */
 	public function setSeries(array $series = null) {
 		$this->series = $series;

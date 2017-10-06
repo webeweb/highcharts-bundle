@@ -12,10 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Chart\Options3d;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame;
-use WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack;
-use WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom;
-use WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide;
 
 /**
  * Highcharts frame test.
@@ -33,7 +29,7 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsFrame(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -46,10 +42,10 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewBack() {
 
-		$obj = new HighchartsFrame(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
 		$res = $obj->newBack();
-		$this->assertInstanceOf(HighchartsBack::class, $res, "The method newBack() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack::class, $res, "The method newBack() does not return the expected class");
 	}
 
 	/**
@@ -59,10 +55,10 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewBottom() {
 
-		$obj = new HighchartsFrame(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
 		$res = $obj->newBottom();
-		$this->assertInstanceOf(HighchartsBottom::class, $res, "The method newBottom() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom::class, $res, "The method newBottom() does not return the expected class");
 	}
 
 	/**
@@ -72,10 +68,10 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewSide() {
 
-		$obj = new HighchartsFrame(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
 		$res = $obj->newSide();
-		$this->assertInstanceOf(HighchartsSide::class, $res, "The method newSide() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide::class, $res, "The method newSide() does not return the expected class");
 	}
 
 	/**
@@ -85,7 +81,7 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsFrame(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
 		$obj->newBack();
 

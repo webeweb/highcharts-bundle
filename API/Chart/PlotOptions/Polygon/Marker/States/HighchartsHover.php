@@ -204,7 +204,7 @@ final class HighchartsHover implements JsonSerializable {
 	 * Set the enabled.
 	 *
 	 * @param boolean $enabled The enabled.
-	 * @return HighchartsHover Returns the highcharts hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\States\HighchartsHover Returns the highcharts hover.
 	 */
 	public function setEnabled($enabled) {
 		$this->enabled = $enabled;
@@ -215,7 +215,7 @@ final class HighchartsHover implements JsonSerializable {
 	 * Set the fill color.
 	 *
 	 * @param string $fillColor The fill color.
-	 * @return HighchartsHover Returns the highcharts hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\States\HighchartsHover Returns the highcharts hover.
 	 */
 	public function setFillColor($fillColor) {
 		$this->fillColor = $fillColor;
@@ -226,7 +226,7 @@ final class HighchartsHover implements JsonSerializable {
 	 * Set the line color.
 	 *
 	 * @param string $lineColor The line color.
-	 * @return HighchartsHover Returns the highcharts hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\States\HighchartsHover Returns the highcharts hover.
 	 */
 	public function setLineColor($lineColor) {
 		$this->lineColor = $lineColor;
@@ -237,7 +237,7 @@ final class HighchartsHover implements JsonSerializable {
 	 * Set the line width.
 	 *
 	 * @param integer $lineWidth The line width.
-	 * @return HighchartsHover Returns the highcharts hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\States\HighchartsHover Returns the highcharts hover.
 	 */
 	public function setLineWidth($lineWidth) {
 		$this->lineWidth = $lineWidth;
@@ -248,7 +248,7 @@ final class HighchartsHover implements JsonSerializable {
 	 * Set the line width plus.
 	 *
 	 * @param integer $lineWidthPlus The line width plus.
-	 * @return HighchartsHover Returns the highcharts hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\States\HighchartsHover Returns the highcharts hover.
 	 */
 	public function setLineWidthPlus($lineWidthPlus) {
 		$this->lineWidthPlus = $lineWidthPlus;
@@ -259,7 +259,7 @@ final class HighchartsHover implements JsonSerializable {
 	 * Set the radius.
 	 *
 	 * @param integer $radius The radius.
-	 * @return HighchartsHover Returns the highcharts hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\States\HighchartsHover Returns the highcharts hover.
 	 */
 	public function setRadius($radius) {
 		$this->radius = $radius;
@@ -270,7 +270,7 @@ final class HighchartsHover implements JsonSerializable {
 	 * Set the radius plus.
 	 *
 	 * @param integer $radiusPlus The radius plus.
-	 * @return HighchartsHover Returns the highcharts hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker\States\HighchartsHover Returns the highcharts hover.
 	 */
 	public function setRadiusPlus($radiusPlus) {
 		$this->radiusPlus = $radiusPlus;

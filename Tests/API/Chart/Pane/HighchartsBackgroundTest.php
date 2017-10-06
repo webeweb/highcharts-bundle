@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Pane;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Pane\HighchartsBackground;
 
 /**
  * Highcharts background test.
@@ -30,7 +29,7 @@ final class HighchartsBackgroundTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsBackground(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Pane\HighchartsBackground(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsBackgroundTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsBackground(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Pane\HighchartsBackground(false);
 
 		$res = ["borderColor" => "#cccccc", "borderWidth" => 1, "className" => "highcharts-pane", "innerRadius" => "0", "outerRadius" => "105%", "shape" => "solid"];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

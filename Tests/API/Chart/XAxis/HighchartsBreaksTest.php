@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\XAxis;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks;
 
 /**
  * Highcharts breaks test.
@@ -30,7 +29,7 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsBreaks(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,19 +42,19 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsBreaks(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks(false);
 
 		$res = ["breakSize" => 0, "repeat" => 0];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
-		$obj->setFrom(60);
+		$obj->setFrom(33);
 
-		$res1 = ["breakSize" => 0, "repeat" => 0, "from" => 60];
+		$res1 = ["breakSize" => 0, "repeat" => 0, "from" => 33];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with from");
 
-		$obj->setTo(66);
+		$obj->setTo(7);
 
-		$res2 = ["breakSize" => 0, "repeat" => 0, "from" => 60, "to" => 66];
+		$res2 = ["breakSize" => 0, "repeat" => 0, "from" => 33, "to" => 7];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with to");
 	}
 

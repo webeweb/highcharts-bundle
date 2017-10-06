@@ -12,8 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\States\HighchartsHover;
-use WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\States\HighchartsSelect;
 
 /**
  * Highcharts states.
@@ -28,14 +26,14 @@ final class HighchartsStates implements JsonSerializable {
 	/**
 	 * Hover.
 	 *
-	 * @var HighchartsHover
+	 * @var \WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\States\HighchartsHover
 	 */
 	private $hover;
 
 	/**
 	 * Select.
 	 *
-	 * @var HighchartsSelect
+	 * @var \WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\States\HighchartsSelect
 	 */
 	private $select;
 
@@ -71,7 +69,7 @@ final class HighchartsStates implements JsonSerializable {
 	/**
 	 * Get the hover.
 	 *
-	 * @return HighchartsHover Returns the hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\States\HighchartsHover Returns the hover.
 	 */
 	public function getHover() {
 		return $this->hover;
@@ -80,7 +78,7 @@ final class HighchartsStates implements JsonSerializable {
 	/**
 	 * Get the select.
 	 *
-	 * @return HighchartsSelect Returns the select.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\States\HighchartsSelect Returns the select.
 	 */
 	public function getSelect() {
 		return $this->select;
@@ -98,30 +96,30 @@ final class HighchartsStates implements JsonSerializable {
 	/**
 	 * Create a new hover.
 	 *
-	 * @return HighchartsHover Returns the hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\States\HighchartsHover Returns the hover.
 	 */
 	public function newHover() {
-		$this->hover = new HighchartsHover();
+		$this->hover = new \WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\States\HighchartsHover();
 		return $this->hover;
 	}
 
 	/**
 	 * Create a new select.
 	 *
-	 * @return HighchartsSelect Returns the select.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\States\HighchartsSelect Returns the select.
 	 */
 	public function newSelect() {
-		$this->select = new HighchartsSelect();
+		$this->select = new \WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\States\HighchartsSelect();
 		return $this->select;
 	}
 
 	/**
 	 * Set the hover.
 	 *
-	 * @param HighchartsHover $hover The hover.
-	 * @return HighchartsStates Returns the highcharts states.
+	 * @param \WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\States\HighchartsHover $hover The hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\HighchartsStates Returns the highcharts states.
 	 */
-	public function setHover(HighchartsHover $hover = null) {
+	public function setHover(\WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\States\HighchartsHover $hover = null) {
 		$this->hover = $hover;
 		return $this;
 	}
@@ -129,10 +127,10 @@ final class HighchartsStates implements JsonSerializable {
 	/**
 	 * Set the select.
 	 *
-	 * @param HighchartsSelect $select The select.
-	 * @return HighchartsStates Returns the highcharts states.
+	 * @param \WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\States\HighchartsSelect $select The select.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\HighchartsStates Returns the highcharts states.
 	 */
-	public function setSelect(HighchartsSelect $select = null) {
+	public function setSelect(\WBW\HighchartsBundle\API\Chart\Series\Polygon\Marker\States\HighchartsSelect $select = null) {
 		$this->select = $select;
 		return $this;
 	}

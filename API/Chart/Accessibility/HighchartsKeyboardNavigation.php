@@ -121,7 +121,7 @@ final class HighchartsKeyboardNavigation implements JsonSerializable {
 	 * Set the enabled.
 	 *
 	 * @param boolean $enabled The enabled.
-	 * @return HighchartsKeyboardNavigation Returns the highcharts keyboard navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation Returns the highcharts keyboard navigation.
 	 */
 	public function setEnabled($enabled) {
 		$this->enabled = $enabled;
@@ -132,7 +132,7 @@ final class HighchartsKeyboardNavigation implements JsonSerializable {
 	 * Set the skip null points.
 	 *
 	 * @param boolean $skipNullPoints The skip null points.
-	 * @return HighchartsKeyboardNavigation Returns the highcharts keyboard navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation Returns the highcharts keyboard navigation.
 	 */
 	public function setSkipNullPoints($skipNullPoints) {
 		$this->skipNullPoints = $skipNullPoints;
@@ -143,7 +143,7 @@ final class HighchartsKeyboardNavigation implements JsonSerializable {
 	 * Set the tab through chart elements.
 	 *
 	 * @param boolean $tabThroughChartElements The tab through chart elements.
-	 * @return HighchartsKeyboardNavigation Returns the highcharts keyboard navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation Returns the highcharts keyboard navigation.
 	 */
 	public function setTabThroughChartElements($tabThroughChartElements) {
 		$this->tabThroughChartElements = $tabThroughChartElements;

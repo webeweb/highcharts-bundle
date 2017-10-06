@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\HighchartsAccessibility;
 
 /**
  * Highcharts accessibility test.
@@ -30,7 +29,7 @@ final class HighchartsAccessibilityTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsAccessibility(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsAccessibilityTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsAccessibility(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility(false);
 
 		$res = ["describeSingleSeries" => false, "enabled" => true, "pointDescriptionThreshold" => 30];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

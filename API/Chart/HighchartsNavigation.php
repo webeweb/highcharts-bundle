@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions;
 
 /**
  * Highcharts navigation.
@@ -27,7 +26,7 @@ final class HighchartsNavigation implements JsonSerializable {
 	/**
 	 * Button options.
 	 *
-	 * @var HighchartsButtonOptions
+	 * @var \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions
 	 */
 	private $buttonOptions;
 
@@ -97,7 +96,7 @@ final class HighchartsNavigation implements JsonSerializable {
 	/**
 	 * Get the button options.
 	 *
-	 * @return HighchartsButtonOptions Returns the button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the button options.
 	 */
 	public function getButtonOptions() {
 		return $this->buttonOptions;
@@ -142,20 +141,20 @@ final class HighchartsNavigation implements JsonSerializable {
 	/**
 	 * Create a new button options.
 	 *
-	 * @return HighchartsButtonOptions Returns the button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the button options.
 	 */
 	public function newButtonOptions() {
-		$this->buttonOptions = new HighchartsButtonOptions();
+		$this->buttonOptions = new \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions();
 		return $this->buttonOptions;
 	}
 
 	/**
 	 * Set the button options.
 	 *
-	 * @param HighchartsButtonOptions $buttonOptions The button options.
-	 * @return HighchartsNavigation Returns the highcharts navigation.
+	 * @param \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions $buttonOptions The button options.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsNavigation Returns the highcharts navigation.
 	 */
-	public function setButtonOptions(HighchartsButtonOptions $buttonOptions = null) {
+	public function setButtonOptions(\WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions $buttonOptions = null) {
 		$this->buttonOptions = $buttonOptions;
 		return $this;
 	}
@@ -164,7 +163,7 @@ final class HighchartsNavigation implements JsonSerializable {
 	 * Set the menu item hover style.
 	 *
 	 * @param array $menuItemHoverStyle The menu item hover style.
-	 * @return HighchartsNavigation Returns the highcharts navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsNavigation Returns the highcharts navigation.
 	 */
 	public function setMenuItemHoverStyle(array $menuItemHoverStyle = null) {
 		$this->menuItemHoverStyle = $menuItemHoverStyle;
@@ -175,7 +174,7 @@ final class HighchartsNavigation implements JsonSerializable {
 	 * Set the menu item style.
 	 *
 	 * @param array $menuItemStyle The menu item style.
-	 * @return HighchartsNavigation Returns the highcharts navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsNavigation Returns the highcharts navigation.
 	 */
 	public function setMenuItemStyle(array $menuItemStyle = null) {
 		$this->menuItemStyle = $menuItemStyle;
@@ -186,7 +185,7 @@ final class HighchartsNavigation implements JsonSerializable {
 	 * Set the menu style.
 	 *
 	 * @param array $menuStyle The menu style.
-	 * @return HighchartsNavigation Returns the highcharts navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsNavigation Returns the highcharts navigation.
 	 */
 	public function setMenuStyle(array $menuStyle = null) {
 		$this->menuStyle = $menuStyle;

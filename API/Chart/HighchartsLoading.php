@@ -143,7 +143,7 @@ final class HighchartsLoading implements JsonSerializable {
 	 * Set the hide duration.
 	 *
 	 * @param integer $hideDuration The hide duration.
-	 * @return HighchartsLoading Returns the highcharts loading.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLoading Returns the highcharts loading.
 	 */
 	public function setHideDuration($hideDuration) {
 		$this->hideDuration = $hideDuration;
@@ -154,7 +154,7 @@ final class HighchartsLoading implements JsonSerializable {
 	 * Set the label style.
 	 *
 	 * @param array $labelStyle The label style.
-	 * @return HighchartsLoading Returns the highcharts loading.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLoading Returns the highcharts loading.
 	 */
 	public function setLabelStyle(array $labelStyle = null) {
 		$this->labelStyle = $labelStyle;
@@ -165,7 +165,7 @@ final class HighchartsLoading implements JsonSerializable {
 	 * Set the show duration.
 	 *
 	 * @param integer $showDuration The show duration.
-	 * @return HighchartsLoading Returns the highcharts loading.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLoading Returns the highcharts loading.
 	 */
 	public function setShowDuration($showDuration) {
 		$this->showDuration = $showDuration;
@@ -176,7 +176,7 @@ final class HighchartsLoading implements JsonSerializable {
 	 * Set the style.
 	 *
 	 * @param array $style The style.
-	 * @return HighchartsLoading Returns the highcharts loading.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLoading Returns the highcharts loading.
 	 */
 	public function setStyle(array $style = null) {
 		$this->style = $style;

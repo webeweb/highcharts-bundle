@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\HighchartsSeries;
 
 /**
  * Highcharts series test.
@@ -30,7 +29,7 @@ final class HighchartsSeriesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsSeries(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsSeries(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsSeriesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsSeries(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsSeries(false);
 
 		$res = ["xAxis" => "0", "yAxis" => "0"];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
@@ -58,34 +57,34 @@ final class HighchartsSeriesTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f"];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with id");
 
-		$obj->setIndex(30);
+		$obj->setIndex(44);
 
-		$res3 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 30];
+		$res3 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 44];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with index");
 
-		$obj->setLegendIndex(47);
+		$obj->setLegendIndex(38);
 
-		$res4 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 30, "legendIndex" => 47];
+		$res4 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 44, "legendIndex" => 38];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with legend index");
 
 		$obj->setName("b068931cc450442b63f5b3d276ea4297");
 
-		$res5 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 30, "legendIndex" => 47, "name" => "b068931cc450442b63f5b3d276ea4297"];
+		$res5 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 44, "legendIndex" => 38, "name" => "b068931cc450442b63f5b3d276ea4297"];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with name");
 
 		$obj->setStack("fac2a47adace059aff113283a03f6760");
 
-		$res6 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 30, "legendIndex" => 47, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760"];
+		$res6 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 44, "legendIndex" => 38, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760"];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with stack");
 
 		$obj->setType("waterfall");
 
-		$res7 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 30, "legendIndex" => 47, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall"];
+		$res7 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 44, "legendIndex" => 38, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall"];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with type");
 
-		$obj->setZIndex(54);
+		$obj->setZIndex(12);
 
-		$res8 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 30, "legendIndex" => 47, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall", "zIndex" => 54];
+		$res8 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 44, "legendIndex" => 38, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall", "zIndex" => 12];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with z index");
 	}
 

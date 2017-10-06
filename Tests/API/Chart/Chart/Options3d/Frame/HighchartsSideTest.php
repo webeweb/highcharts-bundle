@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Chart\Options3d\Frame;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide;
 
 /**
  * Highcharts side test.
@@ -30,7 +29,7 @@ final class HighchartsSideTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsSide(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsSideTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsSide(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide(false);
 
 		$res = ["color" => "transparent", "size" => 1];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

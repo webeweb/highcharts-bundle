@@ -12,8 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Scatter;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\Series\Scatter\HighchartsMarker;
-use WBW\HighchartsBundle\API\Chart\Series\Scatter\Marker\HighchartsStates;
 
 /**
  * Highcharts marker test.
@@ -31,7 +29,7 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsMarker(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Scatter\HighchartsMarker(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -44,10 +42,10 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewStates() {
 
-		$obj = new HighchartsMarker(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Scatter\HighchartsMarker(false);
 
 		$res = $obj->newStates();
-		$this->assertInstanceOf(HighchartsStates::class, $res, "The method newStates() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Series\Scatter\Marker\HighchartsStates::class, $res, "The method newStates() does not return the expected class");
 	}
 
 	/**
@@ -57,7 +55,7 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsMarker(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Scatter\HighchartsMarker(false);
 
 		$res = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
@@ -72,24 +70,24 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-		$obj->setHeight(54);
+		$obj->setHeight(22);
 
-		$res3 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 54];
+		$res3 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 22];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with height");
 
 		$obj->newStates();
 
-		$res4 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 54, "states" => []];
+		$res4 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 22, "states" => []];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with states");
 
 		$obj->setSymbol("triangle-down");
 
-		$res5 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 54, "states" => [], "symbol" => "triangle-down"];
+		$res5 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 22, "states" => [], "symbol" => "triangle-down"];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with symbol");
 
-		$obj->setWidth(97);
+		$obj->setWidth(42);
 
-		$res6 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 54, "states" => [], "symbol" => "triangle-down", "width" => 97];
+		$res6 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 22, "states" => [], "symbol" => "triangle-down", "width" => 42];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with width");
 	}
 

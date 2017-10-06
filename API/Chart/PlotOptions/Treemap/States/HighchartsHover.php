@@ -184,7 +184,7 @@ final class HighchartsHover implements JsonSerializable {
 	 * Set the animation.
 	 *
 	 * @param boolean|array $animation The animation.
-	 * @return HighchartsHover Returns the highcharts hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover Returns the highcharts hover.
 	 */
 	public function setAnimation($animation) {
 		$this->animation = $animation;
@@ -195,7 +195,7 @@ final class HighchartsHover implements JsonSerializable {
 	 * Set the border color.
 	 *
 	 * @param string $borderColor The border color.
-	 * @return HighchartsHover Returns the highcharts hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover Returns the highcharts hover.
 	 */
 	public function setBorderColor($borderColor) {
 		$this->borderColor = $borderColor;
@@ -206,7 +206,7 @@ final class HighchartsHover implements JsonSerializable {
 	 * Set the brightness.
 	 *
 	 * @param integer $brightness The brightness.
-	 * @return HighchartsHover Returns the highcharts hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover Returns the highcharts hover.
 	 */
 	public function setBrightness($brightness) {
 		$this->brightness = $brightness;
@@ -217,7 +217,7 @@ final class HighchartsHover implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsHover Returns the highcharts hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover Returns the highcharts hover.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -228,7 +228,7 @@ final class HighchartsHover implements JsonSerializable {
 	 * Set the enabled.
 	 *
 	 * @param boolean $enabled The enabled.
-	 * @return HighchartsHover Returns the highcharts hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover Returns the highcharts hover.
 	 */
 	public function setEnabled($enabled) {
 		$this->enabled = $enabled;
@@ -239,7 +239,7 @@ final class HighchartsHover implements JsonSerializable {
 	 * Set the opacity.
 	 *
 	 * @param integer $opacity The opacity.
-	 * @return HighchartsHover Returns the highcharts hover.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover Returns the highcharts hover.
 	 */
 	public function setOpacity($opacity) {
 		$this->opacity = $opacity;

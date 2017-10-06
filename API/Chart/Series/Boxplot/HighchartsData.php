@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart\Series\Boxplot;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Series\Boxplot\Data\HighchartsEvents;
 
 /**
  * Highcharts data.
@@ -73,7 +72,7 @@ final class HighchartsData implements JsonSerializable {
 	/**
 	 * Events.
 	 *
-	 * @var HighchartsEvents
+	 * @var \WBW\HighchartsBundle\API\Chart\Series\Boxplot\Data\HighchartsEvents
 	 */
 	private $events;
 
@@ -321,7 +320,7 @@ final class HighchartsData implements JsonSerializable {
 	/**
 	 * Get the events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\Data\HighchartsEvents Returns the events.
 	 */
 	public function getEvents() {
 		return $this->events;
@@ -438,10 +437,10 @@ final class HighchartsData implements JsonSerializable {
 	/**
 	 * Create a new events.
 	 *
-	 * @return HighchartsEvents Returns the events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\Data\HighchartsEvents Returns the events.
 	 */
 	public function newEvents() {
-		$this->events = new HighchartsEvents();
+		$this->events = new \WBW\HighchartsBundle\API\Chart\Series\Boxplot\Data\HighchartsEvents();
 		return $this->events;
 	}
 
@@ -449,7 +448,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the class name.
 	 *
 	 * @param string $className The class name.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setClassName($className) {
 		$this->className = $className;
@@ -460,7 +459,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -471,7 +470,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the color index.
 	 *
 	 * @param integer $colorIndex The color index.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setColorIndex($colorIndex) {
 		$this->colorIndex = $colorIndex;
@@ -482,7 +481,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the data labels.
 	 *
 	 * @param array $dataLabels The data labels.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setDataLabels(array $dataLabels = null) {
 		$this->dataLabels = $dataLabels;
@@ -493,7 +492,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the description.
 	 *
 	 * @param string $description The description.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setDescription($description) {
 		$this->description = $description;
@@ -504,7 +503,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the drilldown.
 	 *
 	 * @param string $drilldown The drilldown.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setDrilldown($drilldown) {
 		$this->drilldown = $drilldown;
@@ -514,10 +513,10 @@ final class HighchartsData implements JsonSerializable {
 	/**
 	 * Set the events.
 	 *
-	 * @param HighchartsEvents $events The events.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @param \WBW\HighchartsBundle\API\Chart\Series\Boxplot\Data\HighchartsEvents $events The events.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
-	public function setEvents(HighchartsEvents $events = null) {
+	public function setEvents(\WBW\HighchartsBundle\API\Chart\Series\Boxplot\Data\HighchartsEvents $events = null) {
 		$this->events = $events;
 		return $this;
 	}
@@ -526,7 +525,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the high.
 	 *
 	 * @param integer $high The high.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setHigh($high) {
 		$this->high = $high;
@@ -537,7 +536,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the id.
 	 *
 	 * @param string $id The id.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setId($id) {
 		$this->id = $id;
@@ -548,7 +547,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the labelrank.
 	 *
 	 * @param integer $labelrank The labelrank.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setLabelrank($labelrank) {
 		$this->labelrank = $labelrank;
@@ -559,7 +558,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the low.
 	 *
 	 * @param integer $low The low.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setLow($low) {
 		$this->low = $low;
@@ -570,7 +569,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the median.
 	 *
 	 * @param integer $median The median.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setMedian($median) {
 		$this->median = $median;
@@ -581,7 +580,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the name.
 	 *
 	 * @param string $name The name.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setName($name) {
 		$this->name = $name;
@@ -592,7 +591,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the q1.
 	 *
 	 * @param integer $q1 The q1.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setQ1($q1) {
 		$this->q1 = $q1;
@@ -603,7 +602,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the q3.
 	 *
 	 * @param integer $q3 The q3.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setQ3($q3) {
 		$this->q3 = $q3;
@@ -614,7 +613,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the selected.
 	 *
 	 * @param boolean $selected The selected.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setSelected($selected) {
 		$this->selected = $selected;
@@ -625,7 +624,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the x.
 	 *
 	 * @param integer $x The x.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setX($x) {
 		$this->x = $x;
@@ -636,7 +635,7 @@ final class HighchartsData implements JsonSerializable {
 	 * Set the y.
 	 *
 	 * @param integer $y The y.
-	 * @return HighchartsData Returns the highcharts data.
+	 * @return \WBW\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData Returns the highcharts data.
 	 */
 	public function setY($y) {
 		$this->y = $y;

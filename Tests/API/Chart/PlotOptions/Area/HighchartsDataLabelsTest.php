@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Area;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\Area\HighchartsDataLabels;
 
 /**
  * Highcharts data labels test.
@@ -30,7 +29,7 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsDataLabels(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Area\HighchartsDataLabels(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsDataLabels(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Area\HighchartsDataLabels(false);
 
 		$res = ["align" => "center", "allowOverlap" => false, "borderRadius" => 0, "borderWidth" => 0, "crop" => true, "defer" => true, "enabled" => false, "format" => "{y}", "overflow" => "justify", "padding" => 5, "rotation" => 0, "shadow" => false, "shape" => "square", "style" => ["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], "useHTML" => false, "x" => 0, "y" => -6, "zIndex" => 6];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

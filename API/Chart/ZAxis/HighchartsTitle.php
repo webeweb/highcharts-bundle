@@ -270,7 +270,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the align.
 	 *
 	 * @param string $align The align.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setAlign($align) {
 		switch ($align) {
@@ -287,7 +287,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the enabled.
 	 *
 	 * @param string $enabled The enabled.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle Returns the highcharts title.
 	 * @deprecated
 	 */
 	public function setEnabled($enabled) {
@@ -299,7 +299,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the margin.
 	 *
 	 * @param integer $margin The margin.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setMargin($margin) {
 		$this->margin = $margin;
@@ -310,7 +310,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the offset.
 	 *
 	 * @param integer $offset The offset.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setOffset($offset) {
 		$this->offset = $offset;
@@ -321,7 +321,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the reserve space.
 	 *
 	 * @param boolean $reserveSpace The reserve space.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setReserveSpace($reserveSpace) {
 		$this->reserveSpace = $reserveSpace;
@@ -332,7 +332,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the rotation.
 	 *
 	 * @param integer $rotation The rotation.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setRotation($rotation) {
 		$this->rotation = $rotation;
@@ -343,7 +343,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the style.
 	 *
 	 * @param array $style The style.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setStyle(array $style = null) {
 		$this->style = $style;
@@ -354,7 +354,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the text.
 	 *
 	 * @param string $text The text.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setText($text) {
 		$this->text = $text;
@@ -365,7 +365,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the x.
 	 *
 	 * @param integer $x The x.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setX($x) {
 		$this->x = $x;
@@ -376,7 +376,7 @@ final class HighchartsTitle implements JsonSerializable {
 	 * Set the y.
 	 *
 	 * @param integer $y The y.
-	 * @return HighchartsTitle Returns the highcharts title.
+	 * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle Returns the highcharts title.
 	 */
 	public function setY($y) {
 		$this->y = $y;

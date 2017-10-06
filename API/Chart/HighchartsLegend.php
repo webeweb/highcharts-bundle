@@ -12,8 +12,6 @@
 namespace WBW\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
-use WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation;
-use WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle;
 
 /**
  * Highcharts legend.
@@ -178,7 +176,7 @@ final class HighchartsLegend implements JsonSerializable {
 	/**
 	 * Navigation.
 	 *
-	 * @var HighchartsNavigation
+	 * @var \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation
 	 */
 	private $navigation;
 
@@ -262,7 +260,7 @@ final class HighchartsLegend implements JsonSerializable {
 	/**
 	 * Title.
 	 *
-	 * @var HighchartsTitle
+	 * @var \WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle
 	 * @since 3.0
 	 */
 	private $title;
@@ -693,7 +691,7 @@ final class HighchartsLegend implements JsonSerializable {
 	/**
 	 * Get the navigation.
 	 *
-	 * @return HighchartsNavigation Returns the navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the navigation.
 	 */
 	public function getNavigation() {
 		return $this->navigation;
@@ -793,7 +791,7 @@ final class HighchartsLegend implements JsonSerializable {
 	/**
 	 * Get the title.
 	 *
-	 * @return HighchartsTitle Returns the title.
+	 * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle Returns the title.
 	 */
 	public function getTitle() {
 		return $this->title;
@@ -856,20 +854,20 @@ final class HighchartsLegend implements JsonSerializable {
 	/**
 	 * Create a new navigation.
 	 *
-	 * @return HighchartsNavigation Returns the navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the navigation.
 	 */
 	public function newNavigation() {
-		$this->navigation = new HighchartsNavigation();
+		$this->navigation = new \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation();
 		return $this->navigation;
 	}
 
 	/**
 	 * Create a new title.
 	 *
-	 * @return HighchartsTitle Returns the title.
+	 * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle Returns the title.
 	 */
 	public function newTitle() {
-		$this->title = new HighchartsTitle();
+		$this->title = new \WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle();
 		return $this->title;
 	}
 
@@ -877,7 +875,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the align.
 	 *
 	 * @param string $align The align.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setAlign($align) {
 		switch ($align) {
@@ -894,7 +892,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the background color.
 	 *
 	 * @param string $backgroundColor The background color.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setBackgroundColor($backgroundColor) {
 		$this->backgroundColor = $backgroundColor;
@@ -905,7 +903,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the border color.
 	 *
 	 * @param string $borderColor The border color.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setBorderColor($borderColor) {
 		$this->borderColor = $borderColor;
@@ -916,7 +914,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the border radius.
 	 *
 	 * @param integer $borderRadius The border radius.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setBorderRadius($borderRadius) {
 		$this->borderRadius = $borderRadius;
@@ -927,7 +925,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the border width.
 	 *
 	 * @param integer $borderWidth The border width.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setBorderWidth($borderWidth) {
 		$this->borderWidth = $borderWidth;
@@ -938,7 +936,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the enabled.
 	 *
 	 * @param boolean $enabled The enabled.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setEnabled($enabled) {
 		$this->enabled = $enabled;
@@ -949,7 +947,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the floating.
 	 *
 	 * @param boolean $floating The floating.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setFloating($floating) {
 		$this->floating = $floating;
@@ -960,7 +958,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the item distance.
 	 *
 	 * @param integer $itemDistance The item distance.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setItemDistance($itemDistance) {
 		$this->itemDistance = $itemDistance;
@@ -971,7 +969,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the item hidden style.
 	 *
 	 * @param array $itemHiddenStyle The item hidden style.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setItemHiddenStyle(array $itemHiddenStyle = null) {
 		$this->itemHiddenStyle = $itemHiddenStyle;
@@ -982,7 +980,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the item hover style.
 	 *
 	 * @param array $itemHoverStyle The item hover style.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setItemHoverStyle(array $itemHoverStyle = null) {
 		$this->itemHoverStyle = $itemHoverStyle;
@@ -993,7 +991,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the item margin bottom.
 	 *
 	 * @param integer $itemMarginBottom The item margin bottom.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setItemMarginBottom($itemMarginBottom) {
 		$this->itemMarginBottom = $itemMarginBottom;
@@ -1004,7 +1002,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the item margin top.
 	 *
 	 * @param integer $itemMarginTop The item margin top.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setItemMarginTop($itemMarginTop) {
 		$this->itemMarginTop = $itemMarginTop;
@@ -1015,7 +1013,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the item style.
 	 *
 	 * @param array $itemStyle The item style.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setItemStyle(array $itemStyle = null) {
 		$this->itemStyle = $itemStyle;
@@ -1026,7 +1024,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the item width.
 	 *
 	 * @param integer $itemWidth The item width.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setItemWidth($itemWidth) {
 		$this->itemWidth = $itemWidth;
@@ -1037,7 +1035,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the label format.
 	 *
 	 * @param string $labelFormat The label format.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setLabelFormat($labelFormat) {
 		$this->labelFormat = $labelFormat;
@@ -1048,7 +1046,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the label formatter.
 	 *
 	 * @param string $labelFormatter The label formatter.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setLabelFormatter($labelFormatter) {
 		$this->labelFormatter = $labelFormatter;
@@ -1059,7 +1057,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the layout.
 	 *
 	 * @param string $layout The layout.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setLayout($layout) {
 		switch ($layout) {
@@ -1075,7 +1073,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the line height.
 	 *
 	 * @param integer $lineHeight The line height.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setLineHeight($lineHeight) {
 		$this->lineHeight = $lineHeight;
@@ -1086,7 +1084,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the margin.
 	 *
 	 * @param integer $margin The margin.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setMargin($margin) {
 		$this->margin = $margin;
@@ -1097,7 +1095,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the max height.
 	 *
 	 * @param integer $maxHeight The max height.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setMaxHeight($maxHeight) {
 		$this->maxHeight = $maxHeight;
@@ -1107,10 +1105,10 @@ final class HighchartsLegend implements JsonSerializable {
 	/**
 	 * Set the navigation.
 	 *
-	 * @param HighchartsNavigation $navigation The navigation.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @param \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation $navigation The navigation.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
-	public function setNavigation(HighchartsNavigation $navigation = null) {
+	public function setNavigation(\WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation $navigation = null) {
 		$this->navigation = $navigation;
 		return $this;
 	}
@@ -1119,7 +1117,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the padding.
 	 *
 	 * @param integer $padding The padding.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setPadding($padding) {
 		$this->padding = $padding;
@@ -1130,7 +1128,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the reversed.
 	 *
 	 * @param boolean $reversed The reversed.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setReversed($reversed) {
 		$this->reversed = $reversed;
@@ -1141,7 +1139,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the rtl.
 	 *
 	 * @param boolean $rtl The rtl.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setRtl($rtl) {
 		$this->rtl = $rtl;
@@ -1152,7 +1150,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the shadow.
 	 *
 	 * @param boolean|array $shadow The shadow.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setShadow($shadow) {
 		$this->shadow = $shadow;
@@ -1163,7 +1161,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the square symbol.
 	 *
 	 * @param boolean $squareSymbol The square symbol.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setSquareSymbol($squareSymbol) {
 		$this->squareSymbol = $squareSymbol;
@@ -1174,7 +1172,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the style.
 	 *
 	 * @param array $style The style.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 * @deprecated
 	 */
 	public function setStyle(array $style = null) {
@@ -1186,7 +1184,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the symbol height.
 	 *
 	 * @param integer $symbolHeight The symbol height.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setSymbolHeight($symbolHeight) {
 		$this->symbolHeight = $symbolHeight;
@@ -1197,7 +1195,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the symbol padding.
 	 *
 	 * @param integer $symbolPadding The symbol padding.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setSymbolPadding($symbolPadding) {
 		$this->symbolPadding = $symbolPadding;
@@ -1208,7 +1206,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the symbol radius.
 	 *
 	 * @param integer $symbolRadius The symbol radius.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setSymbolRadius($symbolRadius) {
 		$this->symbolRadius = $symbolRadius;
@@ -1219,7 +1217,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the symbol width.
 	 *
 	 * @param integer $symbolWidth The symbol width.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setSymbolWidth($symbolWidth) {
 		$this->symbolWidth = $symbolWidth;
@@ -1229,10 +1227,10 @@ final class HighchartsLegend implements JsonSerializable {
 	/**
 	 * Set the title.
 	 *
-	 * @param HighchartsTitle $title The title.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @param \WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle $title The title.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
-	public function setTitle(HighchartsTitle $title = null) {
+	public function setTitle(\WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle $title = null) {
 		$this->title = $title;
 		return $this;
 	}
@@ -1241,7 +1239,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the use HTML.
 	 *
 	 * @param boolean $useHTML The use HTML.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setUseHTML($useHTML) {
 		$this->useHTML = $useHTML;
@@ -1252,7 +1250,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the vertical align.
 	 *
 	 * @param string $verticalAlign The vertical align.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setVerticalAlign($verticalAlign) {
 		switch ($verticalAlign) {
@@ -1269,7 +1267,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the width.
 	 *
 	 * @param integer $width The width.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setWidth($width) {
 		$this->width = $width;
@@ -1280,7 +1278,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the x.
 	 *
 	 * @param integer $x The x.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setX($x) {
 		$this->x = $x;
@@ -1291,7 +1289,7 @@ final class HighchartsLegend implements JsonSerializable {
 	 * Set the y.
 	 *
 	 * @param integer $y The y.
-	 * @return HighchartsLegend Returns the highcharts legend.
+	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the highcharts legend.
 	 */
 	public function setY($y) {
 		$this->y = $y;

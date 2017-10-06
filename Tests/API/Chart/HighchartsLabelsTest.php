@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\HighchartsLabels;
 
 /**
  * Highcharts labels test.
@@ -30,7 +29,7 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsLabels(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLabels(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsLabels(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLabels(false);
 
 		$res = ["style" => ["color" => "#333333"]];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");

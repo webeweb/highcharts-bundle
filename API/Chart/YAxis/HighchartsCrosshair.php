@@ -187,7 +187,7 @@ final class HighchartsCrosshair implements JsonSerializable {
 	 * Set the class name.
 	 *
 	 * @param string $className The class name.
-	 * @return HighchartsCrosshair Returns the highcharts crosshair.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsCrosshair Returns the highcharts crosshair.
 	 */
 	public function setClassName($className) {
 		$this->className = $className;
@@ -198,7 +198,7 @@ final class HighchartsCrosshair implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsCrosshair Returns the highcharts crosshair.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsCrosshair Returns the highcharts crosshair.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -209,7 +209,7 @@ final class HighchartsCrosshair implements JsonSerializable {
 	 * Set the dash style.
 	 *
 	 * @param string $dashStyle The dash style.
-	 * @return HighchartsCrosshair Returns the highcharts crosshair.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsCrosshair Returns the highcharts crosshair.
 	 */
 	public function setDashStyle($dashStyle) {
 		switch ($dashStyle) {
@@ -234,7 +234,7 @@ final class HighchartsCrosshair implements JsonSerializable {
 	 * Set the snap.
 	 *
 	 * @param boolean $snap The snap.
-	 * @return HighchartsCrosshair Returns the highcharts crosshair.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsCrosshair Returns the highcharts crosshair.
 	 */
 	public function setSnap($snap) {
 		$this->snap = $snap;
@@ -245,7 +245,7 @@ final class HighchartsCrosshair implements JsonSerializable {
 	 * Set the width.
 	 *
 	 * @param integer $width The width.
-	 * @return HighchartsCrosshair Returns the highcharts crosshair.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsCrosshair Returns the highcharts crosshair.
 	 */
 	public function setWidth($width) {
 		$this->width = $width;
@@ -256,7 +256,7 @@ final class HighchartsCrosshair implements JsonSerializable {
 	 * Set the z index.
 	 *
 	 * @param integer $zIndex The z index.
-	 * @return HighchartsCrosshair Returns the highcharts crosshair.
+	 * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsCrosshair Returns the highcharts crosshair.
 	 */
 	public function setZIndex($zIndex) {
 		$this->zIndex = $zIndex;

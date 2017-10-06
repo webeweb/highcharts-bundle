@@ -231,7 +231,7 @@ final class HighchartsLevels implements JsonSerializable {
 	 * Set the border color.
 	 *
 	 * @param string $borderColor The border color.
-	 * @return HighchartsLevels Returns the highcharts levels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsLevels Returns the highcharts levels.
 	 */
 	public function setBorderColor($borderColor) {
 		$this->borderColor = $borderColor;
@@ -242,7 +242,7 @@ final class HighchartsLevels implements JsonSerializable {
 	 * Set the border dash style.
 	 *
 	 * @param string $borderDashStyle The border dash style.
-	 * @return HighchartsLevels Returns the highcharts levels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsLevels Returns the highcharts levels.
 	 */
 	public function setBorderDashStyle($borderDashStyle) {
 		$this->borderDashStyle = $borderDashStyle;
@@ -253,7 +253,7 @@ final class HighchartsLevels implements JsonSerializable {
 	 * Set the border width.
 	 *
 	 * @param integer $borderWidth The border width.
-	 * @return HighchartsLevels Returns the highcharts levels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsLevels Returns the highcharts levels.
 	 */
 	public function setBorderWidth($borderWidth) {
 		$this->borderWidth = $borderWidth;
@@ -264,7 +264,7 @@ final class HighchartsLevels implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsLevels Returns the highcharts levels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsLevels Returns the highcharts levels.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -275,7 +275,7 @@ final class HighchartsLevels implements JsonSerializable {
 	 * Set the data labels.
 	 *
 	 * @param array $dataLabels The data labels.
-	 * @return HighchartsLevels Returns the highcharts levels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsLevels Returns the highcharts levels.
 	 */
 	public function setDataLabels(array $dataLabels = null) {
 		$this->dataLabels = $dataLabels;
@@ -286,7 +286,7 @@ final class HighchartsLevels implements JsonSerializable {
 	 * Set the layout algorithm.
 	 *
 	 * @param string $layoutAlgorithm The layout algorithm.
-	 * @return HighchartsLevels Returns the highcharts levels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsLevels Returns the highcharts levels.
 	 */
 	public function setLayoutAlgorithm($layoutAlgorithm) {
 		switch ($layoutAlgorithm) {
@@ -304,7 +304,7 @@ final class HighchartsLevels implements JsonSerializable {
 	 * Set the layout starting direction.
 	 *
 	 * @param string $layoutStartingDirection The layout starting direction.
-	 * @return HighchartsLevels Returns the highcharts levels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsLevels Returns the highcharts levels.
 	 */
 	public function setLayoutStartingDirection($layoutStartingDirection) {
 		switch ($layoutStartingDirection) {
@@ -320,7 +320,7 @@ final class HighchartsLevels implements JsonSerializable {
 	 * Set the level.
 	 *
 	 * @param integer $level The level.
-	 * @return HighchartsLevels Returns the highcharts levels.
+	 * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Treemap\HighchartsLevels Returns the highcharts levels.
 	 */
 	public function setLevel($level) {
 		$this->level = $level;

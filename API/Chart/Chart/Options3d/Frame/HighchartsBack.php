@@ -121,7 +121,7 @@ final class HighchartsBack implements JsonSerializable {
 	 * Set the color.
 	 *
 	 * @param string $color The color.
-	 * @return HighchartsBack Returns the highcharts back.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack Returns the highcharts back.
 	 */
 	public function setColor($color) {
 		$this->color = $color;
@@ -132,7 +132,7 @@ final class HighchartsBack implements JsonSerializable {
 	 * Set the size.
 	 *
 	 * @param integer $size The size.
-	 * @return HighchartsBack Returns the highcharts back.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack Returns the highcharts back.
 	 */
 	public function setSize($size) {
 		$this->size = $size;
@@ -143,7 +143,7 @@ final class HighchartsBack implements JsonSerializable {
 	 * Set the visible.
 	 *
 	 * @param boolean|string $visible The visible.
-	 * @return HighchartsBack Returns the highcharts back.
+	 * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack Returns the highcharts back.
 	 */
 	public function setVisible($visible) {
 		switch ($visible) {

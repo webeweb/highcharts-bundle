@@ -12,18 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArea;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreaspline;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreasplinerange;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBar;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsLine;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsScatter;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSeries;
-use WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSpline;
 
 /**
  * Highcharts plot options test.
@@ -41,7 +29,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsPlotOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -54,10 +42,10 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewArea() {
 
-		$obj = new HighchartsPlotOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newArea();
-		$this->assertInstanceOf(HighchartsArea::class, $res, "The method newArea() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArea::class, $res, "The method newArea() does not return the expected class");
 	}
 
 	/**
@@ -67,10 +55,10 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewArearange() {
 
-		$obj = new HighchartsPlotOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newArearange();
-		$this->assertInstanceOf(HighchartsArearange::class, $res, "The method newArearange() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange::class, $res, "The method newArearange() does not return the expected class");
 	}
 
 	/**
@@ -80,10 +68,10 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewAreaspline() {
 
-		$obj = new HighchartsPlotOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newAreaspline();
-		$this->assertInstanceOf(HighchartsAreaspline::class, $res, "The method newAreaspline() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreaspline::class, $res, "The method newAreaspline() does not return the expected class");
 	}
 
 	/**
@@ -93,10 +81,10 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewAreasplinerange() {
 
-		$obj = new HighchartsPlotOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newAreasplinerange();
-		$this->assertInstanceOf(HighchartsAreasplinerange::class, $res, "The method newAreasplinerange() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreasplinerange::class, $res, "The method newAreasplinerange() does not return the expected class");
 	}
 
 	/**
@@ -106,10 +94,10 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewBar() {
 
-		$obj = new HighchartsPlotOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newBar();
-		$this->assertInstanceOf(HighchartsBar::class, $res, "The method newBar() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBar::class, $res, "The method newBar() does not return the expected class");
 	}
 
 	/**
@@ -119,10 +107,10 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewColumn() {
 
-		$obj = new HighchartsPlotOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newColumn();
-		$this->assertInstanceOf(HighchartsColumn::class, $res, "The method newColumn() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn::class, $res, "The method newColumn() does not return the expected class");
 	}
 
 	/**
@@ -132,10 +120,10 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewLine() {
 
-		$obj = new HighchartsPlotOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newLine();
-		$this->assertInstanceOf(HighchartsLine::class, $res, "The method newLine() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsLine::class, $res, "The method newLine() does not return the expected class");
 	}
 
 	/**
@@ -145,10 +133,10 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewPie() {
 
-		$obj = new HighchartsPlotOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newPie();
-		$this->assertInstanceOf(HighchartsPie::class, $res, "The method newPie() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie::class, $res, "The method newPie() does not return the expected class");
 	}
 
 	/**
@@ -158,10 +146,10 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewScatter() {
 
-		$obj = new HighchartsPlotOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newScatter();
-		$this->assertInstanceOf(HighchartsScatter::class, $res, "The method newScatter() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsScatter::class, $res, "The method newScatter() does not return the expected class");
 	}
 
 	/**
@@ -171,10 +159,10 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewSeries() {
 
-		$obj = new HighchartsPlotOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newSeries();
-		$this->assertInstanceOf(HighchartsSeries::class, $res, "The method newSeries() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSeries::class, $res, "The method newSeries() does not return the expected class");
 	}
 
 	/**
@@ -184,10 +172,10 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testNewSpline() {
 
-		$obj = new HighchartsPlotOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newSpline();
-		$this->assertInstanceOf(HighchartsSpline::class, $res, "The method newSpline() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSpline::class, $res, "The method newSpline() does not return the expected class");
 	}
 
 	/**
@@ -197,7 +185,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsPlotOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$obj->newArea();
 

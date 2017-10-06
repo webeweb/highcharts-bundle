@@ -12,7 +12,6 @@
 namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\API\Chart\HighchartsCredits;
 
 /**
  * Highcharts credits test.
@@ -30,7 +29,7 @@ final class HighchartsCreditsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testClear() {
 
-		$obj = new HighchartsCredits(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsCredits(false);
 
 		$obj->clear();
 		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
@@ -43,7 +42,7 @@ final class HighchartsCreditsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new HighchartsCredits(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsCredits(false);
 
 		$res = ["enabled" => true, "href" => "http://www.highcharts.com", "style" => ["cursor" => "pointer", "color" => "#999999", "fontSize" => "10px"], "text" => "Highcharts.com"];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
