@@ -50,26 +50,26 @@ final class HighchartsTwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsTwigExtension();
 
 		try {
-			$obj->highchartsScript("inexistant-script");
+			$obj->highchartsScriptFunction("inexistant-script");
 		} catch (Exception $ex) {
 			$this->assertInstanceOf(HighchartsFileNotFoundException::class, $ex, "The method highchartsScript() does not throw the expected exception");
 			$this->assertEquals("The file \"code/inexistant-script.js\" was not found", $ex->getMessage(), "The method getMessage() does not return the expected string");
 		}
 
 		$res1 = "<script src=\"/bundles/wbwhighcharts/code/highcharts.js\" type=\"text/javascript\"></script>";
-		$this->assertEquals($res1, $obj->highchartsScript("highcharts"), "The method highchartsScriptFunction() does not return the expected string");
+		$this->assertEquals($res1, $obj->highchartsScriptFunction("highcharts"), "The method highchartsScriptFunction() does not return the expected string");
 
 		$res2 = "<script src=\"/bundles/wbwhighcharts/code/modules/exporting.js\" type=\"text/javascript\"></script>";
-		$this->assertEquals($res2, $obj->highchartsScript("modules/exporting"), "The method highchartsScriptFunction() does not return the expected string");
+		$this->assertEquals($res2, $obj->highchartsScriptFunction("modules/exporting"), "The method highchartsScriptFunction() does not return the expected string");
 
 		$res2_1 = "<script src=\"/bundles/wbwhighcharts/code/modules/exporting.js\" type=\"text/javascript\"></script>";
-		$this->assertEquals($res2_1, $obj->highchartsScript("exporting", "code/modules"), "The method highchartsScriptFunction() does not return the expected string");
+		$this->assertEquals($res2_1, $obj->highchartsScriptFunction("exporting", "code/modules"), "The method highchartsScriptFunction() does not return the expected string");
 
 		$res3 = "<script src=\"/bundles/wbwhighcharts/code/themes/dark-unica.js\" type=\"text/javascript\"></script>";
-		$this->assertEquals($res3, $obj->highchartsScript("themes/dark-unica"), "The method highchartsScriptFunction() does not return the expected string");
+		$this->assertEquals($res3, $obj->highchartsScriptFunction("themes/dark-unica"), "The method highchartsScriptFunction() does not return the expected string");
 
 		$res3_1 = "<script src=\"/bundles/wbwhighcharts/code/themes/dark-unica.js\" type=\"text/javascript\"></script>";
-		$this->assertEquals($res3_1, $obj->highchartsScript("dark-unica", "code/themes"), "The method highchartsScriptFunction() does not return the expected string");
+		$this->assertEquals($res3_1, $obj->highchartsScriptFunction("dark-unica", "code/themes"), "The method highchartsScriptFunction() does not return the expected string");
 	}
 
 	/**

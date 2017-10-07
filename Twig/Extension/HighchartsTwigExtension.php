@@ -113,7 +113,7 @@ final class HighchartsTwigExtension extends Twig_Extension {
 	 * @return string Returns the Highcharts script.
 	 * @throws HighchartsFileNotFoundException Throws an Highcharts file not found exception if the script is not found.
 	 */
-	public function highchartsScript($script, $subdirectory = "code") {
+	public function highchartsScriptFunction($script, $subdirectory = "code") {
 
 		// Initialize the filename.
 		$filename = implode("/", [$subdirectory, $script . ".js"]);
