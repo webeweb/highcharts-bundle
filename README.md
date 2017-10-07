@@ -57,16 +57,16 @@ In your controller ...
 
 	// Initialize the chart.
 	$chart = new HighchartsChart;
-		$chart->newChart()->setType("pie");
-		$chart->newPlotOptions();
-		$chart->getPlotOptions()->newPie()
-				->setAllowPointSelect(true)
-				->setCursor("pointer")
-				->setShowInLegend(true)
-				->newDataLabels()->setEnabled(true);
-		$chart->setSeries($series);
-		$chart->newTitle()->setText("your_custom_test");
-		$chart->newTooltip()->setPointFormat("{series.name}: <b>{point.percentage:.1f}%</b>");
+	$chart->newChart()->setType("pie");
+	$chart->newPlotOptions();
+	$chart->getPlotOptions()->newPie()
+		->setAllowPointSelect(true)
+		->setCursor("pointer")
+		->setShowInLegend(true)
+		->newDataLabels()->setEnabled(true);
+	$chart->setSeries($series);
+	$chart->newTitle()->setText("your_custom_test");
+	$chart->newTooltip()->setPointFormat("{series.name}: <b>{point.percentage:.1f}%</b>");
 
 	return $this->render('::your_template.html.twig', [
 		'chart' => $chart
