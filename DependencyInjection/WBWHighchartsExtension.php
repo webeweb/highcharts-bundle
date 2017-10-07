@@ -24,7 +24,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  * @version 5.0.14
  * @final
  */
-final class HighchartsExtension extends Extension {
+final class WBWHighchartsExtension extends Extension {
 
 	/**
 	 * {@inheritdoc}
