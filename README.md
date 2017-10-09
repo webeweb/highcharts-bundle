@@ -1,11 +1,11 @@
 WBWHighchartsBundle
 ====================
 
-[![Build Status](https://travis-ci.org/webeweb/WBWHighchartsBundle.svg?branch=master)](https://travis-ci.org/webeweb/WBWHighchartsBundle)
+[![Build Status](https://travis-ci.org/webeweb/WBWHighchartsBundle.svg?branch=master)](https://travis-ci.org/webeweb/WBWHighchartsBundle) [![Latest Stable Version](https://poser.pugx.org/webeweb/highcharts-bundle/v/stable)](https://packagist.org/packages/webeweb/highcharts-bundle) [![Latest Unstable Version](https://poser.pugx.org/webeweb/highcharts-bundle/v/unstable)](https://packagist.org/packages/webeweb/highcharts-bundle) [![License](https://poser.pugx.org/webeweb/highcharts-bundle/license)](https://packagist.org/packages/webeweb/highcharts-bundle)
 
 `WBWHighchartsBundle` eases the use of highcharts to display rich graphs and charts in your Symfony2 application by providing Twig extensions and PHP objects to do the heavy lifting. The bundle include the excellent JS library [Highcharts](https://www.highcharts.com).
 
-DRY out your chart code by writing it all in PHP !
+Dry out your chart code by writing it all in PHP !
 
 ---
 
