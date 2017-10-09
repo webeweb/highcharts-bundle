@@ -76,30 +76,20 @@ final class HighchartsSelect implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the fill color.
-		if (!is_null($this->fillColor)) {
-			$this->fillColor = null;
-		}
+		// Clear the fill color.
+		$this->fillColor = null;
 
-		// Check the line color.
-		if (!is_null($this->lineColor)) {
-			$this->lineColor = null;
-		}
+		// Clear the line color.
+		$this->lineColor = null;
 
-		// Check the line width.
-		if (!is_null($this->lineWidth)) {
-			$this->lineWidth = null;
-		}
+		// Clear the line width.
+		$this->lineWidth = null;
 
-		// Check the radius.
-		if (!is_null($this->radius)) {
-			$this->radius = null;
-		}
+		// Clear the radius.
+		$this->radius = null;
 	}
 
 	/**

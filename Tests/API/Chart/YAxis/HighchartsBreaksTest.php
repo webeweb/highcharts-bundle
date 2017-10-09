@@ -47,14 +47,14 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
 		$res = ["breakSize" => 0, "repeat" => 0];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
-		$obj->setFrom(46);
+		$obj->setFrom(56);
 
-		$res1 = ["breakSize" => 0, "repeat" => 0, "from" => 46];
+		$res1 = ["breakSize" => 0, "repeat" => 0, "from" => 56];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with from");
 
-		$obj->setTo(62);
+		$obj->setTo(36);
 
-		$res2 = ["breakSize" => 0, "repeat" => 0, "from" => 46, "to" => 62];
+		$res2 = ["breakSize" => 0, "repeat" => 0, "from" => 56, "to" => 36];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with to");
 	}
 

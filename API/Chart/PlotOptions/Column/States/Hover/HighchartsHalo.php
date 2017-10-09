@@ -65,20 +65,14 @@ final class HighchartsHalo implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the attributes.
-		if (!is_null($this->attributes)) {
-			$this->attributes = null;
-		}
+		// Clear the attributes.
+		$this->attributes = null;
 
-		// Check the opacity.
-		if (!is_null($this->opacity)) {
-			$this->opacity = null;
-		}
+		// Clear the opacity.
+		$this->opacity = null;
 
-		// Check the size.
-		if (!is_null($this->size)) {
-			$this->size = null;
-		}
+		// Clear the size.
+		$this->size = null;
 	}
 
 	/**

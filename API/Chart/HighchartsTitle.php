@@ -118,55 +118,35 @@ final class HighchartsTitle implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the align.
-		if (!is_null($this->align)) {
-			$this->align = null;
-		}
+		// Clear the align.
+		$this->align = null;
 
-		// Check the floating.
-		if (!is_null($this->floating)) {
-			$this->floating = null;
-		}
+		// Clear the floating.
+		$this->floating = null;
 
-		// Check the margin.
-		if (!is_null($this->margin)) {
-			$this->margin = null;
-		}
+		// Clear the margin.
+		$this->margin = null;
 
-		// Check the style.
-		if (!is_null($this->style)) {
-			$this->style = null;
-		}
+		// Clear the style.
+		$this->style = null;
 
-		// Check the text.
-		if (!is_null($this->text)) {
-			$this->text = null;
-		}
+		// Clear the text.
+		$this->text = null;
 
-		// Check the use HTML.
-		if (!is_null($this->useHTML)) {
-			$this->useHTML = null;
-		}
+		// Clear the use HTML.
+		$this->useHTML = null;
 
-		// Check the vertical align.
-		if (!is_null($this->verticalAlign)) {
-			$this->verticalAlign = null;
-		}
+		// Clear the vertical align.
+		$this->verticalAlign = null;
 
-		// Check the width adjust.
-		if (!is_null($this->widthAdjust)) {
-			$this->widthAdjust = null;
-		}
+		// Clear the width adjust.
+		$this->widthAdjust = null;
 
-		// Check the x.
-		if (!is_null($this->x)) {
-			$this->x = null;
-		}
+		// Clear the x.
+		$this->x = null;
 
-		// Check the y.
-		if (!is_null($this->y)) {
-			$this->y = null;
-		}
+		// Clear the y.
+		$this->y = null;
 	}
 
 	/**

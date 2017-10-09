@@ -89,35 +89,23 @@ final class HighchartsCrosshair implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the class name.
-		if (!is_null($this->className)) {
-			$this->className = null;
-		}
+		// Clear the class name.
+		$this->className = null;
 
-		// Check the color.
-		if (!is_null($this->color)) {
-			$this->color = null;
-		}
+		// Clear the color.
+		$this->color = null;
 
-		// Check the dash style.
-		if (!is_null($this->dashStyle)) {
-			$this->dashStyle = null;
-		}
+		// Clear the dash style.
+		$this->dashStyle = null;
 
-		// Check the snap.
-		if (!is_null($this->snap)) {
-			$this->snap = null;
-		}
+		// Clear the snap.
+		$this->snap = null;
 
-		// Check the width.
-		if (!is_null($this->width)) {
-			$this->width = null;
-		}
+		// Clear the width.
+		$this->width = null;
 
-		// Check the z index.
-		if (!is_null($this->zIndex)) {
-			$this->zIndex = null;
-		}
+		// Clear the z index.
+		$this->zIndex = null;
 	}
 
 	/**

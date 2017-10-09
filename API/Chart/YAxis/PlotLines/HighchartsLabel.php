@@ -113,50 +113,32 @@ final class HighchartsLabel implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the align.
-		if (!is_null($this->align)) {
-			$this->align = null;
-		}
+		// Clear the align.
+		$this->align = null;
 
-		// Check the rotation.
-		if (!is_null($this->rotation)) {
-			$this->rotation = null;
-		}
+		// Clear the rotation.
+		$this->rotation = null;
 
-		// Check the style.
-		if (!is_null($this->style)) {
-			$this->style = null;
-		}
+		// Clear the style.
+		$this->style = null;
 
-		// Check the text.
-		if (!is_null($this->text)) {
-			$this->text = null;
-		}
+		// Clear the text.
+		$this->text = null;
 
-		// Check the text align.
-		if (!is_null($this->textAlign)) {
-			$this->textAlign = null;
-		}
+		// Clear the text align.
+		$this->textAlign = null;
 
-		// Check the use HTML.
-		if (!is_null($this->useHTML)) {
-			$this->useHTML = null;
-		}
+		// Clear the use HTML.
+		$this->useHTML = null;
 
-		// Check the vertical align.
-		if (!is_null($this->verticalAlign)) {
-			$this->verticalAlign = null;
-		}
+		// Clear the vertical align.
+		$this->verticalAlign = null;
 
-		// Check the x.
-		if (!is_null($this->x)) {
-			$this->x = null;
-		}
+		// Clear the x.
+		$this->x = null;
 
-		// Check the y.
-		if (!is_null($this->y)) {
-			$this->y = null;
-		}
+		// Clear the y.
+		$this->y = null;
 	}
 
 	/**

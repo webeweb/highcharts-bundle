@@ -69,25 +69,17 @@ final class HighchartsPosition implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the align.
-		if (!is_null($this->align)) {
-			$this->align = null;
-		}
+		// Clear the align.
+		$this->align = null;
 
-		// Check the vertical align.
-		if (!is_null($this->verticalAlign)) {
-			$this->verticalAlign = null;
-		}
+		// Clear the vertical align.
+		$this->verticalAlign = null;
 
-		// Check the x.
-		if (!is_null($this->x)) {
-			$this->x = null;
-		}
+		// Clear the x.
+		$this->x = null;
 
-		// Check the y.
-		if (!is_null($this->y)) {
-			$this->y = null;
-		}
+		// Clear the y.
+		$this->y = null;
 	}
 
 	/**

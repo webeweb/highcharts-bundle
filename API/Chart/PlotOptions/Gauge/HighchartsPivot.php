@@ -73,25 +73,17 @@ final class HighchartsPivot implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the background color.
-		if (!is_null($this->backgroundColor)) {
-			$this->backgroundColor = null;
-		}
+		// Clear the background color.
+		$this->backgroundColor = null;
 
-		// Check the border color.
-		if (!is_null($this->borderColor)) {
-			$this->borderColor = null;
-		}
+		// Clear the border color.
+		$this->borderColor = null;
 
-		// Check the border width.
-		if (!is_null($this->borderWidth)) {
-			$this->borderWidth = null;
-		}
+		// Clear the border width.
+		$this->borderWidth = null;
 
-		// Check the radius.
-		if (!is_null($this->radius)) {
-			$this->radius = null;
-		}
+		// Clear the radius.
+		$this->radius = null;
 	}
 
 	/**

@@ -121,55 +121,35 @@ final class HighchartsAccessibility implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the describe single series.
-		if (!is_null($this->describeSingleSeries)) {
-			$this->describeSingleSeries = null;
-		}
+		// Clear the describe single series.
+		$this->describeSingleSeries = null;
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the keyboard navigation.
-		if (!is_null($this->keyboardNavigation)) {
-			$this->keyboardNavigation = null;
-		}
+		// Clear the keyboard navigation.
+		$this->keyboardNavigation = null;
 
-		// Check the on table anchor click.
-		if (!is_null($this->onTableAnchorClick)) {
-			$this->onTableAnchorClick = null;
-		}
+		// Clear the on table anchor click.
+		$this->onTableAnchorClick = null;
 
-		// Check the point date format.
-		if (!is_null($this->pointDateFormat)) {
-			$this->pointDateFormat = null;
-		}
+		// Clear the point date format.
+		$this->pointDateFormat = null;
 
-		// Check the point date formatter.
-		if (!is_null($this->pointDateFormatter)) {
-			$this->pointDateFormatter = null;
-		}
+		// Clear the point date formatter.
+		$this->pointDateFormatter = null;
 
-		// Check the point description formatter.
-		if (!is_null($this->pointDescriptionFormatter)) {
-			$this->pointDescriptionFormatter = null;
-		}
+		// Clear the point description formatter.
+		$this->pointDescriptionFormatter = null;
 
-		// Check the point description threshold.
-		if (!is_null($this->pointDescriptionThreshold)) {
-			$this->pointDescriptionThreshold = null;
-		}
+		// Clear the point description threshold.
+		$this->pointDescriptionThreshold = null;
 
-		// Check the screen reader section formatter.
-		if (!is_null($this->screenReaderSectionFormatter)) {
-			$this->screenReaderSectionFormatter = null;
-		}
+		// Clear the screen reader section formatter.
+		$this->screenReaderSectionFormatter = null;
 
-		// Check the series description formatter.
-		if (!is_null($this->seriesDescriptionFormatter)) {
-			$this->seriesDescriptionFormatter = null;
-		}
+		// Clear the series description formatter.
+		$this->seriesDescriptionFormatter = null;
 	}
 
 	/**

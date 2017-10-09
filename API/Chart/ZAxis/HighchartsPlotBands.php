@@ -114,55 +114,37 @@ final class HighchartsPlotBands implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the border color.
-		if (!is_null($this->borderColor)) {
-			$this->borderColor = null;
-		}
+		// Clear the border color.
+		$this->borderColor = null;
 
-		// Check the border width.
-		if (!is_null($this->borderWidth)) {
-			$this->borderWidth = null;
-		}
+		// Clear the border width.
+		$this->borderWidth = null;
 
-		// Check the class name.
-		if (!is_null($this->className)) {
-			$this->className = null;
-		}
+		// Clear the class name.
+		$this->className = null;
 
-		// Check the color.
-		if (!is_null($this->color)) {
-			$this->color = null;
-		}
+		// Clear the color.
+		$this->color = null;
 
-		// Check the events.
-		if (!is_null($this->events)) {
-			$this->events = null;
-		}
+		// Clear the events.
+		$this->events = null;
 
-		// Check the from.
-		if (!is_null($this->from)) {
-			$this->from = null;
-		}
+		// Clear the from.
+		$this->from = null;
 
-		// Check the id.
-		if (!is_null($this->id)) {
-			$this->id = null;
-		}
+		// Clear the id.
+		$this->id = null;
 
-		// Check the label.
+		// Clear the label.
 		if (!is_null($this->label)) {
 			$this->label->clear();
 		}
 
-		// Check the to.
-		if (!is_null($this->to)) {
-			$this->to = null;
-		}
+		// Clear the to.
+		$this->to = null;
 
-		// Check the z index.
-		if (!is_null($this->zIndex)) {
-			$this->zIndex = null;
-		}
+		// Clear the z index.
+		$this->zIndex = null;
 	}
 
 	/**

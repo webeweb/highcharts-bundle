@@ -73,25 +73,23 @@ final class HighchartsFrame implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the back.
+		// Clear the back.
 		if (!is_null($this->back)) {
 			$this->back->clear();
 		}
 
-		// Check the bottom.
+		// Clear the bottom.
 		if (!is_null($this->bottom)) {
 			$this->bottom->clear();
 		}
 
-		// Check the side.
+		// Clear the side.
 		if (!is_null($this->side)) {
 			$this->side->clear();
 		}
 
-		// Check the top.
-		if (!is_null($this->top)) {
-			$this->top = null;
-		}
+		// Clear the top.
+		$this->top = null;
 	}
 
 	/**

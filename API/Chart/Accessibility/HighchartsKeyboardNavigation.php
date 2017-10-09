@@ -65,20 +65,14 @@ final class HighchartsKeyboardNavigation implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the skip null points.
-		if (!is_null($this->skipNullPoints)) {
-			$this->skipNullPoints = null;
-		}
+		// Clear the skip null points.
+		$this->skipNullPoints = null;
 
-		// Check the tab through chart elements.
-		if (!is_null($this->tabThroughChartElements)) {
-			$this->tabThroughChartElements = null;
-		}
+		// Clear the tab through chart elements.
+		$this->tabThroughChartElements = null;
 	}
 
 	/**

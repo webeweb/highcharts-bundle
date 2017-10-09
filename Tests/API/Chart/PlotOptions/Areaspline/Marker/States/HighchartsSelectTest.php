@@ -52,9 +52,9 @@ final class HighchartsSelectTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["enabled" => true, "lineColor" => "#000000", "lineWidth" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-		$obj->setRadius(19);
+		$obj->setRadius(68);
 
-		$res2 = ["enabled" => true, "lineColor" => "#000000", "lineWidth" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "radius" => 19];
+		$res2 = ["enabled" => true, "lineColor" => "#000000", "lineWidth" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "radius" => 68];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with radius");
 	}
 

@@ -379,230 +379,146 @@ final class HighchartsChart implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the align ticks.
-		if (!is_null($this->alignTicks)) {
-			$this->alignTicks = null;
-		}
+		// Clear the align ticks.
+		$this->alignTicks = null;
 
-		// Check the animation.
-		if (!is_null($this->animation)) {
-			$this->animation = null;
-		}
+		// Clear the animation.
+		$this->animation = null;
 
-		// Check the background color.
-		if (!is_null($this->backgroundColor)) {
-			$this->backgroundColor = null;
-		}
+		// Clear the background color.
+		$this->backgroundColor = null;
 
-		// Check the border color.
-		if (!is_null($this->borderColor)) {
-			$this->borderColor = null;
-		}
+		// Clear the border color.
+		$this->borderColor = null;
 
-		// Check the border radius.
-		if (!is_null($this->borderRadius)) {
-			$this->borderRadius = null;
-		}
+		// Clear the border radius.
+		$this->borderRadius = null;
 
-		// Check the border width.
-		if (!is_null($this->borderWidth)) {
-			$this->borderWidth = null;
-		}
+		// Clear the border width.
+		$this->borderWidth = null;
 
-		// Check the class name.
-		if (!is_null($this->className)) {
-			$this->className = null;
-		}
+		// Clear the class name.
+		$this->className = null;
 
-		// Check the color count.
-		if (!is_null($this->colorCount)) {
-			$this->colorCount = null;
-		}
+		// Clear the color count.
+		$this->colorCount = null;
 
-		// Check the default series type.
-		if (!is_null($this->defaultSeriesType)) {
-			$this->defaultSeriesType = null;
-		}
+		// Clear the default series type.
+		$this->defaultSeriesType = null;
 
-		// Check the description.
-		if (!is_null($this->description)) {
-			$this->description = null;
-		}
+		// Clear the description.
+		$this->description = null;
 
-		// Check the events.
+		// Clear the events.
 		if (!is_null($this->events)) {
 			$this->events->clear();
 		}
 
-		// Check the height.
-		if (!is_null($this->height)) {
-			$this->height = null;
-		}
+		// Clear the height.
+		$this->height = null;
 
-		// Check the ignore hidden series.
-		if (!is_null($this->ignoreHiddenSeries)) {
-			$this->ignoreHiddenSeries = null;
-		}
+		// Clear the ignore hidden series.
+		$this->ignoreHiddenSeries = null;
 
-		// Check the inverted.
-		if (!is_null($this->inverted)) {
-			$this->inverted = null;
-		}
+		// Clear the inverted.
+		$this->inverted = null;
 
-		// Check the margin.
-		if (!is_null($this->margin)) {
-			$this->margin = null;
-		}
+		// Clear the margin.
+		$this->margin = null;
 
-		// Check the margin bottom.
-		if (!is_null($this->marginBottom)) {
-			$this->marginBottom = null;
-		}
+		// Clear the margin bottom.
+		$this->marginBottom = null;
 
-		// Check the margin left.
-		if (!is_null($this->marginLeft)) {
-			$this->marginLeft = null;
-		}
+		// Clear the margin left.
+		$this->marginLeft = null;
 
-		// Check the margin right.
-		if (!is_null($this->marginRight)) {
-			$this->marginRight = null;
-		}
+		// Clear the margin right.
+		$this->marginRight = null;
 
-		// Check the margin top.
-		if (!is_null($this->marginTop)) {
-			$this->marginTop = null;
-		}
+		// Clear the margin top.
+		$this->marginTop = null;
 
-		// Check the options3d.
+		// Clear the options3d.
 		if (!is_null($this->options3d)) {
 			$this->options3d->clear();
 		}
 
-		// Check the pan key.
-		if (!is_null($this->panKey)) {
-			$this->panKey = null;
-		}
+		// Clear the pan key.
+		$this->panKey = null;
 
-		// Check the panning.
-		if (!is_null($this->panning)) {
-			$this->panning = null;
-		}
+		// Clear the panning.
+		$this->panning = null;
 
-		// Check the pinch type.
-		if (!is_null($this->pinchType)) {
-			$this->pinchType = null;
-		}
+		// Clear the pinch type.
+		$this->pinchType = null;
 
-		// Check the plot background color.
-		if (!is_null($this->plotBackgroundColor)) {
-			$this->plotBackgroundColor = null;
-		}
+		// Clear the plot background color.
+		$this->plotBackgroundColor = null;
 
-		// Check the plot background image.
-		if (!is_null($this->plotBackgroundImage)) {
-			$this->plotBackgroundImage = null;
-		}
+		// Clear the plot background image.
+		$this->plotBackgroundImage = null;
 
-		// Check the plot border color.
-		if (!is_null($this->plotBorderColor)) {
-			$this->plotBorderColor = null;
-		}
+		// Clear the plot border color.
+		$this->plotBorderColor = null;
 
-		// Check the plot border width.
-		if (!is_null($this->plotBorderWidth)) {
-			$this->plotBorderWidth = null;
-		}
+		// Clear the plot border width.
+		$this->plotBorderWidth = null;
 
-		// Check the plot shadow.
-		if (!is_null($this->plotShadow)) {
-			$this->plotShadow = null;
-		}
+		// Clear the plot shadow.
+		$this->plotShadow = null;
 
-		// Check the polar.
-		if (!is_null($this->polar)) {
-			$this->polar = null;
-		}
+		// Clear the polar.
+		$this->polar = null;
 
-		// Check the reflow.
-		if (!is_null($this->reflow)) {
-			$this->reflow = null;
-		}
+		// Clear the reflow.
+		$this->reflow = null;
 
-		// Check the render to.
-		if (!is_null($this->renderTo)) {
-			$this->renderTo = null;
-		}
+		// Clear the render to.
+		$this->renderTo = null;
 
-		// Check the reset zoom button.
+		// Clear the reset zoom button.
 		if (!is_null($this->resetZoomButton)) {
 			$this->resetZoomButton->clear();
 		}
 
-		// Check the selection marker fill.
-		if (!is_null($this->selectionMarkerFill)) {
-			$this->selectionMarkerFill = null;
-		}
+		// Clear the selection marker fill.
+		$this->selectionMarkerFill = null;
 
-		// Check the shadow.
-		if (!is_null($this->shadow)) {
-			$this->shadow = null;
-		}
+		// Clear the shadow.
+		$this->shadow = null;
 
-		// Check the show axes.
-		if (!is_null($this->showAxes)) {
-			$this->showAxes = null;
-		}
+		// Clear the show axes.
+		$this->showAxes = null;
 
-		// Check the spacing.
-		if (!is_null($this->spacing)) {
-			$this->spacing = null;
-		}
+		// Clear the spacing.
+		$this->spacing = null;
 
-		// Check the spacing bottom.
-		if (!is_null($this->spacingBottom)) {
-			$this->spacingBottom = null;
-		}
+		// Clear the spacing bottom.
+		$this->spacingBottom = null;
 
-		// Check the spacing left.
-		if (!is_null($this->spacingLeft)) {
-			$this->spacingLeft = null;
-		}
+		// Clear the spacing left.
+		$this->spacingLeft = null;
 
-		// Check the spacing right.
-		if (!is_null($this->spacingRight)) {
-			$this->spacingRight = null;
-		}
+		// Clear the spacing right.
+		$this->spacingRight = null;
 
-		// Check the spacing top.
-		if (!is_null($this->spacingTop)) {
-			$this->spacingTop = null;
-		}
+		// Clear the spacing top.
+		$this->spacingTop = null;
 
-		// Check the style.
-		if (!is_null($this->style)) {
-			$this->style = null;
-		}
+		// Clear the style.
+		$this->style = null;
 
-		// Check the type.
-		if (!is_null($this->type)) {
-			$this->type = null;
-		}
+		// Clear the type.
+		$this->type = null;
 
-		// Check the type description.
-		if (!is_null($this->typeDescription)) {
-			$this->typeDescription = null;
-		}
+		// Clear the type description.
+		$this->typeDescription = null;
 
-		// Check the width.
-		if (!is_null($this->width)) {
-			$this->width = null;
-		}
+		// Clear the width.
+		$this->width = null;
 
-		// Check the zoom type.
-		if (!is_null($this->zoomType)) {
-			$this->zoomType = null;
-		}
+		// Clear the zoom type.
+		$this->zoomType = null;
 	}
 
 	/**

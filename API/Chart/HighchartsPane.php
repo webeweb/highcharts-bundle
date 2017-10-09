@@ -80,30 +80,20 @@ final class HighchartsPane implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the background.
-		if (!is_null($this->background)) {
-			$this->background = null;
-		}
+		// Clear the background.
+		$this->background = null;
 
-		// Check the center.
-		if (!is_null($this->center)) {
-			$this->center = null;
-		}
+		// Clear the center.
+		$this->center = null;
 
-		// Check the end angle.
-		if (!is_null($this->endAngle)) {
-			$this->endAngle = null;
-		}
+		// Clear the end angle.
+		$this->endAngle = null;
 
-		// Check the size.
-		if (!is_null($this->size)) {
-			$this->size = null;
-		}
+		// Clear the size.
+		$this->size = null;
 
-		// Check the start angle.
-		if (!is_null($this->startAngle)) {
-			$this->startAngle = null;
-		}
+		// Clear the start angle.
+		$this->startAngle = null;
 	}
 
 	/**

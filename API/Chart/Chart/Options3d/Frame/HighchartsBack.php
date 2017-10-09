@@ -65,20 +65,14 @@ final class HighchartsBack implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the color.
-		if (!is_null($this->color)) {
-			$this->color = null;
-		}
+		// Clear the color.
+		$this->color = null;
 
-		// Check the size.
-		if (!is_null($this->size)) {
-			$this->size = null;
-		}
+		// Clear the size.
+		$this->size = null;
 
-		// Check the visible.
-		if (!is_null($this->visible)) {
-			$this->visible = null;
-		}
+		// Clear the visible.
+		$this->visible = null;
 	}
 
 	/**

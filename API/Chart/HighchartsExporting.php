@@ -175,90 +175,58 @@ final class HighchartsExporting implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the allow HTML.
-		if (!is_null($this->allowHTML)) {
-			$this->allowHTML = null;
-		}
+		// Clear the allow HTML.
+		$this->allowHTML = null;
 
-		// Check the buttons.
+		// Clear the buttons.
 		if (!is_null($this->buttons)) {
 			$this->buttons->clear();
 		}
 
-		// Check the chart options.
-		if (!is_null($this->chartOptions)) {
-			$this->chartOptions = null;
-		}
+		// Clear the chart options.
+		$this->chartOptions = null;
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the error.
-		if (!is_null($this->error)) {
-			$this->error = null;
-		}
+		// Clear the error.
+		$this->error = null;
 
-		// Check the fallback to export server.
-		if (!is_null($this->fallbackToExportServer)) {
-			$this->fallbackToExportServer = null;
-		}
+		// Clear the fallback to export server.
+		$this->fallbackToExportServer = null;
 
-		// Check the filename.
-		if (!is_null($this->filename)) {
-			$this->filename = null;
-		}
+		// Clear the filename.
+		$this->filename = null;
 
-		// Check the form attributes.
-		if (!is_null($this->formAttributes)) {
-			$this->formAttributes = null;
-		}
+		// Clear the form attributes.
+		$this->formAttributes = null;
 
-		// Check the lib URL.
-		if (!is_null($this->libURL)) {
-			$this->libURL = null;
-		}
+		// Clear the lib URL.
+		$this->libURL = null;
 
-		// Check the menu item definitions.
-		if (!is_null($this->menuItemDefinitions)) {
-			$this->menuItemDefinitions = null;
-		}
+		// Clear the menu item definitions.
+		$this->menuItemDefinitions = null;
 
-		// Check the print max width.
-		if (!is_null($this->printMaxWidth)) {
-			$this->printMaxWidth = null;
-		}
+		// Clear the print max width.
+		$this->printMaxWidth = null;
 
-		// Check the scale.
-		if (!is_null($this->scale)) {
-			$this->scale = null;
-		}
+		// Clear the scale.
+		$this->scale = null;
 
-		// Check the source height.
-		if (!is_null($this->sourceHeight)) {
-			$this->sourceHeight = null;
-		}
+		// Clear the source height.
+		$this->sourceHeight = null;
 
-		// Check the source width.
-		if (!is_null($this->sourceWidth)) {
-			$this->sourceWidth = null;
-		}
+		// Clear the source width.
+		$this->sourceWidth = null;
 
-		// Check the type.
-		if (!is_null($this->type)) {
-			$this->type = null;
-		}
+		// Clear the type.
+		$this->type = null;
 
-		// Check the url.
-		if (!is_null($this->url)) {
-			$this->url = null;
-		}
+		// Clear the url.
+		$this->url = null;
 
-		// Check the width.
-		if (!is_null($this->width)) {
-			$this->width = null;
-		}
+		// Clear the width.
+		$this->width = null;
 	}
 
 	/**

@@ -216,120 +216,96 @@ final class HighchartsPlotOptions implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the area.
+		// Clear the area.
 		if (!is_null($this->area)) {
 			$this->area->clear();
 		}
 
-		// Check the arearange.
+		// Clear the arearange.
 		if (!is_null($this->arearange)) {
 			$this->arearange->clear();
 		}
 
-		// Check the areaspline.
+		// Clear the areaspline.
 		if (!is_null($this->areaspline)) {
 			$this->areaspline->clear();
 		}
 
-		// Check the areasplinerange.
+		// Clear the areasplinerange.
 		if (!is_null($this->areasplinerange)) {
 			$this->areasplinerange->clear();
 		}
 
-		// Check the bar.
+		// Clear the bar.
 		if (!is_null($this->bar)) {
 			$this->bar->clear();
 		}
 
-		// Check the boxplot.
-		if (!is_null($this->boxplot)) {
-			$this->boxplot = null;
-		}
+		// Clear the boxplot.
+		$this->boxplot = null;
 
-		// Check the bubble.
-		if (!is_null($this->bubble)) {
-			$this->bubble = null;
-		}
+		// Clear the bubble.
+		$this->bubble = null;
 
-		// Check the column.
+		// Clear the column.
 		if (!is_null($this->column)) {
 			$this->column->clear();
 		}
 
-		// Check the columnrange.
-		if (!is_null($this->columnrange)) {
-			$this->columnrange = null;
-		}
+		// Clear the columnrange.
+		$this->columnrange = null;
 
-		// Check the errorbar.
-		if (!is_null($this->errorbar)) {
-			$this->errorbar = null;
-		}
+		// Clear the errorbar.
+		$this->errorbar = null;
 
-		// Check the funnel.
-		if (!is_null($this->funnel)) {
-			$this->funnel = null;
-		}
+		// Clear the funnel.
+		$this->funnel = null;
 
-		// Check the gauge.
-		if (!is_null($this->gauge)) {
-			$this->gauge = null;
-		}
+		// Clear the gauge.
+		$this->gauge = null;
 
-		// Check the heatmap.
-		if (!is_null($this->heatmap)) {
-			$this->heatmap = null;
-		}
+		// Clear the heatmap.
+		$this->heatmap = null;
 
-		// Check the line.
+		// Clear the line.
 		if (!is_null($this->line)) {
 			$this->line->clear();
 		}
 
-		// Check the pie.
+		// Clear the pie.
 		if (!is_null($this->pie)) {
 			$this->pie->clear();
 		}
 
-		// Check the polygon.
-		if (!is_null($this->polygon)) {
-			$this->polygon = null;
-		}
+		// Clear the polygon.
+		$this->polygon = null;
 
-		// Check the pyramid.
-		if (!is_null($this->pyramid)) {
-			$this->pyramid = null;
-		}
+		// Clear the pyramid.
+		$this->pyramid = null;
 
-		// Check the scatter.
+		// Clear the scatter.
 		if (!is_null($this->scatter)) {
 			$this->scatter->clear();
 		}
 
-		// Check the series.
+		// Clear the series.
 		if (!is_null($this->series)) {
 			$this->series->clear();
 		}
 
-		// Check the solidgauge.
-		if (!is_null($this->solidgauge)) {
-			$this->solidgauge = null;
-		}
+		// Clear the solidgauge.
+		$this->solidgauge = null;
 
-		// Check the spline.
+		// Clear the spline.
 		if (!is_null($this->spline)) {
 			$this->spline->clear();
 		}
 
-		// Check the treemap.
-		if (!is_null($this->treemap)) {
-			$this->treemap = null;
-		}
+		// Clear the treemap.
+		$this->treemap = null;
 
-		// Check the waterfall.
-		if (!is_null($this->waterfall)) {
-			$this->waterfall = null;
-		}
+		// Clear the waterfall.
+		$this->waterfall = null;
 	}
 
 	/**

@@ -73,25 +73,17 @@ final class HighchartsBreaks implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the break size.
-		if (!is_null($this->breakSize)) {
-			$this->breakSize = null;
-		}
+		// Clear the break size.
+		$this->breakSize = null;
 
-		// Check the from.
-		if (!is_null($this->from)) {
-			$this->from = null;
-		}
+		// Clear the from.
+		$this->from = null;
 
-		// Check the repeat.
-		if (!is_null($this->repeat)) {
-			$this->repeat = null;
-		}
+		// Clear the repeat.
+		$this->repeat = null;
 
-		// Check the to.
-		if (!is_null($this->to)) {
-			$this->to = null;
-		}
+		// Clear the to.
+		$this->to = null;
 	}
 
 	/**

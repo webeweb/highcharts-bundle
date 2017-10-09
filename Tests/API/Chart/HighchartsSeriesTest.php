@@ -57,34 +57,34 @@ final class HighchartsSeriesTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f"];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with id");
 
-		$obj->setIndex(44);
+		$obj->setIndex(1);
 
-		$res3 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 44];
+		$res3 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 1];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with index");
 
-		$obj->setLegendIndex(38);
+		$obj->setLegendIndex(95);
 
-		$res4 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 44, "legendIndex" => 38];
+		$res4 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 1, "legendIndex" => 95];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with legend index");
 
 		$obj->setName("b068931cc450442b63f5b3d276ea4297");
 
-		$res5 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 44, "legendIndex" => 38, "name" => "b068931cc450442b63f5b3d276ea4297"];
+		$res5 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 1, "legendIndex" => 95, "name" => "b068931cc450442b63f5b3d276ea4297"];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with name");
 
 		$obj->setStack("fac2a47adace059aff113283a03f6760");
 
-		$res6 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 44, "legendIndex" => 38, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760"];
+		$res6 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 1, "legendIndex" => 95, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760"];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with stack");
 
 		$obj->setType("waterfall");
 
-		$res7 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 44, "legendIndex" => 38, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall"];
+		$res7 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 1, "legendIndex" => 95, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall"];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with type");
 
-		$obj->setZIndex(12);
+		$obj->setZIndex(47);
 
-		$res8 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 44, "legendIndex" => 38, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall", "zIndex" => 12];
+		$res8 = ["xAxis" => "0", "yAxis" => "0", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 1, "legendIndex" => 95, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall", "zIndex" => 47];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with z index");
 	}
 

@@ -197,105 +197,65 @@ final class HighchartsLang implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the context button title.
-		if (!is_null($this->contextButtonTitle)) {
-			$this->contextButtonTitle = null;
-		}
+		// Clear the context button title.
+		$this->contextButtonTitle = null;
 
-		// Check the decimal point.
-		if (!is_null($this->decimalPoint)) {
-			$this->decimalPoint = null;
-		}
+		// Clear the decimal point.
+		$this->decimalPoint = null;
 
-		// Check the download JPEG.
-		if (!is_null($this->downloadJPEG)) {
-			$this->downloadJPEG = null;
-		}
+		// Clear the download JPEG.
+		$this->downloadJPEG = null;
 
-		// Check the download PDF.
-		if (!is_null($this->downloadPDF)) {
-			$this->downloadPDF = null;
-		}
+		// Clear the download PDF.
+		$this->downloadPDF = null;
 
-		// Check the download PNG.
-		if (!is_null($this->downloadPNG)) {
-			$this->downloadPNG = null;
-		}
+		// Clear the download PNG.
+		$this->downloadPNG = null;
 
-		// Check the download SVG.
-		if (!is_null($this->downloadSVG)) {
-			$this->downloadSVG = null;
-		}
+		// Clear the download SVG.
+		$this->downloadSVG = null;
 
-		// Check the drill up text.
-		if (!is_null($this->drillUpText)) {
-			$this->drillUpText = null;
-		}
+		// Clear the drill up text.
+		$this->drillUpText = null;
 
-		// Check the invalid date.
-		if (!is_null($this->invalidDate)) {
-			$this->invalidDate = null;
-		}
+		// Clear the invalid date.
+		$this->invalidDate = null;
 
-		// Check the loading.
-		if (!is_null($this->loading)) {
-			$this->loading = null;
-		}
+		// Clear the loading.
+		$this->loading = null;
 
-		// Check the months.
-		if (!is_null($this->months)) {
-			$this->months = null;
-		}
+		// Clear the months.
+		$this->months = null;
 
-		// Check the no data.
-		if (!is_null($this->noData)) {
-			$this->noData = null;
-		}
+		// Clear the no data.
+		$this->noData = null;
 
-		// Check the numeric symbol magnitude.
-		if (!is_null($this->numericSymbolMagnitude)) {
-			$this->numericSymbolMagnitude = null;
-		}
+		// Clear the numeric symbol magnitude.
+		$this->numericSymbolMagnitude = null;
 
-		// Check the numeric symbols.
-		if (!is_null($this->numericSymbols)) {
-			$this->numericSymbols = null;
-		}
+		// Clear the numeric symbols.
+		$this->numericSymbols = null;
 
-		// Check the print chart.
-		if (!is_null($this->printChart)) {
-			$this->printChart = null;
-		}
+		// Clear the print chart.
+		$this->printChart = null;
 
-		// Check the reset zoom.
-		if (!is_null($this->resetZoom)) {
-			$this->resetZoom = null;
-		}
+		// Clear the reset zoom.
+		$this->resetZoom = null;
 
-		// Check the reset zoom title.
-		if (!is_null($this->resetZoomTitle)) {
-			$this->resetZoomTitle = null;
-		}
+		// Clear the reset zoom title.
+		$this->resetZoomTitle = null;
 
-		// Check the short months.
-		if (!is_null($this->shortMonths)) {
-			$this->shortMonths = null;
-		}
+		// Clear the short months.
+		$this->shortMonths = null;
 
-		// Check the short weekdays.
-		if (!is_null($this->shortWeekdays)) {
-			$this->shortWeekdays = null;
-		}
+		// Clear the short weekdays.
+		$this->shortWeekdays = null;
 
-		// Check the thousands sep.
-		if (!is_null($this->thousandsSep)) {
-			$this->thousandsSep = null;
-		}
+		// Clear the thousands sep.
+		$this->thousandsSep = null;
 
-		// Check the weekdays.
-		if (!is_null($this->weekdays)) {
-			$this->weekdays = null;
-		}
+		// Clear the weekdays.
+		$this->weekdays = null;
 	}
 
 	/**

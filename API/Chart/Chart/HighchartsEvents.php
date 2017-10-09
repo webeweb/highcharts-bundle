@@ -127,60 +127,38 @@ final class HighchartsEvents implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the add series.
-		if (!is_null($this->addSeries)) {
-			$this->addSeries = null;
-		}
+		// Clear the add series.
+		$this->addSeries = null;
 
-		// Check the after print.
-		if (!is_null($this->afterPrint)) {
-			$this->afterPrint = null;
-		}
+		// Clear the after print.
+		$this->afterPrint = null;
 
-		// Check the before print.
-		if (!is_null($this->beforePrint)) {
-			$this->beforePrint = null;
-		}
+		// Clear the before print.
+		$this->beforePrint = null;
 
-		// Check the click.
-		if (!is_null($this->click)) {
-			$this->click = null;
-		}
+		// Clear the click.
+		$this->click = null;
 
-		// Check the drilldown.
-		if (!is_null($this->drilldown)) {
-			$this->drilldown = null;
-		}
+		// Clear the drilldown.
+		$this->drilldown = null;
 
-		// Check the drillup.
-		if (!is_null($this->drillup)) {
-			$this->drillup = null;
-		}
+		// Clear the drillup.
+		$this->drillup = null;
 
-		// Check the drillupall.
-		if (!is_null($this->drillupall)) {
-			$this->drillupall = null;
-		}
+		// Clear the drillupall.
+		$this->drillupall = null;
 
-		// Check the load.
-		if (!is_null($this->load)) {
-			$this->load = null;
-		}
+		// Clear the load.
+		$this->load = null;
 
-		// Check the redraw.
-		if (!is_null($this->redraw)) {
-			$this->redraw = null;
-		}
+		// Clear the redraw.
+		$this->redraw = null;
 
-		// Check the render.
-		if (!is_null($this->render)) {
-			$this->render = null;
-		}
+		// Clear the render.
+		$this->render = null;
 
-		// Check the selection.
-		if (!is_null($this->selection)) {
-			$this->selection = null;
-		}
+		// Clear the selection.
+		$this->selection = null;
 	}
 
 	/**

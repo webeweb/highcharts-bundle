@@ -259,145 +259,89 @@ final class HighchartsDataLabels implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the background color.
-		if (!is_null($this->backgroundColor)) {
-			$this->backgroundColor = null;
-		}
+		// Clear the background color.
+		$this->backgroundColor = null;
 
-		// Check the border color.
-		if (!is_null($this->borderColor)) {
-			$this->borderColor = null;
-		}
+		// Clear the border color.
+		$this->borderColor = null;
 
-		// Check the border radius.
-		if (!is_null($this->borderRadius)) {
-			$this->borderRadius = null;
-		}
+		// Clear the border radius.
+		$this->borderRadius = null;
 
-		// Check the border width.
-		if (!is_null($this->borderWidth)) {
-			$this->borderWidth = null;
-		}
+		// Clear the border width.
+		$this->borderWidth = null;
 
-		// Check the class name.
-		if (!is_null($this->className)) {
-			$this->className = null;
-		}
+		// Clear the class name.
+		$this->className = null;
 
-		// Check the color.
-		if (!is_null($this->color)) {
-			$this->color = null;
-		}
+		// Clear the color.
+		$this->color = null;
 
-		// Check the connector color.
-		if (!is_null($this->connectorColor)) {
-			$this->connectorColor = null;
-		}
+		// Clear the connector color.
+		$this->connectorColor = null;
 
-		// Check the connector padding.
-		if (!is_null($this->connectorPadding)) {
-			$this->connectorPadding = null;
-		}
+		// Clear the connector padding.
+		$this->connectorPadding = null;
 
-		// Check the connector width.
-		if (!is_null($this->connectorWidth)) {
-			$this->connectorWidth = null;
-		}
+		// Clear the connector width.
+		$this->connectorWidth = null;
 
-		// Check the crop.
-		if (!is_null($this->crop)) {
-			$this->crop = null;
-		}
+		// Clear the crop.
+		$this->crop = null;
 
-		// Check the defer.
-		if (!is_null($this->defer)) {
-			$this->defer = null;
-		}
+		// Clear the defer.
+		$this->defer = null;
 
-		// Check the distance.
-		if (!is_null($this->distance)) {
-			$this->distance = null;
-		}
+		// Clear the distance.
+		$this->distance = null;
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the format.
-		if (!is_null($this->format)) {
-			$this->format = null;
-		}
+		// Clear the format.
+		$this->format = null;
 
-		// Check the formatter.
-		if (!is_null($this->formatter)) {
-			$this->formatter = null;
-		}
+		// Clear the formatter.
+		$this->formatter = null;
 
-		// Check the inside.
-		if (!is_null($this->inside)) {
-			$this->inside = null;
-		}
+		// Clear the inside.
+		$this->inside = null;
 
-		// Check the overflow.
-		if (!is_null($this->overflow)) {
-			$this->overflow = null;
-		}
+		// Clear the overflow.
+		$this->overflow = null;
 
-		// Check the padding.
-		if (!is_null($this->padding)) {
-			$this->padding = null;
-		}
+		// Clear the padding.
+		$this->padding = null;
 
-		// Check the rotation.
-		if (!is_null($this->rotation)) {
-			$this->rotation = null;
-		}
+		// Clear the rotation.
+		$this->rotation = null;
 
-		// Check the shadow.
-		if (!is_null($this->shadow)) {
-			$this->shadow = null;
-		}
+		// Clear the shadow.
+		$this->shadow = null;
 
-		// Check the shape.
-		if (!is_null($this->shape)) {
-			$this->shape = null;
-		}
+		// Clear the shape.
+		$this->shape = null;
 
-		// Check the soft connector.
-		if (!is_null($this->softConnector)) {
-			$this->softConnector = null;
-		}
+		// Clear the soft connector.
+		$this->softConnector = null;
 
-		// Check the style.
-		if (!is_null($this->style)) {
-			$this->style = null;
-		}
+		// Clear the style.
+		$this->style = null;
 
-		// Check the use HTML.
-		if (!is_null($this->useHTML)) {
-			$this->useHTML = null;
-		}
+		// Clear the use HTML.
+		$this->useHTML = null;
 
-		// Check the vertical align.
-		if (!is_null($this->verticalAlign)) {
-			$this->verticalAlign = null;
-		}
+		// Clear the vertical align.
+		$this->verticalAlign = null;
 
-		// Check the x.
-		if (!is_null($this->x)) {
-			$this->x = null;
-		}
+		// Clear the x.
+		$this->x = null;
 
-		// Check the y.
-		if (!is_null($this->y)) {
-			$this->y = null;
-		}
+		// Clear the y.
+		$this->y = null;
 
-		// Check the z index.
-		if (!is_null($this->zIndex)) {
-			$this->zIndex = null;
-		}
+		// Clear the z index.
+		$this->zIndex = null;
 	}
 
 	/**

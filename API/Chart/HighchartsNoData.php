@@ -73,25 +73,17 @@ final class HighchartsNoData implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the attr.
-		if (!is_null($this->attr)) {
-			$this->attr = null;
-		}
+		// Clear the attr.
+		$this->attr = null;
 
-		// Check the position.
-		if (!is_null($this->position)) {
-			$this->position = null;
-		}
+		// Clear the position.
+		$this->position = null;
 
-		// Check the style.
-		if (!is_null($this->style)) {
-			$this->style = null;
-		}
+		// Clear the style.
+		$this->style = null;
 
-		// Check the use HTML.
-		if (!is_null($this->useHTML)) {
-			$this->useHTML = null;
-		}
+		// Clear the use HTML.
+		$this->useHTML = null;
 	}
 
 	/**

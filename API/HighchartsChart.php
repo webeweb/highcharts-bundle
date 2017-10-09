@@ -210,117 +210,105 @@ final class HighchartsChart implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the accessibility.
+		// Clear the accessibility.
 		if (!is_null($this->accessibility)) {
 			$this->accessibility->clear();
 		}
 
-		// Check the chart.
+		// Clear the chart.
 		if (!is_null($this->chart)) {
 			$this->chart->clear();
 		}
 
-		// Check the colors.
-		if (!is_null($this->colors)) {
-			$this->colors = null;
-		}
+		// Clear the colors.
+		$this->colors = null;
 
-		// Check the credits.
+		// Clear the credits.
 		if (!is_null($this->credits)) {
 			$this->credits->clear();
 		}
 
-		// Check the data.
+		// Clear the data.
 		if (!is_null($this->data)) {
 			$this->data->clear();
 		}
 
-		// Check the defs.
-		if (!is_null($this->defs)) {
-			$this->defs = null;
-		}
+		// Clear the defs.
+		$this->defs = null;
 
-		// Check the drilldown.
+		// Clear the drilldown.
 		if (!is_null($this->drilldown)) {
 			$this->drilldown->clear();
 		}
 
-		// Check the exporting.
+		// Clear the exporting.
 		if (!is_null($this->exporting)) {
 			$this->exporting->clear();
 		}
 
-		// Check the labels.
+		// Clear the labels.
 		if (!is_null($this->labels)) {
 			$this->labels->clear();
 		}
 
-		// Check the legend.
+		// Clear the legend.
 		if (!is_null($this->legend)) {
 			$this->legend->clear();
 		}
 
-		// Check the loading.
+		// Clear the loading.
 		if (!is_null($this->loading)) {
 			$this->loading->clear();
 		}
 
-		// Check the navigation.
+		// Clear the navigation.
 		if (!is_null($this->navigation)) {
 			$this->navigation->clear();
 		}
 
-		// Check the no data.
+		// Clear the no data.
 		if (!is_null($this->noData)) {
 			$this->noData->clear();
 		}
 
-		// Check the pane.
-		if (!is_null($this->pane)) {
-			$this->pane = null;
-		}
+		// Clear the pane.
+		$this->pane = null;
 
-		// Check the plot options.
+		// Clear the plot options.
 		if (!is_null($this->plotOptions)) {
 			$this->plotOptions->clear();
 		}
 
-		// Check the responsive.
+		// Clear the responsive.
 		if (!is_null($this->responsive)) {
 			$this->responsive->clear();
 		}
 
-		// Check the series.
-		if (!is_null($this->series)) {
-			$this->series = null;
-		}
+		// Clear the series.
+		$this->series = null;
 
-		// Check the subtitle.
+		// Clear the subtitle.
 		if (!is_null($this->subtitle)) {
 			$this->subtitle->clear();
 		}
 
-		// Check the title.
+		// Clear the title.
 		if (!is_null($this->title)) {
 			$this->title->clear();
 		}
 
-		// Check the tooltip.
+		// Clear the tooltip.
 		if (!is_null($this->tooltip)) {
 			$this->tooltip->clear();
 		}
 
-		// Check the x axis.
-		if (!is_null($this->xAxis)) {
-			$this->xAxis = null;
-		}
+		// Clear the x axis.
+		$this->xAxis = null;
 
-		// Check the y axis.
-		if (!is_null($this->yAxis)) {
-			$this->yAxis = null;
-		}
+		// Clear the y axis.
+		$this->yAxis = null;
 
-		// Check the z axis.
+		// Clear the z axis.
 		if (!is_null($this->zAxis)) {
 			$this->zAxis->clear();
 		}

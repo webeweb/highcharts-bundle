@@ -81,30 +81,20 @@ final class HighchartsCondition implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the callback.
-		if (!is_null($this->callback)) {
-			$this->callback = null;
-		}
+		// Clear the callback.
+		$this->callback = null;
 
-		// Check the max height.
-		if (!is_null($this->maxHeight)) {
-			$this->maxHeight = null;
-		}
+		// Clear the max height.
+		$this->maxHeight = null;
 
-		// Check the max width.
-		if (!is_null($this->maxWidth)) {
-			$this->maxWidth = null;
-		}
+		// Clear the max width.
+		$this->maxWidth = null;
 
-		// Check the min height.
-		if (!is_null($this->minHeight)) {
-			$this->minHeight = null;
-		}
+		// Clear the min height.
+		$this->minHeight = null;
 
-		// Check the min width.
-		if (!is_null($this->minWidth)) {
-			$this->minWidth = null;
-		}
+		// Clear the min width.
+		$this->minWidth = null;
 	}
 
 	/**

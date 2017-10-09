@@ -77,30 +77,20 @@ final class HighchartsCredits implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the href.
-		if (!is_null($this->href)) {
-			$this->href = null;
-		}
+		// Clear the href.
+		$this->href = null;
 
-		// Check the position.
-		if (!is_null($this->position)) {
-			$this->position = null;
-		}
+		// Clear the position.
+		$this->position = null;
 
-		// Check the style.
-		if (!is_null($this->style)) {
-			$this->style = null;
-		}
+		// Clear the style.
+		$this->style = null;
 
-		// Check the text.
-		if (!is_null($this->text)) {
-			$this->text = null;
-		}
+		// Clear the text.
+		$this->text = null;
 	}
 
 	/**

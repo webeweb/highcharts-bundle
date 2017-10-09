@@ -80,30 +80,20 @@ final class HighchartsEvents implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the after breaks.
-		if (!is_null($this->afterBreaks)) {
-			$this->afterBreaks = null;
-		}
+		// Clear the after breaks.
+		$this->afterBreaks = null;
 
-		// Check the after set extremes.
-		if (!is_null($this->afterSetExtremes)) {
-			$this->afterSetExtremes = null;
-		}
+		// Clear the after set extremes.
+		$this->afterSetExtremes = null;
 
-		// Check the point break.
-		if (!is_null($this->pointBreak)) {
-			$this->pointBreak = null;
-		}
+		// Clear the point break.
+		$this->pointBreak = null;
 
-		// Check the point in break.
-		if (!is_null($this->pointInBreak)) {
-			$this->pointInBreak = null;
-		}
+		// Clear the point in break.
+		$this->pointInBreak = null;
 
-		// Check the set extremes.
-		if (!is_null($this->setExtremes)) {
-			$this->setExtremes = null;
-		}
+		// Clear the set extremes.
+		$this->setExtremes = null;
 	}
 
 	/**

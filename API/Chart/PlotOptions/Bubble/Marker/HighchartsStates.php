@@ -55,12 +55,12 @@ final class HighchartsStates implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the hover.
+		// Clear the hover.
 		if (!is_null($this->hover)) {
 			$this->hover->clear();
 		}
 
-		// Check the select.
+		// Clear the select.
 		if (!is_null($this->select)) {
 			$this->select->clear();
 		}

@@ -52,14 +52,14 @@ final class HighchartsPaneTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["center" => ["50%", "50%"], "size" => "85%", "background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"]];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with background");
 
-		$obj->setEndAngle(50);
+		$obj->setEndAngle(13);
 
-		$res2 = ["center" => ["50%", "50%"], "size" => "85%", "background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "endAngle" => 50];
+		$res2 = ["center" => ["50%", "50%"], "size" => "85%", "background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "endAngle" => 13];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with end angle");
 
-		$obj->setStartAngle(42);
+		$obj->setStartAngle(88);
 
-		$res3 = ["center" => ["50%", "50%"], "size" => "85%", "background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "endAngle" => 50, "startAngle" => 42];
+		$res3 = ["center" => ["50%", "50%"], "size" => "85%", "background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "endAngle" => 13, "startAngle" => 88];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with start angle");
 	}
 

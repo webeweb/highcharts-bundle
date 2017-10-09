@@ -262,150 +262,92 @@ final class HighchartsTooltip implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the animation.
-		if (!is_null($this->animation)) {
-			$this->animation = null;
-		}
+		// Clear the animation.
+		$this->animation = null;
 
-		// Check the background color.
-		if (!is_null($this->backgroundColor)) {
-			$this->backgroundColor = null;
-		}
+		// Clear the background color.
+		$this->backgroundColor = null;
 
-		// Check the border color.
-		if (!is_null($this->borderColor)) {
-			$this->borderColor = null;
-		}
+		// Clear the border color.
+		$this->borderColor = null;
 
-		// Check the border radius.
-		if (!is_null($this->borderRadius)) {
-			$this->borderRadius = null;
-		}
+		// Clear the border radius.
+		$this->borderRadius = null;
 
-		// Check the border width.
-		if (!is_null($this->borderWidth)) {
-			$this->borderWidth = null;
-		}
+		// Clear the border width.
+		$this->borderWidth = null;
 
-		// Check the crosshairs.
-		if (!is_null($this->crosshairs)) {
-			$this->crosshairs = null;
-		}
+		// Clear the crosshairs.
+		$this->crosshairs = null;
 
-		// Check the date time label formats.
-		if (!is_null($this->dateTimeLabelFormats)) {
-			$this->dateTimeLabelFormats = null;
-		}
+		// Clear the date time label formats.
+		$this->dateTimeLabelFormats = null;
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the follow pointer.
-		if (!is_null($this->followPointer)) {
-			$this->followPointer = null;
-		}
+		// Clear the follow pointer.
+		$this->followPointer = null;
 
-		// Check the follow touch move.
-		if (!is_null($this->followTouchMove)) {
-			$this->followTouchMove = null;
-		}
+		// Clear the follow touch move.
+		$this->followTouchMove = null;
 
-		// Check the footer format.
-		if (!is_null($this->footerFormat)) {
-			$this->footerFormat = null;
-		}
+		// Clear the footer format.
+		$this->footerFormat = null;
 
-		// Check the formatter.
-		if (!is_null($this->formatter)) {
-			$this->formatter = null;
-		}
+		// Clear the formatter.
+		$this->formatter = null;
 
-		// Check the header format.
-		if (!is_null($this->headerFormat)) {
-			$this->headerFormat = null;
-		}
+		// Clear the header format.
+		$this->headerFormat = null;
 
-		// Check the hide delay.
-		if (!is_null($this->hideDelay)) {
-			$this->hideDelay = null;
-		}
+		// Clear the hide delay.
+		$this->hideDelay = null;
 
-		// Check the padding.
-		if (!is_null($this->padding)) {
-			$this->padding = null;
-		}
+		// Clear the padding.
+		$this->padding = null;
 
-		// Check the point format.
-		if (!is_null($this->pointFormat)) {
-			$this->pointFormat = null;
-		}
+		// Clear the point format.
+		$this->pointFormat = null;
 
-		// Check the point formatter.
-		if (!is_null($this->pointFormatter)) {
-			$this->pointFormatter = null;
-		}
+		// Clear the point formatter.
+		$this->pointFormatter = null;
 
-		// Check the positioner.
-		if (!is_null($this->positioner)) {
-			$this->positioner = null;
-		}
+		// Clear the positioner.
+		$this->positioner = null;
 
-		// Check the shadow.
-		if (!is_null($this->shadow)) {
-			$this->shadow = null;
-		}
+		// Clear the shadow.
+		$this->shadow = null;
 
-		// Check the shape.
-		if (!is_null($this->shape)) {
-			$this->shape = null;
-		}
+		// Clear the shape.
+		$this->shape = null;
 
-		// Check the shared.
-		if (!is_null($this->shared)) {
-			$this->shared = null;
-		}
+		// Clear the shared.
+		$this->shared = null;
 
-		// Check the snap.
-		if (!is_null($this->snap)) {
-			$this->snap = null;
-		}
+		// Clear the snap.
+		$this->snap = null;
 
-		// Check the split.
-		if (!is_null($this->split)) {
-			$this->split = null;
-		}
+		// Clear the split.
+		$this->split = null;
 
-		// Check the style.
-		if (!is_null($this->style)) {
-			$this->style = null;
-		}
+		// Clear the style.
+		$this->style = null;
 
-		// Check the use HTML.
-		if (!is_null($this->useHTML)) {
-			$this->useHTML = null;
-		}
+		// Clear the use HTML.
+		$this->useHTML = null;
 
-		// Check the value decimals.
-		if (!is_null($this->valueDecimals)) {
-			$this->valueDecimals = null;
-		}
+		// Clear the value decimals.
+		$this->valueDecimals = null;
 
-		// Check the value prefix.
-		if (!is_null($this->valuePrefix)) {
-			$this->valuePrefix = null;
-		}
+		// Clear the value prefix.
+		$this->valuePrefix = null;
 
-		// Check the value suffix.
-		if (!is_null($this->valueSuffix)) {
-			$this->valueSuffix = null;
-		}
+		// Clear the value suffix.
+		$this->valueSuffix = null;
 
-		// Check the x date format.
-		if (!is_null($this->xDateFormat)) {
-			$this->xDateFormat = null;
-		}
+		// Clear the x date format.
+		$this->xDateFormat = null;
 	}
 
 	/**

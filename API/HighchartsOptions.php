@@ -55,12 +55,12 @@ final class HighchartsOptions implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the global.
+		// Clear the global.
 		if (!is_null($this->global)) {
 			$this->global->clear();
 		}
 
-		// Check the lang.
+		// Clear the lang.
 		if (!is_null($this->lang)) {
 			$this->lang->clear();
 		}

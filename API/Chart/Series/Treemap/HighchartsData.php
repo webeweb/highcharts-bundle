@@ -146,75 +146,49 @@ final class HighchartsData implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the class name.
-		if (!is_null($this->className)) {
-			$this->className = null;
-		}
+		// Clear the class name.
+		$this->className = null;
 
-		// Check the color.
-		if (!is_null($this->color)) {
-			$this->color = null;
-		}
+		// Clear the color.
+		$this->color = null;
 
-		// Check the color index.
-		if (!is_null($this->colorIndex)) {
-			$this->colorIndex = null;
-		}
+		// Clear the color index.
+		$this->colorIndex = null;
 
-		// Check the color value.
-		if (!is_null($this->colorValue)) {
-			$this->colorValue = null;
-		}
+		// Clear the color value.
+		$this->colorValue = null;
 
-		// Check the data labels.
-		if (!is_null($this->dataLabels)) {
-			$this->dataLabels = null;
-		}
+		// Clear the data labels.
+		$this->dataLabels = null;
 
-		// Check the description.
-		if (!is_null($this->description)) {
-			$this->description = null;
-		}
+		// Clear the description.
+		$this->description = null;
 
-		// Check the drilldown.
-		if (!is_null($this->drilldown)) {
-			$this->drilldown = null;
-		}
+		// Clear the drilldown.
+		$this->drilldown = null;
 
-		// Check the events.
+		// Clear the events.
 		if (!is_null($this->events)) {
 			$this->events->clear();
 		}
 
-		// Check the id.
-		if (!is_null($this->id)) {
-			$this->id = null;
-		}
+		// Clear the id.
+		$this->id = null;
 
-		// Check the labelrank.
-		if (!is_null($this->labelrank)) {
-			$this->labelrank = null;
-		}
+		// Clear the labelrank.
+		$this->labelrank = null;
 
-		// Check the name.
-		if (!is_null($this->name)) {
-			$this->name = null;
-		}
+		// Clear the name.
+		$this->name = null;
 
-		// Check the parent.
-		if (!is_null($this->parent)) {
-			$this->parent = null;
-		}
+		// Clear the parent.
+		$this->parent = null;
 
-		// Check the selected.
-		if (!is_null($this->selected)) {
-			$this->selected = null;
-		}
+		// Clear the selected.
+		$this->selected = null;
 
-		// Check the value.
-		if (!is_null($this->value)) {
-			$this->value = null;
-		}
+		// Clear the value.
+		$this->value = null;
 	}
 
 	/**

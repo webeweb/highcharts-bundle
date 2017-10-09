@@ -52,9 +52,9 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["enabled" => true, "lineColor" => "#ffffff", "lineWidth" => 0, "lineWidthPlus" => 1, "radiusPlus" => 2, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-		$obj->setRadius(75);
+		$obj->setRadius(93);
 
-		$res2 = ["enabled" => true, "lineColor" => "#ffffff", "lineWidth" => 0, "lineWidthPlus" => 1, "radiusPlus" => 2, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "radius" => 75];
+		$res2 = ["enabled" => true, "lineColor" => "#ffffff", "lineWidth" => 0, "lineWidthPlus" => 1, "radiusPlus" => 2, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "radius" => 93];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with radius");
 	}
 

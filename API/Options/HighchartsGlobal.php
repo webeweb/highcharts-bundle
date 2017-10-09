@@ -96,40 +96,26 @@ final class HighchartsGlobal implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the date.
-		if (!is_null($this->date)) {
-			$this->date = null;
-		}
+		// Clear the date.
+		$this->date = null;
 
-		// Check the VML radial gradient URL.
-		if (!is_null($this->vMLRadialGradientURL)) {
-			$this->vMLRadialGradientURL = null;
-		}
+		// Clear the VML radial gradient URL.
+		$this->vMLRadialGradientURL = null;
 
-		// Check the canvas tools URL.
-		if (!is_null($this->canvasToolsURL)) {
-			$this->canvasToolsURL = null;
-		}
+		// Clear the canvas tools URL.
+		$this->canvasToolsURL = null;
 
-		// Check the get timezone offset.
-		if (!is_null($this->getTimezoneOffset)) {
-			$this->getTimezoneOffset = null;
-		}
+		// Clear the get timezone offset.
+		$this->getTimezoneOffset = null;
 
-		// Check the timezone.
-		if (!is_null($this->timezone)) {
-			$this->timezone = null;
-		}
+		// Clear the timezone.
+		$this->timezone = null;
 
-		// Check the timezone offset.
-		if (!is_null($this->timezoneOffset)) {
-			$this->timezoneOffset = null;
-		}
+		// Clear the timezone offset.
+		$this->timezoneOffset = null;
 
-		// Check the use UTC.
-		if (!is_null($this->useUTC)) {
-			$this->useUTC = null;
-		}
+		// Clear the use UTC.
+		$this->useUTC = null;
 	}
 
 	/**

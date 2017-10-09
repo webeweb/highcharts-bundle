@@ -57,15 +57,11 @@ final class HighchartsRules implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the chart options.
-		if (!is_null($this->chartOptions)) {
-			$this->chartOptions = null;
-		}
+		// Clear the chart options.
+		$this->chartOptions = null;
 
-		// Check the condition.
-		if (!is_null($this->condition)) {
-			$this->condition = null;
-		}
+		// Clear the condition.
+		$this->condition = null;
 	}
 
 	/**

@@ -97,40 +97,26 @@ final class HighchartsBackground implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the background color.
-		if (!is_null($this->backgroundColor)) {
-			$this->backgroundColor = null;
-		}
+		// Clear the background color.
+		$this->backgroundColor = null;
 
-		// Check the border color.
-		if (!is_null($this->borderColor)) {
-			$this->borderColor = null;
-		}
+		// Clear the border color.
+		$this->borderColor = null;
 
-		// Check the border width.
-		if (!is_null($this->borderWidth)) {
-			$this->borderWidth = null;
-		}
+		// Clear the border width.
+		$this->borderWidth = null;
 
-		// Check the class name.
-		if (!is_null($this->className)) {
-			$this->className = null;
-		}
+		// Clear the class name.
+		$this->className = null;
 
-		// Check the inner radius.
-		if (!is_null($this->innerRadius)) {
-			$this->innerRadius = null;
-		}
+		// Clear the inner radius.
+		$this->innerRadius = null;
 
-		// Check the outer radius.
-		if (!is_null($this->outerRadius)) {
-			$this->outerRadius = null;
-		}
+		// Clear the outer radius.
+		$this->outerRadius = null;
 
-		// Check the shape.
-		if (!is_null($this->shape)) {
-			$this->shape = null;
-		}
+		// Clear the shape.
+		$this->shape = null;
 	}
 
 	/**

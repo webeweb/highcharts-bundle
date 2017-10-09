@@ -465,285 +465,181 @@ final class HighchartsBubble implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the allow point select.
-		if (!is_null($this->allowPointSelect)) {
-			$this->allowPointSelect = null;
-		}
+		// Clear the allow point select.
+		$this->allowPointSelect = null;
 
-		// Check the animation.
-		if (!is_null($this->animation)) {
-			$this->animation = null;
-		}
+		// Clear the animation.
+		$this->animation = null;
 
-		// Check the animation limit.
-		if (!is_null($this->animationLimit)) {
-			$this->animationLimit = null;
-		}
+		// Clear the animation limit.
+		$this->animationLimit = null;
 
-		// Check the class name.
-		if (!is_null($this->className)) {
-			$this->className = null;
-		}
+		// Clear the class name.
+		$this->className = null;
 
-		// Check the color.
-		if (!is_null($this->color)) {
-			$this->color = null;
-		}
+		// Clear the color.
+		$this->color = null;
 
-		// Check the color index.
-		if (!is_null($this->colorIndex)) {
-			$this->colorIndex = null;
-		}
+		// Clear the color index.
+		$this->colorIndex = null;
 
-		// Check the crop threshold.
-		if (!is_null($this->cropThreshold)) {
-			$this->cropThreshold = null;
-		}
+		// Clear the crop threshold.
+		$this->cropThreshold = null;
 
-		// Check the cursor.
-		if (!is_null($this->cursor)) {
-			$this->cursor = null;
-		}
+		// Clear the cursor.
+		$this->cursor = null;
 
-		// Check the dash style.
-		if (!is_null($this->dashStyle)) {
-			$this->dashStyle = null;
-		}
+		// Clear the dash style.
+		$this->dashStyle = null;
 
-		// Check the data.
-		if (!is_null($this->data)) {
-			$this->data = null;
-		}
+		// Clear the data.
+		$this->data = null;
 
-		// Check the data labels.
+		// Clear the data labels.
 		if (!is_null($this->dataLabels)) {
 			$this->dataLabels->clear();
 		}
 
-		// Check the description.
-		if (!is_null($this->description)) {
-			$this->description = null;
-		}
+		// Clear the description.
+		$this->description = null;
 
-		// Check the display negative.
-		if (!is_null($this->displayNegative)) {
-			$this->displayNegative = null;
-		}
+		// Clear the display negative.
+		$this->displayNegative = null;
 
-		// Check the enable mouse tracking.
-		if (!is_null($this->enableMouseTracking)) {
-			$this->enableMouseTracking = null;
-		}
+		// Clear the enable mouse tracking.
+		$this->enableMouseTracking = null;
 
-		// Check the events.
+		// Clear the events.
 		if (!is_null($this->events)) {
 			$this->events->clear();
 		}
 
-		// Check the expose element to a11y.
-		if (!is_null($this->exposeElementToA11y)) {
-			$this->exposeElementToA11y = null;
-		}
+		// Clear the expose element to a11y.
+		$this->exposeElementToA11y = null;
 
-		// Check the find nearest point by.
-		if (!is_null($this->findNearestPointBy)) {
-			$this->findNearestPointBy = null;
-		}
+		// Clear the find nearest point by.
+		$this->findNearestPointBy = null;
 
-		// Check the get extremes from all.
-		if (!is_null($this->getExtremesFromAll)) {
-			$this->getExtremesFromAll = null;
-		}
+		// Clear the get extremes from all.
+		$this->getExtremesFromAll = null;
 
-		// Check the id.
-		if (!is_null($this->id)) {
-			$this->id = null;
-		}
+		// Clear the id.
+		$this->id = null;
 
-		// Check the index.
-		if (!is_null($this->index)) {
-			$this->index = null;
-		}
+		// Clear the index.
+		$this->index = null;
 
-		// Check the keys.
-		if (!is_null($this->keys)) {
-			$this->keys = null;
-		}
+		// Clear the keys.
+		$this->keys = null;
 
-		// Check the legend index.
-		if (!is_null($this->legendIndex)) {
-			$this->legendIndex = null;
-		}
+		// Clear the legend index.
+		$this->legendIndex = null;
 
-		// Check the line width.
-		if (!is_null($this->lineWidth)) {
-			$this->lineWidth = null;
-		}
+		// Clear the line width.
+		$this->lineWidth = null;
 
-		// Check the linked to.
-		if (!is_null($this->linkedTo)) {
-			$this->linkedTo = null;
-		}
+		// Clear the linked to.
+		$this->linkedTo = null;
 
-		// Check the marker.
-		if (!is_null($this->marker)) {
-			$this->marker = null;
-		}
+		// Clear the marker.
+		$this->marker = null;
 
-		// Check the max size.
-		if (!is_null($this->maxSize)) {
-			$this->maxSize = null;
-		}
+		// Clear the max size.
+		$this->maxSize = null;
 
-		// Check the min size.
-		if (!is_null($this->minSize)) {
-			$this->minSize = null;
-		}
+		// Clear the min size.
+		$this->minSize = null;
 
-		// Check the name.
-		if (!is_null($this->name)) {
-			$this->name = null;
-		}
+		// Clear the name.
+		$this->name = null;
 
-		// Check the negative color.
-		if (!is_null($this->negativeColor)) {
-			$this->negativeColor = null;
-		}
+		// Clear the negative color.
+		$this->negativeColor = null;
 
-		// Check the point.
+		// Clear the point.
 		if (!is_null($this->point)) {
 			$this->point->clear();
 		}
 
-		// Check the point description formatter.
-		if (!is_null($this->pointDescriptionFormatter)) {
-			$this->pointDescriptionFormatter = null;
-		}
+		// Clear the point description formatter.
+		$this->pointDescriptionFormatter = null;
 
-		// Check the point interval.
-		if (!is_null($this->pointInterval)) {
-			$this->pointInterval = null;
-		}
+		// Clear the point interval.
+		$this->pointInterval = null;
 
-		// Check the point interval unit.
-		if (!is_null($this->pointIntervalUnit)) {
-			$this->pointIntervalUnit = null;
-		}
+		// Clear the point interval unit.
+		$this->pointIntervalUnit = null;
 
-		// Check the point start.
-		if (!is_null($this->pointStart)) {
-			$this->pointStart = null;
-		}
+		// Clear the point start.
+		$this->pointStart = null;
 
-		// Check the selected.
-		if (!is_null($this->selected)) {
-			$this->selected = null;
-		}
+		// Clear the selected.
+		$this->selected = null;
 
-		// Check the shadow.
-		if (!is_null($this->shadow)) {
-			$this->shadow = null;
-		}
+		// Clear the shadow.
+		$this->shadow = null;
 
-		// Check the show checkbox.
-		if (!is_null($this->showCheckbox)) {
-			$this->showCheckbox = null;
-		}
+		// Clear the show checkbox.
+		$this->showCheckbox = null;
 
-		// Check the show in legend.
-		if (!is_null($this->showInLegend)) {
-			$this->showInLegend = null;
-		}
+		// Clear the show in legend.
+		$this->showInLegend = null;
 
-		// Check the size by.
-		if (!is_null($this->sizeBy)) {
-			$this->sizeBy = null;
-		}
+		// Clear the size by.
+		$this->sizeBy = null;
 
-		// Check the size by absolute value.
-		if (!is_null($this->sizeByAbsoluteValue)) {
-			$this->sizeByAbsoluteValue = null;
-		}
+		// Clear the size by absolute value.
+		$this->sizeByAbsoluteValue = null;
 
-		// Check the skip keyboard navigation.
-		if (!is_null($this->skipKeyboardNavigation)) {
-			$this->skipKeyboardNavigation = null;
-		}
+		// Clear the skip keyboard navigation.
+		$this->skipKeyboardNavigation = null;
 
-		// Check the soft threshold.
-		if (!is_null($this->softThreshold)) {
-			$this->softThreshold = null;
-		}
+		// Clear the soft threshold.
+		$this->softThreshold = null;
 
-		// Check the states.
+		// Clear the states.
 		if (!is_null($this->states)) {
 			$this->states->clear();
 		}
 
-		// Check the sticky tracking.
-		if (!is_null($this->stickyTracking)) {
-			$this->stickyTracking = null;
-		}
+		// Clear the sticky tracking.
+		$this->stickyTracking = null;
 
-		// Check the threshold.
-		if (!is_null($this->threshold)) {
-			$this->threshold = null;
-		}
+		// Clear the threshold.
+		$this->threshold = null;
 
-		// Check the tooltip.
-		if (!is_null($this->tooltip)) {
-			$this->tooltip = null;
-		}
+		// Clear the tooltip.
+		$this->tooltip = null;
 
-		// Check the type.
-		if (!is_null($this->type)) {
-			$this->type = null;
-		}
+		// Clear the type.
+		$this->type = null;
 
-		// Check the visible.
-		if (!is_null($this->visible)) {
-			$this->visible = null;
-		}
+		// Clear the visible.
+		$this->visible = null;
 
-		// Check the x axis.
-		if (!is_null($this->xAxis)) {
-			$this->xAxis = null;
-		}
+		// Clear the x axis.
+		$this->xAxis = null;
 
-		// Check the y axis.
-		if (!is_null($this->yAxis)) {
-			$this->yAxis = null;
-		}
+		// Clear the y axis.
+		$this->yAxis = null;
 
-		// Check the z index.
-		if (!is_null($this->zIndex)) {
-			$this->zIndex = null;
-		}
+		// Clear the z index.
+		$this->zIndex = null;
 
-		// Check the z max.
-		if (!is_null($this->zMax)) {
-			$this->zMax = null;
-		}
+		// Clear the z max.
+		$this->zMax = null;
 
-		// Check the z min.
-		if (!is_null($this->zMin)) {
-			$this->zMin = null;
-		}
+		// Clear the z min.
+		$this->zMin = null;
 
-		// Check the z threshold.
-		if (!is_null($this->zThreshold)) {
-			$this->zThreshold = null;
-		}
+		// Clear the z threshold.
+		$this->zThreshold = null;
 
-		// Check the zone axis.
-		if (!is_null($this->zoneAxis)) {
-			$this->zoneAxis = null;
-		}
+		// Clear the zone axis.
+		$this->zoneAxis = null;
 
-		// Check the zones.
-		if (!is_null($this->zones)) {
-			$this->zones = null;
-		}
+		// Clear the zones.
+		$this->zones = null;
 	}
 
 	/**

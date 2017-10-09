@@ -94,40 +94,26 @@ final class HighchartsEvents implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the click.
-		if (!is_null($this->click)) {
-			$this->click = null;
-		}
+		// Clear the click.
+		$this->click = null;
 
-		// Check the mouse out.
-		if (!is_null($this->mouseOut)) {
-			$this->mouseOut = null;
-		}
+		// Clear the mouse out.
+		$this->mouseOut = null;
 
-		// Check the mouse over.
-		if (!is_null($this->mouseOver)) {
-			$this->mouseOver = null;
-		}
+		// Clear the mouse over.
+		$this->mouseOver = null;
 
-		// Check the remove.
-		if (!is_null($this->remove)) {
-			$this->remove = null;
-		}
+		// Clear the remove.
+		$this->remove = null;
 
-		// Check the select.
-		if (!is_null($this->select)) {
-			$this->select = null;
-		}
+		// Clear the select.
+		$this->select = null;
 
-		// Check the unselect.
-		if (!is_null($this->unselect)) {
-			$this->unselect = null;
-		}
+		// Clear the unselect.
+		$this->unselect = null;
 
-		// Check the update.
-		if (!is_null($this->update)) {
-			$this->update = null;
-		}
+		// Clear the update.
+		$this->update = null;
 	}
 
 	/**

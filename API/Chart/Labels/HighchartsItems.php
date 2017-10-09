@@ -55,15 +55,11 @@ final class HighchartsItems implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the html.
-		if (!is_null($this->html)) {
-			$this->html = null;
-		}
+		// Clear the html.
+		$this->html = null;
 
-		// Check the style.
-		if (!is_null($this->style)) {
-			$this->style = null;
-		}
+		// Clear the style.
+		$this->style = null;
 	}
 
 	/**

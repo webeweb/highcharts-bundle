@@ -130,65 +130,41 @@ final class HighchartsSeries implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the data.
-		if (!is_null($this->data)) {
-			$this->data = null;
-		}
+		// Clear the data.
+		$this->data = null;
 
-		// Check the data parser.
-		if (!is_null($this->dataParser)) {
-			$this->dataParser = null;
-		}
+		// Clear the data parser.
+		$this->dataParser = null;
 
-		// Check the data URL.
-		if (!is_null($this->dataURL)) {
-			$this->dataURL = null;
-		}
+		// Clear the data URL.
+		$this->dataURL = null;
 
-		// Check the id.
-		if (!is_null($this->id)) {
-			$this->id = null;
-		}
+		// Clear the id.
+		$this->id = null;
 
-		// Check the index.
-		if (!is_null($this->index)) {
-			$this->index = null;
-		}
+		// Clear the index.
+		$this->index = null;
 
-		// Check the legend index.
-		if (!is_null($this->legendIndex)) {
-			$this->legendIndex = null;
-		}
+		// Clear the legend index.
+		$this->legendIndex = null;
 
-		// Check the name.
-		if (!is_null($this->name)) {
-			$this->name = null;
-		}
+		// Clear the name.
+		$this->name = null;
 
-		// Check the stack.
-		if (!is_null($this->stack)) {
-			$this->stack = null;
-		}
+		// Clear the stack.
+		$this->stack = null;
 
-		// Check the type.
-		if (!is_null($this->type)) {
-			$this->type = null;
-		}
+		// Clear the type.
+		$this->type = null;
 
-		// Check the x axis.
-		if (!is_null($this->xAxis)) {
-			$this->xAxis = null;
-		}
+		// Clear the x axis.
+		$this->xAxis = null;
 
-		// Check the y axis.
-		if (!is_null($this->yAxis)) {
-			$this->yAxis = null;
-		}
+		// Clear the y axis.
+		$this->yAxis = null;
 
-		// Check the z index.
-		if (!is_null($this->zIndex)) {
-			$this->zIndex = null;
-		}
+		// Clear the z index.
+		$this->zIndex = null;
 	}
 
 	/**

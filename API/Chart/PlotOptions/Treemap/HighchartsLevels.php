@@ -105,45 +105,29 @@ final class HighchartsLevels implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the border color.
-		if (!is_null($this->borderColor)) {
-			$this->borderColor = null;
-		}
+		// Clear the border color.
+		$this->borderColor = null;
 
-		// Check the border dash style.
-		if (!is_null($this->borderDashStyle)) {
-			$this->borderDashStyle = null;
-		}
+		// Clear the border dash style.
+		$this->borderDashStyle = null;
 
-		// Check the border width.
-		if (!is_null($this->borderWidth)) {
-			$this->borderWidth = null;
-		}
+		// Clear the border width.
+		$this->borderWidth = null;
 
-		// Check the color.
-		if (!is_null($this->color)) {
-			$this->color = null;
-		}
+		// Clear the color.
+		$this->color = null;
 
-		// Check the data labels.
-		if (!is_null($this->dataLabels)) {
-			$this->dataLabels = null;
-		}
+		// Clear the data labels.
+		$this->dataLabels = null;
 
-		// Check the layout algorithm.
-		if (!is_null($this->layoutAlgorithm)) {
-			$this->layoutAlgorithm = null;
-		}
+		// Clear the layout algorithm.
+		$this->layoutAlgorithm = null;
 
-		// Check the layout starting direction.
-		if (!is_null($this->layoutStartingDirection)) {
-			$this->layoutStartingDirection = null;
-		}
+		// Clear the layout starting direction.
+		$this->layoutStartingDirection = null;
 
-		// Check the level.
-		if (!is_null($this->level)) {
-			$this->level = null;
-		}
+		// Clear the level.
+		$this->level = null;
 	}
 
 	/**

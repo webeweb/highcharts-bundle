@@ -322,190 +322,120 @@ final class HighchartsLegend implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the align.
-		if (!is_null($this->align)) {
-			$this->align = null;
-		}
+		// Clear the align.
+		$this->align = null;
 
-		// Check the background color.
-		if (!is_null($this->backgroundColor)) {
-			$this->backgroundColor = null;
-		}
+		// Clear the background color.
+		$this->backgroundColor = null;
 
-		// Check the border color.
-		if (!is_null($this->borderColor)) {
-			$this->borderColor = null;
-		}
+		// Clear the border color.
+		$this->borderColor = null;
 
-		// Check the border radius.
-		if (!is_null($this->borderRadius)) {
-			$this->borderRadius = null;
-		}
+		// Clear the border radius.
+		$this->borderRadius = null;
 
-		// Check the border width.
-		if (!is_null($this->borderWidth)) {
-			$this->borderWidth = null;
-		}
+		// Clear the border width.
+		$this->borderWidth = null;
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the floating.
-		if (!is_null($this->floating)) {
-			$this->floating = null;
-		}
+		// Clear the floating.
+		$this->floating = null;
 
-		// Check the item distance.
-		if (!is_null($this->itemDistance)) {
-			$this->itemDistance = null;
-		}
+		// Clear the item distance.
+		$this->itemDistance = null;
 
-		// Check the item hidden style.
-		if (!is_null($this->itemHiddenStyle)) {
-			$this->itemHiddenStyle = null;
-		}
+		// Clear the item hidden style.
+		$this->itemHiddenStyle = null;
 
-		// Check the item hover style.
-		if (!is_null($this->itemHoverStyle)) {
-			$this->itemHoverStyle = null;
-		}
+		// Clear the item hover style.
+		$this->itemHoverStyle = null;
 
-		// Check the item margin bottom.
-		if (!is_null($this->itemMarginBottom)) {
-			$this->itemMarginBottom = null;
-		}
+		// Clear the item margin bottom.
+		$this->itemMarginBottom = null;
 
-		// Check the item margin top.
-		if (!is_null($this->itemMarginTop)) {
-			$this->itemMarginTop = null;
-		}
+		// Clear the item margin top.
+		$this->itemMarginTop = null;
 
-		// Check the item style.
-		if (!is_null($this->itemStyle)) {
-			$this->itemStyle = null;
-		}
+		// Clear the item style.
+		$this->itemStyle = null;
 
-		// Check the item width.
-		if (!is_null($this->itemWidth)) {
-			$this->itemWidth = null;
-		}
+		// Clear the item width.
+		$this->itemWidth = null;
 
-		// Check the label format.
-		if (!is_null($this->labelFormat)) {
-			$this->labelFormat = null;
-		}
+		// Clear the label format.
+		$this->labelFormat = null;
 
-		// Check the label formatter.
-		if (!is_null($this->labelFormatter)) {
-			$this->labelFormatter = null;
-		}
+		// Clear the label formatter.
+		$this->labelFormatter = null;
 
-		// Check the layout.
-		if (!is_null($this->layout)) {
-			$this->layout = null;
-		}
+		// Clear the layout.
+		$this->layout = null;
 
-		// Check the line height.
-		if (!is_null($this->lineHeight)) {
-			$this->lineHeight = null;
-		}
+		// Clear the line height.
+		$this->lineHeight = null;
 
-		// Check the margin.
-		if (!is_null($this->margin)) {
-			$this->margin = null;
-		}
+		// Clear the margin.
+		$this->margin = null;
 
-		// Check the max height.
-		if (!is_null($this->maxHeight)) {
-			$this->maxHeight = null;
-		}
+		// Clear the max height.
+		$this->maxHeight = null;
 
-		// Check the navigation.
+		// Clear the navigation.
 		if (!is_null($this->navigation)) {
 			$this->navigation->clear();
 		}
 
-		// Check the padding.
-		if (!is_null($this->padding)) {
-			$this->padding = null;
-		}
+		// Clear the padding.
+		$this->padding = null;
 
-		// Check the reversed.
-		if (!is_null($this->reversed)) {
-			$this->reversed = null;
-		}
+		// Clear the reversed.
+		$this->reversed = null;
 
-		// Check the rtl.
-		if (!is_null($this->rtl)) {
-			$this->rtl = null;
-		}
+		// Clear the rtl.
+		$this->rtl = null;
 
-		// Check the shadow.
-		if (!is_null($this->shadow)) {
-			$this->shadow = null;
-		}
+		// Clear the shadow.
+		$this->shadow = null;
 
-		// Check the square symbol.
-		if (!is_null($this->squareSymbol)) {
-			$this->squareSymbol = null;
-		}
+		// Clear the square symbol.
+		$this->squareSymbol = null;
 
-		// Check the style.
-		if (!is_null($this->style)) {
-			$this->style = null;
-		}
+		// Clear the style.
+		$this->style = null;
 
-		// Check the symbol height.
-		if (!is_null($this->symbolHeight)) {
-			$this->symbolHeight = null;
-		}
+		// Clear the symbol height.
+		$this->symbolHeight = null;
 
-		// Check the symbol padding.
-		if (!is_null($this->symbolPadding)) {
-			$this->symbolPadding = null;
-		}
+		// Clear the symbol padding.
+		$this->symbolPadding = null;
 
-		// Check the symbol radius.
-		if (!is_null($this->symbolRadius)) {
-			$this->symbolRadius = null;
-		}
+		// Clear the symbol radius.
+		$this->symbolRadius = null;
 
-		// Check the symbol width.
-		if (!is_null($this->symbolWidth)) {
-			$this->symbolWidth = null;
-		}
+		// Clear the symbol width.
+		$this->symbolWidth = null;
 
-		// Check the title.
+		// Clear the title.
 		if (!is_null($this->title)) {
 			$this->title->clear();
 		}
 
-		// Check the use HTML.
-		if (!is_null($this->useHTML)) {
-			$this->useHTML = null;
-		}
+		// Clear the use HTML.
+		$this->useHTML = null;
 
-		// Check the vertical align.
-		if (!is_null($this->verticalAlign)) {
-			$this->verticalAlign = null;
-		}
+		// Clear the vertical align.
+		$this->verticalAlign = null;
 
-		// Check the width.
-		if (!is_null($this->width)) {
-			$this->width = null;
-		}
+		// Clear the width.
+		$this->width = null;
 
-		// Check the x.
-		if (!is_null($this->x)) {
-			$this->x = null;
-		}
+		// Clear the x.
+		$this->x = null;
 
-		// Check the y.
-		if (!is_null($this->y)) {
-			$this->y = null;
-		}
+		// Clear the y.
+		$this->y = null;
 	}
 
 	/**

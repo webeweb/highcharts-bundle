@@ -89,35 +89,23 @@ final class HighchartsNavigation implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the active color.
-		if (!is_null($this->activeColor)) {
-			$this->activeColor = null;
-		}
+		// Clear the active color.
+		$this->activeColor = null;
 
-		// Check the animation.
-		if (!is_null($this->animation)) {
-			$this->animation = null;
-		}
+		// Clear the animation.
+		$this->animation = null;
 
-		// Check the arrow size.
-		if (!is_null($this->arrowSize)) {
-			$this->arrowSize = null;
-		}
+		// Clear the arrow size.
+		$this->arrowSize = null;
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the inactive color.
-		if (!is_null($this->inactiveColor)) {
-			$this->inactiveColor = null;
-		}
+		// Clear the inactive color.
+		$this->inactiveColor = null;
 
-		// Check the style.
-		if (!is_null($this->style)) {
-			$this->style = null;
-		}
+		// Clear the style.
+		$this->style = null;
 	}
 
 	/**

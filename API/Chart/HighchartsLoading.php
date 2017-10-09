@@ -73,25 +73,17 @@ final class HighchartsLoading implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the hide duration.
-		if (!is_null($this->hideDuration)) {
-			$this->hideDuration = null;
-		}
+		// Clear the hide duration.
+		$this->hideDuration = null;
 
-		// Check the label style.
-		if (!is_null($this->labelStyle)) {
-			$this->labelStyle = null;
-		}
+		// Clear the label style.
+		$this->labelStyle = null;
 
-		// Check the show duration.
-		if (!is_null($this->showDuration)) {
-			$this->showDuration = null;
-		}
+		// Clear the show duration.
+		$this->showDuration = null;
 
-		// Check the style.
-		if (!is_null($this->style)) {
-			$this->style = null;
-		}
+		// Clear the style.
+		$this->style = null;
 	}
 
 	/**

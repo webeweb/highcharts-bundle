@@ -175,95 +175,59 @@ final class HighchartsLabels implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the align.
-		if (!is_null($this->align)) {
-			$this->align = null;
-		}
+		// Clear the align.
+		$this->align = null;
 
-		// Check the auto rotation.
-		if (!is_null($this->autoRotation)) {
-			$this->autoRotation = null;
-		}
+		// Clear the auto rotation.
+		$this->autoRotation = null;
 
-		// Check the auto rotation limit.
-		if (!is_null($this->autoRotationLimit)) {
-			$this->autoRotationLimit = null;
-		}
+		// Clear the auto rotation limit.
+		$this->autoRotationLimit = null;
 
-		// Check the distance.
-		if (!is_null($this->distance)) {
-			$this->distance = null;
-		}
+		// Clear the distance.
+		$this->distance = null;
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the format.
-		if (!is_null($this->format)) {
-			$this->format = null;
-		}
+		// Clear the format.
+		$this->format = null;
 
-		// Check the formatter.
-		if (!is_null($this->formatter)) {
-			$this->formatter = null;
-		}
+		// Clear the formatter.
+		$this->formatter = null;
 
-		// Check the overflow.
-		if (!is_null($this->overflow)) {
-			$this->overflow = null;
-		}
+		// Clear the overflow.
+		$this->overflow = null;
 
-		// Check the padding.
-		if (!is_null($this->padding)) {
-			$this->padding = null;
-		}
+		// Clear the padding.
+		$this->padding = null;
 
-		// Check the reserve space.
-		if (!is_null($this->reserveSpace)) {
-			$this->reserveSpace = null;
-		}
+		// Clear the reserve space.
+		$this->reserveSpace = null;
 
-		// Check the rotation.
-		if (!is_null($this->rotation)) {
-			$this->rotation = null;
-		}
+		// Clear the rotation.
+		$this->rotation = null;
 
-		// Check the stagger lines.
-		if (!is_null($this->staggerLines)) {
-			$this->staggerLines = null;
-		}
+		// Clear the stagger lines.
+		$this->staggerLines = null;
 
-		// Check the step.
-		if (!is_null($this->step)) {
-			$this->step = null;
-		}
+		// Clear the step.
+		$this->step = null;
 
-		// Check the style.
-		if (!is_null($this->style)) {
-			$this->style = null;
-		}
+		// Clear the style.
+		$this->style = null;
 
-		// Check the use HTML.
-		if (!is_null($this->useHTML)) {
-			$this->useHTML = null;
-		}
+		// Clear the use HTML.
+		$this->useHTML = null;
 
-		// Check the x.
-		if (!is_null($this->x)) {
-			$this->x = null;
-		}
+		// Clear the x.
+		$this->x = null;
 
-		// Check the y.
-		if (!is_null($this->y)) {
-			$this->y = null;
-		}
+		// Clear the y.
+		$this->y = null;
 
-		// Check the z index.
-		if (!is_null($this->zIndex)) {
-			$this->zIndex = null;
-		}
+		// Clear the z index.
+		$this->zIndex = null;
 	}
 
 	/**

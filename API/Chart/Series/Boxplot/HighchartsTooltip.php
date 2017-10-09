@@ -150,75 +150,47 @@ final class HighchartsTooltip implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the date time label formats.
-		if (!is_null($this->dateTimeLabelFormats)) {
-			$this->dateTimeLabelFormats = null;
-		}
+		// Clear the date time label formats.
+		$this->dateTimeLabelFormats = null;
 
-		// Check the follow pointer.
-		if (!is_null($this->followPointer)) {
-			$this->followPointer = null;
-		}
+		// Clear the follow pointer.
+		$this->followPointer = null;
 
-		// Check the follow touch move.
-		if (!is_null($this->followTouchMove)) {
-			$this->followTouchMove = null;
-		}
+		// Clear the follow touch move.
+		$this->followTouchMove = null;
 
-		// Check the footer format.
-		if (!is_null($this->footerFormat)) {
-			$this->footerFormat = null;
-		}
+		// Clear the footer format.
+		$this->footerFormat = null;
 
-		// Check the header format.
-		if (!is_null($this->headerFormat)) {
-			$this->headerFormat = null;
-		}
+		// Clear the header format.
+		$this->headerFormat = null;
 
-		// Check the hide delay.
-		if (!is_null($this->hideDelay)) {
-			$this->hideDelay = null;
-		}
+		// Clear the hide delay.
+		$this->hideDelay = null;
 
-		// Check the padding.
-		if (!is_null($this->padding)) {
-			$this->padding = null;
-		}
+		// Clear the padding.
+		$this->padding = null;
 
-		// Check the point format.
-		if (!is_null($this->pointFormat)) {
-			$this->pointFormat = null;
-		}
+		// Clear the point format.
+		$this->pointFormat = null;
 
-		// Check the point formatter.
-		if (!is_null($this->pointFormatter)) {
-			$this->pointFormatter = null;
-		}
+		// Clear the point formatter.
+		$this->pointFormatter = null;
 
-		// Check the split.
-		if (!is_null($this->split)) {
-			$this->split = null;
-		}
+		// Clear the split.
+		$this->split = null;
 
-		// Check the value decimals.
-		if (!is_null($this->valueDecimals)) {
-			$this->valueDecimals = null;
-		}
+		// Clear the value decimals.
+		$this->valueDecimals = null;
 
-		// Check the value prefix.
-		if (!is_null($this->valuePrefix)) {
-			$this->valuePrefix = null;
-		}
+		// Clear the value prefix.
+		$this->valuePrefix = null;
 
-		// Check the value suffix.
-		if (!is_null($this->valueSuffix)) {
-			$this->valueSuffix = null;
-		}
+		// Clear the value suffix.
+		$this->valueSuffix = null;
 
-		// Check the x date format.
-		if (!is_null($this->xDateFormat)) {
-			$this->xDateFormat = null;
-		}
+		// Clear the x date format.
+		$this->xDateFormat = null;
 	}
 
 	/**

@@ -72,25 +72,19 @@ final class HighchartsNavigation implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the button options.
+		// Clear the button options.
 		if (!is_null($this->buttonOptions)) {
 			$this->buttonOptions->clear();
 		}
 
-		// Check the menu item hover style.
-		if (!is_null($this->menuItemHoverStyle)) {
-			$this->menuItemHoverStyle = null;
-		}
+		// Clear the menu item hover style.
+		$this->menuItemHoverStyle = null;
 
-		// Check the menu item style.
-		if (!is_null($this->menuItemStyle)) {
-			$this->menuItemStyle = null;
-		}
+		// Clear the menu item style.
+		$this->menuItemStyle = null;
 
-		// Check the menu style.
-		if (!is_null($this->menuStyle)) {
-			$this->menuStyle = null;
-		}
+		// Clear the menu style.
+		$this->menuStyle = null;
 	}
 
 	/**

@@ -65,20 +65,14 @@ final class HighchartsResetZoomButton implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the position.
-		if (!is_null($this->position)) {
-			$this->position = null;
-		}
+		// Clear the position.
+		$this->position = null;
 
-		// Check the relative to.
-		if (!is_null($this->relativeTo)) {
-			$this->relativeTo = null;
-		}
+		// Clear the relative to.
+		$this->relativeTo = null;
 
-		// Check the theme.
-		if (!is_null($this->theme)) {
-			$this->theme = null;
-		}
+		// Clear the theme.
+		$this->theme = null;
 	}
 
 	/**

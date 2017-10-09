@@ -108,50 +108,34 @@ final class HighchartsPlotLines implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the class name.
-		if (!is_null($this->className)) {
-			$this->className = null;
-		}
+		// Clear the class name.
+		$this->className = null;
 
-		// Check the color.
-		if (!is_null($this->color)) {
-			$this->color = null;
-		}
+		// Clear the color.
+		$this->color = null;
 
-		// Check the dash style.
-		if (!is_null($this->dashStyle)) {
-			$this->dashStyle = null;
-		}
+		// Clear the dash style.
+		$this->dashStyle = null;
 
-		// Check the events.
-		if (!is_null($this->events)) {
-			$this->events = null;
-		}
+		// Clear the events.
+		$this->events = null;
 
-		// Check the id.
-		if (!is_null($this->id)) {
-			$this->id = null;
-		}
+		// Clear the id.
+		$this->id = null;
 
-		// Check the label.
+		// Clear the label.
 		if (!is_null($this->label)) {
 			$this->label->clear();
 		}
 
-		// Check the value.
-		if (!is_null($this->value)) {
-			$this->value = null;
-		}
+		// Clear the value.
+		$this->value = null;
 
-		// Check the width.
-		if (!is_null($this->width)) {
-			$this->width = null;
-		}
+		// Clear the width.
+		$this->width = null;
 
-		// Check the z index.
-		if (!is_null($this->zIndex)) {
-			$this->zIndex = null;
-		}
+		// Clear the z index.
+		$this->zIndex = null;
 	}
 
 	/**

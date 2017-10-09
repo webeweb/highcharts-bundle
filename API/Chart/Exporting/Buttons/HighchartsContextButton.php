@@ -185,95 +185,59 @@ final class HighchartsContextButton implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the align.
-		if (!is_null($this->align)) {
-			$this->align = null;
-		}
+		// Clear the align.
+		$this->align = null;
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the height.
-		if (!is_null($this->height)) {
-			$this->height = null;
-		}
+		// Clear the height.
+		$this->height = null;
 
-		// Check the menu items.
-		if (!is_null($this->menuItems)) {
-			$this->menuItems = null;
-		}
+		// Clear the menu items.
+		$this->menuItems = null;
 
-		// Check the onclick.
-		if (!is_null($this->onclick)) {
-			$this->onclick = null;
-		}
+		// Clear the onclick.
+		$this->onclick = null;
 
-		// Check the symbol.
-		if (!is_null($this->symbol)) {
-			$this->symbol = null;
-		}
+		// Clear the symbol.
+		$this->symbol = null;
 
-		// Check the symbol fill.
-		if (!is_null($this->symbolFill)) {
-			$this->symbolFill = null;
-		}
+		// Clear the symbol fill.
+		$this->symbolFill = null;
 
-		// Check the symbol size.
-		if (!is_null($this->symbolSize)) {
-			$this->symbolSize = null;
-		}
+		// Clear the symbol size.
+		$this->symbolSize = null;
 
-		// Check the symbol stroke.
-		if (!is_null($this->symbolStroke)) {
-			$this->symbolStroke = null;
-		}
+		// Clear the symbol stroke.
+		$this->symbolStroke = null;
 
-		// Check the symbol stroke width.
-		if (!is_null($this->symbolStrokeWidth)) {
-			$this->symbolStrokeWidth = null;
-		}
+		// Clear the symbol stroke width.
+		$this->symbolStrokeWidth = null;
 
-		// Check the symbol x.
-		if (!is_null($this->symbolX)) {
-			$this->symbolX = null;
-		}
+		// Clear the symbol x.
+		$this->symbolX = null;
 
-		// Check the symbol y.
-		if (!is_null($this->symbolY)) {
-			$this->symbolY = null;
-		}
+		// Clear the symbol y.
+		$this->symbolY = null;
 
-		// Check the text.
-		if (!is_null($this->text)) {
-			$this->text = null;
-		}
+		// Clear the text.
+		$this->text = null;
 
-		// Check the theme.
-		if (!is_null($this->theme)) {
-			$this->theme = null;
-		}
+		// Clear the theme.
+		$this->theme = null;
 
-		// Check the vertical align.
-		if (!is_null($this->verticalAlign)) {
-			$this->verticalAlign = null;
-		}
+		// Clear the vertical align.
+		$this->verticalAlign = null;
 
-		// Check the width.
-		if (!is_null($this->width)) {
-			$this->width = null;
-		}
+		// Clear the width.
+		$this->width = null;
 
-		// Check the x.
-		if (!is_null($this->x)) {
-			$this->x = null;
-		}
+		// Clear the x.
+		$this->x = null;
 
-		// Check the y.
-		if (!is_null($this->y)) {
-			$this->y = null;
-		}
+		// Clear the y.
+		$this->y = null;
 	}
 
 	/**

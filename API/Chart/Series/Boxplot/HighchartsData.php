@@ -172,95 +172,61 @@ final class HighchartsData implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the class name.
-		if (!is_null($this->className)) {
-			$this->className = null;
-		}
+		// Clear the class name.
+		$this->className = null;
 
-		// Check the color.
-		if (!is_null($this->color)) {
-			$this->color = null;
-		}
+		// Clear the color.
+		$this->color = null;
 
-		// Check the color index.
-		if (!is_null($this->colorIndex)) {
-			$this->colorIndex = null;
-		}
+		// Clear the color index.
+		$this->colorIndex = null;
 
-		// Check the data labels.
-		if (!is_null($this->dataLabels)) {
-			$this->dataLabels = null;
-		}
+		// Clear the data labels.
+		$this->dataLabels = null;
 
-		// Check the description.
-		if (!is_null($this->description)) {
-			$this->description = null;
-		}
+		// Clear the description.
+		$this->description = null;
 
-		// Check the drilldown.
-		if (!is_null($this->drilldown)) {
-			$this->drilldown = null;
-		}
+		// Clear the drilldown.
+		$this->drilldown = null;
 
-		// Check the events.
+		// Clear the events.
 		if (!is_null($this->events)) {
 			$this->events->clear();
 		}
 
-		// Check the high.
-		if (!is_null($this->high)) {
-			$this->high = null;
-		}
+		// Clear the high.
+		$this->high = null;
 
-		// Check the id.
-		if (!is_null($this->id)) {
-			$this->id = null;
-		}
+		// Clear the id.
+		$this->id = null;
 
-		// Check the labelrank.
-		if (!is_null($this->labelrank)) {
-			$this->labelrank = null;
-		}
+		// Clear the labelrank.
+		$this->labelrank = null;
 
-		// Check the low.
-		if (!is_null($this->low)) {
-			$this->low = null;
-		}
+		// Clear the low.
+		$this->low = null;
 
-		// Check the median.
-		if (!is_null($this->median)) {
-			$this->median = null;
-		}
+		// Clear the median.
+		$this->median = null;
 
-		// Check the name.
-		if (!is_null($this->name)) {
-			$this->name = null;
-		}
+		// Clear the name.
+		$this->name = null;
 
-		// Check the q1.
-		if (!is_null($this->q1)) {
-			$this->q1 = null;
-		}
+		// Clear the q1.
+		$this->q1 = null;
 
-		// Check the q3.
-		if (!is_null($this->q3)) {
-			$this->q3 = null;
-		}
+		// Clear the q3.
+		$this->q3 = null;
 
-		// Check the selected.
-		if (!is_null($this->selected)) {
-			$this->selected = null;
-		}
+		// Clear the selected.
+		$this->selected = null;
 
-		// Check the x.
-		if (!is_null($this->x)) {
-			$this->x = null;
-		}
+		// Clear the x.
+		$this->x = null;
 
-		// Check the y.
-		if (!is_null($this->y)) {
-			$this->y = null;
-		}
+		// Clear the y.
+		$this->y = null;
 	}
 
 	/**

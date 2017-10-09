@@ -47,14 +47,14 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 		$res = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0];
 		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
 
-		$obj->setOffset(24);
+		$obj->setOffset(39);
 
-		$res1 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 24];
+		$res1 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 39];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with offset");
 
-		$obj->setY(8);
+		$obj->setY(100);
 
-		$res2 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 24, "y" => 8];
+		$res2 = ["align" => "middle", "margin" => 40, "reserveSpace" => true, "rotation" => 270, "style" => ["color" => "#666666"], "text" => "Values", "x" => 0, "offset" => 39, "y" => 100];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with y");
 	}
 

@@ -49,10 +49,8 @@ final class HighchartsResponsive implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the rules.
-		if (!is_null($this->rules)) {
-			$this->rules = null;
-		}
+		// Clear the rules.
+		$this->rules = null;
 	}
 
 	/**

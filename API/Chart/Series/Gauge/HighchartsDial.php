@@ -105,45 +105,29 @@ final class HighchartsDial implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the background color.
-		if (!is_null($this->backgroundColor)) {
-			$this->backgroundColor = null;
-		}
+		// Clear the background color.
+		$this->backgroundColor = null;
 
-		// Check the base length.
-		if (!is_null($this->baseLength)) {
-			$this->baseLength = null;
-		}
+		// Clear the base length.
+		$this->baseLength = null;
 
-		// Check the base width.
-		if (!is_null($this->baseWidth)) {
-			$this->baseWidth = null;
-		}
+		// Clear the base width.
+		$this->baseWidth = null;
 
-		// Check the border color.
-		if (!is_null($this->borderColor)) {
-			$this->borderColor = null;
-		}
+		// Clear the border color.
+		$this->borderColor = null;
 
-		// Check the border width.
-		if (!is_null($this->borderWidth)) {
-			$this->borderWidth = null;
-		}
+		// Clear the border width.
+		$this->borderWidth = null;
 
-		// Check the radius.
-		if (!is_null($this->radius)) {
-			$this->radius = null;
-		}
+		// Clear the radius.
+		$this->radius = null;
 
-		// Check the rear length.
-		if (!is_null($this->rearLength)) {
-			$this->rearLength = null;
-		}
+		// Clear the rear length.
+		$this->rearLength = null;
 
-		// Check the top width.
-		if (!is_null($this->topWidth)) {
-			$this->topWidth = null;
-		}
+		// Clear the top width.
+		$this->topWidth = null;
 	}
 
 	/**

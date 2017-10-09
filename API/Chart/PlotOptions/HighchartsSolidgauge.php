@@ -250,140 +250,90 @@ final class HighchartsSolidgauge implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the animation.
-		if (!is_null($this->animation)) {
-			$this->animation = null;
-		}
+		// Clear the animation.
+		$this->animation = null;
 
-		// Check the animation limit.
-		if (!is_null($this->animationLimit)) {
-			$this->animationLimit = null;
-		}
+		// Clear the animation limit.
+		$this->animationLimit = null;
 
-		// Check the class name.
-		if (!is_null($this->className)) {
-			$this->className = null;
-		}
+		// Clear the class name.
+		$this->className = null;
 
-		// Check the color index.
-		if (!is_null($this->colorIndex)) {
-			$this->colorIndex = null;
-		}
+		// Clear the color index.
+		$this->colorIndex = null;
 
-		// Check the cursor.
-		if (!is_null($this->cursor)) {
-			$this->cursor = null;
-		}
+		// Clear the cursor.
+		$this->cursor = null;
 
-		// Check the data labels.
-		if (!is_null($this->dataLabels)) {
-			$this->dataLabels = null;
-		}
+		// Clear the data labels.
+		$this->dataLabels = null;
 
-		// Check the description.
-		if (!is_null($this->description)) {
-			$this->description = null;
-		}
+		// Clear the description.
+		$this->description = null;
 
-		// Check the enable mouse tracking.
-		if (!is_null($this->enableMouseTracking)) {
-			$this->enableMouseTracking = null;
-		}
+		// Clear the enable mouse tracking.
+		$this->enableMouseTracking = null;
 
-		// Check the events.
+		// Clear the events.
 		if (!is_null($this->events)) {
 			$this->events->clear();
 		}
 
-		// Check the expose element to a11y.
-		if (!is_null($this->exposeElementToA11y)) {
-			$this->exposeElementToA11y = null;
-		}
+		// Clear the expose element to a11y.
+		$this->exposeElementToA11y = null;
 
-		// Check the find nearest point by.
-		if (!is_null($this->findNearestPointBy)) {
-			$this->findNearestPointBy = null;
-		}
+		// Clear the find nearest point by.
+		$this->findNearestPointBy = null;
 
-		// Check the get extremes from all.
-		if (!is_null($this->getExtremesFromAll)) {
-			$this->getExtremesFromAll = null;
-		}
+		// Clear the get extremes from all.
+		$this->getExtremesFromAll = null;
 
-		// Check the keys.
-		if (!is_null($this->keys)) {
-			$this->keys = null;
-		}
+		// Clear the keys.
+		$this->keys = null;
 
-		// Check the linecap.
-		if (!is_null($this->linecap)) {
-			$this->linecap = null;
-		}
+		// Clear the linecap.
+		$this->linecap = null;
 
-		// Check the overshoot.
-		if (!is_null($this->overshoot)) {
-			$this->overshoot = null;
-		}
+		// Clear the overshoot.
+		$this->overshoot = null;
 
-		// Check the point.
+		// Clear the point.
 		if (!is_null($this->point)) {
 			$this->point->clear();
 		}
 
-		// Check the point description formatter.
-		if (!is_null($this->pointDescriptionFormatter)) {
-			$this->pointDescriptionFormatter = null;
-		}
+		// Clear the point description formatter.
+		$this->pointDescriptionFormatter = null;
 
-		// Check the rounded.
-		if (!is_null($this->rounded)) {
-			$this->rounded = null;
-		}
+		// Clear the rounded.
+		$this->rounded = null;
 
-		// Check the selected.
-		if (!is_null($this->selected)) {
-			$this->selected = null;
-		}
+		// Clear the selected.
+		$this->selected = null;
 
-		// Check the show checkbox.
-		if (!is_null($this->showCheckbox)) {
-			$this->showCheckbox = null;
-		}
+		// Clear the show checkbox.
+		$this->showCheckbox = null;
 
-		// Check the show in legend.
-		if (!is_null($this->showInLegend)) {
-			$this->showInLegend = null;
-		}
+		// Clear the show in legend.
+		$this->showInLegend = null;
 
-		// Check the skip keyboard navigation.
-		if (!is_null($this->skipKeyboardNavigation)) {
-			$this->skipKeyboardNavigation = null;
-		}
+		// Clear the skip keyboard navigation.
+		$this->skipKeyboardNavigation = null;
 
-		// Check the sticky tracking.
-		if (!is_null($this->stickyTracking)) {
-			$this->stickyTracking = null;
-		}
+		// Clear the sticky tracking.
+		$this->stickyTracking = null;
 
-		// Check the threshold.
-		if (!is_null($this->threshold)) {
-			$this->threshold = null;
-		}
+		// Clear the threshold.
+		$this->threshold = null;
 
-		// Check the tooltip.
-		if (!is_null($this->tooltip)) {
-			$this->tooltip = null;
-		}
+		// Clear the tooltip.
+		$this->tooltip = null;
 
-		// Check the visible.
-		if (!is_null($this->visible)) {
-			$this->visible = null;
-		}
+		// Clear the visible.
+		$this->visible = null;
 
-		// Check the wrap.
-		if (!is_null($this->wrap)) {
-			$this->wrap = null;
-		}
+		// Clear the wrap.
+		$this->wrap = null;
 	}
 
 	/**

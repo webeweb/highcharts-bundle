@@ -86,35 +86,23 @@ final class HighchartsHover implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the animation.
-		if (!is_null($this->animation)) {
-			$this->animation = null;
-		}
+		// Clear the animation.
+		$this->animation = null;
 
-		// Check the border color.
-		if (!is_null($this->borderColor)) {
-			$this->borderColor = null;
-		}
+		// Clear the border color.
+		$this->borderColor = null;
 
-		// Check the brightness.
-		if (!is_null($this->brightness)) {
-			$this->brightness = null;
-		}
+		// Clear the brightness.
+		$this->brightness = null;
 
-		// Check the color.
-		if (!is_null($this->color)) {
-			$this->color = null;
-		}
+		// Clear the color.
+		$this->color = null;
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the opacity.
-		if (!is_null($this->opacity)) {
-			$this->opacity = null;
-		}
+		// Clear the opacity.
+		$this->opacity = null;
 	}
 
 	/**

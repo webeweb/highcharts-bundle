@@ -62,14 +62,14 @@ final class HighchartsLabelTest extends PHPUnit_Framework_TestCase {
 		$res3 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53"];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with text align");
 
-		$obj->setX(58);
+		$obj->setX(80);
 
-		$res4 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 58];
+		$res4 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 80];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with x");
 
-		$obj->setY(22);
+		$obj->setY(85);
 
-		$res5 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 58, "y" => 22];
+		$res5 = ["align" => "center", "rotation" => 0, "useHTML" => false, "verticalAlign" => "top", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "x" => 80, "y" => 85];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with y");
 	}
 

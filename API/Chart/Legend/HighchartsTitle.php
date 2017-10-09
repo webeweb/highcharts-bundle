@@ -57,15 +57,11 @@ final class HighchartsTitle implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the style.
-		if (!is_null($this->style)) {
-			$this->style = null;
-		}
+		// Clear the style.
+		$this->style = null;
 
-		// Check the text.
-		if (!is_null($this->text)) {
-			$this->text = null;
-		}
+		// Clear the text.
+		$this->text = null;
 	}
 
 	/**

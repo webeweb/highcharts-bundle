@@ -201,105 +201,65 @@ final class HighchartsData implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the columns.
-		if (!is_null($this->columns)) {
-			$this->columns = null;
-		}
+		// Clear the columns.
+		$this->columns = null;
 
-		// Check the complete.
-		if (!is_null($this->complete)) {
-			$this->complete = null;
-		}
+		// Clear the complete.
+		$this->complete = null;
 
-		// Check the csv.
-		if (!is_null($this->csv)) {
-			$this->csv = null;
-		}
+		// Clear the csv.
+		$this->csv = null;
 
-		// Check the date format.
-		if (!is_null($this->dateFormat)) {
-			$this->dateFormat = null;
-		}
+		// Clear the date format.
+		$this->dateFormat = null;
 
-		// Check the decimal point.
-		if (!is_null($this->decimalPoint)) {
-			$this->decimalPoint = null;
-		}
+		// Clear the decimal point.
+		$this->decimalPoint = null;
 
-		// Check the end column.
-		if (!is_null($this->endColumn)) {
-			$this->endColumn = null;
-		}
+		// Clear the end column.
+		$this->endColumn = null;
 
-		// Check the end row.
-		if (!is_null($this->endRow)) {
-			$this->endRow = null;
-		}
+		// Clear the end row.
+		$this->endRow = null;
 
-		// Check the first row as names.
-		if (!is_null($this->firstRowAsNames)) {
-			$this->firstRowAsNames = null;
-		}
+		// Clear the first row as names.
+		$this->firstRowAsNames = null;
 
-		// Check the google spreadsheet key.
-		if (!is_null($this->googleSpreadsheetKey)) {
-			$this->googleSpreadsheetKey = null;
-		}
+		// Clear the google spreadsheet key.
+		$this->googleSpreadsheetKey = null;
 
-		// Check the google spreadsheet worksheet.
-		if (!is_null($this->googleSpreadsheetWorksheet)) {
-			$this->googleSpreadsheetWorksheet = null;
-		}
+		// Clear the google spreadsheet worksheet.
+		$this->googleSpreadsheetWorksheet = null;
 
-		// Check the item delimiter.
-		if (!is_null($this->itemDelimiter)) {
-			$this->itemDelimiter = null;
-		}
+		// Clear the item delimiter.
+		$this->itemDelimiter = null;
 
-		// Check the line delimiter.
-		if (!is_null($this->lineDelimiter)) {
-			$this->lineDelimiter = null;
-		}
+		// Clear the line delimiter.
+		$this->lineDelimiter = null;
 
-		// Check the parse date.
-		if (!is_null($this->parseDate)) {
-			$this->parseDate = null;
-		}
+		// Clear the parse date.
+		$this->parseDate = null;
 
-		// Check the parsed.
-		if (!is_null($this->parsed)) {
-			$this->parsed = null;
-		}
+		// Clear the parsed.
+		$this->parsed = null;
 
-		// Check the rows.
-		if (!is_null($this->rows)) {
-			$this->rows = null;
-		}
+		// Clear the rows.
+		$this->rows = null;
 
-		// Check the series mapping.
-		if (!is_null($this->seriesMapping)) {
-			$this->seriesMapping = null;
-		}
+		// Clear the series mapping.
+		$this->seriesMapping = null;
 
-		// Check the start column.
-		if (!is_null($this->startColumn)) {
-			$this->startColumn = null;
-		}
+		// Clear the start column.
+		$this->startColumn = null;
 
-		// Check the start row.
-		if (!is_null($this->startRow)) {
-			$this->startRow = null;
-		}
+		// Clear the start row.
+		$this->startRow = null;
 
-		// Check the switch rows and columns.
-		if (!is_null($this->switchRowsAndColumns)) {
-			$this->switchRowsAndColumns = null;
-		}
+		// Clear the switch rows and columns.
+		$this->switchRowsAndColumns = null;
 
-		// Check the table.
-		if (!is_null($this->table)) {
-			$this->table = null;
-		}
+		// Clear the table.
+		$this->table = null;
 	}
 
 	/**

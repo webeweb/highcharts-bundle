@@ -48,7 +48,7 @@ final class HighchartsButtons implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the context button.
+		// Clear the context button.
 		if (!is_null($this->contextButton)) {
 			$this->contextButton->clear();
 		}

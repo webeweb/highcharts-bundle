@@ -100,45 +100,31 @@ final class HighchartsMarker implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the fill color.
-		if (!is_null($this->fillColor)) {
-			$this->fillColor = null;
-		}
+		// Clear the fill color.
+		$this->fillColor = null;
 
-		// Check the height.
-		if (!is_null($this->height)) {
-			$this->height = null;
-		}
+		// Clear the height.
+		$this->height = null;
 
-		// Check the line color.
-		if (!is_null($this->lineColor)) {
-			$this->lineColor = null;
-		}
+		// Clear the line color.
+		$this->lineColor = null;
 
-		// Check the line width.
-		if (!is_null($this->lineWidth)) {
-			$this->lineWidth = null;
-		}
+		// Clear the line width.
+		$this->lineWidth = null;
 
-		// Check the states.
+		// Clear the states.
 		if (!is_null($this->states)) {
 			$this->states->clear();
 		}
 
-		// Check the symbol.
-		if (!is_null($this->symbol)) {
-			$this->symbol = null;
-		}
+		// Clear the symbol.
+		$this->symbol = null;
 
-		// Check the width.
-		if (!is_null($this->width)) {
-			$this->width = null;
-		}
+		// Clear the width.
+		$this->width = null;
 	}
 
 	/**

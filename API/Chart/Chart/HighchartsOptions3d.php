@@ -105,45 +105,31 @@ final class HighchartsOptions3d implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the alpha.
-		if (!is_null($this->alpha)) {
-			$this->alpha = null;
-		}
+		// Clear the alpha.
+		$this->alpha = null;
 
-		// Check the axis label position.
-		if (!is_null($this->axisLabelPosition)) {
-			$this->axisLabelPosition = null;
-		}
+		// Clear the axis label position.
+		$this->axisLabelPosition = null;
 
-		// Check the beta.
-		if (!is_null($this->beta)) {
-			$this->beta = null;
-		}
+		// Clear the beta.
+		$this->beta = null;
 
-		// Check the depth.
-		if (!is_null($this->depth)) {
-			$this->depth = null;
-		}
+		// Clear the depth.
+		$this->depth = null;
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the fit to plot.
-		if (!is_null($this->fitToPlot)) {
-			$this->fitToPlot = null;
-		}
+		// Clear the fit to plot.
+		$this->fitToPlot = null;
 
-		// Check the frame.
+		// Clear the frame.
 		if (!is_null($this->frame)) {
 			$this->frame->clear();
 		}
 
-		// Check the view distance.
-		if (!is_null($this->viewDistance)) {
-			$this->viewDistance = null;
-		}
+		// Clear the view distance.
+		$this->viewDistance = null;
 	}
 
 	/**

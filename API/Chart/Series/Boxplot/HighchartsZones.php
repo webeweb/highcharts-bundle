@@ -81,30 +81,20 @@ final class HighchartsZones implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the class name.
-		if (!is_null($this->className)) {
-			$this->className = null;
-		}
+		// Clear the class name.
+		$this->className = null;
 
-		// Check the color.
-		if (!is_null($this->color)) {
-			$this->color = null;
-		}
+		// Clear the color.
+		$this->color = null;
 
-		// Check the dash style.
-		if (!is_null($this->dashStyle)) {
-			$this->dashStyle = null;
-		}
+		// Clear the dash style.
+		$this->dashStyle = null;
 
-		// Check the fill color.
-		if (!is_null($this->fillColor)) {
-			$this->fillColor = null;
-		}
+		// Clear the fill color.
+		$this->fillColor = null;
 
-		// Check the value.
-		if (!is_null($this->value)) {
-			$this->value = null;
-		}
+		// Clear the value.
+		$this->value = null;
 	}
 
 	/**

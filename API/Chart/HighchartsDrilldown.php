@@ -89,35 +89,23 @@ final class HighchartsDrilldown implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the active axis label style.
-		if (!is_null($this->activeAxisLabelStyle)) {
-			$this->activeAxisLabelStyle = null;
-		}
+		// Clear the active axis label style.
+		$this->activeAxisLabelStyle = null;
 
-		// Check the active data label style.
-		if (!is_null($this->activeDataLabelStyle)) {
-			$this->activeDataLabelStyle = null;
-		}
+		// Clear the active data label style.
+		$this->activeDataLabelStyle = null;
 
-		// Check the allow point drilldown.
-		if (!is_null($this->allowPointDrilldown)) {
-			$this->allowPointDrilldown = null;
-		}
+		// Clear the allow point drilldown.
+		$this->allowPointDrilldown = null;
 
-		// Check the animation.
-		if (!is_null($this->animation)) {
-			$this->animation = null;
-		}
+		// Clear the animation.
+		$this->animation = null;
 
-		// Check the drill up button.
-		if (!is_null($this->drillUpButton)) {
-			$this->drillUpButton = null;
-		}
+		// Clear the drill up button.
+		$this->drillUpButton = null;
 
-		// Check the series.
-		if (!is_null($this->series)) {
-			$this->series = null;
-		}
+		// Clear the series.
+		$this->series = null;
 	}
 
 	/**

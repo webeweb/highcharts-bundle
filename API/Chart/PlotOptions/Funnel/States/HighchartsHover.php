@@ -88,32 +88,22 @@ final class HighchartsHover implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the animation.
-		if (!is_null($this->animation)) {
-			$this->animation = null;
-		}
+		// Clear the animation.
+		$this->animation = null;
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the halo.
-		if (!is_null($this->halo)) {
-			$this->halo = null;
-		}
+		// Clear the halo.
+		$this->halo = null;
 
-		// Check the line width.
-		if (!is_null($this->lineWidth)) {
-			$this->lineWidth = null;
-		}
+		// Clear the line width.
+		$this->lineWidth = null;
 
-		// Check the line width plus.
-		if (!is_null($this->lineWidthPlus)) {
-			$this->lineWidthPlus = null;
-		}
+		// Clear the line width plus.
+		$this->lineWidthPlus = null;
 
-		// Check the marker.
+		// Clear the marker.
 		if (!is_null($this->marker)) {
 			$this->marker->clear();
 		}

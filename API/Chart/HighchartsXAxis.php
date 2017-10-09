@@ -505,320 +505,202 @@ final class HighchartsXAxis implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the allow decimals.
-		if (!is_null($this->allowDecimals)) {
-			$this->allowDecimals = null;
-		}
+		// Clear the allow decimals.
+		$this->allowDecimals = null;
 
-		// Check the alternate grid color.
-		if (!is_null($this->alternateGridColor)) {
-			$this->alternateGridColor = null;
-		}
+		// Clear the alternate grid color.
+		$this->alternateGridColor = null;
 
-		// Check the breaks.
-		if (!is_null($this->breaks)) {
-			$this->breaks = null;
-		}
+		// Clear the breaks.
+		$this->breaks = null;
 
-		// Check the categories.
-		if (!is_null($this->categories)) {
-			$this->categories = null;
-		}
+		// Clear the categories.
+		$this->categories = null;
 
-		// Check the ceiling.
-		if (!is_null($this->ceiling)) {
-			$this->ceiling = null;
-		}
+		// Clear the ceiling.
+		$this->ceiling = null;
 
-		// Check the class name.
-		if (!is_null($this->className)) {
-			$this->className = null;
-		}
+		// Clear the class name.
+		$this->className = null;
 
-		// Check the crosshair.
+		// Clear the crosshair.
 		if (!is_null($this->crosshair)) {
 			$this->crosshair->clear();
 		}
 
-		// Check the date time label formats.
-		if (!is_null($this->dateTimeLabelFormats)) {
-			$this->dateTimeLabelFormats = null;
-		}
+		// Clear the date time label formats.
+		$this->dateTimeLabelFormats = null;
 
-		// Check the description.
-		if (!is_null($this->description)) {
-			$this->description = null;
-		}
+		// Clear the description.
+		$this->description = null;
 
-		// Check the end on tick.
-		if (!is_null($this->endOnTick)) {
-			$this->endOnTick = null;
-		}
+		// Clear the end on tick.
+		$this->endOnTick = null;
 
-		// Check the events.
+		// Clear the events.
 		if (!is_null($this->events)) {
 			$this->events->clear();
 		}
 
-		// Check the floor.
-		if (!is_null($this->floor)) {
-			$this->floor = null;
-		}
+		// Clear the floor.
+		$this->floor = null;
 
-		// Check the grid line color.
-		if (!is_null($this->gridLineColor)) {
-			$this->gridLineColor = null;
-		}
+		// Clear the grid line color.
+		$this->gridLineColor = null;
 
-		// Check the grid line dash style.
-		if (!is_null($this->gridLineDashStyle)) {
-			$this->gridLineDashStyle = null;
-		}
+		// Clear the grid line dash style.
+		$this->gridLineDashStyle = null;
 
-		// Check the grid line width.
-		if (!is_null($this->gridLineWidth)) {
-			$this->gridLineWidth = null;
-		}
+		// Clear the grid line width.
+		$this->gridLineWidth = null;
 
-		// Check the grid z index.
-		if (!is_null($this->gridZIndex)) {
-			$this->gridZIndex = null;
-		}
+		// Clear the grid z index.
+		$this->gridZIndex = null;
 
-		// Check the id.
-		if (!is_null($this->id)) {
-			$this->id = null;
-		}
+		// Clear the id.
+		$this->id = null;
 
-		// Check the labels.
+		// Clear the labels.
 		if (!is_null($this->labels)) {
 			$this->labels->clear();
 		}
 
-		// Check the line color.
-		if (!is_null($this->lineColor)) {
-			$this->lineColor = null;
-		}
+		// Clear the line color.
+		$this->lineColor = null;
 
-		// Check the line width.
-		if (!is_null($this->lineWidth)) {
-			$this->lineWidth = null;
-		}
+		// Clear the line width.
+		$this->lineWidth = null;
 
-		// Check the linked to.
-		if (!is_null($this->linkedTo)) {
-			$this->linkedTo = null;
-		}
+		// Clear the linked to.
+		$this->linkedTo = null;
 
-		// Check the max.
-		if (!is_null($this->max)) {
-			$this->max = null;
-		}
+		// Clear the max.
+		$this->max = null;
 
-		// Check the max padding.
-		if (!is_null($this->maxPadding)) {
-			$this->maxPadding = null;
-		}
+		// Clear the max padding.
+		$this->maxPadding = null;
 
-		// Check the max zoom.
-		if (!is_null($this->maxZoom)) {
-			$this->maxZoom = null;
-		}
+		// Clear the max zoom.
+		$this->maxZoom = null;
 
-		// Check the min.
-		if (!is_null($this->min)) {
-			$this->min = null;
-		}
+		// Clear the min.
+		$this->min = null;
 
-		// Check the min padding.
-		if (!is_null($this->minPadding)) {
-			$this->minPadding = null;
-		}
+		// Clear the min padding.
+		$this->minPadding = null;
 
-		// Check the min range.
-		if (!is_null($this->minRange)) {
-			$this->minRange = null;
-		}
+		// Clear the min range.
+		$this->minRange = null;
 
-		// Check the min tick interval.
-		if (!is_null($this->minTickInterval)) {
-			$this->minTickInterval = null;
-		}
+		// Clear the min tick interval.
+		$this->minTickInterval = null;
 
-		// Check the minor grid line color.
-		if (!is_null($this->minorGridLineColor)) {
-			$this->minorGridLineColor = null;
-		}
+		// Clear the minor grid line color.
+		$this->minorGridLineColor = null;
 
-		// Check the minor grid line dash style.
-		if (!is_null($this->minorGridLineDashStyle)) {
-			$this->minorGridLineDashStyle = null;
-		}
+		// Clear the minor grid line dash style.
+		$this->minorGridLineDashStyle = null;
 
-		// Check the minor grid line width.
-		if (!is_null($this->minorGridLineWidth)) {
-			$this->minorGridLineWidth = null;
-		}
+		// Clear the minor grid line width.
+		$this->minorGridLineWidth = null;
 
-		// Check the minor tick color.
-		if (!is_null($this->minorTickColor)) {
-			$this->minorTickColor = null;
-		}
+		// Clear the minor tick color.
+		$this->minorTickColor = null;
 
-		// Check the minor tick interval.
-		if (!is_null($this->minorTickInterval)) {
-			$this->minorTickInterval = null;
-		}
+		// Clear the minor tick interval.
+		$this->minorTickInterval = null;
 
-		// Check the minor tick length.
-		if (!is_null($this->minorTickLength)) {
-			$this->minorTickLength = null;
-		}
+		// Clear the minor tick length.
+		$this->minorTickLength = null;
 
-		// Check the minor tick position.
-		if (!is_null($this->minorTickPosition)) {
-			$this->minorTickPosition = null;
-		}
+		// Clear the minor tick position.
+		$this->minorTickPosition = null;
 
-		// Check the minor tick width.
-		if (!is_null($this->minorTickWidth)) {
-			$this->minorTickWidth = null;
-		}
+		// Clear the minor tick width.
+		$this->minorTickWidth = null;
 
-		// Check the offset.
-		if (!is_null($this->offset)) {
-			$this->offset = null;
-		}
+		// Clear the offset.
+		$this->offset = null;
 
-		// Check the opposite.
-		if (!is_null($this->opposite)) {
-			$this->opposite = null;
-		}
+		// Clear the opposite.
+		$this->opposite = null;
 
-		// Check the plot bands.
-		if (!is_null($this->plotBands)) {
-			$this->plotBands = null;
-		}
+		// Clear the plot bands.
+		$this->plotBands = null;
 
-		// Check the plot lines.
-		if (!is_null($this->plotLines)) {
-			$this->plotLines = null;
-		}
+		// Clear the plot lines.
+		$this->plotLines = null;
 
-		// Check the reversed.
-		if (!is_null($this->reversed)) {
-			$this->reversed = null;
-		}
+		// Clear the reversed.
+		$this->reversed = null;
 
-		// Check the show empty.
-		if (!is_null($this->showEmpty)) {
-			$this->showEmpty = null;
-		}
+		// Clear the show empty.
+		$this->showEmpty = null;
 
-		// Check the show first label.
-		if (!is_null($this->showFirstLabel)) {
-			$this->showFirstLabel = null;
-		}
+		// Clear the show first label.
+		$this->showFirstLabel = null;
 
-		// Check the show last label.
-		if (!is_null($this->showLastLabel)) {
-			$this->showLastLabel = null;
-		}
+		// Clear the show last label.
+		$this->showLastLabel = null;
 
-		// Check the soft max.
-		if (!is_null($this->softMax)) {
-			$this->softMax = null;
-		}
+		// Clear the soft max.
+		$this->softMax = null;
 
-		// Check the soft min.
-		if (!is_null($this->softMin)) {
-			$this->softMin = null;
-		}
+		// Clear the soft min.
+		$this->softMin = null;
 
-		// Check the start of week.
-		if (!is_null($this->startOfWeek)) {
-			$this->startOfWeek = null;
-		}
+		// Clear the start of week.
+		$this->startOfWeek = null;
 
-		// Check the start on tick.
-		if (!is_null($this->startOnTick)) {
-			$this->startOnTick = null;
-		}
+		// Clear the start on tick.
+		$this->startOnTick = null;
 
-		// Check the tick amount.
-		if (!is_null($this->tickAmount)) {
-			$this->tickAmount = null;
-		}
+		// Clear the tick amount.
+		$this->tickAmount = null;
 
-		// Check the tick color.
-		if (!is_null($this->tickColor)) {
-			$this->tickColor = null;
-		}
+		// Clear the tick color.
+		$this->tickColor = null;
 
-		// Check the tick interval.
-		if (!is_null($this->tickInterval)) {
-			$this->tickInterval = null;
-		}
+		// Clear the tick interval.
+		$this->tickInterval = null;
 
-		// Check the tick length.
-		if (!is_null($this->tickLength)) {
-			$this->tickLength = null;
-		}
+		// Clear the tick length.
+		$this->tickLength = null;
 
-		// Check the tick pixel interval.
-		if (!is_null($this->tickPixelInterval)) {
-			$this->tickPixelInterval = null;
-		}
+		// Clear the tick pixel interval.
+		$this->tickPixelInterval = null;
 
-		// Check the tick position.
-		if (!is_null($this->tickPosition)) {
-			$this->tickPosition = null;
-		}
+		// Clear the tick position.
+		$this->tickPosition = null;
 
-		// Check the tick positioner.
-		if (!is_null($this->tickPositioner)) {
-			$this->tickPositioner = null;
-		}
+		// Clear the tick positioner.
+		$this->tickPositioner = null;
 
-		// Check the tick positions.
-		if (!is_null($this->tickPositions)) {
-			$this->tickPositions = null;
-		}
+		// Clear the tick positions.
+		$this->tickPositions = null;
 
-		// Check the tick width.
-		if (!is_null($this->tickWidth)) {
-			$this->tickWidth = null;
-		}
+		// Clear the tick width.
+		$this->tickWidth = null;
 
-		// Check the tickmark placement.
-		if (!is_null($this->tickmarkPlacement)) {
-			$this->tickmarkPlacement = null;
-		}
+		// Clear the tickmark placement.
+		$this->tickmarkPlacement = null;
 
-		// Check the title.
+		// Clear the title.
 		if (!is_null($this->title)) {
 			$this->title->clear();
 		}
 
-		// Check the type.
-		if (!is_null($this->type)) {
-			$this->type = null;
-		}
+		// Clear the type.
+		$this->type = null;
 
-		// Check the unique names.
-		if (!is_null($this->uniqueNames)) {
-			$this->uniqueNames = null;
-		}
+		// Clear the unique names.
+		$this->uniqueNames = null;
 
-		// Check the units.
-		if (!is_null($this->units)) {
-			$this->units = null;
-		}
+		// Clear the units.
+		$this->units = null;
 
-		// Check the visible.
-		if (!is_null($this->visible)) {
-			$this->visible = null;
-		}
+		// Clear the visible.
+		$this->visible = null;
 	}
 
 	/**

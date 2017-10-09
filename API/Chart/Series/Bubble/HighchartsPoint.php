@@ -48,7 +48,7 @@ final class HighchartsPoint implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the events.
+		// Clear the events.
 		if (!is_null($this->events)) {
 			$this->events->clear();
 		}

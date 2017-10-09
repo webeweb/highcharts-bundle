@@ -115,55 +115,35 @@ final class HighchartsTitle implements JsonSerializable {
 	 */
 	public function clear() {
 
-		// Check the align.
-		if (!is_null($this->align)) {
-			$this->align = null;
-		}
+		// Clear the align.
+		$this->align = null;
 
-		// Check the enabled.
-		if (!is_null($this->enabled)) {
-			$this->enabled = null;
-		}
+		// Clear the enabled.
+		$this->enabled = null;
 
-		// Check the margin.
-		if (!is_null($this->margin)) {
-			$this->margin = null;
-		}
+		// Clear the margin.
+		$this->margin = null;
 
-		// Check the offset.
-		if (!is_null($this->offset)) {
-			$this->offset = null;
-		}
+		// Clear the offset.
+		$this->offset = null;
 
-		// Check the reserve space.
-		if (!is_null($this->reserveSpace)) {
-			$this->reserveSpace = null;
-		}
+		// Clear the reserve space.
+		$this->reserveSpace = null;
 
-		// Check the rotation.
-		if (!is_null($this->rotation)) {
-			$this->rotation = null;
-		}
+		// Clear the rotation.
+		$this->rotation = null;
 
-		// Check the style.
-		if (!is_null($this->style)) {
-			$this->style = null;
-		}
+		// Clear the style.
+		$this->style = null;
 
-		// Check the text.
-		if (!is_null($this->text)) {
-			$this->text = null;
-		}
+		// Clear the text.
+		$this->text = null;
 
-		// Check the x.
-		if (!is_null($this->x)) {
-			$this->x = null;
-		}
+		// Clear the x.
+		$this->x = null;
 
-		// Check the y.
-		if (!is_null($this->y)) {
-			$this->y = null;
-		}
+		// Clear the y.
+		$this->y = null;
 	}
 
 	/**
