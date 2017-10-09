@@ -58,8 +58,7 @@ In your controller ...
 	// Initialize the chart.
 	$chart = new HighchartsChart;
 	$chart->newChart()->setType("pie");
-	$chart->newPlotOptions();
-	$chart->getPlotOptions()->newPie()
+	$chart->newPlotOptions()->newPie()
 		->setAllowPointSelect(true)
 		->setCursor("pointer")
 		->setShowInLegend(true)
@@ -83,7 +82,7 @@ In your template ...
 	{{ highchartsScript('highcharts') }}
 	{{ highchartsScript('modules/exporting') }}
 	{{ highchartsChart('Container', chart) }}
-	
+
 ```
 
 ---
