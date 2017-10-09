@@ -32,7 +32,7 @@ final class HighchartsTwigExtension extends Twig_Extension {
 	/**
 	 * Service name.
 	 */
-	const SERVICE_NAME = "wbwhighchartsbundle.twig.extension.highcharts";
+	const SERVICE_NAME = "webeweb.highcharts-bundle.twig.extension.highcharts";
 
 	/**
 	 * Container.
