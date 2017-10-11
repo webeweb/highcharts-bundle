@@ -23,16 +23,27 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Test the clear() method.
+	 * Test the __construct() method.
 	 *
 	 * @return void
 	 */
-	public function testClear() {
+	public function testConstructor() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(false);
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(true);
 
-		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals(null, $obj1->getEvents(), "The method getEvents() does not return the expected value");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -45,7 +56,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(false);
 
 		$res = $obj->newEvents();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\Point\HighchartsEvents::class, $res, "The method newEvents() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\Point\HighchartsEvents::class, $res, "The method newEvents() does not return the expected object");
 	}
 
 	/**
@@ -55,9 +66,9 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(true);
 
-		$obj->newEvents();
+		$obj->setEvents(new \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\Point\HighchartsEvents());
 
 		$res1 = ["events" => []];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with events");

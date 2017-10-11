@@ -23,16 +23,27 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsButtonsTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Test the clear() method.
+	 * Test the __construct() method.
 	 *
 	 * @return void
 	 */
-	public function testClear() {
+	public function testConstructor() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons(false);
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons(true);
 
-		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals(null, $obj1->getContextButton(), "The method getContextButton() does not return the expected value");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -45,7 +56,7 @@ final class HighchartsButtonsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons(false);
 
 		$res = $obj->newContextButton();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton::class, $res, "The method newContextButton() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton::class, $res, "The method newContextButton() does not return the expected object");
 	}
 
 	/**
@@ -55,9 +66,9 @@ final class HighchartsButtonsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons(true);
 
-		$obj->newContextButton();
+		$obj->setContextButton(new \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton());
 
 		$res1 = ["contextButton" => []];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with context button");

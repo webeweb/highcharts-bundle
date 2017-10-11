@@ -23,16 +23,33 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Test the clear() method.
+	 * Test the __construct() method.
 	 *
 	 * @return void
 	 */
-	public function testClear() {
+	public function testConstructor() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLabels(false);
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\HighchartsLabels(true);
 
-		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals(null, $obj1->getItems(), "The method getItems() does not return the expected value");
+		$this->assertEquals(null, $obj1->getStyle(), "The method getStyle() does not return the expected value");
+
+		$obj0 = new \WBW\HighchartsBundle\API\Chart\HighchartsLabels(false);
+
+		$this->assertEquals(null, $obj0->getItems(), "The method getItems() does not return the expected value");
+		$this->assertEquals(["color" => "#333333"], $obj0->getStyle(), "The method getStyle() does not return the expected value");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLabels(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -42,15 +59,17 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLabels(false);
-
-		$res = ["style" => ["color" => "#333333"]];
-		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLabels(true);
 
 		$obj->setItems(["items" => "691d502cfd0e0626cd3b058e5682ad1c"]);
 
-		$res1 = ["style" => ["color" => "#333333"], "items" => ["items" => "691d502cfd0e0626cd3b058e5682ad1c"]];
+		$res1 = ["items" => ["items" => "691d502cfd0e0626cd3b058e5682ad1c"]];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with items");
+
+		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
+
+		$res2 = ["items" => ["items" => "691d502cfd0e0626cd3b058e5682ad1c"], "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with style");
 	}
 
 }

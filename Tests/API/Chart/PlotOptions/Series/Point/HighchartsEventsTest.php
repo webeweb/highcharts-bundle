@@ -23,16 +23,33 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Test the clear() method.
+	 * Test the __construct() method.
 	 *
 	 * @return void
 	 */
-	public function testClear() {
+	public function testConstructor() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Series\Point\HighchartsEvents(false);
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Series\Point\HighchartsEvents(true);
 
-		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals(null, $obj1->getClick(), "The method getClick() does not return the expected value");
+		$this->assertEquals(null, $obj1->getMouseOut(), "The method getMouseOut() does not return the expected value");
+		$this->assertEquals(null, $obj1->getMouseOver(), "The method getMouseOver() does not return the expected value");
+		$this->assertEquals(null, $obj1->getRemove(), "The method getRemove() does not return the expected value");
+		$this->assertEquals(null, $obj1->getSelect(), "The method getSelect() does not return the expected value");
+		$this->assertEquals(null, $obj1->getUnselect(), "The method getUnselect() does not return the expected value");
+		$this->assertEquals(null, $obj1->getUpdate(), "The method getUpdate() does not return the expected value");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Series\Point\HighchartsEvents(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -42,7 +59,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Series\Point\HighchartsEvents(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Series\Point\HighchartsEvents(true);
 
 		$obj->setClick("a8affc088cbca89fa20dbd98c91362e4");
 

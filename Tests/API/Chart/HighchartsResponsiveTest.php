@@ -23,16 +23,27 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsResponsiveTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Test the clear() method.
+	 * Test the __construct() method.
 	 *
 	 * @return void
 	 */
-	public function testClear() {
+	public function testConstructor() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsResponsive(false);
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\HighchartsResponsive(true);
 
-		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals(null, $obj1->getRules(), "The method getRules() does not return the expected value");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsResponsive(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -42,7 +53,7 @@ final class HighchartsResponsiveTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsResponsive(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsResponsive(true);
 
 		$obj->setRules(["rules" => "a4f86f7bfc24194b276c22e0ef158197"]);
 

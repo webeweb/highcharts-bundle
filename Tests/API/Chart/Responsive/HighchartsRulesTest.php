@@ -23,16 +23,28 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsRulesTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Test the clear() method.
+	 * Test the __construct() method.
 	 *
 	 * @return void
 	 */
-	public function testClear() {
+	public function testConstructor() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules(false);
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
 
-		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals(null, $obj1->getChartOptions(), "The method getChartOptions() does not return the expected value");
+		$this->assertEquals(null, $obj1->getCondition(), "The method getCondition() does not return the expected value");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -42,7 +54,7 @@ final class HighchartsRulesTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
 
 		$obj->setChartOptions(["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"]);
 

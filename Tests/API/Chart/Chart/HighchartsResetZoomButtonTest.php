@@ -23,16 +23,35 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsResetZoomButtonTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Test the clear() method.
+	 * Test the __construct() method.
 	 *
 	 * @return void
 	 */
-	public function testClear() {
+	public function testConstructor() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(false);
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(true);
 
-		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals(null, $obj1->getPosition(), "The method getPosition() does not return the expected value");
+		$this->assertEquals(null, $obj1->getRelativeTo(), "The method getRelativeTo() does not return the expected value");
+		$this->assertEquals(null, $obj1->getTheme(), "The method getTheme() does not return the expected value");
+
+		$obj0 = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(false);
+
+		$this->assertEquals(null, $obj0->getPosition(), "The method getPosition() does not return the expected value");
+		$this->assertEquals("plot", $obj0->getRelativeTo(), "The method getRelativeTo() does not return the expected value");
+		$this->assertEquals(null, $obj0->getTheme(), "The method getTheme() does not return the expected value");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -42,20 +61,22 @@ final class HighchartsResetZoomButtonTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(false);
-
-		$res = ["relativeTo" => "plot"];
-		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(true);
 
 		$obj->setPosition(["position" => "4757fe07fd492a8be0ea6a760d683d6e"]);
 
-		$res1 = ["relativeTo" => "plot", "position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"]];
+		$res1 = ["position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"]];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with position");
+
+		$obj->setRelativeTo("chart");
+
+		$res2 = ["position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"], "relativeTo" => "chart"];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with relative to");
 
 		$obj->setTheme(["theme" => "f484570d7cf557020e11ace406901b10"]);
 
-		$res2 = ["relativeTo" => "plot", "position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"], "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"]];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with theme");
+		$res3 = ["position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"], "relativeTo" => "chart", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"]];
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with theme");
 	}
 
 }

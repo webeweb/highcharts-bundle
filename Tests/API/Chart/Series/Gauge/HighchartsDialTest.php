@@ -23,16 +23,45 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsDialTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Test the clear() method.
+	 * Test the __construct() method.
 	 *
 	 * @return void
 	 */
-	public function testClear() {
+	public function testConstructor() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsDial(false);
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsDial(true);
 
-		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals(null, $obj1->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBaseLength(), "The method getBaseLength() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBaseWidth(), "The method getBaseWidth() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBorderColor(), "The method getBorderColor() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBorderWidth(), "The method getBorderWidth() does not return the expected value");
+		$this->assertEquals(null, $obj1->getRadius(), "The method getRadius() does not return the expected value");
+		$this->assertEquals(null, $obj1->getRearLength(), "The method getRearLength() does not return the expected value");
+		$this->assertEquals(null, $obj1->getTopWidth(), "The method getTopWidth() does not return the expected value");
+
+		$obj0 = new \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsDial(false);
+
+		$this->assertEquals("#000000", $obj0->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
+		$this->assertEquals("70%", $obj0->getBaseLength(), "The method getBaseLength() does not return the expected value");
+		$this->assertEquals(3, $obj0->getBaseWidth(), "The method getBaseWidth() does not return the expected value");
+		$this->assertEquals("#cccccc", $obj0->getBorderColor(), "The method getBorderColor() does not return the expected value");
+		$this->assertEquals(0, $obj0->getBorderWidth(), "The method getBorderWidth() does not return the expected value");
+		$this->assertEquals("80%", $obj0->getRadius(), "The method getRadius() does not return the expected value");
+		$this->assertEquals("10%", $obj0->getRearLength(), "The method getRearLength() does not return the expected value");
+		$this->assertEquals(1, $obj0->getTopWidth(), "The method getTopWidth() does not return the expected value");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsDial(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -42,10 +71,47 @@ final class HighchartsDialTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsDial(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsDial(true);
 
-		$res = ["backgroundColor" => "#000000", "baseLength" => "70%", "baseWidth" => 3, "borderColor" => "#cccccc", "borderWidth" => 0, "radius" => "80%", "rearLength" => "10%", "topWidth" => 1];
-		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+		$obj->setBackgroundColor("930f2a43179a7ae5fc25ed873223e99f");
+
+		$res1 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f"];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with background color");
+
+		$obj->setBaseLength("908389f95bb7d5ec0ee86df707120146");
+
+		$res2 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146"];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with base length");
+
+		$obj->setBaseWidth(75);
+
+		$res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 75];
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with base width");
+
+		$obj->setBorderColor("97da935a74593c55d78be9d1295aa994");
+
+		$res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 75, "borderColor" => "97da935a74593c55d78be9d1295aa994"];
+		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with border color");
+
+		$obj->setBorderWidth(80);
+
+		$res5 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 75, "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 80];
+		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with border width");
+
+		$obj->setRadius("fc021d54683383e5078ab9fefc4d53c8");
+
+		$res6 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 75, "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 80, "radius" => "fc021d54683383e5078ab9fefc4d53c8"];
+		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with radius");
+
+		$obj->setRearLength("cfeff8818f149d68732253aca8a5c4bf");
+
+		$res7 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 75, "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 80, "radius" => "fc021d54683383e5078ab9fefc4d53c8", "rearLength" => "cfeff8818f149d68732253aca8a5c4bf"];
+		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with rear length");
+
+		$obj->setTopWidth(67);
+
+		$res8 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 75, "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 80, "radius" => "fc021d54683383e5078ab9fefc4d53c8", "rearLength" => "cfeff8818f149d68732253aca8a5c4bf", "topWidth" => 67];
+		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with top width");
 	}
 
 }

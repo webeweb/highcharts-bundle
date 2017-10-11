@@ -23,16 +23,28 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsItemsTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Test the clear() method.
+	 * Test the __construct() method.
 	 *
 	 * @return void
 	 */
-	public function testClear() {
+	public function testConstructor() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\Labels\HighchartsItems(false);
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\Labels\HighchartsItems(true);
 
-		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals(null, $obj1->getHtml(), "The method getHtml() does not return the expected value");
+		$this->assertEquals(null, $obj1->getStyle(), "The method getStyle() does not return the expected value");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\Labels\HighchartsItems(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -42,7 +54,7 @@ final class HighchartsItemsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\Labels\HighchartsItems(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Labels\HighchartsItems(true);
 
 		$obj->setHtml("fc35fdc70d5fc69d269883a822c7a53e");
 

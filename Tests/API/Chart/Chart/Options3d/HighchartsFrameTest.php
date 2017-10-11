@@ -23,16 +23,30 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Test the clear() method.
+	 * Test the __construct() method.
 	 *
 	 * @return void
 	 */
-	public function testClear() {
+	public function testConstructor() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
 
-		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals(null, $obj1->getBack(), "The method getBack() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBottom(), "The method getBottom() does not return the expected value");
+		$this->assertEquals(null, $obj1->getSide(), "The method getSide() does not return the expected value");
+		$this->assertEquals(null, $obj1->getTop(), "The method getTop() does not return the expected value");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -45,7 +59,7 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
 		$res = $obj->newBack();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack::class, $res, "The method newBack() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack::class, $res, "The method newBack() does not return the expected object");
 	}
 
 	/**
@@ -58,7 +72,7 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
 		$res = $obj->newBottom();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom::class, $res, "The method newBottom() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom::class, $res, "The method newBottom() does not return the expected object");
 	}
 
 	/**
@@ -71,7 +85,7 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
 		$res = $obj->newSide();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide::class, $res, "The method newSide() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide::class, $res, "The method newSide() does not return the expected object");
 	}
 
 	/**
@@ -81,19 +95,19 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
 
-		$obj->newBack();
+		$obj->setBack(new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack());
 
 		$res1 = ["back" => []];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with back");
 
-		$obj->newBottom();
+		$obj->setBottom(new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom());
 
 		$res2 = ["back" => [], "bottom" => []];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with bottom");
 
-		$obj->newSide();
+		$obj->setSide(new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide());
 
 		$res3 = ["back" => [], "bottom" => [], "side" => []];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with side");
