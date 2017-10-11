@@ -3,6 +3,6 @@ services:
 
     webeweb.highcharts-bundle.twig.extension.highcharts:
         class: WBW\HighchartsBundle\Twig\Extension\HighchartsTwigExtension
-        arguments: ["@=service('kernel').locateResource('@WBWHighcharts/Resources')", "%kernel.environment%"]
+        arguments: ["@=service('kernel').locateResource('@WBWHighchartsBundle/Resources')", "%kernel.environment%"]
         tags:
           - { name: twig.extension }
