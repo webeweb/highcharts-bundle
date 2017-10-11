@@ -33,7 +33,7 @@ final class HighchartsTwigExtensionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testHighchartsChartFunction() {
 
-		$obj = new HighchartsTwigExtension();
+		$obj = new HighchartsTwigExtension(__DIR__ . "/../../../", "");
 
 		$cht = new HighchartsChart();
 		$cht->newTitle()->setText("title");
@@ -47,7 +47,7 @@ final class HighchartsTwigExtensionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testHighchartsScriptFunction() {
 
-		$obj = new HighchartsTwigExtension();
+		$obj = new HighchartsTwigExtension(__DIR__ . "/../../../", "");
 
 		try {
 			$obj->highchartsScriptFunction("inexistant-script");
@@ -77,7 +77,7 @@ final class HighchartsTwigExtensionTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testHighchartsSetOptionsFunction() {
 
-		$obj = new HighchartsTwigExtension();
+		$obj = new HighchartsTwigExtension(__DIR__ . "/../../../", "");
 
 		$opt = new HighchartsOptions();
 		$opt->newGlobal();
