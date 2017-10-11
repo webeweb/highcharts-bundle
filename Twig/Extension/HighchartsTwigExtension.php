@@ -132,7 +132,7 @@ final class HighchartsTwigExtension extends Twig_Extension {
 			throw new HighchartsFileNotFoundException($filename);
 		}
 
-		// Initialize the output.
+		// Return the output.
 		return "<script src=\"/bundles/wbwhighcharts/" . $filename . "\" type=\"text/javascript\"></script>";
 	}
 
