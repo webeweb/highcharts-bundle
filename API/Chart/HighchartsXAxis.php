@@ -2190,6 +2190,11 @@ final class HighchartsXAxis implements JsonSerializable {
 			$output["maxPadding"] = $this->maxPadding;
 		}
 
+		// Check the max zoom.
+		if (!is_null($this->maxZoom)) {
+			$output["maxZoom"] = $this->maxZoom;
+		}
+
 		// Check the min.
 		if (!is_null($this->min)) {
 			$output["min"] = $this->min;

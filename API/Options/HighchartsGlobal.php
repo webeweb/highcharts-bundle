@@ -289,6 +289,11 @@ final class HighchartsGlobal implements JsonSerializable {
 			$output["VMLRadialGradientURL"] = $this->vMLRadialGradientURL;
 		}
 
+		// Check the canvas tools URL.
+		if (!is_null($this->canvasToolsURL)) {
+			$output["canvasToolsURL"] = $this->canvasToolsURL;
+		}
+
 		// Check the get timezone offset.
 		if (!is_null($this->getTimezoneOffset)) {
 			$output["getTimezoneOffset"] = $this->getTimezoneOffset;

@@ -285,6 +285,11 @@ final class HighchartsHover implements JsonSerializable {
 			$output["lineWidthPlus"] = $this->lineWidthPlus;
 		}
 
+		// Check the marker.
+		if (!is_null($this->marker)) {
+			$output["marker"] = $this->marker->toArray();
+		}
+
 		// Return the output.
 		return $output;
 	}

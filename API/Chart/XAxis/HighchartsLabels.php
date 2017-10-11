@@ -657,6 +657,11 @@ final class HighchartsLabels implements JsonSerializable {
 			$output["formatter"] = $this->formatter;
 		}
 
+		// Check the overflow.
+		if (!is_null($this->overflow)) {
+			$output["overflow"] = $this->overflow;
+		}
+
 		// Check the padding.
 		if (!is_null($this->padding)) {
 			$output["padding"] = $this->padding;

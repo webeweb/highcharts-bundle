@@ -455,6 +455,16 @@ final class HighchartsSeries implements JsonSerializable {
 			$output["data"] = $this->data;
 		}
 
+		// Check the data parser.
+		if (!is_null($this->dataParser)) {
+			$output["dataParser"] = $this->dataParser;
+		}
+
+		// Check the data URL.
+		if (!is_null($this->dataURL)) {
+			$output["dataURL"] = $this->dataURL;
+		}
+
 		// Check the id.
 		if (!is_null($this->id)) {
 			$output["id"] = $this->id;
