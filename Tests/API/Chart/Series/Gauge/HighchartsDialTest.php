@@ -83,34 +83,34 @@ final class HighchartsDialTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146"];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with base length");
 
-		$obj->setBaseWidth(75);
+		$obj->setBaseWidth(32);
 
-		$res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 75];
+		$res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 32];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with base width");
 
 		$obj->setBorderColor("97da935a74593c55d78be9d1295aa994");
 
-		$res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 75, "borderColor" => "97da935a74593c55d78be9d1295aa994"];
+		$res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 32, "borderColor" => "97da935a74593c55d78be9d1295aa994"];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with border color");
 
-		$obj->setBorderWidth(80);
+		$obj->setBorderWidth(10);
 
-		$res5 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 75, "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 80];
+		$res5 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 32, "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 10];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with border width");
 
 		$obj->setRadius("fc021d54683383e5078ab9fefc4d53c8");
 
-		$res6 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 75, "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 80, "radius" => "fc021d54683383e5078ab9fefc4d53c8"];
+		$res6 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 32, "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 10, "radius" => "fc021d54683383e5078ab9fefc4d53c8"];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with radius");
 
 		$obj->setRearLength("cfeff8818f149d68732253aca8a5c4bf");
 
-		$res7 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 75, "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 80, "radius" => "fc021d54683383e5078ab9fefc4d53c8", "rearLength" => "cfeff8818f149d68732253aca8a5c4bf"];
+		$res7 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 32, "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 10, "radius" => "fc021d54683383e5078ab9fefc4d53c8", "rearLength" => "cfeff8818f149d68732253aca8a5c4bf"];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with rear length");
 
-		$obj->setTopWidth(67);
+		$obj->setTopWidth(78);
 
-		$res8 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 75, "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 80, "radius" => "fc021d54683383e5078ab9fefc4d53c8", "rearLength" => "cfeff8818f149d68732253aca8a5c4bf", "topWidth" => 67];
+		$res8 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 32, "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 10, "radius" => "fc021d54683383e5078ab9fefc4d53c8", "rearLength" => "cfeff8818f149d68732253aca8a5c4bf", "topWidth" => 78];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with top width");
 	}
 

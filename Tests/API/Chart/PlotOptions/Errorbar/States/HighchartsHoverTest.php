@@ -49,6 +49,23 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\States\HighchartsHover(false);
+
+		$obj->newMarker();
+
+		$obj->clear();
+
+		$res = ["marker" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
+
+	/**
 	 * Test the jsonSerialize() method.
 	 *
 	 * @return void
@@ -97,19 +114,19 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 		$res3 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"]];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with halo");
 
-		$obj->setLineWidth(83);
+		$obj->setLineWidth(63);
 
-		$res4 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 83];
+		$res4 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 63];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with line width");
 
-		$obj->setLineWidthPlus(3);
+		$obj->setLineWidthPlus(94);
 
-		$res5 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 83, "lineWidthPlus" => 3];
+		$res5 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 63, "lineWidthPlus" => 94];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with line width plus");
 
 		$obj->setMarker(new \WBW\HighchartsBundle\API\Chart\PlotOptions\Errorbar\States\Hover\HighchartsMarker());
 
-		$res6 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 83, "lineWidthPlus" => 3, "marker" => []];
+		$res6 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 63, "lineWidthPlus" => 94, "marker" => []];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with marker");
 	}
 

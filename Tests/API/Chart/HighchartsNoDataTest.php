@@ -80,9 +80,9 @@ final class HighchartsNoDataTest extends PHPUnit_Framework_TestCase {
 		$res3 = ["attr" => ["attr" => "815be97df65d6c4b510cd07189c5347a"], "position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"], "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with style");
 
-		$obj->setUseHTML(0);
+		$obj->setUseHTML(1);
 
-		$res4 = ["attr" => ["attr" => "815be97df65d6c4b510cd07189c5347a"], "position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"], "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0];
+		$res4 = ["attr" => ["attr" => "815be97df65d6c4b510cd07189c5347a"], "position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"], "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with use HTML");
 	}
 

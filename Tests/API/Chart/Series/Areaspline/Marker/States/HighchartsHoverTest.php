@@ -86,24 +86,24 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 		$res3 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with line color");
 
-		$obj->setLineWidth(57);
+		$obj->setLineWidth(95);
 
-		$res4 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 57];
+		$res4 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 95];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with line width");
 
-		$obj->setLineWidthPlus(98);
+		$obj->setLineWidthPlus(93);
 
-		$res5 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 57, "lineWidthPlus" => 98];
+		$res5 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 95, "lineWidthPlus" => 93];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with line width plus");
 
-		$obj->setRadius(33);
+		$obj->setRadius(35);
 
-		$res6 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 57, "lineWidthPlus" => 98, "radius" => 33];
+		$res6 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 95, "lineWidthPlus" => 93, "radius" => 35];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with radius");
 
-		$obj->setRadiusPlus(97);
+		$obj->setRadiusPlus(59);
 
-		$res7 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 57, "lineWidthPlus" => 98, "radius" => 33, "radiusPlus" => 97];
+		$res7 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 95, "lineWidthPlus" => 93, "radius" => 35, "radiusPlus" => 59];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with radius plus");
 	}
 

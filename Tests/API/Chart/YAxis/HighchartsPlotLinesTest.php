@@ -55,6 +55,23 @@ final class HighchartsPlotLinesTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines(false);
+
+		$obj->newLabel();
+
+		$obj->clear();
+
+		$res = ["label" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
+
+	/**
 	 * Test the jsonSerialize() method.
 	 *
 	 * @return void
@@ -118,19 +135,19 @@ final class HighchartsPlotLinesTest extends PHPUnit_Framework_TestCase {
 		$res6 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "id" => "b80bb7740288fda1f201890375a60c8f", "label" => []];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with label");
 
-		$obj->setValue(46);
+		$obj->setValue(60);
 
-		$res7 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "value" => 46];
+		$res7 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "value" => 60];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with value");
 
-		$obj->setWidth(19);
+		$obj->setWidth(14);
 
-		$res8 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "value" => 46, "width" => 19];
+		$res8 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "value" => 60, "width" => 14];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with width");
 
-		$obj->setZIndex(12);
+		$obj->setZIndex(34);
 
-		$res9 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "value" => 46, "width" => 19, "zIndex" => 12];
+		$res9 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "value" => 60, "width" => 14, "zIndex" => 34];
 		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with z index");
 	}
 

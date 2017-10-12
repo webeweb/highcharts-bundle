@@ -55,6 +55,23 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Spline\Data\HighchartsMarker(false);
+
+		$obj->newStates();
+
+		$obj->clear();
+
+		$res = ["states" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
+
+	/**
 	 * Test the jsonSerialize() method.
 	 *
 	 * @return void
@@ -98,39 +115,39 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-		$obj->setHeight(28);
+		$obj->setHeight(18);
 
-		$res3 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 28];
+		$res3 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 18];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with height");
 
 		$obj->setLineColor("c2580eebfdbdb9fc629f50cc147c3f63");
 
-		$res4 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 28, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
+		$res4 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 18, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with line color");
 
-		$obj->setLineWidth(25);
+		$obj->setLineWidth(8);
 
-		$res5 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 28, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 25];
+		$res5 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 18, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 8];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with line width");
 
-		$obj->setRadius(58);
+		$obj->setRadius(97);
 
-		$res6 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 28, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 25, "radius" => 58];
+		$res6 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 18, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 8, "radius" => 97];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with radius");
 
 		$obj->setStates(new \WBW\HighchartsBundle\API\Chart\Series\Spline\Data\Marker\HighchartsStates());
 
-		$res7 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 28, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 25, "radius" => 58, "states" => []];
+		$res7 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 18, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 8, "radius" => 97, "states" => []];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with states");
 
 		$obj->setSymbol("triangle-down");
 
-		$res8 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 28, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 25, "radius" => 58, "states" => [], "symbol" => "triangle-down"];
+		$res8 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 18, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 8, "radius" => 97, "states" => [], "symbol" => "triangle-down"];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with symbol");
 
-		$obj->setWidth(82);
+		$obj->setWidth(27);
 
-		$res9 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 28, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 25, "radius" => 58, "states" => [], "symbol" => "triangle-down", "width" => 82];
+		$res9 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 18, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 8, "radius" => 97, "states" => [], "symbol" => "triangle-down", "width" => 27];
 		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with width");
 	}
 

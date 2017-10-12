@@ -77,19 +77,19 @@ final class HighchartsPaneTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"]];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with center");
 
-		$obj->setEndAngle(45);
+		$obj->setEndAngle(78);
 
-		$res3 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 45];
+		$res3 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 78];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with end angle");
 
-		$obj->setSize(91);
+		$obj->setSize(22);
 
-		$res4 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 45, "size" => 91];
+		$res4 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 78, "size" => 22];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with size");
 
-		$obj->setStartAngle(74);
+		$obj->setStartAngle(10);
 
-		$res5 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 45, "size" => 91, "startAngle" => 74];
+		$res5 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 78, "size" => 22, "startAngle" => 10];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with start angle");
 	}
 

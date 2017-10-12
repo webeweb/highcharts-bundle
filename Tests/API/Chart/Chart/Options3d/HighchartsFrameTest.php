@@ -38,6 +38,25 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
+
+		$obj->newBack();
+		$obj->newBottom();
+		$obj->newSide();
+
+		$obj->clear();
+
+		$res = ["back" => [], "bottom" => [], "side" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
+
+	/**
 	 * Test the jsonSerialize() method.
 	 *
 	 * @return void

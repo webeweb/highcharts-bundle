@@ -79,24 +79,24 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["animation" => 0, "borderColor" => "97da935a74593c55d78be9d1295aa994"];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with border color");
 
-		$obj->setBrightness(99);
+		$obj->setBrightness(82);
 
-		$res3 = ["animation" => 0, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 99];
+		$res3 = ["animation" => 0, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 82];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with brightness");
 
 		$obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
-		$res4 = ["animation" => 0, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 99, "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
+		$res4 = ["animation" => 0, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 82, "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with color");
 
-		$obj->setEnabled(1);
+		$obj->setEnabled(0);
 
-		$res5 = ["animation" => 0, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 99, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "enabled" => 1];
+		$res5 = ["animation" => 0, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 82, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "enabled" => 0];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
-		$obj->setOpacity(49);
+		$obj->setOpacity(12);
 
-		$res6 = ["animation" => 0, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 99, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "enabled" => 1, "opacity" => 49];
+		$res6 = ["animation" => 0, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 82, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "enabled" => 0, "opacity" => 12];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with opacity");
 	}
 

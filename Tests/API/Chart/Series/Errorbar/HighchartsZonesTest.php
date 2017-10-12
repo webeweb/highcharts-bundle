@@ -79,9 +79,9 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
 		$res4 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-		$obj->setValue(95);
+		$obj->setValue(14);
 
-		$res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "value" => 95];
+		$res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "value" => 14];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with value");
 	}
 

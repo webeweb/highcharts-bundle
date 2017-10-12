@@ -71,6 +71,23 @@ final class HighchartsExportingTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsExporting(false);
+
+		$obj->newButtons();
+
+		$obj->clear();
+
+		$res = ["buttons" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
+
+	/**
 	 * Test the jsonSerialize() method.
 	 *
 	 * @return void
@@ -104,89 +121,89 @@ final class HighchartsExportingTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsExporting(true);
 
-		$obj->setAllowHTML(1);
+		$obj->setAllowHTML(0);
 
-		$res1 = ["allowHTML" => 1];
+		$res1 = ["allowHTML" => 0];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with allow HTML");
 
 		$obj->setButtons(new \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons());
 
-		$res2 = ["allowHTML" => 1, "buttons" => []];
+		$res2 = ["allowHTML" => 0, "buttons" => []];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with buttons");
 
 		$obj->setChartOptions(["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"]);
 
-		$res3 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"]];
+		$res3 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"]];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with chart options");
 
-		$obj->setEnabled(0);
+		$obj->setEnabled(1);
 
-		$res4 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0];
+		$res4 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
 		$obj->setError("cb5e100e5a9a3e7f6d1fd97512215282");
 
-		$res5 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0, "error" => "cb5e100e5a9a3e7f6d1fd97512215282"];
+		$res5 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282"];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with error");
 
 		$obj->setFallbackToExportServer(1);
 
-		$res6 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1];
+		$res6 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with fallback to export server");
 
 		$obj->setFilename("435ed7e9f07f740abf511a62c00eef6e");
 
-		$res7 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e"];
+		$res7 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e"];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with filename");
 
 		$obj->setFormAttributes(["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"]);
 
-		$res8 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"]];
+		$res8 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"]];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with form attributes");
 
 		$obj->setLibURL("98a3bf7bf973c3ec4655c15c5a4d650e");
 
-		$res9 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e"];
+		$res9 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e"];
 		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with lib URL");
 
 		$obj->setMenuItemDefinitions(["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"]);
 
-		$res10 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"]];
+		$res10 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"]];
 		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with menu item definitions");
 
-		$obj->setPrintMaxWidth(44);
+		$obj->setPrintMaxWidth(17);
 
-		$res11 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 44];
+		$res11 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 17];
 		$this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with print max width");
 
-		$obj->setScale(20);
+		$obj->setScale(2);
 
-		$res12 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 44, "scale" => 20];
+		$res12 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 17, "scale" => 2];
 		$this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with scale");
 
-		$obj->setSourceHeight(40);
+		$obj->setSourceHeight(50);
 
-		$res13 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 44, "scale" => 20, "sourceHeight" => 40];
+		$res13 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 17, "scale" => 2, "sourceHeight" => 50];
 		$this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with source height");
 
-		$obj->setSourceWidth(41);
+		$obj->setSourceWidth(10);
 
-		$res14 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 44, "scale" => 20, "sourceHeight" => 40, "sourceWidth" => 41];
+		$res14 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 17, "scale" => 2, "sourceHeight" => 50, "sourceWidth" => 10];
 		$this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with source width");
 
 		$obj->setType("image/svg+xml");
 
-		$res15 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 44, "scale" => 20, "sourceHeight" => 40, "sourceWidth" => 41, "type" => "image/svg+xml"];
+		$res15 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 17, "scale" => 2, "sourceHeight" => 50, "sourceWidth" => 10, "type" => "image/svg+xml"];
 		$this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with type");
 
 		$obj->setUrl("572d4e421e5e6b9bc11d815e8a027112");
 
-		$res16 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 44, "scale" => 20, "sourceHeight" => 40, "sourceWidth" => 41, "type" => "image/svg+xml", "url" => "572d4e421e5e6b9bc11d815e8a027112"];
+		$res16 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 17, "scale" => 2, "sourceHeight" => 50, "sourceWidth" => 10, "type" => "image/svg+xml", "url" => "572d4e421e5e6b9bc11d815e8a027112"];
 		$this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with url");
 
-		$obj->setWidth(11);
+		$obj->setWidth(96);
 
-		$res17 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 44, "scale" => 20, "sourceHeight" => 40, "sourceWidth" => 41, "type" => "image/svg+xml", "url" => "572d4e421e5e6b9bc11d815e8a027112", "width" => 11];
+		$res17 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 17, "scale" => 2, "sourceHeight" => 50, "sourceWidth" => 10, "type" => "image/svg+xml", "url" => "572d4e421e5e6b9bc11d815e8a027112", "width" => 96];
 		$this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with width");
 	}
 

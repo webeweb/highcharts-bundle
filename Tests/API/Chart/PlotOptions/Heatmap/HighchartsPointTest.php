@@ -35,6 +35,23 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint(false);
+
+		$obj->newEvents();
+
+		$obj->clear();
+
+		$res = ["events" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
+
+	/**
 	 * Test the jsonSerialize() method.
 	 *
 	 * @return void

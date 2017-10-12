@@ -49,6 +49,23 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(false);
+
+		$obj->newMarker();
+
+		$obj->clear();
+
+		$res = ["marker" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
+
+	/**
 	 * Test the jsonSerialize() method.
 	 *
 	 * @return void
@@ -87,29 +104,29 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["animation" => 1];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with animation");
 
-		$obj->setEnabled(0);
+		$obj->setEnabled(1);
 
-		$res2 = ["animation" => 1, "enabled" => 0];
+		$res2 = ["animation" => 1, "enabled" => 1];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
 		$obj->setHalo(["halo" => "57f842286171094855e51fc3a541c1e2"]);
 
-		$res3 = ["animation" => 1, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"]];
+		$res3 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"]];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with halo");
 
-		$obj->setLineWidth(94);
+		$obj->setLineWidth(58);
 
-		$res4 = ["animation" => 1, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 94];
+		$res4 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 58];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with line width");
 
-		$obj->setLineWidthPlus(23);
+		$obj->setLineWidthPlus(71);
 
-		$res5 = ["animation" => 1, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 94, "lineWidthPlus" => 23];
+		$res5 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 58, "lineWidthPlus" => 71];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with line width plus");
 
 		$obj->setMarker(new \WBW\HighchartsBundle\API\Chart\Series\Area\States\Hover\HighchartsMarker());
 
-		$res6 = ["animation" => 1, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 94, "lineWidthPlus" => 23, "marker" => []];
+		$res6 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 58, "lineWidthPlus" => 71, "marker" => []];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with marker");
 	}
 

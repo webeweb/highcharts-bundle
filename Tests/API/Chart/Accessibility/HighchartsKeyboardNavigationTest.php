@@ -73,9 +73,9 @@ final class HighchartsKeyboardNavigationTest extends PHPUnit_Framework_TestCase 
 		$res2 = ["enabled" => 0, "skipNullPoints" => 1];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with skip null points");
 
-		$obj->setTabThroughChartElements(1);
+		$obj->setTabThroughChartElements(0);
 
-		$res3 = ["enabled" => 0, "skipNullPoints" => 1, "tabThroughChartElements" => 1];
+		$res3 = ["enabled" => 0, "skipNullPoints" => 1, "tabThroughChartElements" => 0];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with tab through chart elements");
 	}
 

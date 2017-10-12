@@ -68,14 +68,14 @@ final class HighchartsHaloTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["attributes" => ["attributes" => "736b91750e516139acc13c5eb6564f92"]];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with attributes");
 
-		$obj->setOpacity(13);
+		$obj->setOpacity(72);
 
-		$res2 = ["attributes" => ["attributes" => "736b91750e516139acc13c5eb6564f92"], "opacity" => 13];
+		$res2 = ["attributes" => ["attributes" => "736b91750e516139acc13c5eb6564f92"], "opacity" => 72];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with opacity");
 
-		$obj->setSize(61);
+		$obj->setSize(24);
 
-		$res3 = ["attributes" => ["attributes" => "736b91750e516139acc13c5eb6564f92"], "opacity" => 13, "size" => 61];
+		$res3 = ["attributes" => ["attributes" => "736b91750e516139acc13c5eb6564f92"], "opacity" => 72, "size" => 24];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with size");
 	}
 

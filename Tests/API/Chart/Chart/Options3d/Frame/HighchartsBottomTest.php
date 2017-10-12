@@ -68,14 +68,14 @@ final class HighchartsBottomTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with color");
 
-		$obj->setSize(73);
+		$obj->setSize(45);
 
-		$res2 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 73];
+		$res2 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 45];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with size");
 
 		$obj->setVisible(false);
 
-		$res3 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 73, "visible" => false];
+		$res3 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 45, "visible" => false];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with visible");
 	}
 

@@ -72,24 +72,24 @@ final class HighchartsConditionTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2"];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with callback");
 
-		$obj->setMaxHeight(25);
+		$obj->setMaxHeight(65);
 
-		$res2 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 25];
+		$res2 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 65];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with max height");
 
-		$obj->setMaxWidth(90);
+		$obj->setMaxWidth(14);
 
-		$res3 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 25, "maxWidth" => 90];
+		$res3 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 65, "maxWidth" => 14];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with max width");
 
 		$obj->setMinHeight(71);
 
-		$res4 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 25, "maxWidth" => 90, "minHeight" => 71];
+		$res4 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 65, "maxWidth" => 14, "minHeight" => 71];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with min height");
 
-		$obj->setMinWidth(26);
+		$obj->setMinWidth(100);
 
-		$res5 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 25, "maxWidth" => 90, "minHeight" => 71, "minWidth" => 26];
+		$res5 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 65, "maxWidth" => 14, "minHeight" => 71, "minWidth" => 100];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with min width");
 	}
 

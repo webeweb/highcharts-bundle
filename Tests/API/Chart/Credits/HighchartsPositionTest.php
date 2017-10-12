@@ -75,14 +75,14 @@ final class HighchartsPositionTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["align" => "right", "verticalAlign" => "bottom"];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
 
-		$obj->setX(97);
+		$obj->setX(62);
 
-		$res3 = ["align" => "right", "verticalAlign" => "bottom", "x" => 97];
+		$res3 = ["align" => "right", "verticalAlign" => "bottom", "x" => 62];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with x");
 
-		$obj->setY(77);
+		$obj->setY(38);
 
-		$res4 = ["align" => "right", "verticalAlign" => "bottom", "x" => 97, "y" => 77];
+		$res4 = ["align" => "right", "verticalAlign" => "bottom", "x" => 62, "y" => 38];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with y");
 	}
 

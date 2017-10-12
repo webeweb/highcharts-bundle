@@ -95,64 +95,64 @@ final class HighchartsButtonOptionsTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["align" => "right", "enabled" => 0];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
-		$obj->setHeight(20);
+		$obj->setHeight(30);
 
-		$res3 = ["align" => "right", "enabled" => 0, "height" => 20];
+		$res3 = ["align" => "right", "enabled" => 0, "height" => 30];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with height");
 
 		$obj->setSymbolFill("91c9eea38e42d2f606dbfea1e027bfbf");
 
-		$res4 = ["align" => "right", "enabled" => 0, "height" => 20, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf"];
+		$res4 = ["align" => "right", "enabled" => 0, "height" => 30, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf"];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with symbol fill");
 
-		$obj->setSymbolSize(18);
+		$obj->setSymbolSize(83);
 
-		$res5 = ["align" => "right", "enabled" => 0, "height" => 20, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 18];
+		$res5 = ["align" => "right", "enabled" => 0, "height" => 30, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 83];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with symbol size");
 
 		$obj->setSymbolStroke("07f92b4194c5eb604aeb59004eeaab2a");
 
-		$res6 = ["align" => "right", "enabled" => 0, "height" => 20, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 18, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a"];
+		$res6 = ["align" => "right", "enabled" => 0, "height" => 30, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 83, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a"];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with symbol stroke");
 
-		$obj->setSymbolStrokeWidth(80);
+		$obj->setSymbolStrokeWidth(3);
 
-		$res7 = ["align" => "right", "enabled" => 0, "height" => 20, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 18, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 80];
+		$res7 = ["align" => "right", "enabled" => 0, "height" => 30, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 83, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 3];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with symbol stroke width");
 
-		$obj->setSymbolX(83);
+		$obj->setSymbolX(76);
 
-		$res8 = ["align" => "right", "enabled" => 0, "height" => 20, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 18, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 80, "symbolX" => 83];
+		$res8 = ["align" => "right", "enabled" => 0, "height" => 30, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 83, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 3, "symbolX" => 76];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with symbol x");
 
-		$obj->setSymbolY(37);
+		$obj->setSymbolY(44);
 
-		$res9 = ["align" => "right", "enabled" => 0, "height" => 20, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 18, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 80, "symbolX" => 83, "symbolY" => 37];
+		$res9 = ["align" => "right", "enabled" => 0, "height" => 30, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 83, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 3, "symbolX" => 76, "symbolY" => 44];
 		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with symbol y");
 
 		$obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
 
-		$res10 = ["align" => "right", "enabled" => 0, "height" => 20, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 18, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 80, "symbolX" => 83, "symbolY" => 37, "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
+		$res10 = ["align" => "right", "enabled" => 0, "height" => 30, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 83, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 3, "symbolX" => 76, "symbolY" => 44, "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
 		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with text");
 
 		$obj->setTheme(["theme" => "f484570d7cf557020e11ace406901b10"]);
 
-		$res11 = ["align" => "right", "enabled" => 0, "height" => 20, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 18, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 80, "symbolX" => 83, "symbolY" => 37, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"]];
+		$res11 = ["align" => "right", "enabled" => 0, "height" => 30, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 83, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 3, "symbolX" => 76, "symbolY" => 44, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"]];
 		$this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with theme");
 
 		$obj->setVerticalAlign("bottom");
 
-		$res12 = ["align" => "right", "enabled" => 0, "height" => 20, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 18, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 80, "symbolX" => 83, "symbolY" => 37, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom"];
+		$res12 = ["align" => "right", "enabled" => 0, "height" => 30, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 83, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 3, "symbolX" => 76, "symbolY" => 44, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom"];
 		$this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
 
-		$obj->setWidth(77);
+		$obj->setWidth(1);
 
-		$res13 = ["align" => "right", "enabled" => 0, "height" => 20, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 18, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 80, "symbolX" => 83, "symbolY" => 37, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom", "width" => 77];
+		$res13 = ["align" => "right", "enabled" => 0, "height" => 30, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 83, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 3, "symbolX" => 76, "symbolY" => 44, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom", "width" => 1];
 		$this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with width");
 
-		$obj->setY(29);
+		$obj->setY(34);
 
-		$res14 = ["align" => "right", "enabled" => 0, "height" => 20, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 18, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 80, "symbolX" => 83, "symbolY" => 37, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom", "width" => 77, "y" => 29];
+		$res14 = ["align" => "right", "enabled" => 0, "height" => 30, "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 83, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 3, "symbolX" => 76, "symbolY" => 44, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom", "width" => 1, "y" => 34];
 		$this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with y");
 	}
 

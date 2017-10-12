@@ -65,24 +65,24 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsBreaks(true);
 
-		$obj->setBreakSize(59);
+		$obj->setBreakSize(99);
 
-		$res1 = ["breakSize" => 59];
+		$res1 = ["breakSize" => 99];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with break size");
 
-		$obj->setFrom(74);
+		$obj->setFrom(30);
 
-		$res2 = ["breakSize" => 59, "from" => 74];
+		$res2 = ["breakSize" => 99, "from" => 30];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with from");
 
-		$obj->setRepeat(64);
+		$obj->setRepeat(82);
 
-		$res3 = ["breakSize" => 59, "from" => 74, "repeat" => 64];
+		$res3 = ["breakSize" => 99, "from" => 30, "repeat" => 82];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with repeat");
 
-		$obj->setTo(20);
+		$obj->setTo(85);
 
-		$res4 = ["breakSize" => 59, "from" => 74, "repeat" => 64, "to" => 20];
+		$res4 = ["breakSize" => 99, "from" => 30, "repeat" => 82, "to" => 85];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with to");
 	}
 

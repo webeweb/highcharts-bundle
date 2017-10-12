@@ -103,84 +103,84 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"]];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with auto rotation");
 
-		$obj->setAutoRotationLimit(2);
+		$obj->setAutoRotationLimit(57);
 
-		$res3 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2];
+		$res3 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with auto rotation limit");
 
-		$obj->setDistance(20);
+		$obj->setDistance(2);
 
-		$res4 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20];
+		$res4 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with distance");
 
-		$obj->setEnabled(0);
+		$obj->setEnabled(1);
 
-		$res5 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20, "enabled" => 0];
+		$res5 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2, "enabled" => 1];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
 		$obj->setFormat("1ddcb92ade31c8fbd370001f9b29a7d9");
 
-		$res6 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9"];
+		$res6 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9"];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with format");
 
 		$obj->setFormatter("f2ffc59487832cbad265a8fef2133592");
 
-		$res7 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
+		$res7 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with formatter");
 
 		$obj->setOverflow("justify");
 
-		$res8 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify"];
+		$res8 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify"];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with overflow");
 
-		$obj->setPadding(33);
+		$obj->setPadding(43);
 
-		$res9 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 33];
+		$res9 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 43];
 		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with padding");
 
 		$obj->setReserveSpace(1);
 
-		$res10 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 33, "reserveSpace" => 1];
+		$res10 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 43, "reserveSpace" => 1];
 		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with reserve space");
 
-		$obj->setRotation(62);
+		$obj->setRotation(34);
 
-		$res11 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 33, "reserveSpace" => 1, "rotation" => 62];
+		$res11 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 43, "reserveSpace" => 1, "rotation" => 34];
 		$this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with rotation");
 
-		$obj->setStaggerLines(2);
+		$obj->setStaggerLines(62);
 
-		$res12 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 33, "reserveSpace" => 1, "rotation" => 62, "staggerLines" => 2];
+		$res12 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 43, "reserveSpace" => 1, "rotation" => 34, "staggerLines" => 62];
 		$this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with stagger lines");
 
-		$obj->setStep(21);
+		$obj->setStep(74);
 
-		$res13 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 33, "reserveSpace" => 1, "rotation" => 62, "staggerLines" => 2, "step" => 21];
+		$res13 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 43, "reserveSpace" => 1, "rotation" => 34, "staggerLines" => 62, "step" => 74];
 		$this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with step");
 
 		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-		$res14 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 33, "reserveSpace" => 1, "rotation" => 62, "staggerLines" => 2, "step" => 21, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+		$res14 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 43, "reserveSpace" => 1, "rotation" => 34, "staggerLines" => 62, "step" => 74, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
 		$this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with style");
 
-		$obj->setUseHTML(1);
+		$obj->setUseHTML(0);
 
-		$res15 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 33, "reserveSpace" => 1, "rotation" => 62, "staggerLines" => 2, "step" => 21, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1];
+		$res15 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 43, "reserveSpace" => 1, "rotation" => 34, "staggerLines" => 62, "step" => 74, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0];
 		$this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with use HTML");
 
-		$obj->setX(32);
+		$obj->setX(69);
 
-		$res16 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 33, "reserveSpace" => 1, "rotation" => 62, "staggerLines" => 2, "step" => 21, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "x" => 32];
+		$res16 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 43, "reserveSpace" => 1, "rotation" => 34, "staggerLines" => 62, "step" => 74, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "x" => 69];
 		$this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with x");
 
-		$obj->setY(43);
+		$obj->setY(40);
 
-		$res17 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 33, "reserveSpace" => 1, "rotation" => 62, "staggerLines" => 2, "step" => 21, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "x" => 32, "y" => 43];
+		$res17 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 43, "reserveSpace" => 1, "rotation" => 34, "staggerLines" => 62, "step" => 74, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "x" => 69, "y" => 40];
 		$this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with y");
 
-		$obj->setZIndex(17);
+		$obj->setZIndex(16);
 
-		$res18 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 2, "distance" => 20, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 33, "reserveSpace" => 1, "rotation" => 62, "staggerLines" => 2, "step" => 21, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "x" => 32, "y" => 43, "zIndex" => 17];
+		$res18 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 57, "distance" => 2, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 43, "reserveSpace" => 1, "rotation" => 34, "staggerLines" => 62, "step" => 74, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "x" => 69, "y" => 40, "zIndex" => 16];
 		$this->assertEquals($res18, $obj->toArray(), "The method toArray() does not return the expected array with z index");
 	}
 

@@ -85,39 +85,39 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-		$obj->setHeight(97);
+		$obj->setHeight(54);
 
-		$res3 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 97];
+		$res3 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 54];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with height");
 
 		$obj->setLineColor("c2580eebfdbdb9fc629f50cc147c3f63");
 
-		$res4 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 97, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
+		$res4 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 54, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with line color");
 
-		$obj->setLineWidth(16);
+		$obj->setLineWidth(61);
 
-		$res5 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 97, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 16];
+		$res5 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 54, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 61];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with line width");
 
-		$obj->setRadius(63);
+		$obj->setRadius(52);
 
-		$res6 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 97, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 16, "radius" => 63];
+		$res6 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 54, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 61, "radius" => 52];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with radius");
 
 		$obj->setStates("");
 
-		$res7 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 97, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 16, "radius" => 63, "states" => ""];
+		$res7 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 54, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 61, "radius" => 52, "states" => ""];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with states");
 
 		$obj->setSymbol("triangle-down");
 
-		$res8 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 97, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 16, "radius" => 63, "states" => "", "symbol" => "triangle-down"];
+		$res8 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 54, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 61, "radius" => 52, "states" => "", "symbol" => "triangle-down"];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with symbol");
 
-		$obj->setWidth(26);
+		$obj->setWidth(41);
 
-		$res9 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 97, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 16, "radius" => 63, "states" => "", "symbol" => "triangle-down", "width" => 26];
+		$res9 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 54, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 61, "radius" => 52, "states" => "", "symbol" => "triangle-down", "width" => 41];
 		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with width");
 	}
 

@@ -83,6 +83,39 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+
+		$obj->newAccessibility();
+		$obj->newChart();
+		$obj->newCredits();
+		$obj->newData();
+		$obj->newDrilldown();
+		$obj->newExporting();
+		$obj->newLabels();
+		$obj->newLegend();
+		$obj->newLoading();
+		$obj->newNavigation();
+		$obj->newNoData();
+		$obj->newPlotOptions();
+		$obj->newResponsive();
+		$obj->newSubtitle();
+		$obj->newTitle();
+		$obj->newTooltip();
+		$obj->newZAxis();
+
+		$obj->clear();
+
+		$res = ["accessibility" => [], "chart" => [], "credits" => [], "data" => [], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => [], "loading" => [], "navigation" => [], "noData" => [], "plotOptions" => [], "responsive" => [], "subtitle" => [], "title" => [], "tooltip" => [], "zAxis" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
+
+	/**
 	 * Test the jsonSerialize() method.
 	 *
 	 * @return void

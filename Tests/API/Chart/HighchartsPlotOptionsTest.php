@@ -57,6 +57,33 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
+
+		$obj->newArea();
+		$obj->newArearange();
+		$obj->newAreaspline();
+		$obj->newAreasplinerange();
+		$obj->newBar();
+		$obj->newColumn();
+		$obj->newLine();
+		$obj->newPie();
+		$obj->newScatter();
+		$obj->newSeries();
+		$obj->newSpline();
+
+		$obj->clear();
+
+		$res = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => [], "bar" => [], "column" => [], "line" => [], "pie" => [], "scatter" => [], "series" => [], "spline" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
+
+	/**
 	 * Test the jsonSerialize() method.
 	 *
 	 * @return void

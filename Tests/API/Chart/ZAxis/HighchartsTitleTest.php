@@ -87,44 +87,44 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423"];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
-		$obj->setMargin(91);
+		$obj->setMargin(30);
 
-		$res3 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 91];
+		$res3 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 30];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with margin");
 
-		$obj->setOffset(57);
+		$obj->setOffset(49);
 
-		$res4 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 91, "offset" => 57];
+		$res4 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 30, "offset" => 49];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with offset");
 
-		$obj->setReserveSpace(0);
+		$obj->setReserveSpace(1);
 
-		$res5 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 91, "offset" => 57, "reserveSpace" => 0];
+		$res5 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 30, "offset" => 49, "reserveSpace" => 1];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with reserve space");
 
-		$obj->setRotation(23);
+		$obj->setRotation(68);
 
-		$res6 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 91, "offset" => 57, "reserveSpace" => 0, "rotation" => 23];
+		$res6 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 30, "offset" => 49, "reserveSpace" => 1, "rotation" => 68];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with rotation");
 
 		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-		$res7 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 91, "offset" => 57, "reserveSpace" => 0, "rotation" => 23, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+		$res7 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 30, "offset" => 49, "reserveSpace" => 1, "rotation" => 68, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with style");
 
 		$obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
 
-		$res8 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 91, "offset" => 57, "reserveSpace" => 0, "rotation" => 23, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
+		$res8 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 30, "offset" => 49, "reserveSpace" => 1, "rotation" => 68, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with text");
 
-		$obj->setX(78);
+		$obj->setX(38);
 
-		$res9 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 91, "offset" => 57, "reserveSpace" => 0, "rotation" => 23, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "x" => 78];
+		$res9 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 30, "offset" => 49, "reserveSpace" => 1, "rotation" => 68, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "x" => 38];
 		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with x");
 
-		$obj->setY(3);
+		$obj->setY(32);
 
-		$res10 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 91, "offset" => 57, "reserveSpace" => 0, "rotation" => 23, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "x" => 78, "y" => 3];
+		$res10 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 30, "offset" => 49, "reserveSpace" => 1, "rotation" => 68, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "x" => 38, "y" => 32];
 		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with y");
 	}
 

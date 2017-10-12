@@ -75,14 +75,14 @@ final class HighchartsPivotTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994"];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with border color");
 
-		$obj->setBorderWidth(96);
+		$obj->setBorderWidth(1);
 
-		$res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 96];
+		$res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 1];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with border width");
 
-		$obj->setRadius(61);
+		$obj->setRadius(96);
 
-		$res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 96, "radius" => 61];
+		$res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 1, "radius" => 96];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with radius");
 	}
 

@@ -74,29 +74,29 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd"];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with active color");
 
-		$obj->setAnimation(1);
+		$obj->setAnimation(0);
 
-		$res2 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 1];
+		$res2 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with animation");
 
-		$obj->setArrowSize(72);
+		$obj->setArrowSize(15);
 
-		$res3 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 1, "arrowSize" => 72];
+		$res3 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 15];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with arrow size");
 
 		$obj->setEnabled(0);
 
-		$res4 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 1, "arrowSize" => 72, "enabled" => 0];
+		$res4 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 15, "enabled" => 0];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
 		$obj->setInactiveColor("b3a75fd77d41e4b05a9ca48090851664");
 
-		$res5 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 1, "arrowSize" => 72, "enabled" => 0, "inactiveColor" => "b3a75fd77d41e4b05a9ca48090851664"];
+		$res5 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 15, "enabled" => 0, "inactiveColor" => "b3a75fd77d41e4b05a9ca48090851664"];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with inactive color");
 
 		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-		$res6 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 1, "arrowSize" => 72, "enabled" => 0, "inactiveColor" => "b3a75fd77d41e4b05a9ca48090851664", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+		$res6 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 15, "enabled" => 0, "inactiveColor" => "b3a75fd77d41e4b05a9ca48090851664", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with style");
 	}
 

@@ -65,24 +65,24 @@ final class HighchartsLoadingTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLoading(true);
 
-		$obj->setHideDuration(25);
+		$obj->setHideDuration(75);
 
-		$res1 = ["hideDuration" => 25];
+		$res1 = ["hideDuration" => 75];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with hide duration");
 
 		$obj->setLabelStyle(["labelStyle" => "00faa433bf869443728e502b4f7c6850"]);
 
-		$res2 = ["hideDuration" => 25, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"]];
+		$res2 = ["hideDuration" => 75, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"]];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with label style");
 
-		$obj->setShowDuration(51);
+		$obj->setShowDuration(73);
 
-		$res3 = ["hideDuration" => 25, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"], "showDuration" => 51];
+		$res3 = ["hideDuration" => 75, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"], "showDuration" => 73];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with show duration");
 
 		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-		$res4 = ["hideDuration" => 25, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"], "showDuration" => 51, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+		$res4 = ["hideDuration" => 75, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"], "showDuration" => 73, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with style");
 	}
 

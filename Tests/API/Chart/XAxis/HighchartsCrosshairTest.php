@@ -89,14 +89,14 @@ final class HighchartsCrosshairTest extends PHPUnit_Framework_TestCase {
 		$res4 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with snap");
 
-		$obj->setWidth(69);
+		$obj->setWidth(83);
 
-		$res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0, "width" => 69];
+		$res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0, "width" => 83];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with width");
 
-		$obj->setZIndex(71);
+		$obj->setZIndex(2);
 
-		$res6 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0, "width" => 69, "zIndex" => 71];
+		$res6 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0, "width" => 83, "zIndex" => 2];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with z index");
 	}
 

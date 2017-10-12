@@ -66,9 +66,9 @@ final class HighchartsTopTest extends PHPUnit_Framework_TestCase {
 		$res1 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with color");
 
-		$obj->setSize(58);
+		$obj->setSize(31);
 
-		$res2 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 58];
+		$res2 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 31];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with size");
 	}
 

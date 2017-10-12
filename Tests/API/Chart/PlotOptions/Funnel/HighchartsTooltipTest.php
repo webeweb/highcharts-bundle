@@ -95,64 +95,64 @@ final class HighchartsTooltipTest extends PHPUnit_Framework_TestCase {
 		$res2 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with follow pointer");
 
-		$obj->setFollowTouchMove(1);
+		$obj->setFollowTouchMove(0);
 
-		$res3 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1];
+		$res3 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 0];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with follow touch move");
 
 		$obj->setFooterFormat("1ac32e030fc5ef01e703d5419170690e");
 
-		$res4 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e"];
+		$res4 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e"];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with footer format");
 
 		$obj->setHeaderFormat("937148825f6c7c8ed3376d1834b17ac6");
 
-		$res5 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6"];
+		$res5 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6"];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with header format");
 
-		$obj->setHideDelay(22);
+		$obj->setHideDelay(13);
 
-		$res6 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 22];
+		$res6 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 13];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with hide delay");
 
-		$obj->setPadding(27);
+		$obj->setPadding(48);
 
-		$res7 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 22, "padding" => 27];
+		$res7 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 13, "padding" => 48];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with padding");
 
 		$obj->setPointFormat("332dd3de68dc71de0745837cbc13e217");
 
-		$res8 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 22, "padding" => 27, "pointFormat" => "332dd3de68dc71de0745837cbc13e217"];
+		$res8 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 13, "padding" => 48, "pointFormat" => "332dd3de68dc71de0745837cbc13e217"];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with point format");
 
 		$obj->setPointFormatter("d0b51d7b9a5189f718d161b366d33044");
 
-		$res9 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 22, "padding" => 27, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044"];
+		$res9 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 13, "padding" => 48, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044"];
 		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with point formatter");
 
-		$obj->setSplit(1);
+		$obj->setSplit(0);
 
-		$res10 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 22, "padding" => 27, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 1];
+		$res10 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 13, "padding" => 48, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 0];
 		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with split");
 
-		$obj->setValueDecimals(5);
+		$obj->setValueDecimals(77);
 
-		$res11 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 22, "padding" => 27, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 1, "valueDecimals" => 5];
+		$res11 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 13, "padding" => 48, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 0, "valueDecimals" => 77];
 		$this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with value decimals");
 
 		$obj->setValuePrefix("5fde1c8b25eb2ea19ff8377e62564818");
 
-		$res12 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 22, "padding" => 27, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 1, "valueDecimals" => 5, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818"];
+		$res12 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 13, "padding" => 48, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 0, "valueDecimals" => 77, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818"];
 		$this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with value prefix");
 
 		$obj->setValueSuffix("bf995908ddff004471c953d8062bd1db");
 
-		$res13 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 22, "padding" => 27, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 1, "valueDecimals" => 5, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818", "valueSuffix" => "bf995908ddff004471c953d8062bd1db"];
+		$res13 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 13, "padding" => 48, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 0, "valueDecimals" => 77, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818", "valueSuffix" => "bf995908ddff004471c953d8062bd1db"];
 		$this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with value suffix");
 
 		$obj->setXDateFormat("e24debfa0bc8408e1dda05cbd537a072");
 
-		$res14 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 22, "padding" => 27, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 1, "valueDecimals" => 5, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818", "valueSuffix" => "bf995908ddff004471c953d8062bd1db", "xDateFormat" => "e24debfa0bc8408e1dda05cbd537a072"];
+		$res14 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 13, "padding" => 48, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 0, "valueDecimals" => 77, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818", "valueSuffix" => "bf995908ddff004471c953d8062bd1db", "xDateFormat" => "e24debfa0bc8408e1dda05cbd537a072"];
 		$this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with x date format");
 	}
 

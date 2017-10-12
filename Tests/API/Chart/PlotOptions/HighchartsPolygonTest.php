@@ -113,6 +113,27 @@ final class HighchartsPolygonTest extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
+	 * Test the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon(false);
+
+		$obj->newDataLabels();
+		$obj->newEvents();
+		$obj->newMarker();
+		$obj->newPoint();
+		$obj->newStates();
+
+		$obj->clear();
+
+		$res = ["dataLabels" => [], "events" => [], "marker" => [], "point" => [], "states" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
+
+	/**
 	 * Test the jsonSerialize() method.
 	 *
 	 * @return void
@@ -198,194 +219,194 @@ final class HighchartsPolygonTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPolygon(true);
 
-		$obj->setAllowPointSelect(0);
+		$obj->setAllowPointSelect(1);
 
-		$res1 = ["allowPointSelect" => 0];
+		$res1 = ["allowPointSelect" => 1];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with allow point select");
 
 		$obj->setAnimation(1);
 
-		$res2 = ["allowPointSelect" => 0, "animation" => 1];
+		$res2 = ["allowPointSelect" => 1, "animation" => 1];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with animation");
 
-		$obj->setAnimationLimit(34);
+		$obj->setAnimationLimit(97);
 
-		$res3 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34];
+		$res3 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with animation limit");
 
 		$obj->setClassName("6f66e878c62db60568a3487869695820");
 
-		$res4 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820"];
+		$res4 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820"];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with class name");
 
 		$obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
-		$res5 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
+		$res5 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with color");
 
-		$obj->setColorIndex(75);
+		$obj->setColorIndex(11);
 
-		$res6 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75];
+		$res6 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11];
 		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with color index");
 
-		$obj->setCropThreshold(83);
+		$obj->setCropThreshold(42);
 
-		$res7 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83];
+		$res7 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with crop threshold");
 
 		$obj->setCursor("crosshair");
 
-		$res8 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair"];
+		$res8 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair"];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with cursor");
 
 		$obj->setDashStyle("LongDashDotDot");
 
-		$res9 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot"];
+		$res9 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot"];
 		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with dash style");
 
 		$obj->setDataLabels(new \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsDataLabels());
 
-		$res10 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => []];
+		$res10 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => []];
 		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with data labels");
 
 		$obj->setDescription("67daf92c833c41c95db874e18fcb2786");
 
-		$res11 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786"];
+		$res11 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786"];
 		$this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with description");
 
-		$obj->setEnableMouseTracking(1);
+		$obj->setEnableMouseTracking(0);
 
-		$res12 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1];
+		$res12 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0];
 		$this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with enable mouse tracking");
 
 		$obj->setEvents(new \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsEvents());
 
-		$res13 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => []];
+		$res13 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => []];
 		$this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with events");
 
-		$obj->setExposeElementToA11y(0);
+		$obj->setExposeElementToA11y(1);
 
-		$res14 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0];
+		$res14 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1];
 		$this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with expose element to a11y");
 
 		$obj->setFindNearestPointBy("xy");
 
-		$res15 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy"];
+		$res15 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy"];
 		$this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with find nearest point by");
 
-		$obj->setGetExtremesFromAll(0);
+		$obj->setGetExtremesFromAll(1);
 
-		$res16 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0];
+		$res16 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1];
 		$this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with get extremes from all");
 
 		$obj->setKeys(["keys" => "14f802e1fba977727845e8872c1743a7"]);
 
-		$res17 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"]];
+		$res17 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"]];
 		$this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with keys");
 
-		$obj->setLineWidth(39);
+		$obj->setLineWidth(94);
 
-		$res18 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39];
+		$res18 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94];
 		$this->assertEquals($res18, $obj->toArray(), "The method toArray() does not return the expected array with line width");
 
 		$obj->setLinkedTo("914fab47afc86331ec62837807a29419");
 
-		$res19 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419"];
+		$res19 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419"];
 		$this->assertEquals($res19, $obj->toArray(), "The method toArray() does not return the expected array with linked to");
 
 		$obj->setMarker(new \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsMarker());
 
-		$res20 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => []];
+		$res20 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => []];
 		$this->assertEquals($res20, $obj->toArray(), "The method toArray() does not return the expected array with marker");
 
 		$obj->setNegativeColor("52fe4d3a854b01e25193b4f35fc2040e");
 
-		$res21 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e"];
+		$res21 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e"];
 		$this->assertEquals($res21, $obj->toArray(), "The method toArray() does not return the expected array with negative color");
 
 		$obj->setPoint(new \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsPoint());
 
-		$res22 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => []];
+		$res22 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => []];
 		$this->assertEquals($res22, $obj->toArray(), "The method toArray() does not return the expected array with point");
 
 		$obj->setPointDescriptionFormatter("b5fd0c15b3ca81f726e2c7b93907ba36");
 
-		$res23 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36"];
+		$res23 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36"];
 		$this->assertEquals($res23, $obj->toArray(), "The method toArray() does not return the expected array with point description formatter");
 
-		$obj->setPointInterval(80);
+		$obj->setPointInterval(23);
 
-		$res24 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80];
+		$res24 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23];
 		$this->assertEquals($res24, $obj->toArray(), "The method toArray() does not return the expected array with point interval");
 
 		$obj->setPointIntervalUnit("year");
 
-		$res25 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80, "pointIntervalUnit" => "year"];
+		$res25 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23, "pointIntervalUnit" => "year"];
 		$this->assertEquals($res25, $obj->toArray(), "The method toArray() does not return the expected array with point interval unit");
 
-		$obj->setPointStart(15);
+		$obj->setPointStart(38);
 
-		$res26 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80, "pointIntervalUnit" => "year", "pointStart" => 15];
+		$res26 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23, "pointIntervalUnit" => "year", "pointStart" => 38];
 		$this->assertEquals($res26, $obj->toArray(), "The method toArray() does not return the expected array with point start");
 
-		$obj->setSelected(0);
+		$obj->setSelected(1);
 
-		$res27 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80, "pointIntervalUnit" => "year", "pointStart" => 15, "selected" => 0];
+		$res27 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23, "pointIntervalUnit" => "year", "pointStart" => 38, "selected" => 1];
 		$this->assertEquals($res27, $obj->toArray(), "The method toArray() does not return the expected array with selected");
 
-		$obj->setShadow(1);
+		$obj->setShadow(0);
 
-		$res28 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80, "pointIntervalUnit" => "year", "pointStart" => 15, "selected" => 0, "shadow" => 1];
+		$res28 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23, "pointIntervalUnit" => "year", "pointStart" => 38, "selected" => 1, "shadow" => 0];
 		$this->assertEquals($res28, $obj->toArray(), "The method toArray() does not return the expected array with shadow");
 
 		$obj->setShowCheckbox(0);
 
-		$res29 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80, "pointIntervalUnit" => "year", "pointStart" => 15, "selected" => 0, "shadow" => 1, "showCheckbox" => 0];
+		$res29 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23, "pointIntervalUnit" => "year", "pointStart" => 38, "selected" => 1, "shadow" => 0, "showCheckbox" => 0];
 		$this->assertEquals($res29, $obj->toArray(), "The method toArray() does not return the expected array with show checkbox");
 
 		$obj->setShowInLegend(1);
 
-		$res30 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80, "pointIntervalUnit" => "year", "pointStart" => 15, "selected" => 0, "shadow" => 1, "showCheckbox" => 0, "showInLegend" => 1];
+		$res30 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23, "pointIntervalUnit" => "year", "pointStart" => 38, "selected" => 1, "shadow" => 0, "showCheckbox" => 0, "showInLegend" => 1];
 		$this->assertEquals($res30, $obj->toArray(), "The method toArray() does not return the expected array with show in legend");
 
-		$obj->setSkipKeyboardNavigation(0);
+		$obj->setSkipKeyboardNavigation(1);
 
-		$res31 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80, "pointIntervalUnit" => "year", "pointStart" => 15, "selected" => 0, "shadow" => 1, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 0];
+		$res31 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23, "pointIntervalUnit" => "year", "pointStart" => 38, "selected" => 1, "shadow" => 0, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 1];
 		$this->assertEquals($res31, $obj->toArray(), "The method toArray() does not return the expected array with skip keyboard navigation");
 
 		$obj->setStates(new \WBW\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsStates());
 
-		$res32 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80, "pointIntervalUnit" => "year", "pointStart" => 15, "selected" => 0, "shadow" => 1, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 0, "states" => []];
+		$res32 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23, "pointIntervalUnit" => "year", "pointStart" => 38, "selected" => 1, "shadow" => 0, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 1, "states" => []];
 		$this->assertEquals($res32, $obj->toArray(), "The method toArray() does not return the expected array with states");
 
 		$obj->setStickyTracking(1);
 
-		$res33 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80, "pointIntervalUnit" => "year", "pointStart" => 15, "selected" => 0, "shadow" => 1, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 0, "states" => [], "stickyTracking" => 1];
+		$res33 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23, "pointIntervalUnit" => "year", "pointStart" => 38, "selected" => 1, "shadow" => 0, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 1, "states" => [], "stickyTracking" => 1];
 		$this->assertEquals($res33, $obj->toArray(), "The method toArray() does not return the expected array with sticky tracking");
 
 		$obj->setTooltip(["tooltip" => "ddbfc1b6aa0ad4d79c5dac7aa3b44888"]);
 
-		$res34 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80, "pointIntervalUnit" => "year", "pointStart" => 15, "selected" => 0, "shadow" => 1, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 0, "states" => [], "stickyTracking" => 1, "tooltip" => ["tooltip" => "ddbfc1b6aa0ad4d79c5dac7aa3b44888"]];
+		$res34 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23, "pointIntervalUnit" => "year", "pointStart" => 38, "selected" => 1, "shadow" => 0, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 1, "states" => [], "stickyTracking" => 1, "tooltip" => ["tooltip" => "ddbfc1b6aa0ad4d79c5dac7aa3b44888"]];
 		$this->assertEquals($res34, $obj->toArray(), "The method toArray() does not return the expected array with tooltip");
 
-		$obj->setTurboThreshold(62);
+		$obj->setTurboThreshold(89);
 
-		$res35 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80, "pointIntervalUnit" => "year", "pointStart" => 15, "selected" => 0, "shadow" => 1, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 0, "states" => [], "stickyTracking" => 1, "tooltip" => ["tooltip" => "ddbfc1b6aa0ad4d79c5dac7aa3b44888"], "turboThreshold" => 62];
+		$res35 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23, "pointIntervalUnit" => "year", "pointStart" => 38, "selected" => 1, "shadow" => 0, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 1, "states" => [], "stickyTracking" => 1, "tooltip" => ["tooltip" => "ddbfc1b6aa0ad4d79c5dac7aa3b44888"], "turboThreshold" => 89];
 		$this->assertEquals($res35, $obj->toArray(), "The method toArray() does not return the expected array with turbo threshold");
 
-		$obj->setVisible(0);
+		$obj->setVisible(1);
 
-		$res36 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80, "pointIntervalUnit" => "year", "pointStart" => 15, "selected" => 0, "shadow" => 1, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 0, "states" => [], "stickyTracking" => 1, "tooltip" => ["tooltip" => "ddbfc1b6aa0ad4d79c5dac7aa3b44888"], "turboThreshold" => 62, "visible" => 0];
+		$res36 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23, "pointIntervalUnit" => "year", "pointStart" => 38, "selected" => 1, "shadow" => 0, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 1, "states" => [], "stickyTracking" => 1, "tooltip" => ["tooltip" => "ddbfc1b6aa0ad4d79c5dac7aa3b44888"], "turboThreshold" => 89, "visible" => 1];
 		$this->assertEquals($res36, $obj->toArray(), "The method toArray() does not return the expected array with visible");
 
 		$obj->setZoneAxis("88421adabea658556aa3ab6c6181afad");
 
-		$res37 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80, "pointIntervalUnit" => "year", "pointStart" => 15, "selected" => 0, "shadow" => 1, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 0, "states" => [], "stickyTracking" => 1, "tooltip" => ["tooltip" => "ddbfc1b6aa0ad4d79c5dac7aa3b44888"], "turboThreshold" => 62, "visible" => 0, "zoneAxis" => "88421adabea658556aa3ab6c6181afad"];
+		$res37 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23, "pointIntervalUnit" => "year", "pointStart" => 38, "selected" => 1, "shadow" => 0, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 1, "states" => [], "stickyTracking" => 1, "tooltip" => ["tooltip" => "ddbfc1b6aa0ad4d79c5dac7aa3b44888"], "turboThreshold" => 89, "visible" => 1, "zoneAxis" => "88421adabea658556aa3ab6c6181afad"];
 		$this->assertEquals($res37, $obj->toArray(), "The method toArray() does not return the expected array with zone axis");
 
 		$obj->setZones(["zones" => "26f94136f5db8afd4e9df1e512f7fdc5"]);
 
-		$res38 = ["allowPointSelect" => 0, "animation" => 1, "animationLimit" => 34, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 75, "cropThreshold" => 83, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 39, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 80, "pointIntervalUnit" => "year", "pointStart" => 15, "selected" => 0, "shadow" => 1, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 0, "states" => [], "stickyTracking" => 1, "tooltip" => ["tooltip" => "ddbfc1b6aa0ad4d79c5dac7aa3b44888"], "turboThreshold" => 62, "visible" => 0, "zoneAxis" => "88421adabea658556aa3ab6c6181afad", "zones" => ["zones" => "26f94136f5db8afd4e9df1e512f7fdc5"]];
+		$res38 = ["allowPointSelect" => 1, "animation" => 1, "animationLimit" => 97, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 11, "cropThreshold" => 42, "cursor" => "crosshair", "dashStyle" => "LongDashDotDot", "dataLabels" => [], "description" => "67daf92c833c41c95db874e18fcb2786", "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 1, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "lineWidth" => 94, "linkedTo" => "914fab47afc86331ec62837807a29419", "marker" => [], "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 23, "pointIntervalUnit" => "year", "pointStart" => 38, "selected" => 1, "shadow" => 0, "showCheckbox" => 0, "showInLegend" => 1, "skipKeyboardNavigation" => 1, "states" => [], "stickyTracking" => 1, "tooltip" => ["tooltip" => "ddbfc1b6aa0ad4d79c5dac7aa3b44888"], "turboThreshold" => 89, "visible" => 1, "zoneAxis" => "88421adabea658556aa3ab6c6181afad", "zones" => ["zones" => "26f94136f5db8afd4e9df1e512f7fdc5"]];
 		$this->assertEquals($res38, $obj->toArray(), "The method toArray() does not return the expected array with zones");
 	}
 
