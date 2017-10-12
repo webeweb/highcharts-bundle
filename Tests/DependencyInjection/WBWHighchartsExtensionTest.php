@@ -55,7 +55,7 @@ final class WBWHighchartsExtensionTest extends PHPUnit_Framework_TestCase {
  * @version 5.0.14
  * @final
  */
-final class Kernel {
+final class KernelMock {
 
 	public function locateResource($resource) {
 		return "";
