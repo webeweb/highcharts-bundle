@@ -28,6 +28,16 @@ use WBW\HighchartsBundle\Twig\Extension\HighchartsTwigExtension;
 final class WBWHighchartsExtensionTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Locate a resource.
+	 *
+	 * @param string $resource The resource.
+	 * @return string Returns a resource path.
+	 */
+	public function locateResource($resource) {
+		return "";
+	}
+
+	/**
 	 * Test the load() method.
 	 *
 	 * @return void
@@ -36,7 +46,7 @@ final class WBWHighchartsExtensionTest extends PHPUnit_Framework_TestCase {
 
 		// We set a container builder with only the necessary.
 		$container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
-		$container->set("kernel", new KernelMock());
+		$container->set("kernel", $this);
 
 		$obj = new WBWHighchartsExtension();
 
