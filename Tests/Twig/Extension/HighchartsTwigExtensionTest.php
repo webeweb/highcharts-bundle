@@ -13,8 +13,8 @@ namespace WBW\HighchartsBundle\Tests\Twig\Extension;
 
 use Exception;
 use PHPUnit_Framework_TestCase;
-use Twig_Function;
 use Twig_Node;
+use Twig_SimpleFunction;
 use WBW\HighchartsBundle\API\HighchartsChart;
 use WBW\HighchartsBundle\API\HighchartsOptions;
 use WBW\HighchartsBundle\Exception\HighchartsFileNotFoundException;
@@ -41,17 +41,17 @@ final class HighchartsTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$this->assertCount(3, $obj->getFunctions(), "The method getFunctions() does not return the expected count");
 
-		$this->assertInstanceOf(Twig_Function::class, $obj->getFunctions()[0], "The method getFunctions() does not return the expected object on item 0");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[0], "The method getFunctions() does not return the expected object on item 0");
 		$this->assertEquals("highchartsChart", $obj->getFunctions()[0]->getName(), "The method getName() does not return the expected name on item 0");
 		$this->assertEquals([$obj, "highchartsChartFunction"], $obj->getFunctions()[0]->getCallable(), "The method getCallable() does not return the expected callable on item 0");
 		$this->assertEquals(["html"], $obj->getFunctions()[0]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 0");
 
-		$this->assertInstanceOf(Twig_Function::class, $obj->getFunctions()[1], "The method getFunctions() does not return the expected object on item 1");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[1], "The method getFunctions() does not return the expected object on item 1");
 		$this->assertEquals("highchartsScript", $obj->getFunctions()[1]->getName(), "The method getName() does not return the expected name on item 1");
 		$this->assertEquals([$obj, "highchartsScriptFunction"], $obj->getFunctions()[1]->getCallable(), "The method getCallable() does not return the expected callable on item 1");
 		$this->assertEquals(["html"], $obj->getFunctions()[1]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 1");
 
-		$this->assertInstanceOf(Twig_Function::class, $obj->getFunctions()[2], "The method getFunctions() does not return the expected object on item 2");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[2], "The method getFunctions() does not return the expected object on item 2");
 		$this->assertEquals("highchartsSetOptions", $obj->getFunctions()[2]->getName(), "The method getName() does not return the expected name on item 2");
 		$this->assertEquals([$obj, "highchartsSetOptionsFunction"], $obj->getFunctions()[2]->getCallable(), "The method getCallable() does not return the expected callable on item 2");
 		$this->assertEquals(["html"], $obj->getFunctions()[2]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 2");
