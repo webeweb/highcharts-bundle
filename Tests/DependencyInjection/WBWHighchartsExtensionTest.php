@@ -46,19 +46,3 @@ final class WBWHighchartsExtensionTest extends PHPUnit_Framework_TestCase {
 	}
 
 }
-
-/**
- * Kernel mock.
- *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\DependencyInjection
- * @version 5.0.14
- * @final
- */
-final class KernelMock {
-
-	public function locateResource($resource) {
-		return "";
-	}
-
-}
