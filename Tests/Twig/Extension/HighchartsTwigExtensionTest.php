@@ -13,6 +13,8 @@ namespace WBW\HighchartsBundle\Tests\Twig\Extension;
 
 use Exception;
 use PHPUnit_Framework_TestCase;
+use Twig_Function;
+use Twig_Node;
 use WBW\HighchartsBundle\API\HighchartsChart;
 use WBW\HighchartsBundle\API\HighchartsOptions;
 use WBW\HighchartsBundle\Exception\HighchartsFileNotFoundException;
@@ -29,21 +31,57 @@ use WBW\HighchartsBundle\Twig\Extension\HighchartsTwigExtension;
 final class HighchartsTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Tests the highchartsChartFunction() method.
+	 * Tests the getFunctions() method.
+	 *
+	 * @return void
 	 */
-	public function testHighchartsChartFunction() {
+	public function testGetFunctions() {
 
 		$obj = new HighchartsTwigExtension(getcwd(), "");
+
+		$this->assertCount(3, $obj->getFunctions(), "The method getFunctions() does not return the expected count");
+
+		$this->assertInstanceOf(Twig_Function::class, $obj->getFunctions()[0], "The method getFunctions() does not return the expected object on item 0");
+		$this->assertEquals("highchartsChart", $obj->getFunctions()[0]->getName(), "The method getName() does not return the expected name on item 0");
+		$this->assertEquals([$obj, "highchartsChartFunction"], $obj->getFunctions()[0]->getCallable(), "The method getCallable() does not return the expected callable on item 0");
+		$this->assertEquals(["html"], $obj->getFunctions()[0]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 0");
+
+		$this->assertInstanceOf(Twig_Function::class, $obj->getFunctions()[1], "The method getFunctions() does not return the expected object on item 1");
+		$this->assertEquals("highchartsScript", $obj->getFunctions()[1]->getName(), "The method getName() does not return the expected name on item 1");
+		$this->assertEquals([$obj, "highchartsScriptFunction"], $obj->getFunctions()[1]->getCallable(), "The method getCallable() does not return the expected callable on item 1");
+		$this->assertEquals(["html"], $obj->getFunctions()[1]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 1");
+
+		$this->assertInstanceOf(Twig_Function::class, $obj->getFunctions()[2], "The method getFunctions() does not return the expected object on item 2");
+		$this->assertEquals("highchartsSetOptions", $obj->getFunctions()[2]->getName(), "The method getName() does not return the expected name on item 2");
+		$this->assertEquals([$obj, "highchartsSetOptionsFunction"], $obj->getFunctions()[2]->getCallable(), "The method getCallable() does not return the expected callable on item 2");
+		$this->assertEquals(["html"], $obj->getFunctions()[2]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 2");
+	}
+
+	/**
+	 * Tests the highchartsChartFunction() method.
+	 *
+	 * @return void
+	 */
+	public function testHighchartsChartFunction() {
 
 		$cht = new HighchartsChart();
 		$cht->newTitle()->setText("title");
 
-		$res = "<script type=\"text/javascript\">\nHighcharts.chart('selector', {\"title\":{\"text\":\"title\"}});\n</script>";
-		$this->assertEquals($res, $obj->highchartsChartFunction("selector", $cht), "The method highchartsChartFunction() does not return the expected string");
+		$obj1 = new HighchartsTwigExtension(getcwd(), "");
+
+		$res1 = "<script type=\"text/javascript\">\nHighcharts.chart('selector', {\"title\":{\"text\":\"title\"}});\n</script>";
+		$this->assertEquals($res1, $obj1->highchartsChartFunction("selector", $cht), "The method highchartsChartFunction() does not return the expected string in prod");
+
+		$obj2 = new HighchartsTwigExtension(getcwd(), "dev");
+
+		$res2 = "<script type=\"text/javascript\">\nHighcharts.chart('selector', {\n    \"title\": {\n        \"text\": \"title\"\n    }\n});\n</script>";
+		$this->assertEquals($res2, $obj2->highchartsChartFunction("selector", $cht), "The method highchartsChartFunction() does not return the expected string in dev");
 	}
 
 	/**
 	 * Tests the highchartsScriptFunction() method.
+	 *
+	 * @return void
 	 */
 	public function testHighchartsScriptFunction() {
 
@@ -74,17 +112,24 @@ final class HighchartsTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 	/**
 	 * Tests the highchartsSetOptionsFunction() method.
+	 *
+	 * @return void
 	 */
 	public function testHighchartsSetOptionsFunction() {
-
-		$obj = new HighchartsTwigExtension(getcwd(), "");
 
 		$opt = new HighchartsOptions();
 		$opt->newGlobal();
 		$opt->newLang();
 
-		$res = "<script type=\"text/javascript\">\nHighcharts.setOptions({\"global\":[],\"lang\":[]});\n</script>";
-		$this->assertEquals($res, $obj->highchartsSetOptionsFunction($opt), "The method highchartsSetOptionsFunction() does not return the expected string");
+		$obj1 = new HighchartsTwigExtension(getcwd(), "");
+
+		$res1 = "<script type=\"text/javascript\">\nHighcharts.setOptions({\"global\":[],\"lang\":[]});\n</script>";
+		$this->assertEquals($res1, $obj1->highchartsSetOptionsFunction($opt), "The method highchartsSetOptionsFunction() does not return the expected string in prod");
+
+		$obj2 = new HighchartsTwigExtension(getcwd(), "dev");
+
+		$res2 = "<script type=\"text/javascript\">\nHighcharts.setOptions({\n    \"global\": [],\n    \"lang\": []\n});\n</script>";
+		$this->assertEquals($res2, $obj2->highchartsSetOptionsFunction($opt), "The method highchartsSetOptionsFunction() does not return the expected string in dev");
 	}
 
 }
