@@ -23,16 +23,37 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Test the clear() method.
+	 * Test the __construct() method.
 	 *
 	 * @return void
 	 */
-	public function testClear() {
+	public function testConstructor() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsBreaks(false);
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsBreaks(true);
 
-		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals(null, $obj1->getBreakSize(), "The method getBreakSize() does not return the expected value");
+		$this->assertEquals(null, $obj1->getFrom(), "The method getFrom() does not return the expected value");
+		$this->assertEquals(null, $obj1->getRepeat(), "The method getRepeat() does not return the expected value");
+		$this->assertEquals(null, $obj1->getTo(), "The method getTo() does not return the expected value");
+
+		$obj0 = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsBreaks(false);
+
+		$this->assertEquals(0, $obj0->getBreakSize(), "The method getBreakSize() does not return the expected value");
+		$this->assertEquals(null, $obj0->getFrom(), "The method getFrom() does not return the expected value");
+		$this->assertEquals(0, $obj0->getRepeat(), "The method getRepeat() does not return the expected value");
+		$this->assertEquals(null, $obj0->getTo(), "The method getTo() does not return the expected value");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsBreaks(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -42,20 +63,27 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsBreaks(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsBreaks(true);
 
-		$res = ["breakSize" => 0, "repeat" => 0];
-		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+		$obj->setBreakSize(99);
 
-		$obj->setFrom(56);
+		$res1 = ["breakSize" => 99];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with break size");
 
-		$res1 = ["breakSize" => 0, "repeat" => 0, "from" => 56];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with from");
+		$obj->setFrom(30);
 
-		$obj->setTo(36);
+		$res2 = ["breakSize" => 99, "from" => 30];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with from");
 
-		$res2 = ["breakSize" => 0, "repeat" => 0, "from" => 56, "to" => 36];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with to");
+		$obj->setRepeat(82);
+
+		$res3 = ["breakSize" => 99, "from" => 30, "repeat" => 82];
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with repeat");
+
+		$obj->setTo(85);
+
+		$res4 = ["breakSize" => 99, "from" => 30, "repeat" => 82, "to" => 85];
+		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with to");
 	}
 
 }

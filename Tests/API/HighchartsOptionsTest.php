@@ -23,6 +23,19 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the __construct() method.
+	 *
+	 * @return void
+	 */
+	public function testConstructor() {
+
+		$obj1 = new \WBW\HighchartsBundle\API\HighchartsOptions(true);
+
+		$this->assertEquals(null, $obj1->getGlobal(), "The method getGlobal() does not return the expected value");
+		$this->assertEquals(null, $obj1->getLang(), "The method getLang() does not return the expected value");
+	}
+
+	/**
 	 * Test the clear() method.
 	 *
 	 * @return void
@@ -31,8 +44,25 @@ final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\HighchartsBundle\API\HighchartsOptions(false);
 
+		$obj->newGlobal();
+		$obj->newLang();
+
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+
+		$res = ["global" => [], "lang" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\HighchartsOptions(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -45,7 +75,7 @@ final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\HighchartsOptions(false);
 
 		$res = $obj->newGlobal();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Options\HighchartsGlobal::class, $res, "The method newGlobal() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Options\HighchartsGlobal::class, $res, "The method newGlobal() does not return the expected object");
 	}
 
 	/**
@@ -58,7 +88,7 @@ final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\HighchartsOptions(false);
 
 		$res = $obj->newLang();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Options\HighchartsLang::class, $res, "The method newLang() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Options\HighchartsLang::class, $res, "The method newLang() does not return the expected object");
 	}
 
 	/**
@@ -68,14 +98,14 @@ final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\HighchartsOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\HighchartsOptions(true);
 
-		$obj->newGlobal();
+		$obj->setGlobal(new \WBW\HighchartsBundle\API\Options\HighchartsGlobal());
 
 		$res1 = ["global" => []];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with global");
 
-		$obj->newLang();
+		$obj->setLang(new \WBW\HighchartsBundle\API\Options\HighchartsLang());
 
 		$res2 = ["global" => [], "lang" => []];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with lang");

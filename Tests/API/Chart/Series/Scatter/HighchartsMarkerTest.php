@@ -23,6 +23,38 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the __construct() method.
+	 *
+	 * @return void
+	 */
+	public function testConstructor() {
+
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\Series\Scatter\HighchartsMarker(true);
+
+		$this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
+		$this->assertEquals(null, $obj1->getFillColor(), "The method getFillColor() does not return the expected value");
+		$this->assertEquals(null, $obj1->getHeight(), "The method getHeight() does not return the expected value");
+		$this->assertEquals(null, $obj1->getLineColor(), "The method getLineColor() does not return the expected value");
+		$this->assertEquals(null, $obj1->getLineWidth(), "The method getLineWidth() does not return the expected value");
+		$this->assertEquals(null, $obj1->getRadius(), "The method getRadius() does not return the expected value");
+		$this->assertEquals(null, $obj1->getStates(), "The method getStates() does not return the expected value");
+		$this->assertEquals(null, $obj1->getSymbol(), "The method getSymbol() does not return the expected value");
+		$this->assertEquals(null, $obj1->getWidth(), "The method getWidth() does not return the expected value");
+
+		$obj0 = new \WBW\HighchartsBundle\API\Chart\Series\Scatter\HighchartsMarker(false);
+
+		$this->assertEquals(null, $obj0->getEnabled(), "The method getEnabled() does not return the expected value");
+		$this->assertEquals(null, $obj0->getFillColor(), "The method getFillColor() does not return the expected value");
+		$this->assertEquals(null, $obj0->getHeight(), "The method getHeight() does not return the expected value");
+		$this->assertEquals("#ffffff", $obj0->getLineColor(), "The method getLineColor() does not return the expected value");
+		$this->assertEquals(0, $obj0->getLineWidth(), "The method getLineWidth() does not return the expected value");
+		$this->assertEquals(4, $obj0->getRadius(), "The method getRadius() does not return the expected value");
+		$this->assertEquals(null, $obj0->getStates(), "The method getStates() does not return the expected value");
+		$this->assertEquals(null, $obj0->getSymbol(), "The method getSymbol() does not return the expected value");
+		$this->assertEquals(null, $obj0->getWidth(), "The method getWidth() does not return the expected value");
+	}
+
+	/**
 	 * Test the clear() method.
 	 *
 	 * @return void
@@ -31,8 +63,24 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Scatter\HighchartsMarker(false);
 
+		$obj->newStates();
+
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+
+		$res = ["states" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Scatter\HighchartsMarker(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -45,7 +93,7 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Scatter\HighchartsMarker(false);
 
 		$res = $obj->newStates();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Series\Scatter\Marker\HighchartsStates::class, $res, "The method newStates() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Series\Scatter\Marker\HighchartsStates::class, $res, "The method newStates() does not return the expected object");
 	}
 
 	/**
@@ -55,40 +103,52 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Scatter\HighchartsMarker(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\Series\Scatter\HighchartsMarker(true);
 
-		$res = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4];
-		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+		$obj->setEnabled(1);
 
-		$obj->setEnabled(0);
-
-		$res1 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 0];
+		$res1 = ["enabled" => 1];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
 		$obj->setFillColor("1fde055d3ff900e04ca08bc82066d7fd");
 
-		$res2 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
+		$res2 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-		$obj->setHeight(97);
+		$obj->setHeight(92);
 
-		$res3 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 97];
+		$res3 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 92];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with height");
 
-		$obj->newStates();
+		$obj->setLineColor("c2580eebfdbdb9fc629f50cc147c3f63");
 
-		$res4 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 97, "states" => []];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with states");
+		$res4 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 92, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
+		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with line color");
+
+		$obj->setLineWidth(23);
+
+		$res5 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 92, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 23];
+		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with line width");
+
+		$obj->setRadius(13);
+
+		$res6 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 92, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 23, "radius" => 13];
+		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with radius");
+
+		$obj->setStates(new \WBW\HighchartsBundle\API\Chart\Series\Scatter\Marker\HighchartsStates());
+
+		$res7 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 92, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 23, "radius" => 13, "states" => []];
+		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with states");
 
 		$obj->setSymbol("triangle-down");
 
-		$res5 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 97, "states" => [], "symbol" => "triangle-down"];
-		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with symbol");
+		$res8 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 92, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 23, "radius" => 13, "states" => [], "symbol" => "triangle-down"];
+		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with symbol");
 
-		$obj->setWidth(80);
+		$obj->setWidth(13);
 
-		$res6 = ["lineColor" => "#ffffff", "lineWidth" => 0, "radius" => 4, "enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 97, "states" => [], "symbol" => "triangle-down", "width" => 80];
-		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with width");
+		$res9 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 92, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 23, "radius" => 13, "states" => [], "symbol" => "triangle-down", "width" => 13];
+		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with width");
 	}
 
 }

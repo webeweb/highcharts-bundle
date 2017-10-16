@@ -1567,6 +1567,11 @@ final class HighchartsChart implements JsonSerializable {
 			$output["colorCount"] = $this->colorCount;
 		}
 
+		// Check the default series type.
+		if (!is_null($this->defaultSeriesType)) {
+			$output["defaultSeriesType"] = $this->defaultSeriesType;
+		}
+
 		// Check the description.
 		if (!is_null($this->description)) {
 			$output["description"] = $this->description;

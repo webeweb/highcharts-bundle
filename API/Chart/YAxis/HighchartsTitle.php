@@ -378,6 +378,11 @@ final class HighchartsTitle implements JsonSerializable {
 			$output["align"] = $this->align;
 		}
 
+		// Check the enabled.
+		if (!is_null($this->enabled)) {
+			$output["enabled"] = $this->enabled;
+		}
+
 		// Check the margin.
 		if (!is_null($this->margin)) {
 			$output["margin"] = $this->margin;

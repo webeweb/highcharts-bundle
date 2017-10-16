@@ -11,7 +11,6 @@
 
 namespace WBW\HighchartsBundle\Twig\Extension;
 
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Twig_Extension;
 use Twig_SimpleFunction;
 use WBW\HighchartsBundle\API\HighchartsChart;
@@ -35,11 +34,18 @@ final class HighchartsTwigExtension extends Twig_Extension {
 	const SERVICE_NAME = "webeweb.highcharts-bundle.twig.extension.highcharts";
 
 	/**
-	 * Container.
+	 * Directory.
 	 *
-	 * @var ContainerInterface
+	 * @var string
 	 */
-	private $container;
+	private $directory;
+
+	/**
+	 * Environment.
+	 *
+	 * @var string
+	 */
+	private $environment;
 
 	/**
 	 * Wrapper.
@@ -51,11 +57,13 @@ final class HighchartsTwigExtension extends Twig_Extension {
 	/**
 	 * Constructor.
 	 *
-	 * @param ContainerInterface The container interface.
+	 * @param string $directory The directory.
+	 * @param string $environment The environment.
 	 */
-	public final function __construct(ContainerInterface $container = null) {
-		$this->container = $container;
-		$this->wrapper	 = new HighchartsWrapper();
+	public final function __construct($directory, $environment) {
+		$this->directory	 = $directory;
+		$this->environment	 = $environment;
+		$this->wrapper		 = new HighchartsWrapper();
 	}
 
 	/**
@@ -77,7 +85,7 @@ final class HighchartsTwigExtension extends Twig_Extension {
 	 * @return string Returns the resources directory.
 	 */
 	private function getResourcesDirectory() {
-		return __DIR__ . "/../../Resources";
+		return $this->directory . "/Resources";
 	}
 
 	/**
@@ -124,7 +132,7 @@ final class HighchartsTwigExtension extends Twig_Extension {
 			throw new HighchartsFileNotFoundException($filename);
 		}
 
-		// Initialize the output.
+		// Return the output.
 		return "<script src=\"/bundles/wbwhighcharts/" . $filename . "\" type=\"text/javascript\"></script>";
 	}
 
@@ -158,7 +166,7 @@ final class HighchartsTwigExtension extends Twig_Extension {
 	 * @return boolean Returns true in case of success, false otherwise.
 	 */
 	private function isDevEnvironment() {
-		return !is_null($this->container) ? $this->container->get("kernel")->getEnvironment() === "dev" : false;
+		return $this->environment === "dev";
 	}
 
 }

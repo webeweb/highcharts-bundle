@@ -1366,6 +1366,11 @@ final class HighchartsLegend implements JsonSerializable {
 			$output["squareSymbol"] = $this->squareSymbol;
 		}
 
+		// Check the style.
+		if (!is_null($this->style)) {
+			$output["style"] = $this->style;
+		}
+
 		// Check the symbol height.
 		if (!is_null($this->symbolHeight)) {
 			$output["symbolHeight"] = $this->symbolHeight;

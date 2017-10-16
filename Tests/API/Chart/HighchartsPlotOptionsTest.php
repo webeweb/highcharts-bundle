@@ -23,6 +23,40 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 
 	/**
+	 * Test the __construct() method.
+	 *
+	 * @return void
+	 */
+	public function testConstructor() {
+
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(true);
+
+		$this->assertEquals(null, $obj1->getArea(), "The method getArea() does not return the expected value");
+		$this->assertEquals(null, $obj1->getArearange(), "The method getArearange() does not return the expected value");
+		$this->assertEquals(null, $obj1->getAreaspline(), "The method getAreaspline() does not return the expected value");
+		$this->assertEquals(null, $obj1->getAreasplinerange(), "The method getAreasplinerange() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBar(), "The method getBar() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBoxplot(), "The method getBoxplot() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBubble(), "The method getBubble() does not return the expected value");
+		$this->assertEquals(null, $obj1->getColumn(), "The method getColumn() does not return the expected value");
+		$this->assertEquals(null, $obj1->getColumnrange(), "The method getColumnrange() does not return the expected value");
+		$this->assertEquals(null, $obj1->getErrorbar(), "The method getErrorbar() does not return the expected value");
+		$this->assertEquals(null, $obj1->getFunnel(), "The method getFunnel() does not return the expected value");
+		$this->assertEquals(null, $obj1->getGauge(), "The method getGauge() does not return the expected value");
+		$this->assertEquals(null, $obj1->getHeatmap(), "The method getHeatmap() does not return the expected value");
+		$this->assertEquals(null, $obj1->getLine(), "The method getLine() does not return the expected value");
+		$this->assertEquals(null, $obj1->getPie(), "The method getPie() does not return the expected value");
+		$this->assertEquals(null, $obj1->getPolygon(), "The method getPolygon() does not return the expected value");
+		$this->assertEquals(null, $obj1->getPyramid(), "The method getPyramid() does not return the expected value");
+		$this->assertEquals(null, $obj1->getScatter(), "The method getScatter() does not return the expected value");
+		$this->assertEquals(null, $obj1->getSeries(), "The method getSeries() does not return the expected value");
+		$this->assertEquals(null, $obj1->getSolidgauge(), "The method getSolidgauge() does not return the expected value");
+		$this->assertEquals(null, $obj1->getSpline(), "The method getSpline() does not return the expected value");
+		$this->assertEquals(null, $obj1->getTreemap(), "The method getTreemap() does not return the expected value");
+		$this->assertEquals(null, $obj1->getWaterfall(), "The method getWaterfall() does not return the expected value");
+	}
+
+	/**
 	 * Test the clear() method.
 	 *
 	 * @return void
@@ -31,8 +65,34 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
+		$obj->newArea();
+		$obj->newArearange();
+		$obj->newAreaspline();
+		$obj->newAreasplinerange();
+		$obj->newBar();
+		$obj->newColumn();
+		$obj->newLine();
+		$obj->newPie();
+		$obj->newScatter();
+		$obj->newSeries();
+		$obj->newSpline();
+
 		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+
+		$res = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => [], "bar" => [], "column" => [], "line" => [], "pie" => [], "scatter" => [], "series" => [], "spline" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -45,7 +105,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newArea();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArea::class, $res, "The method newArea() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArea::class, $res, "The method newArea() does not return the expected object");
 	}
 
 	/**
@@ -58,7 +118,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newArearange();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange::class, $res, "The method newArearange() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange::class, $res, "The method newArearange() does not return the expected object");
 	}
 
 	/**
@@ -71,7 +131,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newAreaspline();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreaspline::class, $res, "The method newAreaspline() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreaspline::class, $res, "The method newAreaspline() does not return the expected object");
 	}
 
 	/**
@@ -84,7 +144,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newAreasplinerange();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreasplinerange::class, $res, "The method newAreasplinerange() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreasplinerange::class, $res, "The method newAreasplinerange() does not return the expected object");
 	}
 
 	/**
@@ -97,7 +157,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newBar();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBar::class, $res, "The method newBar() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBar::class, $res, "The method newBar() does not return the expected object");
 	}
 
 	/**
@@ -110,7 +170,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newColumn();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn::class, $res, "The method newColumn() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn::class, $res, "The method newColumn() does not return the expected object");
 	}
 
 	/**
@@ -123,7 +183,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newLine();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsLine::class, $res, "The method newLine() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsLine::class, $res, "The method newLine() does not return the expected object");
 	}
 
 	/**
@@ -136,7 +196,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newPie();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie::class, $res, "The method newPie() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie::class, $res, "The method newPie() does not return the expected object");
 	}
 
 	/**
@@ -149,7 +209,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newScatter();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsScatter::class, $res, "The method newScatter() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsScatter::class, $res, "The method newScatter() does not return the expected object");
 	}
 
 	/**
@@ -162,7 +222,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newSeries();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSeries::class, $res, "The method newSeries() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSeries::class, $res, "The method newSeries() does not return the expected object");
 	}
 
 	/**
@@ -175,7 +235,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
 
 		$res = $obj->newSpline();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSpline::class, $res, "The method newSpline() does not return the expected class");
+		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSpline::class, $res, "The method newSpline() does not return the expected object");
 	}
 
 	/**
@@ -185,29 +245,29 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions(true);
 
-		$obj->newArea();
+		$obj->setArea(new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArea());
 
 		$res1 = ["area" => []];
 		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with area");
 
-		$obj->newArearange();
+		$obj->setArearange(new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsArearange());
 
 		$res2 = ["area" => [], "arearange" => []];
 		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with arearange");
 
-		$obj->newAreaspline();
+		$obj->setAreaspline(new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreaspline());
 
 		$res3 = ["area" => [], "arearange" => [], "areaspline" => []];
 		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with areaspline");
 
-		$obj->newAreasplinerange();
+		$obj->setAreasplinerange(new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsAreasplinerange());
 
 		$res4 = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => []];
 		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with areasplinerange");
 
-		$obj->newBar();
+		$obj->setBar(new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsBar());
 
 		$res5 = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => [], "bar" => []];
 		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with bar");
@@ -222,7 +282,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$res7 = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => [], "bar" => [], "boxplot" => ["boxplot" => "75c65735f185835c9a02e33d5695a84e"], "bubble" => ["bubble" => "a3fa9e0b6b24b1cada4b756c0d240444"]];
 		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with bubble");
 
-		$obj->newColumn();
+		$obj->setColumn(new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsColumn());
 
 		$res8 = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => [], "bar" => [], "boxplot" => ["boxplot" => "75c65735f185835c9a02e33d5695a84e"], "bubble" => ["bubble" => "a3fa9e0b6b24b1cada4b756c0d240444"], "column" => []];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with column");
@@ -252,12 +312,12 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$res13 = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => [], "bar" => [], "boxplot" => ["boxplot" => "75c65735f185835c9a02e33d5695a84e"], "bubble" => ["bubble" => "a3fa9e0b6b24b1cada4b756c0d240444"], "column" => [], "columnrange" => ["columnrange" => "14a2c3aec90f10d7025019b3cbbff7cf"], "errorbar" => ["errorbar" => "116ed3b58f547a9f12d94e7750c71017"], "funnel" => ["funnel" => "688d02b8ffc0740fc790871148d11e8c"], "gauge" => ["gauge" => "37e1a9c3ba6042b79266687d13f3c5ff"], "heatmap" => ["heatmap" => "d922f01521180610c5e000ed93d40af2"]];
 		$this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with heatmap");
 
-		$obj->newLine();
+		$obj->setLine(new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsLine());
 
 		$res14 = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => [], "bar" => [], "boxplot" => ["boxplot" => "75c65735f185835c9a02e33d5695a84e"], "bubble" => ["bubble" => "a3fa9e0b6b24b1cada4b756c0d240444"], "column" => [], "columnrange" => ["columnrange" => "14a2c3aec90f10d7025019b3cbbff7cf"], "errorbar" => ["errorbar" => "116ed3b58f547a9f12d94e7750c71017"], "funnel" => ["funnel" => "688d02b8ffc0740fc790871148d11e8c"], "gauge" => ["gauge" => "37e1a9c3ba6042b79266687d13f3c5ff"], "heatmap" => ["heatmap" => "d922f01521180610c5e000ed93d40af2"], "line" => []];
 		$this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with line");
 
-		$obj->newPie();
+		$obj->setPie(new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie());
 
 		$res15 = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => [], "bar" => [], "boxplot" => ["boxplot" => "75c65735f185835c9a02e33d5695a84e"], "bubble" => ["bubble" => "a3fa9e0b6b24b1cada4b756c0d240444"], "column" => [], "columnrange" => ["columnrange" => "14a2c3aec90f10d7025019b3cbbff7cf"], "errorbar" => ["errorbar" => "116ed3b58f547a9f12d94e7750c71017"], "funnel" => ["funnel" => "688d02b8ffc0740fc790871148d11e8c"], "gauge" => ["gauge" => "37e1a9c3ba6042b79266687d13f3c5ff"], "heatmap" => ["heatmap" => "d922f01521180610c5e000ed93d40af2"], "line" => [], "pie" => []];
 		$this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with pie");
@@ -272,12 +332,12 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$res17 = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => [], "bar" => [], "boxplot" => ["boxplot" => "75c65735f185835c9a02e33d5695a84e"], "bubble" => ["bubble" => "a3fa9e0b6b24b1cada4b756c0d240444"], "column" => [], "columnrange" => ["columnrange" => "14a2c3aec90f10d7025019b3cbbff7cf"], "errorbar" => ["errorbar" => "116ed3b58f547a9f12d94e7750c71017"], "funnel" => ["funnel" => "688d02b8ffc0740fc790871148d11e8c"], "gauge" => ["gauge" => "37e1a9c3ba6042b79266687d13f3c5ff"], "heatmap" => ["heatmap" => "d922f01521180610c5e000ed93d40af2"], "line" => [], "pie" => [], "polygon" => ["polygon" => "e4fdf3290654756def4e6816fddce608"], "pyramid" => ["pyramid" => "437233c74e25fe505293cd2e8ecc2696"]];
 		$this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with pyramid");
 
-		$obj->newScatter();
+		$obj->setScatter(new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsScatter());
 
 		$res18 = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => [], "bar" => [], "boxplot" => ["boxplot" => "75c65735f185835c9a02e33d5695a84e"], "bubble" => ["bubble" => "a3fa9e0b6b24b1cada4b756c0d240444"], "column" => [], "columnrange" => ["columnrange" => "14a2c3aec90f10d7025019b3cbbff7cf"], "errorbar" => ["errorbar" => "116ed3b58f547a9f12d94e7750c71017"], "funnel" => ["funnel" => "688d02b8ffc0740fc790871148d11e8c"], "gauge" => ["gauge" => "37e1a9c3ba6042b79266687d13f3c5ff"], "heatmap" => ["heatmap" => "d922f01521180610c5e000ed93d40af2"], "line" => [], "pie" => [], "polygon" => ["polygon" => "e4fdf3290654756def4e6816fddce608"], "pyramid" => ["pyramid" => "437233c74e25fe505293cd2e8ecc2696"], "scatter" => []];
 		$this->assertEquals($res18, $obj->toArray(), "The method toArray() does not return the expected array with scatter");
 
-		$obj->newSeries();
+		$obj->setSeries(new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSeries());
 
 		$res19 = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => [], "bar" => [], "boxplot" => ["boxplot" => "75c65735f185835c9a02e33d5695a84e"], "bubble" => ["bubble" => "a3fa9e0b6b24b1cada4b756c0d240444"], "column" => [], "columnrange" => ["columnrange" => "14a2c3aec90f10d7025019b3cbbff7cf"], "errorbar" => ["errorbar" => "116ed3b58f547a9f12d94e7750c71017"], "funnel" => ["funnel" => "688d02b8ffc0740fc790871148d11e8c"], "gauge" => ["gauge" => "37e1a9c3ba6042b79266687d13f3c5ff"], "heatmap" => ["heatmap" => "d922f01521180610c5e000ed93d40af2"], "line" => [], "pie" => [], "polygon" => ["polygon" => "e4fdf3290654756def4e6816fddce608"], "pyramid" => ["pyramid" => "437233c74e25fe505293cd2e8ecc2696"], "scatter" => [], "series" => []];
 		$this->assertEquals($res19, $obj->toArray(), "The method toArray() does not return the expected array with series");
@@ -287,7 +347,7 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 		$res20 = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => [], "bar" => [], "boxplot" => ["boxplot" => "75c65735f185835c9a02e33d5695a84e"], "bubble" => ["bubble" => "a3fa9e0b6b24b1cada4b756c0d240444"], "column" => [], "columnrange" => ["columnrange" => "14a2c3aec90f10d7025019b3cbbff7cf"], "errorbar" => ["errorbar" => "116ed3b58f547a9f12d94e7750c71017"], "funnel" => ["funnel" => "688d02b8ffc0740fc790871148d11e8c"], "gauge" => ["gauge" => "37e1a9c3ba6042b79266687d13f3c5ff"], "heatmap" => ["heatmap" => "d922f01521180610c5e000ed93d40af2"], "line" => [], "pie" => [], "polygon" => ["polygon" => "e4fdf3290654756def4e6816fddce608"], "pyramid" => ["pyramid" => "437233c74e25fe505293cd2e8ecc2696"], "scatter" => [], "series" => [], "solidgauge" => ["solidgauge" => "2b4610ac598c4c804779328d03893529"]];
 		$this->assertEquals($res20, $obj->toArray(), "The method toArray() does not return the expected array with solidgauge");
 
-		$obj->newSpline();
+		$obj->setSpline(new \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSpline());
 
 		$res21 = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => [], "bar" => [], "boxplot" => ["boxplot" => "75c65735f185835c9a02e33d5695a84e"], "bubble" => ["bubble" => "a3fa9e0b6b24b1cada4b756c0d240444"], "column" => [], "columnrange" => ["columnrange" => "14a2c3aec90f10d7025019b3cbbff7cf"], "errorbar" => ["errorbar" => "116ed3b58f547a9f12d94e7750c71017"], "funnel" => ["funnel" => "688d02b8ffc0740fc790871148d11e8c"], "gauge" => ["gauge" => "37e1a9c3ba6042b79266687d13f3c5ff"], "heatmap" => ["heatmap" => "d922f01521180610c5e000ed93d40af2"], "line" => [], "pie" => [], "polygon" => ["polygon" => "e4fdf3290654756def4e6816fddce608"], "pyramid" => ["pyramid" => "437233c74e25fe505293cd2e8ecc2696"], "scatter" => [], "series" => [], "solidgauge" => ["solidgauge" => "2b4610ac598c4c804779328d03893529"], "spline" => []];
 		$this->assertEquals($res21, $obj->toArray(), "The method toArray() does not return the expected array with spline");

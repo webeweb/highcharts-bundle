@@ -976,6 +976,11 @@ final class HighchartsTooltip implements JsonSerializable {
 			$output["borderWidth"] = $this->borderWidth;
 		}
 
+		// Check the crosshairs.
+		if (!is_null($this->crosshairs)) {
+			$output["crosshairs"] = $this->crosshairs;
+		}
+
 		// Check the date time label formats.
 		if (!is_null($this->dateTimeLabelFormats)) {
 			$output["dateTimeLabelFormats"] = $this->dateTimeLabelFormats;

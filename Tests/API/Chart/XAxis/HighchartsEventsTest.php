@@ -23,16 +23,31 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Test the clear() method.
+	 * Test the __construct() method.
 	 *
 	 * @return void
 	 */
-	public function testClear() {
+	public function testConstructor() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents(false);
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents(true);
 
-		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals(null, $obj1->getAfterBreaks(), "The method getAfterBreaks() does not return the expected value");
+		$this->assertEquals(null, $obj1->getAfterSetExtremes(), "The method getAfterSetExtremes() does not return the expected value");
+		$this->assertEquals(null, $obj1->getPointBreak(), "The method getPointBreak() does not return the expected value");
+		$this->assertEquals(null, $obj1->getPointInBreak(), "The method getPointInBreak() does not return the expected value");
+		$this->assertEquals(null, $obj1->getSetExtremes(), "The method getSetExtremes() does not return the expected value");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -42,7 +57,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents(true);
 
 		$obj->setAfterBreaks("2aee0ecaa51b86ca6fb2f52e53055d9c");
 

@@ -23,16 +23,34 @@ use PHPUnit_Framework_TestCase;
 final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Test the clear() method.
+	 * Test the __construct() method.
 	 *
 	 * @return void
 	 */
-	public function testClear() {
+	public function testConstructor() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Areasplinerange\HighchartsEvents(false);
+		$obj1 = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Areasplinerange\HighchartsEvents(true);
 
-		$obj->clear();
-		$this->assertEquals([], $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals(null, $obj1->getAfterAnimate(), "The method getAfterAnimate() does not return the expected value");
+		$this->assertEquals(null, $obj1->getCheckboxClick(), "The method getCheckboxClick() does not return the expected value");
+		$this->assertEquals(null, $obj1->getClick(), "The method getClick() does not return the expected value");
+		$this->assertEquals(null, $obj1->getHide(), "The method getHide() does not return the expected value");
+		$this->assertEquals(null, $obj1->getLegendItemClick(), "The method getLegendItemClick() does not return the expected value");
+		$this->assertEquals(null, $obj1->getMouseOut(), "The method getMouseOut() does not return the expected value");
+		$this->assertEquals(null, $obj1->getMouseOver(), "The method getMouseOver() does not return the expected value");
+		$this->assertEquals(null, $obj1->getShow(), "The method getShow() does not return the expected value");
+	}
+
+	/**
+	 * Test the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
+
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Areasplinerange\HighchartsEvents(true);
+
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
 	}
 
 	/**
@@ -42,7 +60,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Areasplinerange\HighchartsEvents(false);
+		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Areasplinerange\HighchartsEvents(true);
 
 		$obj->setAfterAnimate("ebdf113b6f659f6f3ea3c6b93e658235");
 

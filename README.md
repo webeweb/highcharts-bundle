@@ -1,7 +1,7 @@
 WBWHighchartsBundle
 ====================
 
-[![Build Status](https://travis-ci.org/webeweb/WBWHighchartsBundle.svg?branch=master)](https://travis-ci.org/webeweb/WBWHighchartsBundle) [![Coverage Status](https://coveralls.io/repos/github/webeweb/WBWHighchartsBundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/WBWHighchartsBundle?branch=master) [![Latest Stable Version](https://poser.pugx.org/webeweb/highcharts-bundle/v/stable)](https://packagist.org/packages/webeweb/highcharts-bundle) [![Latest Unstable Version](https://poser.pugx.org/webeweb/highcharts-bundle/v/unstable)](https://packagist.org/packages/webeweb/highcharts-bundle) [![License](https://poser.pugx.org/webeweb/highcharts-bundle/license)](https://packagist.org/packages/webeweb/highcharts-bundle)
+[![Build Status](https://travis-ci.org/webeweb/WBWHighchartsBundle.svg?branch=master)](https://travis-ci.org/webeweb/WBWHighchartsBundle) [![Coverage Status](https://coveralls.io/repos/github/webeweb/WBWHighchartsBundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/WBWHighchartsBundle?branch=master) [![Latest Stable Version](https://poser.pugx.org/webeweb/highcharts-bundle/v/stable)](https://packagist.org/packages/webeweb/highcharts-bundle) [![Latest Unstable Version](https://poser.pugx.org/webeweb/highcharts-bundle/v/unstable)](https://packagist.org/packages/webeweb/highcharts-bundle) [![License](https://poser.pugx.org/webeweb/highcharts-bundle/license)](https://packagist.org/packages/webeweb/highcharts-bundle) [![composer.lock](https://poser.pugx.org/webeweb/highcharts-bundle/composerlock)](https://packagist.org/packages/webeweb/highcharts-bundle) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/682376ac-1bed-4e41-90f0-90a8a4b20f75/mini.png)](https://insight.sensiolabs.com/projects/682376ac-1bed-4e41-90f0-90a8a4b20f75)
 
 `WBWHighchartsBundle` eases the use of highcharts to display rich graphs and charts in your Symfony2 application by providing Twig extensions and PHP objects to do the heavy lifting. The bundle include the excellent JS library [Highcharts](https://www.highcharts.com).
 
@@ -16,7 +16,7 @@ Edit `symfony/composer.json` file to add this bundle package:
 ```yml
 "require": {
     ...
-    "webeweb/highcharts-bundle": "1.0"
+    "webeweb/highcharts-bundle": "1.1"
 },
 ```
 
