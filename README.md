@@ -53,7 +53,7 @@ In your controller ...
 	$data = [["name" => "Female", "y" => 25 ], ["name" => "Male", "y" => 25], ["name" => "Unknown", "y" => 50]];
 
 	// Initialize the series.
-	$series = [["colorByPoint" => true, "data" => $data, "name" => "your_custom_name"]];
+	$series = [["colorByPoint" => true, "data" => $data, "name" => "Gender distribution"]];
 
 	// Initialize the chart.
 	$chart = new HighchartsChart;
@@ -64,7 +64,7 @@ In your controller ...
 		->setShowInLegend(true)
 		->newDataLabels()->setEnabled(true);
 	$chart->setSeries($series);
-	$chart->newTitle()->setText("your_custom_test");
+	$chart->newTitle()->setText("Gender distribution");
 	$chart->newTooltip()->setPointFormat("{series.name}: <b>{point.percentage:.1f}%</b>");
 
 	return $this->render('::your_template.html.twig', [
