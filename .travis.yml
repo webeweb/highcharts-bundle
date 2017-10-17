@@ -47,7 +47,6 @@ script:
 
 after_success:
     - php coveralls.phar -v
-    #- bash <(curl -s https://codecov.io/bash)
 
 notifications:
     email:
