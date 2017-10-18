@@ -3,25 +3,25 @@
 /*
  * This file is part of the WBWHighchartsBundle package.
  *
- * (c) 2017 WBW
+ * (c) 2017 NdC/WBW
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\DependencyInjection;
+namespace WBW\Bundle\HighchartsBundle\Tests\DependencyInjection;
 
 use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
-use WBW\HighchartsBundle\DependencyInjection\WBWHighchartsExtension;
-use WBW\HighchartsBundle\Twig\Extension\HighchartsTwigExtension;
+use WBW\Bundle\HighchartsBundle\DependencyInjection\WBWHighchartsExtension;
+use WBW\Bundle\HighchartsBundle\Twig\Extension\HighchartsTwigExtension;
 
 /**
  * Highcharts extension test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\DependencyInjection
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\DependencyInjection
  * @version 5.0.14
  * @final
  */

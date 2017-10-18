@@ -3,26 +3,26 @@
 /*
  * This file is part of the WBWHighchartsBundle package.
  *
- * (c) 2017 WBW
+ * (c) 2017 NdC/WBW
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Twig\Extension;
+namespace WBW\Bundle\HighchartsBundle\Twig\Extension;
 
 use Twig_Extension;
 use Twig_SimpleFunction;
-use WBW\HighchartsBundle\API\HighchartsChart;
-use WBW\HighchartsBundle\API\HighchartsOptions;
-use WBW\HighchartsBundle\Exception\HighchartsFileNotFoundException;
-use WBW\HighchartsBundle\Wrapper\HighchartsWrapper;
+use WBW\Bundle\HighchartsBundle\API\HighchartsChart;
+use WBW\Bundle\HighchartsBundle\API\HighchartsOptions;
+use WBW\Bundle\HighchartsBundle\Exception\HighchartsFileNotFoundException;
+use WBW\Bundle\HighchartsBundle\Wrapper\HighchartsWrapper;
 
 /**
  * Highcharts Twig extension.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Twig\Extension
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Twig\Extension
  * @version 5.0.14
  * @final
  */

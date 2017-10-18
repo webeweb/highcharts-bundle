@@ -3,131 +3,131 @@
 /*
  * This file is part of the WBWHighchartsBundle package.
  *
- * (c) 2017 WBW
+ * (c) 2017 NdC/WBW
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Funnel\States;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Funnel\States;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts hover test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Funnel\States
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Funnel\States
  * @version 5.0.14
  */
 final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Test the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Test the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover(true);
 
-		$this->assertEquals(null, $obj1->getAnimation(), "The method getAnimation() does not return the expected value");
-		$this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
-		$this->assertEquals(null, $obj1->getHalo(), "The method getHalo() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLineWidth(), "The method getLineWidth() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLineWidthPlus(), "The method getLineWidthPlus() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMarker(), "The method getMarker() does not return the expected value");
+        $this->assertEquals(null, $obj1->getAnimation(), "The method getAnimation() does not return the expected value");
+        $this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
+        $this->assertEquals(null, $obj1->getHalo(), "The method getHalo() does not return the expected value");
+        $this->assertEquals(null, $obj1->getLineWidth(), "The method getLineWidth() does not return the expected value");
+        $this->assertEquals(null, $obj1->getLineWidthPlus(), "The method getLineWidthPlus() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMarker(), "The method getMarker() does not return the expected value");
 
-		$obj0 = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover(false);
 
-		$this->assertEquals(["duration" => 50], $obj0->getAnimation(), "The method getAnimation() does not return the expected value");
-		$this->assertEquals(true, $obj0->getEnabled(), "The method getEnabled() does not return the expected value");
-		$this->assertEquals(null, $obj0->getHalo(), "The method getHalo() does not return the expected value");
-		$this->assertEquals(2, $obj0->getLineWidth(), "The method getLineWidth() does not return the expected value");
-		$this->assertEquals(1, $obj0->getLineWidthPlus(), "The method getLineWidthPlus() does not return the expected value");
-		$this->assertEquals(null, $obj0->getMarker(), "The method getMarker() does not return the expected value");
-	}
+        $this->assertEquals(["duration" => 50], $obj0->getAnimation(), "The method getAnimation() does not return the expected value");
+        $this->assertEquals(true, $obj0->getEnabled(), "The method getEnabled() does not return the expected value");
+        $this->assertEquals(null, $obj0->getHalo(), "The method getHalo() does not return the expected value");
+        $this->assertEquals(2, $obj0->getLineWidth(), "The method getLineWidth() does not return the expected value");
+        $this->assertEquals(1, $obj0->getLineWidthPlus(), "The method getLineWidthPlus() does not return the expected value");
+        $this->assertEquals(null, $obj0->getMarker(), "The method getMarker() does not return the expected value");
+    }
 
-	/**
-	 * Test the clear() method.
-	 *
-	 * @return void
-	 */
-	public function testClear() {
+    /**
+     * Test the clear() method.
+     *
+     * @return void
+     */
+    public function testClear() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover(false);
 
-		$obj->newMarker();
+        $obj->newMarker();
 
-		$obj->clear();
+        $obj->clear();
 
-		$res = ["marker" => []];
-		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
-	}
+        $res = ["marker" => []];
+        $this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+    }
 
-	/**
-	 * Test the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Test the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
-	}
+        $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+    }
 
-	/**
-	 * Tests the newMarker() method.
-	 *
-	 * @return void.
-	 */
-	public function testNewMarker() {
+    /**
+     * Tests the newMarker() method.
+     *
+     * @return void.
+     */
+    public function testNewMarker() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover(false);
 
-		$res = $obj->newMarker();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\Hover\HighchartsMarker::class, $res, "The method newMarker() does not return the expected object");
-	}
+        $res = $obj->newMarker();
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\Hover\HighchartsMarker::class, $res, "The method newMarker() does not return the expected object");
+    }
 
-	/**
-	 * Test the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Test the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover(true);
 
-		$obj->setAnimation(1);
+        $obj->setAnimation(0);
 
-		$res1 = ["animation" => 1];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with animation");
+        $res1 = ["animation" => 0];
+        $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with animation");
 
-		$obj->setEnabled(1);
+        $obj->setEnabled(0);
 
-		$res2 = ["animation" => 1, "enabled" => 1];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
+        $res2 = ["animation" => 0, "enabled" => 0];
+        $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
-		$obj->setHalo(["halo" => "57f842286171094855e51fc3a541c1e2"]);
+        $obj->setHalo(["halo" => "57f842286171094855e51fc3a541c1e2"]);
 
-		$res3 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"]];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with halo");
+        $res3 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"]];
+        $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with halo");
 
-		$obj->setLineWidth(27);
+        $obj->setLineWidth(66);
 
-		$res4 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 27];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with line width");
+        $res4 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 66];
+        $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with line width");
 
-		$obj->setLineWidthPlus(85);
+        $obj->setLineWidthPlus(63);
 
-		$res5 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 27, "lineWidthPlus" => 85];
-		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with line width plus");
+        $res5 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 66, "lineWidthPlus" => 63];
+        $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with line width plus");
 
-		$obj->setMarker(new \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\Hover\HighchartsMarker());
+        $obj->setMarker(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\Hover\HighchartsMarker());
 
-		$res6 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 27, "lineWidthPlus" => 85, "marker" => []];
-		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with marker");
-	}
+        $res6 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 66, "lineWidthPlus" => 63, "marker" => []];
+        $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with marker");
+    }
 
 }

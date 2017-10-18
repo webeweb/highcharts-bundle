@@ -3,245 +3,245 @@
 /*
  * This file is part of the WBWHighchartsBundle package.
  *
- * (c) 2017 WBW
+ * (c) 2017 NdC/WBW
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart;
+namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
 
 /**
  * Highcharts pane.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart
  * @version 5.0.14
  * @final
  */
 final class HighchartsPane implements JsonSerializable {
 
-	/**
-	 * Background.
-	 *
-	 * @var array
-	 * @since 2.3.0
-	 */
-	private $background;
+    /**
+     * Background.
+     *
+     * @var array
+     * @since 2.3.0
+     */
+    private $background;
 
-	/**
-	 * Center.
-	 *
-	 * @var array
-	 * @since 2.3.0
-	 */
-	private $center = ["50%", "50%"];
+    /**
+     * Center.
+     *
+     * @var array
+     * @since 2.3.0
+     */
+    private $center = ["50%", "50%"];
 
-	/**
-	 * End angle.
-	 *
-	 * @var integer
-	 * @since 2.3.0
-	 */
-	private $endAngle;
+    /**
+     * End angle.
+     *
+     * @var integer
+     * @since 2.3.0
+     */
+    private $endAngle;
 
-	/**
-	 * Size.
-	 *
-	 * @var integer|string
-	 */
-	private $size = "85%";
+    /**
+     * Size.
+     *
+     * @var integer|string
+     */
+    private $size = "85%";
 
-	/**
-	 * Start angle.
-	 *
-	 * @var integer
-	 * @since 2.3.0
-	 */
-	private $startAngle;
+    /**
+     * Start angle.
+     *
+     * @var integer
+     * @since 2.3.0
+     */
+    private $startAngle;
 
-	/**
-	 * Constructor.
-	 *
-	 * @param boolean $ignoreDefaultValues Ignore the default values.
-	 */
-	public function __construct($ignoreDefaultValues = true) {
-		if ($ignoreDefaultValues === true) {
-			$this->clear();
-		}
-	}
+    /**
+     * Constructor.
+     *
+     * @param boolean $ignoreDefaultValues Ignore the default values.
+     */
+    public function __construct($ignoreDefaultValues = true) {
+        if ($ignoreDefaultValues === true) {
+            $this->clear();
+        }
+    }
 
-	/**
-	 * Clear.
-	 *
-	 * @return void
-	 */
-	public function clear() {
+    /**
+     * Clear.
+     *
+     * @return void
+     */
+    public function clear() {
 
-		// Clear the background.
-		$this->background = null;
+        // Clear the background.
+        $this->background = null;
 
-		// Clear the center.
-		$this->center = null;
+        // Clear the center.
+        $this->center = null;
 
-		// Clear the end angle.
-		$this->endAngle = null;
+        // Clear the end angle.
+        $this->endAngle = null;
 
-		// Clear the size.
-		$this->size = null;
+        // Clear the size.
+        $this->size = null;
 
-		// Clear the start angle.
-		$this->startAngle = null;
-	}
+        // Clear the start angle.
+        $this->startAngle = null;
+    }
 
-	/**
-	 * Get the background.
-	 *
-	 * @return array Returns the background.
-	 */
-	public function getBackground() {
-		return $this->background;
-	}
+    /**
+     * Get the background.
+     *
+     * @return array Returns the background.
+     */
+    public function getBackground() {
+        return $this->background;
+    }
 
-	/**
-	 * Get the center.
-	 *
-	 * @return array Returns the center.
-	 */
-	public function getCenter() {
-		return $this->center;
-	}
+    /**
+     * Get the center.
+     *
+     * @return array Returns the center.
+     */
+    public function getCenter() {
+        return $this->center;
+    }
 
-	/**
-	 * Get the end angle.
-	 *
-	 * @return integer Returns the end angle.
-	 */
-	public function getEndAngle() {
-		return $this->endAngle;
-	}
+    /**
+     * Get the end angle.
+     *
+     * @return integer Returns the end angle.
+     */
+    public function getEndAngle() {
+        return $this->endAngle;
+    }
 
-	/**
-	 * Get the size.
-	 *
-	 * @return integer|string Returns the size.
-	 */
-	public function getSize() {
-		return $this->size;
-	}
+    /**
+     * Get the size.
+     *
+     * @return integer|string Returns the size.
+     */
+    public function getSize() {
+        return $this->size;
+    }
 
-	/**
-	 * Get the start angle.
-	 *
-	 * @return integer Returns the start angle.
-	 */
-	public function getStartAngle() {
-		return $this->startAngle;
-	}
+    /**
+     * Get the start angle.
+     *
+     * @return integer Returns the start angle.
+     */
+    public function getStartAngle() {
+        return $this->startAngle;
+    }
 
-	/**
-	 * Serialize this instance.
-	 *
-	 * @return array Returns an array representing this instance.
-	 */
-	public function jsonSerialize() {
-		return $this->toArray();
-	}
+    /**
+     * Serialize this instance.
+     *
+     * @return array Returns an array representing this instance.
+     */
+    public function jsonSerialize() {
+        return $this->toArray();
+    }
 
-	/**
-	 * Set the background.
-	 *
-	 * @param array $background The background.
-	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
-	 */
-	public function setBackground(array $background = null) {
-		$this->background = $background;
-		return $this;
-	}
+    /**
+     * Set the background.
+     *
+     * @param array $background The background.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
+     */
+    public function setBackground(array $background = null) {
+        $this->background = $background;
+        return $this;
+    }
 
-	/**
-	 * Set the center.
-	 *
-	 * @param array $center The center.
-	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
-	 */
-	public function setCenter(array $center = null) {
-		$this->center = $center;
-		return $this;
-	}
+    /**
+     * Set the center.
+     *
+     * @param array $center The center.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
+     */
+    public function setCenter(array $center = null) {
+        $this->center = $center;
+        return $this;
+    }
 
-	/**
-	 * Set the end angle.
-	 *
-	 * @param integer $endAngle The end angle.
-	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
-	 */
-	public function setEndAngle($endAngle) {
-		$this->endAngle = $endAngle;
-		return $this;
-	}
+    /**
+     * Set the end angle.
+     *
+     * @param integer $endAngle The end angle.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
+     */
+    public function setEndAngle($endAngle) {
+        $this->endAngle = $endAngle;
+        return $this;
+    }
 
-	/**
-	 * Set the size.
-	 *
-	 * @param integer|string $size The size.
-	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
-	 */
-	public function setSize($size) {
-		$this->size = $size;
-		return $this;
-	}
+    /**
+     * Set the size.
+     *
+     * @param integer|string $size The size.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
+     */
+    public function setSize($size) {
+        $this->size = $size;
+        return $this;
+    }
 
-	/**
-	 * Set the start angle.
-	 *
-	 * @param integer $startAngle The start angle.
-	 * @return \WBW\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
-	 */
-	public function setStartAngle($startAngle) {
-		$this->startAngle = $startAngle;
-		return $this;
-	}
+    /**
+     * Set the start angle.
+     *
+     * @param integer $startAngle The start angle.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
+     */
+    public function setStartAngle($startAngle) {
+        $this->startAngle = $startAngle;
+        return $this;
+    }
 
-	/**
-	 * Convert into an array representing this instance.
-	 *
-	 * @return array Returns an array representing this instance.
-	 */
-	public function toArray() {
+    /**
+     * Convert into an array representing this instance.
+     *
+     * @return array Returns an array representing this instance.
+     */
+    public function toArray() {
 
-		// Initialize the output.
-		$output = [];
+        // Initialize the output.
+        $output = [];
 
-		// Check the background.
-		if (!is_null($this->background)) {
-			$output["background"] = $this->background;
-		}
+        // Check the background.
+        if (!is_null($this->background)) {
+            $output["background"] = $this->background;
+        }
 
-		// Check the center.
-		if (!is_null($this->center)) {
-			$output["center"] = $this->center;
-		}
+        // Check the center.
+        if (!is_null($this->center)) {
+            $output["center"] = $this->center;
+        }
 
-		// Check the end angle.
-		if (!is_null($this->endAngle)) {
-			$output["endAngle"] = $this->endAngle;
-		}
+        // Check the end angle.
+        if (!is_null($this->endAngle)) {
+            $output["endAngle"] = $this->endAngle;
+        }
 
-		// Check the size.
-		if (!is_null($this->size)) {
-			$output["size"] = $this->size;
-		}
+        // Check the size.
+        if (!is_null($this->size)) {
+            $output["size"] = $this->size;
+        }
 
-		// Check the start angle.
-		if (!is_null($this->startAngle)) {
-			$output["startAngle"] = $this->startAngle;
-		}
+        // Check the start angle.
+        if (!is_null($this->startAngle)) {
+            $output["startAngle"] = $this->startAngle;
+        }
 
-		// Return the output.
-		return $output;
-	}
+        // Return the output.
+        return $output;
+    }
 
 }

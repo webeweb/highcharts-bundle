@@ -8,7 +8,7 @@
     "authors": [
         {
             "name": "webeweb",
-            "homepage": "http://github.com/webeweb/WBWHighchartsBundle"
+            "homepage": "http://github.com/webeweb/"
         }
     ],
     "require": {
@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WBW\\HighchartsBundle\\": ""
+            "WBW\\Bundle\\HighchartsBundle\\": ""
         }
     },
     "extra": {

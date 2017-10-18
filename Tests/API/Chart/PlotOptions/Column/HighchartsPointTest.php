@@ -3,92 +3,92 @@
 /*
  * This file is part of the WBWHighchartsBundle package.
  *
- * (c) 2017 WBW
+ * (c) 2017 NdC/WBW
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Column;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Column;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts point test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Column
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Column
  * @version 5.0.14
  */
 final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Test the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Test the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(true);
 
-		$this->assertEquals(null, $obj1->getEvents(), "The method getEvents() does not return the expected value");
-	}
+        $this->assertEquals(null, $obj1->getEvents(), "The method getEvents() does not return the expected value");
+    }
 
-	/**
-	 * Test the clear() method.
-	 *
-	 * @return void
-	 */
-	public function testClear() {
+    /**
+     * Test the clear() method.
+     *
+     * @return void
+     */
+    public function testClear() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(false);
 
-		$obj->newEvents();
+        $obj->newEvents();
 
-		$obj->clear();
+        $obj->clear();
 
-		$res = ["events" => []];
-		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
-	}
+        $res = ["events" => []];
+        $this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+    }
 
-	/**
-	 * Test the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Test the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
-	}
+        $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+    }
 
-	/**
-	 * Tests the newEvents() method.
-	 *
-	 * @return void.
-	 */
-	public function testNewEvents() {
+    /**
+     * Tests the newEvents() method.
+     *
+     * @return void.
+     */
+    public function testNewEvents() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(false);
 
-		$res = $obj->newEvents();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\Column\Point\HighchartsEvents::class, $res, "The method newEvents() does not return the expected object");
-	}
+        $res = $obj->newEvents();
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\Point\HighchartsEvents::class, $res, "The method newEvents() does not return the expected object");
+    }
 
-	/**
-	 * Test the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Test the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(true);
 
-		$obj->setEvents(new \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\Point\HighchartsEvents());
+        $obj->setEvents(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\Point\HighchartsEvents());
 
-		$res1 = ["events" => []];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with events");
-	}
+        $res1 = ["events" => []];
+        $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with events");
+    }
 
 }

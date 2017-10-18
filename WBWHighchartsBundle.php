@@ -3,21 +3,21 @@
 /*
  * This file is part of the WBWHighchartsBundle package.
  *
- * (c) 2017 WBW
+ * (c) 2017 NdC/WBW
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle;
+namespace WBW\Bundle\HighchartsBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
  * Highcharts bundle.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle
  * @version 5.0.14
  * @final
  */

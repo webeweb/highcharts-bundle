@@ -3,22 +3,22 @@
 /*
  * This file is part of the WBWHighchartsBundle package.
  *
- * (c) 2017 WBW
+ * (c) 2017 NdC/WBW
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\Wrapper;
+namespace WBW\Bundle\HighchartsBundle\Tests\Wrapper;
 
 use PHPUnit_Framework_TestCase;
-use WBW\HighchartsBundle\Wrapper\HighchartsWrapper;
+use WBW\Bundle\HighchartsBundle\Wrapper\HighchartsWrapper;
 
 /**
  * Highcharts wrapper test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\Wrapper
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\Wrapper
  * @version 5.0.14
  * @final
  */

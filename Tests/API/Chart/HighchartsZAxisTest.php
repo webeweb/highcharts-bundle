@@ -3,565 +3,565 @@
 /*
  * This file is part of the WBWHighchartsBundle package.
  *
- * (c) 2017 WBW
+ * (c) 2017 NdC/WBW
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts z axis test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart
  * @version 5.0.14
  */
 final class HighchartsZAxisTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Test the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
-
-		$obj1 = new \WBW\HighchartsBundle\API\Chart\HighchartsZAxis(true);
-
-		$this->assertEquals(null, $obj1->getAllowDecimals(), "The method getAllowDecimals() does not return the expected value");
-		$this->assertEquals(null, $obj1->getAlternateGridColor(), "The method getAlternateGridColor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getCategories(), "The method getCategories() does not return the expected value");
-		$this->assertEquals(null, $obj1->getCeiling(), "The method getCeiling() does not return the expected value");
-		$this->assertEquals(null, $obj1->getClassName(), "The method getClassName() does not return the expected value");
-		$this->assertEquals(null, $obj1->getCrosshair(), "The method getCrosshair() does not return the expected value");
-		$this->assertEquals(null, $obj1->getDateTimeLabelFormats(), "The method getDateTimeLabelFormats() does not return the expected value");
-		$this->assertEquals(null, $obj1->getDescription(), "The method getDescription() does not return the expected value");
-		$this->assertEquals(null, $obj1->getEndOnTick(), "The method getEndOnTick() does not return the expected value");
-		$this->assertEquals(null, $obj1->getEvents(), "The method getEvents() does not return the expected value");
-		$this->assertEquals(null, $obj1->getFloor(), "The method getFloor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getGridLineColor(), "The method getGridLineColor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getGridLineDashStyle(), "The method getGridLineDashStyle() does not return the expected value");
-		$this->assertEquals(null, $obj1->getGridLineWidth(), "The method getGridLineWidth() does not return the expected value");
-		$this->assertEquals(null, $obj1->getGridZIndex(), "The method getGridZIndex() does not return the expected value");
-		$this->assertEquals(null, $obj1->getId(), "The method getId() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLabels(), "The method getLabels() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLineColor(), "The method getLineColor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLineWidth(), "The method getLineWidth() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLinkedTo(), "The method getLinkedTo() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMax(), "The method getMax() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMaxPadding(), "The method getMaxPadding() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMaxZoom(), "The method getMaxZoom() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMin(), "The method getMin() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMinPadding(), "The method getMinPadding() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMinRange(), "The method getMinRange() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMinTickInterval(), "The method getMinTickInterval() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMinorGridLineColor(), "The method getMinorGridLineColor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMinorGridLineDashStyle(), "The method getMinorGridLineDashStyle() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMinorGridLineWidth(), "The method getMinorGridLineWidth() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMinorTickColor(), "The method getMinorTickColor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMinorTickInterval(), "The method getMinorTickInterval() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMinorTickLength(), "The method getMinorTickLength() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMinorTickPosition(), "The method getMinorTickPosition() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMinorTickWidth(), "The method getMinorTickWidth() does not return the expected value");
-		$this->assertEquals(null, $obj1->getOffset(), "The method getOffset() does not return the expected value");
-		$this->assertEquals(null, $obj1->getOpposite(), "The method getOpposite() does not return the expected value");
-		$this->assertEquals(null, $obj1->getPlotBands(), "The method getPlotBands() does not return the expected value");
-		$this->assertEquals(null, $obj1->getPlotLines(), "The method getPlotLines() does not return the expected value");
-		$this->assertEquals(null, $obj1->getReversed(), "The method getReversed() does not return the expected value");
-		$this->assertEquals(null, $obj1->getShowEmpty(), "The method getShowEmpty() does not return the expected value");
-		$this->assertEquals(null, $obj1->getShowFirstLabel(), "The method getShowFirstLabel() does not return the expected value");
-		$this->assertEquals(null, $obj1->getShowLastLabel(), "The method getShowLastLabel() does not return the expected value");
-		$this->assertEquals(null, $obj1->getSoftMax(), "The method getSoftMax() does not return the expected value");
-		$this->assertEquals(null, $obj1->getSoftMin(), "The method getSoftMin() does not return the expected value");
-		$this->assertEquals(null, $obj1->getStartOfWeek(), "The method getStartOfWeek() does not return the expected value");
-		$this->assertEquals(null, $obj1->getStartOnTick(), "The method getStartOnTick() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTickAmount(), "The method getTickAmount() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTickColor(), "The method getTickColor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTickInterval(), "The method getTickInterval() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTickLength(), "The method getTickLength() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTickPixelInterval(), "The method getTickPixelInterval() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTickPosition(), "The method getTickPosition() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTickPositioner(), "The method getTickPositioner() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTickPositions(), "The method getTickPositions() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTickWidth(), "The method getTickWidth() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTickmarkPlacement(), "The method getTickmarkPlacement() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTitle(), "The method getTitle() does not return the expected value");
-		$this->assertEquals(null, $obj1->getType(), "The method getType() does not return the expected value");
-		$this->assertEquals(null, $obj1->getUniqueNames(), "The method getUniqueNames() does not return the expected value");
-		$this->assertEquals(null, $obj1->getUnits(), "The method getUnits() does not return the expected value");
-		$this->assertEquals(null, $obj1->getVisible(), "The method getVisible() does not return the expected value");
-
-		$obj0 = new \WBW\HighchartsBundle\API\Chart\HighchartsZAxis(false);
-
-		$this->assertEquals(true, $obj0->getAllowDecimals(), "The method getAllowDecimals() does not return the expected value");
-		$this->assertEquals(null, $obj0->getAlternateGridColor(), "The method getAlternateGridColor() does not return the expected value");
-		$this->assertEquals(null, $obj0->getCategories(), "The method getCategories() does not return the expected value");
-		$this->assertEquals(null, $obj0->getCeiling(), "The method getCeiling() does not return the expected value");
-		$this->assertEquals(null, $obj0->getClassName(), "The method getClassName() does not return the expected value");
-		$this->assertEquals(null, $obj0->getCrosshair(), "The method getCrosshair() does not return the expected value");
-		$this->assertEquals(null, $obj0->getDateTimeLabelFormats(), "The method getDateTimeLabelFormats() does not return the expected value");
-		$this->assertEquals(null, $obj0->getDescription(), "The method getDescription() does not return the expected value");
-		$this->assertEquals(false, $obj0->getEndOnTick(), "The method getEndOnTick() does not return the expected value");
-		$this->assertEquals(null, $obj0->getEvents(), "The method getEvents() does not return the expected value");
-		$this->assertEquals(null, $obj0->getFloor(), "The method getFloor() does not return the expected value");
-		$this->assertEquals("#e6e6e6", $obj0->getGridLineColor(), "The method getGridLineColor() does not return the expected value");
-		$this->assertEquals("Solid", $obj0->getGridLineDashStyle(), "The method getGridLineDashStyle() does not return the expected value");
-		$this->assertEquals(0, $obj0->getGridLineWidth(), "The method getGridLineWidth() does not return the expected value");
-		$this->assertEquals(1, $obj0->getGridZIndex(), "The method getGridZIndex() does not return the expected value");
-		$this->assertEquals(null, $obj0->getId(), "The method getId() does not return the expected value");
-		$this->assertEquals(null, $obj0->getLabels(), "The method getLabels() does not return the expected value");
-		$this->assertEquals("#ccd6eb", $obj0->getLineColor(), "The method getLineColor() does not return the expected value");
-		$this->assertEquals(1, $obj0->getLineWidth(), "The method getLineWidth() does not return the expected value");
-		$this->assertEquals(null, $obj0->getLinkedTo(), "The method getLinkedTo() does not return the expected value");
-		$this->assertEquals(null, $obj0->getMax(), "The method getMax() does not return the expected value");
-		$this->assertEquals(0.01, $obj0->getMaxPadding(), "The method getMaxPadding() does not return the expected value");
-		$this->assertEquals(null, $obj0->getMaxZoom(), "The method getMaxZoom() does not return the expected value");
-		$this->assertEquals(null, $obj0->getMin(), "The method getMin() does not return the expected value");
-		$this->assertEquals(0.01, $obj0->getMinPadding(), "The method getMinPadding() does not return the expected value");
-		$this->assertEquals(null, $obj0->getMinRange(), "The method getMinRange() does not return the expected value");
-		$this->assertEquals(null, $obj0->getMinTickInterval(), "The method getMinTickInterval() does not return the expected value");
-		$this->assertEquals("#f2f2f2", $obj0->getMinorGridLineColor(), "The method getMinorGridLineColor() does not return the expected value");
-		$this->assertEquals("Solid", $obj0->getMinorGridLineDashStyle(), "The method getMinorGridLineDashStyle() does not return the expected value");
-		$this->assertEquals(1, $obj0->getMinorGridLineWidth(), "The method getMinorGridLineWidth() does not return the expected value");
-		$this->assertEquals("#999999", $obj0->getMinorTickColor(), "The method getMinorTickColor() does not return the expected value");
-		$this->assertEquals(null, $obj0->getMinorTickInterval(), "The method getMinorTickInterval() does not return the expected value");
-		$this->assertEquals(2, $obj0->getMinorTickLength(), "The method getMinorTickLength() does not return the expected value");
-		$this->assertEquals("outside", $obj0->getMinorTickPosition(), "The method getMinorTickPosition() does not return the expected value");
-		$this->assertEquals(0, $obj0->getMinorTickWidth(), "The method getMinorTickWidth() does not return the expected value");
-		$this->assertEquals(0, $obj0->getOffset(), "The method getOffset() does not return the expected value");
-		$this->assertEquals(false, $obj0->getOpposite(), "The method getOpposite() does not return the expected value");
-		$this->assertEquals(null, $obj0->getPlotBands(), "The method getPlotBands() does not return the expected value");
-		$this->assertEquals(null, $obj0->getPlotLines(), "The method getPlotLines() does not return the expected value");
-		$this->assertEquals(false, $obj0->getReversed(), "The method getReversed() does not return the expected value");
-		$this->assertEquals(true, $obj0->getShowEmpty(), "The method getShowEmpty() does not return the expected value");
-		$this->assertEquals(true, $obj0->getShowFirstLabel(), "The method getShowFirstLabel() does not return the expected value");
-		$this->assertEquals(true, $obj0->getShowLastLabel(), "The method getShowLastLabel() does not return the expected value");
-		$this->assertEquals(null, $obj0->getSoftMax(), "The method getSoftMax() does not return the expected value");
-		$this->assertEquals(null, $obj0->getSoftMin(), "The method getSoftMin() does not return the expected value");
-		$this->assertEquals(1, $obj0->getStartOfWeek(), "The method getStartOfWeek() does not return the expected value");
-		$this->assertEquals(false, $obj0->getStartOnTick(), "The method getStartOnTick() does not return the expected value");
-		$this->assertEquals(null, $obj0->getTickAmount(), "The method getTickAmount() does not return the expected value");
-		$this->assertEquals("#ccd6eb", $obj0->getTickColor(), "The method getTickColor() does not return the expected value");
-		$this->assertEquals(null, $obj0->getTickInterval(), "The method getTickInterval() does not return the expected value");
-		$this->assertEquals(10, $obj0->getTickLength(), "The method getTickLength() does not return the expected value");
-		$this->assertEquals(null, $obj0->getTickPixelInterval(), "The method getTickPixelInterval() does not return the expected value");
-		$this->assertEquals("outside", $obj0->getTickPosition(), "The method getTickPosition() does not return the expected value");
-		$this->assertEquals(null, $obj0->getTickPositioner(), "The method getTickPositioner() does not return the expected value");
-		$this->assertEquals(null, $obj0->getTickPositions(), "The method getTickPositions() does not return the expected value");
-		$this->assertEquals(1, $obj0->getTickWidth(), "The method getTickWidth() does not return the expected value");
-		$this->assertEquals(null, $obj0->getTickmarkPlacement(), "The method getTickmarkPlacement() does not return the expected value");
-		$this->assertEquals(null, $obj0->getTitle(), "The method getTitle() does not return the expected value");
-		$this->assertEquals("linear", $obj0->getType(), "The method getType() does not return the expected value");
-		$this->assertEquals(true, $obj0->getUniqueNames(), "The method getUniqueNames() does not return the expected value");
-		$this->assertEquals(null, $obj0->getUnits(), "The method getUnits() does not return the expected value");
-		$this->assertEquals(true, $obj0->getVisible(), "The method getVisible() does not return the expected value");
-	}
-
-	/**
-	 * Test the clear() method.
-	 *
-	 * @return void
-	 */
-	public function testClear() {
-
-		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsZAxis(false);
-
-		$obj->newCrosshair();
-		$obj->newEvents();
-		$obj->newLabels();
-		$obj->newTitle();
-
-		$obj->clear();
-
-		$res = ["crosshair" => [], "events" => [], "labels" => [], "title" => []];
-		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
-	}
-
-	/**
-	 * Test the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
-
-		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsZAxis(true);
-
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
-	}
-
-	/**
-	 * Tests the newCrosshair() method.
-	 *
-	 * @return void.
-	 */
-	public function testNewCrosshair() {
-
-		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsZAxis(false);
-
-		$res = $obj->newCrosshair();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsCrosshair::class, $res, "The method newCrosshair() does not return the expected object");
-	}
-
-	/**
-	 * Tests the newEvents() method.
-	 *
-	 * @return void.
-	 */
-	public function testNewEvents() {
-
-		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsZAxis(false);
-
-		$res = $obj->newEvents();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsEvents::class, $res, "The method newEvents() does not return the expected object");
-	}
-
-	/**
-	 * Tests the newLabels() method.
-	 *
-	 * @return void.
-	 */
-	public function testNewLabels() {
+    /**
+     * Test the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis(true);
+
+        $this->assertEquals(null, $obj1->getAllowDecimals(), "The method getAllowDecimals() does not return the expected value");
+        $this->assertEquals(null, $obj1->getAlternateGridColor(), "The method getAlternateGridColor() does not return the expected value");
+        $this->assertEquals(null, $obj1->getCategories(), "The method getCategories() does not return the expected value");
+        $this->assertEquals(null, $obj1->getCeiling(), "The method getCeiling() does not return the expected value");
+        $this->assertEquals(null, $obj1->getClassName(), "The method getClassName() does not return the expected value");
+        $this->assertEquals(null, $obj1->getCrosshair(), "The method getCrosshair() does not return the expected value");
+        $this->assertEquals(null, $obj1->getDateTimeLabelFormats(), "The method getDateTimeLabelFormats() does not return the expected value");
+        $this->assertEquals(null, $obj1->getDescription(), "The method getDescription() does not return the expected value");
+        $this->assertEquals(null, $obj1->getEndOnTick(), "The method getEndOnTick() does not return the expected value");
+        $this->assertEquals(null, $obj1->getEvents(), "The method getEvents() does not return the expected value");
+        $this->assertEquals(null, $obj1->getFloor(), "The method getFloor() does not return the expected value");
+        $this->assertEquals(null, $obj1->getGridLineColor(), "The method getGridLineColor() does not return the expected value");
+        $this->assertEquals(null, $obj1->getGridLineDashStyle(), "The method getGridLineDashStyle() does not return the expected value");
+        $this->assertEquals(null, $obj1->getGridLineWidth(), "The method getGridLineWidth() does not return the expected value");
+        $this->assertEquals(null, $obj1->getGridZIndex(), "The method getGridZIndex() does not return the expected value");
+        $this->assertEquals(null, $obj1->getId(), "The method getId() does not return the expected value");
+        $this->assertEquals(null, $obj1->getLabels(), "The method getLabels() does not return the expected value");
+        $this->assertEquals(null, $obj1->getLineColor(), "The method getLineColor() does not return the expected value");
+        $this->assertEquals(null, $obj1->getLineWidth(), "The method getLineWidth() does not return the expected value");
+        $this->assertEquals(null, $obj1->getLinkedTo(), "The method getLinkedTo() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMax(), "The method getMax() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMaxPadding(), "The method getMaxPadding() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMaxZoom(), "The method getMaxZoom() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMin(), "The method getMin() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMinPadding(), "The method getMinPadding() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMinRange(), "The method getMinRange() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMinTickInterval(), "The method getMinTickInterval() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMinorGridLineColor(), "The method getMinorGridLineColor() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMinorGridLineDashStyle(), "The method getMinorGridLineDashStyle() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMinorGridLineWidth(), "The method getMinorGridLineWidth() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMinorTickColor(), "The method getMinorTickColor() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMinorTickInterval(), "The method getMinorTickInterval() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMinorTickLength(), "The method getMinorTickLength() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMinorTickPosition(), "The method getMinorTickPosition() does not return the expected value");
+        $this->assertEquals(null, $obj1->getMinorTickWidth(), "The method getMinorTickWidth() does not return the expected value");
+        $this->assertEquals(null, $obj1->getOffset(), "The method getOffset() does not return the expected value");
+        $this->assertEquals(null, $obj1->getOpposite(), "The method getOpposite() does not return the expected value");
+        $this->assertEquals(null, $obj1->getPlotBands(), "The method getPlotBands() does not return the expected value");
+        $this->assertEquals(null, $obj1->getPlotLines(), "The method getPlotLines() does not return the expected value");
+        $this->assertEquals(null, $obj1->getReversed(), "The method getReversed() does not return the expected value");
+        $this->assertEquals(null, $obj1->getShowEmpty(), "The method getShowEmpty() does not return the expected value");
+        $this->assertEquals(null, $obj1->getShowFirstLabel(), "The method getShowFirstLabel() does not return the expected value");
+        $this->assertEquals(null, $obj1->getShowLastLabel(), "The method getShowLastLabel() does not return the expected value");
+        $this->assertEquals(null, $obj1->getSoftMax(), "The method getSoftMax() does not return the expected value");
+        $this->assertEquals(null, $obj1->getSoftMin(), "The method getSoftMin() does not return the expected value");
+        $this->assertEquals(null, $obj1->getStartOfWeek(), "The method getStartOfWeek() does not return the expected value");
+        $this->assertEquals(null, $obj1->getStartOnTick(), "The method getStartOnTick() does not return the expected value");
+        $this->assertEquals(null, $obj1->getTickAmount(), "The method getTickAmount() does not return the expected value");
+        $this->assertEquals(null, $obj1->getTickColor(), "The method getTickColor() does not return the expected value");
+        $this->assertEquals(null, $obj1->getTickInterval(), "The method getTickInterval() does not return the expected value");
+        $this->assertEquals(null, $obj1->getTickLength(), "The method getTickLength() does not return the expected value");
+        $this->assertEquals(null, $obj1->getTickPixelInterval(), "The method getTickPixelInterval() does not return the expected value");
+        $this->assertEquals(null, $obj1->getTickPosition(), "The method getTickPosition() does not return the expected value");
+        $this->assertEquals(null, $obj1->getTickPositioner(), "The method getTickPositioner() does not return the expected value");
+        $this->assertEquals(null, $obj1->getTickPositions(), "The method getTickPositions() does not return the expected value");
+        $this->assertEquals(null, $obj1->getTickWidth(), "The method getTickWidth() does not return the expected value");
+        $this->assertEquals(null, $obj1->getTickmarkPlacement(), "The method getTickmarkPlacement() does not return the expected value");
+        $this->assertEquals(null, $obj1->getTitle(), "The method getTitle() does not return the expected value");
+        $this->assertEquals(null, $obj1->getType(), "The method getType() does not return the expected value");
+        $this->assertEquals(null, $obj1->getUniqueNames(), "The method getUniqueNames() does not return the expected value");
+        $this->assertEquals(null, $obj1->getUnits(), "The method getUnits() does not return the expected value");
+        $this->assertEquals(null, $obj1->getVisible(), "The method getVisible() does not return the expected value");
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis(false);
+
+        $this->assertEquals(true, $obj0->getAllowDecimals(), "The method getAllowDecimals() does not return the expected value");
+        $this->assertEquals(null, $obj0->getAlternateGridColor(), "The method getAlternateGridColor() does not return the expected value");
+        $this->assertEquals(null, $obj0->getCategories(), "The method getCategories() does not return the expected value");
+        $this->assertEquals(null, $obj0->getCeiling(), "The method getCeiling() does not return the expected value");
+        $this->assertEquals(null, $obj0->getClassName(), "The method getClassName() does not return the expected value");
+        $this->assertEquals(null, $obj0->getCrosshair(), "The method getCrosshair() does not return the expected value");
+        $this->assertEquals(null, $obj0->getDateTimeLabelFormats(), "The method getDateTimeLabelFormats() does not return the expected value");
+        $this->assertEquals(null, $obj0->getDescription(), "The method getDescription() does not return the expected value");
+        $this->assertEquals(false, $obj0->getEndOnTick(), "The method getEndOnTick() does not return the expected value");
+        $this->assertEquals(null, $obj0->getEvents(), "The method getEvents() does not return the expected value");
+        $this->assertEquals(null, $obj0->getFloor(), "The method getFloor() does not return the expected value");
+        $this->assertEquals("#e6e6e6", $obj0->getGridLineColor(), "The method getGridLineColor() does not return the expected value");
+        $this->assertEquals("Solid", $obj0->getGridLineDashStyle(), "The method getGridLineDashStyle() does not return the expected value");
+        $this->assertEquals(0, $obj0->getGridLineWidth(), "The method getGridLineWidth() does not return the expected value");
+        $this->assertEquals(1, $obj0->getGridZIndex(), "The method getGridZIndex() does not return the expected value");
+        $this->assertEquals(null, $obj0->getId(), "The method getId() does not return the expected value");
+        $this->assertEquals(null, $obj0->getLabels(), "The method getLabels() does not return the expected value");
+        $this->assertEquals("#ccd6eb", $obj0->getLineColor(), "The method getLineColor() does not return the expected value");
+        $this->assertEquals(1, $obj0->getLineWidth(), "The method getLineWidth() does not return the expected value");
+        $this->assertEquals(null, $obj0->getLinkedTo(), "The method getLinkedTo() does not return the expected value");
+        $this->assertEquals(null, $obj0->getMax(), "The method getMax() does not return the expected value");
+        $this->assertEquals(0.01, $obj0->getMaxPadding(), "The method getMaxPadding() does not return the expected value");
+        $this->assertEquals(null, $obj0->getMaxZoom(), "The method getMaxZoom() does not return the expected value");
+        $this->assertEquals(null, $obj0->getMin(), "The method getMin() does not return the expected value");
+        $this->assertEquals(0.01, $obj0->getMinPadding(), "The method getMinPadding() does not return the expected value");
+        $this->assertEquals(null, $obj0->getMinRange(), "The method getMinRange() does not return the expected value");
+        $this->assertEquals(null, $obj0->getMinTickInterval(), "The method getMinTickInterval() does not return the expected value");
+        $this->assertEquals("#f2f2f2", $obj0->getMinorGridLineColor(), "The method getMinorGridLineColor() does not return the expected value");
+        $this->assertEquals("Solid", $obj0->getMinorGridLineDashStyle(), "The method getMinorGridLineDashStyle() does not return the expected value");
+        $this->assertEquals(1, $obj0->getMinorGridLineWidth(), "The method getMinorGridLineWidth() does not return the expected value");
+        $this->assertEquals("#999999", $obj0->getMinorTickColor(), "The method getMinorTickColor() does not return the expected value");
+        $this->assertEquals(null, $obj0->getMinorTickInterval(), "The method getMinorTickInterval() does not return the expected value");
+        $this->assertEquals(2, $obj0->getMinorTickLength(), "The method getMinorTickLength() does not return the expected value");
+        $this->assertEquals("outside", $obj0->getMinorTickPosition(), "The method getMinorTickPosition() does not return the expected value");
+        $this->assertEquals(0, $obj0->getMinorTickWidth(), "The method getMinorTickWidth() does not return the expected value");
+        $this->assertEquals(0, $obj0->getOffset(), "The method getOffset() does not return the expected value");
+        $this->assertEquals(false, $obj0->getOpposite(), "The method getOpposite() does not return the expected value");
+        $this->assertEquals(null, $obj0->getPlotBands(), "The method getPlotBands() does not return the expected value");
+        $this->assertEquals(null, $obj0->getPlotLines(), "The method getPlotLines() does not return the expected value");
+        $this->assertEquals(false, $obj0->getReversed(), "The method getReversed() does not return the expected value");
+        $this->assertEquals(true, $obj0->getShowEmpty(), "The method getShowEmpty() does not return the expected value");
+        $this->assertEquals(true, $obj0->getShowFirstLabel(), "The method getShowFirstLabel() does not return the expected value");
+        $this->assertEquals(true, $obj0->getShowLastLabel(), "The method getShowLastLabel() does not return the expected value");
+        $this->assertEquals(null, $obj0->getSoftMax(), "The method getSoftMax() does not return the expected value");
+        $this->assertEquals(null, $obj0->getSoftMin(), "The method getSoftMin() does not return the expected value");
+        $this->assertEquals(1, $obj0->getStartOfWeek(), "The method getStartOfWeek() does not return the expected value");
+        $this->assertEquals(false, $obj0->getStartOnTick(), "The method getStartOnTick() does not return the expected value");
+        $this->assertEquals(null, $obj0->getTickAmount(), "The method getTickAmount() does not return the expected value");
+        $this->assertEquals("#ccd6eb", $obj0->getTickColor(), "The method getTickColor() does not return the expected value");
+        $this->assertEquals(null, $obj0->getTickInterval(), "The method getTickInterval() does not return the expected value");
+        $this->assertEquals(10, $obj0->getTickLength(), "The method getTickLength() does not return the expected value");
+        $this->assertEquals(null, $obj0->getTickPixelInterval(), "The method getTickPixelInterval() does not return the expected value");
+        $this->assertEquals("outside", $obj0->getTickPosition(), "The method getTickPosition() does not return the expected value");
+        $this->assertEquals(null, $obj0->getTickPositioner(), "The method getTickPositioner() does not return the expected value");
+        $this->assertEquals(null, $obj0->getTickPositions(), "The method getTickPositions() does not return the expected value");
+        $this->assertEquals(1, $obj0->getTickWidth(), "The method getTickWidth() does not return the expected value");
+        $this->assertEquals(null, $obj0->getTickmarkPlacement(), "The method getTickmarkPlacement() does not return the expected value");
+        $this->assertEquals(null, $obj0->getTitle(), "The method getTitle() does not return the expected value");
+        $this->assertEquals("linear", $obj0->getType(), "The method getType() does not return the expected value");
+        $this->assertEquals(true, $obj0->getUniqueNames(), "The method getUniqueNames() does not return the expected value");
+        $this->assertEquals(null, $obj0->getUnits(), "The method getUnits() does not return the expected value");
+        $this->assertEquals(true, $obj0->getVisible(), "The method getVisible() does not return the expected value");
+    }
+
+    /**
+     * Test the clear() method.
+     *
+     * @return void
+     */
+    public function testClear() {
+
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis(false);
+
+        $obj->newCrosshair();
+        $obj->newEvents();
+        $obj->newLabels();
+        $obj->newTitle();
+
+        $obj->clear();
+
+        $res = ["crosshair" => [], "events" => [], "labels" => [], "title" => []];
+        $this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+    }
+
+    /**
+     * Test the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
+
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis(true);
+
+        $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+    }
+
+    /**
+     * Tests the newCrosshair() method.
+     *
+     * @return void.
+     */
+    public function testNewCrosshair() {
+
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis(false);
+
+        $res = $obj->newCrosshair();
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsCrosshair::class, $res, "The method newCrosshair() does not return the expected object");
+    }
+
+    /**
+     * Tests the newEvents() method.
+     *
+     * @return void.
+     */
+    public function testNewEvents() {
+
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis(false);
+
+        $res = $obj->newEvents();
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsEvents::class, $res, "The method newEvents() does not return the expected object");
+    }
+
+    /**
+     * Tests the newLabels() method.
+     *
+     * @return void.
+     */
+    public function testNewLabels() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsZAxis(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis(false);
 
-		$res = $obj->newLabels();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels::class, $res, "The method newLabels() does not return the expected object");
-	}
+        $res = $obj->newLabels();
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels::class, $res, "The method newLabels() does not return the expected object");
+    }
 
-	/**
-	 * Tests the newTitle() method.
-	 *
-	 * @return void.
-	 */
-	public function testNewTitle() {
+    /**
+     * Tests the newTitle() method.
+     *
+     * @return void.
+     */
+    public function testNewTitle() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsZAxis(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis(false);
 
-		$res = $obj->newTitle();
-		$this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle::class, $res, "The method newTitle() does not return the expected object");
-	}
+        $res = $obj->newTitle();
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle::class, $res, "The method newTitle() does not return the expected object");
+    }
 
-	/**
-	 * Test the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Test the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\HighchartsBundle\API\Chart\HighchartsZAxis(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis(true);
 
-		$obj->setAllowDecimals(1);
+        $obj->setAllowDecimals(0);
 
-		$res1 = ["allowDecimals" => 1];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with allow decimals");
+        $res1 = ["allowDecimals" => 0];
+        $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with allow decimals");
 
-		$obj->setAlternateGridColor("e4c3a98e933a4f898d10c74d6b0cc3e9");
+        $obj->setAlternateGridColor("e4c3a98e933a4f898d10c74d6b0cc3e9");
 
-		$res2 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9"];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with alternate grid color");
+        $res2 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9"];
+        $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with alternate grid color");
 
-		$obj->setCategories(["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"]);
+        $obj->setCategories(["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"]);
 
-		$res3 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"]];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with categories");
+        $res3 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"]];
+        $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with categories");
 
-		$obj->setCeiling(52);
+        $obj->setCeiling(41);
 
-		$res4 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with ceiling");
+        $res4 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41];
+        $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with ceiling");
 
-		$obj->setClassName("6f66e878c62db60568a3487869695820");
+        $obj->setClassName("6f66e878c62db60568a3487869695820");
 
-		$res5 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820"];
-		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with class name");
+        $res5 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820"];
+        $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with class name");
 
-		$obj->setCrosshair(new \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsCrosshair());
+        $obj->setCrosshair(new \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsCrosshair());
 
-		$res6 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => []];
-		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with crosshair");
+        $res6 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => []];
+        $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with crosshair");
 
-		$obj->setDateTimeLabelFormats(["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"]);
+        $obj->setDateTimeLabelFormats(["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"]);
 
-		$res7 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"]];
-		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with date time label formats");
+        $res7 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"]];
+        $this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with date time label formats");
 
-		$obj->setDescription("67daf92c833c41c95db874e18fcb2786");
+        $obj->setDescription("67daf92c833c41c95db874e18fcb2786");
 
-		$res8 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786"];
-		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with description");
+        $res8 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786"];
+        $this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with description");
 
-		$obj->setEndOnTick(1);
+        $obj->setEndOnTick(0);
 
-		$res9 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1];
-		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with end on tick");
+        $res9 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0];
+        $this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with end on tick");
 
-		$obj->setEvents(new \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsEvents());
+        $obj->setEvents(new \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsEvents());
 
-		$res10 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => []];
-		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with events");
+        $res10 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => []];
+        $this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with events");
 
-		$obj->setFloor(74);
+        $obj->setFloor(20);
 
-		$res11 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74];
-		$this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with floor");
+        $res11 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20];
+        $this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with floor");
 
-		$obj->setGridLineColor("fa817119e014d62cd3eeb4aef3821870");
+        $obj->setGridLineColor("fa817119e014d62cd3eeb4aef3821870");
 
-		$res12 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870"];
-		$this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with grid line color");
+        $res12 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870"];
+        $this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with grid line color");
 
-		$obj->setGridLineDashStyle("LongDashDotDot");
+        $obj->setGridLineDashStyle("LongDashDotDot");
 
-		$res13 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot"];
-		$this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with grid line dash style");
+        $res13 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot"];
+        $this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with grid line dash style");
 
-		$obj->setGridLineWidth(44);
+        $obj->setGridLineWidth(94);
 
-		$res14 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44];
-		$this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with grid line width");
+        $res14 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94];
+        $this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with grid line width");
 
-		$obj->setGridZIndex(15);
+        $obj->setGridZIndex(99);
 
-		$res15 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15];
-		$this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with grid z index");
+        $res15 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99];
+        $this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with grid z index");
 
-		$obj->setId("b80bb7740288fda1f201890375a60c8f");
+        $obj->setId("b80bb7740288fda1f201890375a60c8f");
 
-		$res16 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f"];
-		$this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with id");
+        $res16 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f"];
+        $this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with id");
 
-		$obj->setLabels(new \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels());
+        $obj->setLabels(new \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels());
 
-		$res17 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => []];
-		$this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with labels");
+        $res17 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => []];
+        $this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with labels");
 
-		$obj->setLineColor("c2580eebfdbdb9fc629f50cc147c3f63");
+        $obj->setLineColor("c2580eebfdbdb9fc629f50cc147c3f63");
 
-		$res18 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
-		$this->assertEquals($res18, $obj->toArray(), "The method toArray() does not return the expected array with line color");
+        $res18 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
+        $this->assertEquals($res18, $obj->toArray(), "The method toArray() does not return the expected array with line color");
 
-		$obj->setLineWidth(70);
+        $obj->setLineWidth(34);
 
-		$res19 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70];
-		$this->assertEquals($res19, $obj->toArray(), "The method toArray() does not return the expected array with line width");
+        $res19 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34];
+        $this->assertEquals($res19, $obj->toArray(), "The method toArray() does not return the expected array with line width");
 
-		$obj->setLinkedTo(56);
+        $obj->setLinkedTo(38);
 
-		$res20 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56];
-		$this->assertEquals($res20, $obj->toArray(), "The method toArray() does not return the expected array with linked to");
+        $res20 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38];
+        $this->assertEquals($res20, $obj->toArray(), "The method toArray() does not return the expected array with linked to");
 
-		$obj->setMax(15);
+        $obj->setMax(74);
 
-		$res21 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15];
-		$this->assertEquals($res21, $obj->toArray(), "The method toArray() does not return the expected array with max");
+        $res21 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74];
+        $this->assertEquals($res21, $obj->toArray(), "The method toArray() does not return the expected array with max");
 
-		$obj->setMaxPadding(54);
+        $obj->setMaxPadding(26);
 
-		$res22 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54];
-		$this->assertEquals($res22, $obj->toArray(), "The method toArray() does not return the expected array with max padding");
+        $res22 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26];
+        $this->assertEquals($res22, $obj->toArray(), "The method toArray() does not return the expected array with max padding");
 
-		$obj->setMaxZoom(1);
+        $obj->setMaxZoom(49);
 
-		$res23 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1];
-		$this->assertEquals($res23, $obj->toArray(), "The method toArray() does not return the expected array with max zoom");
+        $res23 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49];
+        $this->assertEquals($res23, $obj->toArray(), "The method toArray() does not return the expected array with max zoom");
 
-		$obj->setMin(45);
+        $obj->setMin(2);
 
-		$res24 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45];
-		$this->assertEquals($res24, $obj->toArray(), "The method toArray() does not return the expected array with min");
+        $res24 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2];
+        $this->assertEquals($res24, $obj->toArray(), "The method toArray() does not return the expected array with min");
 
-		$obj->setMinPadding(62);
+        $obj->setMinPadding(39);
 
-		$res25 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62];
-		$this->assertEquals($res25, $obj->toArray(), "The method toArray() does not return the expected array with min padding");
+        $res25 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39];
+        $this->assertEquals($res25, $obj->toArray(), "The method toArray() does not return the expected array with min padding");
 
-		$obj->setMinRange(99);
+        $obj->setMinRange(99);
 
-		$res26 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99];
-		$this->assertEquals($res26, $obj->toArray(), "The method toArray() does not return the expected array with min range");
+        $res26 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99];
+        $this->assertEquals($res26, $obj->toArray(), "The method toArray() does not return the expected array with min range");
 
-		$obj->setMinTickInterval(59);
+        $obj->setMinTickInterval(81);
 
-		$res27 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59];
-		$this->assertEquals($res27, $obj->toArray(), "The method toArray() does not return the expected array with min tick interval");
+        $res27 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81];
+        $this->assertEquals($res27, $obj->toArray(), "The method toArray() does not return the expected array with min tick interval");
 
-		$obj->setMinorGridLineColor("02d67903f43b194a260f6e05958c6f60");
+        $obj->setMinorGridLineColor("02d67903f43b194a260f6e05958c6f60");
 
-		$res28 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60"];
-		$this->assertEquals($res28, $obj->toArray(), "The method toArray() does not return the expected array with minor grid line color");
+        $res28 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60"];
+        $this->assertEquals($res28, $obj->toArray(), "The method toArray() does not return the expected array with minor grid line color");
 
-		$obj->setMinorGridLineDashStyle("LongDashDotDot");
+        $obj->setMinorGridLineDashStyle("LongDashDotDot");
 
-		$res29 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot"];
-		$this->assertEquals($res29, $obj->toArray(), "The method toArray() does not return the expected array with minor grid line dash style");
+        $res29 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot"];
+        $this->assertEquals($res29, $obj->toArray(), "The method toArray() does not return the expected array with minor grid line dash style");
 
-		$obj->setMinorGridLineWidth(11);
+        $obj->setMinorGridLineWidth(33);
 
-		$res30 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11];
-		$this->assertEquals($res30, $obj->toArray(), "The method toArray() does not return the expected array with minor grid line width");
+        $res30 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33];
+        $this->assertEquals($res30, $obj->toArray(), "The method toArray() does not return the expected array with minor grid line width");
 
-		$obj->setMinorTickColor("58f14daeca50e29794caa541286c45b5");
+        $obj->setMinorTickColor("58f14daeca50e29794caa541286c45b5");
 
-		$res31 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5"];
-		$this->assertEquals($res31, $obj->toArray(), "The method toArray() does not return the expected array with minor tick color");
+        $res31 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5"];
+        $this->assertEquals($res31, $obj->toArray(), "The method toArray() does not return the expected array with minor tick color");
 
-		$obj->setMinorTickInterval("bec8a7be3cd5e2a8eff4a3ee2f5c7e2d");
+        $obj->setMinorTickInterval("bec8a7be3cd5e2a8eff4a3ee2f5c7e2d");
 
-		$res32 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d"];
-		$this->assertEquals($res32, $obj->toArray(), "The method toArray() does not return the expected array with minor tick interval");
+        $res32 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d"];
+        $this->assertEquals($res32, $obj->toArray(), "The method toArray() does not return the expected array with minor tick interval");
 
-		$obj->setMinorTickLength(44);
+        $obj->setMinorTickLength(54);
 
-		$res33 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44];
-		$this->assertEquals($res33, $obj->toArray(), "The method toArray() does not return the expected array with minor tick length");
+        $res33 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54];
+        $this->assertEquals($res33, $obj->toArray(), "The method toArray() does not return the expected array with minor tick length");
 
-		$obj->setMinorTickPosition("outside");
+        $obj->setMinorTickPosition("outside");
 
-		$res34 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside"];
-		$this->assertEquals($res34, $obj->toArray(), "The method toArray() does not return the expected array with minor tick position");
+        $res34 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside"];
+        $this->assertEquals($res34, $obj->toArray(), "The method toArray() does not return the expected array with minor tick position");
 
-		$obj->setMinorTickWidth(86);
+        $obj->setMinorTickWidth(40);
 
-		$res35 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86];
-		$this->assertEquals($res35, $obj->toArray(), "The method toArray() does not return the expected array with minor tick width");
+        $res35 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40];
+        $this->assertEquals($res35, $obj->toArray(), "The method toArray() does not return the expected array with minor tick width");
 
-		$obj->setOffset(21);
+        $obj->setOffset(93);
 
-		$res36 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21];
-		$this->assertEquals($res36, $obj->toArray(), "The method toArray() does not return the expected array with offset");
+        $res36 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93];
+        $this->assertEquals($res36, $obj->toArray(), "The method toArray() does not return the expected array with offset");
 
-		$obj->setOpposite(0);
+        $obj->setOpposite(1);
 
-		$res37 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0];
-		$this->assertEquals($res37, $obj->toArray(), "The method toArray() does not return the expected array with opposite");
+        $res37 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1];
+        $this->assertEquals($res37, $obj->toArray(), "The method toArray() does not return the expected array with opposite");
 
-		$obj->setPlotBands(["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"]);
+        $obj->setPlotBands(["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"]);
 
-		$res38 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"]];
-		$this->assertEquals($res38, $obj->toArray(), "The method toArray() does not return the expected array with plot bands");
+        $res38 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"]];
+        $this->assertEquals($res38, $obj->toArray(), "The method toArray() does not return the expected array with plot bands");
 
-		$obj->setPlotLines(["plotLines" => "ca27823684c96816234d7d97344db89c"]);
+        $obj->setPlotLines(["plotLines" => "ca27823684c96816234d7d97344db89c"]);
 
-		$res39 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"]];
-		$this->assertEquals($res39, $obj->toArray(), "The method toArray() does not return the expected array with plot lines");
+        $res39 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"]];
+        $this->assertEquals($res39, $obj->toArray(), "The method toArray() does not return the expected array with plot lines");
 
-		$obj->setReversed(1);
+        $obj->setReversed(0);
 
-		$res40 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1];
-		$this->assertEquals($res40, $obj->toArray(), "The method toArray() does not return the expected array with reversed");
+        $res40 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0];
+        $this->assertEquals($res40, $obj->toArray(), "The method toArray() does not return the expected array with reversed");
 
-		$obj->setShowEmpty(0);
+        $obj->setShowEmpty(0);
 
-		$res41 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0];
-		$this->assertEquals($res41, $obj->toArray(), "The method toArray() does not return the expected array with show empty");
+        $res41 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0];
+        $this->assertEquals($res41, $obj->toArray(), "The method toArray() does not return the expected array with show empty");
 
-		$obj->setShowFirstLabel(0);
+        $obj->setShowFirstLabel(0);
 
-		$res42 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0];
-		$this->assertEquals($res42, $obj->toArray(), "The method toArray() does not return the expected array with show first label");
+        $res42 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0];
+        $this->assertEquals($res42, $obj->toArray(), "The method toArray() does not return the expected array with show first label");
 
-		$obj->setShowLastLabel(1);
+        $obj->setShowLastLabel(0);
 
-		$res43 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1];
-		$this->assertEquals($res43, $obj->toArray(), "The method toArray() does not return the expected array with show last label");
+        $res43 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0];
+        $this->assertEquals($res43, $obj->toArray(), "The method toArray() does not return the expected array with show last label");
 
-		$obj->setSoftMax(84);
+        $obj->setSoftMax(64);
 
-		$res44 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84];
-		$this->assertEquals($res44, $obj->toArray(), "The method toArray() does not return the expected array with soft max");
+        $res44 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64];
+        $this->assertEquals($res44, $obj->toArray(), "The method toArray() does not return the expected array with soft max");
 
-		$obj->setSoftMin(95);
+        $obj->setSoftMin(37);
 
-		$res45 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95];
-		$this->assertEquals($res45, $obj->toArray(), "The method toArray() does not return the expected array with soft min");
+        $res45 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37];
+        $this->assertEquals($res45, $obj->toArray(), "The method toArray() does not return the expected array with soft min");
 
-		$obj->setStartOfWeek(59);
+        $obj->setStartOfWeek(87);
 
-		$res46 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59];
-		$this->assertEquals($res46, $obj->toArray(), "The method toArray() does not return the expected array with start of week");
+        $res46 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87];
+        $this->assertEquals($res46, $obj->toArray(), "The method toArray() does not return the expected array with start of week");
 
-		$obj->setStartOnTick(0);
+        $obj->setStartOnTick(1);
 
-		$res47 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0];
-		$this->assertEquals($res47, $obj->toArray(), "The method toArray() does not return the expected array with start on tick");
+        $res47 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1];
+        $this->assertEquals($res47, $obj->toArray(), "The method toArray() does not return the expected array with start on tick");
 
-		$obj->setTickAmount(96);
+        $obj->setTickAmount(25);
 
-		$res48 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96];
-		$this->assertEquals($res48, $obj->toArray(), "The method toArray() does not return the expected array with tick amount");
+        $res48 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25];
+        $this->assertEquals($res48, $obj->toArray(), "The method toArray() does not return the expected array with tick amount");
 
-		$obj->setTickColor("3569a8266538a625569574b2c96e237c");
+        $obj->setTickColor("3569a8266538a625569574b2c96e237c");
 
-		$res49 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96, "tickColor" => "3569a8266538a625569574b2c96e237c"];
-		$this->assertEquals($res49, $obj->toArray(), "The method toArray() does not return the expected array with tick color");
+        $res49 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25, "tickColor" => "3569a8266538a625569574b2c96e237c"];
+        $this->assertEquals($res49, $obj->toArray(), "The method toArray() does not return the expected array with tick color");
 
-		$obj->setTickInterval(50);
+        $obj->setTickInterval(36);
 
-		$res50 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 50];
-		$this->assertEquals($res50, $obj->toArray(), "The method toArray() does not return the expected array with tick interval");
+        $res50 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 36];
+        $this->assertEquals($res50, $obj->toArray(), "The method toArray() does not return the expected array with tick interval");
 
-		$obj->setTickLength(15);
+        $obj->setTickLength(28);
 
-		$res51 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 50, "tickLength" => 15];
-		$this->assertEquals($res51, $obj->toArray(), "The method toArray() does not return the expected array with tick length");
+        $res51 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 36, "tickLength" => 28];
+        $this->assertEquals($res51, $obj->toArray(), "The method toArray() does not return the expected array with tick length");
 
-		$obj->setTickPixelInterval(85);
+        $obj->setTickPixelInterval(31);
 
-		$res52 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 50, "tickLength" => 15, "tickPixelInterval" => 85];
-		$this->assertEquals($res52, $obj->toArray(), "The method toArray() does not return the expected array with tick pixel interval");
+        $res52 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 36, "tickLength" => 28, "tickPixelInterval" => 31];
+        $this->assertEquals($res52, $obj->toArray(), "The method toArray() does not return the expected array with tick pixel interval");
 
-		$obj->setTickPosition("outside");
+        $obj->setTickPosition("outside");
 
-		$res53 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 50, "tickLength" => 15, "tickPixelInterval" => 85, "tickPosition" => "outside"];
-		$this->assertEquals($res53, $obj->toArray(), "The method toArray() does not return the expected array with tick position");
+        $res53 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 36, "tickLength" => 28, "tickPixelInterval" => 31, "tickPosition" => "outside"];
+        $this->assertEquals($res53, $obj->toArray(), "The method toArray() does not return the expected array with tick position");
 
-		$obj->setTickPositioner("c6a22a267ac93652e3443f821bb369bd");
+        $obj->setTickPositioner("c6a22a267ac93652e3443f821bb369bd");
 
-		$res54 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 50, "tickLength" => 15, "tickPixelInterval" => 85, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd"];
-		$this->assertEquals($res54, $obj->toArray(), "The method toArray() does not return the expected array with tick positioner");
+        $res54 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 36, "tickLength" => 28, "tickPixelInterval" => 31, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd"];
+        $this->assertEquals($res54, $obj->toArray(), "The method toArray() does not return the expected array with tick positioner");
 
-		$obj->setTickPositions(["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"]);
+        $obj->setTickPositions(["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"]);
 
-		$res55 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 50, "tickLength" => 15, "tickPixelInterval" => 85, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"]];
-		$this->assertEquals($res55, $obj->toArray(), "The method toArray() does not return the expected array with tick positions");
+        $res55 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 36, "tickLength" => 28, "tickPixelInterval" => 31, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"]];
+        $this->assertEquals($res55, $obj->toArray(), "The method toArray() does not return the expected array with tick positions");
 
-		$obj->setTickWidth(1);
+        $obj->setTickWidth(78);
 
-		$res56 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 50, "tickLength" => 15, "tickPixelInterval" => 85, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 1];
-		$this->assertEquals($res56, $obj->toArray(), "The method toArray() does not return the expected array with tick width");
+        $res56 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 36, "tickLength" => 28, "tickPixelInterval" => 31, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 78];
+        $this->assertEquals($res56, $obj->toArray(), "The method toArray() does not return the expected array with tick width");
 
-		$obj->setTickmarkPlacement("between");
+        $obj->setTickmarkPlacement("between");
 
-		$res57 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 50, "tickLength" => 15, "tickPixelInterval" => 85, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 1, "tickmarkPlacement" => "between"];
-		$this->assertEquals($res57, $obj->toArray(), "The method toArray() does not return the expected array with tickmark placement");
+        $res57 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 36, "tickLength" => 28, "tickPixelInterval" => 31, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 78, "tickmarkPlacement" => "between"];
+        $this->assertEquals($res57, $obj->toArray(), "The method toArray() does not return the expected array with tickmark placement");
 
-		$obj->setTitle(new \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle());
+        $obj->setTitle(new \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle());
 
-		$res58 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 50, "tickLength" => 15, "tickPixelInterval" => 85, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 1, "tickmarkPlacement" => "between", "title" => []];
-		$this->assertEquals($res58, $obj->toArray(), "The method toArray() does not return the expected array with title");
+        $res58 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 36, "tickLength" => 28, "tickPixelInterval" => 31, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 78, "tickmarkPlacement" => "between", "title" => []];
+        $this->assertEquals($res58, $obj->toArray(), "The method toArray() does not return the expected array with title");
 
-		$obj->setType("category");
+        $obj->setType("category");
 
-		$res59 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 50, "tickLength" => 15, "tickPixelInterval" => 85, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 1, "tickmarkPlacement" => "between", "title" => [], "type" => "category"];
-		$this->assertEquals($res59, $obj->toArray(), "The method toArray() does not return the expected array with type");
+        $res59 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 36, "tickLength" => 28, "tickPixelInterval" => 31, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 78, "tickmarkPlacement" => "between", "title" => [], "type" => "category"];
+        $this->assertEquals($res59, $obj->toArray(), "The method toArray() does not return the expected array with type");
 
-		$obj->setUniqueNames(1);
+        $obj->setUniqueNames(1);
 
-		$res60 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 50, "tickLength" => 15, "tickPixelInterval" => 85, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 1, "tickmarkPlacement" => "between", "title" => [], "type" => "category", "uniqueNames" => 1];
-		$this->assertEquals($res60, $obj->toArray(), "The method toArray() does not return the expected array with unique names");
+        $res60 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 36, "tickLength" => 28, "tickPixelInterval" => 31, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 78, "tickmarkPlacement" => "between", "title" => [], "type" => "category", "uniqueNames" => 1];
+        $this->assertEquals($res60, $obj->toArray(), "The method toArray() does not return the expected array with unique names");
 
-		$obj->setUnits(["units" => "b98b3dfbd27e710e6c3ceeae58770b52"]);
+        $obj->setUnits(["units" => "b98b3dfbd27e710e6c3ceeae58770b52"]);
 
-		$res61 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 50, "tickLength" => 15, "tickPixelInterval" => 85, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 1, "tickmarkPlacement" => "between", "title" => [], "type" => "category", "uniqueNames" => 1, "units" => ["units" => "b98b3dfbd27e710e6c3ceeae58770b52"]];
-		$this->assertEquals($res61, $obj->toArray(), "The method toArray() does not return the expected array with units");
+        $res61 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 36, "tickLength" => 28, "tickPixelInterval" => 31, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 78, "tickmarkPlacement" => "between", "title" => [], "type" => "category", "uniqueNames" => 1, "units" => ["units" => "b98b3dfbd27e710e6c3ceeae58770b52"]];
+        $this->assertEquals($res61, $obj->toArray(), "The method toArray() does not return the expected array with units");
 
-		$obj->setVisible(1);
+        $obj->setVisible(1);
 
-		$res62 = ["allowDecimals" => 1, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 52, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 1, "events" => [], "floor" => 74, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 44, "gridZIndex" => 15, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 70, "linkedTo" => 56, "max" => 15, "maxPadding" => 54, "maxZoom" => 1, "min" => 45, "minPadding" => 62, "minRange" => 99, "minTickInterval" => 59, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 11, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 44, "minorTickPosition" => "outside", "minorTickWidth" => 86, "offset" => 21, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 1, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 84, "softMin" => 95, "startOfWeek" => 59, "startOnTick" => 0, "tickAmount" => 96, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 50, "tickLength" => 15, "tickPixelInterval" => 85, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 1, "tickmarkPlacement" => "between", "title" => [], "type" => "category", "uniqueNames" => 1, "units" => ["units" => "b98b3dfbd27e710e6c3ceeae58770b52"], "visible" => 1];
-		$this->assertEquals($res62, $obj->toArray(), "The method toArray() does not return the expected array with visible");
-	}
+        $res62 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 41, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 20, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 94, "gridZIndex" => 99, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 34, "linkedTo" => 38, "max" => 74, "maxPadding" => 26, "maxZoom" => 49, "min" => 2, "minPadding" => 39, "minRange" => 99, "minTickInterval" => 81, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 33, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 54, "minorTickPosition" => "outside", "minorTickWidth" => 40, "offset" => 93, "opposite" => 1, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 0, "showFirstLabel" => 0, "showLastLabel" => 0, "softMax" => 64, "softMin" => 37, "startOfWeek" => 87, "startOnTick" => 1, "tickAmount" => 25, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 36, "tickLength" => 28, "tickPixelInterval" => 31, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 78, "tickmarkPlacement" => "between", "title" => [], "type" => "category", "uniqueNames" => 1, "units" => ["units" => "b98b3dfbd27e710e6c3ceeae58770b52"], "visible" => 1];
+        $this->assertEquals($res62, $obj->toArray(), "The method toArray() does not return the expected array with visible");
+    }
 
 }

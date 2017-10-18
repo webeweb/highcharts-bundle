@@ -3,28 +3,28 @@
 /*
  * This file is part of the WBWHighchartsBundle package.
  *
- * (c) 2017 WBW
+ * (c) 2017 NdC/WBW
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\Twig\Extension;
+namespace WBW\Bundle\HighchartsBundle\Tests\Twig\Extension;
 
 use Exception;
 use PHPUnit_Framework_TestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
-use WBW\HighchartsBundle\API\HighchartsChart;
-use WBW\HighchartsBundle\API\HighchartsOptions;
-use WBW\HighchartsBundle\Exception\HighchartsFileNotFoundException;
-use WBW\HighchartsBundle\Twig\Extension\HighchartsTwigExtension;
+use WBW\Bundle\HighchartsBundle\API\HighchartsChart;
+use WBW\Bundle\HighchartsBundle\API\HighchartsOptions;
+use WBW\Bundle\HighchartsBundle\Exception\HighchartsFileNotFoundException;
+use WBW\Bundle\HighchartsBundle\Twig\Extension\HighchartsTwigExtension;
 
 /**
  * Highcharts Twig extension test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\Wrapper
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\Wrapper
  * @version 5.0.14
  * @final
  */
