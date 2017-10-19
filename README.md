@@ -30,7 +30,7 @@ Then, add the bundle into `symfony/app/AppKernel.php`:
     {
         $bundles = array(
             ...
-            new WBW\Bundle\HighcartsBundleBundle\WBWHighchartsBundle(),
+            new WBW\Bundle\HighcartsBundle\WBWHighchartsBundle(),
         );
 
         ...
