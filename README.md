@@ -16,7 +16,7 @@ Edit `symfony/composer.json` file to add this bundle package:
 ```yml
 "require": {
     ...
-    "webeweb/highcharts-bundle": "1.3"
+    "webeweb/highcharts-bundle": "1.4"
 },
 ```
 
