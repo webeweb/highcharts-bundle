@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Chart;
+namespace WBW\HighchartsBundle\Tests\API\Chart\Chart;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts events test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Chart
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Chart
  * @version 5.0.14
  */
 final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsEvents(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents(true);
 
         $this->assertEquals(null, $obj1->getAddSeries(), "The method getAddSeries() does not return the expected value");
         $this->assertEquals(null, $obj1->getAfterPrint(), "The method getAfterPrint() does not return the expected value");
@@ -45,25 +45,25 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsEvents(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsEvents(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsEvents(true);
 
         $obj->setAddSeries("2a12e68b66ba3a0ab168c1ab1d3a0588");
 

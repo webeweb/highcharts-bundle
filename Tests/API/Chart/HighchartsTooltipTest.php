@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart;
+namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts tooltip test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart
  * @version 5.0.14
  */
 final class HighchartsTooltipTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTooltip(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\HighchartsTooltip(true);
 
         $this->assertEquals(null, $obj1->getAnimation(), "The method getAnimation() does not return the expected value");
         $this->assertEquals(null, $obj1->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
@@ -61,7 +61,7 @@ final class HighchartsTooltipTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getValueSuffix(), "The method getValueSuffix() does not return the expected value");
         $this->assertEquals(null, $obj1->getXDateFormat(), "The method getXDateFormat() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTooltip(false);
+        $obj0 = new \WBW\HighchartsBundle\API\Chart\HighchartsTooltip(false);
 
         $this->assertEquals(true, $obj0->getAnimation(), "The method getAnimation() does not return the expected value");
         $this->assertEquals("rgba(247,247,247,0.85)", $obj0->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
@@ -95,25 +95,25 @@ final class HighchartsTooltipTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTooltip(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsTooltip(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTooltip(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsTooltip(true);
 
         $obj->setAnimation(0);
 
@@ -130,134 +130,134 @@ final class HighchartsTooltipTest extends PHPUnit_Framework_TestCase {
         $res3 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994"];
         $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with border color");
 
-        $obj->setBorderRadius(74);
+        $obj->setBorderRadius(59);
 
-        $res4 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74];
+        $res4 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with border radius");
 
-        $obj->setBorderWidth(80);
+        $obj->setBorderWidth(42);
 
-        $res5 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80];
+        $res5 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with border width");
 
         $obj->setCrosshairs("db6c0bf6a6631359834bb9a0a5378bf1");
 
-        $res6 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1"];
+        $res6 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1"];
         $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with crosshairs");
 
         $obj->setDateTimeLabelFormats(["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"]);
 
-        $res7 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"]];
+        $res7 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"]];
         $this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with date time label formats");
 
         $obj->setEnabled(1);
 
-        $res8 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1];
+        $res8 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1];
         $this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
         $obj->setFollowPointer(1);
 
-        $res9 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1];
+        $res9 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1];
         $this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with follow pointer");
 
         $obj->setFollowTouchMove(0);
 
-        $res10 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0];
+        $res10 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0];
         $this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with follow touch move");
 
         $obj->setFooterFormat("1ac32e030fc5ef01e703d5419170690e");
 
-        $res11 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e"];
+        $res11 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e"];
         $this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with footer format");
 
         $obj->setFormatter("f2ffc59487832cbad265a8fef2133592");
 
-        $res12 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
+        $res12 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
         $this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with formatter");
 
         $obj->setHeaderFormat("937148825f6c7c8ed3376d1834b17ac6");
 
-        $res13 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6"];
+        $res13 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6"];
         $this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with header format");
 
-        $obj->setHideDelay(73);
+        $obj->setHideDelay(61);
 
-        $res14 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73];
+        $res14 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61];
         $this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with hide delay");
 
-        $obj->setPadding(97);
+        $obj->setPadding(26);
 
-        $res15 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97];
+        $res15 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26];
         $this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with padding");
 
         $obj->setPointFormat("332dd3de68dc71de0745837cbc13e217");
 
-        $res16 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97, "pointFormat" => "332dd3de68dc71de0745837cbc13e217"];
+        $res16 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26, "pointFormat" => "332dd3de68dc71de0745837cbc13e217"];
         $this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with point format");
 
         $obj->setPointFormatter("d0b51d7b9a5189f718d161b366d33044");
 
-        $res17 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044"];
+        $res17 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044"];
         $this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with point formatter");
 
         $obj->setPositioner("97c873b8ea05a822237283662ba3c751");
 
-        $res18 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751"];
+        $res18 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751"];
         $this->assertEquals($res18, $obj->toArray(), "The method toArray() does not return the expected array with positioner");
 
-        $obj->setShadow(1);
+        $obj->setShadow(0);
 
-        $res19 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 1];
+        $res19 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 0];
         $this->assertEquals($res19, $obj->toArray(), "The method toArray() does not return the expected array with shadow");
 
         $obj->setShape("8c73a98a300905900337f535531dfca6");
 
-        $res20 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6"];
+        $res20 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 0, "shape" => "8c73a98a300905900337f535531dfca6"];
         $this->assertEquals($res20, $obj->toArray(), "The method toArray() does not return the expected array with shape");
 
-        $obj->setShared(1);
+        $obj->setShared(0);
 
-        $res21 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 1];
+        $res21 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 0, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 0];
         $this->assertEquals($res21, $obj->toArray(), "The method toArray() does not return the expected array with shared");
 
-        $obj->setSnap(33);
+        $obj->setSnap(41);
 
-        $res22 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 1, "snap" => 33];
+        $res22 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 0, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 0, "snap" => 41];
         $this->assertEquals($res22, $obj->toArray(), "The method toArray() does not return the expected array with snap");
 
-        $obj->setSplit(1);
+        $obj->setSplit(0);
 
-        $res23 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 1, "snap" => 33, "split" => 1];
+        $res23 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 0, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 0, "snap" => 41, "split" => 0];
         $this->assertEquals($res23, $obj->toArray(), "The method toArray() does not return the expected array with split");
 
         $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-        $res24 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 1, "snap" => 33, "split" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+        $res24 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 0, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 0, "snap" => 41, "split" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
         $this->assertEquals($res24, $obj->toArray(), "The method toArray() does not return the expected array with style");
 
         $obj->setUseHTML(0);
 
-        $res25 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 1, "snap" => 33, "split" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0];
+        $res25 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 0, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 0, "snap" => 41, "split" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0];
         $this->assertEquals($res25, $obj->toArray(), "The method toArray() does not return the expected array with use HTML");
 
-        $obj->setValueDecimals(22);
+        $obj->setValueDecimals(5);
 
-        $res26 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 1, "snap" => 33, "split" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "valueDecimals" => 22];
+        $res26 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 0, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 0, "snap" => 41, "split" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "valueDecimals" => 5];
         $this->assertEquals($res26, $obj->toArray(), "The method toArray() does not return the expected array with value decimals");
 
         $obj->setValuePrefix("5fde1c8b25eb2ea19ff8377e62564818");
 
-        $res27 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 1, "snap" => 33, "split" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "valueDecimals" => 22, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818"];
+        $res27 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 0, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 0, "snap" => 41, "split" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "valueDecimals" => 5, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818"];
         $this->assertEquals($res27, $obj->toArray(), "The method toArray() does not return the expected array with value prefix");
 
         $obj->setValueSuffix("bf995908ddff004471c953d8062bd1db");
 
-        $res28 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 1, "snap" => 33, "split" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "valueDecimals" => 22, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818", "valueSuffix" => "bf995908ddff004471c953d8062bd1db"];
+        $res28 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 0, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 0, "snap" => 41, "split" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "valueDecimals" => 5, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818", "valueSuffix" => "bf995908ddff004471c953d8062bd1db"];
         $this->assertEquals($res28, $obj->toArray(), "The method toArray() does not return the expected array with value suffix");
 
         $obj->setXDateFormat("e24debfa0bc8408e1dda05cbd537a072");
 
-        $res29 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 74, "borderWidth" => 80, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 73, "padding" => 97, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 1, "snap" => 33, "split" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "valueDecimals" => 22, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818", "valueSuffix" => "bf995908ddff004471c953d8062bd1db", "xDateFormat" => "e24debfa0bc8408e1dda05cbd537a072"];
+        $res29 = ["animation" => 0, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 59, "borderWidth" => 42, "crosshairs" => "db6c0bf6a6631359834bb9a0a5378bf1", "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "enabled" => 1, "followPointer" => 1, "followTouchMove" => 0, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "formatter" => "f2ffc59487832cbad265a8fef2133592", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 61, "padding" => 26, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "positioner" => "97c873b8ea05a822237283662ba3c751", "shadow" => 0, "shape" => "8c73a98a300905900337f535531dfca6", "shared" => 0, "snap" => 41, "split" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "valueDecimals" => 5, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818", "valueSuffix" => "bf995908ddff004471c953d8062bd1db", "xDateFormat" => "e24debfa0bc8408e1dda05cbd537a072"];
         $this->assertEquals($res29, $obj->toArray(), "The method toArray() does not return the expected array with x date format");
     }
 

@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Area;
+namespace WBW\HighchartsBundle\API\Chart\Series\Area;
 
 use JsonSerializable;
 
 /**
  * Highcharts states.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\Series\Area
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\Series\Area
  * @version 5.0.14
  * @final
  */
@@ -26,7 +26,7 @@ final class HighchartsStates implements JsonSerializable {
     /**
      * Hover.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover
+     * @var \WBW\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover
      */
     private $hover;
 
@@ -57,7 +57,7 @@ final class HighchartsStates implements JsonSerializable {
     /**
      * Get the hover.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover Returns the hover.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover Returns the hover.
      */
     public function getHover() {
         return $this->hover;
@@ -75,20 +75,20 @@ final class HighchartsStates implements JsonSerializable {
     /**
      * Create a new hover.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover Returns the hover.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover Returns the hover.
      */
     public function newHover() {
-        $this->hover = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover();
+        $this->hover = new \WBW\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover();
         return $this->hover;
     }
 
     /**
      * Set the hover.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover $hover The hover.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\HighchartsStates Returns the highcharts states.
+     * @param \WBW\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover $hover The hover.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Area\HighchartsStates Returns the highcharts states.
      */
-    public function setHover(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover $hover = null) {
+    public function setHover(\WBW\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover $hover = null) {
         $this->hover = $hover;
         return $this;
     }

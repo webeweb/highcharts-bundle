@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions;
+namespace WBW\HighchartsBundle\API\Chart\PlotOptions;
 
 use JsonSerializable;
 
 /**
  * Highcharts heatmap.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions
  * @version 5.0.14
  * @final
  */
@@ -139,7 +139,7 @@ final class HighchartsHeatmap implements JsonSerializable {
     /**
      * Data labels.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsDataLabels
+     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsDataLabels
      */
     private $dataLabels;
 
@@ -161,7 +161,7 @@ final class HighchartsHeatmap implements JsonSerializable {
     /**
      * Events.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsEvents
+     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsEvents
      */
     private $events;
 
@@ -216,7 +216,7 @@ final class HighchartsHeatmap implements JsonSerializable {
     /**
      * Point.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint
+     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint
      */
     private $point;
 
@@ -277,7 +277,7 @@ final class HighchartsHeatmap implements JsonSerializable {
     /**
      * States.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsStates
+     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsStates
      */
     private $states;
 
@@ -613,7 +613,7 @@ final class HighchartsHeatmap implements JsonSerializable {
     /**
      * Get the data labels.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsDataLabels Returns the data labels.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsDataLabels Returns the data labels.
      */
     public function getDataLabels() {
         return $this->dataLabels;
@@ -640,7 +640,7 @@ final class HighchartsHeatmap implements JsonSerializable {
     /**
      * Get the events.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsEvents Returns the events.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsEvents Returns the events.
      */
     public function getEvents() {
         return $this->events;
@@ -703,7 +703,7 @@ final class HighchartsHeatmap implements JsonSerializable {
     /**
      * Get the point.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint Returns the point.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint Returns the point.
      */
     public function getPoint() {
         return $this->point;
@@ -775,7 +775,7 @@ final class HighchartsHeatmap implements JsonSerializable {
     /**
      * Get the states.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsStates Returns the states.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsStates Returns the states.
      */
     public function getStates() {
         return $this->states;
@@ -847,40 +847,40 @@ final class HighchartsHeatmap implements JsonSerializable {
     /**
      * Create a new data labels.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsDataLabels Returns the data labels.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsDataLabels Returns the data labels.
      */
     public function newDataLabels() {
-        $this->dataLabels = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsDataLabels();
+        $this->dataLabels = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsDataLabels();
         return $this->dataLabels;
     }
 
     /**
      * Create a new events.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsEvents Returns the events.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsEvents Returns the events.
      */
     public function newEvents() {
-        $this->events = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsEvents();
+        $this->events = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsEvents();
         return $this->events;
     }
 
     /**
      * Create a new point.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint Returns the point.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint Returns the point.
      */
     public function newPoint() {
-        $this->point = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint();
+        $this->point = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint();
         return $this->point;
     }
 
     /**
      * Create a new states.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsStates Returns the states.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsStates Returns the states.
      */
     public function newStates() {
-        $this->states = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsStates();
+        $this->states = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsStates();
         return $this->states;
     }
 
@@ -888,7 +888,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the allow point select.
      *
      * @param boolean $allowPointSelect The allow point select.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setAllowPointSelect($allowPointSelect) {
         $this->allowPointSelect = $allowPointSelect;
@@ -899,7 +899,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the animation.
      *
      * @param boolean $animation The animation.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setAnimation($animation) {
         $this->animation = $animation;
@@ -910,7 +910,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the animation limit.
      *
      * @param integer $animationLimit The animation limit.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setAnimationLimit($animationLimit) {
         $this->animationLimit = $animationLimit;
@@ -921,7 +921,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the border color.
      *
      * @param string $borderColor The border color.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setBorderColor($borderColor) {
         $this->borderColor = $borderColor;
@@ -932,7 +932,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the border radius.
      *
      * @param integer $borderRadius The border radius.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setBorderRadius($borderRadius) {
         $this->borderRadius = $borderRadius;
@@ -943,7 +943,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the border width.
      *
      * @param integer $borderWidth The border width.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setBorderWidth($borderWidth) {
         $this->borderWidth = $borderWidth;
@@ -954,7 +954,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -965,7 +965,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the color.
      *
      * @param string $color The color.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setColor($color) {
         $this->color = $color;
@@ -976,7 +976,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the color by point.
      *
      * @param boolean $colorByPoint The color by point.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setColorByPoint($colorByPoint) {
         $this->colorByPoint = $colorByPoint;
@@ -987,7 +987,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the color index.
      *
      * @param integer $colorIndex The color index.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setColorIndex($colorIndex) {
         $this->colorIndex = $colorIndex;
@@ -998,7 +998,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the colors.
      *
      * @param array $colors The colors.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setColors(array $colors = null) {
         $this->colors = $colors;
@@ -1009,7 +1009,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the colsize.
      *
      * @param integer $colsize The colsize.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setColsize($colsize) {
         $this->colsize = $colsize;
@@ -1020,7 +1020,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the crisp.
      *
      * @param boolean $crisp The crisp.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setCrisp($crisp) {
         $this->crisp = $crisp;
@@ -1031,7 +1031,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the crop threshold.
      *
      * @param integer $cropThreshold The crop threshold.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setCropThreshold($cropThreshold) {
         $this->cropThreshold = $cropThreshold;
@@ -1042,7 +1042,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the cursor.
      *
      * @param string $cursor The cursor.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setCursor($cursor) {
         switch ($cursor) {
@@ -1061,10 +1061,10 @@ final class HighchartsHeatmap implements JsonSerializable {
     /**
      * Set the data labels.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsDataLabels $dataLabels The data labels.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsDataLabels $dataLabels The data labels.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
-    public function setDataLabels(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsDataLabels $dataLabels = null) {
+    public function setDataLabels(\WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsDataLabels $dataLabels = null) {
         $this->dataLabels = $dataLabels;
         return $this;
     }
@@ -1073,7 +1073,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the description.
      *
      * @param string $description The description.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setDescription($description) {
         $this->description = $description;
@@ -1084,7 +1084,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the enable mouse tracking.
      *
      * @param boolean $enableMouseTracking The enable mouse tracking.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setEnableMouseTracking($enableMouseTracking) {
         $this->enableMouseTracking = $enableMouseTracking;
@@ -1094,10 +1094,10 @@ final class HighchartsHeatmap implements JsonSerializable {
     /**
      * Set the events.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsEvents $events The events.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsEvents $events The events.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
-    public function setEvents(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsEvents $events = null) {
+    public function setEvents(\WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsEvents $events = null) {
         $this->events = $events;
         return $this;
     }
@@ -1106,7 +1106,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the expose element to a11y.
      *
      * @param boolean $exposeElementToA11y The expose element to a11y.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setExposeElementToA11y($exposeElementToA11y) {
         $this->exposeElementToA11y = $exposeElementToA11y;
@@ -1117,7 +1117,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the find nearest point by.
      *
      * @param string $findNearestPointBy The find nearest point by.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setFindNearestPointBy($findNearestPointBy) {
         switch ($findNearestPointBy) {
@@ -1133,7 +1133,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the get extremes from all.
      *
      * @param boolean $getExtremesFromAll The get extremes from all.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setGetExtremesFromAll($getExtremesFromAll) {
         $this->getExtremesFromAll = $getExtremesFromAll;
@@ -1144,7 +1144,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the keys.
      *
      * @param array $keys The keys.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setKeys(array $keys = null) {
         $this->keys = $keys;
@@ -1155,7 +1155,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the linked to.
      *
      * @param string $linkedTo The linked to.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setLinkedTo($linkedTo) {
         $this->linkedTo = $linkedTo;
@@ -1166,7 +1166,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the max point width.
      *
      * @param integer $maxPointWidth The max point width.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setMaxPointWidth($maxPointWidth) {
         $this->maxPointWidth = $maxPointWidth;
@@ -1176,10 +1176,10 @@ final class HighchartsHeatmap implements JsonSerializable {
     /**
      * Set the point.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint $point The point.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint $point The point.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
-    public function setPoint(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint $point = null) {
+    public function setPoint(\WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint $point = null) {
         $this->point = $point;
         return $this;
     }
@@ -1188,7 +1188,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the point description formatter.
      *
      * @param string $pointDescriptionFormatter The point description formatter.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setPointDescriptionFormatter($pointDescriptionFormatter) {
         $this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -1199,7 +1199,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the rowsize.
      *
      * @param integer $rowsize The rowsize.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setRowsize($rowsize) {
         $this->rowsize = $rowsize;
@@ -1210,7 +1210,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the selected.
      *
      * @param boolean $selected The selected.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setSelected($selected) {
         $this->selected = $selected;
@@ -1221,7 +1221,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the shadow.
      *
      * @param boolean|array $shadow The shadow.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setShadow($shadow) {
         $this->shadow = $shadow;
@@ -1232,7 +1232,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the show checkbox.
      *
      * @param boolean $showCheckbox The show checkbox.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setShowCheckbox($showCheckbox) {
         $this->showCheckbox = $showCheckbox;
@@ -1243,7 +1243,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the show in legend.
      *
      * @param boolean $showInLegend The show in legend.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setShowInLegend($showInLegend) {
         $this->showInLegend = $showInLegend;
@@ -1254,7 +1254,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the skip keyboard navigation.
      *
      * @param boolean $skipKeyboardNavigation The skip keyboard navigation.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setSkipKeyboardNavigation($skipKeyboardNavigation) {
         $this->skipKeyboardNavigation = $skipKeyboardNavigation;
@@ -1264,10 +1264,10 @@ final class HighchartsHeatmap implements JsonSerializable {
     /**
      * Set the states.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsStates $states The states.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsStates $states The states.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
-    public function setStates(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsStates $states = null) {
+    public function setStates(\WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsStates $states = null) {
         $this->states = $states;
         return $this;
     }
@@ -1276,7 +1276,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the sticky tracking.
      *
      * @param boolean $stickyTracking The sticky tracking.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setStickyTracking($stickyTracking) {
         $this->stickyTracking = $stickyTracking;
@@ -1287,7 +1287,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the tooltip.
      *
      * @param array $tooltip The tooltip.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setTooltip(array $tooltip = null) {
         $this->tooltip = $tooltip;
@@ -1298,7 +1298,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the turbo threshold.
      *
      * @param integer $turboThreshold The turbo threshold.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setTurboThreshold($turboThreshold) {
         $this->turboThreshold = $turboThreshold;
@@ -1309,7 +1309,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the visible.
      *
      * @param boolean $visible The visible.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setVisible($visible) {
         $this->visible = $visible;
@@ -1320,7 +1320,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the zone axis.
      *
      * @param string $zoneAxis The zone axis.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setZoneAxis($zoneAxis) {
         $this->zoneAxis = $zoneAxis;
@@ -1331,7 +1331,7 @@ final class HighchartsHeatmap implements JsonSerializable {
      * Set the zones.
      *
      * @param array $zones The zones.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsHeatmap Returns the highcharts heatmap.
      */
     public function setZones(array $zones = null) {
         $this->zones = $zones;

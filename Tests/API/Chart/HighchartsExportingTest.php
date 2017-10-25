@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart;
+namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts exporting test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart
  * @version 5.0.14
  */
 final class HighchartsExportingTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\HighchartsExporting(true);
 
         $this->assertEquals(null, $obj1->getAllowHTML(), "The method getAllowHTML() does not return the expected value");
         $this->assertEquals(null, $obj1->getButtons(), "The method getButtons() does not return the expected value");
@@ -49,7 +49,7 @@ final class HighchartsExportingTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getUrl(), "The method getUrl() does not return the expected value");
         $this->assertEquals(null, $obj1->getWidth(), "The method getWidth() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting(false);
+        $obj0 = new \WBW\HighchartsBundle\API\Chart\HighchartsExporting(false);
 
         $this->assertEquals(false, $obj0->getAllowHTML(), "The method getAllowHTML() does not return the expected value");
         $this->assertEquals(null, $obj0->getButtons(), "The method getButtons() does not return the expected value");
@@ -71,13 +71,13 @@ final class HighchartsExportingTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the clear() method.
+     * Tests the clear() method.
      *
      * @return void
      */
     public function testClear() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting(false);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsExporting(false);
 
         $obj->newButtons();
 
@@ -88,13 +88,13 @@ final class HighchartsExportingTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsExporting(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -106,27 +106,27 @@ final class HighchartsExportingTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewButtons() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting(false);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsExporting(false);
 
         $res = $obj->newButtons();
-        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons::class, $res, "The method newButtons() does not return the expected object");
+        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons::class, $res, "The method newButtons() does not return the expected object");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsExporting(true);
 
         $obj->setAllowHTML(1);
 
         $res1 = ["allowHTML" => 1];
         $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with allow HTML");
 
-        $obj->setButtons(new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons());
+        $obj->setButtons(new \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons());
 
         $res2 = ["allowHTML" => 1, "buttons" => []];
         $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with buttons");
@@ -171,39 +171,39 @@ final class HighchartsExportingTest extends PHPUnit_Framework_TestCase {
         $res10 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"]];
         $this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with menu item definitions");
 
-        $obj->setPrintMaxWidth(99);
+        $obj->setPrintMaxWidth(86);
 
-        $res11 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 99];
+        $res11 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 86];
         $this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with print max width");
 
-        $obj->setScale(77);
+        $obj->setScale(84);
 
-        $res12 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 99, "scale" => 77];
+        $res12 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 86, "scale" => 84];
         $this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with scale");
 
-        $obj->setSourceHeight(53);
+        $obj->setSourceHeight(50);
 
-        $res13 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 99, "scale" => 77, "sourceHeight" => 53];
+        $res13 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 86, "scale" => 84, "sourceHeight" => 50];
         $this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with source height");
 
-        $obj->setSourceWidth(14);
+        $obj->setSourceWidth(56);
 
-        $res14 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 99, "scale" => 77, "sourceHeight" => 53, "sourceWidth" => 14];
+        $res14 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 86, "scale" => 84, "sourceHeight" => 50, "sourceWidth" => 56];
         $this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with source width");
 
         $obj->setType("image/svg+xml");
 
-        $res15 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 99, "scale" => 77, "sourceHeight" => 53, "sourceWidth" => 14, "type" => "image/svg+xml"];
+        $res15 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 86, "scale" => 84, "sourceHeight" => 50, "sourceWidth" => 56, "type" => "image/svg+xml"];
         $this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with type");
 
         $obj->setUrl("572d4e421e5e6b9bc11d815e8a027112");
 
-        $res16 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 99, "scale" => 77, "sourceHeight" => 53, "sourceWidth" => 14, "type" => "image/svg+xml", "url" => "572d4e421e5e6b9bc11d815e8a027112"];
+        $res16 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 86, "scale" => 84, "sourceHeight" => 50, "sourceWidth" => 56, "type" => "image/svg+xml", "url" => "572d4e421e5e6b9bc11d815e8a027112"];
         $this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with url");
 
-        $obj->setWidth(80);
+        $obj->setWidth(85);
 
-        $res17 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 99, "scale" => 77, "sourceHeight" => 53, "sourceWidth" => 14, "type" => "image/svg+xml", "url" => "572d4e421e5e6b9bc11d815e8a027112", "width" => 80];
+        $res17 = ["allowHTML" => 1, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 1, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 1, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 86, "scale" => 84, "sourceHeight" => 50, "sourceWidth" => 56, "type" => "image/svg+xml", "url" => "572d4e421e5e6b9bc11d815e8a027112", "width" => 85];
         $this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with width");
     }
 

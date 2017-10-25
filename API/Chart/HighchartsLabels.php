@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart;
+namespace WBW\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
 
 /**
  * Highcharts labels.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart
  * @version 5.0.14
  * @final
  */
@@ -93,7 +93,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the items.
      *
      * @param array $items The items.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsLabels Returns the highcharts labels.
      */
     public function setItems(array $items = null) {
         $this->items = $items;
@@ -104,7 +104,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the style.
      *
      * @param array $style The style.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsLabels Returns the highcharts labels.
      */
     public function setStyle(array $style = null) {
         $this->style = $style;

@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame;
+namespace WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame;
 
 use JsonSerializable;
 
 /**
  * Highcharts bottom.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame
  * @version 5.0.14
  * @final
  */
@@ -115,7 +115,7 @@ final class HighchartsBottom implements JsonSerializable {
      * Set the color.
      *
      * @param string $color The color.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the highcharts bottom.
+     * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the highcharts bottom.
      */
     public function setColor($color) {
         $this->color = $color;
@@ -126,7 +126,7 @@ final class HighchartsBottom implements JsonSerializable {
      * Set the size.
      *
      * @param integer $size The size.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the highcharts bottom.
+     * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the highcharts bottom.
      */
     public function setSize($size) {
         $this->size = $size;
@@ -137,7 +137,7 @@ final class HighchartsBottom implements JsonSerializable {
      * Set the visible.
      *
      * @param boolean|string $visible The visible.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the highcharts bottom.
+     * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the highcharts bottom.
      */
     public function setVisible($visible) {
         switch ($visible) {

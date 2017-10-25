@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\States;
+namespace WBW\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\States;
 
 use JsonSerializable;
 
 /**
  * Highcharts select.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\States
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\States
  * @version 5.0.14
  * @final
  */
@@ -150,7 +150,7 @@ final class HighchartsSelect implements JsonSerializable {
      * Set the enabled.
      *
      * @param boolean $enabled The enabled.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\States\HighchartsSelect Returns the highcharts select.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\States\HighchartsSelect Returns the highcharts select.
      */
     public function setEnabled($enabled) {
         $this->enabled = $enabled;
@@ -161,7 +161,7 @@ final class HighchartsSelect implements JsonSerializable {
      * Set the fill color.
      *
      * @param string $fillColor The fill color.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\States\HighchartsSelect Returns the highcharts select.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\States\HighchartsSelect Returns the highcharts select.
      */
     public function setFillColor($fillColor) {
         $this->fillColor = $fillColor;
@@ -172,7 +172,7 @@ final class HighchartsSelect implements JsonSerializable {
      * Set the line color.
      *
      * @param string $lineColor The line color.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\States\HighchartsSelect Returns the highcharts select.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\States\HighchartsSelect Returns the highcharts select.
      */
     public function setLineColor($lineColor) {
         $this->lineColor = $lineColor;
@@ -183,7 +183,7 @@ final class HighchartsSelect implements JsonSerializable {
      * Set the line width.
      *
      * @param integer $lineWidth The line width.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\States\HighchartsSelect Returns the highcharts select.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\States\HighchartsSelect Returns the highcharts select.
      */
     public function setLineWidth($lineWidth) {
         $this->lineWidth = $lineWidth;
@@ -194,7 +194,7 @@ final class HighchartsSelect implements JsonSerializable {
      * Set the radius.
      *
      * @param integer $radius The radius.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\States\HighchartsSelect Returns the highcharts select.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Scatter\Data\Marker\States\HighchartsSelect Returns the highcharts select.
      */
     public function setRadius($radius) {
         $this->radius = $radius;

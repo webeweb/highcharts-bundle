@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Errorbar\States\Hover;
+namespace WBW\HighchartsBundle\API\Chart\Series\Errorbar\States\Hover;
 
 use JsonSerializable;
 
 /**
  * Highcharts halo.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\Series\Errorbar\States\Hover
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\Series\Errorbar\States\Hover
  * @version 5.0.14
  * @final
  */
@@ -115,7 +115,7 @@ final class HighchartsHalo implements JsonSerializable {
      * Set the attributes.
      *
      * @param array $attributes The attributes.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Errorbar\States\Hover\HighchartsHalo Returns the highcharts halo.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Errorbar\States\Hover\HighchartsHalo Returns the highcharts halo.
      */
     public function setAttributes(array $attributes = null) {
         $this->attributes = $attributes;
@@ -126,7 +126,7 @@ final class HighchartsHalo implements JsonSerializable {
      * Set the opacity.
      *
      * @param integer $opacity The opacity.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Errorbar\States\Hover\HighchartsHalo Returns the highcharts halo.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Errorbar\States\Hover\HighchartsHalo Returns the highcharts halo.
      */
     public function setOpacity($opacity) {
         $this->opacity = $opacity;
@@ -137,7 +137,7 @@ final class HighchartsHalo implements JsonSerializable {
      * Set the size.
      *
      * @param integer $size The size.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Errorbar\States\Hover\HighchartsHalo Returns the highcharts halo.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Errorbar\States\Hover\HighchartsHalo Returns the highcharts halo.
      */
     public function setSize($size) {
         $this->size = $size;

@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart;
+namespace WBW\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
 
 /**
  * Highcharts responsive.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart
  * @version 5.0.14
  * @final
  */
@@ -75,7 +75,7 @@ final class HighchartsResponsive implements JsonSerializable {
      * Set the rules.
      *
      * @param array $rules The rules.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive Returns the highcharts responsive.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsResponsive Returns the highcharts responsive.
      */
     public function setRules(array $rules = null) {
         $this->rules = $rules;

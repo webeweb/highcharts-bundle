@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart;
+namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts legend test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart
  * @version 5.0.14
  */
 final class HighchartsLegendTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\HighchartsLegend(true);
 
         $this->assertEquals(null, $obj1->getAlign(), "The method getAlign() does not return the expected value");
         $this->assertEquals(null, $obj1->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
@@ -69,7 +69,7 @@ final class HighchartsLegendTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getX(), "The method getX() does not return the expected value");
         $this->assertEquals(null, $obj1->getY(), "The method getY() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(false);
+        $obj0 = new \WBW\HighchartsBundle\API\Chart\HighchartsLegend(false);
 
         $this->assertEquals("center", $obj0->getAlign(), "The method getAlign() does not return the expected value");
         $this->assertEquals(null, $obj0->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
@@ -111,13 +111,13 @@ final class HighchartsLegendTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the clear() method.
+     * Tests the clear() method.
      *
      * @return void
      */
     public function testClear() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(false);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLegend(false);
 
         $obj->newNavigation();
         $obj->newTitle();
@@ -129,13 +129,13 @@ final class HighchartsLegendTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLegend(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -147,10 +147,10 @@ final class HighchartsLegendTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewNavigation() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(false);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLegend(false);
 
         $res = $obj->newNavigation();
-        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation::class, $res, "The method newNavigation() does not return the expected object");
+        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation::class, $res, "The method newNavigation() does not return the expected object");
     }
 
     /**
@@ -160,20 +160,20 @@ final class HighchartsLegendTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewTitle() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(false);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLegend(false);
 
         $res = $obj->newTitle();
-        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle::class, $res, "The method newTitle() does not return the expected object");
+        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle::class, $res, "The method newTitle() does not return the expected object");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLegend(true);
 
         $obj->setAlign("right");
 
@@ -190,174 +190,174 @@ final class HighchartsLegendTest extends PHPUnit_Framework_TestCase {
         $res3 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994"];
         $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with border color");
 
-        $obj->setBorderRadius(25);
+        $obj->setBorderRadius(20);
 
-        $res4 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25];
+        $res4 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with border radius");
 
-        $obj->setBorderWidth(48);
+        $obj->setBorderWidth(36);
 
-        $res5 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48];
+        $res5 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with border width");
 
-        $obj->setEnabled(1);
+        $obj->setEnabled(0);
 
-        $res6 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1];
+        $res6 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0];
         $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
         $obj->setFloating(1);
 
-        $res7 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1];
+        $res7 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1];
         $this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with floating");
 
-        $obj->setItemDistance(95);
+        $obj->setItemDistance(59);
 
-        $res8 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95];
+        $res8 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59];
         $this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with item distance");
 
         $obj->setItemHiddenStyle(["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"]);
 
-        $res9 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"]];
+        $res9 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"]];
         $this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with item hidden style");
 
         $obj->setItemHoverStyle(["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"]);
 
-        $res10 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"]];
+        $res10 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"]];
         $this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with item hover style");
 
-        $obj->setItemMarginBottom(74);
+        $obj->setItemMarginBottom(29);
 
-        $res11 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74];
+        $res11 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29];
         $this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with item margin bottom");
 
-        $obj->setItemMarginTop(80);
+        $obj->setItemMarginTop(29);
 
-        $res12 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80];
+        $res12 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29];
         $this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with item margin top");
 
         $obj->setItemStyle(["itemStyle" => "5428035d6f7481541cf715e0f3e29604"]);
 
-        $res13 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"]];
+        $res13 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"]];
         $this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with item style");
 
-        $obj->setItemWidth(54);
+        $obj->setItemWidth(4);
 
-        $res14 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54];
+        $res14 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4];
         $this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with item width");
 
         $obj->setLabelFormat("201bbcba25ee83a321df388c0f4a889d");
 
-        $res15 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d"];
+        $res15 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d"];
         $this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with label format");
 
         $obj->setLabelFormatter("9078f7787367cf94543b3bc9e92d9692");
 
-        $res16 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692"];
+        $res16 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692"];
         $this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with label formatter");
 
         $obj->setLayout("vertical");
 
-        $res17 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical"];
+        $res17 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical"];
         $this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with layout");
 
-        $obj->setLineHeight(71);
+        $obj->setLineHeight(81);
 
-        $res18 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71];
+        $res18 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81];
         $this->assertEquals($res18, $obj->toArray(), "The method toArray() does not return the expected array with line height");
 
-        $obj->setMargin(45);
+        $obj->setMargin(81);
 
-        $res19 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45];
+        $res19 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81];
         $this->assertEquals($res19, $obj->toArray(), "The method toArray() does not return the expected array with margin");
 
-        $obj->setMaxHeight(29);
+        $obj->setMaxHeight(9);
 
-        $res20 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29];
+        $res20 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9];
         $this->assertEquals($res20, $obj->toArray(), "The method toArray() does not return the expected array with max height");
 
-        $obj->setNavigation(new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation());
+        $obj->setNavigation(new \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation());
 
-        $res21 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => []];
+        $res21 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => []];
         $this->assertEquals($res21, $obj->toArray(), "The method toArray() does not return the expected array with navigation");
 
-        $obj->setPadding(37);
+        $obj->setPadding(74);
 
-        $res22 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37];
+        $res22 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74];
         $this->assertEquals($res22, $obj->toArray(), "The method toArray() does not return the expected array with padding");
 
         $obj->setReversed(0);
 
-        $res23 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0];
+        $res23 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0];
         $this->assertEquals($res23, $obj->toArray(), "The method toArray() does not return the expected array with reversed");
 
-        $obj->setRtl(1);
+        $obj->setRtl(0);
 
-        $res24 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0, "rtl" => 1];
+        $res24 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0, "rtl" => 0];
         $this->assertEquals($res24, $obj->toArray(), "The method toArray() does not return the expected array with rtl");
 
         $obj->setShadow(1);
 
-        $res25 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0, "rtl" => 1, "shadow" => 1];
+        $res25 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0, "rtl" => 0, "shadow" => 1];
         $this->assertEquals($res25, $obj->toArray(), "The method toArray() does not return the expected array with shadow");
 
-        $obj->setSquareSymbol(1);
+        $obj->setSquareSymbol(0);
 
-        $res26 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0, "rtl" => 1, "shadow" => 1, "squareSymbol" => 1];
+        $res26 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0, "rtl" => 0, "shadow" => 1, "squareSymbol" => 0];
         $this->assertEquals($res26, $obj->toArray(), "The method toArray() does not return the expected array with square symbol");
 
         $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-        $res27 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0, "rtl" => 1, "shadow" => 1, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+        $res27 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0, "rtl" => 0, "shadow" => 1, "squareSymbol" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
         $this->assertEquals($res27, $obj->toArray(), "The method toArray() does not return the expected array with style");
 
-        $obj->setSymbolHeight(22);
+        $obj->setSymbolHeight(67);
 
-        $res28 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0, "rtl" => 1, "shadow" => 1, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 22];
+        $res28 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0, "rtl" => 0, "shadow" => 1, "squareSymbol" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 67];
         $this->assertEquals($res28, $obj->toArray(), "The method toArray() does not return the expected array with symbol height");
 
-        $obj->setSymbolPadding(76);
+        $obj->setSymbolPadding(18);
 
-        $res29 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0, "rtl" => 1, "shadow" => 1, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 22, "symbolPadding" => 76];
+        $res29 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0, "rtl" => 0, "shadow" => 1, "squareSymbol" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 67, "symbolPadding" => 18];
         $this->assertEquals($res29, $obj->toArray(), "The method toArray() does not return the expected array with symbol padding");
 
-        $obj->setSymbolRadius(41);
+        $obj->setSymbolRadius(70);
 
-        $res30 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0, "rtl" => 1, "shadow" => 1, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 22, "symbolPadding" => 76, "symbolRadius" => 41];
+        $res30 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0, "rtl" => 0, "shadow" => 1, "squareSymbol" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 67, "symbolPadding" => 18, "symbolRadius" => 70];
         $this->assertEquals($res30, $obj->toArray(), "The method toArray() does not return the expected array with symbol radius");
 
-        $obj->setSymbolWidth(80);
+        $obj->setSymbolWidth(4);
 
-        $res31 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0, "rtl" => 1, "shadow" => 1, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 22, "symbolPadding" => 76, "symbolRadius" => 41, "symbolWidth" => 80];
+        $res31 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0, "rtl" => 0, "shadow" => 1, "squareSymbol" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 67, "symbolPadding" => 18, "symbolRadius" => 70, "symbolWidth" => 4];
         $this->assertEquals($res31, $obj->toArray(), "The method toArray() does not return the expected array with symbol width");
 
-        $obj->setTitle(new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle());
+        $obj->setTitle(new \WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle());
 
-        $res32 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0, "rtl" => 1, "shadow" => 1, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 22, "symbolPadding" => 76, "symbolRadius" => 41, "symbolWidth" => 80, "title" => []];
+        $res32 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0, "rtl" => 0, "shadow" => 1, "squareSymbol" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 67, "symbolPadding" => 18, "symbolRadius" => 70, "symbolWidth" => 4, "title" => []];
         $this->assertEquals($res32, $obj->toArray(), "The method toArray() does not return the expected array with title");
 
-        $obj->setUseHTML(1);
+        $obj->setUseHTML(0);
 
-        $res33 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0, "rtl" => 1, "shadow" => 1, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 22, "symbolPadding" => 76, "symbolRadius" => 41, "symbolWidth" => 80, "title" => [], "useHTML" => 1];
+        $res33 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0, "rtl" => 0, "shadow" => 1, "squareSymbol" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 67, "symbolPadding" => 18, "symbolRadius" => 70, "symbolWidth" => 4, "title" => [], "useHTML" => 0];
         $this->assertEquals($res33, $obj->toArray(), "The method toArray() does not return the expected array with use HTML");
 
         $obj->setVerticalAlign("bottom");
 
-        $res34 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0, "rtl" => 1, "shadow" => 1, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 22, "symbolPadding" => 76, "symbolRadius" => 41, "symbolWidth" => 80, "title" => [], "useHTML" => 1, "verticalAlign" => "bottom"];
+        $res34 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0, "rtl" => 0, "shadow" => 1, "squareSymbol" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 67, "symbolPadding" => 18, "symbolRadius" => 70, "symbolWidth" => 4, "title" => [], "useHTML" => 0, "verticalAlign" => "bottom"];
         $this->assertEquals($res34, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
 
-        $obj->setWidth(100);
+        $obj->setWidth(68);
 
-        $res35 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0, "rtl" => 1, "shadow" => 1, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 22, "symbolPadding" => 76, "symbolRadius" => 41, "symbolWidth" => 80, "title" => [], "useHTML" => 1, "verticalAlign" => "bottom", "width" => 100];
+        $res35 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0, "rtl" => 0, "shadow" => 1, "squareSymbol" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 67, "symbolPadding" => 18, "symbolRadius" => 70, "symbolWidth" => 4, "title" => [], "useHTML" => 0, "verticalAlign" => "bottom", "width" => 68];
         $this->assertEquals($res35, $obj->toArray(), "The method toArray() does not return the expected array with width");
 
-        $obj->setX(43);
+        $obj->setX(63);
 
-        $res36 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0, "rtl" => 1, "shadow" => 1, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 22, "symbolPadding" => 76, "symbolRadius" => 41, "symbolWidth" => 80, "title" => [], "useHTML" => 1, "verticalAlign" => "bottom", "width" => 100, "x" => 43];
+        $res36 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0, "rtl" => 0, "shadow" => 1, "squareSymbol" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 67, "symbolPadding" => 18, "symbolRadius" => 70, "symbolWidth" => 4, "title" => [], "useHTML" => 0, "verticalAlign" => "bottom", "width" => 68, "x" => 63];
         $this->assertEquals($res36, $obj->toArray(), "The method toArray() does not return the expected array with x");
 
-        $obj->setY(22);
+        $obj->setY(100);
 
-        $res37 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 25, "borderWidth" => 48, "enabled" => 1, "floating" => 1, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 74, "itemMarginTop" => 80, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 54, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 71, "margin" => 45, "maxHeight" => 29, "navigation" => [], "padding" => 37, "reversed" => 0, "rtl" => 1, "shadow" => 1, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 22, "symbolPadding" => 76, "symbolRadius" => 41, "symbolWidth" => 80, "title" => [], "useHTML" => 1, "verticalAlign" => "bottom", "width" => 100, "x" => 43, "y" => 22];
+        $res37 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 20, "borderWidth" => 36, "enabled" => 0, "floating" => 1, "itemDistance" => 59, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 29, "itemMarginTop" => 29, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 4, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 81, "margin" => 81, "maxHeight" => 9, "navigation" => [], "padding" => 74, "reversed" => 0, "rtl" => 0, "shadow" => 1, "squareSymbol" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 67, "symbolPadding" => 18, "symbolRadius" => 70, "symbolWidth" => 4, "title" => [], "useHTML" => 0, "verticalAlign" => "bottom", "width" => 68, "x" => 63, "y" => 100];
         $this->assertEquals($res37, $obj->toArray(), "The method toArray() does not return the expected array with y");
     }
 

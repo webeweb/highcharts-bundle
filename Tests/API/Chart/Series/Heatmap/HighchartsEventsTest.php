@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Heatmap;
+namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Heatmap;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts events test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Heatmap
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Series\Heatmap
  * @version 5.0.14
  */
 final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsEvents(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsEvents(true);
 
         $this->assertEquals(null, $obj1->getAfterAnimate(), "The method getAfterAnimate() does not return the expected value");
         $this->assertEquals(null, $obj1->getCheckboxClick(), "The method getCheckboxClick() does not return the expected value");
@@ -42,25 +42,25 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsEvents(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsEvents(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsEvents(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsEvents(true);
 
         $obj->setAfterAnimate("ebdf113b6f659f6f3ea3c6b93e658235");
 

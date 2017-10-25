@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\YAxis;
+namespace WBW\HighchartsBundle\API\Chart\YAxis;
 
 use JsonSerializable;
 
 /**
  * Highcharts plot lines.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\YAxis
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\YAxis
  * @version 5.0.14
  * @final
  */
@@ -64,7 +64,7 @@ final class HighchartsPlotLines implements JsonSerializable {
     /**
      * Label.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotLines\HighchartsLabel
+     * @var \WBW\HighchartsBundle\API\Chart\YAxis\PlotLines\HighchartsLabel
      */
     private $label;
 
@@ -186,7 +186,7 @@ final class HighchartsPlotLines implements JsonSerializable {
     /**
      * Get the label.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotLines\HighchartsLabel Returns the label.
+     * @return \WBW\HighchartsBundle\API\Chart\YAxis\PlotLines\HighchartsLabel Returns the label.
      */
     public function getLabel() {
         return $this->label;
@@ -231,10 +231,10 @@ final class HighchartsPlotLines implements JsonSerializable {
     /**
      * Create a new label.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotLines\HighchartsLabel Returns the label.
+     * @return \WBW\HighchartsBundle\API\Chart\YAxis\PlotLines\HighchartsLabel Returns the label.
      */
     public function newLabel() {
-        $this->label = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotLines\HighchartsLabel();
+        $this->label = new \WBW\HighchartsBundle\API\Chart\YAxis\PlotLines\HighchartsLabel();
         return $this->label;
     }
 
@@ -242,7 +242,7 @@ final class HighchartsPlotLines implements JsonSerializable {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
+     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -253,7 +253,7 @@ final class HighchartsPlotLines implements JsonSerializable {
      * Set the color.
      *
      * @param string $color The color.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
+     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
      */
     public function setColor($color) {
         $this->color = $color;
@@ -264,7 +264,7 @@ final class HighchartsPlotLines implements JsonSerializable {
      * Set the dash style.
      *
      * @param string $dashStyle The dash style.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
+     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
      */
     public function setDashStyle($dashStyle) {
         switch ($dashStyle) {
@@ -289,7 +289,7 @@ final class HighchartsPlotLines implements JsonSerializable {
      * Set the events.
      *
      * @param array $events The events.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
+     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
      */
     public function setEvents(array $events = null) {
         $this->events = $events;
@@ -300,7 +300,7 @@ final class HighchartsPlotLines implements JsonSerializable {
      * Set the id.
      *
      * @param string $id The id.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
+     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
      */
     public function setId($id) {
         $this->id = $id;
@@ -310,10 +310,10 @@ final class HighchartsPlotLines implements JsonSerializable {
     /**
      * Set the label.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotLines\HighchartsLabel $label The label.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
+     * @param \WBW\HighchartsBundle\API\Chart\YAxis\PlotLines\HighchartsLabel $label The label.
+     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
      */
-    public function setLabel(\WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotLines\HighchartsLabel $label = null) {
+    public function setLabel(\WBW\HighchartsBundle\API\Chart\YAxis\PlotLines\HighchartsLabel $label = null) {
         $this->label = $label;
         return $this;
     }
@@ -322,7 +322,7 @@ final class HighchartsPlotLines implements JsonSerializable {
      * Set the value.
      *
      * @param integer $value The value.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
+     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
      */
     public function setValue($value) {
         $this->value = $value;
@@ -333,7 +333,7 @@ final class HighchartsPlotLines implements JsonSerializable {
      * Set the width.
      *
      * @param integer $width The width.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
+     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
      */
     public function setWidth($width) {
         $this->width = $width;
@@ -344,7 +344,7 @@ final class HighchartsPlotLines implements JsonSerializable {
      * Set the z index.
      *
      * @param integer $zIndex The z index.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
+     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotLines Returns the highcharts plot lines.
      */
     public function setZIndex($zIndex) {
         $this->zIndex = $zIndex;

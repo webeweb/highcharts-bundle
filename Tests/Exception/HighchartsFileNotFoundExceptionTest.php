@@ -24,7 +24,7 @@ use WBW\Bundle\HighchartsBundle\Exception\HighchartsFileNotFoundException;
 final class HighchartsFileNotFoundExceptionTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */

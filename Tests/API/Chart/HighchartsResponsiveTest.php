@@ -9,51 +9,51 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart;
+namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts responsive test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart
  * @version 5.0.14
  */
 final class HighchartsResponsiveTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\HighchartsResponsive(true);
 
         $this->assertEquals(null, $obj1->getRules(), "The method getRules() does not return the expected value");
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsResponsive(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsResponsive(true);
 
         $obj->setRules(["rules" => "a4f86f7bfc24194b276c22e0ef158197"]);
 

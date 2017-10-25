@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter;
+namespace WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter;
 
 use JsonSerializable;
 
 /**
  * Highcharts point.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter
  * @version 5.0.14
  * @final
  */
@@ -26,7 +26,7 @@ final class HighchartsPoint implements JsonSerializable {
     /**
      * Events.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\Point\HighchartsEvents
+     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter\Point\HighchartsEvents
      */
     private $events;
 
@@ -57,7 +57,7 @@ final class HighchartsPoint implements JsonSerializable {
     /**
      * Get the events.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\Point\HighchartsEvents Returns the events.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter\Point\HighchartsEvents Returns the events.
      */
     public function getEvents() {
         return $this->events;
@@ -75,20 +75,20 @@ final class HighchartsPoint implements JsonSerializable {
     /**
      * Create a new events.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\Point\HighchartsEvents Returns the events.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter\Point\HighchartsEvents Returns the events.
      */
     public function newEvents() {
-        $this->events = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\Point\HighchartsEvents();
+        $this->events = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter\Point\HighchartsEvents();
         return $this->events;
     }
 
     /**
      * Set the events.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\Point\HighchartsEvents $events The events.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\HighchartsPoint Returns the highcharts point.
+     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter\Point\HighchartsEvents $events The events.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter\HighchartsPoint Returns the highcharts point.
      */
-    public function setEvents(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\Point\HighchartsEvents $events = null) {
+    public function setEvents(\WBW\HighchartsBundle\API\Chart\PlotOptions\Scatter\Point\HighchartsEvents $events = null) {
         $this->events = $events;
         return $this;
     }

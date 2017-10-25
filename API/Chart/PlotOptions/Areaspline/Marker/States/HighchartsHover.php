@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States;
+namespace WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States;
 
 use JsonSerializable;
 
 /**
  * Highcharts hover.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States
  * @version 5.0.14
  * @final
  */
@@ -190,7 +190,7 @@ final class HighchartsHover implements JsonSerializable {
      * Set the enabled.
      *
      * @param boolean $enabled The enabled.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsHover Returns the highcharts hover.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsHover Returns the highcharts hover.
      */
     public function setEnabled($enabled) {
         $this->enabled = $enabled;
@@ -201,7 +201,7 @@ final class HighchartsHover implements JsonSerializable {
      * Set the fill color.
      *
      * @param string $fillColor The fill color.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsHover Returns the highcharts hover.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsHover Returns the highcharts hover.
      */
     public function setFillColor($fillColor) {
         $this->fillColor = $fillColor;
@@ -212,7 +212,7 @@ final class HighchartsHover implements JsonSerializable {
      * Set the line color.
      *
      * @param string $lineColor The line color.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsHover Returns the highcharts hover.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsHover Returns the highcharts hover.
      */
     public function setLineColor($lineColor) {
         $this->lineColor = $lineColor;
@@ -223,7 +223,7 @@ final class HighchartsHover implements JsonSerializable {
      * Set the line width.
      *
      * @param integer $lineWidth The line width.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsHover Returns the highcharts hover.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsHover Returns the highcharts hover.
      */
     public function setLineWidth($lineWidth) {
         $this->lineWidth = $lineWidth;
@@ -234,7 +234,7 @@ final class HighchartsHover implements JsonSerializable {
      * Set the line width plus.
      *
      * @param integer $lineWidthPlus The line width plus.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsHover Returns the highcharts hover.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsHover Returns the highcharts hover.
      */
     public function setLineWidthPlus($lineWidthPlus) {
         $this->lineWidthPlus = $lineWidthPlus;
@@ -245,7 +245,7 @@ final class HighchartsHover implements JsonSerializable {
      * Set the radius.
      *
      * @param integer $radius The radius.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsHover Returns the highcharts hover.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsHover Returns the highcharts hover.
      */
     public function setRadius($radius) {
         $this->radius = $radius;
@@ -256,7 +256,7 @@ final class HighchartsHover implements JsonSerializable {
      * Set the radius plus.
      *
      * @param integer $radiusPlus The radius plus.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsHover Returns the highcharts hover.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\Marker\States\HighchartsHover Returns the highcharts hover.
      */
     public function setRadiusPlus($radiusPlus) {
         $this->radiusPlus = $radiusPlus;

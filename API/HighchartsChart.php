@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API;
+namespace WBW\HighchartsBundle\API;
 
 use JsonSerializable;
 
 /**
  * Highcharts chart.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API
  * @version 5.0.14
  * @final
  */
@@ -26,7 +26,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Accessibility.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsAccessibility
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility
      * @since 5.0.0
      */
     private $accessibility;
@@ -34,7 +34,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Chart.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsChart
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsChart
      */
     private $chart;
 
@@ -48,14 +48,14 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Credits.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsCredits
      */
     private $credits;
 
     /**
      * Data.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsData
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsData
      * @since 4.0
      */
     private $data;
@@ -71,7 +71,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Drilldown.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsDrilldown
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsDrilldown
      * @since 3.0.8
      */
     private $drilldown;
@@ -79,42 +79,42 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Exporting.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsExporting
      */
     private $exporting;
 
     /**
      * Labels.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsLabels
      */
     private $labels;
 
     /**
      * Legend.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsLegend
      */
     private $legend;
 
     /**
      * Loading.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsLoading
      */
     private $loading;
 
     /**
      * Navigation.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsNavigation
      */
     private $navigation;
 
     /**
      * No data.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsNoData
      * @since 3.0.8
      */
     private $noData;
@@ -130,14 +130,14 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Plot options.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPlotOptions
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions
      */
     private $plotOptions;
 
     /**
      * Responsive.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsResponsive
      * @since 5.0.0
      */
     private $responsive;
@@ -152,21 +152,21 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Subtitle.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSubtitle
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle
      */
     private $subtitle;
 
     /**
      * Title.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsTitle
      */
     private $title;
 
     /**
      * Tooltip.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTooltip
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsTooltip
      */
     private $tooltip;
 
@@ -187,7 +187,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Z axis.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis
+     * @var \WBW\HighchartsBundle\API\Chart\HighchartsZAxis
      * @since 5.0.0
      */
     private $zAxis;
@@ -317,7 +317,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the accessibility.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsAccessibility Returns the accessibility.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility Returns the accessibility.
      */
     public function getAccessibility() {
         return $this->accessibility;
@@ -326,7 +326,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the chart.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsChart Returns the chart.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the chart.
      */
     public function getChart() {
         return $this->chart;
@@ -344,7 +344,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the credits.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits Returns the credits.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsCredits Returns the credits.
      */
     public function getCredits() {
         return $this->credits;
@@ -353,7 +353,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the data.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsData Returns the data.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the data.
      */
     public function getData() {
         return $this->data;
@@ -371,7 +371,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the drilldown.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsDrilldown Returns the drilldown.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsDrilldown Returns the drilldown.
      */
     public function getDrilldown() {
         return $this->drilldown;
@@ -380,7 +380,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the exporting.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the exporting.
      */
     public function getExporting() {
         return $this->exporting;
@@ -389,7 +389,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the labels.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels Returns the labels.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsLabels Returns the labels.
      */
     public function getLabels() {
         return $this->labels;
@@ -398,7 +398,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the legend.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend Returns the legend.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the legend.
      */
     public function getLegend() {
         return $this->legend;
@@ -407,7 +407,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the loading.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading Returns the loading.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsLoading Returns the loading.
      */
     public function getLoading() {
         return $this->loading;
@@ -416,7 +416,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the navigation.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation Returns the navigation.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsNavigation Returns the navigation.
      */
     public function getNavigation() {
         return $this->navigation;
@@ -425,7 +425,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the no data.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData Returns the no data.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsNoData Returns the no data.
      */
     public function getNoData() {
         return $this->noData;
@@ -443,7 +443,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the plot options.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the plot options.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the plot options.
      */
     public function getPlotOptions() {
         return $this->plotOptions;
@@ -452,7 +452,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the responsive.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive Returns the responsive.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsResponsive Returns the responsive.
      */
     public function getResponsive() {
         return $this->responsive;
@@ -470,7 +470,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the subtitle.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSubtitle Returns the subtitle.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle Returns the subtitle.
      */
     public function getSubtitle() {
         return $this->subtitle;
@@ -479,7 +479,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the title.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle Returns the title.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsTitle Returns the title.
      */
     public function getTitle() {
         return $this->title;
@@ -488,7 +488,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the tooltip.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTooltip Returns the tooltip.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the tooltip.
      */
     public function getTooltip() {
         return $this->tooltip;
@@ -515,7 +515,7 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Get the z axis.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis Returns the z axis.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsZAxis Returns the z axis.
      */
     public function getZAxis() {
         return $this->zAxis;
@@ -533,180 +533,180 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Create a new accessibility.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsAccessibility Returns the accessibility.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility Returns the accessibility.
      */
     public function newAccessibility() {
-        $this->accessibility = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsAccessibility();
+        $this->accessibility = new \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility();
         return $this->accessibility;
     }
 
     /**
      * Create a new chart.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsChart Returns the chart.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsChart Returns the chart.
      */
     public function newChart() {
-        $this->chart = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsChart();
+        $this->chart = new \WBW\HighchartsBundle\API\Chart\HighchartsChart();
         return $this->chart;
     }
 
     /**
      * Create a new credits.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits Returns the credits.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsCredits Returns the credits.
      */
     public function newCredits() {
-        $this->credits = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits();
+        $this->credits = new \WBW\HighchartsBundle\API\Chart\HighchartsCredits();
         return $this->credits;
     }
 
     /**
      * Create a new data.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsData Returns the data.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsData Returns the data.
      */
     public function newData() {
-        $this->data = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsData();
+        $this->data = new \WBW\HighchartsBundle\API\Chart\HighchartsData();
         return $this->data;
     }
 
     /**
      * Create a new drilldown.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsDrilldown Returns the drilldown.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsDrilldown Returns the drilldown.
      */
     public function newDrilldown() {
-        $this->drilldown = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsDrilldown();
+        $this->drilldown = new \WBW\HighchartsBundle\API\Chart\HighchartsDrilldown();
         return $this->drilldown;
     }
 
     /**
      * Create a new exporting.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the exporting.
      */
     public function newExporting() {
-        $this->exporting = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting();
+        $this->exporting = new \WBW\HighchartsBundle\API\Chart\HighchartsExporting();
         return $this->exporting;
     }
 
     /**
      * Create a new labels.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels Returns the labels.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsLabels Returns the labels.
      */
     public function newLabels() {
-        $this->labels = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels();
+        $this->labels = new \WBW\HighchartsBundle\API\Chart\HighchartsLabels();
         return $this->labels;
     }
 
     /**
      * Create a new legend.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend Returns the legend.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsLegend Returns the legend.
      */
     public function newLegend() {
-        $this->legend = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend();
+        $this->legend = new \WBW\HighchartsBundle\API\Chart\HighchartsLegend();
         return $this->legend;
     }
 
     /**
      * Create a new loading.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading Returns the loading.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsLoading Returns the loading.
      */
     public function newLoading() {
-        $this->loading = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading();
+        $this->loading = new \WBW\HighchartsBundle\API\Chart\HighchartsLoading();
         return $this->loading;
     }
 
     /**
      * Create a new navigation.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation Returns the navigation.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsNavigation Returns the navigation.
      */
     public function newNavigation() {
-        $this->navigation = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation();
+        $this->navigation = new \WBW\HighchartsBundle\API\Chart\HighchartsNavigation();
         return $this->navigation;
     }
 
     /**
      * Create a new no data.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData Returns the no data.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsNoData Returns the no data.
      */
     public function newNoData() {
-        $this->noData = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData();
+        $this->noData = new \WBW\HighchartsBundle\API\Chart\HighchartsNoData();
         return $this->noData;
     }
 
     /**
      * Create a new plot options.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the plot options.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions Returns the plot options.
      */
     public function newPlotOptions() {
-        $this->plotOptions = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPlotOptions();
+        $this->plotOptions = new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions();
         return $this->plotOptions;
     }
 
     /**
      * Create a new responsive.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive Returns the responsive.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsResponsive Returns the responsive.
      */
     public function newResponsive() {
-        $this->responsive = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive();
+        $this->responsive = new \WBW\HighchartsBundle\API\Chart\HighchartsResponsive();
         return $this->responsive;
     }
 
     /**
      * Create a new subtitle.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSubtitle Returns the subtitle.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle Returns the subtitle.
      */
     public function newSubtitle() {
-        $this->subtitle = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSubtitle();
+        $this->subtitle = new \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle();
         return $this->subtitle;
     }
 
     /**
      * Create a new title.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle Returns the title.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsTitle Returns the title.
      */
     public function newTitle() {
-        $this->title = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle();
+        $this->title = new \WBW\HighchartsBundle\API\Chart\HighchartsTitle();
         return $this->title;
     }
 
     /**
      * Create a new tooltip.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTooltip Returns the tooltip.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsTooltip Returns the tooltip.
      */
     public function newTooltip() {
-        $this->tooltip = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTooltip();
+        $this->tooltip = new \WBW\HighchartsBundle\API\Chart\HighchartsTooltip();
         return $this->tooltip;
     }
 
     /**
      * Create a new z axis.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis Returns the z axis.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsZAxis Returns the z axis.
      */
     public function newZAxis() {
-        $this->zAxis = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis();
+        $this->zAxis = new \WBW\HighchartsBundle\API\Chart\HighchartsZAxis();
         return $this->zAxis;
     }
 
     /**
      * Set the accessibility.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsAccessibility $accessibility The accessibility.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility $accessibility The accessibility.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setAccessibility(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsAccessibility $accessibility = null) {
+    public function setAccessibility(\WBW\HighchartsBundle\API\Chart\HighchartsAccessibility $accessibility = null) {
         $this->accessibility = $accessibility;
         return $this;
     }
@@ -714,10 +714,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the chart.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsChart $chart The chart.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsChart $chart The chart.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setChart(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsChart $chart = null) {
+    public function setChart(\WBW\HighchartsBundle\API\Chart\HighchartsChart $chart = null) {
         $this->chart = $chart;
         return $this;
     }
@@ -726,7 +726,7 @@ final class HighchartsChart implements JsonSerializable {
      * Set the colors.
      *
      * @param array $colors The colors.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
     public function setColors(array $colors = null) {
         $this->colors = $colors;
@@ -736,10 +736,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the credits.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits $credits The credits.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsCredits $credits The credits.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setCredits(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits $credits = null) {
+    public function setCredits(\WBW\HighchartsBundle\API\Chart\HighchartsCredits $credits = null) {
         $this->credits = $credits;
         return $this;
     }
@@ -747,10 +747,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the data.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsData $data The data.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsData $data The data.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setData(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsData $data = null) {
+    public function setData(\WBW\HighchartsBundle\API\Chart\HighchartsData $data = null) {
         $this->data = $data;
         return $this;
     }
@@ -759,7 +759,7 @@ final class HighchartsChart implements JsonSerializable {
      * Set the defs.
      *
      * @param array $defs The defs.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
     public function setDefs(array $defs = null) {
         $this->defs = $defs;
@@ -769,10 +769,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the drilldown.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsDrilldown $drilldown The drilldown.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsDrilldown $drilldown The drilldown.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setDrilldown(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsDrilldown $drilldown = null) {
+    public function setDrilldown(\WBW\HighchartsBundle\API\Chart\HighchartsDrilldown $drilldown = null) {
         $this->drilldown = $drilldown;
         return $this;
     }
@@ -780,10 +780,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the exporting.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting $exporting The exporting.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsExporting $exporting The exporting.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setExporting(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting $exporting = null) {
+    public function setExporting(\WBW\HighchartsBundle\API\Chart\HighchartsExporting $exporting = null) {
         $this->exporting = $exporting;
         return $this;
     }
@@ -791,10 +791,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the labels.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels $labels The labels.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsLabels $labels The labels.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setLabels(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels $labels = null) {
+    public function setLabels(\WBW\HighchartsBundle\API\Chart\HighchartsLabels $labels = null) {
         $this->labels = $labels;
         return $this;
     }
@@ -802,10 +802,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the legend.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend $legend The legend.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsLegend $legend The legend.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setLegend(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend $legend = null) {
+    public function setLegend(\WBW\HighchartsBundle\API\Chart\HighchartsLegend $legend = null) {
         $this->legend = $legend;
         return $this;
     }
@@ -813,10 +813,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the loading.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading $loading The loading.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsLoading $loading The loading.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setLoading(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading $loading = null) {
+    public function setLoading(\WBW\HighchartsBundle\API\Chart\HighchartsLoading $loading = null) {
         $this->loading = $loading;
         return $this;
     }
@@ -824,10 +824,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the navigation.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation $navigation The navigation.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsNavigation $navigation The navigation.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setNavigation(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation $navigation = null) {
+    public function setNavigation(\WBW\HighchartsBundle\API\Chart\HighchartsNavigation $navigation = null) {
         $this->navigation = $navigation;
         return $this;
     }
@@ -835,10 +835,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the no data.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData $noData The no data.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsNoData $noData The no data.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setNoData(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData $noData = null) {
+    public function setNoData(\WBW\HighchartsBundle\API\Chart\HighchartsNoData $noData = null) {
         $this->noData = $noData;
         return $this;
     }
@@ -847,7 +847,7 @@ final class HighchartsChart implements JsonSerializable {
      * Set the pane.
      *
      * @param array $pane The pane.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
     public function setPane(array $pane = null) {
         $this->pane = $pane;
@@ -857,10 +857,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the plot options.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPlotOptions $plotOptions The plot options.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions $plotOptions The plot options.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setPlotOptions(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPlotOptions $plotOptions = null) {
+    public function setPlotOptions(\WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions $plotOptions = null) {
         $this->plotOptions = $plotOptions;
         return $this;
     }
@@ -868,10 +868,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the responsive.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive $responsive The responsive.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsResponsive $responsive The responsive.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setResponsive(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive $responsive = null) {
+    public function setResponsive(\WBW\HighchartsBundle\API\Chart\HighchartsResponsive $responsive = null) {
         $this->responsive = $responsive;
         return $this;
     }
@@ -880,7 +880,7 @@ final class HighchartsChart implements JsonSerializable {
      * Set the series.
      *
      * @param array $series The series.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
     public function setSeries(array $series = null) {
         $this->series = $series;
@@ -890,10 +890,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the subtitle.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSubtitle $subtitle The subtitle.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle $subtitle The subtitle.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setSubtitle(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSubtitle $subtitle = null) {
+    public function setSubtitle(\WBW\HighchartsBundle\API\Chart\HighchartsSubtitle $subtitle = null) {
         $this->subtitle = $subtitle;
         return $this;
     }
@@ -901,10 +901,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the title.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle $title The title.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsTitle $title The title.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setTitle(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle $title = null) {
+    public function setTitle(\WBW\HighchartsBundle\API\Chart\HighchartsTitle $title = null) {
         $this->title = $title;
         return $this;
     }
@@ -912,10 +912,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the tooltip.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTooltip $tooltip The tooltip.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsTooltip $tooltip The tooltip.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setTooltip(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTooltip $tooltip = null) {
+    public function setTooltip(\WBW\HighchartsBundle\API\Chart\HighchartsTooltip $tooltip = null) {
         $this->tooltip = $tooltip;
         return $this;
     }
@@ -924,7 +924,7 @@ final class HighchartsChart implements JsonSerializable {
      * Set the x axis.
      *
      * @param array $xAxis The x axis.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
     public function setXAxis(array $xAxis = null) {
         $this->xAxis = $xAxis;
@@ -935,7 +935,7 @@ final class HighchartsChart implements JsonSerializable {
      * Set the y axis.
      *
      * @param array $yAxis The y axis.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
     public function setYAxis(array $yAxis = null) {
         $this->yAxis = $yAxis;
@@ -945,10 +945,10 @@ final class HighchartsChart implements JsonSerializable {
     /**
      * Set the z axis.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis $zAxis The z axis.
-     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
+     * @param \WBW\HighchartsBundle\API\Chart\HighchartsZAxis $zAxis The z axis.
+     * @return \WBW\HighchartsBundle\API\HighchartsChart Returns the highcharts chart.
      */
-    public function setZAxis(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis $zAxis = null) {
+    public function setZAxis(\WBW\HighchartsBundle\API\Chart\HighchartsZAxis $zAxis = null) {
         $this->zAxis = $zAxis;
         return $this;
     }

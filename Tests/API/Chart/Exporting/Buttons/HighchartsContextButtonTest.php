@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Exporting\Buttons;
+namespace WBW\HighchartsBundle\Tests\API\Chart\Exporting\Buttons;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts context button test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Exporting\Buttons
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Exporting\Buttons
  * @version 5.0.14
  */
 final class HighchartsContextButtonTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(true);
 
         $this->assertEquals(null, $obj1->getAlign(), "The method getAlign() does not return the expected value");
         $this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
@@ -50,7 +50,7 @@ final class HighchartsContextButtonTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getX(), "The method getX() does not return the expected value");
         $this->assertEquals(null, $obj1->getY(), "The method getY() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(false);
+        $obj0 = new \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(false);
 
         $this->assertEquals("right", $obj0->getAlign(), "The method getAlign() does not return the expected value");
         $this->assertEquals(true, $obj0->getEnabled(), "The method getEnabled() does not return the expected value");
@@ -73,114 +73,114 @@ final class HighchartsContextButtonTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(true);
 
         $obj->setAlign("right");
 
         $res1 = ["align" => "right"];
         $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with align");
 
-        $obj->setEnabled(1);
+        $obj->setEnabled(0);
 
-        $res2 = ["align" => "right", "enabled" => 1];
+        $res2 = ["align" => "right", "enabled" => 0];
         $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
-        $obj->setHeight(16);
+        $obj->setHeight(60);
 
-        $res3 = ["align" => "right", "enabled" => 1, "height" => 16];
+        $res3 = ["align" => "right", "enabled" => 0, "height" => 60];
         $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with height");
 
         $obj->setMenuItems(["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"]);
 
-        $res4 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"]];
+        $res4 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"]];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with menu items");
 
         $obj->setOnclick("c0bb2196426022e8adf9a5b6d34fd45e");
 
-        $res5 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e"];
+        $res5 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e"];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with onclick");
 
         $obj->setSymbol("menu");
 
-        $res6 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu"];
+        $res6 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu"];
         $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with symbol");
 
         $obj->setSymbolFill("91c9eea38e42d2f606dbfea1e027bfbf");
 
-        $res7 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf"];
+        $res7 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf"];
         $this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with symbol fill");
 
-        $obj->setSymbolSize(68);
+        $obj->setSymbolSize(41);
 
-        $res8 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 68];
+        $res8 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 41];
         $this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with symbol size");
 
         $obj->setSymbolStroke("07f92b4194c5eb604aeb59004eeaab2a");
 
-        $res9 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 68, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a"];
+        $res9 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 41, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a"];
         $this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with symbol stroke");
 
-        $obj->setSymbolStrokeWidth(12);
+        $obj->setSymbolStrokeWidth(82);
 
-        $res10 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 68, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 12];
+        $res10 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 41, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 82];
         $this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with symbol stroke width");
 
-        $obj->setSymbolX(86);
+        $obj->setSymbolX(28);
 
-        $res11 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 68, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 12, "symbolX" => 86];
+        $res11 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 41, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 82, "symbolX" => 28];
         $this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with symbol x");
 
-        $obj->setSymbolY(70);
+        $obj->setSymbolY(31);
 
-        $res12 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 68, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 12, "symbolX" => 86, "symbolY" => 70];
+        $res12 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 41, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 82, "symbolX" => 28, "symbolY" => 31];
         $this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with symbol y");
 
         $obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
 
-        $res13 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 68, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 12, "symbolX" => 86, "symbolY" => 70, "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
+        $res13 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 41, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 82, "symbolX" => 28, "symbolY" => 31, "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
         $this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with text");
 
         $obj->setTheme(["theme" => "f484570d7cf557020e11ace406901b10"]);
 
-        $res14 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 68, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 12, "symbolX" => 86, "symbolY" => 70, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"]];
+        $res14 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 41, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 82, "symbolX" => 28, "symbolY" => 31, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"]];
         $this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with theme");
 
         $obj->setVerticalAlign("bottom");
 
-        $res15 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 68, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 12, "symbolX" => 86, "symbolY" => 70, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom"];
+        $res15 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 41, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 82, "symbolX" => 28, "symbolY" => 31, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom"];
         $this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
 
-        $obj->setWidth(90);
+        $obj->setWidth(87);
 
-        $res16 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 68, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 12, "symbolX" => 86, "symbolY" => 70, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom", "width" => 90];
+        $res16 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 41, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 82, "symbolX" => 28, "symbolY" => 31, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom", "width" => 87];
         $this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with width");
 
-        $obj->setX(71);
+        $obj->setX(91);
 
-        $res17 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 68, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 12, "symbolX" => 86, "symbolY" => 70, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom", "width" => 90, "x" => 71];
+        $res17 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 41, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 82, "symbolX" => 28, "symbolY" => 31, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom", "width" => 87, "x" => 91];
         $this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with x");
 
-        $obj->setY(69);
+        $obj->setY(96);
 
-        $res18 = ["align" => "right", "enabled" => 1, "height" => 16, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 68, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 12, "symbolX" => 86, "symbolY" => 70, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom", "width" => 90, "x" => 71, "y" => 69];
+        $res18 = ["align" => "right", "enabled" => 0, "height" => 60, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 41, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 82, "symbolX" => 28, "symbolY" => 31, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom", "width" => 87, "x" => 91, "y" => 96];
         $this->assertEquals($res18, $obj->toArray(), "The method toArray() does not return the expected array with y");
     }
 

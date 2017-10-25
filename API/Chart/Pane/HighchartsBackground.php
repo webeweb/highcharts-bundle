@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\Pane;
+namespace WBW\HighchartsBundle\API\Chart\Pane;
 
 use JsonSerializable;
 
 /**
  * Highcharts background.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\Pane
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\Pane
  * @version 5.0.14
  * @final
  */
@@ -195,7 +195,7 @@ final class HighchartsBackground implements JsonSerializable {
      * Set the background color.
      *
      * @param string $backgroundColor The background color.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground Returns the highcharts background.
+     * @return \WBW\HighchartsBundle\API\Chart\Pane\HighchartsBackground Returns the highcharts background.
      */
     public function setBackgroundColor($backgroundColor) {
         $this->backgroundColor = $backgroundColor;
@@ -206,7 +206,7 @@ final class HighchartsBackground implements JsonSerializable {
      * Set the border color.
      *
      * @param string $borderColor The border color.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground Returns the highcharts background.
+     * @return \WBW\HighchartsBundle\API\Chart\Pane\HighchartsBackground Returns the highcharts background.
      */
     public function setBorderColor($borderColor) {
         $this->borderColor = $borderColor;
@@ -217,7 +217,7 @@ final class HighchartsBackground implements JsonSerializable {
      * Set the border width.
      *
      * @param integer $borderWidth The border width.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground Returns the highcharts background.
+     * @return \WBW\HighchartsBundle\API\Chart\Pane\HighchartsBackground Returns the highcharts background.
      */
     public function setBorderWidth($borderWidth) {
         $this->borderWidth = $borderWidth;
@@ -228,7 +228,7 @@ final class HighchartsBackground implements JsonSerializable {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground Returns the highcharts background.
+     * @return \WBW\HighchartsBundle\API\Chart\Pane\HighchartsBackground Returns the highcharts background.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -239,7 +239,7 @@ final class HighchartsBackground implements JsonSerializable {
      * Set the inner radius.
      *
      * @param integer|string $innerRadius The inner radius.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground Returns the highcharts background.
+     * @return \WBW\HighchartsBundle\API\Chart\Pane\HighchartsBackground Returns the highcharts background.
      */
     public function setInnerRadius($innerRadius) {
         $this->innerRadius = $innerRadius;
@@ -250,7 +250,7 @@ final class HighchartsBackground implements JsonSerializable {
      * Set the outer radius.
      *
      * @param integer|string $outerRadius The outer radius.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground Returns the highcharts background.
+     * @return \WBW\HighchartsBundle\API\Chart\Pane\HighchartsBackground Returns the highcharts background.
      */
     public function setOuterRadius($outerRadius) {
         $this->outerRadius = $outerRadius;
@@ -261,7 +261,7 @@ final class HighchartsBackground implements JsonSerializable {
      * Set the shape.
      *
      * @param string $shape The shape.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground Returns the highcharts background.
+     * @return \WBW\HighchartsBundle\API\Chart\Pane\HighchartsBackground Returns the highcharts background.
      */
     public function setShape($shape) {
         switch ($shape) {

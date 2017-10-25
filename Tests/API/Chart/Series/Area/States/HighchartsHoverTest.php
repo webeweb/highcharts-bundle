@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Area\States;
+namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Area\States;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts hover test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Area\States
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Series\Area\States
  * @version 5.0.14
  */
 final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(true);
 
         $this->assertEquals(null, $obj1->getAnimation(), "The method getAnimation() does not return the expected value");
         $this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
@@ -38,7 +38,7 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getLineWidthPlus(), "The method getLineWidthPlus() does not return the expected value");
         $this->assertEquals(null, $obj1->getMarker(), "The method getMarker() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(false);
+        $obj0 = new \WBW\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(false);
 
         $this->assertEquals(["duration" => 50], $obj0->getAnimation(), "The method getAnimation() does not return the expected value");
         $this->assertEquals(true, $obj0->getEnabled(), "The method getEnabled() does not return the expected value");
@@ -49,13 +49,13 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the clear() method.
+     * Tests the clear() method.
      *
      * @return void
      */
     public function testClear() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(false);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(false);
 
         $obj->newMarker();
 
@@ -66,13 +66,13 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -84,20 +84,20 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewMarker() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(false);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(false);
 
         $res = $obj->newMarker();
-        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\Hover\HighchartsMarker::class, $res, "The method newMarker() does not return the expected object");
+        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Series\Area\States\Hover\HighchartsMarker::class, $res, "The method newMarker() does not return the expected object");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(true);
 
         $obj->setAnimation(1);
 
@@ -119,14 +119,14 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
         $res4 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 98];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with line width");
 
-        $obj->setLineWidthPlus(0);
+        $obj->setLineWidthPlus(20);
 
-        $res5 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 98, "lineWidthPlus" => 0];
+        $res5 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 98, "lineWidthPlus" => 20];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with line width plus");
 
-        $obj->setMarker(new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\Hover\HighchartsMarker());
+        $obj->setMarker(new \WBW\HighchartsBundle\API\Chart\Series\Area\States\Hover\HighchartsMarker());
 
-        $res6 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 98, "lineWidthPlus" => 0, "marker" => []];
+        $res6 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 98, "lineWidthPlus" => 20, "marker" => []];
         $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with marker");
     }
 

@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Areaspline\Data\Marker\States;
+namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Areaspline\Data\Marker\States;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts select test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Areaspline\Data\Marker\States
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Series\Areaspline\Data\Marker\States
  * @version 5.0.14
  */
 final class HighchartsSelectTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Areaspline\Data\Marker\States\HighchartsSelect(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\Series\Areaspline\Data\Marker\States\HighchartsSelect(true);
 
         $this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
         $this->assertEquals(null, $obj1->getFillColor(), "The method getFillColor() does not return the expected value");
@@ -37,7 +37,7 @@ final class HighchartsSelectTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getLineWidth(), "The method getLineWidth() does not return the expected value");
         $this->assertEquals(null, $obj1->getRadius(), "The method getRadius() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Areaspline\Data\Marker\States\HighchartsSelect(false);
+        $obj0 = new \WBW\HighchartsBundle\API\Chart\Series\Areaspline\Data\Marker\States\HighchartsSelect(false);
 
         $this->assertEquals(true, $obj0->getEnabled(), "The method getEnabled() does not return the expected value");
         $this->assertEquals(null, $obj0->getFillColor(), "The method getFillColor() does not return the expected value");
@@ -47,49 +47,49 @@ final class HighchartsSelectTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Areaspline\Data\Marker\States\HighchartsSelect(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Areaspline\Data\Marker\States\HighchartsSelect(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Areaspline\Data\Marker\States\HighchartsSelect(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Areaspline\Data\Marker\States\HighchartsSelect(true);
 
-        $obj->setEnabled(1);
+        $obj->setEnabled(0);
 
-        $res1 = ["enabled" => 1];
+        $res1 = ["enabled" => 0];
         $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
         $obj->setFillColor("1fde055d3ff900e04ca08bc82066d7fd");
 
-        $res2 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
+        $res2 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
         $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
         $obj->setLineColor("c2580eebfdbdb9fc629f50cc147c3f63");
 
-        $res3 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
+        $res3 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
         $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with line color");
 
-        $obj->setLineWidth(49);
+        $obj->setLineWidth(67);
 
-        $res4 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 49];
+        $res4 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 67];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with line width");
 
-        $obj->setRadius(41);
+        $obj->setRadius(44);
 
-        $res5 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 49, "radius" => 41];
+        $res5 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 67, "radius" => 44];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with radius");
     }
 

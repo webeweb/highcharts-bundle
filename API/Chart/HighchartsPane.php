@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart;
+namespace WBW\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
 
 /**
  * Highcharts pane.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart
  * @version 5.0.14
  * @final
  */
@@ -154,7 +154,7 @@ final class HighchartsPane implements JsonSerializable {
      * Set the background.
      *
      * @param array $background The background.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
      */
     public function setBackground(array $background = null) {
         $this->background = $background;
@@ -165,7 +165,7 @@ final class HighchartsPane implements JsonSerializable {
      * Set the center.
      *
      * @param array $center The center.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
      */
     public function setCenter(array $center = null) {
         $this->center = $center;
@@ -176,7 +176,7 @@ final class HighchartsPane implements JsonSerializable {
      * Set the end angle.
      *
      * @param integer $endAngle The end angle.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
      */
     public function setEndAngle($endAngle) {
         $this->endAngle = $endAngle;
@@ -187,7 +187,7 @@ final class HighchartsPane implements JsonSerializable {
      * Set the size.
      *
      * @param integer|string $size The size.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
      */
     public function setSize($size) {
         $this->size = $size;
@@ -198,7 +198,7 @@ final class HighchartsPane implements JsonSerializable {
      * Set the start angle.
      *
      * @param integer $startAngle The start angle.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsPane Returns the highcharts pane.
      */
     public function setStartAngle($startAngle) {
         $this->startAngle = $startAngle;

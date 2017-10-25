@@ -9,34 +9,34 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart;
+namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts navigation test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart
  * @version 5.0.14
  */
 final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\HighchartsNavigation(true);
 
         $this->assertEquals(null, $obj1->getButtonOptions(), "The method getButtonOptions() does not return the expected value");
         $this->assertEquals(null, $obj1->getMenuItemHoverStyle(), "The method getMenuItemHoverStyle() does not return the expected value");
         $this->assertEquals(null, $obj1->getMenuItemStyle(), "The method getMenuItemStyle() does not return the expected value");
         $this->assertEquals(null, $obj1->getMenuStyle(), "The method getMenuStyle() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(false);
+        $obj0 = new \WBW\HighchartsBundle\API\Chart\HighchartsNavigation(false);
 
         $this->assertEquals(null, $obj0->getButtonOptions(), "The method getButtonOptions() does not return the expected value");
         $this->assertEquals(["background" => "#335cad", "color" => "#ffffff"], $obj0->getMenuItemHoverStyle(), "The method getMenuItemHoverStyle() does not return the expected value");
@@ -45,13 +45,13 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the clear() method.
+     * Tests the clear() method.
      *
      * @return void
      */
     public function testClear() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(false);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsNavigation(false);
 
         $obj->newButtonOptions();
 
@@ -62,13 +62,13 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsNavigation(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -80,22 +80,22 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewButtonOptions() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(false);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsNavigation(false);
 
         $res = $obj->newButtonOptions();
-        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions::class, $res, "The method newButtonOptions() does not return the expected object");
+        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions::class, $res, "The method newButtonOptions() does not return the expected object");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsNavigation(true);
 
-        $obj->setButtonOptions(new \WBW\Bundle\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions());
+        $obj->setButtonOptions(new \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions());
 
         $res1 = ["buttonOptions" => []];
         $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with button options");

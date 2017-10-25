@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line;
+namespace WBW\HighchartsBundle\API\Chart\PlotOptions\Line;
 
 use JsonSerializable;
 
 /**
  * Highcharts point.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Line
  * @version 5.0.14
  * @final
  */
@@ -26,7 +26,7 @@ final class HighchartsPoint implements JsonSerializable {
     /**
      * Events.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents
+     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents
      */
     private $events;
 
@@ -57,7 +57,7 @@ final class HighchartsPoint implements JsonSerializable {
     /**
      * Get the events.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents Returns the events.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents Returns the events.
      */
     public function getEvents() {
         return $this->events;
@@ -75,20 +75,20 @@ final class HighchartsPoint implements JsonSerializable {
     /**
      * Create a new events.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents Returns the events.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents Returns the events.
      */
     public function newEvents() {
-        $this->events = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents();
+        $this->events = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents();
         return $this->events;
     }
 
     /**
      * Set the events.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents $events The events.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line\HighchartsPoint Returns the highcharts point.
+     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents $events The events.
+     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Line\HighchartsPoint Returns the highcharts point.
      */
-    public function setEvents(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents $events = null) {
+    public function setEvents(\WBW\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents $events = null) {
         $this->events = $events;
         return $this;
     }

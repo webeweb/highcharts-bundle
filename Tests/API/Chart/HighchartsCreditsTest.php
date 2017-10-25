@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart;
+namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts credits test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart
  * @version 5.0.14
  */
 final class HighchartsCreditsTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\HighchartsCredits(true);
 
         $this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
         $this->assertEquals(null, $obj1->getHref(), "The method getHref() does not return the expected value");
@@ -37,7 +37,7 @@ final class HighchartsCreditsTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getStyle(), "The method getStyle() does not return the expected value");
         $this->assertEquals(null, $obj1->getText(), "The method getText() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits(false);
+        $obj0 = new \WBW\HighchartsBundle\API\Chart\HighchartsCredits(false);
 
         $this->assertEquals(true, $obj0->getEnabled(), "The method getEnabled() does not return the expected value");
         $this->assertEquals("http://www.highcharts.com", $obj0->getHref(), "The method getHref() does not return the expected value");
@@ -47,25 +47,25 @@ final class HighchartsCreditsTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsCredits(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsCredits(true);
 
         $obj->setEnabled(0);
 

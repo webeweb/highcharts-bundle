@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart;
+namespace WBW\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
 
 /**
  * Highcharts exporting.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart
  * @version 5.0.14
  * @final
  */
@@ -34,7 +34,7 @@ final class HighchartsExporting implements JsonSerializable {
     /**
      * Buttons.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons
+     * @var \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons
      */
     private $buttons;
 
@@ -241,7 +241,7 @@ final class HighchartsExporting implements JsonSerializable {
     /**
      * Get the buttons.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons Returns the buttons.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons Returns the buttons.
      */
     public function getButtons() {
         return $this->buttons;
@@ -394,10 +394,10 @@ final class HighchartsExporting implements JsonSerializable {
     /**
      * Create a new buttons.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons Returns the buttons.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons Returns the buttons.
      */
     public function newButtons() {
-        $this->buttons = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons();
+        $this->buttons = new \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons();
         return $this->buttons;
     }
 
@@ -405,7 +405,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the allow HTML.
      *
      * @param boolean $allowHTML The allow HTML.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setAllowHTML($allowHTML) {
         $this->allowHTML = $allowHTML;
@@ -415,10 +415,10 @@ final class HighchartsExporting implements JsonSerializable {
     /**
      * Set the buttons.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons $buttons The buttons.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @param \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons $buttons The buttons.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
-    public function setButtons(\WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons $buttons = null) {
+    public function setButtons(\WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons $buttons = null) {
         $this->buttons = $buttons;
         return $this;
     }
@@ -427,7 +427,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the chart options.
      *
      * @param array $chartOptions The chart options.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setChartOptions(array $chartOptions = null) {
         $this->chartOptions = $chartOptions;
@@ -438,7 +438,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the enabled.
      *
      * @param boolean $enabled The enabled.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setEnabled($enabled) {
         $this->enabled = $enabled;
@@ -449,7 +449,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the error.
      *
      * @param string $error The error.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setError($error) {
         $this->error = $error;
@@ -460,7 +460,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the fallback to export server.
      *
      * @param boolean $fallbackToExportServer The fallback to export server.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setFallbackToExportServer($fallbackToExportServer) {
         $this->fallbackToExportServer = $fallbackToExportServer;
@@ -471,7 +471,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the filename.
      *
      * @param string $filename The filename.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setFilename($filename) {
         $this->filename = $filename;
@@ -482,7 +482,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the form attributes.
      *
      * @param array $formAttributes The form attributes.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setFormAttributes(array $formAttributes = null) {
         $this->formAttributes = $formAttributes;
@@ -493,7 +493,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the lib URL.
      *
      * @param string $libURL The lib URL.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setLibURL($libURL) {
         $this->libURL = $libURL;
@@ -504,7 +504,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the menu item definitions.
      *
      * @param array $menuItemDefinitions The menu item definitions.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setMenuItemDefinitions(array $menuItemDefinitions = null) {
         $this->menuItemDefinitions = $menuItemDefinitions;
@@ -515,7 +515,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the print max width.
      *
      * @param integer $printMaxWidth The print max width.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setPrintMaxWidth($printMaxWidth) {
         $this->printMaxWidth = $printMaxWidth;
@@ -526,7 +526,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the scale.
      *
      * @param integer $scale The scale.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setScale($scale) {
         $this->scale = $scale;
@@ -537,7 +537,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the source height.
      *
      * @param integer $sourceHeight The source height.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setSourceHeight($sourceHeight) {
         $this->sourceHeight = $sourceHeight;
@@ -548,7 +548,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the source width.
      *
      * @param integer $sourceWidth The source width.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setSourceWidth($sourceWidth) {
         $this->sourceWidth = $sourceWidth;
@@ -559,7 +559,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the type.
      *
      * @param string $type The type.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setType($type) {
         switch ($type) {
@@ -577,7 +577,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the url.
      *
      * @param string $url The url.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setUrl($url) {
         $this->url = $url;
@@ -588,7 +588,7 @@ final class HighchartsExporting implements JsonSerializable {
      * Set the width.
      *
      * @param integer $width The width.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsExporting Returns the highcharts exporting.
      */
     public function setWidth($width) {
         $this->width = $width;

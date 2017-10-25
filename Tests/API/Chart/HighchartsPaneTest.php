@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart;
+namespace WBW\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts pane test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart
  * @version 5.0.14
  */
 final class HighchartsPaneTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\HighchartsPane(true);
 
         $this->assertEquals(null, $obj1->getBackground(), "The method getBackground() does not return the expected value");
         $this->assertEquals(null, $obj1->getCenter(), "The method getCenter() does not return the expected value");
@@ -37,7 +37,7 @@ final class HighchartsPaneTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getSize(), "The method getSize() does not return the expected value");
         $this->assertEquals(null, $obj1->getStartAngle(), "The method getStartAngle() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane(false);
+        $obj0 = new \WBW\HighchartsBundle\API\Chart\HighchartsPane(false);
 
         $this->assertEquals(null, $obj0->getBackground(), "The method getBackground() does not return the expected value");
         $this->assertEquals(["50%", "50%"], $obj0->getCenter(), "The method getCenter() does not return the expected value");
@@ -47,25 +47,25 @@ final class HighchartsPaneTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPane(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsPane(true);
 
         $obj->setBackground(["background" => "d229bbf31eaeebc7c88897732d8b932d"]);
 
@@ -77,19 +77,19 @@ final class HighchartsPaneTest extends PHPUnit_Framework_TestCase {
         $res2 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"]];
         $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with center");
 
-        $obj->setEndAngle(73);
+        $obj->setEndAngle(28);
 
-        $res3 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 73];
+        $res3 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 28];
         $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with end angle");
 
-        $obj->setSize(90);
+        $obj->setSize(65);
 
-        $res4 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 73, "size" => 90];
+        $res4 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 28, "size" => 65];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with size");
 
-        $obj->setStartAngle(35);
+        $obj->setStartAngle(41);
 
-        $res5 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 73, "size" => 90, "startAngle" => 35];
+        $res5 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 28, "size" => 65, "startAngle" => 41];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with start angle");
     }
 

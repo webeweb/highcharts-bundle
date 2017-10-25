@@ -24,7 +24,7 @@ use WBW\Bundle\HighchartsBundle\Wrapper\HighchartsWrapper;
 final class HighchartsWrapperTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the unwrap() method.
+     * Tests the unwrap() method.
      *
      * @return void
      */
@@ -42,7 +42,7 @@ final class HighchartsWrapperTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the wrap() method.
+     * Tests the wrap() method.
      *
      * @return void
      */

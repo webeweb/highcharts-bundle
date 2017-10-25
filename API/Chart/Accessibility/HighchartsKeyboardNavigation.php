@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\Accessibility;
+namespace WBW\HighchartsBundle\API\Chart\Accessibility;
 
 use JsonSerializable;
 
 /**
  * Highcharts keyboard navigation.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\Accessibility
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\Accessibility
  * @version 5.0.14
  * @final
  */
@@ -115,7 +115,7 @@ final class HighchartsKeyboardNavigation implements JsonSerializable {
      * Set the enabled.
      *
      * @param boolean $enabled The enabled.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation Returns the highcharts keyboard navigation.
+     * @return \WBW\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation Returns the highcharts keyboard navigation.
      */
     public function setEnabled($enabled) {
         $this->enabled = $enabled;
@@ -126,7 +126,7 @@ final class HighchartsKeyboardNavigation implements JsonSerializable {
      * Set the skip null points.
      *
      * @param boolean $skipNullPoints The skip null points.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation Returns the highcharts keyboard navigation.
+     * @return \WBW\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation Returns the highcharts keyboard navigation.
      */
     public function setSkipNullPoints($skipNullPoints) {
         $this->skipNullPoints = $skipNullPoints;
@@ -137,7 +137,7 @@ final class HighchartsKeyboardNavigation implements JsonSerializable {
      * Set the tab through chart elements.
      *
      * @param boolean $tabThroughChartElements The tab through chart elements.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation Returns the highcharts keyboard navigation.
+     * @return \WBW\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation Returns the highcharts keyboard navigation.
      */
     public function setTabThroughChartElements($tabThroughChartElements) {
         $this->tabThroughChartElements = $tabThroughChartElements;

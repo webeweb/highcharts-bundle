@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Options;
+namespace WBW\HighchartsBundle\Tests\API\Options;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts lang test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Options
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Options
  * @version 5.0.14
  */
 final class HighchartsLangTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Options\HighchartsLang(true);
 
         $this->assertEquals(null, $obj1->getContextButtonTitle(), "The method getContextButtonTitle() does not return the expected value");
         $this->assertEquals(null, $obj1->getDecimalPoint(), "The method getDecimalPoint() does not return the expected value");
@@ -52,7 +52,7 @@ final class HighchartsLangTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getThousandsSep(), "The method getThousandsSep() does not return the expected value");
         $this->assertEquals(null, $obj1->getWeekdays(), "The method getWeekdays() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang(false);
+        $obj0 = new \WBW\HighchartsBundle\API\Options\HighchartsLang(false);
 
         $this->assertEquals("Chart context menu", $obj0->getContextButtonTitle(), "The method getContextButtonTitle() does not return the expected value");
         $this->assertEquals(".", $obj0->getDecimalPoint(), "The method getDecimalPoint() does not return the expected value");
@@ -77,25 +77,25 @@ final class HighchartsLangTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang(true);
+        $obj = new \WBW\HighchartsBundle\API\Options\HighchartsLang(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang(true);
+        $obj = new \WBW\HighchartsBundle\API\Options\HighchartsLang(true);
 
         $obj->setContextButtonTitle("7a5efd58f7f05365b0f3f4b9573d73a9");
 
@@ -152,49 +152,49 @@ final class HighchartsLangTest extends PHPUnit_Framework_TestCase {
         $res11 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e"];
         $this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with no data");
 
-        $obj->setNumericSymbolMagnitude(0);
+        $obj->setNumericSymbolMagnitude(96);
 
-        $res12 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 0];
+        $res12 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 96];
         $this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with numeric symbol magnitude");
 
         $obj->setNumericSymbols(["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"]);
 
-        $res13 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 0, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"]];
+        $res13 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 96, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"]];
         $this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with numeric symbols");
 
         $obj->setPrintChart("864d4f633659213ec0e69fc169a4bac1");
 
-        $res14 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 0, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1"];
+        $res14 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 96, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1"];
         $this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with print chart");
 
         $obj->setResetZoom("3b4f63d9335b37193695773c54d06634");
 
-        $res15 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 0, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1", "resetZoom" => "3b4f63d9335b37193695773c54d06634"];
+        $res15 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 96, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1", "resetZoom" => "3b4f63d9335b37193695773c54d06634"];
         $this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with reset zoom");
 
         $obj->setResetZoomTitle("4644b6dcf8cb64bc947a3d7617d98cdd");
 
-        $res16 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 0, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1", "resetZoom" => "3b4f63d9335b37193695773c54d06634", "resetZoomTitle" => "4644b6dcf8cb64bc947a3d7617d98cdd"];
+        $res16 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 96, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1", "resetZoom" => "3b4f63d9335b37193695773c54d06634", "resetZoomTitle" => "4644b6dcf8cb64bc947a3d7617d98cdd"];
         $this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with reset zoom title");
 
         $obj->setShortMonths(["shortMonths" => "7cfa6eb2e9f41003ac5c121106dc32c1"]);
 
-        $res17 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 0, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1", "resetZoom" => "3b4f63d9335b37193695773c54d06634", "resetZoomTitle" => "4644b6dcf8cb64bc947a3d7617d98cdd", "shortMonths" => ["shortMonths" => "7cfa6eb2e9f41003ac5c121106dc32c1"]];
+        $res17 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 96, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1", "resetZoom" => "3b4f63d9335b37193695773c54d06634", "resetZoomTitle" => "4644b6dcf8cb64bc947a3d7617d98cdd", "shortMonths" => ["shortMonths" => "7cfa6eb2e9f41003ac5c121106dc32c1"]];
         $this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with short months");
 
         $obj->setShortWeekdays(["shortWeekdays" => "f232077d652edee073a547d6f8c9dbaa"]);
 
-        $res18 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 0, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1", "resetZoom" => "3b4f63d9335b37193695773c54d06634", "resetZoomTitle" => "4644b6dcf8cb64bc947a3d7617d98cdd", "shortMonths" => ["shortMonths" => "7cfa6eb2e9f41003ac5c121106dc32c1"], "shortWeekdays" => ["shortWeekdays" => "f232077d652edee073a547d6f8c9dbaa"]];
+        $res18 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 96, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1", "resetZoom" => "3b4f63d9335b37193695773c54d06634", "resetZoomTitle" => "4644b6dcf8cb64bc947a3d7617d98cdd", "shortMonths" => ["shortMonths" => "7cfa6eb2e9f41003ac5c121106dc32c1"], "shortWeekdays" => ["shortWeekdays" => "f232077d652edee073a547d6f8c9dbaa"]];
         $this->assertEquals($res18, $obj->toArray(), "The method toArray() does not return the expected array with short weekdays");
 
         $obj->setThousandsSep("62ca5281092a9f16f951c5b81a9e25f9");
 
-        $res19 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 0, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1", "resetZoom" => "3b4f63d9335b37193695773c54d06634", "resetZoomTitle" => "4644b6dcf8cb64bc947a3d7617d98cdd", "shortMonths" => ["shortMonths" => "7cfa6eb2e9f41003ac5c121106dc32c1"], "shortWeekdays" => ["shortWeekdays" => "f232077d652edee073a547d6f8c9dbaa"], "thousandsSep" => "62ca5281092a9f16f951c5b81a9e25f9"];
+        $res19 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 96, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1", "resetZoom" => "3b4f63d9335b37193695773c54d06634", "resetZoomTitle" => "4644b6dcf8cb64bc947a3d7617d98cdd", "shortMonths" => ["shortMonths" => "7cfa6eb2e9f41003ac5c121106dc32c1"], "shortWeekdays" => ["shortWeekdays" => "f232077d652edee073a547d6f8c9dbaa"], "thousandsSep" => "62ca5281092a9f16f951c5b81a9e25f9"];
         $this->assertEquals($res19, $obj->toArray(), "The method toArray() does not return the expected array with thousands sep");
 
         $obj->setWeekdays(["weekdays" => "92b9604ffb8fe10577de981be625a6d1"]);
 
-        $res20 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 0, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1", "resetZoom" => "3b4f63d9335b37193695773c54d06634", "resetZoomTitle" => "4644b6dcf8cb64bc947a3d7617d98cdd", "shortMonths" => ["shortMonths" => "7cfa6eb2e9f41003ac5c121106dc32c1"], "shortWeekdays" => ["shortWeekdays" => "f232077d652edee073a547d6f8c9dbaa"], "thousandsSep" => "62ca5281092a9f16f951c5b81a9e25f9", "weekdays" => ["weekdays" => "92b9604ffb8fe10577de981be625a6d1"]];
+        $res20 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 96, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1", "resetZoom" => "3b4f63d9335b37193695773c54d06634", "resetZoomTitle" => "4644b6dcf8cb64bc947a3d7617d98cdd", "shortMonths" => ["shortMonths" => "7cfa6eb2e9f41003ac5c121106dc32c1"], "shortWeekdays" => ["shortWeekdays" => "f232077d652edee073a547d6f8c9dbaa"], "thousandsSep" => "62ca5281092a9f16f951c5b81a9e25f9", "weekdays" => ["weekdays" => "92b9604ffb8fe10577de981be625a6d1"]];
         $this->assertEquals($res20, $obj->toArray(), "The method toArray() does not return the expected array with weekdays");
     }
 

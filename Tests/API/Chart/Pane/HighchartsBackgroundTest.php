@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Pane;
+namespace WBW\HighchartsBundle\Tests\API\Chart\Pane;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts background test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Pane
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Pane
  * @version 5.0.14
  */
 final class HighchartsBackgroundTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\Pane\HighchartsBackground(true);
 
         $this->assertEquals(null, $obj1->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
         $this->assertEquals(null, $obj1->getBorderColor(), "The method getBorderColor() does not return the expected value");
@@ -39,7 +39,7 @@ final class HighchartsBackgroundTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getOuterRadius(), "The method getOuterRadius() does not return the expected value");
         $this->assertEquals(null, $obj1->getShape(), "The method getShape() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground(false);
+        $obj0 = new \WBW\HighchartsBundle\API\Chart\Pane\HighchartsBackground(false);
 
         $this->assertEquals(null, $obj0->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
         $this->assertEquals("#cccccc", $obj0->getBorderColor(), "The method getBorderColor() does not return the expected value");
@@ -51,25 +51,25 @@ final class HighchartsBackgroundTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Pane\HighchartsBackground(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Pane\HighchartsBackground(true);
 
         $obj->setBackgroundColor("930f2a43179a7ae5fc25ed873223e99f");
 
@@ -81,29 +81,29 @@ final class HighchartsBackgroundTest extends PHPUnit_Framework_TestCase {
         $res2 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994"];
         $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with border color");
 
-        $obj->setBorderWidth(45);
+        $obj->setBorderWidth(37);
 
-        $res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 45];
+        $res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 37];
         $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with border width");
 
         $obj->setClassName("6f66e878c62db60568a3487869695820");
 
-        $res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 45, "className" => "6f66e878c62db60568a3487869695820"];
+        $res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820"];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with class name");
 
-        $obj->setInnerRadius(77);
+        $obj->setInnerRadius(35);
 
-        $res5 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 45, "className" => "6f66e878c62db60568a3487869695820", "innerRadius" => 77];
+        $res5 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "innerRadius" => 35];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with inner radius");
 
-        $obj->setOuterRadius(70);
+        $obj->setOuterRadius(87);
 
-        $res6 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 45, "className" => "6f66e878c62db60568a3487869695820", "innerRadius" => 77, "outerRadius" => 70];
+        $res6 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "innerRadius" => 35, "outerRadius" => 87];
         $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with outer radius");
 
         $obj->setShape("arc");
 
-        $res7 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 45, "className" => "6f66e878c62db60568a3487869695820", "innerRadius" => 77, "outerRadius" => 70, "shape" => "arc"];
+        $res7 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "innerRadius" => 35, "outerRadius" => 87, "shape" => "arc"];
         $this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with shape");
     }
 

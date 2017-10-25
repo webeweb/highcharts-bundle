@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge;
+namespace WBW\HighchartsBundle\API\Chart\Series\Gauge;
 
 use JsonSerializable;
 
 /**
  * Highcharts data.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\Series\Gauge
  * @version 5.0.14
  * @final
  */
@@ -64,7 +64,7 @@ final class HighchartsData implements JsonSerializable {
     /**
      * Events.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\Data\HighchartsEvents
+     * @var \WBW\HighchartsBundle\API\Chart\Series\Gauge\Data\HighchartsEvents
      */
     private $events;
 
@@ -206,7 +206,7 @@ final class HighchartsData implements JsonSerializable {
     /**
      * Get the events.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\Data\HighchartsEvents Returns the events.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\Data\HighchartsEvents Returns the events.
      */
     public function getEvents() {
         return $this->events;
@@ -269,10 +269,10 @@ final class HighchartsData implements JsonSerializable {
     /**
      * Create a new events.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\Data\HighchartsEvents Returns the events.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\Data\HighchartsEvents Returns the events.
      */
     public function newEvents() {
-        $this->events = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\Data\HighchartsEvents();
+        $this->events = new \WBW\HighchartsBundle\API\Chart\Series\Gauge\Data\HighchartsEvents();
         return $this->events;
     }
 
@@ -280,7 +280,7 @@ final class HighchartsData implements JsonSerializable {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -291,7 +291,7 @@ final class HighchartsData implements JsonSerializable {
      * Set the color.
      *
      * @param string $color The color.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
      */
     public function setColor($color) {
         $this->color = $color;
@@ -302,7 +302,7 @@ final class HighchartsData implements JsonSerializable {
      * Set the color index.
      *
      * @param integer $colorIndex The color index.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
      */
     public function setColorIndex($colorIndex) {
         $this->colorIndex = $colorIndex;
@@ -313,7 +313,7 @@ final class HighchartsData implements JsonSerializable {
      * Set the data labels.
      *
      * @param array $dataLabels The data labels.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
      */
     public function setDataLabels(array $dataLabels = null) {
         $this->dataLabels = $dataLabels;
@@ -324,7 +324,7 @@ final class HighchartsData implements JsonSerializable {
      * Set the description.
      *
      * @param string $description The description.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
      */
     public function setDescription($description) {
         $this->description = $description;
@@ -334,10 +334,10 @@ final class HighchartsData implements JsonSerializable {
     /**
      * Set the events.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\Data\HighchartsEvents $events The events.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
+     * @param \WBW\HighchartsBundle\API\Chart\Series\Gauge\Data\HighchartsEvents $events The events.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
      */
-    public function setEvents(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\Data\HighchartsEvents $events = null) {
+    public function setEvents(\WBW\HighchartsBundle\API\Chart\Series\Gauge\Data\HighchartsEvents $events = null) {
         $this->events = $events;
         return $this;
     }
@@ -346,7 +346,7 @@ final class HighchartsData implements JsonSerializable {
      * Set the id.
      *
      * @param string $id The id.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
      */
     public function setId($id) {
         $this->id = $id;
@@ -357,7 +357,7 @@ final class HighchartsData implements JsonSerializable {
      * Set the labelrank.
      *
      * @param integer $labelrank The labelrank.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
      */
     public function setLabelrank($labelrank) {
         $this->labelrank = $labelrank;
@@ -368,7 +368,7 @@ final class HighchartsData implements JsonSerializable {
      * Set the name.
      *
      * @param string $name The name.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
      */
     public function setName($name) {
         $this->name = $name;
@@ -379,7 +379,7 @@ final class HighchartsData implements JsonSerializable {
      * Set the selected.
      *
      * @param boolean $selected The selected.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
      */
     public function setSelected($selected) {
         $this->selected = $selected;
@@ -390,7 +390,7 @@ final class HighchartsData implements JsonSerializable {
      * Set the y.
      *
      * @param integer $y The y.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsData Returns the highcharts data.
      */
     public function setY($y) {
         $this->y = $y;

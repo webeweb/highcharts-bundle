@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons;
+namespace WBW\HighchartsBundle\API\Chart\Exporting\Buttons;
 
 use JsonSerializable;
 
 /**
  * Highcharts context button.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\Exporting\Buttons
  * @version 5.0.14
  * @final
  */
@@ -415,7 +415,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the align.
      *
      * @param string $align The align.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setAlign($align) {
         switch ($align) {
@@ -432,7 +432,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the enabled.
      *
      * @param boolean $enabled The enabled.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setEnabled($enabled) {
         $this->enabled = $enabled;
@@ -443,7 +443,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the height.
      *
      * @param integer $height The height.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setHeight($height) {
         $this->height = $height;
@@ -454,7 +454,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the menu items.
      *
      * @param array $menuItems The menu items.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setMenuItems(array $menuItems = null) {
         $this->menuItems = $menuItems;
@@ -465,7 +465,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the onclick.
      *
      * @param string $onclick The onclick.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setOnclick($onclick) {
         $this->onclick = $onclick;
@@ -476,7 +476,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the symbol.
      *
      * @param string $symbol The symbol.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setSymbol($symbol) {
         switch ($symbol) {
@@ -496,7 +496,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the symbol fill.
      *
      * @param string $symbolFill The symbol fill.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setSymbolFill($symbolFill) {
         $this->symbolFill = $symbolFill;
@@ -507,7 +507,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the symbol size.
      *
      * @param integer $symbolSize The symbol size.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setSymbolSize($symbolSize) {
         $this->symbolSize = $symbolSize;
@@ -518,7 +518,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the symbol stroke.
      *
      * @param string $symbolStroke The symbol stroke.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setSymbolStroke($symbolStroke) {
         $this->symbolStroke = $symbolStroke;
@@ -529,7 +529,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the symbol stroke width.
      *
      * @param integer $symbolStrokeWidth The symbol stroke width.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setSymbolStrokeWidth($symbolStrokeWidth) {
         $this->symbolStrokeWidth = $symbolStrokeWidth;
@@ -540,7 +540,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the symbol x.
      *
      * @param integer $symbolX The symbol x.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setSymbolX($symbolX) {
         $this->symbolX = $symbolX;
@@ -551,7 +551,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the symbol y.
      *
      * @param integer $symbolY The symbol y.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setSymbolY($symbolY) {
         $this->symbolY = $symbolY;
@@ -562,7 +562,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the text.
      *
      * @param string $text The text.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setText($text) {
         $this->text = $text;
@@ -573,7 +573,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the theme.
      *
      * @param array $theme The theme.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setTheme(array $theme = null) {
         $this->theme = $theme;
@@ -584,7 +584,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the vertical align.
      *
      * @param string $verticalAlign The vertical align.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setVerticalAlign($verticalAlign) {
         switch ($verticalAlign) {
@@ -601,7 +601,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the width.
      *
      * @param integer $width The width.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setWidth($width) {
         $this->width = $width;
@@ -612,7 +612,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the x.
      *
      * @param integer $x The x.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setX($x) {
         $this->x = $x;
@@ -623,7 +623,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * Set the y.
      *
      * @param integer $y The y.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
+     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the highcharts context button.
      */
     public function setY($y) {
         $this->y = $y;

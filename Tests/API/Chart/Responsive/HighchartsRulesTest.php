@@ -9,52 +9,52 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Responsive;
+namespace WBW\HighchartsBundle\Tests\API\Chart\Responsive;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts rules test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Responsive
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Responsive
  * @version 5.0.14
  */
 final class HighchartsRulesTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
 
         $this->assertEquals(null, $obj1->getChartOptions(), "The method getChartOptions() does not return the expected value");
         $this->assertEquals(null, $obj1->getCondition(), "The method getCondition() does not return the expected value");
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
 
         $obj->setChartOptions(["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"]);
 

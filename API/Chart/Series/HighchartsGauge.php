@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\Series;
+namespace WBW\HighchartsBundle\API\Chart\Series;
 
 use JsonSerializable;
 
 /**
  * Highcharts gauge.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\Series
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\Series
  * @version 5.0.14
  * @final
  */
@@ -108,7 +108,7 @@ final class HighchartsGauge implements JsonSerializable {
     /**
      * Events.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsEvents
+     * @var \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsEvents
      */
     private $events;
 
@@ -209,7 +209,7 @@ final class HighchartsGauge implements JsonSerializable {
     /**
      * Point.
      *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPoint
+     * @var \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPoint
      */
     private $point;
 
@@ -562,7 +562,7 @@ final class HighchartsGauge implements JsonSerializable {
     /**
      * Get the events.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsEvents Returns the events.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsEvents Returns the events.
      */
     public function getEvents() {
         return $this->events;
@@ -679,7 +679,7 @@ final class HighchartsGauge implements JsonSerializable {
     /**
      * Get the point.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPoint Returns the point.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPoint Returns the point.
      */
     public function getPoint() {
         return $this->point;
@@ -823,20 +823,20 @@ final class HighchartsGauge implements JsonSerializable {
     /**
      * Create a new events.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsEvents Returns the events.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsEvents Returns the events.
      */
     public function newEvents() {
-        $this->events = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsEvents();
+        $this->events = new \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsEvents();
         return $this->events;
     }
 
     /**
      * Create a new point.
      *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPoint Returns the point.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPoint Returns the point.
      */
     public function newPoint() {
-        $this->point = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPoint();
+        $this->point = new \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPoint();
         return $this->point;
     }
 
@@ -844,7 +844,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the animation.
      *
      * @param boolean $animation The animation.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setAnimation($animation) {
         $this->animation = $animation;
@@ -855,7 +855,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the animation limit.
      *
      * @param integer $animationLimit The animation limit.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setAnimationLimit($animationLimit) {
         $this->animationLimit = $animationLimit;
@@ -866,7 +866,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -877,7 +877,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the color.
      *
      * @param string $color The color.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setColor($color) {
         $this->color = $color;
@@ -888,7 +888,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the color index.
      *
      * @param integer $colorIndex The color index.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setColorIndex($colorIndex) {
         $this->colorIndex = $colorIndex;
@@ -899,7 +899,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the cursor.
      *
      * @param string $cursor The cursor.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setCursor($cursor) {
         switch ($cursor) {
@@ -919,7 +919,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the data.
      *
      * @param array $data The data.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setData(array $data = null) {
         $this->data = $data;
@@ -930,7 +930,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the data labels.
      *
      * @param array $dataLabels The data labels.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setDataLabels(array $dataLabels = null) {
         $this->dataLabels = $dataLabels;
@@ -941,7 +941,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the description.
      *
      * @param string $description The description.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setDescription($description) {
         $this->description = $description;
@@ -952,7 +952,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the dial.
      *
      * @param array $dial The dial.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setDial(array $dial = null) {
         $this->dial = $dial;
@@ -963,7 +963,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the enable mouse tracking.
      *
      * @param boolean $enableMouseTracking The enable mouse tracking.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setEnableMouseTracking($enableMouseTracking) {
         $this->enableMouseTracking = $enableMouseTracking;
@@ -973,10 +973,10 @@ final class HighchartsGauge implements JsonSerializable {
     /**
      * Set the events.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsEvents $events The events.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @param \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsEvents $events The events.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
-    public function setEvents(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsEvents $events = null) {
+    public function setEvents(\WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsEvents $events = null) {
         $this->events = $events;
         return $this;
     }
@@ -985,7 +985,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the expose element to a11y.
      *
      * @param boolean $exposeElementToA11y The expose element to a11y.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setExposeElementToA11y($exposeElementToA11y) {
         $this->exposeElementToA11y = $exposeElementToA11y;
@@ -996,7 +996,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the find nearest point by.
      *
      * @param string $findNearestPointBy The find nearest point by.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setFindNearestPointBy($findNearestPointBy) {
         switch ($findNearestPointBy) {
@@ -1012,7 +1012,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the get extremes from all.
      *
      * @param boolean $getExtremesFromAll The get extremes from all.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setGetExtremesFromAll($getExtremesFromAll) {
         $this->getExtremesFromAll = $getExtremesFromAll;
@@ -1023,7 +1023,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the id.
      *
      * @param string $id The id.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setId($id) {
         $this->id = $id;
@@ -1034,7 +1034,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the index.
      *
      * @param integer $index The index.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setIndex($index) {
         $this->index = $index;
@@ -1045,7 +1045,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the keys.
      *
      * @param array $keys The keys.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setKeys(array $keys = null) {
         $this->keys = $keys;
@@ -1056,7 +1056,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the legend index.
      *
      * @param integer $legendIndex The legend index.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setLegendIndex($legendIndex) {
         $this->legendIndex = $legendIndex;
@@ -1067,7 +1067,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the linked to.
      *
      * @param string $linkedTo The linked to.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setLinkedTo($linkedTo) {
         $this->linkedTo = $linkedTo;
@@ -1078,7 +1078,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the name.
      *
      * @param string $name The name.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setName($name) {
         $this->name = $name;
@@ -1089,7 +1089,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the negative color.
      *
      * @param string $negativeColor The negative color.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setNegativeColor($negativeColor) {
         $this->negativeColor = $negativeColor;
@@ -1100,7 +1100,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the overshoot.
      *
      * @param integer $overshoot The overshoot.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setOvershoot($overshoot) {
         $this->overshoot = $overshoot;
@@ -1111,7 +1111,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the pivot.
      *
      * @param array $pivot The pivot.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setPivot(array $pivot = null) {
         $this->pivot = $pivot;
@@ -1121,10 +1121,10 @@ final class HighchartsGauge implements JsonSerializable {
     /**
      * Set the point.
      *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPoint $point The point.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @param \WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPoint $point The point.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
-    public function setPoint(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPoint $point = null) {
+    public function setPoint(\WBW\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPoint $point = null) {
         $this->point = $point;
         return $this;
     }
@@ -1133,7 +1133,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the point description formatter.
      *
      * @param string $pointDescriptionFormatter The point description formatter.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setPointDescriptionFormatter($pointDescriptionFormatter) {
         $this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -1144,7 +1144,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the selected.
      *
      * @param boolean $selected The selected.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setSelected($selected) {
         $this->selected = $selected;
@@ -1155,7 +1155,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the show checkbox.
      *
      * @param boolean $showCheckbox The show checkbox.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setShowCheckbox($showCheckbox) {
         $this->showCheckbox = $showCheckbox;
@@ -1166,7 +1166,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the show in legend.
      *
      * @param boolean $showInLegend The show in legend.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setShowInLegend($showInLegend) {
         $this->showInLegend = $showInLegend;
@@ -1177,7 +1177,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the skip keyboard navigation.
      *
      * @param boolean $skipKeyboardNavigation The skip keyboard navigation.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setSkipKeyboardNavigation($skipKeyboardNavigation) {
         $this->skipKeyboardNavigation = $skipKeyboardNavigation;
@@ -1188,7 +1188,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the sticky tracking.
      *
      * @param boolean $stickyTracking The sticky tracking.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setStickyTracking($stickyTracking) {
         $this->stickyTracking = $stickyTracking;
@@ -1199,7 +1199,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the threshold.
      *
      * @param integer $threshold The threshold.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setThreshold($threshold) {
         $this->threshold = $threshold;
@@ -1210,7 +1210,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the tooltip.
      *
      * @param array $tooltip The tooltip.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setTooltip(array $tooltip = null) {
         $this->tooltip = $tooltip;
@@ -1221,7 +1221,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the type.
      *
      * @param string $type The type.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setType($type) {
         switch ($type) {
@@ -1252,7 +1252,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the visible.
      *
      * @param boolean $visible The visible.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setVisible($visible) {
         $this->visible = $visible;
@@ -1263,7 +1263,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the wrap.
      *
      * @param boolean $wrap The wrap.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setWrap($wrap) {
         $this->wrap = $wrap;
@@ -1274,7 +1274,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the x axis.
      *
      * @param integer|string $xAxis The x axis.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setXAxis($xAxis) {
         $this->xAxis = $xAxis;
@@ -1285,7 +1285,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the y axis.
      *
      * @param integer|string $yAxis The y axis.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setYAxis($yAxis) {
         $this->yAxis = $yAxis;
@@ -1296,7 +1296,7 @@ final class HighchartsGauge implements JsonSerializable {
      * Set the z index.
      *
      * @param integer $zIndex The z index.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
+     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsGauge Returns the highcharts gauge.
      */
     public function setZIndex($zIndex) {
         $this->zIndex = $zIndex;

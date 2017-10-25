@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\Chart;
+namespace WBW\HighchartsBundle\API\Chart\Chart;
 
 use JsonSerializable;
 
 /**
  * Highcharts reset zoom button.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\Chart
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\Chart
  * @version 5.0.14
  * @final
  */
@@ -115,7 +115,7 @@ final class HighchartsResetZoomButton implements JsonSerializable {
      * Set the position.
      *
      * @param array $position The position.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton Returns the highcharts reset zoom button.
+     * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton Returns the highcharts reset zoom button.
      */
     public function setPosition(array $position = null) {
         $this->position = $position;
@@ -126,7 +126,7 @@ final class HighchartsResetZoomButton implements JsonSerializable {
      * Set the relative to.
      *
      * @param string $relativeTo The relative to.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton Returns the highcharts reset zoom button.
+     * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton Returns the highcharts reset zoom button.
      */
     public function setRelativeTo($relativeTo) {
         switch ($relativeTo) {
@@ -142,7 +142,7 @@ final class HighchartsResetZoomButton implements JsonSerializable {
      * Set the theme.
      *
      * @param array $theme The theme.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton Returns the highcharts reset zoom button.
+     * @return \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton Returns the highcharts reset zoom button.
      */
     public function setTheme(array $theme = null) {
         $this->theme = $theme;

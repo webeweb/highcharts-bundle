@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Chart\Options3d;
+namespace WBW\HighchartsBundle\Tests\API\Chart\Chart\Options3d;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts frame test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Chart\Options3d
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart\Chart\Options3d
  * @version 5.0.14
  */
 final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
 
         $this->assertEquals(null, $obj1->getBack(), "The method getBack() does not return the expected value");
         $this->assertEquals(null, $obj1->getBottom(), "The method getBottom() does not return the expected value");
@@ -38,13 +38,13 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the clear() method.
+     * Tests the clear() method.
      *
      * @return void
      */
     public function testClear() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
         $obj->newBack();
         $obj->newBottom();
@@ -57,13 +57,13 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -75,10 +75,10 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewBack() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
         $res = $obj->newBack();
-        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack::class, $res, "The method newBack() does not return the expected object");
+        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack::class, $res, "The method newBack() does not return the expected object");
     }
 
     /**
@@ -88,10 +88,10 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewBottom() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
         $res = $obj->newBottom();
-        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom::class, $res, "The method newBottom() does not return the expected object");
+        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom::class, $res, "The method newBottom() does not return the expected object");
     }
 
     /**
@@ -101,32 +101,32 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewSide() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
         $res = $obj->newSide();
-        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide::class, $res, "The method newSide() does not return the expected object");
+        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide::class, $res, "The method newSide() does not return the expected object");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
 
-        $obj->setBack(new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack());
+        $obj->setBack(new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack());
 
         $res1 = ["back" => []];
         $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with back");
 
-        $obj->setBottom(new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom());
+        $obj->setBottom(new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom());
 
         $res2 = ["back" => [], "bottom" => []];
         $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with bottom");
 
-        $obj->setSide(new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide());
+        $obj->setSide(new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide());
 
         $res3 = ["back" => [], "bottom" => [], "side" => []];
         $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with side");

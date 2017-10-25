@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Options;
+namespace WBW\HighchartsBundle\API\Options;
 
 use JsonSerializable;
 
 /**
  * Highcharts lang.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Options
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Options
  * @version 5.0.14
  * @final
  */
@@ -451,7 +451,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the context button title.
      *
      * @param string $contextButtonTitle The context button title.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setContextButtonTitle($contextButtonTitle) {
         $this->contextButtonTitle = $contextButtonTitle;
@@ -462,7 +462,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the decimal point.
      *
      * @param string $decimalPoint The decimal point.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setDecimalPoint($decimalPoint) {
         $this->decimalPoint = $decimalPoint;
@@ -473,7 +473,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the download JPEG.
      *
      * @param string $downloadJPEG The download JPEG.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setDownloadJPEG($downloadJPEG) {
         $this->downloadJPEG = $downloadJPEG;
@@ -484,7 +484,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the download PDF.
      *
      * @param string $downloadPDF The download PDF.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setDownloadPDF($downloadPDF) {
         $this->downloadPDF = $downloadPDF;
@@ -495,7 +495,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the download PNG.
      *
      * @param string $downloadPNG The download PNG.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setDownloadPNG($downloadPNG) {
         $this->downloadPNG = $downloadPNG;
@@ -506,7 +506,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the download SVG.
      *
      * @param string $downloadSVG The download SVG.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setDownloadSVG($downloadSVG) {
         $this->downloadSVG = $downloadSVG;
@@ -517,7 +517,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the drill up text.
      *
      * @param string $drillUpText The drill up text.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setDrillUpText($drillUpText) {
         $this->drillUpText = $drillUpText;
@@ -528,7 +528,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the invalid date.
      *
      * @param string $invalidDate The invalid date.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setInvalidDate($invalidDate) {
         $this->invalidDate = $invalidDate;
@@ -539,7 +539,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the loading.
      *
      * @param string $loading The loading.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setLoading($loading) {
         $this->loading = $loading;
@@ -550,7 +550,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the months.
      *
      * @param array $months The months.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setMonths(array $months = null) {
         $this->months = $months;
@@ -561,7 +561,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the no data.
      *
      * @param string $noData The no data.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setNoData($noData) {
         $this->noData = $noData;
@@ -572,7 +572,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the numeric symbol magnitude.
      *
      * @param integer $numericSymbolMagnitude The numeric symbol magnitude.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setNumericSymbolMagnitude($numericSymbolMagnitude) {
         $this->numericSymbolMagnitude = $numericSymbolMagnitude;
@@ -583,7 +583,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the numeric symbols.
      *
      * @param array $numericSymbols The numeric symbols.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setNumericSymbols(array $numericSymbols = null) {
         $this->numericSymbols = $numericSymbols;
@@ -594,7 +594,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the print chart.
      *
      * @param string $printChart The print chart.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setPrintChart($printChart) {
         $this->printChart = $printChart;
@@ -605,7 +605,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the reset zoom.
      *
      * @param string $resetZoom The reset zoom.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setResetZoom($resetZoom) {
         $this->resetZoom = $resetZoom;
@@ -616,7 +616,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the reset zoom title.
      *
      * @param string $resetZoomTitle The reset zoom title.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setResetZoomTitle($resetZoomTitle) {
         $this->resetZoomTitle = $resetZoomTitle;
@@ -627,7 +627,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the short months.
      *
      * @param array $shortMonths The short months.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setShortMonths(array $shortMonths = null) {
         $this->shortMonths = $shortMonths;
@@ -638,7 +638,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the short weekdays.
      *
      * @param array $shortWeekdays The short weekdays.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setShortWeekdays(array $shortWeekdays = null) {
         $this->shortWeekdays = $shortWeekdays;
@@ -649,7 +649,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the thousands sep.
      *
      * @param string $thousandsSep The thousands sep.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setThousandsSep($thousandsSep) {
         $this->thousandsSep = $thousandsSep;
@@ -660,7 +660,7 @@ final class HighchartsLang implements JsonSerializable {
      * Set the weekdays.
      *
      * @param array $weekdays The weekdays.
-     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
+     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the highcharts lang.
      */
     public function setWeekdays(array $weekdays = null) {
         $this->weekdays = $weekdays;

@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart;
+namespace WBW\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
 
 /**
  * Highcharts no data.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart
  * @version 5.0.14
  * @final
  */
@@ -135,7 +135,7 @@ final class HighchartsNoData implements JsonSerializable {
      * Set the attr.
      *
      * @param array $attr The attr.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData Returns the highcharts no data.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsNoData Returns the highcharts no data.
      */
     public function setAttr(array $attr = null) {
         $this->attr = $attr;
@@ -146,7 +146,7 @@ final class HighchartsNoData implements JsonSerializable {
      * Set the position.
      *
      * @param array $position The position.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData Returns the highcharts no data.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsNoData Returns the highcharts no data.
      */
     public function setPosition(array $position = null) {
         $this->position = $position;
@@ -157,7 +157,7 @@ final class HighchartsNoData implements JsonSerializable {
      * Set the style.
      *
      * @param array $style The style.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData Returns the highcharts no data.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsNoData Returns the highcharts no data.
      */
     public function setStyle(array $style = null) {
         $this->style = $style;
@@ -168,7 +168,7 @@ final class HighchartsNoData implements JsonSerializable {
      * Set the use HTML.
      *
      * @param boolean $useHTML The use HTML.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData Returns the highcharts no data.
+     * @return \WBW\HighchartsBundle\API\Chart\HighchartsNoData Returns the highcharts no data.
      */
     public function setUseHTML($useHTML) {
         $this->useHTML = $useHTML;

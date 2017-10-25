@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Funnel;
+namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Funnel;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts data labels test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Funnel
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Funnel
  * @version 5.0.14
  */
 final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\HighchartsDataLabels(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\HighchartsDataLabels(true);
 
         $this->assertEquals(null, $obj1->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
         $this->assertEquals(null, $obj1->getBorderColor(), "The method getBorderColor() does not return the expected value");
@@ -60,7 +60,7 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getY(), "The method getY() does not return the expected value");
         $this->assertEquals(null, $obj1->getZIndex(), "The method getZIndex() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\HighchartsDataLabels(false);
+        $obj0 = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\HighchartsDataLabels(false);
 
         $this->assertEquals(null, $obj0->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
         $this->assertEquals(null, $obj0->getBorderColor(), "The method getBorderColor() does not return the expected value");
@@ -93,25 +93,25 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\HighchartsDataLabels(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\HighchartsDataLabels(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\HighchartsDataLabels(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\HighchartsDataLabels(true);
 
         $obj->setBackgroundColor("930f2a43179a7ae5fc25ed873223e99f");
 
@@ -123,134 +123,134 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
         $res2 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994"];
         $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with border color");
 
-        $obj->setBorderRadius(55);
+        $obj->setBorderRadius(62);
 
-        $res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55];
+        $res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62];
         $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with border radius");
 
-        $obj->setBorderWidth(53);
+        $obj->setBorderWidth(37);
 
-        $res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53];
+        $res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with border width");
 
         $obj->setClassName("6f66e878c62db60568a3487869695820");
 
-        $res5 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820"];
+        $res5 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820"];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with class name");
 
         $obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
-        $res6 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
+        $res6 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
         $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with color");
 
         $obj->setConnectorColor("8bf77ed7251dc34fbae6786923398a9d");
 
-        $res7 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d"];
+        $res7 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d"];
         $this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with connector color");
 
-        $obj->setConnectorPadding(40);
+        $obj->setConnectorPadding(74);
 
-        $res8 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40];
+        $res8 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74];
         $this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with connector padding");
 
-        $obj->setConnectorWidth(50);
+        $obj->setConnectorWidth(20);
 
-        $res9 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50];
+        $res9 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20];
         $this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with connector width");
 
-        $obj->setCrop(0);
+        $obj->setCrop(1);
 
-        $res10 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0];
+        $res10 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1];
         $this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with crop");
 
-        $obj->setDefer(1);
+        $obj->setDefer(0);
 
-        $res11 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1];
+        $res11 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0];
         $this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with defer");
 
-        $obj->setDistance(29);
+        $obj->setDistance(91);
 
-        $res12 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29];
+        $res12 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91];
         $this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with distance");
 
-        $obj->setEnabled(1);
+        $obj->setEnabled(0);
 
-        $res13 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1];
+        $res13 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0];
         $this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
         $obj->setFormat("1ddcb92ade31c8fbd370001f9b29a7d9");
 
-        $res14 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9"];
+        $res14 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9"];
         $this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with format");
 
         $obj->setFormatter("f2ffc59487832cbad265a8fef2133592");
 
-        $res15 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
+        $res15 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
         $this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with formatter");
 
-        $obj->setInside(0);
+        $obj->setInside(1);
 
-        $res16 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0];
+        $res16 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1];
         $this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with inside");
 
         $obj->setOverflow("none");
 
-        $res17 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none"];
+        $res17 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none"];
         $this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with overflow");
 
-        $obj->setPadding(23);
+        $obj->setPadding(78);
 
-        $res18 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 23];
+        $res18 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 78];
         $this->assertEquals($res18, $obj->toArray(), "The method toArray() does not return the expected array with padding");
 
-        $obj->setRotation(62);
+        $obj->setRotation(72);
 
-        $res19 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 23, "rotation" => 62];
+        $res19 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 78, "rotation" => 72];
         $this->assertEquals($res19, $obj->toArray(), "The method toArray() does not return the expected array with rotation");
 
         $obj->setShadow(1);
 
-        $res20 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 23, "rotation" => 62, "shadow" => 1];
+        $res20 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 78, "rotation" => 72, "shadow" => 1];
         $this->assertEquals($res20, $obj->toArray(), "The method toArray() does not return the expected array with shadow");
 
         $obj->setShape("8c73a98a300905900337f535531dfca6");
 
-        $res21 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 23, "rotation" => 62, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6"];
+        $res21 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 78, "rotation" => 72, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6"];
         $this->assertEquals($res21, $obj->toArray(), "The method toArray() does not return the expected array with shape");
 
         $obj->setSoftConnector(0);
 
-        $res22 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 23, "rotation" => 62, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 0];
+        $res22 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 78, "rotation" => 72, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 0];
         $this->assertEquals($res22, $obj->toArray(), "The method toArray() does not return the expected array with soft connector");
 
         $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-        $res23 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 23, "rotation" => 62, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+        $res23 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 78, "rotation" => 72, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
         $this->assertEquals($res23, $obj->toArray(), "The method toArray() does not return the expected array with style");
 
         $obj->setUseHTML(0);
 
-        $res24 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 23, "rotation" => 62, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0];
+        $res24 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 78, "rotation" => 72, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0];
         $this->assertEquals($res24, $obj->toArray(), "The method toArray() does not return the expected array with use HTML");
 
         $obj->setVerticalAlign("bottom");
 
-        $res25 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 23, "rotation" => 62, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "verticalAlign" => "bottom"];
+        $res25 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 78, "rotation" => 72, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "verticalAlign" => "bottom"];
         $this->assertEquals($res25, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
 
-        $obj->setX(5);
+        $obj->setX(75);
 
-        $res26 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 23, "rotation" => 62, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "verticalAlign" => "bottom", "x" => 5];
+        $res26 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 78, "rotation" => 72, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "verticalAlign" => "bottom", "x" => 75];
         $this->assertEquals($res26, $obj->toArray(), "The method toArray() does not return the expected array with x");
 
-        $obj->setY(22);
+        $obj->setY(61);
 
-        $res27 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 23, "rotation" => 62, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "verticalAlign" => "bottom", "x" => 5, "y" => 22];
+        $res27 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 78, "rotation" => 72, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "verticalAlign" => "bottom", "x" => 75, "y" => 61];
         $this->assertEquals($res27, $obj->toArray(), "The method toArray() does not return the expected array with y");
 
-        $obj->setZIndex(5);
+        $obj->setZIndex(38);
 
-        $res28 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 53, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 40, "connectorWidth" => 50, "crop" => 0, "defer" => 1, "distance" => 29, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 23, "rotation" => 62, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "verticalAlign" => "bottom", "x" => 5, "y" => 22, "zIndex" => 5];
+        $res28 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 62, "borderWidth" => 37, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 74, "connectorWidth" => 20, "crop" => 1, "defer" => 0, "distance" => 91, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 78, "rotation" => 72, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 0, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "verticalAlign" => "bottom", "x" => 75, "y" => 61, "zIndex" => 38];
         $this->assertEquals($res28, $obj->toArray(), "The method toArray() does not return the expected array with z index");
     }
 

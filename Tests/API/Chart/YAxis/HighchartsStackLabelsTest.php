@@ -9,27 +9,27 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\YAxis;
+namespace WBW\HighchartsBundle\Tests\API\Chart\YAxis;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts stack labels test.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\YAxis
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\Tests\API\Chart\YAxis
  * @version 5.0.14
  */
 final class HighchartsStackLabelsTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * Test the __construct() method.
+     * Tests the __construct() method.
      *
      * @return void
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels(true);
+        $obj1 = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels(true);
 
         $this->assertEquals(null, $obj1->getAlign(), "The method getAlign() does not return the expected value");
         $this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
@@ -43,7 +43,7 @@ final class HighchartsStackLabelsTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getX(), "The method getX() does not return the expected value");
         $this->assertEquals(null, $obj1->getY(), "The method getY() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels(false);
+        $obj0 = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels(false);
 
         $this->assertEquals(null, $obj0->getAlign(), "The method getAlign() does not return the expected value");
         $this->assertEquals(false, $obj0->getEnabled(), "The method getEnabled() does not return the expected value");
@@ -59,25 +59,25 @@ final class HighchartsStackLabelsTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * Test the jsonSerialize() method.
+     * Tests the jsonSerialize() method.
      *
      * @return void
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
 
     /**
-     * Test the toArray() method.
+     * Tests the toArray() method.
      *
      * @return void
      */
     public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels(true);
+        $obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels(true);
 
         $obj->setAlign("right");
 
@@ -99,39 +99,39 @@ final class HighchartsStackLabelsTest extends PHPUnit_Framework_TestCase {
         $res4 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with formatter");
 
-        $obj->setRotation(9);
+        $obj->setRotation(91);
 
-        $res5 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 9];
+        $res5 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 91];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with rotation");
 
         $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-        $res6 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 9, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+        $res6 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 91, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
         $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with style");
 
         $obj->setTextAlign("right");
 
-        $res7 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 9, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right"];
+        $res7 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 91, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right"];
         $this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with text align");
 
         $obj->setUseHTML(1);
 
-        $res8 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 9, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 1];
+        $res8 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 91, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 1];
         $this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with use HTML");
 
         $obj->setVerticalAlign("bottom");
 
-        $res9 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 9, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 1, "verticalAlign" => "bottom"];
+        $res9 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 91, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 1, "verticalAlign" => "bottom"];
         $this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
 
-        $obj->setX(38);
+        $obj->setX(31);
 
-        $res10 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 9, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 1, "verticalAlign" => "bottom", "x" => 38];
+        $res10 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 91, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 1, "verticalAlign" => "bottom", "x" => 31];
         $this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with x");
 
-        $obj->setY(10);
+        $obj->setY(39);
 
-        $res11 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 9, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 1, "verticalAlign" => "bottom", "x" => 38, "y" => 10];
+        $res11 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 91, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 1, "verticalAlign" => "bottom", "x" => 31, "y" => 39];
         $this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with y");
     }
 

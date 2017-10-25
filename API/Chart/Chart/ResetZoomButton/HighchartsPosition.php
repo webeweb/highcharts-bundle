@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton;
+namespace WBW\HighchartsBundle\API\Chart\Chart\ResetZoomButton;
 
 use JsonSerializable;
 
 /**
  * Highcharts position.
  *
- * @author NdC/WBW <https://github.com/webeweb/>
- * @package WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton
+ * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
+ * @package WBW\HighchartsBundle\API\Chart\Chart\ResetZoomButton
  * @version 5.0.14
  * @final
  */
@@ -131,7 +131,7 @@ final class HighchartsPosition implements JsonSerializable {
      * Set the align.
      *
      * @param string $align The align.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition Returns the highcharts position.
+     * @return \WBW\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition Returns the highcharts position.
      */
     public function setAlign($align) {
         $this->align = $align;
@@ -142,7 +142,7 @@ final class HighchartsPosition implements JsonSerializable {
      * Set the vertical align.
      *
      * @param string $verticalAlign The vertical align.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition Returns the highcharts position.
+     * @return \WBW\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition Returns the highcharts position.
      */
     public function setVerticalAlign($verticalAlign) {
         switch ($verticalAlign) {
@@ -159,7 +159,7 @@ final class HighchartsPosition implements JsonSerializable {
      * Set the x.
      *
      * @param integer $x The x.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition Returns the highcharts position.
+     * @return \WBW\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition Returns the highcharts position.
      */
     public function setX($x) {
         $this->x = $x;
@@ -170,7 +170,7 @@ final class HighchartsPosition implements JsonSerializable {
      * Set the y.
      *
      * @param integer $y The y.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition Returns the highcharts position.
+     * @return \WBW\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition Returns the highcharts position.
      */
     public function setY($y) {
         $this->y = $y;
