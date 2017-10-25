@@ -18,7 +18,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @author NdC/WBW <https://github.com/webeweb/>
  * @package WBW\Bundle\HighchartsBundle
- * @version 5.0.14
  * @final
  */
 final class WBWHighchartsBundle extends Bundle {

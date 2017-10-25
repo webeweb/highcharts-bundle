@@ -16,18 +16,17 @@ namespace WBW\Bundle\HighchartsBundle\Exception;
  *
  * @author NdC/WBW <https://github.com/webeweb/>
  * @package WBW\Bundle\HighchartsBundle\Exception
- * @version 5.0.14
  * @final
  */
 final class HighchartsFileNotFoundException extends AbstractHighchartsException {
 
-	/**
-	 * Constructor.
-	 *
-	 * @param string $filename The file name.
-	 */
-	public function __construct($filename) {
-		parent::__construct("The file \"" . $filename . "\" was not found");
-	}
+    /**
+     * Constructor.
+     *
+     * @param string $filename The file name.
+     */
+    public function __construct($filename) {
+        parent::__construct("The file \"" . $filename . "\" was not found");
+    }
 
 }

@@ -21,22 +21,21 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  *
  * @author NdC/WBW <https://github.com/webeweb/>
  * @package WBW\Bundle\HighchartsBundle\DependencyInjection
- * @version 5.0.14
  * @final
  */
 final class WBWHighchartsExtension extends Extension {
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function load(array $configs, ContainerBuilder $container) {
+    /**
+     * {@inheritdoc}
+     */
+    public function load(array $configs, ContainerBuilder $container) {
 
-		// Create the file locator.
-		$fileLocator = new FileLocator(__DIR__ . "/../Resources/config");
+        // Create the file locator.
+        $fileLocator = new FileLocator(__DIR__ . "/../Resources/config");
 
-		// Load the services.
-		$serviceLoader = new YamlFileLoader($container, $fileLocator);
-		$serviceLoader->load("services.yml");
-	}
+        // Load the services.
+        $serviceLoader = new YamlFileLoader($container, $fileLocator);
+        $serviceLoader->load("services.yml");
+    }
 
 }

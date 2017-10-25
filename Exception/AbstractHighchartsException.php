@@ -18,18 +18,18 @@ use Exception;
  *
  * @author NdC/WBW <https://github.com/webeweb/>
  * @package WBW\Bundle\HighchartsBundle\Exception
- * @version 5.0.14
+ * @abstract
  */
 abstract class AbstractHighchartsException extends Exception {
 
-	/**
-	 * Constructor.
-	 *
-	 * @param string $message The message.
-	 * @param Exception $previous The previous exception.
-	 */
-	public function __construct($message, $code = 0, Exception $previous = null) {
-		parent::__construct($message, $code, $previous);
-	}
+    /**
+     * Constructor.
+     *
+     * @param string $message The message.
+     * @param Exception $previous The previous exception.
+     */
+    public function __construct($message, $code = 0, Exception $previous = null) {
+        parent::__construct($message, $code, $previous);
+    }
 
 }
