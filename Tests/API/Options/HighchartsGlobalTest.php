@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Options;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Options;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts global test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Options
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Options
  * @version 5.0.14
  */
 final class HighchartsGlobalTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsGlobalTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Options\HighchartsGlobal(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal(true);
 
         $this->assertEquals(null, $obj1->getDate(), "The method getDate() does not return the expected value");
         $this->assertEquals(null, $obj1->getVMLRadialGradientURL(), "The method getVMLRadialGradientURL() does not return the expected value");
@@ -39,7 +39,7 @@ final class HighchartsGlobalTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getTimezoneOffset(), "The method getTimezoneOffset() does not return the expected value");
         $this->assertEquals(null, $obj1->getUseUTC(), "The method getUseUTC() does not return the expected value");
 
-        $obj0 = new \WBW\HighchartsBundle\API\Options\HighchartsGlobal(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal(false);
 
         $this->assertEquals(null, $obj0->getDate(), "The method getDate() does not return the expected value");
         $this->assertEquals("http://code.highcharts.com/{version}/gfx/vml-radial-gradient.png", $obj0->getVMLRadialGradientURL(), "The method getVMLRadialGradientURL() does not return the expected value");
@@ -57,7 +57,7 @@ final class HighchartsGlobalTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Options\HighchartsGlobal(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -69,7 +69,7 @@ final class HighchartsGlobalTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Options\HighchartsGlobal(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal(true);
 
         $obj->setDate(["Date" => "44749712dbec183e983dcd78a7736c41"]);
 
@@ -96,14 +96,14 @@ final class HighchartsGlobalTest extends PHPUnit_Framework_TestCase {
         $res5 = ["Date" => ["Date" => "44749712dbec183e983dcd78a7736c41"], "VMLRadialGradientURL" => "4fff8f495410c9be27e06b48ed58de29", "canvasToolsURL" => "a676408d51fa75bb7824a5b404b76cd7", "getTimezoneOffset" => "bc2cf98d144cf7852b57fe1dc90d1199", "timezone" => "b2c6cc48f97ccd71b16d31d88fc177a6"];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with timezone");
 
-        $obj->setTimezoneOffset(46);
+        $obj->setTimezoneOffset(30);
 
-        $res6 = ["Date" => ["Date" => "44749712dbec183e983dcd78a7736c41"], "VMLRadialGradientURL" => "4fff8f495410c9be27e06b48ed58de29", "canvasToolsURL" => "a676408d51fa75bb7824a5b404b76cd7", "getTimezoneOffset" => "bc2cf98d144cf7852b57fe1dc90d1199", "timezone" => "b2c6cc48f97ccd71b16d31d88fc177a6", "timezoneOffset" => 46];
+        $res6 = ["Date" => ["Date" => "44749712dbec183e983dcd78a7736c41"], "VMLRadialGradientURL" => "4fff8f495410c9be27e06b48ed58de29", "canvasToolsURL" => "a676408d51fa75bb7824a5b404b76cd7", "getTimezoneOffset" => "bc2cf98d144cf7852b57fe1dc90d1199", "timezone" => "b2c6cc48f97ccd71b16d31d88fc177a6", "timezoneOffset" => 30];
         $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with timezone offset");
 
-        $obj->setUseUTC(1);
+        $obj->setUseUTC(0);
 
-        $res7 = ["Date" => ["Date" => "44749712dbec183e983dcd78a7736c41"], "VMLRadialGradientURL" => "4fff8f495410c9be27e06b48ed58de29", "canvasToolsURL" => "a676408d51fa75bb7824a5b404b76cd7", "getTimezoneOffset" => "bc2cf98d144cf7852b57fe1dc90d1199", "timezone" => "b2c6cc48f97ccd71b16d31d88fc177a6", "timezoneOffset" => 46, "useUTC" => 1];
+        $res7 = ["Date" => ["Date" => "44749712dbec183e983dcd78a7736c41"], "VMLRadialGradientURL" => "4fff8f495410c9be27e06b48ed58de29", "canvasToolsURL" => "a676408d51fa75bb7824a5b404b76cd7", "getTimezoneOffset" => "bc2cf98d144cf7852b57fe1dc90d1199", "timezone" => "b2c6cc48f97ccd71b16d31d88fc177a6", "timezoneOffset" => 30, "useUTC" => 0];
         $this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with use UTC");
     }
 

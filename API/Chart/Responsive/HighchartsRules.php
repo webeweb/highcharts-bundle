@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\Responsive;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\Responsive;
 
 use JsonSerializable;
 
 /**
  * Highcharts rules.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\Responsive
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\Responsive
  * @version 5.0.14
  * @final
  */
@@ -95,7 +95,7 @@ final class HighchartsRules implements JsonSerializable {
      * Set the chart options.
      *
      * @param array $chartOptions The chart options.
-     * @return \WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules Returns the highcharts rules.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\HighchartsRules Returns the highcharts rules.
      */
     public function setChartOptions(array $chartOptions = null) {
         $this->chartOptions = $chartOptions;
@@ -106,7 +106,7 @@ final class HighchartsRules implements JsonSerializable {
      * Set the condition.
      *
      * @param array $condition The condition.
-     * @return \WBW\HighchartsBundle\API\Chart\Responsive\HighchartsRules Returns the highcharts rules.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\HighchartsRules Returns the highcharts rules.
      */
     public function setCondition(array $condition = null) {
         $this->condition = $condition;

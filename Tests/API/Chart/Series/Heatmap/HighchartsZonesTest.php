@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Heatmap;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Heatmap;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts zones test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\Series\Heatmap
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Heatmap
  * @version 5.0.14
  */
 final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsZones(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsZones(true);
 
         $this->assertEquals(null, $obj1->getClassName(), "The method getClassName() does not return the expected value");
         $this->assertEquals(null, $obj1->getColor(), "The method getColor() does not return the expected value");
@@ -45,7 +45,7 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsZones(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsZones(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -57,7 +57,7 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsZones(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsZones(true);
 
         $obj->setClassName("6f66e878c62db60568a3487869695820");
 
@@ -79,9 +79,9 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
         $res4 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-        $obj->setValue(48);
+        $obj->setValue(87);
 
-        $res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "value" => 48];
+        $res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "value" => 87];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with value");
     }
 

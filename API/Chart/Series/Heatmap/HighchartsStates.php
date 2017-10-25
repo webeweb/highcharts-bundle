@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\Series\Heatmap;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap;
 
 use JsonSerializable;
 
 /**
  * Highcharts states.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\Series\Heatmap
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap
  * @version 5.0.14
  * @final
  */
@@ -26,7 +26,7 @@ final class HighchartsStates implements JsonSerializable {
     /**
      * Hover.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\Series\Heatmap\States\HighchartsHover
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\States\HighchartsHover
      */
     private $hover;
 
@@ -57,7 +57,7 @@ final class HighchartsStates implements JsonSerializable {
     /**
      * Get the hover.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Heatmap\States\HighchartsHover Returns the hover.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\States\HighchartsHover Returns the hover.
      */
     public function getHover() {
         return $this->hover;
@@ -75,20 +75,20 @@ final class HighchartsStates implements JsonSerializable {
     /**
      * Create a new hover.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Heatmap\States\HighchartsHover Returns the hover.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\States\HighchartsHover Returns the hover.
      */
     public function newHover() {
-        $this->hover = new \WBW\HighchartsBundle\API\Chart\Series\Heatmap\States\HighchartsHover();
+        $this->hover = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\States\HighchartsHover();
         return $this->hover;
     }
 
     /**
      * Set the hover.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\Series\Heatmap\States\HighchartsHover $hover The hover.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsStates Returns the highcharts states.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\States\HighchartsHover $hover The hover.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\HighchartsStates Returns the highcharts states.
      */
-    public function setHover(\WBW\HighchartsBundle\API\Chart\Series\Heatmap\States\HighchartsHover $hover = null) {
+    public function setHover(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\States\HighchartsHover $hover = null) {
         $this->hover = $hover;
         return $this;
     }

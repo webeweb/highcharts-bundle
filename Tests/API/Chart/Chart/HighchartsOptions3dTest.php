@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\Chart;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Chart;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts options3d test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\Chart
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Chart
  * @version 5.0.14
  */
 final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(true);
 
         $this->assertEquals(null, $obj1->getAlpha(), "The method getAlpha() does not return the expected value");
         $this->assertEquals(null, $obj1->getAxisLabelPosition(), "The method getAxisLabelPosition() does not return the expected value");
@@ -40,7 +40,7 @@ final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getFrame(), "The method getFrame() does not return the expected value");
         $this->assertEquals(null, $obj1->getViewDistance(), "The method getViewDistance() does not return the expected value");
 
-        $obj0 = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(false);
 
         $this->assertEquals(0, $obj0->getAlpha(), "The method getAlpha() does not return the expected value");
         $this->assertEquals(null, $obj0->getAxisLabelPosition(), "The method getAxisLabelPosition() does not return the expected value");
@@ -59,7 +59,7 @@ final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
      */
     public function testClear() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(false);
 
         $obj->newFrame();
 
@@ -76,7 +76,7 @@ final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -88,10 +88,10 @@ final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewFrame() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(false);
 
         $res = $obj->newFrame();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame::class, $res, "The method newFrame() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame::class, $res, "The method newFrame() does not return the expected object");
     }
 
     /**
@@ -101,46 +101,46 @@ final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(true);
 
-        $obj->setAlpha(80);
+        $obj->setAlpha(20);
 
-        $res1 = ["alpha" => 80];
+        $res1 = ["alpha" => 20];
         $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with alpha");
 
         $obj->setAxisLabelPosition("auto");
 
-        $res2 = ["alpha" => 80, "axisLabelPosition" => "auto"];
+        $res2 = ["alpha" => 20, "axisLabelPosition" => "auto"];
         $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with axis label position");
 
-        $obj->setBeta(31);
+        $obj->setBeta(85);
 
-        $res3 = ["alpha" => 80, "axisLabelPosition" => "auto", "beta" => 31];
+        $res3 = ["alpha" => 20, "axisLabelPosition" => "auto", "beta" => 85];
         $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with beta");
 
-        $obj->setDepth(5);
+        $obj->setDepth(42);
 
-        $res4 = ["alpha" => 80, "axisLabelPosition" => "auto", "beta" => 31, "depth" => 5];
+        $res4 = ["alpha" => 20, "axisLabelPosition" => "auto", "beta" => 85, "depth" => 42];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with depth");
 
-        $obj->setEnabled(1);
+        $obj->setEnabled(0);
 
-        $res5 = ["alpha" => 80, "axisLabelPosition" => "auto", "beta" => 31, "depth" => 5, "enabled" => 1];
+        $res5 = ["alpha" => 20, "axisLabelPosition" => "auto", "beta" => 85, "depth" => 42, "enabled" => 0];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
         $obj->setFitToPlot(1);
 
-        $res6 = ["alpha" => 80, "axisLabelPosition" => "auto", "beta" => 31, "depth" => 5, "enabled" => 1, "fitToPlot" => 1];
+        $res6 = ["alpha" => 20, "axisLabelPosition" => "auto", "beta" => 85, "depth" => 42, "enabled" => 0, "fitToPlot" => 1];
         $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with fit to plot");
 
-        $obj->setFrame(new \WBW\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame());
+        $obj->setFrame(new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame());
 
-        $res7 = ["alpha" => 80, "axisLabelPosition" => "auto", "beta" => 31, "depth" => 5, "enabled" => 1, "fitToPlot" => 1, "frame" => []];
+        $res7 = ["alpha" => 20, "axisLabelPosition" => "auto", "beta" => 85, "depth" => 42, "enabled" => 0, "fitToPlot" => 1, "frame" => []];
         $this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with frame");
 
-        $obj->setViewDistance(72);
+        $obj->setViewDistance(6);
 
-        $res8 = ["alpha" => 80, "axisLabelPosition" => "auto", "beta" => 31, "depth" => 5, "enabled" => 1, "fitToPlot" => 1, "frame" => [], "viewDistance" => 72];
+        $res8 = ["alpha" => 20, "axisLabelPosition" => "auto", "beta" => 85, "depth" => 42, "enabled" => 0, "fitToPlot" => 1, "frame" => [], "viewDistance" => 6];
         $this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with view distance");
     }
 

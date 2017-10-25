@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\Series\Pyramid;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Pyramid;
 
 use JsonSerializable;
 
 /**
  * Highcharts zones.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\Series\Pyramid
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\Series\Pyramid
  * @version 5.0.14
  * @final
  */
@@ -155,7 +155,7 @@ final class HighchartsZones implements JsonSerializable {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsZones Returns the highcharts zones.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsZones Returns the highcharts zones.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -166,7 +166,7 @@ final class HighchartsZones implements JsonSerializable {
      * Set the color.
      *
      * @param string $color The color.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsZones Returns the highcharts zones.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsZones Returns the highcharts zones.
      */
     public function setColor($color) {
         $this->color = $color;
@@ -177,7 +177,7 @@ final class HighchartsZones implements JsonSerializable {
      * Set the dash style.
      *
      * @param string $dashStyle The dash style.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsZones Returns the highcharts zones.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsZones Returns the highcharts zones.
      */
     public function setDashStyle($dashStyle) {
         $this->dashStyle = $dashStyle;
@@ -188,7 +188,7 @@ final class HighchartsZones implements JsonSerializable {
      * Set the fill color.
      *
      * @param string $fillColor The fill color.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsZones Returns the highcharts zones.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsZones Returns the highcharts zones.
      */
     public function setFillColor($fillColor) {
         $this->fillColor = $fillColor;
@@ -199,7 +199,7 @@ final class HighchartsZones implements JsonSerializable {
      * Set the value.
      *
      * @param integer $value The value.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsZones Returns the highcharts zones.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Pyramid\HighchartsZones Returns the highcharts zones.
      */
     public function setValue($value) {
         $this->value = $value;

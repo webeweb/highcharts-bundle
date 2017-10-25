@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\Series\Arearange;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange;
 
 use JsonSerializable;
 
 /**
  * Highcharts point.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\Series\Arearange
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange
  * @version 5.0.14
  * @final
  */
@@ -26,7 +26,7 @@ final class HighchartsPoint implements JsonSerializable {
     /**
      * Events.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\Series\Arearange\Point\HighchartsEvents
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\Point\HighchartsEvents
      */
     private $events;
 
@@ -57,7 +57,7 @@ final class HighchartsPoint implements JsonSerializable {
     /**
      * Get the events.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\Point\HighchartsEvents Returns the events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\Point\HighchartsEvents Returns the events.
      */
     public function getEvents() {
         return $this->events;
@@ -75,20 +75,20 @@ final class HighchartsPoint implements JsonSerializable {
     /**
      * Create a new events.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\Point\HighchartsEvents Returns the events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\Point\HighchartsEvents Returns the events.
      */
     public function newEvents() {
-        $this->events = new \WBW\HighchartsBundle\API\Chart\Series\Arearange\Point\HighchartsEvents();
+        $this->events = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\Point\HighchartsEvents();
         return $this->events;
     }
 
     /**
      * Set the events.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\Series\Arearange\Point\HighchartsEvents $events The events.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsPoint Returns the highcharts point.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\Point\HighchartsEvents $events The events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsPoint Returns the highcharts point.
      */
-    public function setEvents(\WBW\HighchartsBundle\API\Chart\Series\Arearange\Point\HighchartsEvents $events = null) {
+    public function setEvents(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\Point\HighchartsEvents $events = null) {
         $this->events = $events;
         return $this;
     }

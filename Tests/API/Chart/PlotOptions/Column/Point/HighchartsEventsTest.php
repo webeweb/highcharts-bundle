@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Column\Point;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Column\Point;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts events test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Column\Point
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Column\Point
  * @version 5.0.14
  */
 final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\Point\HighchartsEvents(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\Point\HighchartsEvents(true);
 
         $this->assertEquals(null, $obj1->getClick(), "The method getClick() does not return the expected value");
         $this->assertEquals(null, $obj1->getMouseOut(), "The method getMouseOut() does not return the expected value");
@@ -47,7 +47,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\Point\HighchartsEvents(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\Point\HighchartsEvents(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -59,7 +59,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Column\Point\HighchartsEvents(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\Point\HighchartsEvents(true);
 
         $obj->setClick("a8affc088cbca89fa20dbd98c91362e4");
 

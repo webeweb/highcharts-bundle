@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\XAxis;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\XAxis;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts breaks test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\XAxis
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\XAxis
  * @version 5.0.14
  */
 final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
@@ -29,14 +29,14 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks(true);
 
         $this->assertEquals(null, $obj1->getBreakSize(), "The method getBreakSize() does not return the expected value");
         $this->assertEquals(null, $obj1->getFrom(), "The method getFrom() does not return the expected value");
         $this->assertEquals(null, $obj1->getRepeat(), "The method getRepeat() does not return the expected value");
         $this->assertEquals(null, $obj1->getTo(), "The method getTo() does not return the expected value");
 
-        $obj0 = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks(false);
 
         $this->assertEquals(0, $obj0->getBreakSize(), "The method getBreakSize() does not return the expected value");
         $this->assertEquals(null, $obj0->getFrom(), "The method getFrom() does not return the expected value");
@@ -51,7 +51,7 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -63,26 +63,26 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks(true);
 
-        $obj->setBreakSize(21);
+        $obj->setBreakSize(19);
 
-        $res1 = ["breakSize" => 21];
+        $res1 = ["breakSize" => 19];
         $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with break size");
 
-        $obj->setFrom(78);
+        $obj->setFrom(55);
 
-        $res2 = ["breakSize" => 21, "from" => 78];
+        $res2 = ["breakSize" => 19, "from" => 55];
         $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with from");
 
-        $obj->setRepeat(44);
+        $obj->setRepeat(3);
 
-        $res3 = ["breakSize" => 21, "from" => 78, "repeat" => 44];
+        $res3 = ["breakSize" => 19, "from" => 55, "repeat" => 3];
         $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with repeat");
 
-        $obj->setTo(1);
+        $obj->setTo(76);
 
-        $res4 = ["breakSize" => 21, "from" => 78, "repeat" => 44, "to" => 1];
+        $res4 = ["breakSize" => 19, "from" => 55, "repeat" => 3, "to" => 76];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with to");
     }
 

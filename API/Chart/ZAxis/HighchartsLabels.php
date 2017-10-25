@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\ZAxis;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\ZAxis;
 
 use JsonSerializable;
 
 /**
  * Highcharts labels.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\ZAxis
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\ZAxis
  * @version 5.0.14
  * @final
  */
@@ -406,7 +406,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the align.
      *
      * @param string $align The align.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setAlign($align) {
         switch ($align) {
@@ -423,7 +423,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the auto rotation.
      *
      * @param array $autoRotation The auto rotation.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setAutoRotation(array $autoRotation = null) {
         $this->autoRotation = $autoRotation;
@@ -434,7 +434,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the auto rotation limit.
      *
      * @param integer $autoRotationLimit The auto rotation limit.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setAutoRotationLimit($autoRotationLimit) {
         $this->autoRotationLimit = $autoRotationLimit;
@@ -445,7 +445,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the distance.
      *
      * @param integer $distance The distance.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setDistance($distance) {
         $this->distance = $distance;
@@ -456,7 +456,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the enabled.
      *
      * @param boolean $enabled The enabled.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setEnabled($enabled) {
         $this->enabled = $enabled;
@@ -467,7 +467,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the format.
      *
      * @param string $format The format.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setFormat($format) {
         $this->format = $format;
@@ -478,7 +478,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the formatter.
      *
      * @param string $formatter The formatter.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setFormatter($formatter) {
         $this->formatter = $formatter;
@@ -489,7 +489,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the overflow.
      *
      * @param string $overflow The overflow.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      * @deprecated
      */
     public function setOverflow($overflow) {
@@ -506,7 +506,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the padding.
      *
      * @param integer $padding The padding.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setPadding($padding) {
         $this->padding = $padding;
@@ -517,7 +517,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the reserve space.
      *
      * @param boolean $reserveSpace The reserve space.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setReserveSpace($reserveSpace) {
         $this->reserveSpace = $reserveSpace;
@@ -528,7 +528,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the rotation.
      *
      * @param integer $rotation The rotation.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setRotation($rotation) {
         $this->rotation = $rotation;
@@ -539,7 +539,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the stagger lines.
      *
      * @param integer $staggerLines The stagger lines.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setStaggerLines($staggerLines) {
         $this->staggerLines = $staggerLines;
@@ -550,7 +550,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the step.
      *
      * @param integer $step The step.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setStep($step) {
         $this->step = $step;
@@ -561,7 +561,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the style.
      *
      * @param array $style The style.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setStyle(array $style = null) {
         $this->style = $style;
@@ -572,7 +572,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the use HTML.
      *
      * @param boolean $useHTML The use HTML.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setUseHTML($useHTML) {
         $this->useHTML = $useHTML;
@@ -583,7 +583,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the x.
      *
      * @param integer $x The x.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setX($x) {
         $this->x = $x;
@@ -594,7 +594,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the y.
      *
      * @param integer $y The y.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setY($y) {
         $this->y = $y;
@@ -605,7 +605,7 @@ final class HighchartsLabels implements JsonSerializable {
      * Set the z index.
      *
      * @param integer $zIndex The z index.
-     * @return \WBW\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsLabels Returns the highcharts labels.
      */
     public function setZIndex($zIndex) {
         $this->zIndex = $zIndex;

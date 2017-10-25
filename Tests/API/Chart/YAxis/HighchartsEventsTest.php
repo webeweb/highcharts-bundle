@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\YAxis;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\YAxis;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts events test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\YAxis
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\YAxis
  * @version 5.0.14
  */
 final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsEvents(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsEvents(true);
 
         $this->assertEquals(null, $obj1->getAfterBreaks(), "The method getAfterBreaks() does not return the expected value");
         $this->assertEquals(null, $obj1->getAfterSetExtremes(), "The method getAfterSetExtremes() does not return the expected value");
@@ -45,7 +45,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsEvents(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsEvents(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -57,7 +57,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsEvents(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsEvents(true);
 
         $obj->setAfterBreaks("2aee0ecaa51b86ca6fb2f52e53055d9c");
 

@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts labels test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart
  * @version 5.0.14
  */
 final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
@@ -29,12 +29,12 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\HighchartsLabels(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels(true);
 
         $this->assertEquals(null, $obj1->getItems(), "The method getItems() does not return the expected value");
         $this->assertEquals(null, $obj1->getStyle(), "The method getStyle() does not return the expected value");
 
-        $obj0 = new \WBW\HighchartsBundle\API\Chart\HighchartsLabels(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels(false);
 
         $this->assertEquals(null, $obj0->getItems(), "The method getItems() does not return the expected value");
         $this->assertEquals(["color" => "#333333"], $obj0->getStyle(), "The method getStyle() does not return the expected value");
@@ -47,7 +47,7 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLabels(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -59,7 +59,7 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsLabels(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels(true);
 
         $obj->setItems(["items" => "691d502cfd0e0626cd3b058e5682ad1c"]);
 

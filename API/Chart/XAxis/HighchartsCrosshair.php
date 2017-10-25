@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\XAxis;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\XAxis;
 
 use JsonSerializable;
 
 /**
  * Highcharts crosshair.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\XAxis
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\XAxis
  * @version 5.0.14
  * @final
  */
@@ -175,7 +175,7 @@ final class HighchartsCrosshair implements JsonSerializable {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the highcharts crosshair.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the highcharts crosshair.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -186,7 +186,7 @@ final class HighchartsCrosshair implements JsonSerializable {
      * Set the color.
      *
      * @param string $color The color.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the highcharts crosshair.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the highcharts crosshair.
      */
     public function setColor($color) {
         $this->color = $color;
@@ -197,7 +197,7 @@ final class HighchartsCrosshair implements JsonSerializable {
      * Set the dash style.
      *
      * @param string $dashStyle The dash style.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the highcharts crosshair.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the highcharts crosshair.
      */
     public function setDashStyle($dashStyle) {
         switch ($dashStyle) {
@@ -222,7 +222,7 @@ final class HighchartsCrosshair implements JsonSerializable {
      * Set the snap.
      *
      * @param boolean $snap The snap.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the highcharts crosshair.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the highcharts crosshair.
      */
     public function setSnap($snap) {
         $this->snap = $snap;
@@ -233,7 +233,7 @@ final class HighchartsCrosshair implements JsonSerializable {
      * Set the width.
      *
      * @param integer $width The width.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the highcharts crosshair.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the highcharts crosshair.
      */
     public function setWidth($width) {
         $this->width = $width;
@@ -244,7 +244,7 @@ final class HighchartsCrosshair implements JsonSerializable {
      * Set the z index.
      *
      * @param integer $zIndex The z index.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the highcharts crosshair.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the highcharts crosshair.
      */
     public function setZIndex($zIndex) {
         $this->zIndex = $zIndex;

@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\Chart;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Chart;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts reset zoom button test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\Chart
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Chart
  * @version 5.0.14
  */
 final class HighchartsResetZoomButtonTest extends PHPUnit_Framework_TestCase {
@@ -29,13 +29,13 @@ final class HighchartsResetZoomButtonTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(true);
 
         $this->assertEquals(null, $obj1->getPosition(), "The method getPosition() does not return the expected value");
         $this->assertEquals(null, $obj1->getRelativeTo(), "The method getRelativeTo() does not return the expected value");
         $this->assertEquals(null, $obj1->getTheme(), "The method getTheme() does not return the expected value");
 
-        $obj0 = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(false);
 
         $this->assertEquals(null, $obj0->getPosition(), "The method getPosition() does not return the expected value");
         $this->assertEquals("plot", $obj0->getRelativeTo(), "The method getRelativeTo() does not return the expected value");
@@ -49,7 +49,7 @@ final class HighchartsResetZoomButtonTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -61,7 +61,7 @@ final class HighchartsResetZoomButtonTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(true);
 
         $obj->setPosition(["position" => "4757fe07fd492a8be0ea6a760d683d6e"]);
 

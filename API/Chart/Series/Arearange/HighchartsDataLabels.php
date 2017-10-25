@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\Series\Arearange;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange;
 
 use JsonSerializable;
 
 /**
  * Highcharts data labels.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\Series\Arearange
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange
  * @version 5.0.14
  * @final
  */
@@ -589,7 +589,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the align.
      *
      * @param string $align The align.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setAlign($align) {
         switch ($align) {
@@ -606,7 +606,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the allow overlap.
      *
      * @param boolean $allowOverlap The allow overlap.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setAllowOverlap($allowOverlap) {
         $this->allowOverlap = $allowOverlap;
@@ -617,7 +617,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the background color.
      *
      * @param string $backgroundColor The background color.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setBackgroundColor($backgroundColor) {
         $this->backgroundColor = $backgroundColor;
@@ -628,7 +628,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the border color.
      *
      * @param string $borderColor The border color.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setBorderColor($borderColor) {
         $this->borderColor = $borderColor;
@@ -639,7 +639,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the border radius.
      *
      * @param integer $borderRadius The border radius.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setBorderRadius($borderRadius) {
         $this->borderRadius = $borderRadius;
@@ -650,7 +650,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the border width.
      *
      * @param integer $borderWidth The border width.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setBorderWidth($borderWidth) {
         $this->borderWidth = $borderWidth;
@@ -661,7 +661,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -672,7 +672,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the color.
      *
      * @param string $color The color.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setColor($color) {
         $this->color = $color;
@@ -683,7 +683,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the crop.
      *
      * @param boolean $crop The crop.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setCrop($crop) {
         $this->crop = $crop;
@@ -694,7 +694,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the defer.
      *
      * @param boolean $defer The defer.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setDefer($defer) {
         $this->defer = $defer;
@@ -705,7 +705,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the enabled.
      *
      * @param boolean $enabled The enabled.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setEnabled($enabled) {
         $this->enabled = $enabled;
@@ -716,7 +716,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the format.
      *
      * @param string $format The format.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setFormat($format) {
         $this->format = $format;
@@ -727,7 +727,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the formatter.
      *
      * @param string $formatter The formatter.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setFormatter($formatter) {
         $this->formatter = $formatter;
@@ -738,7 +738,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the inside.
      *
      * @param boolean $inside The inside.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setInside($inside) {
         $this->inside = $inside;
@@ -749,7 +749,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the overflow.
      *
      * @param string $overflow The overflow.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setOverflow($overflow) {
         switch ($overflow) {
@@ -765,7 +765,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the padding.
      *
      * @param integer $padding The padding.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setPadding($padding) {
         $this->padding = $padding;
@@ -776,7 +776,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the rotation.
      *
      * @param integer $rotation The rotation.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setRotation($rotation) {
         $this->rotation = $rotation;
@@ -787,7 +787,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the shadow.
      *
      * @param boolean|array $shadow The shadow.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setShadow($shadow) {
         $this->shadow = $shadow;
@@ -798,7 +798,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the shape.
      *
      * @param string $shape The shape.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setShape($shape) {
         $this->shape = $shape;
@@ -809,7 +809,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the style.
      *
      * @param array $style The style.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setStyle(array $style = null) {
         $this->style = $style;
@@ -820,7 +820,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the use HTML.
      *
      * @param boolean $useHTML The use HTML.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setUseHTML($useHTML) {
         $this->useHTML = $useHTML;
@@ -831,7 +831,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the vertical align.
      *
      * @param string $verticalAlign The vertical align.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setVerticalAlign($verticalAlign) {
         switch ($verticalAlign) {
@@ -848,7 +848,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the x high.
      *
      * @param integer $xHigh The x high.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setXHigh($xHigh) {
         $this->xHigh = $xHigh;
@@ -859,7 +859,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the x low.
      *
      * @param integer $xLow The x low.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setXLow($xLow) {
         $this->xLow = $xLow;
@@ -870,7 +870,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the y high.
      *
      * @param integer $yHigh The y high.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setYHigh($yHigh) {
         $this->yHigh = $yHigh;
@@ -881,7 +881,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the y low.
      *
      * @param integer $yLow The y low.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setYLow($yLow) {
         $this->yLow = $yLow;
@@ -892,7 +892,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * Set the z index.
      *
      * @param integer $zIndex The z index.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsDataLabels Returns the highcharts data labels.
      */
     public function setZIndex($zIndex) {
         $this->zIndex = $zIndex;

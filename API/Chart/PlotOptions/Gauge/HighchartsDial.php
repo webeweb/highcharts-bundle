@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge;
 
 use JsonSerializable;
 
 /**
  * Highcharts dial.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge
  * @version 5.0.14
  * @final
  */
@@ -215,7 +215,7 @@ final class HighchartsDial implements JsonSerializable {
      * Set the background color.
      *
      * @param string $backgroundColor The background color.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
      */
     public function setBackgroundColor($backgroundColor) {
         $this->backgroundColor = $backgroundColor;
@@ -226,7 +226,7 @@ final class HighchartsDial implements JsonSerializable {
      * Set the base length.
      *
      * @param string $baseLength The base length.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
      */
     public function setBaseLength($baseLength) {
         $this->baseLength = $baseLength;
@@ -237,7 +237,7 @@ final class HighchartsDial implements JsonSerializable {
      * Set the base width.
      *
      * @param integer $baseWidth The base width.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
      */
     public function setBaseWidth($baseWidth) {
         $this->baseWidth = $baseWidth;
@@ -248,7 +248,7 @@ final class HighchartsDial implements JsonSerializable {
      * Set the border color.
      *
      * @param string $borderColor The border color.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
      */
     public function setBorderColor($borderColor) {
         $this->borderColor = $borderColor;
@@ -259,7 +259,7 @@ final class HighchartsDial implements JsonSerializable {
      * Set the border width.
      *
      * @param integer $borderWidth The border width.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
      */
     public function setBorderWidth($borderWidth) {
         $this->borderWidth = $borderWidth;
@@ -270,7 +270,7 @@ final class HighchartsDial implements JsonSerializable {
      * Set the radius.
      *
      * @param string $radius The radius.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
      */
     public function setRadius($radius) {
         $this->radius = $radius;
@@ -281,7 +281,7 @@ final class HighchartsDial implements JsonSerializable {
      * Set the rear length.
      *
      * @param string $rearLength The rear length.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
      */
     public function setRearLength($rearLength) {
         $this->rearLength = $rearLength;
@@ -292,7 +292,7 @@ final class HighchartsDial implements JsonSerializable {
      * Set the top width.
      *
      * @param integer $topWidth The top width.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsDial Returns the highcharts dial.
      */
     public function setTopWidth($topWidth) {
         $this->topWidth = $topWidth;

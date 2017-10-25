@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API;
+namespace WBW\Bundle\HighchartsBundle\Tests\API;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts chart test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API
  * @version 5.0.14
  */
 final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\HighchartsChart(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(true);
 
         $this->assertEquals(null, $obj1->getAccessibility(), "The method getAccessibility() does not return the expected value");
         $this->assertEquals(null, $obj1->getChart(), "The method getChart() does not return the expected value");
@@ -55,7 +55,7 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getYAxis(), "The method getYAxis() does not return the expected value");
         $this->assertEquals(null, $obj1->getZAxis(), "The method getZAxis() does not return the expected value");
 
-        $obj0 = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $this->assertEquals(null, $obj0->getAccessibility(), "The method getAccessibility() does not return the expected value");
         $this->assertEquals(null, $obj0->getChart(), "The method getChart() does not return the expected value");
@@ -89,7 +89,7 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testClear() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $obj->newAccessibility();
         $obj->newChart();
@@ -122,7 +122,7 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -134,10 +134,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewAccessibility() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newAccessibility();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsAccessibility::class, $res, "The method newAccessibility() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsAccessibility::class, $res, "The method newAccessibility() does not return the expected object");
     }
 
     /**
@@ -147,10 +147,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewChart() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newChart();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsChart::class, $res, "The method newChart() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsChart::class, $res, "The method newChart() does not return the expected object");
     }
 
     /**
@@ -160,10 +160,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewCredits() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newCredits();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsCredits::class, $res, "The method newCredits() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits::class, $res, "The method newCredits() does not return the expected object");
     }
 
     /**
@@ -173,10 +173,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewData() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newData();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsData::class, $res, "The method newData() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsData::class, $res, "The method newData() does not return the expected object");
     }
 
     /**
@@ -186,10 +186,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewDrilldown() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newDrilldown();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsDrilldown::class, $res, "The method newDrilldown() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsDrilldown::class, $res, "The method newDrilldown() does not return the expected object");
     }
 
     /**
@@ -199,10 +199,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewExporting() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newExporting();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsExporting::class, $res, "The method newExporting() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting::class, $res, "The method newExporting() does not return the expected object");
     }
 
     /**
@@ -212,10 +212,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewLabels() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newLabels();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsLabels::class, $res, "The method newLabels() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels::class, $res, "The method newLabels() does not return the expected object");
     }
 
     /**
@@ -225,10 +225,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewLegend() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newLegend();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsLegend::class, $res, "The method newLegend() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend::class, $res, "The method newLegend() does not return the expected object");
     }
 
     /**
@@ -238,10 +238,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewLoading() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newLoading();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsLoading::class, $res, "The method newLoading() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading::class, $res, "The method newLoading() does not return the expected object");
     }
 
     /**
@@ -251,10 +251,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewNavigation() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newNavigation();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsNavigation::class, $res, "The method newNavigation() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation::class, $res, "The method newNavigation() does not return the expected object");
     }
 
     /**
@@ -264,10 +264,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewNoData() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newNoData();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsNoData::class, $res, "The method newNoData() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData::class, $res, "The method newNoData() does not return the expected object");
     }
 
     /**
@@ -277,10 +277,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewPlotOptions() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newPlotOptions();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions::class, $res, "The method newPlotOptions() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPlotOptions::class, $res, "The method newPlotOptions() does not return the expected object");
     }
 
     /**
@@ -290,10 +290,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewResponsive() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newResponsive();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsResponsive::class, $res, "The method newResponsive() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive::class, $res, "The method newResponsive() does not return the expected object");
     }
 
     /**
@@ -303,10 +303,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewSubtitle() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newSubtitle();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsSubtitle::class, $res, "The method newSubtitle() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSubtitle::class, $res, "The method newSubtitle() does not return the expected object");
     }
 
     /**
@@ -316,10 +316,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewTitle() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newTitle();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsTitle::class, $res, "The method newTitle() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle::class, $res, "The method newTitle() does not return the expected object");
     }
 
     /**
@@ -329,10 +329,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewTooltip() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newTooltip();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsTooltip::class, $res, "The method newTooltip() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTooltip::class, $res, "The method newTooltip() does not return the expected object");
     }
 
     /**
@@ -342,10 +342,10 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewZAxis() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
 
         $res = $obj->newZAxis();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\HighchartsZAxis::class, $res, "The method newZAxis() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis::class, $res, "The method newZAxis() does not return the expected object");
     }
 
     /**
@@ -355,14 +355,14 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\HighchartsChart(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(true);
 
-        $obj->setAccessibility(new \WBW\HighchartsBundle\API\Chart\HighchartsAccessibility());
+        $obj->setAccessibility(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsAccessibility());
 
         $res1 = ["accessibility" => []];
         $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with accessibility");
 
-        $obj->setChart(new \WBW\HighchartsBundle\API\Chart\HighchartsChart());
+        $obj->setChart(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsChart());
 
         $res2 = ["accessibility" => [], "chart" => []];
         $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with chart");
@@ -372,12 +372,12 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
         $res3 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"]];
         $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with colors");
 
-        $obj->setCredits(new \WBW\HighchartsBundle\API\Chart\HighchartsCredits());
+        $obj->setCredits(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits());
 
         $res4 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => []];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with credits");
 
-        $obj->setData(new \WBW\HighchartsBundle\API\Chart\HighchartsData());
+        $obj->setData(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsData());
 
         $res5 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => []];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with data");
@@ -387,37 +387,37 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
         $res6 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"]];
         $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with defs");
 
-        $obj->setDrilldown(new \WBW\HighchartsBundle\API\Chart\HighchartsDrilldown());
+        $obj->setDrilldown(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsDrilldown());
 
         $res7 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => []];
         $this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with drilldown");
 
-        $obj->setExporting(new \WBW\HighchartsBundle\API\Chart\HighchartsExporting());
+        $obj->setExporting(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting());
 
         $res8 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => []];
         $this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with exporting");
 
-        $obj->setLabels(new \WBW\HighchartsBundle\API\Chart\HighchartsLabels());
+        $obj->setLabels(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels());
 
         $res9 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => []];
         $this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with labels");
 
-        $obj->setLegend(new \WBW\HighchartsBundle\API\Chart\HighchartsLegend());
+        $obj->setLegend(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend());
 
         $res10 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => []];
         $this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with legend");
 
-        $obj->setLoading(new \WBW\HighchartsBundle\API\Chart\HighchartsLoading());
+        $obj->setLoading(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading());
 
         $res11 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => [], "loading" => []];
         $this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with loading");
 
-        $obj->setNavigation(new \WBW\HighchartsBundle\API\Chart\HighchartsNavigation());
+        $obj->setNavigation(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation());
 
         $res12 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => [], "loading" => [], "navigation" => []];
         $this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with navigation");
 
-        $obj->setNoData(new \WBW\HighchartsBundle\API\Chart\HighchartsNoData());
+        $obj->setNoData(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData());
 
         $res13 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => [], "loading" => [], "navigation" => [], "noData" => []];
         $this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with no data");
@@ -427,12 +427,12 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
         $res14 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => [], "loading" => [], "navigation" => [], "noData" => [], "pane" => ["pane" => "c6c6ce72f4dff102e38d74f7143a2ea8"]];
         $this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with pane");
 
-        $obj->setPlotOptions(new \WBW\HighchartsBundle\API\Chart\HighchartsPlotOptions());
+        $obj->setPlotOptions(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPlotOptions());
 
         $res15 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => [], "loading" => [], "navigation" => [], "noData" => [], "pane" => ["pane" => "c6c6ce72f4dff102e38d74f7143a2ea8"], "plotOptions" => []];
         $this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with plot options");
 
-        $obj->setResponsive(new \WBW\HighchartsBundle\API\Chart\HighchartsResponsive());
+        $obj->setResponsive(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive());
 
         $res16 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => [], "loading" => [], "navigation" => [], "noData" => [], "pane" => ["pane" => "c6c6ce72f4dff102e38d74f7143a2ea8"], "plotOptions" => [], "responsive" => []];
         $this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with responsive");
@@ -442,17 +442,17 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
         $res17 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => [], "loading" => [], "navigation" => [], "noData" => [], "pane" => ["pane" => "c6c6ce72f4dff102e38d74f7143a2ea8"], "plotOptions" => [], "responsive" => [], "series" => ["series" => "bef99584217af744e404ed44a33af589"]];
         $this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with series");
 
-        $obj->setSubtitle(new \WBW\HighchartsBundle\API\Chart\HighchartsSubtitle());
+        $obj->setSubtitle(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSubtitle());
 
         $res18 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => [], "loading" => [], "navigation" => [], "noData" => [], "pane" => ["pane" => "c6c6ce72f4dff102e38d74f7143a2ea8"], "plotOptions" => [], "responsive" => [], "series" => ["series" => "bef99584217af744e404ed44a33af589"], "subtitle" => []];
         $this->assertEquals($res18, $obj->toArray(), "The method toArray() does not return the expected array with subtitle");
 
-        $obj->setTitle(new \WBW\HighchartsBundle\API\Chart\HighchartsTitle());
+        $obj->setTitle(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle());
 
         $res19 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => [], "loading" => [], "navigation" => [], "noData" => [], "pane" => ["pane" => "c6c6ce72f4dff102e38d74f7143a2ea8"], "plotOptions" => [], "responsive" => [], "series" => ["series" => "bef99584217af744e404ed44a33af589"], "subtitle" => [], "title" => []];
         $this->assertEquals($res19, $obj->toArray(), "The method toArray() does not return the expected array with title");
 
-        $obj->setTooltip(new \WBW\HighchartsBundle\API\Chart\HighchartsTooltip());
+        $obj->setTooltip(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTooltip());
 
         $res20 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => [], "loading" => [], "navigation" => [], "noData" => [], "pane" => ["pane" => "c6c6ce72f4dff102e38d74f7143a2ea8"], "plotOptions" => [], "responsive" => [], "series" => ["series" => "bef99584217af744e404ed44a33af589"], "subtitle" => [], "title" => [], "tooltip" => []];
         $this->assertEquals($res20, $obj->toArray(), "The method toArray() does not return the expected array with tooltip");
@@ -467,7 +467,7 @@ final class HighchartsChartTest extends PHPUnit_Framework_TestCase {
         $res22 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => [], "loading" => [], "navigation" => [], "noData" => [], "pane" => ["pane" => "c6c6ce72f4dff102e38d74f7143a2ea8"], "plotOptions" => [], "responsive" => [], "series" => ["series" => "bef99584217af744e404ed44a33af589"], "subtitle" => [], "title" => [], "tooltip" => [], "xAxis" => ["xAxis" => "b919a806dedef37999b45653bdde66c6"], "yAxis" => ["yAxis" => "f3cd431f5ac1725ea18774e5c02f2889"]];
         $this->assertEquals($res22, $obj->toArray(), "The method toArray() does not return the expected array with y axis");
 
-        $obj->setZAxis(new \WBW\HighchartsBundle\API\Chart\HighchartsZAxis());
+        $obj->setZAxis(new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis());
 
         $res23 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => [], "loading" => [], "navigation" => [], "noData" => [], "pane" => ["pane" => "c6c6ce72f4dff102e38d74f7143a2ea8"], "plotOptions" => [], "responsive" => [], "series" => ["series" => "bef99584217af744e404ed44a33af589"], "subtitle" => [], "title" => [], "tooltip" => [], "xAxis" => ["xAxis" => "b919a806dedef37999b45653bdde66c6"], "yAxis" => ["yAxis" => "f3cd431f5ac1725ea18774e5c02f2889"], "zAxis" => []];
         $this->assertEquals($res23, $obj->toArray(), "The method toArray() does not return the expected array with z axis");

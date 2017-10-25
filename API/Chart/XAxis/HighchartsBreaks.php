@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\XAxis;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\XAxis;
 
 use JsonSerializable;
 
 /**
  * Highcharts breaks.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\XAxis
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\XAxis
  * @version 5.0.14
  * @final
  */
@@ -135,7 +135,7 @@ final class HighchartsBreaks implements JsonSerializable {
      * Set the break size.
      *
      * @param integer $breakSize The break size.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks Returns the highcharts breaks.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks Returns the highcharts breaks.
      */
     public function setBreakSize($breakSize) {
         $this->breakSize = $breakSize;
@@ -146,7 +146,7 @@ final class HighchartsBreaks implements JsonSerializable {
      * Set the from.
      *
      * @param integer $from The from.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks Returns the highcharts breaks.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks Returns the highcharts breaks.
      */
     public function setFrom($from) {
         $this->from = $from;
@@ -157,7 +157,7 @@ final class HighchartsBreaks implements JsonSerializable {
      * Set the repeat.
      *
      * @param integer $repeat The repeat.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks Returns the highcharts breaks.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks Returns the highcharts breaks.
      */
     public function setRepeat($repeat) {
         $this->repeat = $repeat;
@@ -168,7 +168,7 @@ final class HighchartsBreaks implements JsonSerializable {
      * Set the to.
      *
      * @param integer $to The to.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks Returns the highcharts breaks.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks Returns the highcharts breaks.
      */
     public function setTo($to) {
         $this->to = $to;

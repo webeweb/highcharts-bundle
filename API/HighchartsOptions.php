@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API;
+namespace WBW\Bundle\HighchartsBundle\API;
 
 use JsonSerializable;
 
 /**
  * Highcharts options.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API
  * @version 5.0.14
  * @final
  */
@@ -26,14 +26,14 @@ final class HighchartsOptions implements JsonSerializable {
     /**
      * Global.
      *
-     * @var \WBW\HighchartsBundle\API\Options\HighchartsGlobal
+     * @var \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal
      */
     private $global;
 
     /**
      * Lang.
      *
-     * @var \WBW\HighchartsBundle\API\Options\HighchartsLang
+     * @var \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang
      */
     private $lang;
 
@@ -69,7 +69,7 @@ final class HighchartsOptions implements JsonSerializable {
     /**
      * Get the global.
      *
-     * @return \WBW\HighchartsBundle\API\Options\HighchartsGlobal Returns the global.
+     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal Returns the global.
      */
     public function getGlobal() {
         return $this->global;
@@ -78,7 +78,7 @@ final class HighchartsOptions implements JsonSerializable {
     /**
      * Get the lang.
      *
-     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the lang.
+     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the lang.
      */
     public function getLang() {
         return $this->lang;
@@ -96,30 +96,30 @@ final class HighchartsOptions implements JsonSerializable {
     /**
      * Create a new global.
      *
-     * @return \WBW\HighchartsBundle\API\Options\HighchartsGlobal Returns the global.
+     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal Returns the global.
      */
     public function newGlobal() {
-        $this->global = new \WBW\HighchartsBundle\API\Options\HighchartsGlobal();
+        $this->global = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal();
         return $this->global;
     }
 
     /**
      * Create a new lang.
      *
-     * @return \WBW\HighchartsBundle\API\Options\HighchartsLang Returns the lang.
+     * @return \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang Returns the lang.
      */
     public function newLang() {
-        $this->lang = new \WBW\HighchartsBundle\API\Options\HighchartsLang();
+        $this->lang = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang();
         return $this->lang;
     }
 
     /**
      * Set the global.
      *
-     * @param \WBW\HighchartsBundle\API\Options\HighchartsGlobal $global The global.
-     * @return \WBW\HighchartsBundle\API\HighchartsOptions Returns the highcharts options.
+     * @param \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal $global The global.
+     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsOptions Returns the highcharts options.
      */
-    public function setGlobal(\WBW\HighchartsBundle\API\Options\HighchartsGlobal $global = null) {
+    public function setGlobal(\WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal $global = null) {
         $this->global = $global;
         return $this;
     }
@@ -127,10 +127,10 @@ final class HighchartsOptions implements JsonSerializable {
     /**
      * Set the lang.
      *
-     * @param \WBW\HighchartsBundle\API\Options\HighchartsLang $lang The lang.
-     * @return \WBW\HighchartsBundle\API\HighchartsOptions Returns the highcharts options.
+     * @param \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang $lang The lang.
+     * @return \WBW\Bundle\HighchartsBundle\API\HighchartsOptions Returns the highcharts options.
      */
-    public function setLang(\WBW\HighchartsBundle\API\Options\HighchartsLang $lang = null) {
+    public function setLang(\WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang $lang = null) {
         $this->lang = $lang;
         return $this;
     }

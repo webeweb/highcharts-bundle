@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\Series;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\Series;
 
 use JsonSerializable;
 
 /**
  * Highcharts spline.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\Series
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\Series
  * @version 5.0.14
  * @final
  */
@@ -116,7 +116,7 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Data labels.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsDataLabels
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsDataLabels
      */
     private $dataLabels;
 
@@ -138,7 +138,7 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Events.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsEvents
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsEvents
      */
     private $events;
 
@@ -222,7 +222,7 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Marker.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsMarker
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsMarker
      */
     private $marker;
 
@@ -244,7 +244,7 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Point.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsPoint
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsPoint
      */
     private $point;
 
@@ -350,7 +350,7 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * States.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsStates
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsStates
      */
     private $states;
 
@@ -742,7 +742,7 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Get the data labels.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsDataLabels Returns the data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsDataLabels Returns the data labels.
      */
     public function getDataLabels() {
         return $this->dataLabels;
@@ -769,7 +769,7 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Get the events.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsEvents Returns the events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsEvents Returns the events.
      */
     public function getEvents() {
         return $this->events;
@@ -868,7 +868,7 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Get the marker.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsMarker Returns the marker.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsMarker Returns the marker.
      */
     public function getMarker() {
         return $this->marker;
@@ -895,7 +895,7 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Get the point.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsPoint Returns the point.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsPoint Returns the point.
      */
     public function getPoint() {
         return $this->point;
@@ -1021,7 +1021,7 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Get the states.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsStates Returns the states.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsStates Returns the states.
      */
     public function getStates() {
         return $this->states;
@@ -1138,50 +1138,50 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Create a new data labels.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsDataLabels Returns the data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsDataLabels Returns the data labels.
      */
     public function newDataLabels() {
-        $this->dataLabels = new \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsDataLabels();
+        $this->dataLabels = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsDataLabels();
         return $this->dataLabels;
     }
 
     /**
      * Create a new events.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsEvents Returns the events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsEvents Returns the events.
      */
     public function newEvents() {
-        $this->events = new \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsEvents();
+        $this->events = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsEvents();
         return $this->events;
     }
 
     /**
      * Create a new marker.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsMarker Returns the marker.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsMarker Returns the marker.
      */
     public function newMarker() {
-        $this->marker = new \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsMarker();
+        $this->marker = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsMarker();
         return $this->marker;
     }
 
     /**
      * Create a new point.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsPoint Returns the point.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsPoint Returns the point.
      */
     public function newPoint() {
-        $this->point = new \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsPoint();
+        $this->point = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsPoint();
         return $this->point;
     }
 
     /**
      * Create a new states.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsStates Returns the states.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsStates Returns the states.
      */
     public function newStates() {
-        $this->states = new \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsStates();
+        $this->states = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsStates();
         return $this->states;
     }
 
@@ -1189,7 +1189,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the allow point select.
      *
      * @param boolean $allowPointSelect The allow point select.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setAllowPointSelect($allowPointSelect) {
         $this->allowPointSelect = $allowPointSelect;
@@ -1200,7 +1200,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the animation.
      *
      * @param boolean $animation The animation.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setAnimation($animation) {
         $this->animation = $animation;
@@ -1211,7 +1211,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the animation limit.
      *
      * @param integer $animationLimit The animation limit.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setAnimationLimit($animationLimit) {
         $this->animationLimit = $animationLimit;
@@ -1222,7 +1222,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -1233,7 +1233,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the color.
      *
      * @param string $color The color.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setColor($color) {
         $this->color = $color;
@@ -1244,7 +1244,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the color index.
      *
      * @param integer $colorIndex The color index.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setColorIndex($colorIndex) {
         $this->colorIndex = $colorIndex;
@@ -1255,7 +1255,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the connect ends.
      *
      * @param boolean $connectEnds The connect ends.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setConnectEnds($connectEnds) {
         $this->connectEnds = $connectEnds;
@@ -1266,7 +1266,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the connect nulls.
      *
      * @param boolean $connectNulls The connect nulls.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setConnectNulls($connectNulls) {
         $this->connectNulls = $connectNulls;
@@ -1277,7 +1277,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the crop threshold.
      *
      * @param integer $cropThreshold The crop threshold.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setCropThreshold($cropThreshold) {
         $this->cropThreshold = $cropThreshold;
@@ -1288,7 +1288,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the cursor.
      *
      * @param string $cursor The cursor.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setCursor($cursor) {
         switch ($cursor) {
@@ -1308,7 +1308,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the dash style.
      *
      * @param string $dashStyle The dash style.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setDashStyle($dashStyle) {
         switch ($dashStyle) {
@@ -1333,7 +1333,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the data.
      *
      * @param array $data The data.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setData(array $data = null) {
         $this->data = $data;
@@ -1343,10 +1343,10 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Set the data labels.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsDataLabels $dataLabels The data labels.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsDataLabels $dataLabels The data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
-    public function setDataLabels(\WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsDataLabels $dataLabels = null) {
+    public function setDataLabels(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsDataLabels $dataLabels = null) {
         $this->dataLabels = $dataLabels;
         return $this;
     }
@@ -1355,7 +1355,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the description.
      *
      * @param string $description The description.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setDescription($description) {
         $this->description = $description;
@@ -1366,7 +1366,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the enable mouse tracking.
      *
      * @param boolean $enableMouseTracking The enable mouse tracking.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setEnableMouseTracking($enableMouseTracking) {
         $this->enableMouseTracking = $enableMouseTracking;
@@ -1376,10 +1376,10 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Set the events.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsEvents $events The events.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsEvents $events The events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
-    public function setEvents(\WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsEvents $events = null) {
+    public function setEvents(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsEvents $events = null) {
         $this->events = $events;
         return $this;
     }
@@ -1388,7 +1388,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the expose element to a11y.
      *
      * @param boolean $exposeElementToA11y The expose element to a11y.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setExposeElementToA11y($exposeElementToA11y) {
         $this->exposeElementToA11y = $exposeElementToA11y;
@@ -1399,7 +1399,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the find nearest point by.
      *
      * @param string $findNearestPointBy The find nearest point by.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setFindNearestPointBy($findNearestPointBy) {
         switch ($findNearestPointBy) {
@@ -1415,7 +1415,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the get extremes from all.
      *
      * @param boolean $getExtremesFromAll The get extremes from all.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setGetExtremesFromAll($getExtremesFromAll) {
         $this->getExtremesFromAll = $getExtremesFromAll;
@@ -1426,7 +1426,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the id.
      *
      * @param string $id The id.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setId($id) {
         $this->id = $id;
@@ -1437,7 +1437,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the index.
      *
      * @param integer $index The index.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setIndex($index) {
         $this->index = $index;
@@ -1448,7 +1448,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the keys.
      *
      * @param array $keys The keys.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setKeys(array $keys = null) {
         $this->keys = $keys;
@@ -1459,7 +1459,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the legend index.
      *
      * @param integer $legendIndex The legend index.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setLegendIndex($legendIndex) {
         $this->legendIndex = $legendIndex;
@@ -1470,7 +1470,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the line width.
      *
      * @param integer $lineWidth The line width.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setLineWidth($lineWidth) {
         $this->lineWidth = $lineWidth;
@@ -1481,7 +1481,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the linecap.
      *
      * @param string $linecap The linecap.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setLinecap($linecap) {
         switch ($linecap) {
@@ -1497,7 +1497,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the linked to.
      *
      * @param string $linkedTo The linked to.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setLinkedTo($linkedTo) {
         $this->linkedTo = $linkedTo;
@@ -1507,10 +1507,10 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Set the marker.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsMarker $marker The marker.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsMarker $marker The marker.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
-    public function setMarker(\WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsMarker $marker = null) {
+    public function setMarker(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsMarker $marker = null) {
         $this->marker = $marker;
         return $this;
     }
@@ -1519,7 +1519,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the name.
      *
      * @param string $name The name.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setName($name) {
         $this->name = $name;
@@ -1530,7 +1530,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the negative color.
      *
      * @param string $negativeColor The negative color.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setNegativeColor($negativeColor) {
         $this->negativeColor = $negativeColor;
@@ -1540,10 +1540,10 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Set the point.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsPoint $point The point.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsPoint $point The point.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
-    public function setPoint(\WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsPoint $point = null) {
+    public function setPoint(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsPoint $point = null) {
         $this->point = $point;
         return $this;
     }
@@ -1552,7 +1552,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the point description formatter.
      *
      * @param string $pointDescriptionFormatter The point description formatter.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setPointDescriptionFormatter($pointDescriptionFormatter) {
         $this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -1563,7 +1563,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the point interval.
      *
      * @param integer $pointInterval The point interval.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setPointInterval($pointInterval) {
         $this->pointInterval = $pointInterval;
@@ -1574,7 +1574,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the point interval unit.
      *
      * @param string $pointIntervalUnit The point interval unit.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setPointIntervalUnit($pointIntervalUnit) {
         switch ($pointIntervalUnit) {
@@ -1592,7 +1592,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the point placement.
      *
      * @param string|integer $pointPlacement The point placement.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setPointPlacement($pointPlacement) {
         switch ($pointPlacement) {
@@ -1609,7 +1609,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the point start.
      *
      * @param integer $pointStart The point start.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setPointStart($pointStart) {
         $this->pointStart = $pointStart;
@@ -1620,7 +1620,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the selected.
      *
      * @param boolean $selected The selected.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setSelected($selected) {
         $this->selected = $selected;
@@ -1631,7 +1631,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the shadow.
      *
      * @param boolean|array $shadow The shadow.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setShadow($shadow) {
         $this->shadow = $shadow;
@@ -1642,7 +1642,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the show checkbox.
      *
      * @param boolean $showCheckbox The show checkbox.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setShowCheckbox($showCheckbox) {
         $this->showCheckbox = $showCheckbox;
@@ -1653,7 +1653,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the show in legend.
      *
      * @param boolean $showInLegend The show in legend.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setShowInLegend($showInLegend) {
         $this->showInLegend = $showInLegend;
@@ -1664,7 +1664,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the skip keyboard navigation.
      *
      * @param boolean $skipKeyboardNavigation The skip keyboard navigation.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setSkipKeyboardNavigation($skipKeyboardNavigation) {
         $this->skipKeyboardNavigation = $skipKeyboardNavigation;
@@ -1675,7 +1675,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the soft threshold.
      *
      * @param boolean $softThreshold The soft threshold.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setSoftThreshold($softThreshold) {
         $this->softThreshold = $softThreshold;
@@ -1686,7 +1686,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the stack.
      *
      * @param string $stack The stack.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setStack($stack) {
         $this->stack = $stack;
@@ -1697,7 +1697,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the stacking.
      *
      * @param string $stacking The stacking.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setStacking($stacking) {
         switch ($stacking) {
@@ -1713,10 +1713,10 @@ final class HighchartsSpline implements JsonSerializable {
     /**
      * Set the states.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsStates $states The states.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsStates $states The states.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
-    public function setStates(\WBW\HighchartsBundle\API\Chart\Series\Spline\HighchartsStates $states = null) {
+    public function setStates(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\HighchartsStates $states = null) {
         $this->states = $states;
         return $this;
     }
@@ -1725,7 +1725,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the sticky tracking.
      *
      * @param boolean $stickyTracking The sticky tracking.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setStickyTracking($stickyTracking) {
         $this->stickyTracking = $stickyTracking;
@@ -1736,7 +1736,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the threshold.
      *
      * @param integer $threshold The threshold.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setThreshold($threshold) {
         $this->threshold = $threshold;
@@ -1747,7 +1747,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the tooltip.
      *
      * @param array $tooltip The tooltip.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setTooltip(array $tooltip = null) {
         $this->tooltip = $tooltip;
@@ -1758,7 +1758,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the turbo threshold.
      *
      * @param integer $turboThreshold The turbo threshold.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setTurboThreshold($turboThreshold) {
         $this->turboThreshold = $turboThreshold;
@@ -1769,7 +1769,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the type.
      *
      * @param string $type The type.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setType($type) {
         switch ($type) {
@@ -1800,7 +1800,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the visible.
      *
      * @param boolean $visible The visible.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setVisible($visible) {
         $this->visible = $visible;
@@ -1811,7 +1811,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the x axis.
      *
      * @param integer|string $xAxis The x axis.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setXAxis($xAxis) {
         $this->xAxis = $xAxis;
@@ -1822,7 +1822,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the y axis.
      *
      * @param integer|string $yAxis The y axis.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setYAxis($yAxis) {
         $this->yAxis = $yAxis;
@@ -1833,7 +1833,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the z index.
      *
      * @param integer $zIndex The z index.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setZIndex($zIndex) {
         $this->zIndex = $zIndex;
@@ -1844,7 +1844,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the zone axis.
      *
      * @param string $zoneAxis The zone axis.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setZoneAxis($zoneAxis) {
         $this->zoneAxis = $zoneAxis;
@@ -1855,7 +1855,7 @@ final class HighchartsSpline implements JsonSerializable {
      * Set the zones.
      *
      * @param array $zones The zones.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsSpline Returns the highcharts spline.
      */
     public function setZones(array $zones = null) {
         $this->zones = $zones;

@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Treemap\States;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Treemap\States;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts hover test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\Series\Treemap\States
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Treemap\States
  * @version 5.0.14
  */
 final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\Series\Treemap\States\HighchartsHover(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Treemap\States\HighchartsHover(true);
 
         $this->assertEquals(null, $obj1->getAnimation(), "The method getAnimation() does not return the expected value");
         $this->assertEquals(null, $obj1->getBorderColor(), "The method getBorderColor() does not return the expected value");
@@ -38,7 +38,7 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
         $this->assertEquals(null, $obj1->getOpacity(), "The method getOpacity() does not return the expected value");
 
-        $obj0 = new \WBW\HighchartsBundle\API\Chart\Series\Treemap\States\HighchartsHover(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Treemap\States\HighchartsHover(false);
 
         $this->assertEquals(["duration" => 50], $obj0->getAnimation(), "The method getAnimation() does not return the expected value");
         $this->assertEquals(null, $obj0->getBorderColor(), "The method getBorderColor() does not return the expected value");
@@ -55,7 +55,7 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Treemap\States\HighchartsHover(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Treemap\States\HighchartsHover(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -67,7 +67,7 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Treemap\States\HighchartsHover(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Treemap\States\HighchartsHover(true);
 
         $obj->setAnimation(1);
 
@@ -79,24 +79,24 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
         $res2 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994"];
         $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with border color");
 
-        $obj->setBrightness(34);
+        $obj->setBrightness(40);
 
-        $res3 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 34];
+        $res3 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 40];
         $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with brightness");
 
         $obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
-        $res4 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 34, "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
+        $res4 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 40, "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with color");
 
         $obj->setEnabled(1);
 
-        $res5 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 34, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "enabled" => 1];
+        $res5 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 40, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "enabled" => 1];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
-        $obj->setOpacity(54);
+        $obj->setOpacity(29);
 
-        $res6 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 34, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "enabled" => 1, "opacity" => 54];
+        $res6 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 40, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "enabled" => 1, "opacity" => 29];
         $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with opacity");
     }
 

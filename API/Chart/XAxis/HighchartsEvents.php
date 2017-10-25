@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\XAxis;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\XAxis;
 
 use JsonSerializable;
 
 /**
  * Highcharts events.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\XAxis
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\XAxis
  * @version 5.0.14
  * @final
  */
@@ -154,7 +154,7 @@ final class HighchartsEvents implements JsonSerializable {
      * Set the after breaks.
      *
      * @param string $afterBreaks The after breaks.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
      */
     public function setAfterBreaks($afterBreaks) {
         $this->afterBreaks = $afterBreaks;
@@ -165,7 +165,7 @@ final class HighchartsEvents implements JsonSerializable {
      * Set the after set extremes.
      *
      * @param string $afterSetExtremes The after set extremes.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
      */
     public function setAfterSetExtremes($afterSetExtremes) {
         $this->afterSetExtremes = $afterSetExtremes;
@@ -176,7 +176,7 @@ final class HighchartsEvents implements JsonSerializable {
      * Set the point break.
      *
      * @param string $pointBreak The point break.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
      */
     public function setPointBreak($pointBreak) {
         $this->pointBreak = $pointBreak;
@@ -187,7 +187,7 @@ final class HighchartsEvents implements JsonSerializable {
      * Set the point in break.
      *
      * @param string $pointInBreak The point in break.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
      */
     public function setPointInBreak($pointInBreak) {
         $this->pointInBreak = $pointInBreak;
@@ -198,7 +198,7 @@ final class HighchartsEvents implements JsonSerializable {
      * Set the set extremes.
      *
      * @param string $setExtremes The set extremes.
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the highcharts events.
      */
     public function setSetExtremes($setExtremes) {
         $this->setExtremes = $setExtremes;

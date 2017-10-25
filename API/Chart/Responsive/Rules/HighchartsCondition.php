@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\Responsive\Rules;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules;
 
 use JsonSerializable;
 
 /**
  * Highcharts condition.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\Responsive\Rules
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules
  * @version 5.0.14
  * @final
  */
@@ -155,7 +155,7 @@ final class HighchartsCondition implements JsonSerializable {
      * Set the callback.
      *
      * @param string $callback The callback.
-     * @return \WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
      */
     public function setCallback($callback) {
         $this->callback = $callback;
@@ -166,7 +166,7 @@ final class HighchartsCondition implements JsonSerializable {
      * Set the max height.
      *
      * @param integer $maxHeight The max height.
-     * @return \WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
      */
     public function setMaxHeight($maxHeight) {
         $this->maxHeight = $maxHeight;
@@ -177,7 +177,7 @@ final class HighchartsCondition implements JsonSerializable {
      * Set the max width.
      *
      * @param integer $maxWidth The max width.
-     * @return \WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
      */
     public function setMaxWidth($maxWidth) {
         $this->maxWidth = $maxWidth;
@@ -188,7 +188,7 @@ final class HighchartsCondition implements JsonSerializable {
      * Set the min height.
      *
      * @param integer $minHeight The min height.
-     * @return \WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
      */
     public function setMinHeight($minHeight) {
         $this->minHeight = $minHeight;
@@ -199,7 +199,7 @@ final class HighchartsCondition implements JsonSerializable {
      * Set the min width.
      *
      * @param integer $minWidth The min width.
-     * @return \WBW\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition Returns the highcharts condition.
      */
     public function setMinWidth($minWidth) {
         $this->minWidth = $minWidth;

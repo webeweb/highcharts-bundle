@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts no data test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart
  * @version 5.0.14
  */
 final class HighchartsNoDataTest extends PHPUnit_Framework_TestCase {
@@ -29,14 +29,14 @@ final class HighchartsNoDataTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\HighchartsNoData(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData(true);
 
         $this->assertEquals(null, $obj1->getAttr(), "The method getAttr() does not return the expected value");
         $this->assertEquals(null, $obj1->getPosition(), "The method getPosition() does not return the expected value");
         $this->assertEquals(null, $obj1->getStyle(), "The method getStyle() does not return the expected value");
         $this->assertEquals(null, $obj1->getUseHTML(), "The method getUseHTML() does not return the expected value");
 
-        $obj0 = new \WBW\HighchartsBundle\API\Chart\HighchartsNoData(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData(false);
 
         $this->assertEquals(null, $obj0->getAttr(), "The method getAttr() does not return the expected value");
         $this->assertEquals(["x" => 0, "y" => 0, "align" => "center", "verticalAlign" => "middle"], $obj0->getPosition(), "The method getPosition() does not return the expected value");
@@ -51,7 +51,7 @@ final class HighchartsNoDataTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsNoData(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -63,7 +63,7 @@ final class HighchartsNoDataTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\HighchartsNoData(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData(true);
 
         $obj->setAttr(["attr" => "815be97df65d6c4b510cd07189c5347a"]);
 

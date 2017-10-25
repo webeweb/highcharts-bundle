@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Area;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Area;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts events test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Area
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Area
  * @version 5.0.14
  */
 final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Area\HighchartsEvents(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\HighchartsEvents(true);
 
         $this->assertEquals(null, $obj1->getAfterAnimate(), "The method getAfterAnimate() does not return the expected value");
         $this->assertEquals(null, $obj1->getCheckboxClick(), "The method getCheckboxClick() does not return the expected value");
@@ -48,7 +48,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Area\HighchartsEvents(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\HighchartsEvents(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -60,7 +60,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Area\HighchartsEvents(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\HighchartsEvents(true);
 
         $obj->setAfterAnimate("ebdf113b6f659f6f3ea3c6b93e658235");
 

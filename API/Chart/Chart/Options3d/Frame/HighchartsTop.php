@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame;
 
 use JsonSerializable;
 
 /**
  * Highcharts top.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame
  * @version 5.0.14
  * @final
  */
@@ -93,7 +93,7 @@ final class HighchartsTop implements JsonSerializable {
      * Set the color.
      *
      * @param string $color The color.
-     * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsTop Returns the highcharts top.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsTop Returns the highcharts top.
      */
     public function setColor($color) {
         $this->color = $color;
@@ -104,7 +104,7 @@ final class HighchartsTop implements JsonSerializable {
      * Set the size.
      *
      * @param integer $size The size.
-     * @return \WBW\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsTop Returns the highcharts top.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsTop Returns the highcharts top.
      */
     public function setSize($size) {
         $this->size = $size;

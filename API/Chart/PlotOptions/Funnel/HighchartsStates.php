@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel;
 
 use JsonSerializable;
 
 /**
  * Highcharts states.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel
  * @version 5.0.14
  * @final
  */
@@ -26,7 +26,7 @@ final class HighchartsStates implements JsonSerializable {
     /**
      * Hover.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover
      */
     private $hover;
 
@@ -57,7 +57,7 @@ final class HighchartsStates implements JsonSerializable {
     /**
      * Get the hover.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover Returns the hover.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover Returns the hover.
      */
     public function getHover() {
         return $this->hover;
@@ -75,20 +75,20 @@ final class HighchartsStates implements JsonSerializable {
     /**
      * Create a new hover.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover Returns the hover.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover Returns the hover.
      */
     public function newHover() {
-        $this->hover = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover();
+        $this->hover = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover();
         return $this->hover;
     }
 
     /**
      * Set the hover.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover $hover The hover.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\HighchartsStates Returns the highcharts states.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover $hover The hover.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\HighchartsStates Returns the highcharts states.
      */
-    public function setHover(\WBW\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover $hover = null) {
+    public function setHover(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Funnel\States\HighchartsHover $hover = null) {
         $this->hover = $hover;
         return $this;
     }

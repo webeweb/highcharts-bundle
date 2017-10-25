@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart;
+namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
 
 /**
  * Highcharts credits.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart
  * @version 5.0.14
  * @final
  */
@@ -151,7 +151,7 @@ final class HighchartsCredits implements JsonSerializable {
      * Set the enabled.
      *
      * @param boolean $enabled The enabled.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
      */
     public function setEnabled($enabled) {
         $this->enabled = $enabled;
@@ -162,7 +162,7 @@ final class HighchartsCredits implements JsonSerializable {
      * Set the href.
      *
      * @param string $href The href.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
      */
     public function setHref($href) {
         $this->href = $href;
@@ -173,7 +173,7 @@ final class HighchartsCredits implements JsonSerializable {
      * Set the position.
      *
      * @param array $position The position.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
      */
     public function setPosition(array $position = null) {
         $this->position = $position;
@@ -184,7 +184,7 @@ final class HighchartsCredits implements JsonSerializable {
      * Set the style.
      *
      * @param array $style The style.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
      */
     public function setStyle(array $style = null) {
         $this->style = $style;
@@ -195,7 +195,7 @@ final class HighchartsCredits implements JsonSerializable {
      * Set the text.
      *
      * @param string $text The text.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits Returns the highcharts credits.
      */
     public function setText($text) {
         $this->text = $text;

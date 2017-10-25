@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Line\Data\Marker;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Line\Data\Marker;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts states test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\Series\Line\Data\Marker
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Line\Data\Marker
  * @version 5.0.14
  */
 final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\Series\Line\Data\Marker\HighchartsStates(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\Data\Marker\HighchartsStates(true);
 
         $this->assertEquals(null, $obj1->getHover(), "The method getHover() does not return the expected value");
         $this->assertEquals(null, $obj1->getSelect(), "The method getSelect() does not return the expected value");
@@ -42,7 +42,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
      */
     public function testClear() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Line\Data\Marker\HighchartsStates(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\Data\Marker\HighchartsStates(false);
 
         $obj->newHover();
         $obj->newSelect();
@@ -60,7 +60,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Line\Data\Marker\HighchartsStates(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\Data\Marker\HighchartsStates(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -72,10 +72,10 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewHover() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Line\Data\Marker\HighchartsStates(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\Data\Marker\HighchartsStates(false);
 
         $res = $obj->newHover();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Series\Line\Data\Marker\States\HighchartsHover::class, $res, "The method newHover() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\Data\Marker\States\HighchartsHover::class, $res, "The method newHover() does not return the expected object");
     }
 
     /**
@@ -85,10 +85,10 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewSelect() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Line\Data\Marker\HighchartsStates(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\Data\Marker\HighchartsStates(false);
 
         $res = $obj->newSelect();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Series\Line\Data\Marker\States\HighchartsSelect::class, $res, "The method newSelect() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\Data\Marker\States\HighchartsSelect::class, $res, "The method newSelect() does not return the expected object");
     }
 
     /**
@@ -98,14 +98,14 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Line\Data\Marker\HighchartsStates(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\Data\Marker\HighchartsStates(true);
 
-        $obj->setHover(new \WBW\HighchartsBundle\API\Chart\Series\Line\Data\Marker\States\HighchartsHover());
+        $obj->setHover(new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\Data\Marker\States\HighchartsHover());
 
         $res1 = ["hover" => []];
         $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with hover");
 
-        $obj->setSelect(new \WBW\HighchartsBundle\API\Chart\Series\Line\Data\Marker\States\HighchartsSelect());
+        $obj->setSelect(new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\Data\Marker\States\HighchartsSelect());
 
         $res2 = ["hover" => [], "select" => []];
         $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with select");

@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\XAxis;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\XAxis;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts crosshair test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\XAxis
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\XAxis
  * @version 5.0.14
  */
 final class HighchartsCrosshairTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsCrosshairTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(true);
 
         $this->assertEquals(null, $obj1->getClassName(), "The method getClassName() does not return the expected value");
         $this->assertEquals(null, $obj1->getColor(), "The method getColor() does not return the expected value");
@@ -38,7 +38,7 @@ final class HighchartsCrosshairTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getWidth(), "The method getWidth() does not return the expected value");
         $this->assertEquals(null, $obj1->getZIndex(), "The method getZIndex() does not return the expected value");
 
-        $obj0 = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(false);
 
         $this->assertEquals(null, $obj0->getClassName(), "The method getClassName() does not return the expected value");
         $this->assertEquals(null, $obj0->getColor(), "The method getColor() does not return the expected value");
@@ -55,7 +55,7 @@ final class HighchartsCrosshairTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -67,7 +67,7 @@ final class HighchartsCrosshairTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(true);
 
         $obj->setClassName("6f66e878c62db60568a3487869695820");
 
@@ -89,14 +89,14 @@ final class HighchartsCrosshairTest extends PHPUnit_Framework_TestCase {
         $res4 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with snap");
 
-        $obj->setWidth(93);
+        $obj->setWidth(67);
 
-        $res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0, "width" => 93];
+        $res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0, "width" => 67];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with width");
 
-        $obj->setZIndex(30);
+        $obj->setZIndex(55);
 
-        $res6 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0, "width" => 93, "zIndex" => 30];
+        $res6 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0, "width" => 67, "zIndex" => 55];
         $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with z index");
     }
 

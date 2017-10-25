@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart;
+namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
 
 /**
  * Highcharts navigation.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart
  * @version 5.0.14
  * @final
  */
@@ -26,7 +26,7 @@ final class HighchartsNavigation implements JsonSerializable {
     /**
      * Button options.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions
      */
     private $buttonOptions;
 
@@ -90,7 +90,7 @@ final class HighchartsNavigation implements JsonSerializable {
     /**
      * Get the button options.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the button options.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the button options.
      */
     public function getButtonOptions() {
         return $this->buttonOptions;
@@ -135,20 +135,20 @@ final class HighchartsNavigation implements JsonSerializable {
     /**
      * Create a new button options.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the button options.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions Returns the button options.
      */
     public function newButtonOptions() {
-        $this->buttonOptions = new \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions();
+        $this->buttonOptions = new \WBW\Bundle\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions();
         return $this->buttonOptions;
     }
 
     /**
      * Set the button options.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions $buttonOptions The button options.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsNavigation Returns the highcharts navigation.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions $buttonOptions The button options.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation Returns the highcharts navigation.
      */
-    public function setButtonOptions(\WBW\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions $buttonOptions = null) {
+    public function setButtonOptions(\WBW\Bundle\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions $buttonOptions = null) {
         $this->buttonOptions = $buttonOptions;
         return $this;
     }
@@ -157,7 +157,7 @@ final class HighchartsNavigation implements JsonSerializable {
      * Set the menu item hover style.
      *
      * @param array $menuItemHoverStyle The menu item hover style.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsNavigation Returns the highcharts navigation.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation Returns the highcharts navigation.
      */
     public function setMenuItemHoverStyle(array $menuItemHoverStyle = null) {
         $this->menuItemHoverStyle = $menuItemHoverStyle;
@@ -168,7 +168,7 @@ final class HighchartsNavigation implements JsonSerializable {
      * Set the menu item style.
      *
      * @param array $menuItemStyle The menu item style.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsNavigation Returns the highcharts navigation.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation Returns the highcharts navigation.
      */
     public function setMenuItemStyle(array $menuItemStyle = null) {
         $this->menuItemStyle = $menuItemStyle;
@@ -179,7 +179,7 @@ final class HighchartsNavigation implements JsonSerializable {
      * Set the menu style.
      *
      * @param array $menuStyle The menu style.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsNavigation Returns the highcharts navigation.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation Returns the highcharts navigation.
      */
     public function setMenuStyle(array $menuStyle = null) {
         $this->menuStyle = $menuStyle;

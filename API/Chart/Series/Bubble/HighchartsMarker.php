@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\Series\Bubble;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble;
 
 use JsonSerializable;
 
 /**
  * Highcharts marker.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\Series\Bubble
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble
  * @version 5.0.14
  * @final
  */
@@ -62,7 +62,7 @@ final class HighchartsMarker implements JsonSerializable {
     /**
      * States.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\Series\Bubble\Marker\HighchartsStates
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\Marker\HighchartsStates
      */
     private $states;
 
@@ -175,7 +175,7 @@ final class HighchartsMarker implements JsonSerializable {
     /**
      * Get the states.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Bubble\Marker\HighchartsStates Returns the states.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\Marker\HighchartsStates Returns the states.
      */
     public function getStates() {
         return $this->states;
@@ -211,10 +211,10 @@ final class HighchartsMarker implements JsonSerializable {
     /**
      * Create a new states.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Bubble\Marker\HighchartsStates Returns the states.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\Marker\HighchartsStates Returns the states.
      */
     public function newStates() {
-        $this->states = new \WBW\HighchartsBundle\API\Chart\Series\Bubble\Marker\HighchartsStates();
+        $this->states = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\Marker\HighchartsStates();
         return $this->states;
     }
 
@@ -222,7 +222,7 @@ final class HighchartsMarker implements JsonSerializable {
      * Set the enabled.
      *
      * @param boolean $enabled The enabled.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
      */
     public function setEnabled($enabled) {
         $this->enabled = $enabled;
@@ -233,7 +233,7 @@ final class HighchartsMarker implements JsonSerializable {
      * Set the fill color.
      *
      * @param string $fillColor The fill color.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
      */
     public function setFillColor($fillColor) {
         $this->fillColor = $fillColor;
@@ -244,7 +244,7 @@ final class HighchartsMarker implements JsonSerializable {
      * Set the height.
      *
      * @param integer $height The height.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
      */
     public function setHeight($height) {
         $this->height = $height;
@@ -255,7 +255,7 @@ final class HighchartsMarker implements JsonSerializable {
      * Set the line color.
      *
      * @param string $lineColor The line color.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
      */
     public function setLineColor($lineColor) {
         $this->lineColor = $lineColor;
@@ -266,7 +266,7 @@ final class HighchartsMarker implements JsonSerializable {
      * Set the line width.
      *
      * @param integer $lineWidth The line width.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
      */
     public function setLineWidth($lineWidth) {
         $this->lineWidth = $lineWidth;
@@ -276,10 +276,10 @@ final class HighchartsMarker implements JsonSerializable {
     /**
      * Set the states.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\Series\Bubble\Marker\HighchartsStates $states The states.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\Marker\HighchartsStates $states The states.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
      */
-    public function setStates(\WBW\HighchartsBundle\API\Chart\Series\Bubble\Marker\HighchartsStates $states = null) {
+    public function setStates(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\Marker\HighchartsStates $states = null) {
         $this->states = $states;
         return $this;
     }
@@ -288,7 +288,7 @@ final class HighchartsMarker implements JsonSerializable {
      * Set the symbol.
      *
      * @param string $symbol The symbol.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
      */
     public function setSymbol($symbol) {
         switch ($symbol) {
@@ -307,7 +307,7 @@ final class HighchartsMarker implements JsonSerializable {
      * Set the width.
      *
      * @param integer $width The width.
-     * @return \WBW\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\HighchartsMarker Returns the highcharts marker.
      */
     public function setWidth($width) {
         $this->width = $width;

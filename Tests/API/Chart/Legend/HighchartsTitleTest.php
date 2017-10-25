@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\Legend;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Legend;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts title test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\Legend
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Legend
  * @version 5.0.14
  */
 final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
@@ -29,12 +29,12 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
 
         $this->assertEquals(null, $obj1->getStyle(), "The method getStyle() does not return the expected value");
         $this->assertEquals(null, $obj1->getText(), "The method getText() does not return the expected value");
 
-        $obj0 = new \WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(false);
 
         $this->assertEquals(["fontWeight" => "bold"], $obj0->getStyle(), "The method getStyle() does not return the expected value");
         $this->assertEquals(null, $obj0->getText(), "The method getText() does not return the expected value");
@@ -47,7 +47,7 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -59,7 +59,7 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
 
         $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 

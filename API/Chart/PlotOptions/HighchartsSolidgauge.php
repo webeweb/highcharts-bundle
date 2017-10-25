@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\PlotOptions;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions;
 
 use JsonSerializable;
 
 /**
  * Highcharts solidgauge.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\PlotOptions
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions
  * @version 5.0.14
  * @final
  */
@@ -86,7 +86,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
     /**
      * Events.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsEvents
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsEvents
      */
     private $events;
 
@@ -141,7 +141,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
     /**
      * Point.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsPoint
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsPoint
      */
     private $point;
 
@@ -411,7 +411,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
     /**
      * Get the events.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsEvents Returns the events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsEvents Returns the events.
      */
     public function getEvents() {
         return $this->events;
@@ -474,7 +474,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
     /**
      * Get the point.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsPoint Returns the point.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsPoint Returns the point.
      */
     public function getPoint() {
         return $this->point;
@@ -591,20 +591,20 @@ final class HighchartsSolidgauge implements JsonSerializable {
     /**
      * Create a new events.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsEvents Returns the events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsEvents Returns the events.
      */
     public function newEvents() {
-        $this->events = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsEvents();
+        $this->events = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsEvents();
         return $this->events;
     }
 
     /**
      * Create a new point.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsPoint Returns the point.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsPoint Returns the point.
      */
     public function newPoint() {
-        $this->point = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsPoint();
+        $this->point = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsPoint();
         return $this->point;
     }
 
@@ -612,7 +612,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the animation.
      *
      * @param boolean $animation The animation.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setAnimation($animation) {
         $this->animation = $animation;
@@ -623,7 +623,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the animation limit.
      *
      * @param integer $animationLimit The animation limit.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setAnimationLimit($animationLimit) {
         $this->animationLimit = $animationLimit;
@@ -634,7 +634,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -645,7 +645,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the color index.
      *
      * @param integer $colorIndex The color index.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setColorIndex($colorIndex) {
         $this->colorIndex = $colorIndex;
@@ -656,7 +656,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the cursor.
      *
      * @param string $cursor The cursor.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setCursor($cursor) {
         switch ($cursor) {
@@ -676,7 +676,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the data labels.
      *
      * @param array $dataLabels The data labels.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setDataLabels(array $dataLabels = null) {
         $this->dataLabels = $dataLabels;
@@ -687,7 +687,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the description.
      *
      * @param string $description The description.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setDescription($description) {
         $this->description = $description;
@@ -698,7 +698,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the enable mouse tracking.
      *
      * @param boolean $enableMouseTracking The enable mouse tracking.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setEnableMouseTracking($enableMouseTracking) {
         $this->enableMouseTracking = $enableMouseTracking;
@@ -708,10 +708,10 @@ final class HighchartsSolidgauge implements JsonSerializable {
     /**
      * Set the events.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsEvents $events The events.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsEvents $events The events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
-    public function setEvents(\WBW\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsEvents $events = null) {
+    public function setEvents(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsEvents $events = null) {
         $this->events = $events;
         return $this;
     }
@@ -720,7 +720,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the expose element to a11y.
      *
      * @param boolean $exposeElementToA11y The expose element to a11y.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setExposeElementToA11y($exposeElementToA11y) {
         $this->exposeElementToA11y = $exposeElementToA11y;
@@ -731,7 +731,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the find nearest point by.
      *
      * @param string $findNearestPointBy The find nearest point by.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setFindNearestPointBy($findNearestPointBy) {
         switch ($findNearestPointBy) {
@@ -747,7 +747,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the get extremes from all.
      *
      * @param boolean $getExtremesFromAll The get extremes from all.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setGetExtremesFromAll($getExtremesFromAll) {
         $this->getExtremesFromAll = $getExtremesFromAll;
@@ -758,7 +758,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the keys.
      *
      * @param array $keys The keys.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setKeys(array $keys = null) {
         $this->keys = $keys;
@@ -769,7 +769,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the linecap.
      *
      * @param string $linecap The linecap.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setLinecap($linecap) {
         switch ($linecap) {
@@ -785,7 +785,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the overshoot.
      *
      * @param integer $overshoot The overshoot.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setOvershoot($overshoot) {
         $this->overshoot = $overshoot;
@@ -795,10 +795,10 @@ final class HighchartsSolidgauge implements JsonSerializable {
     /**
      * Set the point.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsPoint $point The point.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsPoint $point The point.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
-    public function setPoint(\WBW\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsPoint $point = null) {
+    public function setPoint(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsPoint $point = null) {
         $this->point = $point;
         return $this;
     }
@@ -807,7 +807,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the point description formatter.
      *
      * @param string $pointDescriptionFormatter The point description formatter.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setPointDescriptionFormatter($pointDescriptionFormatter) {
         $this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -818,7 +818,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the rounded.
      *
      * @param boolean $rounded The rounded.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setRounded($rounded) {
         $this->rounded = $rounded;
@@ -829,7 +829,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the selected.
      *
      * @param boolean $selected The selected.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setSelected($selected) {
         $this->selected = $selected;
@@ -840,7 +840,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the show checkbox.
      *
      * @param boolean $showCheckbox The show checkbox.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setShowCheckbox($showCheckbox) {
         $this->showCheckbox = $showCheckbox;
@@ -851,7 +851,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the show in legend.
      *
      * @param boolean $showInLegend The show in legend.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setShowInLegend($showInLegend) {
         $this->showInLegend = $showInLegend;
@@ -862,7 +862,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the skip keyboard navigation.
      *
      * @param boolean $skipKeyboardNavigation The skip keyboard navigation.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setSkipKeyboardNavigation($skipKeyboardNavigation) {
         $this->skipKeyboardNavigation = $skipKeyboardNavigation;
@@ -873,7 +873,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the sticky tracking.
      *
      * @param boolean $stickyTracking The sticky tracking.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setStickyTracking($stickyTracking) {
         $this->stickyTracking = $stickyTracking;
@@ -884,7 +884,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the threshold.
      *
      * @param integer $threshold The threshold.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setThreshold($threshold) {
         $this->threshold = $threshold;
@@ -895,7 +895,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the tooltip.
      *
      * @param array $tooltip The tooltip.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setTooltip(array $tooltip = null) {
         $this->tooltip = $tooltip;
@@ -906,7 +906,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the visible.
      *
      * @param boolean $visible The visible.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setVisible($visible) {
         $this->visible = $visible;
@@ -917,7 +917,7 @@ final class HighchartsSolidgauge implements JsonSerializable {
      * Set the wrap.
      *
      * @param boolean $wrap The wrap.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsSolidgauge Returns the highcharts solidgauge.
      */
     public function setWrap($wrap) {
         $this->wrap = $wrap;

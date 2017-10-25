@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart;
+namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
 
 /**
  * Highcharts x axis.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart
  * @version 5.0.14
  * @final
  */
@@ -72,7 +72,7 @@ final class HighchartsXAxis implements JsonSerializable {
     /**
      * Crosshair.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair
      * @since 4.1
      */
     private $crosshair;
@@ -103,7 +103,7 @@ final class HighchartsXAxis implements JsonSerializable {
     /**
      * Events.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsEvents
      */
     private $events;
 
@@ -155,7 +155,7 @@ final class HighchartsXAxis implements JsonSerializable {
     /**
      * Labels.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsLabels
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsLabels
      */
     private $labels;
 
@@ -453,7 +453,7 @@ final class HighchartsXAxis implements JsonSerializable {
     /**
      * Title.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsTitle
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsTitle
      */
     private $title;
 
@@ -760,7 +760,7 @@ final class HighchartsXAxis implements JsonSerializable {
     /**
      * Get the crosshair.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the crosshair.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the crosshair.
      */
     public function getCrosshair() {
         return $this->crosshair;
@@ -796,7 +796,7 @@ final class HighchartsXAxis implements JsonSerializable {
     /**
      * Get the events.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the events.
      */
     public function getEvents() {
         return $this->events;
@@ -859,7 +859,7 @@ final class HighchartsXAxis implements JsonSerializable {
     /**
      * Get the labels.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsLabels Returns the labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsLabels Returns the labels.
      */
     public function getLabels() {
         return $this->labels;
@@ -1229,7 +1229,7 @@ final class HighchartsXAxis implements JsonSerializable {
     /**
      * Get the title.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsTitle Returns the title.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsTitle Returns the title.
      */
     public function getTitle() {
         return $this->title;
@@ -1283,40 +1283,40 @@ final class HighchartsXAxis implements JsonSerializable {
     /**
      * Create a new crosshair.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the crosshair.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair Returns the crosshair.
      */
     public function newCrosshair() {
-        $this->crosshair = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair();
+        $this->crosshair = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair();
         return $this->crosshair;
     }
 
     /**
      * Create a new events.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsEvents Returns the events.
      */
     public function newEvents() {
-        $this->events = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents();
+        $this->events = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsEvents();
         return $this->events;
     }
 
     /**
      * Create a new labels.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsLabels Returns the labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsLabels Returns the labels.
      */
     public function newLabels() {
-        $this->labels = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsLabels();
+        $this->labels = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsLabels();
         return $this->labels;
     }
 
     /**
      * Create a new title.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsTitle Returns the title.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsTitle Returns the title.
      */
     public function newTitle() {
-        $this->title = new \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsTitle();
+        $this->title = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsTitle();
         return $this->title;
     }
 
@@ -1324,7 +1324,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the allow decimals.
      *
      * @param boolean $allowDecimals The allow decimals.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setAllowDecimals($allowDecimals) {
         $this->allowDecimals = $allowDecimals;
@@ -1335,7 +1335,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the alternate grid color.
      *
      * @param string $alternateGridColor The alternate grid color.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setAlternateGridColor($alternateGridColor) {
         $this->alternateGridColor = $alternateGridColor;
@@ -1346,7 +1346,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the breaks.
      *
      * @param array $breaks The breaks.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setBreaks(array $breaks = null) {
         $this->breaks = $breaks;
@@ -1357,7 +1357,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the categories.
      *
      * @param array $categories The categories.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setCategories(array $categories = null) {
         $this->categories = $categories;
@@ -1368,7 +1368,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the ceiling.
      *
      * @param integer $ceiling The ceiling.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setCeiling($ceiling) {
         $this->ceiling = $ceiling;
@@ -1379,7 +1379,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -1389,10 +1389,10 @@ final class HighchartsXAxis implements JsonSerializable {
     /**
      * Set the crosshair.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair $crosshair The crosshair.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair $crosshair The crosshair.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
-    public function setCrosshair(\WBW\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair $crosshair = null) {
+    public function setCrosshair(\WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair $crosshair = null) {
         $this->crosshair = $crosshair;
         return $this;
     }
@@ -1401,7 +1401,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the date time label formats.
      *
      * @param array $dateTimeLabelFormats The date time label formats.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setDateTimeLabelFormats(array $dateTimeLabelFormats = null) {
         $this->dateTimeLabelFormats = $dateTimeLabelFormats;
@@ -1412,7 +1412,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the description.
      *
      * @param string $description The description.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setDescription($description) {
         $this->description = $description;
@@ -1423,7 +1423,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the end on tick.
      *
      * @param boolean $endOnTick The end on tick.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setEndOnTick($endOnTick) {
         $this->endOnTick = $endOnTick;
@@ -1433,10 +1433,10 @@ final class HighchartsXAxis implements JsonSerializable {
     /**
      * Set the events.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents $events The events.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsEvents $events The events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
-    public function setEvents(\WBW\HighchartsBundle\API\Chart\XAxis\HighchartsEvents $events = null) {
+    public function setEvents(\WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsEvents $events = null) {
         $this->events = $events;
         return $this;
     }
@@ -1445,7 +1445,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the floor.
      *
      * @param integer $floor The floor.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setFloor($floor) {
         $this->floor = $floor;
@@ -1456,7 +1456,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the grid line color.
      *
      * @param string $gridLineColor The grid line color.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setGridLineColor($gridLineColor) {
         $this->gridLineColor = $gridLineColor;
@@ -1467,7 +1467,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the grid line dash style.
      *
      * @param string $gridLineDashStyle The grid line dash style.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setGridLineDashStyle($gridLineDashStyle) {
         switch ($gridLineDashStyle) {
@@ -1492,7 +1492,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the grid line width.
      *
      * @param integer $gridLineWidth The grid line width.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setGridLineWidth($gridLineWidth) {
         $this->gridLineWidth = $gridLineWidth;
@@ -1503,7 +1503,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the grid z index.
      *
      * @param integer $gridZIndex The grid z index.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setGridZIndex($gridZIndex) {
         $this->gridZIndex = $gridZIndex;
@@ -1514,7 +1514,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the id.
      *
      * @param string $id The id.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setId($id) {
         $this->id = $id;
@@ -1524,10 +1524,10 @@ final class HighchartsXAxis implements JsonSerializable {
     /**
      * Set the labels.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsLabels $labels The labels.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsLabels $labels The labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
-    public function setLabels(\WBW\HighchartsBundle\API\Chart\XAxis\HighchartsLabels $labels = null) {
+    public function setLabels(\WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsLabels $labels = null) {
         $this->labels = $labels;
         return $this;
     }
@@ -1536,7 +1536,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the line color.
      *
      * @param string $lineColor The line color.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setLineColor($lineColor) {
         $this->lineColor = $lineColor;
@@ -1547,7 +1547,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the line width.
      *
      * @param integer $lineWidth The line width.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setLineWidth($lineWidth) {
         $this->lineWidth = $lineWidth;
@@ -1558,7 +1558,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the linked to.
      *
      * @param integer $linkedTo The linked to.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setLinkedTo($linkedTo) {
         $this->linkedTo = $linkedTo;
@@ -1569,7 +1569,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the max.
      *
      * @param integer $max The max.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setMax($max) {
         $this->max = $max;
@@ -1580,7 +1580,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the max padding.
      *
      * @param integer $maxPadding The max padding.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setMaxPadding($maxPadding) {
         $this->maxPadding = $maxPadding;
@@ -1591,7 +1591,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the max zoom.
      *
      * @param integer $maxZoom The max zoom.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      * @deprecated
      */
     public function setMaxZoom($maxZoom) {
@@ -1603,7 +1603,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the min.
      *
      * @param integer $min The min.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setMin($min) {
         $this->min = $min;
@@ -1614,7 +1614,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the min padding.
      *
      * @param integer $minPadding The min padding.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setMinPadding($minPadding) {
         $this->minPadding = $minPadding;
@@ -1625,7 +1625,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the min range.
      *
      * @param integer $minRange The min range.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setMinRange($minRange) {
         $this->minRange = $minRange;
@@ -1636,7 +1636,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the min tick interval.
      *
      * @param integer $minTickInterval The min tick interval.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setMinTickInterval($minTickInterval) {
         $this->minTickInterval = $minTickInterval;
@@ -1647,7 +1647,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the minor grid line color.
      *
      * @param string $minorGridLineColor The minor grid line color.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setMinorGridLineColor($minorGridLineColor) {
         $this->minorGridLineColor = $minorGridLineColor;
@@ -1658,7 +1658,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the minor grid line dash style.
      *
      * @param string $minorGridLineDashStyle The minor grid line dash style.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setMinorGridLineDashStyle($minorGridLineDashStyle) {
         switch ($minorGridLineDashStyle) {
@@ -1683,7 +1683,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the minor grid line width.
      *
      * @param integer $minorGridLineWidth The minor grid line width.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setMinorGridLineWidth($minorGridLineWidth) {
         $this->minorGridLineWidth = $minorGridLineWidth;
@@ -1694,7 +1694,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the minor tick color.
      *
      * @param string $minorTickColor The minor tick color.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setMinorTickColor($minorTickColor) {
         $this->minorTickColor = $minorTickColor;
@@ -1705,7 +1705,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the minor tick interval.
      *
      * @param string|integer $minorTickInterval The minor tick interval.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setMinorTickInterval($minorTickInterval) {
         $this->minorTickInterval = $minorTickInterval;
@@ -1716,7 +1716,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the minor tick length.
      *
      * @param integer $minorTickLength The minor tick length.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setMinorTickLength($minorTickLength) {
         $this->minorTickLength = $minorTickLength;
@@ -1727,7 +1727,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the minor tick position.
      *
      * @param string $minorTickPosition The minor tick position.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setMinorTickPosition($minorTickPosition) {
         switch ($minorTickPosition) {
@@ -1743,7 +1743,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the minor tick width.
      *
      * @param integer $minorTickWidth The minor tick width.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setMinorTickWidth($minorTickWidth) {
         $this->minorTickWidth = $minorTickWidth;
@@ -1754,7 +1754,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the offset.
      *
      * @param integer $offset The offset.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setOffset($offset) {
         $this->offset = $offset;
@@ -1765,7 +1765,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the opposite.
      *
      * @param boolean $opposite The opposite.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setOpposite($opposite) {
         $this->opposite = $opposite;
@@ -1776,7 +1776,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the plot bands.
      *
      * @param array $plotBands The plot bands.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setPlotBands(array $plotBands = null) {
         $this->plotBands = $plotBands;
@@ -1787,7 +1787,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the plot lines.
      *
      * @param array $plotLines The plot lines.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setPlotLines(array $plotLines = null) {
         $this->plotLines = $plotLines;
@@ -1798,7 +1798,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the reversed.
      *
      * @param boolean $reversed The reversed.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setReversed($reversed) {
         $this->reversed = $reversed;
@@ -1809,7 +1809,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the show empty.
      *
      * @param boolean $showEmpty The show empty.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setShowEmpty($showEmpty) {
         $this->showEmpty = $showEmpty;
@@ -1820,7 +1820,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the show first label.
      *
      * @param boolean $showFirstLabel The show first label.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setShowFirstLabel($showFirstLabel) {
         $this->showFirstLabel = $showFirstLabel;
@@ -1831,7 +1831,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the show last label.
      *
      * @param boolean $showLastLabel The show last label.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setShowLastLabel($showLastLabel) {
         $this->showLastLabel = $showLastLabel;
@@ -1842,7 +1842,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the soft max.
      *
      * @param integer $softMax The soft max.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setSoftMax($softMax) {
         $this->softMax = $softMax;
@@ -1853,7 +1853,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the soft min.
      *
      * @param integer $softMin The soft min.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setSoftMin($softMin) {
         $this->softMin = $softMin;
@@ -1864,7 +1864,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the start of week.
      *
      * @param integer $startOfWeek The start of week.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setStartOfWeek($startOfWeek) {
         $this->startOfWeek = $startOfWeek;
@@ -1875,7 +1875,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the start on tick.
      *
      * @param boolean $startOnTick The start on tick.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setStartOnTick($startOnTick) {
         $this->startOnTick = $startOnTick;
@@ -1886,7 +1886,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the tick amount.
      *
      * @param integer $tickAmount The tick amount.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setTickAmount($tickAmount) {
         $this->tickAmount = $tickAmount;
@@ -1897,7 +1897,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the tick color.
      *
      * @param string $tickColor The tick color.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setTickColor($tickColor) {
         $this->tickColor = $tickColor;
@@ -1908,7 +1908,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the tick interval.
      *
      * @param integer $tickInterval The tick interval.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setTickInterval($tickInterval) {
         $this->tickInterval = $tickInterval;
@@ -1919,7 +1919,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the tick length.
      *
      * @param integer $tickLength The tick length.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setTickLength($tickLength) {
         $this->tickLength = $tickLength;
@@ -1930,7 +1930,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the tick pixel interval.
      *
      * @param integer $tickPixelInterval The tick pixel interval.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setTickPixelInterval($tickPixelInterval) {
         $this->tickPixelInterval = $tickPixelInterval;
@@ -1941,7 +1941,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the tick position.
      *
      * @param string $tickPosition The tick position.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setTickPosition($tickPosition) {
         switch ($tickPosition) {
@@ -1957,7 +1957,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the tick positioner.
      *
      * @param string $tickPositioner The tick positioner.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setTickPositioner($tickPositioner) {
         $this->tickPositioner = $tickPositioner;
@@ -1968,7 +1968,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the tick positions.
      *
      * @param array $tickPositions The tick positions.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setTickPositions(array $tickPositions = null) {
         $this->tickPositions = $tickPositions;
@@ -1979,7 +1979,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the tick width.
      *
      * @param integer $tickWidth The tick width.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setTickWidth($tickWidth) {
         $this->tickWidth = $tickWidth;
@@ -1990,7 +1990,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the tickmark placement.
      *
      * @param string $tickmarkPlacement The tickmark placement.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setTickmarkPlacement($tickmarkPlacement) {
         switch ($tickmarkPlacement) {
@@ -2006,10 +2006,10 @@ final class HighchartsXAxis implements JsonSerializable {
     /**
      * Set the title.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\XAxis\HighchartsTitle $title The title.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsTitle $title The title.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
-    public function setTitle(\WBW\HighchartsBundle\API\Chart\XAxis\HighchartsTitle $title = null) {
+    public function setTitle(\WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsTitle $title = null) {
         $this->title = $title;
         return $this;
     }
@@ -2018,7 +2018,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the type.
      *
      * @param string $type The type.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setType($type) {
         switch ($type) {
@@ -2036,7 +2036,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the unique names.
      *
      * @param boolean $uniqueNames The unique names.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setUniqueNames($uniqueNames) {
         $this->uniqueNames = $uniqueNames;
@@ -2047,7 +2047,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the units.
      *
      * @param array $units The units.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setUnits(array $units = null) {
         $this->units = $units;
@@ -2058,7 +2058,7 @@ final class HighchartsXAxis implements JsonSerializable {
      * Set the visible.
      *
      * @param boolean $visible The visible.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsXAxis Returns the highcharts x axis.
      */
     public function setVisible($visible) {
         $this->visible = $visible;

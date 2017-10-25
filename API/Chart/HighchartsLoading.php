@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart;
+namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
 
 /**
  * Highcharts loading.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart
  * @version 5.0.14
  * @final
  */
@@ -135,7 +135,7 @@ final class HighchartsLoading implements JsonSerializable {
      * Set the hide duration.
      *
      * @param integer $hideDuration The hide duration.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsLoading Returns the highcharts loading.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading Returns the highcharts loading.
      */
     public function setHideDuration($hideDuration) {
         $this->hideDuration = $hideDuration;
@@ -146,7 +146,7 @@ final class HighchartsLoading implements JsonSerializable {
      * Set the label style.
      *
      * @param array $labelStyle The label style.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsLoading Returns the highcharts loading.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading Returns the highcharts loading.
      */
     public function setLabelStyle(array $labelStyle = null) {
         $this->labelStyle = $labelStyle;
@@ -157,7 +157,7 @@ final class HighchartsLoading implements JsonSerializable {
      * Set the show duration.
      *
      * @param integer $showDuration The show duration.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsLoading Returns the highcharts loading.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading Returns the highcharts loading.
      */
     public function setShowDuration($showDuration) {
         $this->showDuration = $showDuration;
@@ -168,7 +168,7 @@ final class HighchartsLoading implements JsonSerializable {
      * Set the style.
      *
      * @param array $style The style.
-     * @return \WBW\HighchartsBundle\API\Chart\HighchartsLoading Returns the highcharts loading.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading Returns the highcharts loading.
      */
     public function setStyle(array $style = null) {
         $this->style = $style;

@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Heatmap;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Heatmap;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts point test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Heatmap
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Heatmap
  * @version 5.0.14
  */
 final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint(true);
 
         $this->assertEquals(null, $obj1->getEvents(), "The method getEvents() does not return the expected value");
     }
@@ -41,7 +41,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
      */
     public function testClear() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint(false);
 
         $obj->newEvents();
 
@@ -58,7 +58,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -70,10 +70,10 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewEvents() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint(false);
 
         $res = $obj->newEvents();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\Point\HighchartsEvents::class, $res, "The method newEvents() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\Point\HighchartsEvents::class, $res, "The method newEvents() does not return the expected object");
     }
 
     /**
@@ -83,9 +83,9 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsPoint(true);
 
-        $obj->setEvents(new \WBW\HighchartsBundle\API\Chart\PlotOptions\Heatmap\Point\HighchartsEvents());
+        $obj->setEvents(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\Point\HighchartsEvents());
 
         $res1 = ["events" => []];
         $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with events");

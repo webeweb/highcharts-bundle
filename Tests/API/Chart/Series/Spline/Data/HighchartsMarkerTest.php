@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\Series\Spline\Data;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Spline\Data;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts marker test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\Series\Spline\Data
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Spline\Data
  * @version 5.0.14
  */
 final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\Series\Spline\Data\HighchartsMarker(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\Data\HighchartsMarker(true);
 
         $this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
         $this->assertEquals(null, $obj1->getFillColor(), "The method getFillColor() does not return the expected value");
@@ -41,7 +41,7 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getSymbol(), "The method getSymbol() does not return the expected value");
         $this->assertEquals(null, $obj1->getWidth(), "The method getWidth() does not return the expected value");
 
-        $obj0 = new \WBW\HighchartsBundle\API\Chart\Series\Spline\Data\HighchartsMarker(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\Data\HighchartsMarker(false);
 
         $this->assertEquals(null, $obj0->getEnabled(), "The method getEnabled() does not return the expected value");
         $this->assertEquals(null, $obj0->getFillColor(), "The method getFillColor() does not return the expected value");
@@ -61,7 +61,7 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
      */
     public function testClear() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Spline\Data\HighchartsMarker(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\Data\HighchartsMarker(false);
 
         $obj->newStates();
 
@@ -78,7 +78,7 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Spline\Data\HighchartsMarker(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\Data\HighchartsMarker(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -90,10 +90,10 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
      */
     public function testNewStates() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Spline\Data\HighchartsMarker(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\Data\HighchartsMarker(false);
 
         $res = $obj->newStates();
-        $this->assertInstanceOf(\WBW\HighchartsBundle\API\Chart\Series\Spline\Data\Marker\HighchartsStates::class, $res, "The method newStates() does not return the expected object");
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\Data\Marker\HighchartsStates::class, $res, "The method newStates() does not return the expected object");
     }
 
     /**
@@ -103,7 +103,7 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Series\Spline\Data\HighchartsMarker(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\Data\HighchartsMarker(true);
 
         $obj->setEnabled(0);
 
@@ -115,39 +115,39 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
         $res2 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
         $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-        $obj->setHeight(78);
+        $obj->setHeight(23);
 
-        $res3 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 78];
+        $res3 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 23];
         $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with height");
 
         $obj->setLineColor("c2580eebfdbdb9fc629f50cc147c3f63");
 
-        $res4 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 78, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
+        $res4 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 23, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with line color");
 
-        $obj->setLineWidth(7);
+        $obj->setLineWidth(28);
 
-        $res5 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 78, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 7];
+        $res5 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 23, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 28];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with line width");
 
-        $obj->setRadius(64);
+        $obj->setRadius(42);
 
-        $res6 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 78, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 7, "radius" => 64];
+        $res6 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 23, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 28, "radius" => 42];
         $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with radius");
 
-        $obj->setStates(new \WBW\HighchartsBundle\API\Chart\Series\Spline\Data\Marker\HighchartsStates());
+        $obj->setStates(new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Spline\Data\Marker\HighchartsStates());
 
-        $res7 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 78, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 7, "radius" => 64, "states" => []];
+        $res7 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 23, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 28, "radius" => 42, "states" => []];
         $this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with states");
 
         $obj->setSymbol("triangle-down");
 
-        $res8 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 78, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 7, "radius" => 64, "states" => [], "symbol" => "triangle-down"];
+        $res8 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 23, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 28, "radius" => 42, "states" => [], "symbol" => "triangle-down"];
         $this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with symbol");
 
-        $obj->setWidth(15);
+        $obj->setWidth(64);
 
-        $res9 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 78, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 7, "radius" => 64, "states" => [], "symbol" => "triangle-down", "width" => 15];
+        $res9 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 23, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 28, "radius" => 42, "states" => [], "symbol" => "triangle-down", "width" => 64];
         $this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with width");
     }
 

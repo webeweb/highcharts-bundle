@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\Drilldown;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\Drilldown;
 
 use JsonSerializable;
 
 /**
  * Highcharts drill up button.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\Drilldown
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\Drilldown
  * @version 5.0.14
  * @final
  */
@@ -115,7 +115,7 @@ final class HighchartsDrillUpButton implements JsonSerializable {
      * Set the position.
      *
      * @param array $position The position.
-     * @return \WBW\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton Returns the highcharts drill up button.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton Returns the highcharts drill up button.
      */
     public function setPosition(array $position = null) {
         $this->position = $position;
@@ -126,7 +126,7 @@ final class HighchartsDrillUpButton implements JsonSerializable {
      * Set the relative to.
      *
      * @param string $relativeTo The relative to.
-     * @return \WBW\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton Returns the highcharts drill up button.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton Returns the highcharts drill up button.
      */
     public function setRelativeTo($relativeTo) {
         $this->relativeTo = $relativeTo;
@@ -137,7 +137,7 @@ final class HighchartsDrillUpButton implements JsonSerializable {
      * Set the theme.
      *
      * @param array $theme The theme.
-     * @return \WBW\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton Returns the highcharts drill up button.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton Returns the highcharts drill up button.
      */
     public function setTheme(array $theme = null) {
         $this->theme = $theme;

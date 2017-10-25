@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\Exporting;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\Exporting;
 
 use JsonSerializable;
 
 /**
  * Highcharts buttons.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\Exporting
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\Exporting
  * @version 5.0.14
  * @final
  */
@@ -26,7 +26,7 @@ final class HighchartsButtons implements JsonSerializable {
     /**
      * Context button.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton
      */
     private $contextButton;
 
@@ -57,7 +57,7 @@ final class HighchartsButtons implements JsonSerializable {
     /**
      * Get the context button.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the context button.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the context button.
      */
     public function getContextButton() {
         return $this->contextButton;
@@ -75,20 +75,20 @@ final class HighchartsButtons implements JsonSerializable {
     /**
      * Create a new context button.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the context button.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the context button.
      */
     public function newContextButton() {
-        $this->contextButton = new \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton();
+        $this->contextButton = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton();
         return $this->contextButton;
     }
 
     /**
      * Set the context button.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton $contextButton The context button.
-     * @return \WBW\HighchartsBundle\API\Chart\Exporting\HighchartsButtons Returns the highcharts buttons.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton $contextButton The context button.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons Returns the highcharts buttons.
      */
-    public function setContextButton(\WBW\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton $contextButton = null) {
+    public function setContextButton(\WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton $contextButton = null) {
         $this->contextButton = $contextButton;
         return $this;
     }

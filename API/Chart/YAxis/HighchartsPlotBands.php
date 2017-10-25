@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\YAxis;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\YAxis;
 
 use JsonSerializable;
 
 /**
  * Highcharts plot bands.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\YAxis
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\YAxis
  * @version 5.0.14
  * @final
  */
@@ -85,7 +85,7 @@ final class HighchartsPlotBands implements JsonSerializable {
     /**
      * Label.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel
      */
     private $label;
 
@@ -255,7 +255,7 @@ final class HighchartsPlotBands implements JsonSerializable {
     /**
      * Get the label.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel Returns the label.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel Returns the label.
      */
     public function getLabel() {
         return $this->label;
@@ -309,10 +309,10 @@ final class HighchartsPlotBands implements JsonSerializable {
     /**
      * Create a new label.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel Returns the label.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel Returns the label.
      */
     public function newLabel() {
-        $this->label = new \WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel();
+        $this->label = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel();
         return $this->label;
     }
 
@@ -320,7 +320,7 @@ final class HighchartsPlotBands implements JsonSerializable {
      * Set the border color.
      *
      * @param string $borderColor The border color.
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
      */
     public function setBorderColor($borderColor) {
         $this->borderColor = $borderColor;
@@ -331,7 +331,7 @@ final class HighchartsPlotBands implements JsonSerializable {
      * Set the border width.
      *
      * @param integer $borderWidth The border width.
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
      */
     public function setBorderWidth($borderWidth) {
         $this->borderWidth = $borderWidth;
@@ -342,7 +342,7 @@ final class HighchartsPlotBands implements JsonSerializable {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -353,7 +353,7 @@ final class HighchartsPlotBands implements JsonSerializable {
      * Set the color.
      *
      * @param string $color The color.
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
      */
     public function setColor($color) {
         $this->color = $color;
@@ -364,7 +364,7 @@ final class HighchartsPlotBands implements JsonSerializable {
      * Set the events.
      *
      * @param array $events The events.
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
      */
     public function setEvents(array $events = null) {
         $this->events = $events;
@@ -375,7 +375,7 @@ final class HighchartsPlotBands implements JsonSerializable {
      * Set the from.
      *
      * @param integer $from The from.
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
      */
     public function setFrom($from) {
         $this->from = $from;
@@ -386,7 +386,7 @@ final class HighchartsPlotBands implements JsonSerializable {
      * Set the id.
      *
      * @param string $id The id.
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
      */
     public function setId($id) {
         $this->id = $id;
@@ -397,7 +397,7 @@ final class HighchartsPlotBands implements JsonSerializable {
      * Set the inner radius.
      *
      * @param integer|string $innerRadius The inner radius.
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
      */
     public function setInnerRadius($innerRadius) {
         $this->innerRadius = $innerRadius;
@@ -407,10 +407,10 @@ final class HighchartsPlotBands implements JsonSerializable {
     /**
      * Set the label.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel $label The label.
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel $label The label.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
      */
-    public function setLabel(\WBW\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel $label = null) {
+    public function setLabel(\WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel $label = null) {
         $this->label = $label;
         return $this;
     }
@@ -419,7 +419,7 @@ final class HighchartsPlotBands implements JsonSerializable {
      * Set the outer radius.
      *
      * @param integer|string $outerRadius The outer radius.
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
      */
     public function setOuterRadius($outerRadius) {
         $this->outerRadius = $outerRadius;
@@ -430,7 +430,7 @@ final class HighchartsPlotBands implements JsonSerializable {
      * Set the thickness.
      *
      * @param integer|string $thickness The thickness.
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
      */
     public function setThickness($thickness) {
         $this->thickness = $thickness;
@@ -441,7 +441,7 @@ final class HighchartsPlotBands implements JsonSerializable {
      * Set the to.
      *
      * @param integer $to The to.
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
      */
     public function setTo($to) {
         $this->to = $to;
@@ -452,7 +452,7 @@ final class HighchartsPlotBands implements JsonSerializable {
      * Set the z index.
      *
      * @param integer $zIndex The z index.
-     * @return \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands Returns the highcharts plot bands.
      */
     public function setZIndex($zIndex) {
         $this->zIndex = $zIndex;

@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\States;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble\States;
 
 use JsonSerializable;
 
 /**
  * Highcharts hover.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\States
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble\States
  * @version 5.0.14
  * @final
  */
@@ -65,7 +65,7 @@ final class HighchartsHover implements JsonSerializable {
     /**
      * Marker.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\Hover\HighchartsMarker
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\Hover\HighchartsMarker
      * @deprecated
      */
     private $marker;
@@ -157,7 +157,7 @@ final class HighchartsHover implements JsonSerializable {
     /**
      * Get the marker.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\Hover\HighchartsMarker Returns the marker.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\Hover\HighchartsMarker Returns the marker.
      * @deprecated
      */
     public function getMarker() {
@@ -176,10 +176,10 @@ final class HighchartsHover implements JsonSerializable {
     /**
      * Create a new marker.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\Hover\HighchartsMarker Returns the marker.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\Hover\HighchartsMarker Returns the marker.
      */
     public function newMarker() {
-        $this->marker = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\Hover\HighchartsMarker();
+        $this->marker = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\Hover\HighchartsMarker();
         return $this->marker;
     }
 
@@ -187,7 +187,7 @@ final class HighchartsHover implements JsonSerializable {
      * Set the animation.
      *
      * @param boolean|array $animation The animation.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\HighchartsHover Returns the highcharts hover.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\HighchartsHover Returns the highcharts hover.
      */
     public function setAnimation($animation) {
         $this->animation = $animation;
@@ -198,7 +198,7 @@ final class HighchartsHover implements JsonSerializable {
      * Set the enabled.
      *
      * @param boolean $enabled The enabled.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\HighchartsHover Returns the highcharts hover.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\HighchartsHover Returns the highcharts hover.
      */
     public function setEnabled($enabled) {
         $this->enabled = $enabled;
@@ -209,7 +209,7 @@ final class HighchartsHover implements JsonSerializable {
      * Set the halo.
      *
      * @param array $halo The halo.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\HighchartsHover Returns the highcharts hover.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\HighchartsHover Returns the highcharts hover.
      */
     public function setHalo(array $halo = null) {
         $this->halo = $halo;
@@ -220,7 +220,7 @@ final class HighchartsHover implements JsonSerializable {
      * Set the line width.
      *
      * @param integer $lineWidth The line width.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\HighchartsHover Returns the highcharts hover.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\HighchartsHover Returns the highcharts hover.
      */
     public function setLineWidth($lineWidth) {
         $this->lineWidth = $lineWidth;
@@ -231,7 +231,7 @@ final class HighchartsHover implements JsonSerializable {
      * Set the line width plus.
      *
      * @param integer $lineWidthPlus The line width plus.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\HighchartsHover Returns the highcharts hover.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\HighchartsHover Returns the highcharts hover.
      */
     public function setLineWidthPlus($lineWidthPlus) {
         $this->lineWidthPlus = $lineWidthPlus;
@@ -241,11 +241,11 @@ final class HighchartsHover implements JsonSerializable {
     /**
      * Set the marker.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\Hover\HighchartsMarker $marker The marker.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\HighchartsHover Returns the highcharts hover.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\Hover\HighchartsMarker $marker The marker.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\HighchartsHover Returns the highcharts hover.
      * @deprecated
      */
-    public function setMarker(\WBW\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\Hover\HighchartsMarker $marker = null) {
+    public function setMarker(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble\States\Hover\HighchartsMarker $marker = null) {
         $this->marker = $marker;
         return $this;
     }

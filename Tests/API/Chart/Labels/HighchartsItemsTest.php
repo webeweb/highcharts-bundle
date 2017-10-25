@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\Labels;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Labels;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts items test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\Labels
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Labels
  * @version 5.0.14
  */
 final class HighchartsItemsTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsItemsTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\Labels\HighchartsItems(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Labels\HighchartsItems(true);
 
         $this->assertEquals(null, $obj1->getHtml(), "The method getHtml() does not return the expected value");
         $this->assertEquals(null, $obj1->getStyle(), "The method getStyle() does not return the expected value");
@@ -42,7 +42,7 @@ final class HighchartsItemsTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Labels\HighchartsItems(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Labels\HighchartsItems(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -54,7 +54,7 @@ final class HighchartsItemsTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\Labels\HighchartsItems(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Labels\HighchartsItems(true);
 
         $obj->setHtml("fc35fdc70d5fc69d269883a822c7a53e");
 

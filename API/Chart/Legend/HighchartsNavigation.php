@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\Legend;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\Legend;
 
 use JsonSerializable;
 
 /**
  * Highcharts navigation.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\Legend
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\Legend
  * @version 5.0.14
  * @final
  */
@@ -175,7 +175,7 @@ final class HighchartsNavigation implements JsonSerializable {
      * Set the active color.
      *
      * @param string $activeColor The active color.
-     * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
      */
     public function setActiveColor($activeColor) {
         $this->activeColor = $activeColor;
@@ -186,7 +186,7 @@ final class HighchartsNavigation implements JsonSerializable {
      * Set the animation.
      *
      * @param boolean|array $animation The animation.
-     * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
      */
     public function setAnimation($animation) {
         $this->animation = $animation;
@@ -197,7 +197,7 @@ final class HighchartsNavigation implements JsonSerializable {
      * Set the arrow size.
      *
      * @param integer $arrowSize The arrow size.
-     * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
      */
     public function setArrowSize($arrowSize) {
         $this->arrowSize = $arrowSize;
@@ -208,7 +208,7 @@ final class HighchartsNavigation implements JsonSerializable {
      * Set the enabled.
      *
      * @param boolean $enabled The enabled.
-     * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
      */
     public function setEnabled($enabled) {
         $this->enabled = $enabled;
@@ -219,7 +219,7 @@ final class HighchartsNavigation implements JsonSerializable {
      * Set the inactive color.
      *
      * @param string $inactiveColor The inactive color.
-     * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
      */
     public function setInactiveColor($inactiveColor) {
         $this->inactiveColor = $inactiveColor;
@@ -230,7 +230,7 @@ final class HighchartsNavigation implements JsonSerializable {
      * Set the style.
      *
      * @param array $style The style.
-     * @return \WBW\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation Returns the highcharts navigation.
      */
     public function setStyle(array $style = null) {
         $this->style = $style;

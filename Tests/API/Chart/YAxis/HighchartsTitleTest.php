@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\YAxis;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\YAxis;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts title test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\YAxis
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\YAxis
  * @version 5.0.14
  */
 final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsTitle(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsTitle(true);
 
         $this->assertEquals(null, $obj1->getAlign(), "The method getAlign() does not return the expected value");
         $this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
@@ -42,7 +42,7 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(null, $obj1->getX(), "The method getX() does not return the expected value");
         $this->assertEquals(null, $obj1->getY(), "The method getY() does not return the expected value");
 
-        $obj0 = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsTitle(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsTitle(false);
 
         $this->assertEquals("middle", $obj0->getAlign(), "The method getAlign() does not return the expected value");
         $this->assertEquals("middle", $obj0->getEnabled(), "The method getEnabled() does not return the expected value");
@@ -63,7 +63,7 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsTitle(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsTitle(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -75,7 +75,7 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\YAxis\HighchartsTitle(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsTitle(true);
 
         $obj->setAlign("high");
 
@@ -87,44 +87,44 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
         $res2 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423"];
         $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
-        $obj->setMargin(51);
+        $obj->setMargin(99);
 
-        $res3 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 51];
+        $res3 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 99];
         $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with margin");
 
-        $obj->setOffset(85);
+        $obj->setOffset(95);
 
-        $res4 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 51, "offset" => 85];
+        $res4 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 99, "offset" => 95];
         $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with offset");
 
         $obj->setReserveSpace(1);
 
-        $res5 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 51, "offset" => 85, "reserveSpace" => 1];
+        $res5 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 99, "offset" => 95, "reserveSpace" => 1];
         $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with reserve space");
 
-        $obj->setRotation(77);
+        $obj->setRotation(60);
 
-        $res6 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 51, "offset" => 85, "reserveSpace" => 1, "rotation" => 77];
+        $res6 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 99, "offset" => 95, "reserveSpace" => 1, "rotation" => 60];
         $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with rotation");
 
         $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-        $res7 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 51, "offset" => 85, "reserveSpace" => 1, "rotation" => 77, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+        $res7 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 99, "offset" => 95, "reserveSpace" => 1, "rotation" => 60, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
         $this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with style");
 
         $obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
 
-        $res8 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 51, "offset" => 85, "reserveSpace" => 1, "rotation" => 77, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
+        $res8 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 99, "offset" => 95, "reserveSpace" => 1, "rotation" => 60, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
         $this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with text");
 
-        $obj->setX(9);
+        $obj->setX(50);
 
-        $res9 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 51, "offset" => 85, "reserveSpace" => 1, "rotation" => 77, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "x" => 9];
+        $res9 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 99, "offset" => 95, "reserveSpace" => 1, "rotation" => 60, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "x" => 50];
         $this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with x");
 
-        $obj->setY(75);
+        $obj->setY(46);
 
-        $res10 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 51, "offset" => 85, "reserveSpace" => 1, "rotation" => 77, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "x" => 9, "y" => 75];
+        $res10 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 99, "offset" => 95, "reserveSpace" => 1, "rotation" => 60, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "x" => 50, "y" => 46];
         $this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with y");
     }
 

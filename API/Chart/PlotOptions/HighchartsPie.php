@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\PlotOptions;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions;
 
 use JsonSerializable;
 
 /**
  * Highcharts pie.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\PlotOptions
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions
  * @version 5.0.14
  * @final
  */
@@ -100,7 +100,7 @@ final class HighchartsPie implements JsonSerializable {
     /**
      * Data labels.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsDataLabels
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsDataLabels
      */
     private $dataLabels;
 
@@ -138,7 +138,7 @@ final class HighchartsPie implements JsonSerializable {
     /**
      * Events.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsEvents
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsEvents
      */
     private $events;
 
@@ -209,7 +209,7 @@ final class HighchartsPie implements JsonSerializable {
     /**
      * Point.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsPoint
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsPoint
      */
     private $point;
 
@@ -276,7 +276,7 @@ final class HighchartsPie implements JsonSerializable {
     /**
      * States.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates
      */
     private $states;
 
@@ -555,7 +555,7 @@ final class HighchartsPie implements JsonSerializable {
     /**
      * Get the data labels.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsDataLabels Returns the data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsDataLabels Returns the data labels.
      */
     public function getDataLabels() {
         return $this->dataLabels;
@@ -600,7 +600,7 @@ final class HighchartsPie implements JsonSerializable {
     /**
      * Get the events.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsEvents Returns the events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsEvents Returns the events.
      */
     public function getEvents() {
         return $this->events;
@@ -681,7 +681,7 @@ final class HighchartsPie implements JsonSerializable {
     /**
      * Get the point.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsPoint Returns the point.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsPoint Returns the point.
      */
     public function getPoint() {
         return $this->point;
@@ -762,7 +762,7 @@ final class HighchartsPie implements JsonSerializable {
     /**
      * Get the states.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates Returns the states.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates Returns the states.
      */
     public function getStates() {
         return $this->states;
@@ -825,40 +825,40 @@ final class HighchartsPie implements JsonSerializable {
     /**
      * Create a new data labels.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsDataLabels Returns the data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsDataLabels Returns the data labels.
      */
     public function newDataLabels() {
-        $this->dataLabels = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsDataLabels();
+        $this->dataLabels = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsDataLabels();
         return $this->dataLabels;
     }
 
     /**
      * Create a new events.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsEvents Returns the events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsEvents Returns the events.
      */
     public function newEvents() {
-        $this->events = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsEvents();
+        $this->events = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsEvents();
         return $this->events;
     }
 
     /**
      * Create a new point.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsPoint Returns the point.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsPoint Returns the point.
      */
     public function newPoint() {
-        $this->point = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsPoint();
+        $this->point = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsPoint();
         return $this->point;
     }
 
     /**
      * Create a new states.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates Returns the states.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates Returns the states.
      */
     public function newStates() {
-        $this->states = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates();
+        $this->states = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates();
         return $this->states;
     }
 
@@ -866,7 +866,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the allow point select.
      *
      * @param boolean $allowPointSelect The allow point select.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setAllowPointSelect($allowPointSelect) {
         $this->allowPointSelect = $allowPointSelect;
@@ -877,7 +877,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the animation.
      *
      * @param boolean $animation The animation.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setAnimation($animation) {
         $this->animation = $animation;
@@ -888,7 +888,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the animation limit.
      *
      * @param integer $animationLimit The animation limit.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setAnimationLimit($animationLimit) {
         $this->animationLimit = $animationLimit;
@@ -899,7 +899,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the border color.
      *
      * @param string $borderColor The border color.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setBorderColor($borderColor) {
         $this->borderColor = $borderColor;
@@ -910,7 +910,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the border width.
      *
      * @param integer $borderWidth The border width.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setBorderWidth($borderWidth) {
         $this->borderWidth = $borderWidth;
@@ -921,7 +921,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the center.
      *
      * @param array $center The center.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setCenter(array $center = null) {
         $this->center = $center;
@@ -932,7 +932,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -943,7 +943,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the color index.
      *
      * @param integer $colorIndex The color index.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setColorIndex($colorIndex) {
         $this->colorIndex = $colorIndex;
@@ -954,7 +954,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the colors.
      *
      * @param array $colors The colors.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setColors(array $colors = null) {
         $this->colors = $colors;
@@ -965,7 +965,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the cursor.
      *
      * @param string $cursor The cursor.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setCursor($cursor) {
         switch ($cursor) {
@@ -984,10 +984,10 @@ final class HighchartsPie implements JsonSerializable {
     /**
      * Set the data labels.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsDataLabels $dataLabels The data labels.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsDataLabels $dataLabels The data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
-    public function setDataLabels(\WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsDataLabels $dataLabels = null) {
+    public function setDataLabels(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsDataLabels $dataLabels = null) {
         $this->dataLabels = $dataLabels;
         return $this;
     }
@@ -996,7 +996,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the depth.
      *
      * @param integer $depth The depth.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setDepth($depth) {
         $this->depth = $depth;
@@ -1007,7 +1007,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the description.
      *
      * @param string $description The description.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setDescription($description) {
         $this->description = $description;
@@ -1018,7 +1018,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the enable mouse tracking.
      *
      * @param boolean $enableMouseTracking The enable mouse tracking.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setEnableMouseTracking($enableMouseTracking) {
         $this->enableMouseTracking = $enableMouseTracking;
@@ -1029,7 +1029,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the end angle.
      *
      * @param integer $endAngle The end angle.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setEndAngle($endAngle) {
         $this->endAngle = $endAngle;
@@ -1039,10 +1039,10 @@ final class HighchartsPie implements JsonSerializable {
     /**
      * Set the events.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsEvents $events The events.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsEvents $events The events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
-    public function setEvents(\WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsEvents $events = null) {
+    public function setEvents(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsEvents $events = null) {
         $this->events = $events;
         return $this;
     }
@@ -1051,7 +1051,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the expose element to a11y.
      *
      * @param boolean $exposeElementToA11y The expose element to a11y.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setExposeElementToA11y($exposeElementToA11y) {
         $this->exposeElementToA11y = $exposeElementToA11y;
@@ -1062,7 +1062,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the find nearest point by.
      *
      * @param string $findNearestPointBy The find nearest point by.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setFindNearestPointBy($findNearestPointBy) {
         switch ($findNearestPointBy) {
@@ -1078,7 +1078,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the get extremes from all.
      *
      * @param boolean $getExtremesFromAll The get extremes from all.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setGetExtremesFromAll($getExtremesFromAll) {
         $this->getExtremesFromAll = $getExtremesFromAll;
@@ -1089,7 +1089,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the ignore hidden point.
      *
      * @param boolean $ignoreHiddenPoint The ignore hidden point.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setIgnoreHiddenPoint($ignoreHiddenPoint) {
         $this->ignoreHiddenPoint = $ignoreHiddenPoint;
@@ -1100,7 +1100,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the inner size.
      *
      * @param string|integer $innerSize The inner size.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setInnerSize($innerSize) {
         $this->innerSize = $innerSize;
@@ -1111,7 +1111,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the keys.
      *
      * @param array $keys The keys.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setKeys(array $keys = null) {
         $this->keys = $keys;
@@ -1122,7 +1122,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the linked to.
      *
      * @param string $linkedTo The linked to.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setLinkedTo($linkedTo) {
         $this->linkedTo = $linkedTo;
@@ -1133,7 +1133,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the min size.
      *
      * @param integer $minSize The min size.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setMinSize($minSize) {
         $this->minSize = $minSize;
@@ -1143,10 +1143,10 @@ final class HighchartsPie implements JsonSerializable {
     /**
      * Set the point.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsPoint $point The point.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsPoint $point The point.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
-    public function setPoint(\WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsPoint $point = null) {
+    public function setPoint(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsPoint $point = null) {
         $this->point = $point;
         return $this;
     }
@@ -1155,7 +1155,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the point description formatter.
      *
      * @param string $pointDescriptionFormatter The point description formatter.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setPointDescriptionFormatter($pointDescriptionFormatter) {
         $this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -1166,7 +1166,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the selected.
      *
      * @param boolean $selected The selected.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setSelected($selected) {
         $this->selected = $selected;
@@ -1177,7 +1177,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the shadow.
      *
      * @param boolean|array $shadow The shadow.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setShadow($shadow) {
         $this->shadow = $shadow;
@@ -1188,7 +1188,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the show in legend.
      *
      * @param boolean $showInLegend The show in legend.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setShowInLegend($showInLegend) {
         $this->showInLegend = $showInLegend;
@@ -1199,7 +1199,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the size.
      *
      * @param string|integer $size The size.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setSize($size) {
         $this->size = $size;
@@ -1210,7 +1210,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the skip keyboard navigation.
      *
      * @param boolean $skipKeyboardNavigation The skip keyboard navigation.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setSkipKeyboardNavigation($skipKeyboardNavigation) {
         $this->skipKeyboardNavigation = $skipKeyboardNavigation;
@@ -1221,7 +1221,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the sliced offset.
      *
      * @param integer $slicedOffset The sliced offset.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setSlicedOffset($slicedOffset) {
         $this->slicedOffset = $slicedOffset;
@@ -1232,7 +1232,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the start angle.
      *
      * @param integer $startAngle The start angle.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setStartAngle($startAngle) {
         $this->startAngle = $startAngle;
@@ -1242,10 +1242,10 @@ final class HighchartsPie implements JsonSerializable {
     /**
      * Set the states.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates $states The states.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates $states The states.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
-    public function setStates(\WBW\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates $states = null) {
+    public function setStates(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates $states = null) {
         $this->states = $states;
         return $this;
     }
@@ -1254,7 +1254,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the sticky tracking.
      *
      * @param boolean $stickyTracking The sticky tracking.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setStickyTracking($stickyTracking) {
         $this->stickyTracking = $stickyTracking;
@@ -1265,7 +1265,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the tooltip.
      *
      * @param array $tooltip The tooltip.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setTooltip(array $tooltip = null) {
         $this->tooltip = $tooltip;
@@ -1276,7 +1276,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the visible.
      *
      * @param boolean $visible The visible.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setVisible($visible) {
         $this->visible = $visible;
@@ -1287,7 +1287,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the zone axis.
      *
      * @param string $zoneAxis The zone axis.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setZoneAxis($zoneAxis) {
         $this->zoneAxis = $zoneAxis;
@@ -1298,7 +1298,7 @@ final class HighchartsPie implements JsonSerializable {
      * Set the zones.
      *
      * @param array $zones The zones.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPie Returns the highcharts pie.
      */
     public function setZones(array $zones = null) {
         $this->zones = $zones;

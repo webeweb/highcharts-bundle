@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\PlotOptions;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions;
 
 use JsonSerializable;
 
 /**
  * Highcharts waterfall.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\PlotOptions
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions
  * @version 5.0.14
  * @final
  */
@@ -132,7 +132,7 @@ final class HighchartsWaterfall implements JsonSerializable {
     /**
      * Data labels.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsDataLabels
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsDataLabels
      */
     private $dataLabels;
 
@@ -176,7 +176,7 @@ final class HighchartsWaterfall implements JsonSerializable {
     /**
      * Events.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsEvents
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsEvents
      */
     private $events;
 
@@ -276,7 +276,7 @@ final class HighchartsWaterfall implements JsonSerializable {
     /**
      * Point.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsPoint
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsPoint
      */
     private $point;
 
@@ -390,7 +390,7 @@ final class HighchartsWaterfall implements JsonSerializable {
     /**
      * States.
      *
-     * @var \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsStates
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsStates
      */
     private $states;
 
@@ -772,7 +772,7 @@ final class HighchartsWaterfall implements JsonSerializable {
     /**
      * Get the data labels.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsDataLabels Returns the data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsDataLabels Returns the data labels.
      */
     public function getDataLabels() {
         return $this->dataLabels;
@@ -826,7 +826,7 @@ final class HighchartsWaterfall implements JsonSerializable {
     /**
      * Get the events.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsEvents Returns the events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsEvents Returns the events.
      */
     public function getEvents() {
         return $this->events;
@@ -943,7 +943,7 @@ final class HighchartsWaterfall implements JsonSerializable {
     /**
      * Get the point.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsPoint Returns the point.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsPoint Returns the point.
      */
     public function getPoint() {
         return $this->point;
@@ -1078,7 +1078,7 @@ final class HighchartsWaterfall implements JsonSerializable {
     /**
      * Get the states.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsStates Returns the states.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsStates Returns the states.
      */
     public function getStates() {
         return $this->states;
@@ -1159,40 +1159,40 @@ final class HighchartsWaterfall implements JsonSerializable {
     /**
      * Create a new data labels.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsDataLabels Returns the data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsDataLabels Returns the data labels.
      */
     public function newDataLabels() {
-        $this->dataLabels = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsDataLabels();
+        $this->dataLabels = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsDataLabels();
         return $this->dataLabels;
     }
 
     /**
      * Create a new events.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsEvents Returns the events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsEvents Returns the events.
      */
     public function newEvents() {
-        $this->events = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsEvents();
+        $this->events = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsEvents();
         return $this->events;
     }
 
     /**
      * Create a new point.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsPoint Returns the point.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsPoint Returns the point.
      */
     public function newPoint() {
-        $this->point = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsPoint();
+        $this->point = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsPoint();
         return $this->point;
     }
 
     /**
      * Create a new states.
      *
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsStates Returns the states.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsStates Returns the states.
      */
     public function newStates() {
-        $this->states = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsStates();
+        $this->states = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsStates();
         return $this->states;
     }
 
@@ -1200,7 +1200,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the allow point select.
      *
      * @param boolean $allowPointSelect The allow point select.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setAllowPointSelect($allowPointSelect) {
         $this->allowPointSelect = $allowPointSelect;
@@ -1211,7 +1211,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the animation.
      *
      * @param boolean $animation The animation.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setAnimation($animation) {
         $this->animation = $animation;
@@ -1222,7 +1222,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the animation limit.
      *
      * @param integer $animationLimit The animation limit.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setAnimationLimit($animationLimit) {
         $this->animationLimit = $animationLimit;
@@ -1233,7 +1233,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the border color.
      *
      * @param string $borderColor The border color.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setBorderColor($borderColor) {
         $this->borderColor = $borderColor;
@@ -1244,7 +1244,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the border radius.
      *
      * @param integer $borderRadius The border radius.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setBorderRadius($borderRadius) {
         $this->borderRadius = $borderRadius;
@@ -1255,7 +1255,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the border width.
      *
      * @param integer $borderWidth The border width.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setBorderWidth($borderWidth) {
         $this->borderWidth = $borderWidth;
@@ -1266,7 +1266,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the class name.
      *
      * @param string $className The class name.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setClassName($className) {
         $this->className = $className;
@@ -1277,7 +1277,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the color.
      *
      * @param string $color The color.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setColor($color) {
         $this->color = $color;
@@ -1288,7 +1288,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the color by point.
      *
      * @param boolean $colorByPoint The color by point.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setColorByPoint($colorByPoint) {
         $this->colorByPoint = $colorByPoint;
@@ -1299,7 +1299,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the color index.
      *
      * @param integer $colorIndex The color index.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setColorIndex($colorIndex) {
         $this->colorIndex = $colorIndex;
@@ -1310,7 +1310,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the colors.
      *
      * @param array $colors The colors.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setColors(array $colors = null) {
         $this->colors = $colors;
@@ -1321,7 +1321,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the crisp.
      *
      * @param boolean $crisp The crisp.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setCrisp($crisp) {
         $this->crisp = $crisp;
@@ -1332,7 +1332,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the cursor.
      *
      * @param string $cursor The cursor.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setCursor($cursor) {
         switch ($cursor) {
@@ -1352,7 +1352,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the dash style.
      *
      * @param string $dashStyle The dash style.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setDashStyle($dashStyle) {
         $this->dashStyle = $dashStyle;
@@ -1362,10 +1362,10 @@ final class HighchartsWaterfall implements JsonSerializable {
     /**
      * Set the data labels.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsDataLabels $dataLabels The data labels.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsDataLabels $dataLabels The data labels.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
-    public function setDataLabels(\WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsDataLabels $dataLabels = null) {
+    public function setDataLabels(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsDataLabels $dataLabels = null) {
         $this->dataLabels = $dataLabels;
         return $this;
     }
@@ -1374,7 +1374,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the depth.
      *
      * @param integer $depth The depth.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setDepth($depth) {
         $this->depth = $depth;
@@ -1385,7 +1385,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the description.
      *
      * @param string $description The description.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setDescription($description) {
         $this->description = $description;
@@ -1396,7 +1396,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the edge color.
      *
      * @param string $edgeColor The edge color.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setEdgeColor($edgeColor) {
         $this->edgeColor = $edgeColor;
@@ -1407,7 +1407,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the edge width.
      *
      * @param integer $edgeWidth The edge width.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setEdgeWidth($edgeWidth) {
         $this->edgeWidth = $edgeWidth;
@@ -1418,7 +1418,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the enable mouse tracking.
      *
      * @param boolean $enableMouseTracking The enable mouse tracking.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setEnableMouseTracking($enableMouseTracking) {
         $this->enableMouseTracking = $enableMouseTracking;
@@ -1428,10 +1428,10 @@ final class HighchartsWaterfall implements JsonSerializable {
     /**
      * Set the events.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsEvents $events The events.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsEvents $events The events.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
-    public function setEvents(\WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsEvents $events = null) {
+    public function setEvents(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsEvents $events = null) {
         $this->events = $events;
         return $this;
     }
@@ -1440,7 +1440,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the expose element to a11y.
      *
      * @param boolean $exposeElementToA11y The expose element to a11y.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setExposeElementToA11y($exposeElementToA11y) {
         $this->exposeElementToA11y = $exposeElementToA11y;
@@ -1451,7 +1451,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the find nearest point by.
      *
      * @param string $findNearestPointBy The find nearest point by.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setFindNearestPointBy($findNearestPointBy) {
         switch ($findNearestPointBy) {
@@ -1467,7 +1467,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the get extremes from all.
      *
      * @param boolean $getExtremesFromAll The get extremes from all.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setGetExtremesFromAll($getExtremesFromAll) {
         $this->getExtremesFromAll = $getExtremesFromAll;
@@ -1478,7 +1478,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the group padding.
      *
      * @param integer $groupPadding The group padding.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setGroupPadding($groupPadding) {
         $this->groupPadding = $groupPadding;
@@ -1489,7 +1489,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the group z padding.
      *
      * @param integer $groupZPadding The group z padding.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setGroupZPadding($groupZPadding) {
         $this->groupZPadding = $groupZPadding;
@@ -1500,7 +1500,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the grouping.
      *
      * @param boolean $grouping The grouping.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setGrouping($grouping) {
         $this->grouping = $grouping;
@@ -1511,7 +1511,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the keys.
      *
      * @param array $keys The keys.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setKeys(array $keys = null) {
         $this->keys = $keys;
@@ -1522,7 +1522,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the line color.
      *
      * @param string $lineColor The line color.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setLineColor($lineColor) {
         $this->lineColor = $lineColor;
@@ -1533,7 +1533,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the line width.
      *
      * @param integer $lineWidth The line width.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setLineWidth($lineWidth) {
         $this->lineWidth = $lineWidth;
@@ -1544,7 +1544,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the linked to.
      *
      * @param string $linkedTo The linked to.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setLinkedTo($linkedTo) {
         $this->linkedTo = $linkedTo;
@@ -1555,7 +1555,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the max point width.
      *
      * @param integer $maxPointWidth The max point width.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setMaxPointWidth($maxPointWidth) {
         $this->maxPointWidth = $maxPointWidth;
@@ -1566,7 +1566,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the min point length.
      *
      * @param integer $minPointLength The min point length.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setMinPointLength($minPointLength) {
         $this->minPointLength = $minPointLength;
@@ -1576,10 +1576,10 @@ final class HighchartsWaterfall implements JsonSerializable {
     /**
      * Set the point.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsPoint $point The point.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsPoint $point The point.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
-    public function setPoint(\WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsPoint $point = null) {
+    public function setPoint(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsPoint $point = null) {
         $this->point = $point;
         return $this;
     }
@@ -1588,7 +1588,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the point description formatter.
      *
      * @param string $pointDescriptionFormatter The point description formatter.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setPointDescriptionFormatter($pointDescriptionFormatter) {
         $this->pointDescriptionFormatter = $pointDescriptionFormatter;
@@ -1599,7 +1599,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the point interval.
      *
      * @param integer $pointInterval The point interval.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setPointInterval($pointInterval) {
         $this->pointInterval = $pointInterval;
@@ -1610,7 +1610,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the point interval unit.
      *
      * @param string $pointIntervalUnit The point interval unit.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setPointIntervalUnit($pointIntervalUnit) {
         switch ($pointIntervalUnit) {
@@ -1628,7 +1628,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the point padding.
      *
      * @param integer $pointPadding The point padding.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setPointPadding($pointPadding) {
         $this->pointPadding = $pointPadding;
@@ -1639,7 +1639,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the point placement.
      *
      * @param string|integer $pointPlacement The point placement.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setPointPlacement($pointPlacement) {
         switch ($pointPlacement) {
@@ -1656,7 +1656,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the point range.
      *
      * @param integer $pointRange The point range.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setPointRange($pointRange) {
         $this->pointRange = $pointRange;
@@ -1667,7 +1667,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the point start.
      *
      * @param integer $pointStart The point start.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setPointStart($pointStart) {
         $this->pointStart = $pointStart;
@@ -1678,7 +1678,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the point width.
      *
      * @param integer $pointWidth The point width.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setPointWidth($pointWidth) {
         $this->pointWidth = $pointWidth;
@@ -1689,7 +1689,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the selected.
      *
      * @param boolean $selected The selected.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setSelected($selected) {
         $this->selected = $selected;
@@ -1700,7 +1700,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the shadow.
      *
      * @param boolean|array $shadow The shadow.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setShadow($shadow) {
         $this->shadow = $shadow;
@@ -1711,7 +1711,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the show checkbox.
      *
      * @param boolean $showCheckbox The show checkbox.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setShowCheckbox($showCheckbox) {
         $this->showCheckbox = $showCheckbox;
@@ -1722,7 +1722,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the show in legend.
      *
      * @param boolean $showInLegend The show in legend.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setShowInLegend($showInLegend) {
         $this->showInLegend = $showInLegend;
@@ -1733,7 +1733,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the skip keyboard navigation.
      *
      * @param boolean $skipKeyboardNavigation The skip keyboard navigation.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setSkipKeyboardNavigation($skipKeyboardNavigation) {
         $this->skipKeyboardNavigation = $skipKeyboardNavigation;
@@ -1744,7 +1744,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the soft threshold.
      *
      * @param boolean $softThreshold The soft threshold.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setSoftThreshold($softThreshold) {
         $this->softThreshold = $softThreshold;
@@ -1754,10 +1754,10 @@ final class HighchartsWaterfall implements JsonSerializable {
     /**
      * Set the states.
      *
-     * @param \WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsStates $states The states.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsStates $states The states.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
-    public function setStates(\WBW\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsStates $states = null) {
+    public function setStates(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\HighchartsStates $states = null) {
         $this->states = $states;
         return $this;
     }
@@ -1766,7 +1766,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the sticky tracking.
      *
      * @param boolean $stickyTracking The sticky tracking.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setStickyTracking($stickyTracking) {
         $this->stickyTracking = $stickyTracking;
@@ -1777,7 +1777,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the threshold.
      *
      * @param integer $threshold The threshold.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setThreshold($threshold) {
         $this->threshold = $threshold;
@@ -1788,7 +1788,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the tooltip.
      *
      * @param array $tooltip The tooltip.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setTooltip(array $tooltip = null) {
         $this->tooltip = $tooltip;
@@ -1799,7 +1799,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the up color.
      *
      * @param string $upColor The up color.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setUpColor($upColor) {
         $this->upColor = $upColor;
@@ -1810,7 +1810,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the visible.
      *
      * @param boolean $visible The visible.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setVisible($visible) {
         $this->visible = $visible;
@@ -1821,7 +1821,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the zone axis.
      *
      * @param string $zoneAxis The zone axis.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setZoneAxis($zoneAxis) {
         $this->zoneAxis = $zoneAxis;
@@ -1832,7 +1832,7 @@ final class HighchartsWaterfall implements JsonSerializable {
      * Set the zones.
      *
      * @param array $zones The zones.
-     * @return \WBW\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsWaterfall Returns the highcharts waterfall.
      */
     public function setZones(array $zones = null) {
         $this->zones = $zones;

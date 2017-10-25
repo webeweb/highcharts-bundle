@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\API\Chart\NoData;
+namespace WBW\Bundle\HighchartsBundle\API\Chart\NoData;
 
 use JsonSerializable;
 
 /**
  * Highcharts position.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\API\Chart\NoData
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\API\Chart\NoData
  * @version 5.0.14
  * @final
  */
@@ -131,7 +131,7 @@ final class HighchartsPosition implements JsonSerializable {
      * Set the align.
      *
      * @param string $align The align.
-     * @return \WBW\HighchartsBundle\API\Chart\NoData\HighchartsPosition Returns the highcharts position.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition Returns the highcharts position.
      */
     public function setAlign($align) {
         switch ($align) {
@@ -148,7 +148,7 @@ final class HighchartsPosition implements JsonSerializable {
      * Set the vertical align.
      *
      * @param string $verticalAlign The vertical align.
-     * @return \WBW\HighchartsBundle\API\Chart\NoData\HighchartsPosition Returns the highcharts position.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition Returns the highcharts position.
      */
     public function setVerticalAlign($verticalAlign) {
         switch ($verticalAlign) {
@@ -165,7 +165,7 @@ final class HighchartsPosition implements JsonSerializable {
      * Set the x.
      *
      * @param integer $x The x.
-     * @return \WBW\HighchartsBundle\API\Chart\NoData\HighchartsPosition Returns the highcharts position.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition Returns the highcharts position.
      */
     public function setX($x) {
         $this->x = $x;
@@ -176,7 +176,7 @@ final class HighchartsPosition implements JsonSerializable {
      * Set the y.
      *
      * @param integer $y The y.
-     * @return \WBW\HighchartsBundle\API\Chart\NoData\HighchartsPosition Returns the highcharts position.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition Returns the highcharts position.
      */
     public function setY($y) {
         $this->y = $y;

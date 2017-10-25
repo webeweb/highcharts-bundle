@@ -9,15 +9,15 @@
  * file that was distributed with this source code.
  */
 
-namespace WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Areaspline;
+namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Areaspline;
 
 use PHPUnit_Framework_TestCase;
 
 /**
  * Highcharts zones test.
  *
- * @author WBW <https://github.com/webeweb/WBWHighchartsBundle>
- * @package WBW\HighchartsBundle\Tests\API\Chart\PlotOptions\Areaspline
+ * @author NdC/WBW <https://github.com/webeweb/>
+ * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Areaspline
  * @version 5.0.14
  */
 final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
@@ -29,7 +29,7 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
      */
     public function testConstructor() {
 
-        $obj1 = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\HighchartsZones(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Areaspline\HighchartsZones(true);
 
         $this->assertEquals(null, $obj1->getClassName(), "The method getClassName() does not return the expected value");
         $this->assertEquals(null, $obj1->getColor(), "The method getColor() does not return the expected value");
@@ -45,7 +45,7 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
      */
     public function testJsonSerialize() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\HighchartsZones(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Areaspline\HighchartsZones(true);
 
         $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
     }
@@ -57,7 +57,7 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
      */
     public function testToArray() {
 
-        $obj = new \WBW\HighchartsBundle\API\Chart\PlotOptions\Areaspline\HighchartsZones(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Areaspline\HighchartsZones(true);
 
         $obj->setClassName("6f66e878c62db60568a3487869695820");
 
