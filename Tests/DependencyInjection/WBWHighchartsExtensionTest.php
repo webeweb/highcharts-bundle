@@ -26,32 +26,32 @@ use WBW\Bundle\HighchartsBundle\Twig\Extension\HighchartsTwigExtension;
  */
 final class WBWHighchartsExtensionTest extends PHPUnit_Framework_TestCase {
 
-    /**
-     * Locate a resource.
-     *
-     * @param string $resource The resource.
-     * @return string Returns a resource path.
-     */
-    public function locateResource($resource) {
-        return "";
-    }
+	/**
+	 * Locate a resource.
+	 *
+	 * @param string $resource The resource.
+	 * @return string Returns a resource path.
+	 */
+	public function locateResource($resource) {
+		return "";
+	}
 
-    /**
-     * Tests the load() method.
-     *
-     * @return void
-     */
-    public function testLoad() {
+	/**
+	 * Tests the load() method.
+	 *
+	 * @return void
+	 */
+	public function testLoad() {
 
-        // We set a container builder with only the necessary.
-        $container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
-        $container->set("kernel", $this);
+		// We set a container builder with only the necessary.
+		$container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
+		$container->set("kernel", $this);
 
-        $obj = new WBWHighchartsExtension();
+		$obj = new WBWHighchartsExtension();
 
-        $obj->load([], $container);
+		$obj->load([], $container);
 
-        $this->assertInstanceOf(HighchartsTwigExtension::class, $container->get(HighchartsTwigExtension::SERVICE_NAME), "The method load() does not load the expected service");
-    }
+		$this->assertInstanceOf(HighchartsTwigExtension::class, $container->get(HighchartsTwigExtension::SERVICE_NAME), "The method load() does not load the expected service");
+	}
 
 }

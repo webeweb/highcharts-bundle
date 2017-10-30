@@ -23,40 +23,40 @@ use WBW\Bundle\HighchartsBundle\Wrapper\HighchartsWrapper;
  */
 final class HighchartsWrapperTest extends PHPUnit_Framework_TestCase {
 
-    /**
-     * Tests the unwrap() method.
-     *
-     * @return void
-     */
-    public function testUnwrap() {
+	/**
+	 * Tests the unwrap() method.
+	 *
+	 * @return void
+	 */
+	public function testUnwrap() {
 
-        $obj = new HighchartsWrapper();
+		$obj = new HighchartsWrapper();
 
-        $str1 = "\"" . HighchartsWrapper::WRAP . "string" . HighchartsWrapper::WRAP . "\"";
-        $res1 = "string";
-        $this->assertEquals($res1, $obj->unwrap($str1), "The method unwrapp() does not return the expected string");
+		$str1	 = "\"" . HighchartsWrapper::WRAP . "string" . HighchartsWrapper::WRAP . "\"";
+		$res1	 = "string";
+		$this->assertEquals($res1, $obj->unwrap($str1), "The method unwrapp() does not return the expected string");
 
-        $str2 = "\"string\"";
-        $res2 = "\"string\"";
-        $this->assertEquals($res2, $obj->unwrap($str2), "The method unwrapp() does not return the expected string");
-    }
+		$str2	 = "\"string\"";
+		$res2	 = "\"string\"";
+		$this->assertEquals($res2, $obj->unwrap($str2), "The method unwrapp() does not return the expected string");
+	}
 
-    /**
-     * Tests the wrap() method.
-     *
-     * @return void
-     */
-    public function testWrap() {
+	/**
+	 * Tests the wrap() method.
+	 *
+	 * @return void
+	 */
+	public function testWrap() {
 
-        $obj = new HighchartsWrapper();
+		$obj = new HighchartsWrapper();
 
-        $str1 = "string";
-        $res1 = HighchartsWrapper::WRAP . "string" . HighchartsWrapper::WRAP;
-        $this->assertEquals($res1, $obj->wrap($str1), "The method wrapp() does not return the expected string");
+		$str1	 = "string";
+		$res1	 = HighchartsWrapper::WRAP . "string" . HighchartsWrapper::WRAP;
+		$this->assertEquals($res1, $obj->wrap($str1), "The method wrapp() does not return the expected string");
 
-        $str2 = "";
-        $res2 = "";
-        $this->assertEquals($res2, $obj->wrap($str2), "The method wrapp() does not return the expected string");
-    }
+		$str2	 = "";
+		$res2	 = "";
+		$this->assertEquals($res2, $obj->wrap($str2), "The method wrapp() does not return the expected string");
+	}
 
 }

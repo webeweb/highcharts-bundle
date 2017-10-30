@@ -20,13 +20,13 @@ namespace WBW\Bundle\HighchartsBundle\Exception;
  */
 final class HighchartsFileNotFoundException extends AbstractHighchartsException {
 
-    /**
-     * Constructor.
-     *
-     * @param string $filename The file name.
-     */
-    public function __construct($filename) {
-        parent::__construct("The file \"" . $filename . "\" was not found");
-    }
+	/**
+	 * Constructor.
+	 *
+	 * @param string $filename The file name.
+	 */
+	public function __construct($filename) {
+		parent::__construct("The file \"" . $filename . "\" was not found");
+	}
 
 }

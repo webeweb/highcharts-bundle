@@ -22,14 +22,14 @@ use Exception;
  */
 abstract class AbstractHighchartsException extends Exception {
 
-    /**
-     * Constructor.
-     *
-     * @param string $message The message.
-     * @param Exception $previous The previous exception.
-     */
-    public function __construct($message, $code = 0, Exception $previous = null) {
-        parent::__construct($message, $code, $previous);
-    }
+	/**
+	 * Constructor.
+	 *
+	 * @param string $message The message.
+	 * @param Exception $previous The previous exception.
+	 */
+	public function __construct($message, $code = 0, Exception $previous = null) {
+		parent::__construct($message, $code, $previous);
+	}
 
 }

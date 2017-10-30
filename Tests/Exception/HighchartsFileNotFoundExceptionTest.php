@@ -23,17 +23,17 @@ use WBW\Bundle\HighchartsBundle\Exception\HighchartsFileNotFoundException;
  */
 final class HighchartsFileNotFoundExceptionTest extends PHPUnit_Framework_TestCase {
 
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstruct() {
+	/**
+	 * Tests the __construct() method.
+	 *
+	 * @return void
+	 */
+	public function testConstruct() {
 
-        $obj = new HighchartsFileNotFoundException("filepath");
+		$obj = new HighchartsFileNotFoundException("filepath");
 
-        $res = "The file \"filepath\" was not found";
-        $this->assertEquals($res, $obj->getMessage(), "The method getMessage() does not return the expected string");
-    }
+		$res = "The file \"filepath\" was not found";
+		$this->assertEquals($res, $obj->getMessage(), "The method getMessage() does not return the expected string");
+	}
 
 }
