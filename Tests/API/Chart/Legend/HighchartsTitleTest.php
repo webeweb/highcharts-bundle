@@ -22,54 +22,54 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
+	/**
+	 * Tests the __construct() method.
+	 *
+	 * @return void
+	 */
+	public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
+		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
 
-        $this->assertEquals(null, $obj1->getStyle(), "The method getStyle() does not return the expected value");
-        $this->assertEquals(null, $obj1->getText(), "The method getText() does not return the expected value");
+		$this->assertEquals(null, $obj1->getStyle(), "The method getStyle() does not return the expected value");
+		$this->assertEquals(null, $obj1->getText(), "The method getText() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(false);
+		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(false);
 
-        $this->assertEquals(["fontWeight" => "bold"], $obj0->getStyle(), "The method getStyle() does not return the expected value");
-        $this->assertEquals(null, $obj0->getText(), "The method getText() does not return the expected value");
+		$this->assertEquals(["fontWeight" => "bold"], $obj0->getStyle(), "The method getStyle() does not return the expected value");
+		$this->assertEquals(null, $obj0->getText(), "The method getText() does not return the expected value");
     }
 
-    /**
-     * Tests the jsonSerialize() method.
-     *
-     * @return void
-     */
-    public function testJsonSerialize() {
+	/**
+	 * Tests the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
 
-        $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
-    }
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+	}
 
-    /**
-     * Tests the toArray() method.
-     *
-     * @return void
-     */
-    public function testToArray() {
+	/**
+	 * Tests the toArray() method.
+	 *
+	 * @return void
+	 */
+	public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
 
-        $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
+		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-        $res1 = ["style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
-        $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with style");
+		$res1 = ["style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with style");
 
-        $obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
+		$obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
 
-        $res2 = ["style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
-        $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with text");
-    }
+		$res2 = ["style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with text");
+	}
 
 }

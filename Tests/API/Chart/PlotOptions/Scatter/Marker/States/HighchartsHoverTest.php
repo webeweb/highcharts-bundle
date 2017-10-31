@@ -22,89 +22,89 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
+	/**
+	 * Tests the __construct() method.
+	 *
+	 * @return void
+	 */
+	public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\Marker\States\HighchartsHover(true);
+		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\Marker\States\HighchartsHover(true);
 
-        $this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
-        $this->assertEquals(null, $obj1->getFillColor(), "The method getFillColor() does not return the expected value");
-        $this->assertEquals(null, $obj1->getLineColor(), "The method getLineColor() does not return the expected value");
-        $this->assertEquals(null, $obj1->getLineWidth(), "The method getLineWidth() does not return the expected value");
-        $this->assertEquals(null, $obj1->getLineWidthPlus(), "The method getLineWidthPlus() does not return the expected value");
-        $this->assertEquals(null, $obj1->getRadius(), "The method getRadius() does not return the expected value");
-        $this->assertEquals(null, $obj1->getRadiusPlus(), "The method getRadiusPlus() does not return the expected value");
+		$this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
+		$this->assertEquals(null, $obj1->getFillColor(), "The method getFillColor() does not return the expected value");
+		$this->assertEquals(null, $obj1->getLineColor(), "The method getLineColor() does not return the expected value");
+		$this->assertEquals(null, $obj1->getLineWidth(), "The method getLineWidth() does not return the expected value");
+		$this->assertEquals(null, $obj1->getLineWidthPlus(), "The method getLineWidthPlus() does not return the expected value");
+		$this->assertEquals(null, $obj1->getRadius(), "The method getRadius() does not return the expected value");
+		$this->assertEquals(null, $obj1->getRadiusPlus(), "The method getRadiusPlus() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\Marker\States\HighchartsHover(false);
+		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\Marker\States\HighchartsHover(false);
 
-        $this->assertEquals(true, $obj0->getEnabled(), "The method getEnabled() does not return the expected value");
-        $this->assertEquals(null, $obj0->getFillColor(), "The method getFillColor() does not return the expected value");
-        $this->assertEquals("#ffffff", $obj0->getLineColor(), "The method getLineColor() does not return the expected value");
-        $this->assertEquals(0, $obj0->getLineWidth(), "The method getLineWidth() does not return the expected value");
-        $this->assertEquals(1, $obj0->getLineWidthPlus(), "The method getLineWidthPlus() does not return the expected value");
-        $this->assertEquals(null, $obj0->getRadius(), "The method getRadius() does not return the expected value");
-        $this->assertEquals(2, $obj0->getRadiusPlus(), "The method getRadiusPlus() does not return the expected value");
+		$this->assertEquals(true, $obj0->getEnabled(), "The method getEnabled() does not return the expected value");
+		$this->assertEquals(null, $obj0->getFillColor(), "The method getFillColor() does not return the expected value");
+		$this->assertEquals("#ffffff", $obj0->getLineColor(), "The method getLineColor() does not return the expected value");
+		$this->assertEquals(0, $obj0->getLineWidth(), "The method getLineWidth() does not return the expected value");
+		$this->assertEquals(1, $obj0->getLineWidthPlus(), "The method getLineWidthPlus() does not return the expected value");
+		$this->assertEquals(null, $obj0->getRadius(), "The method getRadius() does not return the expected value");
+		$this->assertEquals(2, $obj0->getRadiusPlus(), "The method getRadiusPlus() does not return the expected value");
     }
 
-    /**
-     * Tests the jsonSerialize() method.
-     *
-     * @return void
-     */
-    public function testJsonSerialize() {
+	/**
+	 * Tests the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\Marker\States\HighchartsHover(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\Marker\States\HighchartsHover(true);
 
-        $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
-    }
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+	}
 
-    /**
-     * Tests the toArray() method.
-     *
-     * @return void
-     */
-    public function testToArray() {
+	/**
+	 * Tests the toArray() method.
+	 *
+	 * @return void
+	 */
+	public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\Marker\States\HighchartsHover(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Scatter\Marker\States\HighchartsHover(true);
 
-        $obj->setEnabled(1);
+		$obj->setEnabled(1);
 
-        $res1 = ["enabled" => 1];
-        $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
+		$res1 = ["enabled" => 1];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
 
-        $obj->setFillColor("1fde055d3ff900e04ca08bc82066d7fd");
+		$obj->setFillColor("1fde055d3ff900e04ca08bc82066d7fd");
 
-        $res2 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
-        $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
+		$res2 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with fill color");
 
-        $obj->setLineColor("c2580eebfdbdb9fc629f50cc147c3f63");
+		$obj->setLineColor("c2580eebfdbdb9fc629f50cc147c3f63");
 
-        $res3 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
-        $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with line color");
+		$res3 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with line color");
 
-        $obj->setLineWidth(64);
+		$obj->setLineWidth(10);
 
-        $res4 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 64];
-        $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with line width");
+		$res4 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 10];
+		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with line width");
 
-        $obj->setLineWidthPlus(88);
+		$obj->setLineWidthPlus(96);
 
-        $res5 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 64, "lineWidthPlus" => 88];
-        $this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with line width plus");
+		$res5 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 10, "lineWidthPlus" => 96];
+		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with line width plus");
 
-        $obj->setRadius(70);
+		$obj->setRadius(12);
 
-        $res6 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 64, "lineWidthPlus" => 88, "radius" => 70];
-        $this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with radius");
+		$res6 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 10, "lineWidthPlus" => 96, "radius" => 12];
+		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with radius");
 
-        $obj->setRadiusPlus(51);
+		$obj->setRadiusPlus(66);
 
-        $res7 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 64, "lineWidthPlus" => 88, "radius" => 70, "radiusPlus" => 51];
-        $this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with radius plus");
-    }
+		$res7 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 10, "lineWidthPlus" => 96, "radius" => 12, "radiusPlus" => 66];
+		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with radius plus");
+	}
 
 }

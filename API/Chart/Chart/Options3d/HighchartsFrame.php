@@ -23,226 +23,226 @@ use JsonSerializable;
  */
 final class HighchartsFrame implements JsonSerializable {
 
-    /**
-     * Back.
-     *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack
-     * @since 4.0
-     */
-    private $back;
+	/**
+	 * Back.
+	 *
+	 * @var \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack
+	 * @since 4.0
+	 */
+	private $back;
 
-    /**
-     * Bottom.
-     *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom
-     * @since 4.0
-     */
-    private $bottom;
+	/**
+	 * Bottom.
+	 *
+	 * @var \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom
+	 * @since 4.0
+	 */
+	private $bottom;
 
-    /**
-     * Side.
-     *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide
-     * @since 4.0
-     */
-    private $side;
+	/**
+	 * Side.
+	 *
+	 * @var \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide
+	 * @since 4.0
+	 */
+	private $side;
 
-    /**
-     * Top.
-     *
-     * @var array
-     * @since 5.0.12
-     */
-    private $top;
+	/**
+	 * Top.
+	 *
+	 * @var array
+	 * @since 5.0.12
+	 */
+	private $top;
 
-    /**
-     * Constructor.
-     *
-     * @param boolean $ignoreDefaultValues Ignore the default values.
-     */
-    public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
-            $this->clear();
-        }
-    }
+	/**
+	 * Constructor.
+	 *
+	 * @param boolean $ignoreDefaultValues Ignore the default values.
+	 */
+	public function __construct($ignoreDefaultValues = true) {
+		if ($ignoreDefaultValues === true) {
+			$this->clear();
+		}
+	}
 
-    /**
-     * Clear.
-     *
-     * @return void
-     */
-    public function clear() {
+	/**
+	 * Clear.
+	 *
+	 * @return void
+	 */
+	public function clear() {
 
-        // Clear the back.
-        if (!is_null($this->back)) {
-            $this->back->clear();
-        }
+		// Clear the back.
+		if (!is_null($this->back)) {
+			$this->back->clear();
+		}
 
-        // Clear the bottom.
-        if (!is_null($this->bottom)) {
-            $this->bottom->clear();
-        }
+		// Clear the bottom.
+		if (!is_null($this->bottom)) {
+			$this->bottom->clear();
+		}
 
-        // Clear the side.
-        if (!is_null($this->side)) {
-            $this->side->clear();
-        }
+		// Clear the side.
+		if (!is_null($this->side)) {
+			$this->side->clear();
+		}
 
-        // Clear the top.
-        $this->top = null;
-    }
+		// Clear the top.
+		$this->top = null;
+	}
 
-    /**
-     * Get the back.
-     *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack Returns the back.
-     */
-    public function getBack() {
-        return $this->back;
-    }
+	/**
+	 * Get the back.
+	 *
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack Returns the back.
+	 */
+	public function getBack() {
+		return $this->back;
+	}
 
-    /**
-     * Get the bottom.
-     *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the bottom.
-     */
-    public function getBottom() {
-        return $this->bottom;
-    }
+	/**
+	 * Get the bottom.
+	 *
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the bottom.
+	 */
+	public function getBottom() {
+		return $this->bottom;
+	}
 
-    /**
-     * Get the side.
-     *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide Returns the side.
-     */
-    public function getSide() {
-        return $this->side;
-    }
+	/**
+	 * Get the side.
+	 *
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide Returns the side.
+	 */
+	public function getSide() {
+		return $this->side;
+	}
 
-    /**
-     * Get the top.
-     *
-     * @return array Returns the top.
-     */
-    public function getTop() {
-        return $this->top;
-    }
+	/**
+	 * Get the top.
+	 *
+	 * @return array Returns the top.
+	 */
+	public function getTop() {
+		return $this->top;
+	}
 
-    /**
-     * Serialize this instance.
-     *
-     * @return array Returns an array representing this instance.
-     */
-    public function jsonSerialize() {
-        return $this->toArray();
-    }
+	/**
+	 * Serialize this instance.
+	 *
+	 * @return array Returns an array representing this instance.
+	 */
+	public function jsonSerialize() {
+		return $this->toArray();
+	}
 
-    /**
-     * Create a new back.
-     *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack Returns the back.
-     */
-    public function newBack() {
-        $this->back = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack();
-        return $this->back;
-    }
+	/**
+	 * Create a new back.
+	 *
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack Returns the back.
+	 */
+	public function newBack() {
+		$this->back = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack();
+		return $this->back;
+	}
 
-    /**
-     * Create a new bottom.
-     *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the bottom.
-     */
-    public function newBottom() {
-        $this->bottom = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom();
-        return $this->bottom;
-    }
+	/**
+	 * Create a new bottom.
+	 *
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom Returns the bottom.
+	 */
+	public function newBottom() {
+		$this->bottom = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom();
+		return $this->bottom;
+	}
 
-    /**
-     * Create a new side.
-     *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide Returns the side.
-     */
-    public function newSide() {
-        $this->side = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide();
-        return $this->side;
-    }
+	/**
+	 * Create a new side.
+	 *
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide Returns the side.
+	 */
+	public function newSide() {
+		$this->side = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide();
+		return $this->side;
+	}
 
-    /**
-     * Set the back.
-     *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack $back The back.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the highcharts frame.
-     */
-    public function setBack(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack $back = null) {
-        $this->back = $back;
-        return $this;
-    }
+	/**
+	 * Set the back.
+	 *
+	 * @param \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack $back The back.
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the highcharts frame.
+	 */
+	public function setBack(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack $back = null) {
+		$this->back = $back;
+		return $this;
+	}
 
-    /**
-     * Set the bottom.
-     *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom $bottom The bottom.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the highcharts frame.
-     */
-    public function setBottom(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom $bottom = null) {
-        $this->bottom = $bottom;
-        return $this;
-    }
+	/**
+	 * Set the bottom.
+	 *
+	 * @param \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom $bottom The bottom.
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the highcharts frame.
+	 */
+	public function setBottom(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom $bottom = null) {
+		$this->bottom = $bottom;
+		return $this;
+	}
 
-    /**
-     * Set the side.
-     *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide $side The side.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the highcharts frame.
-     */
-    public function setSide(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide $side = null) {
-        $this->side = $side;
-        return $this;
-    }
+	/**
+	 * Set the side.
+	 *
+	 * @param \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide $side The side.
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the highcharts frame.
+	 */
+	public function setSide(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide $side = null) {
+		$this->side = $side;
+		return $this;
+	}
 
-    /**
-     * Set the top.
-     *
-     * @param array $top The top.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the highcharts frame.
-     */
-    public function setTop(array $top = null) {
-        $this->top = $top;
-        return $this;
-    }
+	/**
+	 * Set the top.
+	 *
+	 * @param array $top The top.
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the highcharts frame.
+	 */
+	public function setTop(array $top = null) {
+		$this->top = $top;
+		return $this;
+	}
 
-    /**
-     * Convert into an array representing this instance.
-     *
-     * @return array Returns an array representing this instance.
-     */
-    public function toArray() {
+	/**
+	 * Convert into an array representing this instance.
+	 *
+	 * @return array Returns an array representing this instance.
+	 */
+	public function toArray() {
 
-        // Initialize the output.
-        $output = [];
+		// Initialize the output.
+		$output = [];
 
-        // Check the back.
-        if (!is_null($this->back)) {
-            $output["back"] = $this->back->toArray();
-        }
+		// Check the back.
+		if (!is_null($this->back)) {
+			$output["back"] = $this->back->toArray();
+		}
 
-        // Check the bottom.
-        if (!is_null($this->bottom)) {
-            $output["bottom"] = $this->bottom->toArray();
-        }
+		// Check the bottom.
+		if (!is_null($this->bottom)) {
+			$output["bottom"] = $this->bottom->toArray();
+		}
 
-        // Check the side.
-        if (!is_null($this->side)) {
-            $output["side"] = $this->side->toArray();
-        }
+		// Check the side.
+		if (!is_null($this->side)) {
+			$output["side"] = $this->side->toArray();
+		}
 
-        // Check the top.
-        if (!is_null($this->top)) {
-            $output["top"] = $this->top;
-        }
+		// Check the top.
+		if (!is_null($this->top)) {
+			$output["top"] = $this->top;
+		}
 
-        // Return the output.
-        return $output;
-    }
+		// Return the output.
+		return $output;
+	}
 
 }

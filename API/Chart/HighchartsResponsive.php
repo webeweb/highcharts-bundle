@@ -23,82 +23,82 @@ use JsonSerializable;
  */
 final class HighchartsResponsive implements JsonSerializable {
 
-    /**
-     * Rules.
-     *
-     * @var array
-     * @since 5.0.0
-     */
-    private $rules;
+	/**
+	 * Rules.
+	 *
+	 * @var array
+	 * @since 5.0.0
+	 */
+	private $rules;
 
-    /**
-     * Constructor.
-     *
-     * @param boolean $ignoreDefaultValues Ignore the default values.
-     */
-    public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
-            $this->clear();
-        }
-    }
+	/**
+	 * Constructor.
+	 *
+	 * @param boolean $ignoreDefaultValues Ignore the default values.
+	 */
+	public function __construct($ignoreDefaultValues = true) {
+		if ($ignoreDefaultValues === true) {
+			$this->clear();
+		}
+	}
 
-    /**
-     * Clear.
-     *
-     * @return void
-     */
-    public function clear() {
+	/**
+	 * Clear.
+	 *
+	 * @return void
+	 */
+	public function clear() {
 
-        // Clear the rules.
-        $this->rules = null;
-    }
+		// Clear the rules.
+		$this->rules = null;
+	}
 
-    /**
-     * Get the rules.
-     *
-     * @return array Returns the rules.
-     */
-    public function getRules() {
-        return $this->rules;
-    }
+	/**
+	 * Get the rules.
+	 *
+	 * @return array Returns the rules.
+	 */
+	public function getRules() {
+		return $this->rules;
+	}
 
-    /**
-     * Serialize this instance.
-     *
-     * @return array Returns an array representing this instance.
-     */
-    public function jsonSerialize() {
-        return $this->toArray();
-    }
+	/**
+	 * Serialize this instance.
+	 *
+	 * @return array Returns an array representing this instance.
+	 */
+	public function jsonSerialize() {
+		return $this->toArray();
+	}
 
-    /**
-     * Set the rules.
-     *
-     * @param array $rules The rules.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive Returns the highcharts responsive.
-     */
-    public function setRules(array $rules = null) {
-        $this->rules = $rules;
-        return $this;
-    }
+	/**
+	 * Set the rules.
+	 *
+	 * @param array $rules The rules.
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive Returns the highcharts responsive.
+	 */
+	public function setRules(array $rules = null) {
+		$this->rules = $rules;
+		return $this;
+	}
 
-    /**
-     * Convert into an array representing this instance.
-     *
-     * @return array Returns an array representing this instance.
-     */
-    public function toArray() {
+	/**
+	 * Convert into an array representing this instance.
+	 *
+	 * @return array Returns an array representing this instance.
+	 */
+	public function toArray() {
 
-        // Initialize the output.
-        $output = [];
+		// Initialize the output.
+		$output = [];
 
-        // Check the rules.
-        if (!is_null($this->rules)) {
-            $output["rules"] = $this->rules;
-        }
+		// Check the rules.
+		if (!is_null($this->rules)) {
+			$output["rules"] = $this->rules;
+		}
 
-        // Return the output.
-        return $output;
-    }
+		// Return the output.
+		return $output;
+	}
 
 }

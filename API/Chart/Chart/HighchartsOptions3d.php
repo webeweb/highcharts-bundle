@@ -23,351 +23,351 @@ use JsonSerializable;
  */
 final class HighchartsOptions3d implements JsonSerializable {
 
-    /**
-     * Alpha.
-     *
-     * @var integer
-     * @since 4.0
-     */
-    private $alpha = 0;
+	/**
+	 * Alpha.
+	 *
+	 * @var integer
+	 * @since 4.0
+	 */
+	private $alpha = 0;
 
-    /**
-     * Axis label position.
-     *
-     * @var string
-     * @since 5.0.12
-     */
-    private $axisLabelPosition;
+	/**
+	 * Axis label position.
+	 *
+	 * @var string
+	 * @since 5.0.12
+	 */
+	private $axisLabelPosition;
 
-    /**
-     * Beta.
-     *
-     * @var integer
-     * @since 4.0
-     */
-    private $beta = 0;
+	/**
+	 * Beta.
+	 *
+	 * @var integer
+	 * @since 4.0
+	 */
+	private $beta = 0;
 
-    /**
-     * Depth.
-     *
-     * @var integer
-     * @since 4.0
-     */
-    private $depth = 100;
+	/**
+	 * Depth.
+	 *
+	 * @var integer
+	 * @since 4.0
+	 */
+	private $depth = 100;
 
-    /**
-     * Enabled.
-     *
-     * @var boolean
-     * @since 4.0
-     */
-    private $enabled = false;
+	/**
+	 * Enabled.
+	 *
+	 * @var boolean
+	 * @since 4.0
+	 */
+	private $enabled = false;
 
-    /**
-     * Fit to plot.
-     *
-     * @var boolean
-     * @since 4.2.4
-     */
-    private $fitToPlot = true;
+	/**
+	 * Fit to plot.
+	 *
+	 * @var boolean
+	 * @since 4.2.4
+	 */
+	private $fitToPlot = true;
 
-    /**
-     * Frame.
-     *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame
-     * @since 4.0
-     */
-    private $frame;
+	/**
+	 * Frame.
+	 *
+	 * @var \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame
+	 * @since 4.0
+	 */
+	private $frame;
 
-    /**
-     * View distance.
-     *
-     * @var integer
-     * @since 4.0
-     */
-    private $viewDistance = 100;
+	/**
+	 * View distance.
+	 *
+	 * @var integer
+	 * @since 4.0
+	 */
+	private $viewDistance = 100;
 
-    /**
-     * Constructor.
-     *
-     * @param boolean $ignoreDefaultValues Ignore the default values.
-     */
-    public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
-            $this->clear();
-        }
-    }
+	/**
+	 * Constructor.
+	 *
+	 * @param boolean $ignoreDefaultValues Ignore the default values.
+	 */
+	public function __construct($ignoreDefaultValues = true) {
+		if ($ignoreDefaultValues === true) {
+			$this->clear();
+		}
+	}
 
-    /**
-     * Clear.
-     *
-     * @return void
-     */
-    public function clear() {
+	/**
+	 * Clear.
+	 *
+	 * @return void
+	 */
+	public function clear() {
 
-        // Clear the alpha.
-        $this->alpha = null;
+		// Clear the alpha.
+		$this->alpha = null;
 
-        // Clear the axis label position.
-        $this->axisLabelPosition = null;
+		// Clear the axis label position.
+		$this->axisLabelPosition = null;
 
-        // Clear the beta.
-        $this->beta = null;
+		// Clear the beta.
+		$this->beta = null;
 
-        // Clear the depth.
-        $this->depth = null;
+		// Clear the depth.
+		$this->depth = null;
 
-        // Clear the enabled.
-        $this->enabled = null;
+		// Clear the enabled.
+		$this->enabled = null;
 
-        // Clear the fit to plot.
-        $this->fitToPlot = null;
+		// Clear the fit to plot.
+		$this->fitToPlot = null;
 
-        // Clear the frame.
-        if (!is_null($this->frame)) {
-            $this->frame->clear();
-        }
+		// Clear the frame.
+		if (!is_null($this->frame)) {
+			$this->frame->clear();
+		}
 
-        // Clear the view distance.
-        $this->viewDistance = null;
-    }
+		// Clear the view distance.
+		$this->viewDistance = null;
+	}
 
-    /**
-     * Get the alpha.
-     *
-     * @return integer Returns the alpha.
-     */
-    public function getAlpha() {
-        return $this->alpha;
-    }
+	/**
+	 * Get the alpha.
+	 *
+	 * @return integer Returns the alpha.
+	 */
+	public function getAlpha() {
+		return $this->alpha;
+	}
 
-    /**
-     * Get the axis label position.
-     *
-     * @return string Returns the axis label position.
-     */
-    public function getAxisLabelPosition() {
-        return $this->axisLabelPosition;
-    }
+	/**
+	 * Get the axis label position.
+	 *
+	 * @return string Returns the axis label position.
+	 */
+	public function getAxisLabelPosition() {
+		return $this->axisLabelPosition;
+	}
 
-    /**
-     * Get the beta.
-     *
-     * @return integer Returns the beta.
-     */
-    public function getBeta() {
-        return $this->beta;
-    }
+	/**
+	 * Get the beta.
+	 *
+	 * @return integer Returns the beta.
+	 */
+	public function getBeta() {
+		return $this->beta;
+	}
 
-    /**
-     * Get the depth.
-     *
-     * @return integer Returns the depth.
-     */
-    public function getDepth() {
-        return $this->depth;
-    }
+	/**
+	 * Get the depth.
+	 *
+	 * @return integer Returns the depth.
+	 */
+	public function getDepth() {
+		return $this->depth;
+	}
 
-    /**
-     * Get the enabled.
-     *
-     * @return boolean Returns the enabled.
-     */
-    public function getEnabled() {
-        return $this->enabled;
-    }
+	/**
+	 * Get the enabled.
+	 *
+	 * @return boolean Returns the enabled.
+	 */
+	public function getEnabled() {
+		return $this->enabled;
+	}
 
-    /**
-     * Get the fit to plot.
-     *
-     * @return boolean Returns the fit to plot.
-     */
-    public function getFitToPlot() {
-        return $this->fitToPlot;
-    }
+	/**
+	 * Get the fit to plot.
+	 *
+	 * @return boolean Returns the fit to plot.
+	 */
+	public function getFitToPlot() {
+		return $this->fitToPlot;
+	}
 
-    /**
-     * Get the frame.
-     *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the frame.
-     */
-    public function getFrame() {
-        return $this->frame;
-    }
+	/**
+	 * Get the frame.
+	 *
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the frame.
+	 */
+	public function getFrame() {
+		return $this->frame;
+	}
 
-    /**
-     * Get the view distance.
-     *
-     * @return integer Returns the view distance.
-     */
-    public function getViewDistance() {
-        return $this->viewDistance;
-    }
+	/**
+	 * Get the view distance.
+	 *
+	 * @return integer Returns the view distance.
+	 */
+	public function getViewDistance() {
+		return $this->viewDistance;
+	}
 
-    /**
-     * Serialize this instance.
-     *
-     * @return array Returns an array representing this instance.
-     */
-    public function jsonSerialize() {
-        return $this->toArray();
-    }
+	/**
+	 * Serialize this instance.
+	 *
+	 * @return array Returns an array representing this instance.
+	 */
+	public function jsonSerialize() {
+		return $this->toArray();
+	}
 
-    /**
-     * Create a new frame.
-     *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the frame.
-     */
-    public function newFrame() {
-        $this->frame = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame();
-        return $this->frame;
-    }
+	/**
+	 * Create a new frame.
+	 *
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame Returns the frame.
+	 */
+	public function newFrame() {
+		$this->frame = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame();
+		return $this->frame;
+	}
 
-    /**
-     * Set the alpha.
-     *
-     * @param integer $alpha The alpha.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
-     */
-    public function setAlpha($alpha) {
-        $this->alpha = $alpha;
-        return $this;
-    }
+	/**
+	 * Set the alpha.
+	 *
+	 * @param integer $alpha The alpha.
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
+	 */
+	public function setAlpha($alpha) {
+		$this->alpha = $alpha;
+		return $this;
+	}
 
-    /**
-     * Set the axis label position.
-     *
-     * @param string $axisLabelPosition The axis label position.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
-     */
-    public function setAxisLabelPosition($axisLabelPosition) {
-        switch ($axisLabelPosition) {
-            case null:
-            case "auto":
-                $this->axisLabelPosition = $axisLabelPosition;
-                break;
-        }
-        return $this;
-    }
+	/**
+	 * Set the axis label position.
+	 *
+	 * @param string $axisLabelPosition The axis label position.
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
+	 */
+	public function setAxisLabelPosition($axisLabelPosition) {
+		switch ($axisLabelPosition) {
+			case null:
+			case "auto":
+			$this->axisLabelPosition = $axisLabelPosition;
+			break;
+		}
+		return $this;
+	}
 
-    /**
-     * Set the beta.
-     *
-     * @param integer $beta The beta.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
-     */
-    public function setBeta($beta) {
-        $this->beta = $beta;
-        return $this;
-    }
+	/**
+	 * Set the beta.
+	 *
+	 * @param integer $beta The beta.
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
+	 */
+	public function setBeta($beta) {
+		$this->beta = $beta;
+		return $this;
+	}
 
-    /**
-     * Set the depth.
-     *
-     * @param integer $depth The depth.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
-     */
-    public function setDepth($depth) {
-        $this->depth = $depth;
-        return $this;
-    }
+	/**
+	 * Set the depth.
+	 *
+	 * @param integer $depth The depth.
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
+	 */
+	public function setDepth($depth) {
+		$this->depth = $depth;
+		return $this;
+	}
 
-    /**
-     * Set the enabled.
-     *
-     * @param boolean $enabled The enabled.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
-     */
-    public function setEnabled($enabled) {
-        $this->enabled = $enabled;
-        return $this;
-    }
+	/**
+	 * Set the enabled.
+	 *
+	 * @param boolean $enabled The enabled.
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
+	 */
+	public function setEnabled($enabled) {
+		$this->enabled = $enabled;
+		return $this;
+	}
 
-    /**
-     * Set the fit to plot.
-     *
-     * @param boolean $fitToPlot The fit to plot.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
-     */
-    public function setFitToPlot($fitToPlot) {
-        $this->fitToPlot = $fitToPlot;
-        return $this;
-    }
+	/**
+	 * Set the fit to plot.
+	 *
+	 * @param boolean $fitToPlot The fit to plot.
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
+	 */
+	public function setFitToPlot($fitToPlot) {
+		$this->fitToPlot = $fitToPlot;
+		return $this;
+	}
 
-    /**
-     * Set the frame.
-     *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame $frame The frame.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
-     */
-    public function setFrame(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame $frame = null) {
-        $this->frame = $frame;
-        return $this;
-    }
+	/**
+	 * Set the frame.
+	 *
+	 * @param \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame $frame The frame.
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
+	 */
+	public function setFrame(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame $frame = null) {
+		$this->frame = $frame;
+		return $this;
+	}
 
-    /**
-     * Set the view distance.
-     *
-     * @param integer $viewDistance The view distance.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
-     */
-    public function setViewDistance($viewDistance) {
-        $this->viewDistance = $viewDistance;
-        return $this;
-    }
+	/**
+	 * Set the view distance.
+	 *
+	 * @param integer $viewDistance The view distance.
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d Returns the highcharts options3d.
+	 */
+	public function setViewDistance($viewDistance) {
+		$this->viewDistance = $viewDistance;
+		return $this;
+	}
 
-    /**
-     * Convert into an array representing this instance.
-     *
-     * @return array Returns an array representing this instance.
-     */
-    public function toArray() {
+	/**
+	 * Convert into an array representing this instance.
+	 *
+	 * @return array Returns an array representing this instance.
+	 */
+	public function toArray() {
 
-        // Initialize the output.
-        $output = [];
+		// Initialize the output.
+		$output = [];
 
-        // Check the alpha.
-        if (!is_null($this->alpha)) {
-            $output["alpha"] = $this->alpha;
-        }
+		// Check the alpha.
+		if (!is_null($this->alpha)) {
+			$output["alpha"] = $this->alpha;
+		}
 
-        // Check the axis label position.
-        if (!is_null($this->axisLabelPosition)) {
-            $output["axisLabelPosition"] = $this->axisLabelPosition;
-        }
+		// Check the axis label position.
+		if (!is_null($this->axisLabelPosition)) {
+			$output["axisLabelPosition"] = $this->axisLabelPosition;
+		}
 
-        // Check the beta.
-        if (!is_null($this->beta)) {
-            $output["beta"] = $this->beta;
-        }
+		// Check the beta.
+		if (!is_null($this->beta)) {
+			$output["beta"] = $this->beta;
+		}
 
-        // Check the depth.
-        if (!is_null($this->depth)) {
-            $output["depth"] = $this->depth;
-        }
+		// Check the depth.
+		if (!is_null($this->depth)) {
+			$output["depth"] = $this->depth;
+		}
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+		// Check the enabled.
+		if (!is_null($this->enabled)) {
+			$output["enabled"] = $this->enabled;
+		}
 
-        // Check the fit to plot.
-        if (!is_null($this->fitToPlot)) {
-            $output["fitToPlot"] = $this->fitToPlot;
-        }
+		// Check the fit to plot.
+		if (!is_null($this->fitToPlot)) {
+			$output["fitToPlot"] = $this->fitToPlot;
+		}
 
-        // Check the frame.
-        if (!is_null($this->frame)) {
-            $output["frame"] = $this->frame->toArray();
-        }
+		// Check the frame.
+		if (!is_null($this->frame)) {
+			$output["frame"] = $this->frame->toArray();
+		}
 
-        // Check the view distance.
-        if (!is_null($this->viewDistance)) {
-            $output["viewDistance"] = $this->viewDistance;
-        }
+		// Check the view distance.
+		if (!is_null($this->viewDistance)) {
+			$output["viewDistance"] = $this->viewDistance;
+		}
 
-        // Return the output.
-        return $output;
-    }
+		// Return the output.
+		return $output;
+	}
 
 }

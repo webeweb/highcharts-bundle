@@ -22,68 +22,68 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsPivotTest extends PHPUnit_Framework_TestCase {
 
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
+	/**
+	 * Tests the __construct() method.
+	 *
+	 * @return void
+	 */
+	public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPivot(true);
+		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPivot(true);
 
-        $this->assertEquals(null, $obj1->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
-        $this->assertEquals(null, $obj1->getBorderColor(), "The method getBorderColor() does not return the expected value");
-        $this->assertEquals(null, $obj1->getBorderWidth(), "The method getBorderWidth() does not return the expected value");
-        $this->assertEquals(null, $obj1->getRadius(), "The method getRadius() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBorderColor(), "The method getBorderColor() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBorderWidth(), "The method getBorderWidth() does not return the expected value");
+		$this->assertEquals(null, $obj1->getRadius(), "The method getRadius() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPivot(false);
+		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPivot(false);
 
-        $this->assertEquals("#000000", $obj0->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
-        $this->assertEquals("#cccccc", $obj0->getBorderColor(), "The method getBorderColor() does not return the expected value");
-        $this->assertEquals(0, $obj0->getBorderWidth(), "The method getBorderWidth() does not return the expected value");
-        $this->assertEquals(5, $obj0->getRadius(), "The method getRadius() does not return the expected value");
+		$this->assertEquals("#000000", $obj0->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
+		$this->assertEquals("#cccccc", $obj0->getBorderColor(), "The method getBorderColor() does not return the expected value");
+		$this->assertEquals(0, $obj0->getBorderWidth(), "The method getBorderWidth() does not return the expected value");
+		$this->assertEquals(5, $obj0->getRadius(), "The method getRadius() does not return the expected value");
     }
 
-    /**
-     * Tests the jsonSerialize() method.
-     *
-     * @return void
-     */
-    public function testJsonSerialize() {
+	/**
+	 * Tests the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPivot(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPivot(true);
 
-        $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
-    }
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+	}
 
-    /**
-     * Tests the toArray() method.
-     *
-     * @return void
-     */
-    public function testToArray() {
+	/**
+	 * Tests the toArray() method.
+	 *
+	 * @return void
+	 */
+	public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPivot(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsPivot(true);
 
-        $obj->setBackgroundColor("930f2a43179a7ae5fc25ed873223e99f");
+		$obj->setBackgroundColor("930f2a43179a7ae5fc25ed873223e99f");
 
-        $res1 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f"];
-        $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with background color");
+		$res1 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f"];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with background color");
 
-        $obj->setBorderColor("97da935a74593c55d78be9d1295aa994");
+		$obj->setBorderColor("97da935a74593c55d78be9d1295aa994");
 
-        $res2 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994"];
-        $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with border color");
+		$res2 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994"];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with border color");
 
-        $obj->setBorderWidth(51);
+		$obj->setBorderWidth(99);
 
-        $res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 51];
-        $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with border width");
+		$res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 99];
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with border width");
 
-        $obj->setRadius(96);
+		$obj->setRadius(93);
 
-        $res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 51, "radius" => 96];
-        $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with radius");
-    }
+		$res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 99, "radius" => 93];
+		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with radius");
+	}
 
 }

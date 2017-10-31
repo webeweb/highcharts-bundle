@@ -23,93 +23,93 @@ use JsonSerializable;
  */
 final class HighchartsButtons implements JsonSerializable {
 
-    /**
-     * Context button.
-     *
-     * @var \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton
-     */
-    private $contextButton;
+	/**
+	 * Context button.
+	 *
+	 * @var \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton
+	 */
+	private $contextButton;
 
-    /**
-     * Constructor.
-     *
-     * @param boolean $ignoreDefaultValues Ignore the default values.
-     */
-    public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
-            $this->clear();
-        }
-    }
+	/**
+	 * Constructor.
+	 *
+	 * @param boolean $ignoreDefaultValues Ignore the default values.
+	 */
+	public function __construct($ignoreDefaultValues = true) {
+		if ($ignoreDefaultValues === true) {
+			$this->clear();
+		}
+	}
 
-    /**
-     * Clear.
-     *
-     * @return void
-     */
-    public function clear() {
+	/**
+	 * Clear.
+	 *
+	 * @return void
+	 */
+	public function clear() {
 
-        // Clear the context button.
-        if (!is_null($this->contextButton)) {
-            $this->contextButton->clear();
-        }
-    }
+		// Clear the context button.
+		if (!is_null($this->contextButton)) {
+			$this->contextButton->clear();
+		}
+	}
 
-    /**
-     * Get the context button.
-     *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the context button.
-     */
-    public function getContextButton() {
-        return $this->contextButton;
-    }
+	/**
+	 * Get the context button.
+	 *
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the context button.
+	 */
+	public function getContextButton() {
+		return $this->contextButton;
+	}
 
-    /**
-     * Serialize this instance.
-     *
-     * @return array Returns an array representing this instance.
-     */
-    public function jsonSerialize() {
-        return $this->toArray();
-    }
+	/**
+	 * Serialize this instance.
+	 *
+	 * @return array Returns an array representing this instance.
+	 */
+	public function jsonSerialize() {
+		return $this->toArray();
+	}
 
-    /**
-     * Create a new context button.
-     *
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the context button.
-     */
-    public function newContextButton() {
-        $this->contextButton = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton();
-        return $this->contextButton;
-    }
+	/**
+	 * Create a new context button.
+	 *
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton Returns the context button.
+	 */
+	public function newContextButton() {
+		$this->contextButton = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton();
+		return $this->contextButton;
+	}
 
-    /**
-     * Set the context button.
-     *
-     * @param \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton $contextButton The context button.
-     * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons Returns the highcharts buttons.
-     */
-    public function setContextButton(\WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton $contextButton = null) {
-        $this->contextButton = $contextButton;
-        return $this;
-    }
+	/**
+	 * Set the context button.
+	 *
+	 * @param \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton $contextButton The context button.
+	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons Returns the highcharts buttons.
+	 */
+	public function setContextButton(\WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton $contextButton = null) {
+		$this->contextButton = $contextButton;
+		return $this;
+	}
 
-    /**
-     * Convert into an array representing this instance.
-     *
-     * @return array Returns an array representing this instance.
-     */
-    public function toArray() {
+	/**
+	 * Convert into an array representing this instance.
+	 *
+	 * @return array Returns an array representing this instance.
+	 */
+	public function toArray() {
 
-        // Initialize the output.
-        $output = [];
+		// Initialize the output.
+		$output = [];
 
-        // Check the context button.
-        if (!is_null($this->contextButton)) {
-            $output["contextButton"] = $this->contextButton->toArray();
-        }
+		// Check the context button.
+		if (!is_null($this->contextButton)) {
+			$output["contextButton"] = $this->contextButton->toArray();
+		}
 
-        // Return the output.
-        return $output;
-    }
+		// Return the output.
+		return $output;
+	}
 
 }

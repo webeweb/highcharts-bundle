@@ -22,49 +22,49 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsRulesTest extends PHPUnit_Framework_TestCase {
 
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
+	/**
+	 * Tests the __construct() method.
+	 *
+	 * @return void
+	 */
+	public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
+		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
 
-        $this->assertEquals(null, $obj1->getChartOptions(), "The method getChartOptions() does not return the expected value");
-        $this->assertEquals(null, $obj1->getCondition(), "The method getCondition() does not return the expected value");
+		$this->assertEquals(null, $obj1->getChartOptions(), "The method getChartOptions() does not return the expected value");
+		$this->assertEquals(null, $obj1->getCondition(), "The method getCondition() does not return the expected value");
     }
 
-    /**
-     * Tests the jsonSerialize() method.
-     *
-     * @return void
-     */
-    public function testJsonSerialize() {
+	/**
+	 * Tests the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
 
-        $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
-    }
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+	}
 
-    /**
-     * Tests the toArray() method.
-     *
-     * @return void
-     */
-    public function testToArray() {
+	/**
+	 * Tests the toArray() method.
+	 *
+	 * @return void
+	 */
+	public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
 
-        $obj->setChartOptions(["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"]);
+		$obj->setChartOptions(["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"]);
 
-        $res1 = ["chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"]];
-        $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with chart options");
+		$res1 = ["chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"]];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with chart options");
 
-        $obj->setCondition(["condition" => "3f9178c25b78ed8bed19091bcb62e266"]);
+		$obj->setCondition(["condition" => "3f9178c25b78ed8bed19091bcb62e266"]);
 
-        $res2 = ["chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "condition" => ["condition" => "3f9178c25b78ed8bed19091bcb62e266"]];
-        $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with condition");
-    }
+		$res2 = ["chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "condition" => ["condition" => "3f9178c25b78ed8bed19091bcb62e266"]];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with condition");
+	}
 
 }

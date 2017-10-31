@@ -22,119 +22,119 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
+	/**
+	 * Tests the __construct() method.
+	 *
+	 * @return void
+	 */
+	public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
+		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
 
-        $this->assertEquals(null, $obj1->getBack(), "The method getBack() does not return the expected value");
-        $this->assertEquals(null, $obj1->getBottom(), "The method getBottom() does not return the expected value");
-        $this->assertEquals(null, $obj1->getSide(), "The method getSide() does not return the expected value");
-        $this->assertEquals(null, $obj1->getTop(), "The method getTop() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBack(), "The method getBack() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBottom(), "The method getBottom() does not return the expected value");
+		$this->assertEquals(null, $obj1->getSide(), "The method getSide() does not return the expected value");
+		$this->assertEquals(null, $obj1->getTop(), "The method getTop() does not return the expected value");
     }
 
-    /**
-     * Tests the clear() method.
-     *
-     * @return void
-     */
-    public function testClear() {
+	/**
+	 * Tests the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
-        $obj->newBack();
-        $obj->newBottom();
-        $obj->newSide();
+		$obj->newBack();
+		$obj->newBottom();
+		$obj->newSide();
 
-        $obj->clear();
+		$obj->clear();
 
-        $res = ["back" => [], "bottom" => [], "side" => []];
-        $this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
-    }
+		$res = ["back" => [], "bottom" => [], "side" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
 
-    /**
-     * Tests the jsonSerialize() method.
-     *
-     * @return void
-     */
-    public function testJsonSerialize() {
+	/**
+	 * Tests the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
 
-        $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
-    }
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+	}
 
-    /**
-     * Tests the newBack() method.
-     *
-     * @return void.
-     */
-    public function testNewBack() {
+	/**
+	 * Tests the newBack() method.
+	 *
+	 * @return void.
+	 */
+	public function testNewBack() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
-        $res = $obj->newBack();
-        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack::class, $res, "The method newBack() does not return the expected object");
-    }
+		$res = $obj->newBack();
+		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack::class, $res, "The method newBack() does not return the expected object");
+	}
 
-    /**
-     * Tests the newBottom() method.
-     *
-     * @return void.
-     */
-    public function testNewBottom() {
+	/**
+	 * Tests the newBottom() method.
+	 *
+	 * @return void.
+	 */
+	public function testNewBottom() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
-        $res = $obj->newBottom();
-        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom::class, $res, "The method newBottom() does not return the expected object");
-    }
+		$res = $obj->newBottom();
+		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom::class, $res, "The method newBottom() does not return the expected object");
+	}
 
-    /**
-     * Tests the newSide() method.
-     *
-     * @return void.
-     */
-    public function testNewSide() {
+	/**
+	 * Tests the newSide() method.
+	 *
+	 * @return void.
+	 */
+	public function testNewSide() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(false);
 
-        $res = $obj->newSide();
-        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide::class, $res, "The method newSide() does not return the expected object");
-    }
+		$res = $obj->newSide();
+		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide::class, $res, "The method newSide() does not return the expected object");
+	}
 
-    /**
-     * Tests the toArray() method.
-     *
-     * @return void
-     */
-    public function testToArray() {
+	/**
+	 * Tests the toArray() method.
+	 *
+	 * @return void
+	 */
+	public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
 
-        $obj->setBack(new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack());
+		$obj->setBack(new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack());
 
-        $res1 = ["back" => []];
-        $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with back");
+		$res1 = ["back" => []];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with back");
 
-        $obj->setBottom(new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom());
+		$obj->setBottom(new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBottom());
 
-        $res2 = ["back" => [], "bottom" => []];
-        $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with bottom");
+		$res2 = ["back" => [], "bottom" => []];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with bottom");
 
-        $obj->setSide(new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide());
+		$obj->setSide(new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide());
 
-        $res3 = ["back" => [], "bottom" => [], "side" => []];
-        $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with side");
+		$res3 = ["back" => [], "bottom" => [], "side" => []];
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with side");
 
-        $obj->setTop(["top" => "b28354b543375bfa94dabaeda722927f"]);
+		$obj->setTop(["top" => "b28354b543375bfa94dabaeda722927f"]);
 
-        $res4 = ["back" => [], "bottom" => [], "side" => [], "top" => ["top" => "b28354b543375bfa94dabaeda722927f"]];
-        $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with top");
-    }
+		$res4 = ["back" => [], "bottom" => [], "side" => [], "top" => ["top" => "b28354b543375bfa94dabaeda722927f"]];
+		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with top");
+	}
 
 }

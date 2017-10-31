@@ -22,43 +22,43 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsResponsiveTest extends PHPUnit_Framework_TestCase {
 
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
+	/**
+	 * Tests the __construct() method.
+	 *
+	 * @return void
+	 */
+	public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive(true);
+		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive(true);
 
-        $this->assertEquals(null, $obj1->getRules(), "The method getRules() does not return the expected value");
+		$this->assertEquals(null, $obj1->getRules(), "The method getRules() does not return the expected value");
     }
 
-    /**
-     * Tests the jsonSerialize() method.
-     *
-     * @return void
-     */
-    public function testJsonSerialize() {
+	/**
+	 * Tests the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive(true);
 
-        $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
-    }
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+	}
 
-    /**
-     * Tests the toArray() method.
-     *
-     * @return void
-     */
-    public function testToArray() {
+	/**
+	 * Tests the toArray() method.
+	 *
+	 * @return void
+	 */
+	public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive(true);
 
-        $obj->setRules(["rules" => "a4f86f7bfc24194b276c22e0ef158197"]);
+		$obj->setRules(["rules" => "a4f86f7bfc24194b276c22e0ef158197"]);
 
-        $res1 = ["rules" => ["rules" => "a4f86f7bfc24194b276c22e0ef158197"]];
-        $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with rules");
-    }
+		$res1 = ["rules" => ["rules" => "a4f86f7bfc24194b276c22e0ef158197"]];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with rules");
+	}
 
 }

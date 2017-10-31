@@ -22,73 +22,73 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
+	/**
+	 * Tests the __construct() method.
+	 *
+	 * @return void
+	 */
+	public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates(true);
+		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates(true);
 
-        $this->assertEquals(null, $obj1->getHover(), "The method getHover() does not return the expected value");
+		$this->assertEquals(null, $obj1->getHover(), "The method getHover() does not return the expected value");
     }
 
-    /**
-     * Tests the clear() method.
-     *
-     * @return void
-     */
-    public function testClear() {
+	/**
+	 * Tests the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates(false);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates(false);
 
-        $obj->newHover();
+		$obj->newHover();
 
-        $obj->clear();
+		$obj->clear();
 
-        $res = ["hover" => []];
-        $this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
-    }
+		$res = ["hover" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
 
-    /**
-     * Tests the jsonSerialize() method.
-     *
-     * @return void
-     */
-    public function testJsonSerialize() {
+	/**
+	 * Tests the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates(true);
 
-        $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
-    }
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+	}
 
-    /**
-     * Tests the newHover() method.
-     *
-     * @return void.
-     */
-    public function testNewHover() {
+	/**
+	 * Tests the newHover() method.
+	 *
+	 * @return void.
+	 */
+	public function testNewHover() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates(false);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates(false);
 
-        $res = $obj->newHover();
-        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\States\HighchartsHover::class, $res, "The method newHover() does not return the expected object");
-    }
+		$res = $obj->newHover();
+		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\States\HighchartsHover::class, $res, "The method newHover() does not return the expected object");
+	}
 
-    /**
-     * Tests the toArray() method.
-     *
-     * @return void
-     */
-    public function testToArray() {
+	/**
+	 * Tests the toArray() method.
+	 *
+	 * @return void
+	 */
+	public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsStates(true);
 
-        $obj->setHover(new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\States\HighchartsHover());
+		$obj->setHover(new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\States\HighchartsHover());
 
-        $res1 = ["hover" => []];
-        $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with hover");
-    }
+		$res1 = ["hover" => []];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with hover");
+	}
 
 }

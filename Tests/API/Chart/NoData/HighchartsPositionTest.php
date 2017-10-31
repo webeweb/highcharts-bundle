@@ -22,68 +22,68 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsPositionTest extends PHPUnit_Framework_TestCase {
 
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
+	/**
+	 * Tests the __construct() method.
+	 *
+	 * @return void
+	 */
+	public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition(true);
+		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition(true);
 
-        $this->assertEquals(null, $obj1->getAlign(), "The method getAlign() does not return the expected value");
-        $this->assertEquals(null, $obj1->getVerticalAlign(), "The method getVerticalAlign() does not return the expected value");
-        $this->assertEquals(null, $obj1->getX(), "The method getX() does not return the expected value");
-        $this->assertEquals(null, $obj1->getY(), "The method getY() does not return the expected value");
+		$this->assertEquals(null, $obj1->getAlign(), "The method getAlign() does not return the expected value");
+		$this->assertEquals(null, $obj1->getVerticalAlign(), "The method getVerticalAlign() does not return the expected value");
+		$this->assertEquals(null, $obj1->getX(), "The method getX() does not return the expected value");
+		$this->assertEquals(null, $obj1->getY(), "The method getY() does not return the expected value");
 
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition(false);
+		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition(false);
 
-        $this->assertEquals("center", $obj0->getAlign(), "The method getAlign() does not return the expected value");
-        $this->assertEquals("middle", $obj0->getVerticalAlign(), "The method getVerticalAlign() does not return the expected value");
-        $this->assertEquals(0, $obj0->getX(), "The method getX() does not return the expected value");
-        $this->assertEquals(0, $obj0->getY(), "The method getY() does not return the expected value");
+		$this->assertEquals("center", $obj0->getAlign(), "The method getAlign() does not return the expected value");
+		$this->assertEquals("middle", $obj0->getVerticalAlign(), "The method getVerticalAlign() does not return the expected value");
+		$this->assertEquals(0, $obj0->getX(), "The method getX() does not return the expected value");
+		$this->assertEquals(0, $obj0->getY(), "The method getY() does not return the expected value");
     }
 
-    /**
-     * Tests the jsonSerialize() method.
-     *
-     * @return void
-     */
-    public function testJsonSerialize() {
+	/**
+	 * Tests the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition(true);
 
-        $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
-    }
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+	}
 
-    /**
-     * Tests the toArray() method.
-     *
-     * @return void
-     */
-    public function testToArray() {
+	/**
+	 * Tests the toArray() method.
+	 *
+	 * @return void
+	 */
+	public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition(true);
 
-        $obj->setAlign("right");
+		$obj->setAlign("right");
 
-        $res1 = ["align" => "right"];
-        $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with align");
+		$res1 = ["align" => "right"];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with align");
 
-        $obj->setVerticalAlign("bottom");
+		$obj->setVerticalAlign("bottom");
 
-        $res2 = ["align" => "right", "verticalAlign" => "bottom"];
-        $this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
+		$res2 = ["align" => "right", "verticalAlign" => "bottom"];
+		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
 
-        $obj->setX(55);
+		$obj->setX(87);
 
-        $res3 = ["align" => "right", "verticalAlign" => "bottom", "x" => 55];
-        $this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with x");
+		$res3 = ["align" => "right", "verticalAlign" => "bottom", "x" => 87];
+		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with x");
 
-        $obj->setY(59);
+		$obj->setY(92);
 
-        $res4 = ["align" => "right", "verticalAlign" => "bottom", "x" => 55, "y" => 59];
-        $this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with y");
-    }
+		$res4 = ["align" => "right", "verticalAlign" => "bottom", "x" => 87, "y" => 92];
+		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with y");
+	}
 
 }

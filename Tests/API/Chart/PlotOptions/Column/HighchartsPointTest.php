@@ -22,73 +22,73 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 
-    /**
-     * Tests the __construct() method.
-     *
-     * @return void
-     */
-    public function testConstructor() {
+	/**
+	 * Tests the __construct() method.
+	 *
+	 * @return void
+	 */
+	public function testConstructor() {
 
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(true);
+		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(true);
 
-        $this->assertEquals(null, $obj1->getEvents(), "The method getEvents() does not return the expected value");
+		$this->assertEquals(null, $obj1->getEvents(), "The method getEvents() does not return the expected value");
     }
 
-    /**
-     * Tests the clear() method.
-     *
-     * @return void
-     */
-    public function testClear() {
+	/**
+	 * Tests the clear() method.
+	 *
+	 * @return void
+	 */
+	public function testClear() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(false);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(false);
 
-        $obj->newEvents();
+		$obj->newEvents();
 
-        $obj->clear();
+		$obj->clear();
 
-        $res = ["events" => []];
-        $this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
-    }
+		$res = ["events" => []];
+		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+	}
 
-    /**
-     * Tests the jsonSerialize() method.
-     *
-     * @return void
-     */
-    public function testJsonSerialize() {
+	/**
+	 * Tests the jsonSerialize() method.
+	 *
+	 * @return void
+	 */
+	public function testJsonSerialize() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(true);
 
-        $this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
-    }
+		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+	}
 
-    /**
-     * Tests the newEvents() method.
-     *
-     * @return void.
-     */
-    public function testNewEvents() {
+	/**
+	 * Tests the newEvents() method.
+	 *
+	 * @return void.
+	 */
+	public function testNewEvents() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(false);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(false);
 
-        $res = $obj->newEvents();
-        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\Point\HighchartsEvents::class, $res, "The method newEvents() does not return the expected object");
-    }
+		$res = $obj->newEvents();
+		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\Point\HighchartsEvents::class, $res, "The method newEvents() does not return the expected object");
+	}
 
-    /**
-     * Tests the toArray() method.
-     *
-     * @return void
-     */
-    public function testToArray() {
+	/**
+	 * Tests the toArray() method.
+	 *
+	 * @return void
+	 */
+	public function testToArray() {
 
-        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(true);
+		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\HighchartsPoint(true);
 
-        $obj->setEvents(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\Point\HighchartsEvents());
+		$obj->setEvents(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Column\Point\HighchartsEvents());
 
-        $res1 = ["events" => []];
-        $this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with events");
-    }
+		$res1 = ["events" => []];
+		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with events");
+	}
 
 }
