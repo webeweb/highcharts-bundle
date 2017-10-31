@@ -30,9 +30,9 @@ final class HighchartsFileNotFoundExceptionTest extends PHPUnit_Framework_TestCa
 	 */
 	public function testConstruct() {
 
-		$obj = new HighchartsFileNotFoundException("filepath");
+		$obj = new HighchartsFileNotFoundException("exception");
 
-		$res = "The file \"filepath\" was not found";
+		$res = "The file \"exception\" was not found";
 		$this->assertEquals($res, $obj->getMessage(), "The method getMessage() does not return the expected string");
 	}
 
