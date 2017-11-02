@@ -14,10 +14,12 @@ Dry out your chart code by writing it all in PHP !
 Edit `symfony/composer.json` file to add this bundle package:
 
 ```yml
+
 "require": {
     ...
     "webeweb/highcharts-bundle": "1.4"
 },
+
 ```
 
 Run `php composer.phar update webeweb/highcharts-bundle`
@@ -25,7 +27,7 @@ Run `php composer.phar update webeweb/highcharts-bundle`
 Then, add the bundle into `symfony/app/AppKernel.php`:
 
 ```php
-<?php
+
     public function registerBundles()
     {
         $bundles = array(
@@ -37,6 +39,7 @@ Then, add the bundle into `symfony/app/AppKernel.php`:
 
         return $bundles;
     }
+
 ```
 
 Run `php bin/console assets:install`
@@ -93,12 +96,17 @@ To test the package, is better to clone this repository on your computer. After,
 the following (assuming you have `composer` installed on your computer):
 
 ```bash
+
 $ composer install --no-interaction --prefer-source --dev
+
 ```
+
 Once all required libraries are installed then do:
 
 ```bash
+
 $ vendor/bin/phpunit
+
 ```
 
 ---
