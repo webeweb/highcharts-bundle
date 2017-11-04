@@ -22,7 +22,7 @@ Edit `symfony/composer.json` file to add this bundle package:
 
 ```
 
-Run `php composer.phar update webeweb/highcharts-bundle`
+Run `composer update webeweb/highcharts-bundle`
 
 Then, add the bundle into `symfony/app/AppKernel.php`:
 
