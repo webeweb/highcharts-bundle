@@ -11,38 +11,44 @@ Dry out your chart code by writing it all in PHP !
 
 ## Installation
 
-Edit `symfony/composer.json` file to add this bundle package:
+Open a command console, enter your project directory and execute the following
+command to download the latest stable version of this package:
 
-```yml
+```bash
 
-"require": {
-    ...
-    "webeweb/highcharts-bundle": "1.4"
-},
+$ composer require webeweb/highcharts-bundle "1.4"
 
 ```
 
-Run `composer update webeweb/highcharts-bundle`
+This command requires you to have Composer installed globally, as explained
+in the [installation chapter](https://getcomposer.org/doc/00-intro.md)
+of the Composer documentation.
 
-Then, add the bundle into `symfony/app/AppKernel.php`:
+Then, enable the bundle by adding it to the list of registered bundles
+in the `app/AppKernel.php` file of your project:
 
 ```php
 
-    public function registerBundles()
-    {
-        $bundles = array(
-            ...
-            new WBW\Bundle\HighcartsBundle\WBWHighchartsBundle(),
-        );
+	public function registerBundles() {
+		$bundles = [
+            // ...
+            new WBW\Bundle\HighchartsBundle\WBWHighchartsBundle(),
+        ];
 
-        ...
+		// ...
 
-        return $bundles;
+		return $bundles;
     }
 
 ```
 
-Run `php bin/console assets:install`
+Once the bundle is added then do:
+
+```bash
+
+$ php bin/console assets:install
+
+```
 
 ---
 
@@ -92,12 +98,16 @@ In your template ...
 
 ## Testing
 
-To test the package, is better to clone this repository on your computer. After, go to the package folder and do
-the following (assuming you have `composer` installed on your computer):
+To test the package, is better to clone this repository on your computer.
+Open a command console and execute the following commands to download the latest
+stable version of this package:
 
 ```bash
 
-$ composer install --no-interaction --prefer-source --dev
+$ mkdir WBWHighchartsBundle
+$ cd WBWHighchartsBundle
+$ git clone git@github.com:webeweb/WBWHighchartsBundle.git .
+$ composer install
 
 ```
 
@@ -113,8 +123,10 @@ $ vendor/bin/phpunit
 
 ## License
 
-WBWHighchartsBundle is released under the LGPL License. See the bundled [LICENSE](LICENSE) file for details.
+WBWHighchartsBundle is released under the LGPL License. See the bundled [LICENSE](LICENSE)
+file for details.
 
-Please note that the Highcharts JS library is **not** free for commercial use, see their
-[FAQ](http://shop.highsoft.com/faq) for more details on what constitutes a non-commercial project or their
-[product page](http://shop.highsoft.com/highcharts.html) for details on pricing.
+Please note that the Highcharts JS library is **not** free for commercial use,
+see their [FAQ](http://shop.highsoft.com/faq) for more details on what constitutes
+a non-commercial project or their [product page](http://shop.highsoft.com/highcharts.html)
+for details on pricing.
