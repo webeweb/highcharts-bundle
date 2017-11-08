@@ -93,19 +93,19 @@ final class HighchartsTwigExtensionTest extends PHPUnit_Framework_TestCase {
 			$this->assertEquals("The file \"code/inexistant-script.js\" is not found", $ex->getMessage(), "The method getMessage() does not return the expected string");
 		}
 
-		$res1 = "<script src=\"/bundles/wbwhighcharts/code/highcharts.js\" type=\"text/javascript\"></script>";
+		$res1 = "<script src=\"/bundles/highcharts/code/highcharts.js\" type=\"text/javascript\"></script>";
 		$this->assertEquals($res1, $obj->highchartsScriptFunction("highcharts"), "The method highchartsScriptFunction() does not return the expected string");
 
-		$res2 = "<script src=\"/bundles/wbwhighcharts/code/modules/exporting.js\" type=\"text/javascript\"></script>";
+		$res2 = "<script src=\"/bundles/highcharts/code/modules/exporting.js\" type=\"text/javascript\"></script>";
 		$this->assertEquals($res2, $obj->highchartsScriptFunction("modules/exporting"), "The method highchartsScriptFunction() does not return the expected string");
 
-		$res2_1 = "<script src=\"/bundles/wbwhighcharts/code/modules/exporting.js\" type=\"text/javascript\"></script>";
+		$res2_1 = "<script src=\"/bundles/highcharts/code/modules/exporting.js\" type=\"text/javascript\"></script>";
 		$this->assertEquals($res2_1, $obj->highchartsScriptFunction("exporting", "code/modules"), "The method highchartsScriptFunction() does not return the expected string");
 
-		$res3 = "<script src=\"/bundles/wbwhighcharts/code/themes/dark-unica.js\" type=\"text/javascript\"></script>";
+		$res3 = "<script src=\"/bundles/highcharts/code/themes/dark-unica.js\" type=\"text/javascript\"></script>";
 		$this->assertEquals($res3, $obj->highchartsScriptFunction("themes/dark-unica"), "The method highchartsScriptFunction() does not return the expected string");
 
-		$res3_1 = "<script src=\"/bundles/wbwhighcharts/code/themes/dark-unica.js\" type=\"text/javascript\"></script>";
+		$res3_1 = "<script src=\"/bundles/highcharts/code/themes/dark-unica.js\" type=\"text/javascript\"></script>";
 		$this->assertEquals($res3_1, $obj->highchartsScriptFunction("dark-unica", "code/themes"), "The method highchartsScriptFunction() does not return the expected string");
 	}
 

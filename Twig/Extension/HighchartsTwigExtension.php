@@ -132,7 +132,7 @@ final class HighchartsTwigExtension extends Twig_Extension {
 		}
 
 		// Return the output.
-		return "<script src=\"/bundles/wbwhighcharts/" . $filename . "\" type=\"text/javascript\"></script>";
+		return "<script src=\"/bundles/highcharts/" . $filename . "\" type=\"text/javascript\"></script>";
 	}
 
 	/**
