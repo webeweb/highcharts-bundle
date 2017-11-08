@@ -1,4 +1,4 @@
-# Resources/translations/WBWHighchartsBundle.en.yml
+# Resources/translations/HighchartsBundle.en.yml
 options:
     lang:
         contextButtonTitle: "Chart context menu"

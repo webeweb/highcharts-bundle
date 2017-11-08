@@ -1,4 +1,4 @@
-# Resources/translations/WBWHighchartsBundle.fr.yml
+# Resources/translations/HighchartsBundle.fr.yml
 options:
     lang:
         contextButtonTitle: "Options"

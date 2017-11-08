@@ -23,7 +23,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  * @package WBW\Bundle\HighchartsBundle\DependencyInjection
  * @final
  */
-final class WBWHighchartsExtension extends Extension {
+final class HighchartsExtension extends Extension {
 
 	/**
 	 * {@inheritdoc}

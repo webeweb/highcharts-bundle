@@ -14,7 +14,7 @@ namespace WBW\Bundle\HighchartsBundle\Tests\DependencyInjection;
 use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
-use WBW\Bundle\HighchartsBundle\DependencyInjection\WBWHighchartsExtension;
+use WBW\Bundle\HighchartsBundle\DependencyInjection\HighchartsExtension;
 use WBW\Bundle\HighchartsBundle\Twig\Extension\HighchartsTwigExtension;
 
 /**
@@ -24,7 +24,7 @@ use WBW\Bundle\HighchartsBundle\Twig\Extension\HighchartsTwigExtension;
  * @package WBW\Bundle\HighchartsBundle\Tests\DependencyInjection
  * @final
  */
-final class WBWHighchartsExtensionTest extends PHPUnit_Framework_TestCase {
+final class HighchartsExtensionTest extends PHPUnit_Framework_TestCase {
 
 	/**
 	 * Locate a resource.
@@ -47,7 +47,7 @@ final class WBWHighchartsExtensionTest extends PHPUnit_Framework_TestCase {
 		$container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
 		$container->set("kernel", $this);
 
-		$obj = new WBWHighchartsExtension();
+		$obj = new HighchartsExtension();
 
 		$obj->load([], $container);
 

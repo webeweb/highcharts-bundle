@@ -20,6 +20,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  * @package WBW\Bundle\HighchartsBundle
  * @final
  */
-final class WBWHighchartsBundle extends Bundle {
+final class HighchartsBundle extends Bundle {
 
 }

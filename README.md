@@ -32,7 +32,7 @@ in the `app/AppKernel.php` file of your project:
 	public function registerBundles() {
 		$bundles = [
             // ...
-            new WBW\Bundle\HighchartsBundle\WBWHighchartsBundle(),
+            new WBW\Bundle\HighchartsBundle\HighchartsBundle(),
         ];
 
 		// ...
