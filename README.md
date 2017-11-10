@@ -16,7 +16,7 @@ command to download the latest stable version of this package:
 
 ```bash
 
-$ composer require webeweb/highcharts-bundle "1.4"
+$ composer require webeweb/highcharts-bundle "1.5"
 
 ```
 
