@@ -276,7 +276,7 @@ final class HighchartsData implements JsonSerializable {
 	 *
 	 * @return boolean Returns the is intermediate sum.
 	 */
-	public function getIsIntermediateSum() {
+	public function getIntermediateSum() {
 		return $this->isIntermediateSum;
 	}
 
@@ -285,7 +285,7 @@ final class HighchartsData implements JsonSerializable {
 	 *
 	 * @return boolean Returns the is sum.
 	 */
-	public function getIsSum() {
+	public function getSum() {
 		return $this->isSum;
 	}
 
@@ -447,7 +447,7 @@ final class HighchartsData implements JsonSerializable {
 	 * @param boolean $isIntermediateSum The is intermediate sum.
 	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Waterfall\HighchartsData Returns the highcharts data.
 	 */
-	public function setIsIntermediateSum($isIntermediateSum) {
+	public function setIntermediateSum($isIntermediateSum) {
 		$this->isIntermediateSum = $isIntermediateSum;
 		return $this;
 	}
@@ -458,7 +458,7 @@ final class HighchartsData implements JsonSerializable {
 	 * @param boolean $isSum The is sum.
 	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\Series\Waterfall\HighchartsData Returns the highcharts data.
 	 */
-	public function setIsSum($isSum) {
+	public function setSum($isSum) {
 		$this->isSum = $isSum;
 		return $this;
 	}
