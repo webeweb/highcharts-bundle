@@ -39,8 +39,8 @@ final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals(null, $obj1->getDrilldown(), "The method getDrilldown() does not return the expected value");
 		$this->assertEquals(null, $obj1->getEvents(), "The method getEvents() does not return the expected value");
 		$this->assertEquals(null, $obj1->getId(), "The method getId() does not return the expected value");
-		$this->assertEquals(null, $obj1->getIsIntermediateSum(), "The method getIsIntermediateSum() does not return the expected value");
-		$this->assertEquals(null, $obj1->getIsSum(), "The method getIsSum() does not return the expected value");
+		$this->assertEquals(null, $obj1->getIntermediateSum(), "The method getIntermediateSum() does not return the expected value");
+		$this->assertEquals(null, $obj1->getSum(), "The method getSum() does not return the expected value");
 		$this->assertEquals(null, $obj1->getLabelrank(), "The method getLabelrank() does not return the expected value");
 		$this->assertEquals(null, $obj1->getName(), "The method getName() does not return the expected value");
 		$this->assertEquals(null, $obj1->getSelected(), "The method getSelected() does not return the expected value");
@@ -57,14 +57,14 @@ final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals(null, $obj0->getDrilldown(), "The method getDrilldown() does not return the expected value");
 		$this->assertEquals(null, $obj0->getEvents(), "The method getEvents() does not return the expected value");
 		$this->assertEquals(null, $obj0->getId(), "The method getId() does not return the expected value");
-		$this->assertEquals(false, $obj0->getIsIntermediateSum(), "The method getIsIntermediateSum() does not return the expected value");
-		$this->assertEquals(false, $obj0->getIsSum(), "The method getIsSum() does not return the expected value");
+		$this->assertEquals(false, $obj0->getIntermediateSum(), "The method getIntermediateSum() does not return the expected value");
+		$this->assertEquals(false, $obj0->getSum(), "The method getSum() does not return the expected value");
 		$this->assertEquals(null, $obj0->getLabelrank(), "The method getLabelrank() does not return the expected value");
 		$this->assertEquals(null, $obj0->getName(), "The method getName() does not return the expected value");
 		$this->assertEquals(false, $obj0->getSelected(), "The method getSelected() does not return the expected value");
 		$this->assertEquals(null, $obj0->getX(), "The method getX() does not return the expected value");
 		$this->assertEquals(null, $obj0->getY(), "The method getY() does not return the expected value");
-    }
+	}
 
 	/**
 	 * Tests the clear() method.
@@ -157,12 +157,12 @@ final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
 		$res8 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 84, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f"];
 		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with id");
 
-		$obj->setIsIntermediateSum(1);
+		$obj->setIntermediateSum(1);
 
 		$res9 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 84, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f", "isIntermediateSum" => 1];
 		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with is intermediate sum");
 
-		$obj->setIsSum(1);
+		$obj->setSum(1);
 
 		$res10 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 84, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f", "isIntermediateSum" => 1, "isSum" => 1];
 		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with is sum");
