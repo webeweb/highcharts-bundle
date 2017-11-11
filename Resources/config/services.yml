@@ -1,7 +1,7 @@
 # Resources/config/services.yml
 services:
 
-    webeweb.bundle.highcharts-bundle.twig.extension.highcharts:
+    webeweb.bundle.highchartsbundle.twig.extension.highcharts:
         class: WBW\Bundle\HighchartsBundle\Twig\Extension\HighchartsTwigExtension
         arguments: ["@=service('kernel').locateResource('@HighchartsBundle')", "%kernel.environment%"]
         tags:
