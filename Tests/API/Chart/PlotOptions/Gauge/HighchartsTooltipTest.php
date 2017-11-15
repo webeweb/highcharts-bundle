@@ -31,37 +31,37 @@ final class HighchartsTooltipTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsTooltip(true);
 
-		$this->assertEquals(null, $obj1->getDateTimeLabelFormats(), "The method getDateTimeLabelFormats() does not return the expected value");
-		$this->assertEquals(null, $obj1->getFollowPointer(), "The method getFollowPointer() does not return the expected value");
-		$this->assertEquals(null, $obj1->getFollowTouchMove(), "The method getFollowTouchMove() does not return the expected value");
-		$this->assertEquals(null, $obj1->getFooterFormat(), "The method getFooterFormat() does not return the expected value");
-		$this->assertEquals(null, $obj1->getHeaderFormat(), "The method getHeaderFormat() does not return the expected value");
-		$this->assertEquals(null, $obj1->getHideDelay(), "The method getHideDelay() does not return the expected value");
-		$this->assertEquals(null, $obj1->getPadding(), "The method getPadding() does not return the expected value");
-		$this->assertEquals(null, $obj1->getPointFormat(), "The method getPointFormat() does not return the expected value");
-		$this->assertEquals(null, $obj1->getPointFormatter(), "The method getPointFormatter() does not return the expected value");
-		$this->assertEquals(null, $obj1->getSplit(), "The method getSplit() does not return the expected value");
-		$this->assertEquals(null, $obj1->getValueDecimals(), "The method getValueDecimals() does not return the expected value");
-		$this->assertEquals(null, $obj1->getValuePrefix(), "The method getValuePrefix() does not return the expected value");
-		$this->assertEquals(null, $obj1->getValueSuffix(), "The method getValueSuffix() does not return the expected value");
-		$this->assertEquals(null, $obj1->getXDateFormat(), "The method getXDateFormat() does not return the expected value");
+		$this->assertEquals(null, $obj1->getDateTimeLabelFormats());
+		$this->assertEquals(null, $obj1->getFollowPointer());
+		$this->assertEquals(null, $obj1->getFollowTouchMove());
+		$this->assertEquals(null, $obj1->getFooterFormat());
+		$this->assertEquals(null, $obj1->getHeaderFormat());
+		$this->assertEquals(null, $obj1->getHideDelay());
+		$this->assertEquals(null, $obj1->getPadding());
+		$this->assertEquals(null, $obj1->getPointFormat());
+		$this->assertEquals(null, $obj1->getPointFormatter());
+		$this->assertEquals(null, $obj1->getSplit());
+		$this->assertEquals(null, $obj1->getValueDecimals());
+		$this->assertEquals(null, $obj1->getValuePrefix());
+		$this->assertEquals(null, $obj1->getValueSuffix());
+		$this->assertEquals(null, $obj1->getXDateFormat());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsTooltip(false);
 
-		$this->assertEquals(null, $obj0->getDateTimeLabelFormats(), "The method getDateTimeLabelFormats() does not return the expected value");
-		$this->assertEquals(false, $obj0->getFollowPointer(), "The method getFollowPointer() does not return the expected value");
-		$this->assertEquals(true, $obj0->getFollowTouchMove(), "The method getFollowTouchMove() does not return the expected value");
-		$this->assertEquals("false", $obj0->getFooterFormat(), "The method getFooterFormat() does not return the expected value");
-		$this->assertEquals(null, $obj0->getHeaderFormat(), "The method getHeaderFormat() does not return the expected value");
-		$this->assertEquals(500, $obj0->getHideDelay(), "The method getHideDelay() does not return the expected value");
-		$this->assertEquals(8, $obj0->getPadding(), "The method getPadding() does not return the expected value");
-		$this->assertEquals("<span style=\"color:{point.color}\">\\u25CF</span> {series.name}: <b>{point.y}</b><br/>", $obj0->getPointFormat(), "The method getPointFormat() does not return the expected value");
-		$this->assertEquals(null, $obj0->getPointFormatter(), "The method getPointFormatter() does not return the expected value");
-		$this->assertEquals(false, $obj0->getSplit(), "The method getSplit() does not return the expected value");
-		$this->assertEquals(null, $obj0->getValueDecimals(), "The method getValueDecimals() does not return the expected value");
-		$this->assertEquals(null, $obj0->getValuePrefix(), "The method getValuePrefix() does not return the expected value");
-		$this->assertEquals(null, $obj0->getValueSuffix(), "The method getValueSuffix() does not return the expected value");
-		$this->assertEquals(null, $obj0->getXDateFormat(), "The method getXDateFormat() does not return the expected value");
+		$this->assertEquals(null, $obj0->getDateTimeLabelFormats());
+		$this->assertEquals(false, $obj0->getFollowPointer());
+		$this->assertEquals(true, $obj0->getFollowTouchMove());
+		$this->assertEquals("false", $obj0->getFooterFormat());
+		$this->assertEquals(null, $obj0->getHeaderFormat());
+		$this->assertEquals(500, $obj0->getHideDelay());
+		$this->assertEquals(8, $obj0->getPadding());
+		$this->assertEquals("<span style=\"color:{point.color}\">\\u25CF</span> {series.name}: <b>{point.y}</b><br/>", $obj0->getPointFormat());
+		$this->assertEquals(null, $obj0->getPointFormatter());
+		$this->assertEquals(false, $obj0->getSplit());
+		$this->assertEquals(null, $obj0->getValueDecimals());
+		$this->assertEquals(null, $obj0->getValuePrefix());
+		$this->assertEquals(null, $obj0->getValueSuffix());
+		$this->assertEquals(null, $obj0->getXDateFormat());
     }
 
 	/**
@@ -73,7 +73,7 @@ final class HighchartsTooltipTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsTooltip(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -88,72 +88,72 @@ final class HighchartsTooltipTest extends PHPUnit_Framework_TestCase {
 		$obj->setDateTimeLabelFormats(["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"]);
 
 		$res1 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"]];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with date time label formats");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setFollowPointer(1);
 
 		$res2 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with follow pointer");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setFollowTouchMove(1);
 
 		$res3 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with follow touch move");
+		$this->assertEquals($res3, $obj->toArray());
 
 		$obj->setFooterFormat("1ac32e030fc5ef01e703d5419170690e");
 
 		$res4 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e"];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with footer format");
+		$this->assertEquals($res4, $obj->toArray());
 
 		$obj->setHeaderFormat("937148825f6c7c8ed3376d1834b17ac6");
 
 		$res5 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6"];
-		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with header format");
+		$this->assertEquals($res5, $obj->toArray());
 
 		$obj->setHideDelay(27);
 
 		$res6 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 27];
-		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with hide delay");
+		$this->assertEquals($res6, $obj->toArray());
 
 		$obj->setPadding(71);
 
 		$res7 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 27, "padding" => 71];
-		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with padding");
+		$this->assertEquals($res7, $obj->toArray());
 
 		$obj->setPointFormat("332dd3de68dc71de0745837cbc13e217");
 
 		$res8 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 27, "padding" => 71, "pointFormat" => "332dd3de68dc71de0745837cbc13e217"];
-		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with point format");
+		$this->assertEquals($res8, $obj->toArray());
 
 		$obj->setPointFormatter("d0b51d7b9a5189f718d161b366d33044");
 
 		$res9 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 27, "padding" => 71, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044"];
-		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with point formatter");
+		$this->assertEquals($res9, $obj->toArray());
 
 		$obj->setSplit(0);
 
 		$res10 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 27, "padding" => 71, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 0];
-		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with split");
+		$this->assertEquals($res10, $obj->toArray());
 
 		$obj->setValueDecimals(50);
 
 		$res11 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 27, "padding" => 71, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 0, "valueDecimals" => 50];
-		$this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with value decimals");
+		$this->assertEquals($res11, $obj->toArray());
 
 		$obj->setValuePrefix("5fde1c8b25eb2ea19ff8377e62564818");
 
 		$res12 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 27, "padding" => 71, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 0, "valueDecimals" => 50, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818"];
-		$this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with value prefix");
+		$this->assertEquals($res12, $obj->toArray());
 
 		$obj->setValueSuffix("bf995908ddff004471c953d8062bd1db");
 
 		$res13 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 27, "padding" => 71, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 0, "valueDecimals" => 50, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818", "valueSuffix" => "bf995908ddff004471c953d8062bd1db"];
-		$this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with value suffix");
+		$this->assertEquals($res13, $obj->toArray());
 
 		$obj->setXDateFormat("e24debfa0bc8408e1dda05cbd537a072");
 
 		$res14 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 27, "padding" => 71, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 0, "valueDecimals" => 50, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818", "valueSuffix" => "bf995908ddff004471c953d8062bd1db", "xDateFormat" => "e24debfa0bc8408e1dda05cbd537a072"];
-		$this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with x date format");
+		$this->assertEquals($res14, $obj->toArray());
 	}
 
 }

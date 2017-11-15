@@ -31,83 +31,83 @@ final class HighchartsLegendTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(true);
 
-		$this->assertEquals(null, $obj1->getAlign(), "The method getAlign() does not return the expected value");
-		$this->assertEquals(null, $obj1->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getBorderColor(), "The method getBorderColor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getBorderRadius(), "The method getBorderRadius() does not return the expected value");
-		$this->assertEquals(null, $obj1->getBorderWidth(), "The method getBorderWidth() does not return the expected value");
-		$this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
-		$this->assertEquals(null, $obj1->getFloating(), "The method getFloating() does not return the expected value");
-		$this->assertEquals(null, $obj1->getItemDistance(), "The method getItemDistance() does not return the expected value");
-		$this->assertEquals(null, $obj1->getItemHiddenStyle(), "The method getItemHiddenStyle() does not return the expected value");
-		$this->assertEquals(null, $obj1->getItemHoverStyle(), "The method getItemHoverStyle() does not return the expected value");
-		$this->assertEquals(null, $obj1->getItemMarginBottom(), "The method getItemMarginBottom() does not return the expected value");
-		$this->assertEquals(null, $obj1->getItemMarginTop(), "The method getItemMarginTop() does not return the expected value");
-		$this->assertEquals(null, $obj1->getItemStyle(), "The method getItemStyle() does not return the expected value");
-		$this->assertEquals(null, $obj1->getItemWidth(), "The method getItemWidth() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLabelFormat(), "The method getLabelFormat() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLabelFormatter(), "The method getLabelFormatter() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLayout(), "The method getLayout() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLineHeight(), "The method getLineHeight() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMargin(), "The method getMargin() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMaxHeight(), "The method getMaxHeight() does not return the expected value");
-		$this->assertEquals(null, $obj1->getNavigation(), "The method getNavigation() does not return the expected value");
-		$this->assertEquals(null, $obj1->getPadding(), "The method getPadding() does not return the expected value");
-		$this->assertEquals(null, $obj1->getReversed(), "The method getReversed() does not return the expected value");
-		$this->assertEquals(null, $obj1->getRtl(), "The method getRtl() does not return the expected value");
-		$this->assertEquals(null, $obj1->getShadow(), "The method getShadow() does not return the expected value");
-		$this->assertEquals(null, $obj1->getSquareSymbol(), "The method getSquareSymbol() does not return the expected value");
-		$this->assertEquals(null, $obj1->getStyle(), "The method getStyle() does not return the expected value");
-		$this->assertEquals(null, $obj1->getSymbolHeight(), "The method getSymbolHeight() does not return the expected value");
-		$this->assertEquals(null, $obj1->getSymbolPadding(), "The method getSymbolPadding() does not return the expected value");
-		$this->assertEquals(null, $obj1->getSymbolRadius(), "The method getSymbolRadius() does not return the expected value");
-		$this->assertEquals(null, $obj1->getSymbolWidth(), "The method getSymbolWidth() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTitle(), "The method getTitle() does not return the expected value");
-		$this->assertEquals(null, $obj1->getUseHTML(), "The method getUseHTML() does not return the expected value");
-		$this->assertEquals(null, $obj1->getVerticalAlign(), "The method getVerticalAlign() does not return the expected value");
-		$this->assertEquals(null, $obj1->getWidth(), "The method getWidth() does not return the expected value");
-		$this->assertEquals(null, $obj1->getX(), "The method getX() does not return the expected value");
-		$this->assertEquals(null, $obj1->getY(), "The method getY() does not return the expected value");
+		$this->assertEquals(null, $obj1->getAlign());
+		$this->assertEquals(null, $obj1->getBackgroundColor());
+		$this->assertEquals(null, $obj1->getBorderColor());
+		$this->assertEquals(null, $obj1->getBorderRadius());
+		$this->assertEquals(null, $obj1->getBorderWidth());
+		$this->assertEquals(null, $obj1->getEnabled());
+		$this->assertEquals(null, $obj1->getFloating());
+		$this->assertEquals(null, $obj1->getItemDistance());
+		$this->assertEquals(null, $obj1->getItemHiddenStyle());
+		$this->assertEquals(null, $obj1->getItemHoverStyle());
+		$this->assertEquals(null, $obj1->getItemMarginBottom());
+		$this->assertEquals(null, $obj1->getItemMarginTop());
+		$this->assertEquals(null, $obj1->getItemStyle());
+		$this->assertEquals(null, $obj1->getItemWidth());
+		$this->assertEquals(null, $obj1->getLabelFormat());
+		$this->assertEquals(null, $obj1->getLabelFormatter());
+		$this->assertEquals(null, $obj1->getLayout());
+		$this->assertEquals(null, $obj1->getLineHeight());
+		$this->assertEquals(null, $obj1->getMargin());
+		$this->assertEquals(null, $obj1->getMaxHeight());
+		$this->assertEquals(null, $obj1->getNavigation());
+		$this->assertEquals(null, $obj1->getPadding());
+		$this->assertEquals(null, $obj1->getReversed());
+		$this->assertEquals(null, $obj1->getRtl());
+		$this->assertEquals(null, $obj1->getShadow());
+		$this->assertEquals(null, $obj1->getSquareSymbol());
+		$this->assertEquals(null, $obj1->getStyle());
+		$this->assertEquals(null, $obj1->getSymbolHeight());
+		$this->assertEquals(null, $obj1->getSymbolPadding());
+		$this->assertEquals(null, $obj1->getSymbolRadius());
+		$this->assertEquals(null, $obj1->getSymbolWidth());
+		$this->assertEquals(null, $obj1->getTitle());
+		$this->assertEquals(null, $obj1->getUseHTML());
+		$this->assertEquals(null, $obj1->getVerticalAlign());
+		$this->assertEquals(null, $obj1->getWidth());
+		$this->assertEquals(null, $obj1->getX());
+		$this->assertEquals(null, $obj1->getY());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(false);
 
-		$this->assertEquals("center", $obj0->getAlign(), "The method getAlign() does not return the expected value");
-		$this->assertEquals(null, $obj0->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
-		$this->assertEquals("#999999", $obj0->getBorderColor(), "The method getBorderColor() does not return the expected value");
-		$this->assertEquals(0, $obj0->getBorderRadius(), "The method getBorderRadius() does not return the expected value");
-		$this->assertEquals(0, $obj0->getBorderWidth(), "The method getBorderWidth() does not return the expected value");
-		$this->assertEquals(true, $obj0->getEnabled(), "The method getEnabled() does not return the expected value");
-		$this->assertEquals(false, $obj0->getFloating(), "The method getFloating() does not return the expected value");
-		$this->assertEquals(20, $obj0->getItemDistance(), "The method getItemDistance() does not return the expected value");
-		$this->assertEquals(["color" => "#cccccc"], $obj0->getItemHiddenStyle(), "The method getItemHiddenStyle() does not return the expected value");
-		$this->assertEquals(["color" => "#000000"], $obj0->getItemHoverStyle(), "The method getItemHoverStyle() does not return the expected value");
-		$this->assertEquals(0, $obj0->getItemMarginBottom(), "The method getItemMarginBottom() does not return the expected value");
-		$this->assertEquals(0, $obj0->getItemMarginTop(), "The method getItemMarginTop() does not return the expected value");
-		$this->assertEquals(["color" => "#333333", "cursor" => "pointer", "fontSize" => "12px", "fontWeight" => "bold", "textOverflow" => "ellipsis"], $obj0->getItemStyle(), "The method getItemStyle() does not return the expected value");
-		$this->assertEquals(null, $obj0->getItemWidth(), "The method getItemWidth() does not return the expected value");
-		$this->assertEquals("{name}", $obj0->getLabelFormat(), "The method getLabelFormat() does not return the expected value");
-		$this->assertEquals(null, $obj0->getLabelFormatter(), "The method getLabelFormatter() does not return the expected value");
-		$this->assertEquals("horizontal", $obj0->getLayout(), "The method getLayout() does not return the expected value");
-		$this->assertEquals(16, $obj0->getLineHeight(), "The method getLineHeight() does not return the expected value");
-		$this->assertEquals(12, $obj0->getMargin(), "The method getMargin() does not return the expected value");
-		$this->assertEquals(null, $obj0->getMaxHeight(), "The method getMaxHeight() does not return the expected value");
-		$this->assertEquals(null, $obj0->getNavigation(), "The method getNavigation() does not return the expected value");
-		$this->assertEquals(8, $obj0->getPadding(), "The method getPadding() does not return the expected value");
-		$this->assertEquals(false, $obj0->getReversed(), "The method getReversed() does not return the expected value");
-		$this->assertEquals(false, $obj0->getRtl(), "The method getRtl() does not return the expected value");
-		$this->assertEquals(false, $obj0->getShadow(), "The method getShadow() does not return the expected value");
-		$this->assertEquals(true, $obj0->getSquareSymbol(), "The method getSquareSymbol() does not return the expected value");
-		$this->assertEquals(null, $obj0->getStyle(), "The method getStyle() does not return the expected value");
-		$this->assertEquals(null, $obj0->getSymbolHeight(), "The method getSymbolHeight() does not return the expected value");
-		$this->assertEquals(5, $obj0->getSymbolPadding(), "The method getSymbolPadding() does not return the expected value");
-		$this->assertEquals(null, $obj0->getSymbolRadius(), "The method getSymbolRadius() does not return the expected value");
-		$this->assertEquals(null, $obj0->getSymbolWidth(), "The method getSymbolWidth() does not return the expected value");
-		$this->assertEquals(null, $obj0->getTitle(), "The method getTitle() does not return the expected value");
-		$this->assertEquals(false, $obj0->getUseHTML(), "The method getUseHTML() does not return the expected value");
-		$this->assertEquals("bottom", $obj0->getVerticalAlign(), "The method getVerticalAlign() does not return the expected value");
-		$this->assertEquals(null, $obj0->getWidth(), "The method getWidth() does not return the expected value");
-		$this->assertEquals(0, $obj0->getX(), "The method getX() does not return the expected value");
-		$this->assertEquals(0, $obj0->getY(), "The method getY() does not return the expected value");
+		$this->assertEquals("center", $obj0->getAlign());
+		$this->assertEquals(null, $obj0->getBackgroundColor());
+		$this->assertEquals("#999999", $obj0->getBorderColor());
+		$this->assertEquals(0, $obj0->getBorderRadius());
+		$this->assertEquals(0, $obj0->getBorderWidth());
+		$this->assertEquals(true, $obj0->getEnabled());
+		$this->assertEquals(false, $obj0->getFloating());
+		$this->assertEquals(20, $obj0->getItemDistance());
+		$this->assertEquals(["color" => "#cccccc"], $obj0->getItemHiddenStyle());
+		$this->assertEquals(["color" => "#000000"], $obj0->getItemHoverStyle());
+		$this->assertEquals(0, $obj0->getItemMarginBottom());
+		$this->assertEquals(0, $obj0->getItemMarginTop());
+		$this->assertEquals(["color" => "#333333", "cursor" => "pointer", "fontSize" => "12px", "fontWeight" => "bold", "textOverflow" => "ellipsis"], $obj0->getItemStyle());
+		$this->assertEquals(null, $obj0->getItemWidth());
+		$this->assertEquals("{name}", $obj0->getLabelFormat());
+		$this->assertEquals(null, $obj0->getLabelFormatter());
+		$this->assertEquals("horizontal", $obj0->getLayout());
+		$this->assertEquals(16, $obj0->getLineHeight());
+		$this->assertEquals(12, $obj0->getMargin());
+		$this->assertEquals(null, $obj0->getMaxHeight());
+		$this->assertEquals(null, $obj0->getNavigation());
+		$this->assertEquals(8, $obj0->getPadding());
+		$this->assertEquals(false, $obj0->getReversed());
+		$this->assertEquals(false, $obj0->getRtl());
+		$this->assertEquals(false, $obj0->getShadow());
+		$this->assertEquals(true, $obj0->getSquareSymbol());
+		$this->assertEquals(null, $obj0->getStyle());
+		$this->assertEquals(null, $obj0->getSymbolHeight());
+		$this->assertEquals(5, $obj0->getSymbolPadding());
+		$this->assertEquals(null, $obj0->getSymbolRadius());
+		$this->assertEquals(null, $obj0->getSymbolWidth());
+		$this->assertEquals(null, $obj0->getTitle());
+		$this->assertEquals(false, $obj0->getUseHTML());
+		$this->assertEquals("bottom", $obj0->getVerticalAlign());
+		$this->assertEquals(null, $obj0->getWidth());
+		$this->assertEquals(0, $obj0->getX());
+		$this->assertEquals(0, $obj0->getY());
     }
 
 	/**
@@ -125,7 +125,7 @@ final class HighchartsLegendTest extends PHPUnit_Framework_TestCase {
 		$obj->clear();
 
 		$res = ["navigation" => [], "title" => []];
-		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals($res, $obj->toArray());
 	}
 
 	/**
@@ -137,7 +137,7 @@ final class HighchartsLegendTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -150,7 +150,7 @@ final class HighchartsLegendTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(false);
 
 		$res = $obj->newNavigation();
-		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation::class, $res, "The method newNavigation() does not return the expected object");
+		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation::class, $res);
 	}
 
 	/**
@@ -163,7 +163,7 @@ final class HighchartsLegendTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(false);
 
 		$res = $obj->newTitle();
-		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle::class, $res, "The method newTitle() does not return the expected object");
+		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle::class, $res);
 	}
 
 	/**
@@ -178,187 +178,187 @@ final class HighchartsLegendTest extends PHPUnit_Framework_TestCase {
 		$obj->setAlign("right");
 
 		$res1 = ["align" => "right"];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with align");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setBackgroundColor("930f2a43179a7ae5fc25ed873223e99f");
 
 		$res2 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f"];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with background color");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setBorderColor("97da935a74593c55d78be9d1295aa994");
 
 		$res3 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994"];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with border color");
+		$this->assertEquals($res3, $obj->toArray());
 
 		$obj->setBorderRadius(14);
 
 		$res4 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with border radius");
+		$this->assertEquals($res4, $obj->toArray());
 
 		$obj->setBorderWidth(6);
 
 		$res5 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6];
-		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with border width");
+		$this->assertEquals($res5, $obj->toArray());
 
 		$obj->setEnabled(0);
 
 		$res6 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0];
-		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
+		$this->assertEquals($res6, $obj->toArray());
 
 		$obj->setFloating(0);
 
 		$res7 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0];
-		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with floating");
+		$this->assertEquals($res7, $obj->toArray());
 
 		$obj->setItemDistance(77);
 
 		$res8 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77];
-		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with item distance");
+		$this->assertEquals($res8, $obj->toArray());
 
 		$obj->setItemHiddenStyle(["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"]);
 
 		$res9 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"]];
-		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with item hidden style");
+		$this->assertEquals($res9, $obj->toArray());
 
 		$obj->setItemHoverStyle(["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"]);
 
 		$res10 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"]];
-		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with item hover style");
+		$this->assertEquals($res10, $obj->toArray());
 
 		$obj->setItemMarginBottom(99);
 
 		$res11 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99];
-		$this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with item margin bottom");
+		$this->assertEquals($res11, $obj->toArray());
 
 		$obj->setItemMarginTop(52);
 
 		$res12 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52];
-		$this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with item margin top");
+		$this->assertEquals($res12, $obj->toArray());
 
 		$obj->setItemStyle(["itemStyle" => "5428035d6f7481541cf715e0f3e29604"]);
 
 		$res13 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"]];
-		$this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with item style");
+		$this->assertEquals($res13, $obj->toArray());
 
 		$obj->setItemWidth(18);
 
 		$res14 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18];
-		$this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with item width");
+		$this->assertEquals($res14, $obj->toArray());
 
 		$obj->setLabelFormat("201bbcba25ee83a321df388c0f4a889d");
 
 		$res15 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d"];
-		$this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with label format");
+		$this->assertEquals($res15, $obj->toArray());
 
 		$obj->setLabelFormatter("9078f7787367cf94543b3bc9e92d9692");
 
 		$res16 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692"];
-		$this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with label formatter");
+		$this->assertEquals($res16, $obj->toArray());
 
 		$obj->setLayout("vertical");
 
 		$res17 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical"];
-		$this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with layout");
+		$this->assertEquals($res17, $obj->toArray());
 
 		$obj->setLineHeight(9);
 
 		$res18 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9];
-		$this->assertEquals($res18, $obj->toArray(), "The method toArray() does not return the expected array with line height");
+		$this->assertEquals($res18, $obj->toArray());
 
 		$obj->setMargin(39);
 
 		$res19 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39];
-		$this->assertEquals($res19, $obj->toArray(), "The method toArray() does not return the expected array with margin");
+		$this->assertEquals($res19, $obj->toArray());
 
 		$obj->setMaxHeight(20);
 
 		$res20 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20];
-		$this->assertEquals($res20, $obj->toArray(), "The method toArray() does not return the expected array with max height");
+		$this->assertEquals($res20, $obj->toArray());
 
 		$obj->setNavigation(new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation());
 
 		$res21 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => []];
-		$this->assertEquals($res21, $obj->toArray(), "The method toArray() does not return the expected array with navigation");
+		$this->assertEquals($res21, $obj->toArray());
 
 		$obj->setPadding(59);
 
 		$res22 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59];
-		$this->assertEquals($res22, $obj->toArray(), "The method toArray() does not return the expected array with padding");
+		$this->assertEquals($res22, $obj->toArray());
 
 		$obj->setReversed(0);
 
 		$res23 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0];
-		$this->assertEquals($res23, $obj->toArray(), "The method toArray() does not return the expected array with reversed");
+		$this->assertEquals($res23, $obj->toArray());
 
 		$obj->setRtl(1);
 
 		$res24 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0, "rtl" => 1];
-		$this->assertEquals($res24, $obj->toArray(), "The method toArray() does not return the expected array with rtl");
+		$this->assertEquals($res24, $obj->toArray());
 
 		$obj->setShadow(0);
 
 		$res25 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0, "rtl" => 1, "shadow" => 0];
-		$this->assertEquals($res25, $obj->toArray(), "The method toArray() does not return the expected array with shadow");
+		$this->assertEquals($res25, $obj->toArray());
 
 		$obj->setSquareSymbol(1);
 
 		$res26 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0, "rtl" => 1, "shadow" => 0, "squareSymbol" => 1];
-		$this->assertEquals($res26, $obj->toArray(), "The method toArray() does not return the expected array with square symbol");
+		$this->assertEquals($res26, $obj->toArray());
 
 		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
 		$res27 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0, "rtl" => 1, "shadow" => 0, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
-		$this->assertEquals($res27, $obj->toArray(), "The method toArray() does not return the expected array with style");
+		$this->assertEquals($res27, $obj->toArray());
 
 		$obj->setSymbolHeight(41);
 
 		$res28 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0, "rtl" => 1, "shadow" => 0, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 41];
-		$this->assertEquals($res28, $obj->toArray(), "The method toArray() does not return the expected array with symbol height");
+		$this->assertEquals($res28, $obj->toArray());
 
 		$obj->setSymbolPadding(3);
 
 		$res29 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0, "rtl" => 1, "shadow" => 0, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 41, "symbolPadding" => 3];
-		$this->assertEquals($res29, $obj->toArray(), "The method toArray() does not return the expected array with symbol padding");
+		$this->assertEquals($res29, $obj->toArray());
 
 		$obj->setSymbolRadius(88);
 
 		$res30 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0, "rtl" => 1, "shadow" => 0, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 41, "symbolPadding" => 3, "symbolRadius" => 88];
-		$this->assertEquals($res30, $obj->toArray(), "The method toArray() does not return the expected array with symbol radius");
+		$this->assertEquals($res30, $obj->toArray());
 
 		$obj->setSymbolWidth(72);
 
 		$res31 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0, "rtl" => 1, "shadow" => 0, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 41, "symbolPadding" => 3, "symbolRadius" => 88, "symbolWidth" => 72];
-		$this->assertEquals($res31, $obj->toArray(), "The method toArray() does not return the expected array with symbol width");
+		$this->assertEquals($res31, $obj->toArray());
 
 		$obj->setTitle(new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle());
 
 		$res32 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0, "rtl" => 1, "shadow" => 0, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 41, "symbolPadding" => 3, "symbolRadius" => 88, "symbolWidth" => 72, "title" => []];
-		$this->assertEquals($res32, $obj->toArray(), "The method toArray() does not return the expected array with title");
+		$this->assertEquals($res32, $obj->toArray());
 
 		$obj->setUseHTML(1);
 
 		$res33 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0, "rtl" => 1, "shadow" => 0, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 41, "symbolPadding" => 3, "symbolRadius" => 88, "symbolWidth" => 72, "title" => [], "useHTML" => 1];
-		$this->assertEquals($res33, $obj->toArray(), "The method toArray() does not return the expected array with use HTML");
+		$this->assertEquals($res33, $obj->toArray());
 
 		$obj->setVerticalAlign("bottom");
 
 		$res34 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0, "rtl" => 1, "shadow" => 0, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 41, "symbolPadding" => 3, "symbolRadius" => 88, "symbolWidth" => 72, "title" => [], "useHTML" => 1, "verticalAlign" => "bottom"];
-		$this->assertEquals($res34, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
+		$this->assertEquals($res34, $obj->toArray());
 
 		$obj->setWidth(71);
 
 		$res35 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0, "rtl" => 1, "shadow" => 0, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 41, "symbolPadding" => 3, "symbolRadius" => 88, "symbolWidth" => 72, "title" => [], "useHTML" => 1, "verticalAlign" => "bottom", "width" => 71];
-		$this->assertEquals($res35, $obj->toArray(), "The method toArray() does not return the expected array with width");
+		$this->assertEquals($res35, $obj->toArray());
 
 		$obj->setX(49);
 
 		$res36 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0, "rtl" => 1, "shadow" => 0, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 41, "symbolPadding" => 3, "symbolRadius" => 88, "symbolWidth" => 72, "title" => [], "useHTML" => 1, "verticalAlign" => "bottom", "width" => 71, "x" => 49];
-		$this->assertEquals($res36, $obj->toArray(), "The method toArray() does not return the expected array with x");
+		$this->assertEquals($res36, $obj->toArray());
 
 		$obj->setY(30);
 
 		$res37 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 14, "borderWidth" => 6, "enabled" => 0, "floating" => 0, "itemDistance" => 77, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 99, "itemMarginTop" => 52, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 18, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 9, "margin" => 39, "maxHeight" => 20, "navigation" => [], "padding" => 59, "reversed" => 0, "rtl" => 1, "shadow" => 0, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 41, "symbolPadding" => 3, "symbolRadius" => 88, "symbolWidth" => 72, "title" => [], "useHTML" => 1, "verticalAlign" => "bottom", "width" => 71, "x" => 49, "y" => 30];
-		$this->assertEquals($res37, $obj->toArray(), "The method toArray() does not return the expected array with y");
+		$this->assertEquals($res37, $obj->toArray());
 	}
 
 }

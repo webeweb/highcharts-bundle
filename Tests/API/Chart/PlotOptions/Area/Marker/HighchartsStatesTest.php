@@ -31,8 +31,8 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\Marker\HighchartsStates(true);
 
-		$this->assertEquals(null, $obj1->getHover(), "The method getHover() does not return the expected value");
-		$this->assertEquals(null, $obj1->getSelect(), "The method getSelect() does not return the expected value");
+		$this->assertEquals(null, $obj1->getHover());
+		$this->assertEquals(null, $obj1->getSelect());
     }
 
 	/**
@@ -50,7 +50,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 		$obj->clear();
 
 		$res = ["hover" => [], "select" => []];
-		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals($res, $obj->toArray());
 	}
 
 	/**
@@ -62,7 +62,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\Marker\HighchartsStates(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -75,7 +75,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\Marker\HighchartsStates(false);
 
 		$res = $obj->newHover();
-		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\Marker\States\HighchartsHover::class, $res, "The method newHover() does not return the expected object");
+		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\Marker\States\HighchartsHover::class, $res);
 	}
 
 	/**
@@ -88,7 +88,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\Marker\HighchartsStates(false);
 
 		$res = $obj->newSelect();
-		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\Marker\States\HighchartsSelect::class, $res, "The method newSelect() does not return the expected object");
+		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\Marker\States\HighchartsSelect::class, $res);
 	}
 
 	/**
@@ -103,12 +103,12 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 		$obj->setHover(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\Marker\States\HighchartsHover());
 
 		$res1 = ["hover" => []];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with hover");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setSelect(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\Marker\States\HighchartsSelect());
 
 		$res2 = ["hover" => [], "select" => []];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with select");
+		$this->assertEquals($res2, $obj->toArray());
 	}
 
 }

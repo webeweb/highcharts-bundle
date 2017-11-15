@@ -31,49 +31,49 @@ final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsData(true);
 
-		$this->assertEquals(null, $obj1->getColumns(), "The method getColumns() does not return the expected value");
-		$this->assertEquals(null, $obj1->getComplete(), "The method getComplete() does not return the expected value");
-		$this->assertEquals(null, $obj1->getCsv(), "The method getCsv() does not return the expected value");
-		$this->assertEquals(null, $obj1->getDateFormat(), "The method getDateFormat() does not return the expected value");
-		$this->assertEquals(null, $obj1->getDecimalPoint(), "The method getDecimalPoint() does not return the expected value");
-		$this->assertEquals(null, $obj1->getEndColumn(), "The method getEndColumn() does not return the expected value");
-		$this->assertEquals(null, $obj1->getEndRow(), "The method getEndRow() does not return the expected value");
-		$this->assertEquals(null, $obj1->getFirstRowAsNames(), "The method getFirstRowAsNames() does not return the expected value");
-		$this->assertEquals(null, $obj1->getGoogleSpreadsheetKey(), "The method getGoogleSpreadsheetKey() does not return the expected value");
-		$this->assertEquals(null, $obj1->getGoogleSpreadsheetWorksheet(), "The method getGoogleSpreadsheetWorksheet() does not return the expected value");
-		$this->assertEquals(null, $obj1->getItemDelimiter(), "The method getItemDelimiter() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLineDelimiter(), "The method getLineDelimiter() does not return the expected value");
-		$this->assertEquals(null, $obj1->getParseDate(), "The method getParseDate() does not return the expected value");
-		$this->assertEquals(null, $obj1->getParsed(), "The method getParsed() does not return the expected value");
-		$this->assertEquals(null, $obj1->getRows(), "The method getRows() does not return the expected value");
-		$this->assertEquals(null, $obj1->getSeriesMapping(), "The method getSeriesMapping() does not return the expected value");
-		$this->assertEquals(null, $obj1->getStartColumn(), "The method getStartColumn() does not return the expected value");
-		$this->assertEquals(null, $obj1->getStartRow(), "The method getStartRow() does not return the expected value");
-		$this->assertEquals(null, $obj1->getSwitchRowsAndColumns(), "The method getSwitchRowsAndColumns() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTable(), "The method getTable() does not return the expected value");
+		$this->assertEquals(null, $obj1->getColumns());
+		$this->assertEquals(null, $obj1->getComplete());
+		$this->assertEquals(null, $obj1->getCsv());
+		$this->assertEquals(null, $obj1->getDateFormat());
+		$this->assertEquals(null, $obj1->getDecimalPoint());
+		$this->assertEquals(null, $obj1->getEndColumn());
+		$this->assertEquals(null, $obj1->getEndRow());
+		$this->assertEquals(null, $obj1->getFirstRowAsNames());
+		$this->assertEquals(null, $obj1->getGoogleSpreadsheetKey());
+		$this->assertEquals(null, $obj1->getGoogleSpreadsheetWorksheet());
+		$this->assertEquals(null, $obj1->getItemDelimiter());
+		$this->assertEquals(null, $obj1->getLineDelimiter());
+		$this->assertEquals(null, $obj1->getParseDate());
+		$this->assertEquals(null, $obj1->getParsed());
+		$this->assertEquals(null, $obj1->getRows());
+		$this->assertEquals(null, $obj1->getSeriesMapping());
+		$this->assertEquals(null, $obj1->getStartColumn());
+		$this->assertEquals(null, $obj1->getStartRow());
+		$this->assertEquals(null, $obj1->getSwitchRowsAndColumns());
+		$this->assertEquals(null, $obj1->getTable());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsData(false);
 
-		$this->assertEquals(null, $obj0->getColumns(), "The method getColumns() does not return the expected value");
-		$this->assertEquals(null, $obj0->getComplete(), "The method getComplete() does not return the expected value");
-		$this->assertEquals(null, $obj0->getCsv(), "The method getCsv() does not return the expected value");
-		$this->assertEquals(null, $obj0->getDateFormat(), "The method getDateFormat() does not return the expected value");
-		$this->assertEquals(".", $obj0->getDecimalPoint(), "The method getDecimalPoint() does not return the expected value");
-		$this->assertEquals(null, $obj0->getEndColumn(), "The method getEndColumn() does not return the expected value");
-		$this->assertEquals(null, $obj0->getEndRow(), "The method getEndRow() does not return the expected value");
-		$this->assertEquals(true, $obj0->getFirstRowAsNames(), "The method getFirstRowAsNames() does not return the expected value");
-		$this->assertEquals(null, $obj0->getGoogleSpreadsheetKey(), "The method getGoogleSpreadsheetKey() does not return the expected value");
-		$this->assertEquals(null, $obj0->getGoogleSpreadsheetWorksheet(), "The method getGoogleSpreadsheetWorksheet() does not return the expected value");
-		$this->assertEquals(null, $obj0->getItemDelimiter(), "The method getItemDelimiter() does not return the expected value");
-		$this->assertEquals("\\n", $obj0->getLineDelimiter(), "The method getLineDelimiter() does not return the expected value");
-		$this->assertEquals(null, $obj0->getParseDate(), "The method getParseDate() does not return the expected value");
-		$this->assertEquals(null, $obj0->getParsed(), "The method getParsed() does not return the expected value");
-		$this->assertEquals(null, $obj0->getRows(), "The method getRows() does not return the expected value");
-		$this->assertEquals(null, $obj0->getSeriesMapping(), "The method getSeriesMapping() does not return the expected value");
-		$this->assertEquals(0, $obj0->getStartColumn(), "The method getStartColumn() does not return the expected value");
-		$this->assertEquals(0, $obj0->getStartRow(), "The method getStartRow() does not return the expected value");
-		$this->assertEquals(false, $obj0->getSwitchRowsAndColumns(), "The method getSwitchRowsAndColumns() does not return the expected value");
-		$this->assertEquals(null, $obj0->getTable(), "The method getTable() does not return the expected value");
+		$this->assertEquals(null, $obj0->getColumns());
+		$this->assertEquals(null, $obj0->getComplete());
+		$this->assertEquals(null, $obj0->getCsv());
+		$this->assertEquals(null, $obj0->getDateFormat());
+		$this->assertEquals(".", $obj0->getDecimalPoint());
+		$this->assertEquals(null, $obj0->getEndColumn());
+		$this->assertEquals(null, $obj0->getEndRow());
+		$this->assertEquals(true, $obj0->getFirstRowAsNames());
+		$this->assertEquals(null, $obj0->getGoogleSpreadsheetKey());
+		$this->assertEquals(null, $obj0->getGoogleSpreadsheetWorksheet());
+		$this->assertEquals(null, $obj0->getItemDelimiter());
+		$this->assertEquals("\\n", $obj0->getLineDelimiter());
+		$this->assertEquals(null, $obj0->getParseDate());
+		$this->assertEquals(null, $obj0->getParsed());
+		$this->assertEquals(null, $obj0->getRows());
+		$this->assertEquals(null, $obj0->getSeriesMapping());
+		$this->assertEquals(0, $obj0->getStartColumn());
+		$this->assertEquals(0, $obj0->getStartRow());
+		$this->assertEquals(false, $obj0->getSwitchRowsAndColumns());
+		$this->assertEquals(null, $obj0->getTable());
     }
 
 	/**
@@ -85,7 +85,7 @@ final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsData(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -100,102 +100,102 @@ final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
 		$obj->setColumns(["columns" => "54ca84a794888fe8d92834787dfa935a"]);
 
 		$res1 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"]];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with columns");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setComplete("d9a22d7a8178d5b42a8750123cbfe5b1");
 
 		$res2 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1"];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with complete");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setCsv("628cb5675ff524f3e719b7aa2e88fe3f");
 
 		$res3 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f"];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with csv");
+		$this->assertEquals($res3, $obj->toArray());
 
 		$obj->setDateFormat("mm/dd/YY");
 
 		$res4 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY"];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with date format");
+		$this->assertEquals($res4, $obj->toArray());
 
 		$obj->setDecimalPoint("7d9af7a21241609a979bda8ca517044c");
 
 		$res5 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c"];
-		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with decimal point");
+		$this->assertEquals($res5, $obj->toArray());
 
 		$obj->setEndColumn(30);
 
 		$res6 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30];
-		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with end column");
+		$this->assertEquals($res6, $obj->toArray());
 
 		$obj->setEndRow(89);
 
 		$res7 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30, "endRow" => 89];
-		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with end row");
+		$this->assertEquals($res7, $obj->toArray());
 
 		$obj->setFirstRowAsNames(1);
 
 		$res8 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30, "endRow" => 89, "firstRowAsNames" => 1];
-		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with first row as names");
+		$this->assertEquals($res8, $obj->toArray());
 
 		$obj->setGoogleSpreadsheetKey("4c42edbd1e3a85f2857f1e3a5cf3fb59");
 
 		$res9 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30, "endRow" => 89, "firstRowAsNames" => 1, "googleSpreadsheetKey" => "4c42edbd1e3a85f2857f1e3a5cf3fb59"];
-		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with google spreadsheet key");
+		$this->assertEquals($res9, $obj->toArray());
 
 		$obj->setGoogleSpreadsheetWorksheet("b1444e571854190993273e8b1f53b89c");
 
 		$res10 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30, "endRow" => 89, "firstRowAsNames" => 1, "googleSpreadsheetKey" => "4c42edbd1e3a85f2857f1e3a5cf3fb59", "googleSpreadsheetWorksheet" => "b1444e571854190993273e8b1f53b89c"];
-		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with google spreadsheet worksheet");
+		$this->assertEquals($res10, $obj->toArray());
 
 		$obj->setItemDelimiter("2b9ff3bde6b855958954383dc46b1d4f");
 
 		$res11 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30, "endRow" => 89, "firstRowAsNames" => 1, "googleSpreadsheetKey" => "4c42edbd1e3a85f2857f1e3a5cf3fb59", "googleSpreadsheetWorksheet" => "b1444e571854190993273e8b1f53b89c", "itemDelimiter" => "2b9ff3bde6b855958954383dc46b1d4f"];
-		$this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with item delimiter");
+		$this->assertEquals($res11, $obj->toArray());
 
 		$obj->setLineDelimiter("28e3cbbd23484ddd36f72aa7110ee056");
 
 		$res12 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30, "endRow" => 89, "firstRowAsNames" => 1, "googleSpreadsheetKey" => "4c42edbd1e3a85f2857f1e3a5cf3fb59", "googleSpreadsheetWorksheet" => "b1444e571854190993273e8b1f53b89c", "itemDelimiter" => "2b9ff3bde6b855958954383dc46b1d4f", "lineDelimiter" => "28e3cbbd23484ddd36f72aa7110ee056"];
-		$this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with line delimiter");
+		$this->assertEquals($res12, $obj->toArray());
 
 		$obj->setParseDate("8b186f0402c084188de6f80e91f77984");
 
 		$res13 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30, "endRow" => 89, "firstRowAsNames" => 1, "googleSpreadsheetKey" => "4c42edbd1e3a85f2857f1e3a5cf3fb59", "googleSpreadsheetWorksheet" => "b1444e571854190993273e8b1f53b89c", "itemDelimiter" => "2b9ff3bde6b855958954383dc46b1d4f", "lineDelimiter" => "28e3cbbd23484ddd36f72aa7110ee056", "parseDate" => "8b186f0402c084188de6f80e91f77984"];
-		$this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with parse date");
+		$this->assertEquals($res13, $obj->toArray());
 
 		$obj->setParsed("c3732cbf21875cb12763787c984dd68d");
 
 		$res14 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30, "endRow" => 89, "firstRowAsNames" => 1, "googleSpreadsheetKey" => "4c42edbd1e3a85f2857f1e3a5cf3fb59", "googleSpreadsheetWorksheet" => "b1444e571854190993273e8b1f53b89c", "itemDelimiter" => "2b9ff3bde6b855958954383dc46b1d4f", "lineDelimiter" => "28e3cbbd23484ddd36f72aa7110ee056", "parseDate" => "8b186f0402c084188de6f80e91f77984", "parsed" => "c3732cbf21875cb12763787c984dd68d"];
-		$this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with parsed");
+		$this->assertEquals($res14, $obj->toArray());
 
 		$obj->setRows(["rows" => "df347a373b8f92aa0ae3dd920a5ec2f6"]);
 
 		$res15 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30, "endRow" => 89, "firstRowAsNames" => 1, "googleSpreadsheetKey" => "4c42edbd1e3a85f2857f1e3a5cf3fb59", "googleSpreadsheetWorksheet" => "b1444e571854190993273e8b1f53b89c", "itemDelimiter" => "2b9ff3bde6b855958954383dc46b1d4f", "lineDelimiter" => "28e3cbbd23484ddd36f72aa7110ee056", "parseDate" => "8b186f0402c084188de6f80e91f77984", "parsed" => "c3732cbf21875cb12763787c984dd68d", "rows" => ["rows" => "df347a373b8f92aa0ae3dd920a5ec2f6"]];
-		$this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with rows");
+		$this->assertEquals($res15, $obj->toArray());
 
 		$obj->setSeriesMapping(["seriesMapping" => "2112d1fa8b6001694eb605edccdf0810"]);
 
 		$res16 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30, "endRow" => 89, "firstRowAsNames" => 1, "googleSpreadsheetKey" => "4c42edbd1e3a85f2857f1e3a5cf3fb59", "googleSpreadsheetWorksheet" => "b1444e571854190993273e8b1f53b89c", "itemDelimiter" => "2b9ff3bde6b855958954383dc46b1d4f", "lineDelimiter" => "28e3cbbd23484ddd36f72aa7110ee056", "parseDate" => "8b186f0402c084188de6f80e91f77984", "parsed" => "c3732cbf21875cb12763787c984dd68d", "rows" => ["rows" => "df347a373b8f92aa0ae3dd920a5ec2f6"], "seriesMapping" => ["seriesMapping" => "2112d1fa8b6001694eb605edccdf0810"]];
-		$this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with series mapping");
+		$this->assertEquals($res16, $obj->toArray());
 
 		$obj->setStartColumn(35);
 
 		$res17 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30, "endRow" => 89, "firstRowAsNames" => 1, "googleSpreadsheetKey" => "4c42edbd1e3a85f2857f1e3a5cf3fb59", "googleSpreadsheetWorksheet" => "b1444e571854190993273e8b1f53b89c", "itemDelimiter" => "2b9ff3bde6b855958954383dc46b1d4f", "lineDelimiter" => "28e3cbbd23484ddd36f72aa7110ee056", "parseDate" => "8b186f0402c084188de6f80e91f77984", "parsed" => "c3732cbf21875cb12763787c984dd68d", "rows" => ["rows" => "df347a373b8f92aa0ae3dd920a5ec2f6"], "seriesMapping" => ["seriesMapping" => "2112d1fa8b6001694eb605edccdf0810"], "startColumn" => 35];
-		$this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with start column");
+		$this->assertEquals($res17, $obj->toArray());
 
 		$obj->setStartRow(31);
 
 		$res18 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30, "endRow" => 89, "firstRowAsNames" => 1, "googleSpreadsheetKey" => "4c42edbd1e3a85f2857f1e3a5cf3fb59", "googleSpreadsheetWorksheet" => "b1444e571854190993273e8b1f53b89c", "itemDelimiter" => "2b9ff3bde6b855958954383dc46b1d4f", "lineDelimiter" => "28e3cbbd23484ddd36f72aa7110ee056", "parseDate" => "8b186f0402c084188de6f80e91f77984", "parsed" => "c3732cbf21875cb12763787c984dd68d", "rows" => ["rows" => "df347a373b8f92aa0ae3dd920a5ec2f6"], "seriesMapping" => ["seriesMapping" => "2112d1fa8b6001694eb605edccdf0810"], "startColumn" => 35, "startRow" => 31];
-		$this->assertEquals($res18, $obj->toArray(), "The method toArray() does not return the expected array with start row");
+		$this->assertEquals($res18, $obj->toArray());
 
 		$obj->setSwitchRowsAndColumns(1);
 
 		$res19 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30, "endRow" => 89, "firstRowAsNames" => 1, "googleSpreadsheetKey" => "4c42edbd1e3a85f2857f1e3a5cf3fb59", "googleSpreadsheetWorksheet" => "b1444e571854190993273e8b1f53b89c", "itemDelimiter" => "2b9ff3bde6b855958954383dc46b1d4f", "lineDelimiter" => "28e3cbbd23484ddd36f72aa7110ee056", "parseDate" => "8b186f0402c084188de6f80e91f77984", "parsed" => "c3732cbf21875cb12763787c984dd68d", "rows" => ["rows" => "df347a373b8f92aa0ae3dd920a5ec2f6"], "seriesMapping" => ["seriesMapping" => "2112d1fa8b6001694eb605edccdf0810"], "startColumn" => 35, "startRow" => 31, "switchRowsAndColumns" => 1];
-		$this->assertEquals($res19, $obj->toArray(), "The method toArray() does not return the expected array with switch rows and columns");
+		$this->assertEquals($res19, $obj->toArray());
 
 		$obj->setTable("aab9e1de16f38176f86d7a92ba337a8d");
 
 		$res20 = ["columns" => ["columns" => "54ca84a794888fe8d92834787dfa935a"], "complete" => "d9a22d7a8178d5b42a8750123cbfe5b1", "csv" => "628cb5675ff524f3e719b7aa2e88fe3f", "dateFormat" => "mm/dd/YY", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "endColumn" => 30, "endRow" => 89, "firstRowAsNames" => 1, "googleSpreadsheetKey" => "4c42edbd1e3a85f2857f1e3a5cf3fb59", "googleSpreadsheetWorksheet" => "b1444e571854190993273e8b1f53b89c", "itemDelimiter" => "2b9ff3bde6b855958954383dc46b1d4f", "lineDelimiter" => "28e3cbbd23484ddd36f72aa7110ee056", "parseDate" => "8b186f0402c084188de6f80e91f77984", "parsed" => "c3732cbf21875cb12763787c984dd68d", "rows" => ["rows" => "df347a373b8f92aa0ae3dd920a5ec2f6"], "seriesMapping" => ["seriesMapping" => "2112d1fa8b6001694eb605edccdf0810"], "startColumn" => 35, "startRow" => 31, "switchRowsAndColumns" => 1, "table" => "aab9e1de16f38176f86d7a92ba337a8d"];
-		$this->assertEquals($res20, $obj->toArray(), "The method toArray() does not return the expected array with table");
+		$this->assertEquals($res20, $obj->toArray());
 	}
 
 }

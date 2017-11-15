@@ -31,29 +31,29 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle(true);
 
-		$this->assertEquals(null, $obj1->getAlign(), "The method getAlign() does not return the expected value");
-		$this->assertEquals(null, $obj1->getFloating(), "The method getFloating() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMargin(), "The method getMargin() does not return the expected value");
-		$this->assertEquals(null, $obj1->getStyle(), "The method getStyle() does not return the expected value");
-		$this->assertEquals(null, $obj1->getText(), "The method getText() does not return the expected value");
-		$this->assertEquals(null, $obj1->getUseHTML(), "The method getUseHTML() does not return the expected value");
-		$this->assertEquals(null, $obj1->getVerticalAlign(), "The method getVerticalAlign() does not return the expected value");
-		$this->assertEquals(null, $obj1->getWidthAdjust(), "The method getWidthAdjust() does not return the expected value");
-		$this->assertEquals(null, $obj1->getX(), "The method getX() does not return the expected value");
-		$this->assertEquals(null, $obj1->getY(), "The method getY() does not return the expected value");
+		$this->assertEquals(null, $obj1->getAlign());
+		$this->assertEquals(null, $obj1->getFloating());
+		$this->assertEquals(null, $obj1->getMargin());
+		$this->assertEquals(null, $obj1->getStyle());
+		$this->assertEquals(null, $obj1->getText());
+		$this->assertEquals(null, $obj1->getUseHTML());
+		$this->assertEquals(null, $obj1->getVerticalAlign());
+		$this->assertEquals(null, $obj1->getWidthAdjust());
+		$this->assertEquals(null, $obj1->getX());
+		$this->assertEquals(null, $obj1->getY());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle(false);
 
-		$this->assertEquals("center", $obj0->getAlign(), "The method getAlign() does not return the expected value");
-		$this->assertEquals(false, $obj0->getFloating(), "The method getFloating() does not return the expected value");
-		$this->assertEquals(15, $obj0->getMargin(), "The method getMargin() does not return the expected value");
-		$this->assertEquals(["color" => "#333333", "fontSize" => "18px"], $obj0->getStyle(), "The method getStyle() does not return the expected value");
-		$this->assertEquals("Chart title", $obj0->getText(), "The method getText() does not return the expected value");
-		$this->assertEquals(false, $obj0->getUseHTML(), "The method getUseHTML() does not return the expected value");
-		$this->assertEquals(null, $obj0->getVerticalAlign(), "The method getVerticalAlign() does not return the expected value");
-		$this->assertEquals(-44, $obj0->getWidthAdjust(), "The method getWidthAdjust() does not return the expected value");
-		$this->assertEquals(0, $obj0->getX(), "The method getX() does not return the expected value");
-		$this->assertEquals(null, $obj0->getY(), "The method getY() does not return the expected value");
+		$this->assertEquals("center", $obj0->getAlign());
+		$this->assertEquals(false, $obj0->getFloating());
+		$this->assertEquals(15, $obj0->getMargin());
+		$this->assertEquals(["color" => "#333333", "fontSize" => "18px"], $obj0->getStyle());
+		$this->assertEquals("Chart title", $obj0->getText());
+		$this->assertEquals(false, $obj0->getUseHTML());
+		$this->assertEquals(null, $obj0->getVerticalAlign());
+		$this->assertEquals(-44, $obj0->getWidthAdjust());
+		$this->assertEquals(0, $obj0->getX());
+		$this->assertEquals(null, $obj0->getY());
     }
 
 	/**
@@ -65,7 +65,7 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -80,52 +80,52 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 		$obj->setAlign("right");
 
 		$res1 = ["align" => "right"];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with align");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setFloating(1);
 
 		$res2 = ["align" => "right", "floating" => 1];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with floating");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setMargin(81);
 
 		$res3 = ["align" => "right", "floating" => 1, "margin" => 81];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with margin");
+		$this->assertEquals($res3, $obj->toArray());
 
 		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
 		$res4 = ["align" => "right", "floating" => 1, "margin" => 81, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with style");
+		$this->assertEquals($res4, $obj->toArray());
 
 		$obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
 
 		$res5 = ["align" => "right", "floating" => 1, "margin" => 81, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
-		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with text");
+		$this->assertEquals($res5, $obj->toArray());
 
 		$obj->setUseHTML(0);
 
 		$res6 = ["align" => "right", "floating" => 1, "margin" => 81, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0];
-		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with use HTML");
+		$this->assertEquals($res6, $obj->toArray());
 
 		$obj->setVerticalAlign("bottom");
 
 		$res7 = ["align" => "right", "floating" => 1, "margin" => 81, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0, "verticalAlign" => "bottom"];
-		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
+		$this->assertEquals($res7, $obj->toArray());
 
 		$obj->setWidthAdjust(3);
 
 		$res8 = ["align" => "right", "floating" => 1, "margin" => 81, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0, "verticalAlign" => "bottom", "widthAdjust" => 3];
-		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with width adjust");
+		$this->assertEquals($res8, $obj->toArray());
 
 		$obj->setX(33);
 
 		$res9 = ["align" => "right", "floating" => 1, "margin" => 81, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0, "verticalAlign" => "bottom", "widthAdjust" => 3, "x" => 33];
-		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with x");
+		$this->assertEquals($res9, $obj->toArray());
 
 		$obj->setY(84);
 
 		$res10 = ["align" => "right", "floating" => 1, "margin" => 81, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0, "verticalAlign" => "bottom", "widthAdjust" => 3, "x" => 33, "y" => 84];
-		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with y");
+		$this->assertEquals($res10, $obj->toArray());
 	}
 
 }

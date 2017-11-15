@@ -31,7 +31,7 @@ final class HighchartsButtonsTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons(true);
 
-		$this->assertEquals(null, $obj1->getContextButton(), "The method getContextButton() does not return the expected value");
+		$this->assertEquals(null, $obj1->getContextButton());
     }
 
 	/**
@@ -48,7 +48,7 @@ final class HighchartsButtonsTest extends PHPUnit_Framework_TestCase {
 		$obj->clear();
 
 		$res = ["contextButton" => []];
-		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals($res, $obj->toArray());
 	}
 
 	/**
@@ -60,7 +60,7 @@ final class HighchartsButtonsTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -73,7 +73,7 @@ final class HighchartsButtonsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons(false);
 
 		$res = $obj->newContextButton();
-		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton::class, $res, "The method newContextButton() does not return the expected object");
+		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton::class, $res);
 	}
 
 	/**
@@ -88,7 +88,7 @@ final class HighchartsButtonsTest extends PHPUnit_Framework_TestCase {
 		$obj->setContextButton(new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton());
 
 		$res1 = ["contextButton" => []];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with context button");
+		$this->assertEquals($res1, $obj->toArray());
 	}
 
 }

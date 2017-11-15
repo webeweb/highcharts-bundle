@@ -31,19 +31,19 @@ final class HighchartsConditionTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(true);
 
-		$this->assertEquals(null, $obj1->getCallback(), "The method getCallback() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMaxHeight(), "The method getMaxHeight() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMaxWidth(), "The method getMaxWidth() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMinHeight(), "The method getMinHeight() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMinWidth(), "The method getMinWidth() does not return the expected value");
+		$this->assertEquals(null, $obj1->getCallback());
+		$this->assertEquals(null, $obj1->getMaxHeight());
+		$this->assertEquals(null, $obj1->getMaxWidth());
+		$this->assertEquals(null, $obj1->getMinHeight());
+		$this->assertEquals(null, $obj1->getMinWidth());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(false);
 
-		$this->assertEquals(null, $obj0->getCallback(), "The method getCallback() does not return the expected value");
-		$this->assertEquals(null, $obj0->getMaxHeight(), "The method getMaxHeight() does not return the expected value");
-		$this->assertEquals(null, $obj0->getMaxWidth(), "The method getMaxWidth() does not return the expected value");
-		$this->assertEquals(0, $obj0->getMinHeight(), "The method getMinHeight() does not return the expected value");
-		$this->assertEquals(0, $obj0->getMinWidth(), "The method getMinWidth() does not return the expected value");
+		$this->assertEquals(null, $obj0->getCallback());
+		$this->assertEquals(null, $obj0->getMaxHeight());
+		$this->assertEquals(null, $obj0->getMaxWidth());
+		$this->assertEquals(0, $obj0->getMinHeight());
+		$this->assertEquals(0, $obj0->getMinWidth());
     }
 
 	/**
@@ -55,7 +55,7 @@ final class HighchartsConditionTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -70,27 +70,27 @@ final class HighchartsConditionTest extends PHPUnit_Framework_TestCase {
 		$obj->setCallback("924a8ceeac17f54d3be3f8cdf1c04eb2");
 
 		$res1 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2"];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with callback");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setMaxHeight(5);
 
 		$res2 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 5];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with max height");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setMaxWidth(28);
 
 		$res3 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 5, "maxWidth" => 28];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with max width");
+		$this->assertEquals($res3, $obj->toArray());
 
 		$obj->setMinHeight(36);
 
 		$res4 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 5, "maxWidth" => 28, "minHeight" => 36];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with min height");
+		$this->assertEquals($res4, $obj->toArray());
 
 		$obj->setMinWidth(87);
 
 		$res5 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 5, "maxWidth" => 28, "minHeight" => 36, "minWidth" => 87];
-		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with min width");
+		$this->assertEquals($res5, $obj->toArray());
 	}
 
 }

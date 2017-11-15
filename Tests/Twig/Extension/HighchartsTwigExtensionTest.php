@@ -38,22 +38,22 @@ final class HighchartsTwigExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new HighchartsTwigExtension(getcwd(), "");
 
-		$this->assertCount(3, $obj->getFunctions(), "The method getFunctions() does not return the expected count");
+		$this->assertCount(3, $obj->getFunctions());
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[0], "The method getFunctions() does not return the expected object on item 0");
-		$this->assertEquals("highchartsChart", $obj->getFunctions()[0]->getName(), "The method getName() does not return the expected name on item 0");
-		$this->assertEquals([$obj, "highchartsChartFunction"], $obj->getFunctions()[0]->getCallable(), "The method getCallable() does not return the expected callable on item 0");
-		$this->assertEquals(["html"], $obj->getFunctions()[0]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 0");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[0]);
+		$this->assertEquals("highchartsChart", $obj->getFunctions()[0]->getName());
+		$this->assertEquals([$obj, "highchartsChartFunction"], $obj->getFunctions()[0]->getCallable());
+		$this->assertEquals(["html"], $obj->getFunctions()[0]->getSafe(new Twig_Node()));
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[1], "The method getFunctions() does not return the expected object on item 1");
-		$this->assertEquals("highchartsScript", $obj->getFunctions()[1]->getName(), "The method getName() does not return the expected name on item 1");
-		$this->assertEquals([$obj, "highchartsScriptFunction"], $obj->getFunctions()[1]->getCallable(), "The method getCallable() does not return the expected callable on item 1");
-		$this->assertEquals(["html"], $obj->getFunctions()[1]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 1");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[1]);
+		$this->assertEquals("highchartsScript", $obj->getFunctions()[1]->getName());
+		$this->assertEquals([$obj, "highchartsScriptFunction"], $obj->getFunctions()[1]->getCallable());
+		$this->assertEquals(["html"], $obj->getFunctions()[1]->getSafe(new Twig_Node()));
 
-		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[2], "The method getFunctions() does not return the expected object on item 2");
-		$this->assertEquals("highchartsSetOptions", $obj->getFunctions()[2]->getName(), "The method getName() does not return the expected name on item 2");
-		$this->assertEquals([$obj, "highchartsSetOptionsFunction"], $obj->getFunctions()[2]->getCallable(), "The method getCallable() does not return the expected callable on item 2");
-		$this->assertEquals(["html"], $obj->getFunctions()[2]->getSafe(new Twig_Node()), "The method getSafe() does not return the expected safe on item 2");
+		$this->assertInstanceOf(Twig_SimpleFunction::class, $obj->getFunctions()[2]);
+		$this->assertEquals("highchartsSetOptions", $obj->getFunctions()[2]->getName());
+		$this->assertEquals([$obj, "highchartsSetOptionsFunction"], $obj->getFunctions()[2]->getCallable());
+		$this->assertEquals(["html"], $obj->getFunctions()[2]->getSafe(new Twig_Node()));
 	}
 
 	/**
@@ -69,12 +69,12 @@ final class HighchartsTwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$obj1 = new HighchartsTwigExtension(getcwd(), "");
 
 		$res1 = "<script type=\"text/javascript\">\nHighcharts.chart('selector', {\"title\":{\"text\":\"title\"}});\n</script>";
-		$this->assertEquals($res1, $obj1->highchartsChartFunction("selector", $cht), "The method highchartsChartFunction() does not return the expected string in prod");
+		$this->assertEquals($res1, $obj1->highchartsChartFunction("selector", $cht));
 
 		$obj2 = new HighchartsTwigExtension(getcwd(), "dev");
 
 		$res2 = "<script type=\"text/javascript\">\nHighcharts.chart('selector', {\n    \"title\": {\n        \"text\": \"title\"\n    }\n});\n</script>";
-		$this->assertEquals($res2, $obj2->highchartsChartFunction("selector", $cht), "The method highchartsChartFunction() does not return the expected string in dev");
+		$this->assertEquals($res2, $obj2->highchartsChartFunction("selector", $cht));
 	}
 
 	/**
@@ -89,24 +89,24 @@ final class HighchartsTwigExtensionTest extends PHPUnit_Framework_TestCase {
 		try {
 			$obj->highchartsScriptFunction("inexistant-script");
 		} catch (Exception $ex) {
-			$this->assertInstanceOf(FileNotFoundException::class, $ex, "The method highchartsScript() does not throw the expected exception");
-			$this->assertEquals("The file \"code/inexistant-script.js\" is not found", $ex->getMessage(), "The method getMessage() does not return the expected string");
+			$this->assertInstanceOf(FileNotFoundException::class, $ex);
+			$this->assertEquals("The file \"code/inexistant-script.js\" is not found", $ex->getMessage());
 		}
 
 		$res1 = "<script src=\"/bundles/highcharts/code/highcharts.js\" type=\"text/javascript\"></script>";
-		$this->assertEquals($res1, $obj->highchartsScriptFunction("highcharts"), "The method highchartsScriptFunction() does not return the expected string");
+		$this->assertEquals($res1, $obj->highchartsScriptFunction("highcharts"));
 
 		$res2 = "<script src=\"/bundles/highcharts/code/modules/exporting.js\" type=\"text/javascript\"></script>";
-		$this->assertEquals($res2, $obj->highchartsScriptFunction("modules/exporting"), "The method highchartsScriptFunction() does not return the expected string");
+		$this->assertEquals($res2, $obj->highchartsScriptFunction("modules/exporting"));
 
 		$res2_1 = "<script src=\"/bundles/highcharts/code/modules/exporting.js\" type=\"text/javascript\"></script>";
-		$this->assertEquals($res2_1, $obj->highchartsScriptFunction("exporting", "code/modules"), "The method highchartsScriptFunction() does not return the expected string");
+		$this->assertEquals($res2_1, $obj->highchartsScriptFunction("exporting", "code/modules"));
 
 		$res3 = "<script src=\"/bundles/highcharts/code/themes/dark-unica.js\" type=\"text/javascript\"></script>";
-		$this->assertEquals($res3, $obj->highchartsScriptFunction("themes/dark-unica"), "The method highchartsScriptFunction() does not return the expected string");
+		$this->assertEquals($res3, $obj->highchartsScriptFunction("themes/dark-unica"));
 
 		$res3_1 = "<script src=\"/bundles/highcharts/code/themes/dark-unica.js\" type=\"text/javascript\"></script>";
-		$this->assertEquals($res3_1, $obj->highchartsScriptFunction("dark-unica", "code/themes"), "The method highchartsScriptFunction() does not return the expected string");
+		$this->assertEquals($res3_1, $obj->highchartsScriptFunction("dark-unica", "code/themes"));
 	}
 
 	/**
@@ -123,12 +123,12 @@ final class HighchartsTwigExtensionTest extends PHPUnit_Framework_TestCase {
 		$obj1 = new HighchartsTwigExtension(getcwd(), "");
 
 		$res1 = "<script type=\"text/javascript\">\nHighcharts.setOptions({\"global\":[],\"lang\":[]});\n</script>";
-		$this->assertEquals($res1, $obj1->highchartsSetOptionsFunction($opt), "The method highchartsSetOptionsFunction() does not return the expected string in prod");
+		$this->assertEquals($res1, $obj1->highchartsSetOptionsFunction($opt));
 
 		$obj2 = new HighchartsTwigExtension(getcwd(), "dev");
 
 		$res2 = "<script type=\"text/javascript\">\nHighcharts.setOptions({\n    \"global\": [],\n    \"lang\": []\n});\n</script>";
-		$this->assertEquals($res2, $obj2->highchartsSetOptionsFunction($opt), "The method highchartsSetOptionsFunction() does not return the expected string in dev");
+		$this->assertEquals($res2, $obj2->highchartsSetOptionsFunction($opt));
 	}
 
 }

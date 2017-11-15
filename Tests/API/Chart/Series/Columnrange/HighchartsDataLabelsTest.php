@@ -31,63 +31,63 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Columnrange\HighchartsDataLabels(true);
 
-		$this->assertEquals(null, $obj1->getAlign(), "The method getAlign() does not return the expected value");
-		$this->assertEquals(null, $obj1->getAllowOverlap(), "The method getAllowOverlap() does not return the expected value");
-		$this->assertEquals(null, $obj1->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getBorderColor(), "The method getBorderColor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getBorderRadius(), "The method getBorderRadius() does not return the expected value");
-		$this->assertEquals(null, $obj1->getBorderWidth(), "The method getBorderWidth() does not return the expected value");
-		$this->assertEquals(null, $obj1->getClassName(), "The method getClassName() does not return the expected value");
-		$this->assertEquals(null, $obj1->getColor(), "The method getColor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getCrop(), "The method getCrop() does not return the expected value");
-		$this->assertEquals(null, $obj1->getDefer(), "The method getDefer() does not return the expected value");
-		$this->assertEquals(null, $obj1->getEnabled(), "The method getEnabled() does not return the expected value");
-		$this->assertEquals(null, $obj1->getFormat(), "The method getFormat() does not return the expected value");
-		$this->assertEquals(null, $obj1->getFormatter(), "The method getFormatter() does not return the expected value");
-		$this->assertEquals(null, $obj1->getInside(), "The method getInside() does not return the expected value");
-		$this->assertEquals(null, $obj1->getOverflow(), "The method getOverflow() does not return the expected value");
-		$this->assertEquals(null, $obj1->getPadding(), "The method getPadding() does not return the expected value");
-		$this->assertEquals(null, $obj1->getRotation(), "The method getRotation() does not return the expected value");
-		$this->assertEquals(null, $obj1->getShadow(), "The method getShadow() does not return the expected value");
-		$this->assertEquals(null, $obj1->getShape(), "The method getShape() does not return the expected value");
-		$this->assertEquals(null, $obj1->getStyle(), "The method getStyle() does not return the expected value");
-		$this->assertEquals(null, $obj1->getUseHTML(), "The method getUseHTML() does not return the expected value");
-		$this->assertEquals(null, $obj1->getVerticalAlign(), "The method getVerticalAlign() does not return the expected value");
-		$this->assertEquals(null, $obj1->getXHigh(), "The method getXHigh() does not return the expected value");
-		$this->assertEquals(null, $obj1->getXLow(), "The method getXLow() does not return the expected value");
-		$this->assertEquals(null, $obj1->getYHigh(), "The method getYHigh() does not return the expected value");
-		$this->assertEquals(null, $obj1->getYLow(), "The method getYLow() does not return the expected value");
-		$this->assertEquals(null, $obj1->getZIndex(), "The method getZIndex() does not return the expected value");
+		$this->assertEquals(null, $obj1->getAlign());
+		$this->assertEquals(null, $obj1->getAllowOverlap());
+		$this->assertEquals(null, $obj1->getBackgroundColor());
+		$this->assertEquals(null, $obj1->getBorderColor());
+		$this->assertEquals(null, $obj1->getBorderRadius());
+		$this->assertEquals(null, $obj1->getBorderWidth());
+		$this->assertEquals(null, $obj1->getClassName());
+		$this->assertEquals(null, $obj1->getColor());
+		$this->assertEquals(null, $obj1->getCrop());
+		$this->assertEquals(null, $obj1->getDefer());
+		$this->assertEquals(null, $obj1->getEnabled());
+		$this->assertEquals(null, $obj1->getFormat());
+		$this->assertEquals(null, $obj1->getFormatter());
+		$this->assertEquals(null, $obj1->getInside());
+		$this->assertEquals(null, $obj1->getOverflow());
+		$this->assertEquals(null, $obj1->getPadding());
+		$this->assertEquals(null, $obj1->getRotation());
+		$this->assertEquals(null, $obj1->getShadow());
+		$this->assertEquals(null, $obj1->getShape());
+		$this->assertEquals(null, $obj1->getStyle());
+		$this->assertEquals(null, $obj1->getUseHTML());
+		$this->assertEquals(null, $obj1->getVerticalAlign());
+		$this->assertEquals(null, $obj1->getXHigh());
+		$this->assertEquals(null, $obj1->getXLow());
+		$this->assertEquals(null, $obj1->getYHigh());
+		$this->assertEquals(null, $obj1->getYLow());
+		$this->assertEquals(null, $obj1->getZIndex());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Columnrange\HighchartsDataLabels(false);
 
-		$this->assertEquals("center", $obj0->getAlign(), "The method getAlign() does not return the expected value");
-		$this->assertEquals(false, $obj0->getAllowOverlap(), "The method getAllowOverlap() does not return the expected value");
-		$this->assertEquals(null, $obj0->getBackgroundColor(), "The method getBackgroundColor() does not return the expected value");
-		$this->assertEquals(null, $obj0->getBorderColor(), "The method getBorderColor() does not return the expected value");
-		$this->assertEquals(0, $obj0->getBorderRadius(), "The method getBorderRadius() does not return the expected value");
-		$this->assertEquals(0, $obj0->getBorderWidth(), "The method getBorderWidth() does not return the expected value");
-		$this->assertEquals(null, $obj0->getClassName(), "The method getClassName() does not return the expected value");
-		$this->assertEquals(null, $obj0->getColor(), "The method getColor() does not return the expected value");
-		$this->assertEquals(true, $obj0->getCrop(), "The method getCrop() does not return the expected value");
-		$this->assertEquals(true, $obj0->getDefer(), "The method getDefer() does not return the expected value");
-		$this->assertEquals(false, $obj0->getEnabled(), "The method getEnabled() does not return the expected value");
-		$this->assertEquals("{y}", $obj0->getFormat(), "The method getFormat() does not return the expected value");
-		$this->assertEquals(null, $obj0->getFormatter(), "The method getFormatter() does not return the expected value");
-		$this->assertEquals(null, $obj0->getInside(), "The method getInside() does not return the expected value");
-		$this->assertEquals("justify", $obj0->getOverflow(), "The method getOverflow() does not return the expected value");
-		$this->assertEquals(5, $obj0->getPadding(), "The method getPadding() does not return the expected value");
-		$this->assertEquals(0, $obj0->getRotation(), "The method getRotation() does not return the expected value");
-		$this->assertEquals(false, $obj0->getShadow(), "The method getShadow() does not return the expected value");
-		$this->assertEquals("square", $obj0->getShape(), "The method getShape() does not return the expected value");
-		$this->assertEquals(["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], $obj0->getStyle(), "The method getStyle() does not return the expected value");
-		$this->assertEquals(false, $obj0->getUseHTML(), "The method getUseHTML() does not return the expected value");
-		$this->assertEquals(null, $obj0->getVerticalAlign(), "The method getVerticalAlign() does not return the expected value");
-		$this->assertEquals(0, $obj0->getXHigh(), "The method getXHigh() does not return the expected value");
-		$this->assertEquals(0, $obj0->getXLow(), "The method getXLow() does not return the expected value");
-		$this->assertEquals(-6, $obj0->getYHigh(), "The method getYHigh() does not return the expected value");
-		$this->assertEquals(16, $obj0->getYLow(), "The method getYLow() does not return the expected value");
-		$this->assertEquals(6, $obj0->getZIndex(), "The method getZIndex() does not return the expected value");
+		$this->assertEquals("center", $obj0->getAlign());
+		$this->assertEquals(false, $obj0->getAllowOverlap());
+		$this->assertEquals(null, $obj0->getBackgroundColor());
+		$this->assertEquals(null, $obj0->getBorderColor());
+		$this->assertEquals(0, $obj0->getBorderRadius());
+		$this->assertEquals(0, $obj0->getBorderWidth());
+		$this->assertEquals(null, $obj0->getClassName());
+		$this->assertEquals(null, $obj0->getColor());
+		$this->assertEquals(true, $obj0->getCrop());
+		$this->assertEquals(true, $obj0->getDefer());
+		$this->assertEquals(false, $obj0->getEnabled());
+		$this->assertEquals("{y}", $obj0->getFormat());
+		$this->assertEquals(null, $obj0->getFormatter());
+		$this->assertEquals(null, $obj0->getInside());
+		$this->assertEquals("justify", $obj0->getOverflow());
+		$this->assertEquals(5, $obj0->getPadding());
+		$this->assertEquals(0, $obj0->getRotation());
+		$this->assertEquals(false, $obj0->getShadow());
+		$this->assertEquals("square", $obj0->getShape());
+		$this->assertEquals(["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], $obj0->getStyle());
+		$this->assertEquals(false, $obj0->getUseHTML());
+		$this->assertEquals(null, $obj0->getVerticalAlign());
+		$this->assertEquals(0, $obj0->getXHigh());
+		$this->assertEquals(0, $obj0->getXLow());
+		$this->assertEquals(-6, $obj0->getYHigh());
+		$this->assertEquals(16, $obj0->getYLow());
+		$this->assertEquals(6, $obj0->getZIndex());
     }
 
 	/**
@@ -99,7 +99,7 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Columnrange\HighchartsDataLabels(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -114,137 +114,137 @@ final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
 		$obj->setAlign("right");
 
 		$res1 = ["align" => "right"];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with align");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setAllowOverlap(1);
 
 		$res2 = ["align" => "right", "allowOverlap" => 1];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with allow overlap");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setBackgroundColor("930f2a43179a7ae5fc25ed873223e99f");
 
 		$res3 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f"];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with background color");
+		$this->assertEquals($res3, $obj->toArray());
 
 		$obj->setBorderColor("97da935a74593c55d78be9d1295aa994");
 
 		$res4 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994"];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with border color");
+		$this->assertEquals($res4, $obj->toArray());
 
 		$obj->setBorderRadius(55);
 
 		$res5 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55];
-		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with border radius");
+		$this->assertEquals($res5, $obj->toArray());
 
 		$obj->setBorderWidth(17);
 
 		$res6 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17];
-		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with border width");
+		$this->assertEquals($res6, $obj->toArray());
 
 		$obj->setClassName("6f66e878c62db60568a3487869695820");
 
 		$res7 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820"];
-		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with class name");
+		$this->assertEquals($res7, $obj->toArray());
 
 		$obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
 		$res8 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
-		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with color");
+		$this->assertEquals($res8, $obj->toArray());
 
 		$obj->setCrop(0);
 
 		$res9 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0];
-		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with crop");
+		$this->assertEquals($res9, $obj->toArray());
 
 		$obj->setDefer(0);
 
 		$res10 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0];
-		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with defer");
+		$this->assertEquals($res10, $obj->toArray());
 
 		$obj->setEnabled(1);
 
 		$res11 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1];
-		$this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with enabled");
+		$this->assertEquals($res11, $obj->toArray());
 
 		$obj->setFormat("1ddcb92ade31c8fbd370001f9b29a7d9");
 
 		$res12 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9"];
-		$this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with format");
+		$this->assertEquals($res12, $obj->toArray());
 
 		$obj->setFormatter("f2ffc59487832cbad265a8fef2133592");
 
 		$res13 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
-		$this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with formatter");
+		$this->assertEquals($res13, $obj->toArray());
 
 		$obj->setInside(1);
 
 		$res14 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1];
-		$this->assertEquals($res14, $obj->toArray(), "The method toArray() does not return the expected array with inside");
+		$this->assertEquals($res14, $obj->toArray());
 
 		$obj->setOverflow("none");
 
 		$res15 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none"];
-		$this->assertEquals($res15, $obj->toArray(), "The method toArray() does not return the expected array with overflow");
+		$this->assertEquals($res15, $obj->toArray());
 
 		$obj->setPadding(41);
 
 		$res16 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 41];
-		$this->assertEquals($res16, $obj->toArray(), "The method toArray() does not return the expected array with padding");
+		$this->assertEquals($res16, $obj->toArray());
 
 		$obj->setRotation(90);
 
 		$res17 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 41, "rotation" => 90];
-		$this->assertEquals($res17, $obj->toArray(), "The method toArray() does not return the expected array with rotation");
+		$this->assertEquals($res17, $obj->toArray());
 
 		$obj->setShadow(1);
 
 		$res18 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 41, "rotation" => 90, "shadow" => 1];
-		$this->assertEquals($res18, $obj->toArray(), "The method toArray() does not return the expected array with shadow");
+		$this->assertEquals($res18, $obj->toArray());
 
 		$obj->setShape("8c73a98a300905900337f535531dfca6");
 
 		$res19 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 41, "rotation" => 90, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6"];
-		$this->assertEquals($res19, $obj->toArray(), "The method toArray() does not return the expected array with shape");
+		$this->assertEquals($res19, $obj->toArray());
 
 		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
 		$res20 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 41, "rotation" => 90, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
-		$this->assertEquals($res20, $obj->toArray(), "The method toArray() does not return the expected array with style");
+		$this->assertEquals($res20, $obj->toArray());
 
 		$obj->setUseHTML(1);
 
 		$res21 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 41, "rotation" => 90, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1];
-		$this->assertEquals($res21, $obj->toArray(), "The method toArray() does not return the expected array with use HTML");
+		$this->assertEquals($res21, $obj->toArray());
 
 		$obj->setVerticalAlign("bottom");
 
 		$res22 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 41, "rotation" => 90, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "bottom"];
-		$this->assertEquals($res22, $obj->toArray(), "The method toArray() does not return the expected array with vertical align");
+		$this->assertEquals($res22, $obj->toArray());
 
 		$obj->setXHigh(95);
 
 		$res23 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 41, "rotation" => 90, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "bottom", "xHigh" => 95];
-		$this->assertEquals($res23, $obj->toArray(), "The method toArray() does not return the expected array with x high");
+		$this->assertEquals($res23, $obj->toArray());
 
 		$obj->setXLow(51);
 
 		$res24 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 41, "rotation" => 90, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "bottom", "xHigh" => 95, "xLow" => 51];
-		$this->assertEquals($res24, $obj->toArray(), "The method toArray() does not return the expected array with x low");
+		$this->assertEquals($res24, $obj->toArray());
 
 		$obj->setYHigh(65);
 
 		$res25 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 41, "rotation" => 90, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "bottom", "xHigh" => 95, "xLow" => 51, "yHigh" => 65];
-		$this->assertEquals($res25, $obj->toArray(), "The method toArray() does not return the expected array with y high");
+		$this->assertEquals($res25, $obj->toArray());
 
 		$obj->setYLow(23);
 
 		$res26 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 41, "rotation" => 90, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "bottom", "xHigh" => 95, "xLow" => 51, "yHigh" => 65, "yLow" => 23];
-		$this->assertEquals($res26, $obj->toArray(), "The method toArray() does not return the expected array with y low");
+		$this->assertEquals($res26, $obj->toArray());
 
 		$obj->setZIndex(74);
 
 		$res27 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 55, "borderWidth" => 17, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 1, "overflow" => "none", "padding" => 41, "rotation" => 90, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "bottom", "xHigh" => 95, "xLow" => 51, "yHigh" => 65, "yLow" => 23, "zIndex" => 74];
-		$this->assertEquals($res27, $obj->toArray(), "The method toArray() does not return the expected array with z index");
+		$this->assertEquals($res27, $obj->toArray());
 	}
 
 }

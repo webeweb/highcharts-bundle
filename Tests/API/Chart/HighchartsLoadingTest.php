@@ -31,17 +31,17 @@ final class HighchartsLoadingTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading(true);
 
-		$this->assertEquals(null, $obj1->getHideDuration(), "The method getHideDuration() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLabelStyle(), "The method getLabelStyle() does not return the expected value");
-		$this->assertEquals(null, $obj1->getShowDuration(), "The method getShowDuration() does not return the expected value");
-		$this->assertEquals(null, $obj1->getStyle(), "The method getStyle() does not return the expected value");
+		$this->assertEquals(null, $obj1->getHideDuration());
+		$this->assertEquals(null, $obj1->getLabelStyle());
+		$this->assertEquals(null, $obj1->getShowDuration());
+		$this->assertEquals(null, $obj1->getStyle());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading(false);
 
-		$this->assertEquals(100, $obj0->getHideDuration(), "The method getHideDuration() does not return the expected value");
-		$this->assertEquals(["fontWeight" => "bold", "position" => "relative", "top" => "45%"], $obj0->getLabelStyle(), "The method getLabelStyle() does not return the expected value");
-		$this->assertEquals(100, $obj0->getShowDuration(), "The method getShowDuration() does not return the expected value");
-		$this->assertEquals(["position" => "absolute", "backgroundColor" => "#ffffff", "opacity" => 0.5, "textAlign" => "center"], $obj0->getStyle(), "The method getStyle() does not return the expected value");
+		$this->assertEquals(100, $obj0->getHideDuration());
+		$this->assertEquals(["fontWeight" => "bold", "position" => "relative", "top" => "45%"], $obj0->getLabelStyle());
+		$this->assertEquals(100, $obj0->getShowDuration());
+		$this->assertEquals(["position" => "absolute", "backgroundColor" => "#ffffff", "opacity" => 0.5, "textAlign" => "center"], $obj0->getStyle());
     }
 
 	/**
@@ -53,7 +53,7 @@ final class HighchartsLoadingTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -68,22 +68,22 @@ final class HighchartsLoadingTest extends PHPUnit_Framework_TestCase {
 		$obj->setHideDuration(82);
 
 		$res1 = ["hideDuration" => 82];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with hide duration");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setLabelStyle(["labelStyle" => "00faa433bf869443728e502b4f7c6850"]);
 
 		$res2 = ["hideDuration" => 82, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"]];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with label style");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setShowDuration(24);
 
 		$res3 = ["hideDuration" => 82, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"], "showDuration" => 24];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with show duration");
+		$this->assertEquals($res3, $obj->toArray());
 
 		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
 		$res4 = ["hideDuration" => 82, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"], "showDuration" => 24, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with style");
+		$this->assertEquals($res4, $obj->toArray());
 	}
 
 }

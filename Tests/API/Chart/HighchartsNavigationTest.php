@@ -31,17 +31,17 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(true);
 
-		$this->assertEquals(null, $obj1->getButtonOptions(), "The method getButtonOptions() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMenuItemHoverStyle(), "The method getMenuItemHoverStyle() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMenuItemStyle(), "The method getMenuItemStyle() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMenuStyle(), "The method getMenuStyle() does not return the expected value");
+		$this->assertEquals(null, $obj1->getButtonOptions());
+		$this->assertEquals(null, $obj1->getMenuItemHoverStyle());
+		$this->assertEquals(null, $obj1->getMenuItemStyle());
+		$this->assertEquals(null, $obj1->getMenuStyle());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(false);
 
-		$this->assertEquals(null, $obj0->getButtonOptions(), "The method getButtonOptions() does not return the expected value");
-		$this->assertEquals(["background" => "#335cad", "color" => "#ffffff"], $obj0->getMenuItemHoverStyle(), "The method getMenuItemHoverStyle() does not return the expected value");
-		$this->assertEquals(["padding" => "0.5em 1em", "color" => "#333333", "background" => "none"], $obj0->getMenuItemStyle(), "The method getMenuItemStyle() does not return the expected value");
-		$this->assertEquals(["border" => "1px solid #999999", "background" => "#ffffff", "padding" => "5px 0"], $obj0->getMenuStyle(), "The method getMenuStyle() does not return the expected value");
+		$this->assertEquals(null, $obj0->getButtonOptions());
+		$this->assertEquals(["background" => "#335cad", "color" => "#ffffff"], $obj0->getMenuItemHoverStyle());
+		$this->assertEquals(["padding" => "0.5em 1em", "color" => "#333333", "background" => "none"], $obj0->getMenuItemStyle());
+		$this->assertEquals(["border" => "1px solid #999999", "background" => "#ffffff", "padding" => "5px 0"], $obj0->getMenuStyle());
     }
 
 	/**
@@ -58,7 +58,7 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 		$obj->clear();
 
 		$res = ["buttonOptions" => []];
-		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals($res, $obj->toArray());
 	}
 
 	/**
@@ -70,7 +70,7 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -83,7 +83,7 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(false);
 
 		$res = $obj->newButtonOptions();
-		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions::class, $res, "The method newButtonOptions() does not return the expected object");
+		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions::class, $res);
 	}
 
 	/**
@@ -98,22 +98,22 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 		$obj->setButtonOptions(new \WBW\Bundle\HighchartsBundle\API\Chart\Navigation\HighchartsButtonOptions());
 
 		$res1 = ["buttonOptions" => []];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with button options");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setMenuItemHoverStyle(["menuItemHoverStyle" => "738353ce3a8073c77c55688c6c6b93a7"]);
 
 		$res2 = ["buttonOptions" => [], "menuItemHoverStyle" => ["menuItemHoverStyle" => "738353ce3a8073c77c55688c6c6b93a7"]];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with menu item hover style");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setMenuItemStyle(["menuItemStyle" => "7f4568e3984521d6ee378690e14b6ddd"]);
 
 		$res3 = ["buttonOptions" => [], "menuItemHoverStyle" => ["menuItemHoverStyle" => "738353ce3a8073c77c55688c6c6b93a7"], "menuItemStyle" => ["menuItemStyle" => "7f4568e3984521d6ee378690e14b6ddd"]];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with menu item style");
+		$this->assertEquals($res3, $obj->toArray());
 
 		$obj->setMenuStyle(["menuStyle" => "3d01f86004efb7ca78ff6e1d90c86b27"]);
 
 		$res4 = ["buttonOptions" => [], "menuItemHoverStyle" => ["menuItemHoverStyle" => "738353ce3a8073c77c55688c6c6b93a7"], "menuItemStyle" => ["menuItemStyle" => "7f4568e3984521d6ee378690e14b6ddd"], "menuStyle" => ["menuStyle" => "3d01f86004efb7ca78ff6e1d90c86b27"]];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with menu style");
+		$this->assertEquals($res4, $obj->toArray());
 	}
 
 }

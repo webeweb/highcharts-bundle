@@ -31,15 +31,15 @@ final class HighchartsResetZoomButtonTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(true);
 
-		$this->assertEquals(null, $obj1->getPosition(), "The method getPosition() does not return the expected value");
-		$this->assertEquals(null, $obj1->getRelativeTo(), "The method getRelativeTo() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTheme(), "The method getTheme() does not return the expected value");
+		$this->assertEquals(null, $obj1->getPosition());
+		$this->assertEquals(null, $obj1->getRelativeTo());
+		$this->assertEquals(null, $obj1->getTheme());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(false);
 
-		$this->assertEquals(null, $obj0->getPosition(), "The method getPosition() does not return the expected value");
-		$this->assertEquals("plot", $obj0->getRelativeTo(), "The method getRelativeTo() does not return the expected value");
-		$this->assertEquals(null, $obj0->getTheme(), "The method getTheme() does not return the expected value");
+		$this->assertEquals(null, $obj0->getPosition());
+		$this->assertEquals("plot", $obj0->getRelativeTo());
+		$this->assertEquals(null, $obj0->getTheme());
     }
 
 	/**
@@ -51,7 +51,7 @@ final class HighchartsResetZoomButtonTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -66,17 +66,17 @@ final class HighchartsResetZoomButtonTest extends PHPUnit_Framework_TestCase {
 		$obj->setPosition(["position" => "4757fe07fd492a8be0ea6a760d683d6e"]);
 
 		$res1 = ["position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"]];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with position");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setRelativeTo("chart");
 
 		$res2 = ["position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"], "relativeTo" => "chart"];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with relative to");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setTheme(["theme" => "f484570d7cf557020e11ace406901b10"]);
 
 		$res3 = ["position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"], "relativeTo" => "chart", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"]];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with theme");
+		$this->assertEquals($res3, $obj->toArray());
 	}
 
 }

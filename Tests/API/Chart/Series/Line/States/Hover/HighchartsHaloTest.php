@@ -31,15 +31,15 @@ final class HighchartsHaloTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\States\Hover\HighchartsHalo(true);
 
-		$this->assertEquals(null, $obj1->getAttributes(), "The method getAttributes() does not return the expected value");
-		$this->assertEquals(null, $obj1->getOpacity(), "The method getOpacity() does not return the expected value");
-		$this->assertEquals(null, $obj1->getSize(), "The method getSize() does not return the expected value");
+		$this->assertEquals(null, $obj1->getAttributes());
+		$this->assertEquals(null, $obj1->getOpacity());
+		$this->assertEquals(null, $obj1->getSize());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\States\Hover\HighchartsHalo(false);
 
-		$this->assertEquals(null, $obj0->getAttributes(), "The method getAttributes() does not return the expected value");
-		$this->assertEquals(0.25, $obj0->getOpacity(), "The method getOpacity() does not return the expected value");
-		$this->assertEquals(10, $obj0->getSize(), "The method getSize() does not return the expected value");
+		$this->assertEquals(null, $obj0->getAttributes());
+		$this->assertEquals(0.25, $obj0->getOpacity());
+		$this->assertEquals(10, $obj0->getSize());
     }
 
 	/**
@@ -51,7 +51,7 @@ final class HighchartsHaloTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\States\Hover\HighchartsHalo(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -66,17 +66,17 @@ final class HighchartsHaloTest extends PHPUnit_Framework_TestCase {
 		$obj->setAttributes(["attributes" => "736b91750e516139acc13c5eb6564f92"]);
 
 		$res1 = ["attributes" => ["attributes" => "736b91750e516139acc13c5eb6564f92"]];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with attributes");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setOpacity(26);
 
 		$res2 = ["attributes" => ["attributes" => "736b91750e516139acc13c5eb6564f92"], "opacity" => 26];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with opacity");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setSize(6);
 
 		$res3 = ["attributes" => ["attributes" => "736b91750e516139acc13c5eb6564f92"], "opacity" => 26, "size" => 6];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with size");
+		$this->assertEquals($res3, $obj->toArray());
 	}
 
 }

@@ -31,35 +31,35 @@ final class HighchartsPlotBandsTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands(true);
 
-		$this->assertEquals(null, $obj1->getBorderColor(), "The method getBorderColor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getBorderWidth(), "The method getBorderWidth() does not return the expected value");
-		$this->assertEquals(null, $obj1->getClassName(), "The method getClassName() does not return the expected value");
-		$this->assertEquals(null, $obj1->getColor(), "The method getColor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getEvents(), "The method getEvents() does not return the expected value");
-		$this->assertEquals(null, $obj1->getFrom(), "The method getFrom() does not return the expected value");
-		$this->assertEquals(null, $obj1->getId(), "The method getId() does not return the expected value");
-		$this->assertEquals(null, $obj1->getInnerRadius(), "The method getInnerRadius() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLabel(), "The method getLabel() does not return the expected value");
-		$this->assertEquals(null, $obj1->getOuterRadius(), "The method getOuterRadius() does not return the expected value");
-		$this->assertEquals(null, $obj1->getThickness(), "The method getThickness() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTo(), "The method getTo() does not return the expected value");
-		$this->assertEquals(null, $obj1->getZIndex(), "The method getZIndex() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBorderColor());
+		$this->assertEquals(null, $obj1->getBorderWidth());
+		$this->assertEquals(null, $obj1->getClassName());
+		$this->assertEquals(null, $obj1->getColor());
+		$this->assertEquals(null, $obj1->getEvents());
+		$this->assertEquals(null, $obj1->getFrom());
+		$this->assertEquals(null, $obj1->getId());
+		$this->assertEquals(null, $obj1->getInnerRadius());
+		$this->assertEquals(null, $obj1->getLabel());
+		$this->assertEquals(null, $obj1->getOuterRadius());
+		$this->assertEquals(null, $obj1->getThickness());
+		$this->assertEquals(null, $obj1->getTo());
+		$this->assertEquals(null, $obj1->getZIndex());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands(false);
 
-		$this->assertEquals(null, $obj0->getBorderColor(), "The method getBorderColor() does not return the expected value");
-		$this->assertEquals(0, $obj0->getBorderWidth(), "The method getBorderWidth() does not return the expected value");
-		$this->assertEquals(null, $obj0->getClassName(), "The method getClassName() does not return the expected value");
-		$this->assertEquals(null, $obj0->getColor(), "The method getColor() does not return the expected value");
-		$this->assertEquals(null, $obj0->getEvents(), "The method getEvents() does not return the expected value");
-		$this->assertEquals(null, $obj0->getFrom(), "The method getFrom() does not return the expected value");
-		$this->assertEquals(null, $obj0->getId(), "The method getId() does not return the expected value");
-		$this->assertEquals(null, $obj0->getInnerRadius(), "The method getInnerRadius() does not return the expected value");
-		$this->assertEquals(null, $obj0->getLabel(), "The method getLabel() does not return the expected value");
-		$this->assertEquals("100%", $obj0->getOuterRadius(), "The method getOuterRadius() does not return the expected value");
-		$this->assertEquals("10", $obj0->getThickness(), "The method getThickness() does not return the expected value");
-		$this->assertEquals(null, $obj0->getTo(), "The method getTo() does not return the expected value");
-		$this->assertEquals(null, $obj0->getZIndex(), "The method getZIndex() does not return the expected value");
+		$this->assertEquals(null, $obj0->getBorderColor());
+		$this->assertEquals(0, $obj0->getBorderWidth());
+		$this->assertEquals(null, $obj0->getClassName());
+		$this->assertEquals(null, $obj0->getColor());
+		$this->assertEquals(null, $obj0->getEvents());
+		$this->assertEquals(null, $obj0->getFrom());
+		$this->assertEquals(null, $obj0->getId());
+		$this->assertEquals(null, $obj0->getInnerRadius());
+		$this->assertEquals(null, $obj0->getLabel());
+		$this->assertEquals("100%", $obj0->getOuterRadius());
+		$this->assertEquals("10", $obj0->getThickness());
+		$this->assertEquals(null, $obj0->getTo());
+		$this->assertEquals(null, $obj0->getZIndex());
     }
 
 	/**
@@ -76,7 +76,7 @@ final class HighchartsPlotBandsTest extends PHPUnit_Framework_TestCase {
 		$obj->clear();
 
 		$res = ["label" => []];
-		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals($res, $obj->toArray());
 	}
 
 	/**
@@ -88,7 +88,7 @@ final class HighchartsPlotBandsTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -101,7 +101,7 @@ final class HighchartsPlotBandsTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands(false);
 
 		$res = $obj->newLabel();
-		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel::class, $res, "The method newLabel() does not return the expected object");
+		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel::class, $res);
 	}
 
 	/**
@@ -116,67 +116,67 @@ final class HighchartsPlotBandsTest extends PHPUnit_Framework_TestCase {
 		$obj->setBorderColor("97da935a74593c55d78be9d1295aa994");
 
 		$res1 = ["borderColor" => "97da935a74593c55d78be9d1295aa994"];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with border color");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setBorderWidth(85);
 
 		$res2 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 85];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with border width");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setClassName("6f66e878c62db60568a3487869695820");
 
 		$res3 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 85, "className" => "6f66e878c62db60568a3487869695820"];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with class name");
+		$this->assertEquals($res3, $obj->toArray());
 
 		$obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
 		$res4 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 85, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with color");
+		$this->assertEquals($res4, $obj->toArray());
 
 		$obj->setEvents(["events" => "16908b0605f2645dfcb4c3a8d248cef3"]);
 
 		$res5 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 85, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"]];
-		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with events");
+		$this->assertEquals($res5, $obj->toArray());
 
 		$obj->setFrom(79);
 
 		$res6 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 85, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 79];
-		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with from");
+		$this->assertEquals($res6, $obj->toArray());
 
 		$obj->setId("b80bb7740288fda1f201890375a60c8f");
 
 		$res7 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 85, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 79, "id" => "b80bb7740288fda1f201890375a60c8f"];
-		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with id");
+		$this->assertEquals($res7, $obj->toArray());
 
 		$obj->setInnerRadius(95);
 
 		$res8 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 85, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 79, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 95];
-		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with inner radius");
+		$this->assertEquals($res8, $obj->toArray());
 
 		$obj->setLabel(new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\PlotBands\HighchartsLabel());
 
 		$res9 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 85, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 79, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 95, "label" => []];
-		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with label");
+		$this->assertEquals($res9, $obj->toArray());
 
 		$obj->setOuterRadius(9);
 
 		$res10 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 85, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 79, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 95, "label" => [], "outerRadius" => 9];
-		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with outer radius");
+		$this->assertEquals($res10, $obj->toArray());
 
 		$obj->setThickness(22);
 
 		$res11 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 85, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 79, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 95, "label" => [], "outerRadius" => 9, "thickness" => 22];
-		$this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with thickness");
+		$this->assertEquals($res11, $obj->toArray());
 
 		$obj->setTo(38);
 
 		$res12 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 85, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 79, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 95, "label" => [], "outerRadius" => 9, "thickness" => 22, "to" => 38];
-		$this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with to");
+		$this->assertEquals($res12, $obj->toArray());
 
 		$obj->setZIndex(40);
 
 		$res13 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 85, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 79, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 95, "label" => [], "outerRadius" => 9, "thickness" => 22, "to" => 38, "zIndex" => 40];
-		$this->assertEquals($res13, $obj->toArray(), "The method toArray() does not return the expected array with z index");
+		$this->assertEquals($res13, $obj->toArray());
 	}
 
 }

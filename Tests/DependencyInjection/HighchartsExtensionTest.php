@@ -51,7 +51,7 @@ final class HighchartsExtensionTest extends PHPUnit_Framework_TestCase {
 
 		$obj->load([], $container);
 
-		$this->assertInstanceOf(HighchartsTwigExtension::class, $container->get(HighchartsTwigExtension::SERVICE_NAME), "The method load() does not load the expected service");
+		$this->assertInstanceOf(HighchartsTwigExtension::class, $container->get(HighchartsTwigExtension::SERVICE_NAME));
 	}
 
 }

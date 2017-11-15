@@ -31,7 +31,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line\HighchartsPoint(true);
 
-		$this->assertEquals(null, $obj1->getEvents(), "The method getEvents() does not return the expected value");
+		$this->assertEquals(null, $obj1->getEvents());
     }
 
 	/**
@@ -48,7 +48,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 		$obj->clear();
 
 		$res = ["events" => []];
-		$this->assertEquals($res, $obj->toArray(), "The method toArray() does not return the expected array");
+		$this->assertEquals($res, $obj->toArray());
 	}
 
 	/**
@@ -60,7 +60,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line\HighchartsPoint(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -73,7 +73,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line\HighchartsPoint(false);
 
 		$res = $obj->newEvents();
-		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents::class, $res, "The method newEvents() does not return the expected object");
+		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents::class, $res);
 	}
 
 	/**
@@ -88,7 +88,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 		$obj->setEvents(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Line\Point\HighchartsEvents());
 
 		$res1 = ["events" => []];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with events");
+		$this->assertEquals($res1, $obj->toArray());
 	}
 
 }

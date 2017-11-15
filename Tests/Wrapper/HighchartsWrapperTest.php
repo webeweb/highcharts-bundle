@@ -34,11 +34,11 @@ final class HighchartsWrapperTest extends PHPUnit_Framework_TestCase {
 
 		$str1	 = "\"" . HighchartsWrapper::WRAP . "string" . HighchartsWrapper::WRAP . "\"";
 		$res1	 = "string";
-		$this->assertEquals($res1, $obj->unwrap($str1), "The method unwrapp() does not return the expected string");
+		$this->assertEquals($res1, $obj->unwrap($str1));
 
 		$str2	 = "\"string\"";
 		$res2	 = "\"string\"";
-		$this->assertEquals($res2, $obj->unwrap($str2), "The method unwrapp() does not return the expected string");
+		$this->assertEquals($res2, $obj->unwrap($str2));
 	}
 
 	/**
@@ -52,11 +52,11 @@ final class HighchartsWrapperTest extends PHPUnit_Framework_TestCase {
 
 		$str1	 = "string";
 		$res1	 = HighchartsWrapper::WRAP . "string" . HighchartsWrapper::WRAP;
-		$this->assertEquals($res1, $obj->wrap($str1), "The method wrapp() does not return the expected string");
+		$this->assertEquals($res1, $obj->wrap($str1));
 
 		$str2	 = "";
 		$res2	 = "";
-		$this->assertEquals($res2, $obj->wrap($str2), "The method wrapp() does not return the expected string");
+		$this->assertEquals($res2, $obj->wrap($str2));
 	}
 
 }

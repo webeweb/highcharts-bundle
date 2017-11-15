@@ -31,14 +31,14 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Columnrange\HighchartsEvents(true);
 
-		$this->assertEquals(null, $obj1->getAfterAnimate(), "The method getAfterAnimate() does not return the expected value");
-		$this->assertEquals(null, $obj1->getCheckboxClick(), "The method getCheckboxClick() does not return the expected value");
-		$this->assertEquals(null, $obj1->getClick(), "The method getClick() does not return the expected value");
-		$this->assertEquals(null, $obj1->getHide(), "The method getHide() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLegendItemClick(), "The method getLegendItemClick() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMouseOut(), "The method getMouseOut() does not return the expected value");
-		$this->assertEquals(null, $obj1->getMouseOver(), "The method getMouseOver() does not return the expected value");
-		$this->assertEquals(null, $obj1->getShow(), "The method getShow() does not return the expected value");
+		$this->assertEquals(null, $obj1->getAfterAnimate());
+		$this->assertEquals(null, $obj1->getCheckboxClick());
+		$this->assertEquals(null, $obj1->getClick());
+		$this->assertEquals(null, $obj1->getHide());
+		$this->assertEquals(null, $obj1->getLegendItemClick());
+		$this->assertEquals(null, $obj1->getMouseOut());
+		$this->assertEquals(null, $obj1->getMouseOver());
+		$this->assertEquals(null, $obj1->getShow());
     }
 
 	/**
@@ -50,7 +50,7 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Columnrange\HighchartsEvents(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -65,42 +65,42 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 		$obj->setAfterAnimate("ebdf113b6f659f6f3ea3c6b93e658235");
 
 		$res1 = ["afterAnimate" => "ebdf113b6f659f6f3ea3c6b93e658235"];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with after animate");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setCheckboxClick("27e3160a9be50f7b44b7bb9086d94964");
 
 		$res2 = ["afterAnimate" => "ebdf113b6f659f6f3ea3c6b93e658235", "checkboxClick" => "27e3160a9be50f7b44b7bb9086d94964"];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with checkbox click");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setClick("a8affc088cbca89fa20dbd98c91362e4");
 
 		$res3 = ["afterAnimate" => "ebdf113b6f659f6f3ea3c6b93e658235", "checkboxClick" => "27e3160a9be50f7b44b7bb9086d94964", "click" => "a8affc088cbca89fa20dbd98c91362e4"];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with click");
+		$this->assertEquals($res3, $obj->toArray());
 
 		$obj->setHide("a88f05b6c963e145a45b58c47cd42a41");
 
 		$res4 = ["afterAnimate" => "ebdf113b6f659f6f3ea3c6b93e658235", "checkboxClick" => "27e3160a9be50f7b44b7bb9086d94964", "click" => "a8affc088cbca89fa20dbd98c91362e4", "hide" => "a88f05b6c963e145a45b58c47cd42a41"];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with hide");
+		$this->assertEquals($res4, $obj->toArray());
 
 		$obj->setLegendItemClick("56c962f18312c892a25fdf27904bd24b");
 
 		$res5 = ["afterAnimate" => "ebdf113b6f659f6f3ea3c6b93e658235", "checkboxClick" => "27e3160a9be50f7b44b7bb9086d94964", "click" => "a8affc088cbca89fa20dbd98c91362e4", "hide" => "a88f05b6c963e145a45b58c47cd42a41", "legendItemClick" => "56c962f18312c892a25fdf27904bd24b"];
-		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with legend item click");
+		$this->assertEquals($res5, $obj->toArray());
 
 		$obj->setMouseOut("efc487f286f5bca976fafe58cb6e7895");
 
 		$res6 = ["afterAnimate" => "ebdf113b6f659f6f3ea3c6b93e658235", "checkboxClick" => "27e3160a9be50f7b44b7bb9086d94964", "click" => "a8affc088cbca89fa20dbd98c91362e4", "hide" => "a88f05b6c963e145a45b58c47cd42a41", "legendItemClick" => "56c962f18312c892a25fdf27904bd24b", "mouseOut" => "efc487f286f5bca976fafe58cb6e7895"];
-		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with mouse out");
+		$this->assertEquals($res6, $obj->toArray());
 
 		$obj->setMouseOver("1f1a5f011c50a092eb06446d724dd573");
 
 		$res7 = ["afterAnimate" => "ebdf113b6f659f6f3ea3c6b93e658235", "checkboxClick" => "27e3160a9be50f7b44b7bb9086d94964", "click" => "a8affc088cbca89fa20dbd98c91362e4", "hide" => "a88f05b6c963e145a45b58c47cd42a41", "legendItemClick" => "56c962f18312c892a25fdf27904bd24b", "mouseOut" => "efc487f286f5bca976fafe58cb6e7895", "mouseOver" => "1f1a5f011c50a092eb06446d724dd573"];
-		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with mouse over");
+		$this->assertEquals($res7, $obj->toArray());
 
 		$obj->setShow("a7dd12b1dab17d25467b0b0a4c8d4a92");
 
 		$res8 = ["afterAnimate" => "ebdf113b6f659f6f3ea3c6b93e658235", "checkboxClick" => "27e3160a9be50f7b44b7bb9086d94964", "click" => "a8affc088cbca89fa20dbd98c91362e4", "hide" => "a88f05b6c963e145a45b58c47cd42a41", "legendItemClick" => "56c962f18312c892a25fdf27904bd24b", "mouseOut" => "efc487f286f5bca976fafe58cb6e7895", "mouseOver" => "1f1a5f011c50a092eb06446d724dd573", "show" => "a7dd12b1dab17d25467b0b0a4c8d4a92"];
-		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with show");
+		$this->assertEquals($res8, $obj->toArray());
 	}
 
 }

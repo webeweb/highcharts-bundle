@@ -31,13 +31,13 @@ final class HighchartsSideTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide(true);
 
-		$this->assertEquals(null, $obj1->getColor(), "The method getColor() does not return the expected value");
-		$this->assertEquals(null, $obj1->getSize(), "The method getSize() does not return the expected value");
+		$this->assertEquals(null, $obj1->getColor());
+		$this->assertEquals(null, $obj1->getSize());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide(false);
 
-		$this->assertEquals("transparent", $obj0->getColor(), "The method getColor() does not return the expected value");
-		$this->assertEquals(1, $obj0->getSize(), "The method getSize() does not return the expected value");
+		$this->assertEquals("transparent", $obj0->getColor());
+		$this->assertEquals(1, $obj0->getSize());
     }
 
 	/**
@@ -49,7 +49,7 @@ final class HighchartsSideTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsSide(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -64,12 +64,12 @@ final class HighchartsSideTest extends PHPUnit_Framework_TestCase {
 		$obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
 		$res1 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with color");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setSize(23);
 
 		$res2 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 23];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with size");
+		$this->assertEquals($res2, $obj->toArray());
 	}
 
 }

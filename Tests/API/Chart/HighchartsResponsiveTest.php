@@ -31,7 +31,7 @@ final class HighchartsResponsiveTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive(true);
 
-		$this->assertEquals(null, $obj1->getRules(), "The method getRules() does not return the expected value");
+		$this->assertEquals(null, $obj1->getRules());
     }
 
 	/**
@@ -43,7 +43,7 @@ final class HighchartsResponsiveTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsResponsive(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -58,7 +58,7 @@ final class HighchartsResponsiveTest extends PHPUnit_Framework_TestCase {
 		$obj->setRules(["rules" => "a4f86f7bfc24194b276c22e0ef158197"]);
 
 		$res1 = ["rules" => ["rules" => "a4f86f7bfc24194b276c22e0ef158197"]];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with rules");
+		$this->assertEquals($res1, $obj->toArray());
 	}
 
 }

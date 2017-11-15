@@ -31,33 +31,33 @@ final class HighchartsSeriesTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSeries(true);
 
-		$this->assertEquals(null, $obj1->getData(), "The method getData() does not return the expected value");
-		$this->assertEquals(null, $obj1->getDataParser(), "The method getDataParser() does not return the expected value");
-		$this->assertEquals(null, $obj1->getDataURL(), "The method getDataURL() does not return the expected value");
-		$this->assertEquals(null, $obj1->getId(), "The method getId() does not return the expected value");
-		$this->assertEquals(null, $obj1->getIndex(), "The method getIndex() does not return the expected value");
-		$this->assertEquals(null, $obj1->getLegendIndex(), "The method getLegendIndex() does not return the expected value");
-		$this->assertEquals(null, $obj1->getName(), "The method getName() does not return the expected value");
-		$this->assertEquals(null, $obj1->getStack(), "The method getStack() does not return the expected value");
-		$this->assertEquals(null, $obj1->getType(), "The method getType() does not return the expected value");
-		$this->assertEquals(null, $obj1->getXAxis(), "The method getXAxis() does not return the expected value");
-		$this->assertEquals(null, $obj1->getYAxis(), "The method getYAxis() does not return the expected value");
-		$this->assertEquals(null, $obj1->getZIndex(), "The method getZIndex() does not return the expected value");
+		$this->assertEquals(null, $obj1->getData());
+		$this->assertEquals(null, $obj1->getDataParser());
+		$this->assertEquals(null, $obj1->getDataURL());
+		$this->assertEquals(null, $obj1->getId());
+		$this->assertEquals(null, $obj1->getIndex());
+		$this->assertEquals(null, $obj1->getLegendIndex());
+		$this->assertEquals(null, $obj1->getName());
+		$this->assertEquals(null, $obj1->getStack());
+		$this->assertEquals(null, $obj1->getType());
+		$this->assertEquals(null, $obj1->getXAxis());
+		$this->assertEquals(null, $obj1->getYAxis());
+		$this->assertEquals(null, $obj1->getZIndex());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSeries(false);
 
-		$this->assertEquals(null, $obj0->getData(), "The method getData() does not return the expected value");
-		$this->assertEquals(null, $obj0->getDataParser(), "The method getDataParser() does not return the expected value");
-		$this->assertEquals(null, $obj0->getDataURL(), "The method getDataURL() does not return the expected value");
-		$this->assertEquals(null, $obj0->getId(), "The method getId() does not return the expected value");
-		$this->assertEquals(null, $obj0->getIndex(), "The method getIndex() does not return the expected value");
-		$this->assertEquals(null, $obj0->getLegendIndex(), "The method getLegendIndex() does not return the expected value");
-		$this->assertEquals(null, $obj0->getName(), "The method getName() does not return the expected value");
-		$this->assertEquals(null, $obj0->getStack(), "The method getStack() does not return the expected value");
-		$this->assertEquals(null, $obj0->getType(), "The method getType() does not return the expected value");
-		$this->assertEquals("0", $obj0->getXAxis(), "The method getXAxis() does not return the expected value");
-		$this->assertEquals("0", $obj0->getYAxis(), "The method getYAxis() does not return the expected value");
-		$this->assertEquals(null, $obj0->getZIndex(), "The method getZIndex() does not return the expected value");
+		$this->assertEquals(null, $obj0->getData());
+		$this->assertEquals(null, $obj0->getDataParser());
+		$this->assertEquals(null, $obj0->getDataURL());
+		$this->assertEquals(null, $obj0->getId());
+		$this->assertEquals(null, $obj0->getIndex());
+		$this->assertEquals(null, $obj0->getLegendIndex());
+		$this->assertEquals(null, $obj0->getName());
+		$this->assertEquals(null, $obj0->getStack());
+		$this->assertEquals(null, $obj0->getType());
+		$this->assertEquals("0", $obj0->getXAxis());
+		$this->assertEquals("0", $obj0->getYAxis());
+		$this->assertEquals(null, $obj0->getZIndex());
     }
 
 	/**
@@ -69,7 +69,7 @@ final class HighchartsSeriesTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSeries(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -84,62 +84,62 @@ final class HighchartsSeriesTest extends PHPUnit_Framework_TestCase {
 		$obj->setData(["data" => "8d777f385d3dfec8815d20f7496026dc"]);
 
 		$res1 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"]];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with data");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setDataParser("26911c12e7a30f2bebc2a377f4f64a22");
 
 		$res2 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22"];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with data parser");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setDataURL("2ebe18c8193e5056fb035560a9469c0a");
 
 		$res3 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a"];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with data URL");
+		$this->assertEquals($res3, $obj->toArray());
 
 		$obj->setId("b80bb7740288fda1f201890375a60c8f");
 
 		$res4 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f"];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with id");
+		$this->assertEquals($res4, $obj->toArray());
 
 		$obj->setIndex(41);
 
 		$res5 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41];
-		$this->assertEquals($res5, $obj->toArray(), "The method toArray() does not return the expected array with index");
+		$this->assertEquals($res5, $obj->toArray());
 
 		$obj->setLegendIndex(75);
 
 		$res6 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41, "legendIndex" => 75];
-		$this->assertEquals($res6, $obj->toArray(), "The method toArray() does not return the expected array with legend index");
+		$this->assertEquals($res6, $obj->toArray());
 
 		$obj->setName("b068931cc450442b63f5b3d276ea4297");
 
 		$res7 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41, "legendIndex" => 75, "name" => "b068931cc450442b63f5b3d276ea4297"];
-		$this->assertEquals($res7, $obj->toArray(), "The method toArray() does not return the expected array with name");
+		$this->assertEquals($res7, $obj->toArray());
 
 		$obj->setStack("fac2a47adace059aff113283a03f6760");
 
 		$res8 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41, "legendIndex" => 75, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760"];
-		$this->assertEquals($res8, $obj->toArray(), "The method toArray() does not return the expected array with stack");
+		$this->assertEquals($res8, $obj->toArray());
 
 		$obj->setType("waterfall");
 
 		$res9 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41, "legendIndex" => 75, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall"];
-		$this->assertEquals($res9, $obj->toArray(), "The method toArray() does not return the expected array with type");
+		$this->assertEquals($res9, $obj->toArray());
 
 		$obj->setXAxis(66);
 
 		$res10 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41, "legendIndex" => 75, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall", "xAxis" => 66];
-		$this->assertEquals($res10, $obj->toArray(), "The method toArray() does not return the expected array with x axis");
+		$this->assertEquals($res10, $obj->toArray());
 
 		$obj->setYAxis(77);
 
 		$res11 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41, "legendIndex" => 75, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall", "xAxis" => 66, "yAxis" => 77];
-		$this->assertEquals($res11, $obj->toArray(), "The method toArray() does not return the expected array with y axis");
+		$this->assertEquals($res11, $obj->toArray());
 
 		$obj->setZIndex(91);
 
 		$res12 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41, "legendIndex" => 75, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall", "xAxis" => 66, "yAxis" => 77, "zIndex" => 91];
-		$this->assertEquals($res12, $obj->toArray(), "The method toArray() does not return the expected array with z index");
+		$this->assertEquals($res12, $obj->toArray());
 	}
 
 }

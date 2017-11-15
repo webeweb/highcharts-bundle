@@ -31,17 +31,17 @@ final class HighchartsNoDataTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData(true);
 
-		$this->assertEquals(null, $obj1->getAttr(), "The method getAttr() does not return the expected value");
-		$this->assertEquals(null, $obj1->getPosition(), "The method getPosition() does not return the expected value");
-		$this->assertEquals(null, $obj1->getStyle(), "The method getStyle() does not return the expected value");
-		$this->assertEquals(null, $obj1->getUseHTML(), "The method getUseHTML() does not return the expected value");
+		$this->assertEquals(null, $obj1->getAttr());
+		$this->assertEquals(null, $obj1->getPosition());
+		$this->assertEquals(null, $obj1->getStyle());
+		$this->assertEquals(null, $obj1->getUseHTML());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData(false);
 
-		$this->assertEquals(null, $obj0->getAttr(), "The method getAttr() does not return the expected value");
-		$this->assertEquals(["x" => 0, "y" => 0, "align" => "center", "verticalAlign" => "middle"], $obj0->getPosition(), "The method getPosition() does not return the expected value");
-		$this->assertEquals(["fontSize" => "12px", "fontWeight" => "bold", "color" => "#666666"], $obj0->getStyle(), "The method getStyle() does not return the expected value");
-		$this->assertEquals(false, $obj0->getUseHTML(), "The method getUseHTML() does not return the expected value");
+		$this->assertEquals(null, $obj0->getAttr());
+		$this->assertEquals(["x" => 0, "y" => 0, "align" => "center", "verticalAlign" => "middle"], $obj0->getPosition());
+		$this->assertEquals(["fontSize" => "12px", "fontWeight" => "bold", "color" => "#666666"], $obj0->getStyle());
+		$this->assertEquals(false, $obj0->getUseHTML());
     }
 
 	/**
@@ -53,7 +53,7 @@ final class HighchartsNoDataTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNoData(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -68,22 +68,22 @@ final class HighchartsNoDataTest extends PHPUnit_Framework_TestCase {
 		$obj->setAttr(["attr" => "815be97df65d6c4b510cd07189c5347a"]);
 
 		$res1 = ["attr" => ["attr" => "815be97df65d6c4b510cd07189c5347a"]];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with attr");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setPosition(["position" => "4757fe07fd492a8be0ea6a760d683d6e"]);
 
 		$res2 = ["attr" => ["attr" => "815be97df65d6c4b510cd07189c5347a"], "position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"]];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with position");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
 		$res3 = ["attr" => ["attr" => "815be97df65d6c4b510cd07189c5347a"], "position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"], "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with style");
+		$this->assertEquals($res3, $obj->toArray());
 
 		$obj->setUseHTML(0);
 
 		$res4 = ["attr" => ["attr" => "815be97df65d6c4b510cd07189c5347a"], "position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"], "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with use HTML");
+		$this->assertEquals($res4, $obj->toArray());
 	}
 
 }

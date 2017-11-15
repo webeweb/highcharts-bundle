@@ -31,17 +31,17 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
 
 		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsBreaks(true);
 
-		$this->assertEquals(null, $obj1->getBreakSize(), "The method getBreakSize() does not return the expected value");
-		$this->assertEquals(null, $obj1->getFrom(), "The method getFrom() does not return the expected value");
-		$this->assertEquals(null, $obj1->getRepeat(), "The method getRepeat() does not return the expected value");
-		$this->assertEquals(null, $obj1->getTo(), "The method getTo() does not return the expected value");
+		$this->assertEquals(null, $obj1->getBreakSize());
+		$this->assertEquals(null, $obj1->getFrom());
+		$this->assertEquals(null, $obj1->getRepeat());
+		$this->assertEquals(null, $obj1->getTo());
 
 		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsBreaks(false);
 
-		$this->assertEquals(0, $obj0->getBreakSize(), "The method getBreakSize() does not return the expected value");
-		$this->assertEquals(null, $obj0->getFrom(), "The method getFrom() does not return the expected value");
-		$this->assertEquals(0, $obj0->getRepeat(), "The method getRepeat() does not return the expected value");
-		$this->assertEquals(null, $obj0->getTo(), "The method getTo() does not return the expected value");
+		$this->assertEquals(0, $obj0->getBreakSize());
+		$this->assertEquals(null, $obj0->getFrom());
+		$this->assertEquals(0, $obj0->getRepeat());
+		$this->assertEquals(null, $obj0->getTo());
     }
 
 	/**
@@ -53,7 +53,7 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
 
 		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsBreaks(true);
 
-		$this->assertEquals([], $obj->jsonSerialize(), "The method jsonSerialize() does not return the expected value");
+		$this->assertEquals([], $obj->jsonSerialize());
 	}
 
 	/**
@@ -68,22 +68,22 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
 		$obj->setBreakSize(10);
 
 		$res1 = ["breakSize" => 10];
-		$this->assertEquals($res1, $obj->toArray(), "The method toArray() does not return the expected array with break size");
+		$this->assertEquals($res1, $obj->toArray());
 
 		$obj->setFrom(42);
 
 		$res2 = ["breakSize" => 10, "from" => 42];
-		$this->assertEquals($res2, $obj->toArray(), "The method toArray() does not return the expected array with from");
+		$this->assertEquals($res2, $obj->toArray());
 
 		$obj->setRepeat(24);
 
 		$res3 = ["breakSize" => 10, "from" => 42, "repeat" => 24];
-		$this->assertEquals($res3, $obj->toArray(), "The method toArray() does not return the expected array with repeat");
+		$this->assertEquals($res3, $obj->toArray());
 
 		$obj->setTo(96);
 
 		$res4 = ["breakSize" => 10, "from" => 42, "repeat" => 24, "to" => 96];
-		$this->assertEquals($res4, $obj->toArray(), "The method toArray() does not return the expected array with to");
+		$this->assertEquals($res4, $obj->toArray());
 	}
 
 }
