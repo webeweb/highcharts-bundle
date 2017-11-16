@@ -49,7 +49,7 @@ final class HighchartsLangProviderTest extends PHPUnit_Framework_TestCase {
 		$getLocale = function() {
 			return $this->locale;
 		};
-		$trans = function ($id, array $parameters = [], $domain = null, $locale = null) {
+		$translate = function ($id, array $parameters = [], $domain = null, $locale = null) {
 
 			// Initialize the YAML filename.
 			$filename = getcwd() . "/Resources/translations/" . implode(".", [$domain, $locale, "yml"]);
@@ -77,7 +77,7 @@ final class HighchartsLangProviderTest extends PHPUnit_Framework_TestCase {
 		// Set the mocks.
 		$this->translator = $this->getMockBuilder(TranslatorInterface::class)->getMock();
 		$this->translator->expects($this->any())->method("getLocale")->willReturnCallback($getLocale);
-		$this->translator->expects($this->any())->method("trans")->willReturnCallback($trans);
+		$this->translator->expects($this->any())->method("trans")->willReturnCallback($translate);
 	}
 
 	/**
