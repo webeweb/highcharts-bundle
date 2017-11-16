@@ -6,3 +6,7 @@ services:
         arguments: ["@=service('kernel').locateResource('@HighchartsBundle')", "%kernel.environment%"]
         tags:
           - { name: twig.extension }
+
+    webeweb.bundle.highchartsbundle.provider.highchartslang:
+        class: WBW\Bundle\HighchartsBundle\Provider\HighchartsLangProvider
+        arguments: ["@translator"]

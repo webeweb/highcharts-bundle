@@ -14,7 +14,10 @@ namespace WBW\Bundle\HighchartsBundle\Tests\DependencyInjection;
 use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
+use Symfony\Component\HttpKernel\Kernel;
+use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\HighchartsBundle\DependencyInjection\HighchartsExtension;
+use WBW\Bundle\HighchartsBundle\Provider\HighchartsLangProvider;
 use WBW\Bundle\HighchartsBundle\Twig\Extension\HighchartsTwigExtension;
 
 /**
@@ -27,31 +30,27 @@ use WBW\Bundle\HighchartsBundle\Twig\Extension\HighchartsTwigExtension;
 final class HighchartsExtensionTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * Locate a resource.
-	 *
-	 * @param string $resource The resource.
-	 * @return string Returns a resource path.
-	 */
-	public function locateResource($resource) {
-		return "";
-	}
-
-	/**
 	 * Tests the load() method.
 	 *
 	 * @return void
 	 */
 	public function testLoad() {
 
+		// Set the mocks.
+		$kernel		 = $this->getMockBuilder(Kernel::class)->setConstructorArgs(["test", false])->getMock();
+		$translator	 = $this->getMockBuilder(TranslatorInterface::class)->getMock();
+
 		// We set a container builder with only the necessary.
 		$container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
-		$container->set("kernel", $this);
+		$container->set("kernel", $kernel);
+		$container->set("translator", $translator);
 
 		$obj = new HighchartsExtension();
 
 		$obj->load([], $container);
 
 		$this->assertInstanceOf(HighchartsTwigExtension::class, $container->get(HighchartsTwigExtension::SERVICE_NAME));
+		$this->assertInstanceOf(HighchartsLangProvider::class, $container->get(HighchartsLangProvider::SERVICE_NAME));
 	}
 
 }
