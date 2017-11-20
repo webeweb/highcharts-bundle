@@ -37,7 +37,7 @@ final class HighchartsExtensionTest extends PHPUnit_Framework_TestCase {
 	public function testLoad() {
 
 		// Set the mocks.
-		$kernel		 = $this->getMockBuilder(Kernel::class)->setConstructorArgs(["test", false])->getMock();
+		$kernel		 = $this->getMockBuilder(Kernel::class)->setConstructorArgs(["dev", false])->getMock();
 		$translator	 = $this->getMockBuilder(TranslatorInterface::class)->getMock();
 
 		// We set a container builder with only the necessary.
