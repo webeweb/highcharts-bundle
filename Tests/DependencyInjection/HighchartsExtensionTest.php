@@ -48,7 +48,6 @@ final class HighchartsExtensionTest extends PHPUnit_Framework_TestCase {
 		$obj = new HighchartsExtension();
 
 		$obj->load([], $container);
-
 		$this->assertInstanceOf(HighchartsTwigExtension::class, $container->get(HighchartsTwigExtension::SERVICE_NAME));
 		$this->assertInstanceOf(HighchartsLangProvider::class, $container->get(HighchartsLangProvider::SERVICE_NAME));
 	}
