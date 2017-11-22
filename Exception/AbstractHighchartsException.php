@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 NdC/WBW
@@ -26,6 +26,7 @@ abstract class AbstractHighchartsException extends Exception {
 	 * Constructor.
 	 *
 	 * @param string $message The message.
+	 * @param integer $code The code.
 	 * @param Exception $previous The previous exception.
 	 */
 	public function __construct($message, $code = 0, Exception $previous = null) {
