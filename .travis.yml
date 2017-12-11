@@ -26,6 +26,7 @@ matrix:
     - php: 5.6
       env: SYMFONY_VERSION=3.4.*@dev
   allow_failures:
+    - env: SYMFONY_VERSION=3.4.*@dev
     - php: hhvm
 
 before_install:
