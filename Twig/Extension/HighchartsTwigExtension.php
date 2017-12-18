@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -58,7 +59,7 @@ final class HighchartsTwigExtension extends Twig_Extension {
 	 * @param string $directory The directory.
 	 * @param string $environment The environment.
 	 */
-	public final function __construct($directory, $environment) {
+	public function __construct($directory, $environment) {
 		$this->directory	 = $directory;
 		$this->environment	 = $environment;
 		$this->wrapper		 = new HighchartsWrapper();
