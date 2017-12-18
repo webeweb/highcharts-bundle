@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -13,7 +14,7 @@ namespace WBW\Bundle\HighchartsBundle\Tests\DependencyInjection;
 use PHPUnit_Framework_TestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
-use Symfony\Component\HttpKernel\Kernel;
+use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use WBW\Bundle\HighchartsBundle\DependencyInjection\HighchartsExtension;
 use WBW\Bundle\HighchartsBundle\Provider\HighchartsLangProvider;
@@ -36,7 +37,7 @@ final class HighchartsExtensionTest extends PHPUnit_Framework_TestCase {
 	public function testLoad() {
 
 		// Set the mocks.
-		$kernel		 = $this->getMockBuilder(Kernel::class)->setConstructorArgs(["dev", false])->getMock();
+		$kernel		 = $this->getMockBuilder(KernelInterface::class)->getMock();
 		$translator	 = $this->getMockBuilder(TranslatorInterface::class)->getMock();
 
 		// We set a container builder with only the necessary.
