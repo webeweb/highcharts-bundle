@@ -24,9 +24,7 @@ Open a command console, enter your project directory and execute the following
 command to download the latest stable version of this package:
 
 ```bash
-
 $ composer require webeweb/highcharts-bundle "1.6"
-
 ```
 
 This command requires you to have Composer installed globally, as explained
@@ -37,7 +35,6 @@ Then, enable the bundle by adding it to the list of registered bundles
 in the `app/AppKernel.php` file of your project:
 
 ```php
-
 	public function registerBundles() {
 		$bundles = [
             // ...
@@ -48,15 +45,12 @@ in the `app/AppKernel.php` file of your project:
 
 		return $bundles;
     }
-
 ```
 
 Once the bundle is added then do:
 
 ```bash
-
 $ php bin/console assets:install
-
 ```
 
 ---
@@ -66,7 +60,6 @@ $ php bin/console assets:install
 In your controller ...
 
 ```php
-
 	// Prepare the data.
 	$data = [["name" => "Female", "y" => 25 ], ["name" => "Male", "y" => 25], ["name" => "Unknown", "y" => 50]];
 
@@ -88,19 +81,15 @@ In your controller ...
 	return $this->render('::your_template.html.twig', [
 		'chart' => $chart
 	]);
-
 ```
 
 In your template ...
 
 ```html
-
 	<div id="Container"></div>
-
 	{{ highchartsScript('highcharts') }}
 	{{ highchartsScript('modules/exporting') }}
 	{{ highchartsChart('Container', chart) }}
-
 ```
 
 ---
@@ -112,20 +101,16 @@ Open a command console and execute the following commands to download the latest
 stable version of this package:
 
 ```bash
-
 $ mkdir highcharts-bundle
 $ cd highcharts-bundle
 $ git clone git@github.com:webeweb/highcharts-bundle.git .
 $ composer install
-
 ```
 
 Once all required libraries are installed then do:
 
 ```bash
-
 $ vendor/bin/phpunit
-
 ```
 
 ---
