@@ -29,6 +29,8 @@ final class HighchartsTwigExtension extends Twig_Extension {
 
 	/**
 	 * Service name.
+	 *
+	 * @var string
 	 */
 	const SERVICE_NAME = "webeweb.bundle.highchartsbundle.twig.extension.highcharts";
 

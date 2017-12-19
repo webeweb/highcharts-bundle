@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -24,6 +25,8 @@ final class HighchartsLangProvider {
 
 	/**
 	 * Service name.
+	 *
+	 * @var string
 	 */
 	const SERVICE_NAME = "webeweb.bundle.highchartsbundle.provider.highchartslang";
 

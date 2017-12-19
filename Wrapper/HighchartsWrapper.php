@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,6 +22,8 @@ final class HighchartsWrapper {
 
 	/**
 	 * Wrap
+	 *
+	 * @var string
 	 */
 	const WRAP = "{{JS}}";
 
