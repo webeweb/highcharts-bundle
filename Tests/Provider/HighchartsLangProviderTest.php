@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -42,7 +43,7 @@ final class HighchartsLangProviderTest extends PHPUnit_Framework_TestCase {
 	/**
 	 * {@inheritdoc}
 	 */
-	public function setUp() {
+	protected function setUp() {
 
 		// Define the necessary callback functions.
 		$getLocale = function() {
