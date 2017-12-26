@@ -2,11 +2,11 @@
 services:
 
     webeweb.bundle.highchartsbundle.provider.highchartslang:
-        class: WBW\Bundle\HighchartsBundle\Provider\HighchartsLangProvider
+        class:     WBW\Bundle\HighchartsBundle\Provider\HighchartsLangProvider
         arguments: ["@translator"]
 
     webeweb.bundle.highchartsbundle.twig.extension.highcharts:
-        class: WBW\Bundle\HighchartsBundle\Twig\Extension\HighchartsTwigExtension
+        class:     WBW\Bundle\HighchartsBundle\Twig\Extension\HighchartsTwigExtension
         arguments: ["@=service('kernel').locateResource('@HighchartsBundle')", "%kernel.environment%"]
         tags:
           - { name: twig.extension }
