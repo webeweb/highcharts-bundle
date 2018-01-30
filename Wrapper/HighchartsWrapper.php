@@ -20,38 +20,38 @@ namespace WBW\Bundle\HighchartsBundle\Wrapper;
  */
 final class HighchartsWrapper {
 
-	/**
-	 * Wrap
-	 *
-	 * @var string
-	 */
-	const WRAP = "{{JS}}";
+    /**
+     * Wrap
+     *
+     * @var string
+     */
+    const WRAP = "{{JS}}";
 
-	/**
-	 * Constructor.
-	 */
-	public function __construct() {
-		// NOTHING TO DO.
-	}
+    /**
+     * Constructor.
+     */
+    public function __construct() {
+        // NOTHING TO DO.
+    }
 
-	/**
-	 * Unwrap.
-	 *
-	 * @param string $str The string to unwrap.
-	 * @return string Returns the unwrapped string.
-	 */
-	public function unwrap($str) {
-		return str_replace(["\"" . self::WRAP, self::WRAP . "\""], ["", ""], $str);
-	}
+    /**
+     * Unwrap.
+     *
+     * @param string $str The string to unwrap.
+     * @return string Returns the unwrapped string.
+     */
+    public function unwrap($str) {
+        return str_replace(["\"" . self::WRAP, self::WRAP . "\""], ["", ""], $str);
+    }
 
-	/**
-	 * Wrap.
-	 *
-	 * @param string $str The string to wrap.
-	 * @return string Returns the wrapped string.
-	 */
-	public function wrap($str) {
-		return $str === "" ? "" : self::WRAP . $str . self::WRAP;
-	}
+    /**
+     * Wrap.
+     *
+     * @param string $str The string to wrap.
+     * @return string Returns the wrapped string.
+     */
+    public function wrap($str) {
+        return $str === "" ? "" : self::WRAP . $str . self::WRAP;
+    }
 
 }

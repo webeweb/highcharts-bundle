@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -22,17 +23,17 @@ use WBW\Bundle\HighchartsBundle\Exception\HighchartsFileNotFoundException;
  */
 final class HighchartsFileNotFoundExceptionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstruct() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstruct() {
 
-		$obj = new HighchartsFileNotFoundException("exception");
+        $obj = new HighchartsFileNotFoundException("exception");
 
-		$res = "The file \"exception\" was not found";
-		$this->assertEquals($res, $obj->getMessage());
-	}
+        $res = "The file \"exception\" was not found";
+        $this->assertEquals($res, $obj->getMessage());
+    }
 
 }

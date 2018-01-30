@@ -29,27 +29,27 @@ use WBW\Bundle\HighchartsBundle\Twig\Extension\HighchartsTwigExtension;
  */
 final class HighchartsExtensionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the load() method.
-	 *
-	 * @return void
-	 */
-	public function testLoad() {
+    /**
+     * Tests the load() method.
+     *
+     * @return void
+     */
+    public function testLoad() {
 
-		// Set the mocks.
-		$kernel		 = $this->getMockBuilder(KernelInterface::class)->getMock();
-		$translator	 = $this->getMockBuilder(TranslatorInterface::class)->getMock();
+        // Set the mocks.
+        $kernel     = $this->getMockBuilder(KernelInterface::class)->getMock();
+        $translator = $this->getMockBuilder(TranslatorInterface::class)->getMock();
 
-		// We set a container builder with only the necessary.
-		$container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
-		$container->set("kernel", $kernel);
-		$container->set("translator", $translator);
+        // We set a container builder with only the necessary.
+        $container = new ContainerBuilder(new ParameterBag(["kernel.environment" => "dev"]));
+        $container->set("kernel", $kernel);
+        $container->set("translator", $translator);
 
-		$obj = new HighchartsExtension();
+        $obj = new HighchartsExtension();
 
-		$obj->load([], $container);
-		$this->assertInstanceOf(HighchartsTwigExtension::class, $container->get(HighchartsTwigExtension::SERVICE_NAME));
-		$this->assertInstanceOf(HighchartsLangProvider::class, $container->get(HighchartsLangProvider::SERVICE_NAME));
-	}
+        $obj->load([], $container);
+        $this->assertInstanceOf(HighchartsTwigExtension::class, $container->get(HighchartsTwigExtension::SERVICE_NAME));
+        $this->assertInstanceOf(HighchartsLangProvider::class, $container->get(HighchartsLangProvider::SERVICE_NAME));
+    }
 
 }
