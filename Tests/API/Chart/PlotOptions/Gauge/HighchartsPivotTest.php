@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,68 +22,68 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsPivotTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(true);
 
-		$this->assertEquals(null, $obj1->getBackgroundColor());
-		$this->assertEquals(null, $obj1->getBorderColor());
-		$this->assertEquals(null, $obj1->getBorderWidth());
-		$this->assertEquals(null, $obj1->getRadius());
+        $this->assertEquals(null, $obj1->getBackgroundColor());
+        $this->assertEquals(null, $obj1->getBorderColor());
+        $this->assertEquals(null, $obj1->getBorderWidth());
+        $this->assertEquals(null, $obj1->getRadius());
 
-		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(false);
 
-		$this->assertEquals("#000000", $obj0->getBackgroundColor());
-		$this->assertEquals("#cccccc", $obj0->getBorderColor());
-		$this->assertEquals(0, $obj0->getBorderWidth());
-		$this->assertEquals(5, $obj0->getRadius());
+        $this->assertEquals("#000000", $obj0->getBackgroundColor());
+        $this->assertEquals("#cccccc", $obj0->getBorderColor());
+        $this->assertEquals(0, $obj0->getBorderWidth());
+        $this->assertEquals(5, $obj0->getRadius());
     }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(true);
 
-		$obj->setBackgroundColor("930f2a43179a7ae5fc25ed873223e99f");
+        $obj->setBackgroundColor("930f2a43179a7ae5fc25ed873223e99f");
 
-		$res1 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f"];
-		$this->assertEquals($res1, $obj->toArray());
+        $res1 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f"];
+        $this->assertEquals($res1, $obj->toArray());
 
-		$obj->setBorderColor("97da935a74593c55d78be9d1295aa994");
+        $obj->setBorderColor("97da935a74593c55d78be9d1295aa994");
 
-		$res2 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994"];
-		$this->assertEquals($res2, $obj->toArray());
+        $res2 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994"];
+        $this->assertEquals($res2, $obj->toArray());
 
-		$obj->setBorderWidth(4);
+        $obj->setBorderWidth(4);
 
-		$res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 4];
-		$this->assertEquals($res3, $obj->toArray());
+        $res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 4];
+        $this->assertEquals($res3, $obj->toArray());
 
-		$obj->setRadius(42);
+        $obj->setRadius(42);
 
-		$res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 4, "radius" => 42];
-		$this->assertEquals($res4, $obj->toArray());
-	}
+        $res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 4, "radius" => 42];
+        $this->assertEquals($res4, $obj->toArray());
+    }
 
 }

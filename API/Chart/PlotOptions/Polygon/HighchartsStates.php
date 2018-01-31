@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -22,93 +23,93 @@ use JsonSerializable;
  */
 final class HighchartsStates implements JsonSerializable {
 
-	/**
-	 * Hover.
-	 *
-	 * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\States\HighchartsHover
-	 */
-	private $hover;
+    /**
+     * Hover.
+     *
+     * @var \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\States\HighchartsHover
+     */
+    private $hover;
 
-	/**
-	 * Constructor.
-	 *
-	 * @param boolean $ignoreDefaultValues Ignore the default values.
-	 */
-	public function __construct($ignoreDefaultValues = true) {
-		if ($ignoreDefaultValues === true) {
-			$this->clear();
-		}
-	}
+    /**
+     * Constructor.
+     *
+     * @param boolean $ignoreDefaultValues Ignore the default values.
+     */
+    public function __construct($ignoreDefaultValues = true) {
+        if ($ignoreDefaultValues === true) {
+            $this->clear();
+        }
+    }
 
-	/**
-	 * Clear.
-	 *
-	 * @return void
-	 */
-	public function clear() {
+    /**
+     * Clear.
+     *
+     * @return void
+     */
+    public function clear() {
 
-		// Clear the hover.
-		if (!is_null($this->hover)) {
-			$this->hover->clear();
-		}
-	}
+        // Clear the hover.
+        if (!is_null($this->hover)) {
+            $this->hover->clear();
+        }
+    }
 
-	/**
-	 * Get the hover.
-	 *
-	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\States\HighchartsHover Returns the hover.
-	 */
-	public function getHover() {
-		return $this->hover;
-	}
+    /**
+     * Get the hover.
+     *
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\States\HighchartsHover Returns the hover.
+     */
+    public function getHover() {
+        return $this->hover;
+    }
 
-	/**
-	 * Serialize this instance.
-	 *
-	 * @return array Returns an array representing this instance.
-	 */
-	public function jsonSerialize() {
-		return $this->toArray();
-	}
+    /**
+     * Serialize this instance.
+     *
+     * @return array Returns an array representing this instance.
+     */
+    public function jsonSerialize() {
+        return $this->toArray();
+    }
 
-	/**
-	 * Create a new hover.
-	 *
-	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\States\HighchartsHover Returns the hover.
-	 */
-	public function newHover() {
-		$this->hover = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\States\HighchartsHover();
-		return $this->hover;
-	}
+    /**
+     * Create a new hover.
+     *
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\States\HighchartsHover Returns the hover.
+     */
+    public function newHover() {
+        $this->hover = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\States\HighchartsHover();
+        return $this->hover;
+    }
 
-	/**
-	 * Set the hover.
-	 *
-	 * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\States\HighchartsHover $hover The hover.
-	 * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsStates Returns the highcharts states.
-	 */
-	public function setHover(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\States\HighchartsHover $hover = null) {
-		$this->hover = $hover;
-		return $this;
-	}
+    /**
+     * Set the hover.
+     *
+     * @param \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\States\HighchartsHover $hover The hover.
+     * @return \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\HighchartsStates Returns the highcharts states.
+     */
+    public function setHover(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\States\HighchartsHover $hover = null) {
+        $this->hover = $hover;
+        return $this;
+    }
 
-	/**
-	 * Convert into an array representing this instance.
-	 *
-	 * @return array Returns an array representing this instance.
-	 */
-	public function toArray() {
+    /**
+     * Convert into an array representing this instance.
+     *
+     * @return array Returns an array representing this instance.
+     */
+    public function toArray() {
 
-		// Initialize the output.
-		$output = [];
+        // Initialize the output.
+        $output = [];
 
-		// Check the hover.
-		if (!is_null($this->hover)) {
-			$output["hover"] = $this->hover->toArray();
-		}
+        // Check the hover.
+        if (!is_null($this->hover)) {
+            $output["hover"] = $this->hover->toArray();
+        }
 
-		// Return the output.
-		return $output;
-	}
+        // Return the output.
+        return $output;
+    }
 
 }

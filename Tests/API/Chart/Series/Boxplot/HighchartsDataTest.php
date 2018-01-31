@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,196 +22,196 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData(true);
 
-		$this->assertEquals(null, $obj1->getClassName());
-		$this->assertEquals(null, $obj1->getColor());
-		$this->assertEquals(null, $obj1->getColorIndex());
-		$this->assertEquals(null, $obj1->getDataLabels());
-		$this->assertEquals(null, $obj1->getDescription());
-		$this->assertEquals(null, $obj1->getDrilldown());
-		$this->assertEquals(null, $obj1->getEvents());
-		$this->assertEquals(null, $obj1->getHigh());
-		$this->assertEquals(null, $obj1->getId());
-		$this->assertEquals(null, $obj1->getLabelrank());
-		$this->assertEquals(null, $obj1->getLow());
-		$this->assertEquals(null, $obj1->getMedian());
-		$this->assertEquals(null, $obj1->getName());
-		$this->assertEquals(null, $obj1->getQ1());
-		$this->assertEquals(null, $obj1->getQ3());
-		$this->assertEquals(null, $obj1->getSelected());
-		$this->assertEquals(null, $obj1->getX());
-		$this->assertEquals(null, $obj1->getY());
+        $this->assertEquals(null, $obj1->getClassName());
+        $this->assertEquals(null, $obj1->getColor());
+        $this->assertEquals(null, $obj1->getColorIndex());
+        $this->assertEquals(null, $obj1->getDataLabels());
+        $this->assertEquals(null, $obj1->getDescription());
+        $this->assertEquals(null, $obj1->getDrilldown());
+        $this->assertEquals(null, $obj1->getEvents());
+        $this->assertEquals(null, $obj1->getHigh());
+        $this->assertEquals(null, $obj1->getId());
+        $this->assertEquals(null, $obj1->getLabelrank());
+        $this->assertEquals(null, $obj1->getLow());
+        $this->assertEquals(null, $obj1->getMedian());
+        $this->assertEquals(null, $obj1->getName());
+        $this->assertEquals(null, $obj1->getQ1());
+        $this->assertEquals(null, $obj1->getQ3());
+        $this->assertEquals(null, $obj1->getSelected());
+        $this->assertEquals(null, $obj1->getX());
+        $this->assertEquals(null, $obj1->getY());
 
-		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData(false);
 
-		$this->assertEquals(null, $obj0->getClassName());
-		$this->assertEquals(null, $obj0->getColor());
-		$this->assertEquals(null, $obj0->getColorIndex());
-		$this->assertEquals(null, $obj0->getDataLabels());
-		$this->assertEquals(null, $obj0->getDescription());
-		$this->assertEquals(null, $obj0->getDrilldown());
-		$this->assertEquals(null, $obj0->getEvents());
-		$this->assertEquals(null, $obj0->getHigh());
-		$this->assertEquals(null, $obj0->getId());
-		$this->assertEquals(null, $obj0->getLabelrank());
-		$this->assertEquals(null, $obj0->getLow());
-		$this->assertEquals(null, $obj0->getMedian());
-		$this->assertEquals(null, $obj0->getName());
-		$this->assertEquals(null, $obj0->getQ1());
-		$this->assertEquals(null, $obj0->getQ3());
-		$this->assertEquals(false, $obj0->getSelected());
-		$this->assertEquals(null, $obj0->getX());
-		$this->assertEquals(null, $obj0->getY());
+        $this->assertEquals(null, $obj0->getClassName());
+        $this->assertEquals(null, $obj0->getColor());
+        $this->assertEquals(null, $obj0->getColorIndex());
+        $this->assertEquals(null, $obj0->getDataLabels());
+        $this->assertEquals(null, $obj0->getDescription());
+        $this->assertEquals(null, $obj0->getDrilldown());
+        $this->assertEquals(null, $obj0->getEvents());
+        $this->assertEquals(null, $obj0->getHigh());
+        $this->assertEquals(null, $obj0->getId());
+        $this->assertEquals(null, $obj0->getLabelrank());
+        $this->assertEquals(null, $obj0->getLow());
+        $this->assertEquals(null, $obj0->getMedian());
+        $this->assertEquals(null, $obj0->getName());
+        $this->assertEquals(null, $obj0->getQ1());
+        $this->assertEquals(null, $obj0->getQ3());
+        $this->assertEquals(false, $obj0->getSelected());
+        $this->assertEquals(null, $obj0->getX());
+        $this->assertEquals(null, $obj0->getY());
     }
 
-	/**
-	 * Tests the clear() method.
-	 *
-	 * @return void
-	 */
-	public function testClear() {
+    /**
+     * Tests the clear() method.
+     *
+     * @return void
+     */
+    public function testClear() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData(false);
 
-		$obj->newEvents();
+        $obj->newEvents();
 
-		$obj->clear();
+        $obj->clear();
 
-		$res = ["events" => []];
-		$this->assertEquals($res, $obj->toArray());
-	}
+        $res = ["events" => []];
+        $this->assertEquals($res, $obj->toArray());
+    }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the newEvents() method.
-	 *
-	 * @return void.
-	 */
-	public function testNewEvents() {
+    /**
+     * Tests the newEvents() method.
+     *
+     * @return void.
+     */
+    public function testNewEvents() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData(false);
 
-		$res = $obj->newEvents();
-		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\Data\HighchartsEvents::class, $res);
-	}
+        $res = $obj->newEvents();
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\Data\HighchartsEvents::class, $res);
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\HighchartsData(true);
 
-		$obj->setClassName("6f66e878c62db60568a3487869695820");
+        $obj->setClassName("6f66e878c62db60568a3487869695820");
 
-		$res1 = ["className" => "6f66e878c62db60568a3487869695820"];
-		$this->assertEquals($res1, $obj->toArray());
+        $res1 = ["className" => "6f66e878c62db60568a3487869695820"];
+        $this->assertEquals($res1, $obj->toArray());
 
-		$obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
+        $obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
-		$res2 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
-		$this->assertEquals($res2, $obj->toArray());
+        $res2 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
+        $this->assertEquals($res2, $obj->toArray());
 
-		$obj->setColorIndex(28);
+        $obj->setColorIndex(28);
 
-		$res3 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28];
-		$this->assertEquals($res3, $obj->toArray());
+        $res3 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28];
+        $this->assertEquals($res3, $obj->toArray());
 
-		$obj->setDataLabels(["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"]);
+        $obj->setDataLabels(["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"]);
 
-		$res4 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"]];
-		$this->assertEquals($res4, $obj->toArray());
+        $res4 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"]];
+        $this->assertEquals($res4, $obj->toArray());
 
-		$obj->setDescription("67daf92c833c41c95db874e18fcb2786");
+        $obj->setDescription("67daf92c833c41c95db874e18fcb2786");
 
-		$res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786"];
-		$this->assertEquals($res5, $obj->toArray());
+        $res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786"];
+        $this->assertEquals($res5, $obj->toArray());
 
-		$obj->setDrilldown("e3fd48c72943315f737d8a814fda4fd1");
+        $obj->setDrilldown("e3fd48c72943315f737d8a814fda4fd1");
 
-		$res6 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1"];
-		$this->assertEquals($res6, $obj->toArray());
+        $res6 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1"];
+        $this->assertEquals($res6, $obj->toArray());
 
-		$obj->setEvents(new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\Data\HighchartsEvents());
+        $obj->setEvents(new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Boxplot\Data\HighchartsEvents());
 
-		$res7 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => []];
-		$this->assertEquals($res7, $obj->toArray());
+        $res7 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => []];
+        $this->assertEquals($res7, $obj->toArray());
 
-		$obj->setHigh(42);
+        $obj->setHigh(42);
 
-		$res8 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42];
-		$this->assertEquals($res8, $obj->toArray());
+        $res8 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42];
+        $this->assertEquals($res8, $obj->toArray());
 
-		$obj->setId("b80bb7740288fda1f201890375a60c8f");
+        $obj->setId("b80bb7740288fda1f201890375a60c8f");
 
-		$res9 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f"];
-		$this->assertEquals($res9, $obj->toArray());
+        $res9 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f"];
+        $this->assertEquals($res9, $obj->toArray());
 
-		$obj->setLabelrank(0);
+        $obj->setLabelrank(0);
 
-		$res10 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0];
-		$this->assertEquals($res10, $obj->toArray());
+        $res10 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0];
+        $this->assertEquals($res10, $obj->toArray());
 
-		$obj->setLow(56);
+        $obj->setLow(56);
 
-		$res11 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56];
-		$this->assertEquals($res11, $obj->toArray());
+        $res11 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56];
+        $this->assertEquals($res11, $obj->toArray());
 
-		$obj->setMedian(2);
+        $obj->setMedian(2);
 
-		$res12 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56, "median" => 2];
-		$this->assertEquals($res12, $obj->toArray());
+        $res12 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56, "median" => 2];
+        $this->assertEquals($res12, $obj->toArray());
 
-		$obj->setName("b068931cc450442b63f5b3d276ea4297");
+        $obj->setName("b068931cc450442b63f5b3d276ea4297");
 
-		$res13 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56, "median" => 2, "name" => "b068931cc450442b63f5b3d276ea4297"];
-		$this->assertEquals($res13, $obj->toArray());
+        $res13 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56, "median" => 2, "name" => "b068931cc450442b63f5b3d276ea4297"];
+        $this->assertEquals($res13, $obj->toArray());
 
-		$obj->setQ1(20);
+        $obj->setQ1(20);
 
-		$res14 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56, "median" => 2, "name" => "b068931cc450442b63f5b3d276ea4297", "q1" => 20];
-		$this->assertEquals($res14, $obj->toArray());
+        $res14 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56, "median" => 2, "name" => "b068931cc450442b63f5b3d276ea4297", "q1" => 20];
+        $this->assertEquals($res14, $obj->toArray());
 
-		$obj->setQ3(2);
+        $obj->setQ3(2);
 
-		$res15 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56, "median" => 2, "name" => "b068931cc450442b63f5b3d276ea4297", "q1" => 20, "q3" => 2];
-		$this->assertEquals($res15, $obj->toArray());
+        $res15 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56, "median" => 2, "name" => "b068931cc450442b63f5b3d276ea4297", "q1" => 20, "q3" => 2];
+        $this->assertEquals($res15, $obj->toArray());
 
-		$obj->setSelected(1);
+        $obj->setSelected(1);
 
-		$res16 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56, "median" => 2, "name" => "b068931cc450442b63f5b3d276ea4297", "q1" => 20, "q3" => 2, "selected" => 1];
-		$this->assertEquals($res16, $obj->toArray());
+        $res16 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56, "median" => 2, "name" => "b068931cc450442b63f5b3d276ea4297", "q1" => 20, "q3" => 2, "selected" => 1];
+        $this->assertEquals($res16, $obj->toArray());
 
-		$obj->setX(29);
+        $obj->setX(29);
 
-		$res17 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56, "median" => 2, "name" => "b068931cc450442b63f5b3d276ea4297", "q1" => 20, "q3" => 2, "selected" => 1, "x" => 29];
-		$this->assertEquals($res17, $obj->toArray());
+        $res17 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56, "median" => 2, "name" => "b068931cc450442b63f5b3d276ea4297", "q1" => 20, "q3" => 2, "selected" => 1, "x" => 29];
+        $this->assertEquals($res17, $obj->toArray());
 
-		$obj->setY(92);
+        $obj->setY(92);
 
-		$res18 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56, "median" => 2, "name" => "b068931cc450442b63f5b3d276ea4297", "q1" => 20, "q3" => 2, "selected" => 1, "x" => 29, "y" => 92];
-		$this->assertEquals($res18, $obj->toArray());
-	}
+        $res18 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "high" => 42, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 0, "low" => 56, "median" => 2, "name" => "b068931cc450442b63f5b3d276ea4297", "q1" => 20, "q3" => 2, "selected" => 1, "x" => 29, "y" => 92];
+        $this->assertEquals($res18, $obj->toArray());
+    }
 
 }

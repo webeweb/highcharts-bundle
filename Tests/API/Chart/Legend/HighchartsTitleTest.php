@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,54 +22,54 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
 
-		$this->assertEquals(null, $obj1->getStyle());
-		$this->assertEquals(null, $obj1->getText());
+        $this->assertEquals(null, $obj1->getStyle());
+        $this->assertEquals(null, $obj1->getText());
 
-		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(false);
 
-		$this->assertEquals(["fontWeight" => "bold"], $obj0->getStyle());
-		$this->assertEquals(null, $obj0->getText());
+        $this->assertEquals(["fontWeight" => "bold"], $obj0->getStyle());
+        $this->assertEquals(null, $obj0->getText());
     }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
 
-		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
+        $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-		$res1 = ["style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
-		$this->assertEquals($res1, $obj->toArray());
+        $res1 = ["style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+        $this->assertEquals($res1, $obj->toArray());
 
-		$obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
+        $obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
 
-		$res2 = ["style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
-		$this->assertEquals($res2, $obj->toArray());
-	}
+        $res2 = ["style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
+        $this->assertEquals($res2, $obj->toArray());
+    }
 
 }

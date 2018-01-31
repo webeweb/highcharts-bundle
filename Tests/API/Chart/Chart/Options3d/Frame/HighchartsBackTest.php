@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,61 +22,61 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsBackTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack(true);
 
-		$this->assertEquals(null, $obj1->getColor());
-		$this->assertEquals(null, $obj1->getSize());
-		$this->assertEquals(null, $obj1->getVisible());
+        $this->assertEquals(null, $obj1->getColor());
+        $this->assertEquals(null, $obj1->getSize());
+        $this->assertEquals(null, $obj1->getVisible());
 
-		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack(false);
 
-		$this->assertEquals("transparent", $obj0->getColor());
-		$this->assertEquals(1, $obj0->getSize());
-		$this->assertEquals("default", $obj0->getVisible());
+        $this->assertEquals("transparent", $obj0->getColor());
+        $this->assertEquals(1, $obj0->getSize());
+        $this->assertEquals("default", $obj0->getVisible());
     }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack(true);
 
-		$obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
+        $obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
-		$res1 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
-		$this->assertEquals($res1, $obj->toArray());
+        $res1 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
+        $this->assertEquals($res1, $obj->toArray());
 
-		$obj->setSize(82);
+        $obj->setSize(82);
 
-		$res2 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 82];
-		$this->assertEquals($res2, $obj->toArray());
+        $res2 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 82];
+        $this->assertEquals($res2, $obj->toArray());
 
-		$obj->setVisible(false);
+        $obj->setVisible(false);
 
-		$res3 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 82, "visible" => false];
-		$this->assertEquals($res3, $obj->toArray());
-	}
+        $res3 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 82, "visible" => false];
+        $this->assertEquals($res3, $obj->toArray());
+    }
 
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,93 +22,93 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(true);
 
-		$this->assertEquals(null, $obj1->getGlobal());
-		$this->assertEquals(null, $obj1->getLang());
+        $this->assertEquals(null, $obj1->getGlobal());
+        $this->assertEquals(null, $obj1->getLang());
     }
 
-	/**
-	 * Tests the clear() method.
-	 *
-	 * @return void
-	 */
-	public function testClear() {
+    /**
+     * Tests the clear() method.
+     *
+     * @return void
+     */
+    public function testClear() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(false);
 
-		$obj->newGlobal();
-		$obj->newLang();
+        $obj->newGlobal();
+        $obj->newLang();
 
-		$obj->clear();
+        $obj->clear();
 
-		$res = ["global" => [], "lang" => []];
-		$this->assertEquals($res, $obj->toArray());
-	}
+        $res = ["global" => [], "lang" => []];
+        $this->assertEquals($res, $obj->toArray());
+    }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the newGlobal() method.
-	 *
-	 * @return void.
-	 */
-	public function testNewGlobal() {
+    /**
+     * Tests the newGlobal() method.
+     *
+     * @return void.
+     */
+    public function testNewGlobal() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(false);
 
-		$res = $obj->newGlobal();
-		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal::class, $res);
-	}
+        $res = $obj->newGlobal();
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal::class, $res);
+    }
 
-	/**
-	 * Tests the newLang() method.
-	 *
-	 * @return void.
-	 */
-	public function testNewLang() {
+    /**
+     * Tests the newLang() method.
+     *
+     * @return void.
+     */
+    public function testNewLang() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(false);
 
-		$res = $obj->newLang();
-		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang::class, $res);
-	}
+        $res = $obj->newLang();
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang::class, $res);
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(true);
 
-		$obj->setGlobal(new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal());
+        $obj->setGlobal(new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal());
 
-		$res1 = ["global" => []];
-		$this->assertEquals($res1, $obj->toArray());
+        $res1 = ["global" => []];
+        $this->assertEquals($res1, $obj->toArray());
 
-		$obj->setLang(new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang());
+        $obj->setLang(new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang());
 
-		$res2 = ["global" => [], "lang" => []];
-		$this->assertEquals($res2, $obj->toArray());
-	}
+        $res2 = ["global" => [], "lang" => []];
+        $this->assertEquals($res2, $obj->toArray());
+    }
 
 }

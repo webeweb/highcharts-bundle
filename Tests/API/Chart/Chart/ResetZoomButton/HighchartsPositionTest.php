@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,68 +22,68 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsPositionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition(true);
 
-		$this->assertEquals(null, $obj1->getAlign());
-		$this->assertEquals(null, $obj1->getVerticalAlign());
-		$this->assertEquals(null, $obj1->getX());
-		$this->assertEquals(null, $obj1->getY());
+        $this->assertEquals(null, $obj1->getAlign());
+        $this->assertEquals(null, $obj1->getVerticalAlign());
+        $this->assertEquals(null, $obj1->getX());
+        $this->assertEquals(null, $obj1->getY());
 
-		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition(false);
 
-		$this->assertEquals(null, $obj0->getAlign());
-		$this->assertEquals("top", $obj0->getVerticalAlign());
-		$this->assertEquals(-10, $obj0->getX());
-		$this->assertEquals(10, $obj0->getY());
+        $this->assertEquals(null, $obj0->getAlign());
+        $this->assertEquals("top", $obj0->getVerticalAlign());
+        $this->assertEquals(-10, $obj0->getX());
+        $this->assertEquals(10, $obj0->getY());
     }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition(true);
 
-		$obj->setAlign("f792d1afb0399dce47533bead9d71a8a");
+        $obj->setAlign("f792d1afb0399dce47533bead9d71a8a");
 
-		$res1 = ["align" => "f792d1afb0399dce47533bead9d71a8a"];
-		$this->assertEquals($res1, $obj->toArray());
+        $res1 = ["align" => "f792d1afb0399dce47533bead9d71a8a"];
+        $this->assertEquals($res1, $obj->toArray());
 
-		$obj->setVerticalAlign("bottom");
+        $obj->setVerticalAlign("bottom");
 
-		$res2 = ["align" => "f792d1afb0399dce47533bead9d71a8a", "verticalAlign" => "bottom"];
-		$this->assertEquals($res2, $obj->toArray());
+        $res2 = ["align" => "f792d1afb0399dce47533bead9d71a8a", "verticalAlign" => "bottom"];
+        $this->assertEquals($res2, $obj->toArray());
 
-		$obj->setX(83);
+        $obj->setX(83);
 
-		$res3 = ["align" => "f792d1afb0399dce47533bead9d71a8a", "verticalAlign" => "bottom", "x" => 83];
-		$this->assertEquals($res3, $obj->toArray());
+        $res3 = ["align" => "f792d1afb0399dce47533bead9d71a8a", "verticalAlign" => "bottom", "x" => 83];
+        $this->assertEquals($res3, $obj->toArray());
 
-		$obj->setY(34);
+        $obj->setY(34);
 
-		$res4 = ["align" => "f792d1afb0399dce47533bead9d71a8a", "verticalAlign" => "bottom", "x" => 83, "y" => 34];
-		$this->assertEquals($res4, $obj->toArray());
-	}
+        $res4 = ["align" => "f792d1afb0399dce47533bead9d71a8a", "verticalAlign" => "bottom", "x" => 83, "y" => 34];
+        $this->assertEquals($res4, $obj->toArray());
+    }
 
 }

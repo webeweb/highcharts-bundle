@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,215 +22,215 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsDataLabels(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsDataLabels(true);
 
-		$this->assertEquals(null, $obj1->getAlign());
-		$this->assertEquals(null, $obj1->getAllowOverlap());
-		$this->assertEquals(null, $obj1->getBackgroundColor());
-		$this->assertEquals(null, $obj1->getBorderColor());
-		$this->assertEquals(null, $obj1->getBorderRadius());
-		$this->assertEquals(null, $obj1->getBorderWidth());
-		$this->assertEquals(null, $obj1->getClassName());
-		$this->assertEquals(null, $obj1->getColor());
-		$this->assertEquals(null, $obj1->getCrop());
-		$this->assertEquals(null, $obj1->getDefer());
-		$this->assertEquals(null, $obj1->getEnabled());
-		$this->assertEquals(null, $obj1->getFormat());
-		$this->assertEquals(null, $obj1->getFormatter());
-		$this->assertEquals(null, $obj1->getInside());
-		$this->assertEquals(null, $obj1->getOverflow());
-		$this->assertEquals(null, $obj1->getPadding());
-		$this->assertEquals(null, $obj1->getRotation());
-		$this->assertEquals(null, $obj1->getShadow());
-		$this->assertEquals(null, $obj1->getShape());
-		$this->assertEquals(null, $obj1->getStyle());
-		$this->assertEquals(null, $obj1->getUseHTML());
-		$this->assertEquals(null, $obj1->getVerticalAlign());
-		$this->assertEquals(null, $obj1->getX());
-		$this->assertEquals(null, $obj1->getY());
-		$this->assertEquals(null, $obj1->getZIndex());
+        $this->assertEquals(null, $obj1->getAlign());
+        $this->assertEquals(null, $obj1->getAllowOverlap());
+        $this->assertEquals(null, $obj1->getBackgroundColor());
+        $this->assertEquals(null, $obj1->getBorderColor());
+        $this->assertEquals(null, $obj1->getBorderRadius());
+        $this->assertEquals(null, $obj1->getBorderWidth());
+        $this->assertEquals(null, $obj1->getClassName());
+        $this->assertEquals(null, $obj1->getColor());
+        $this->assertEquals(null, $obj1->getCrop());
+        $this->assertEquals(null, $obj1->getDefer());
+        $this->assertEquals(null, $obj1->getEnabled());
+        $this->assertEquals(null, $obj1->getFormat());
+        $this->assertEquals(null, $obj1->getFormatter());
+        $this->assertEquals(null, $obj1->getInside());
+        $this->assertEquals(null, $obj1->getOverflow());
+        $this->assertEquals(null, $obj1->getPadding());
+        $this->assertEquals(null, $obj1->getRotation());
+        $this->assertEquals(null, $obj1->getShadow());
+        $this->assertEquals(null, $obj1->getShape());
+        $this->assertEquals(null, $obj1->getStyle());
+        $this->assertEquals(null, $obj1->getUseHTML());
+        $this->assertEquals(null, $obj1->getVerticalAlign());
+        $this->assertEquals(null, $obj1->getX());
+        $this->assertEquals(null, $obj1->getY());
+        $this->assertEquals(null, $obj1->getZIndex());
 
-		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsDataLabels(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsDataLabels(false);
 
-		$this->assertEquals("center", $obj0->getAlign());
-		$this->assertEquals(false, $obj0->getAllowOverlap());
-		$this->assertEquals(null, $obj0->getBackgroundColor());
-		$this->assertEquals("#cccccc", $obj0->getBorderColor());
-		$this->assertEquals(3, $obj0->getBorderRadius());
-		$this->assertEquals(1, $obj0->getBorderWidth());
-		$this->assertEquals(null, $obj0->getClassName());
-		$this->assertEquals(null, $obj0->getColor());
-		$this->assertEquals(true, $obj0->getCrop());
-		$this->assertEquals(true, $obj0->getDefer());
-		$this->assertEquals(false, $obj0->getEnabled());
-		$this->assertEquals("{y}", $obj0->getFormat());
-		$this->assertEquals(null, $obj0->getFormatter());
-		$this->assertEquals(null, $obj0->getInside());
-		$this->assertEquals("justify", $obj0->getOverflow());
-		$this->assertEquals(5, $obj0->getPadding());
-		$this->assertEquals(0, $obj0->getRotation());
-		$this->assertEquals(false, $obj0->getShadow());
-		$this->assertEquals("square", $obj0->getShape());
-		$this->assertEquals(["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], $obj0->getStyle());
-		$this->assertEquals(false, $obj0->getUseHTML());
-		$this->assertEquals("top", $obj0->getVerticalAlign());
-		$this->assertEquals(0, $obj0->getX());
-		$this->assertEquals(15, $obj0->getY());
-		$this->assertEquals(2, $obj0->getZIndex());
+        $this->assertEquals("center", $obj0->getAlign());
+        $this->assertEquals(false, $obj0->getAllowOverlap());
+        $this->assertEquals(null, $obj0->getBackgroundColor());
+        $this->assertEquals("#cccccc", $obj0->getBorderColor());
+        $this->assertEquals(3, $obj0->getBorderRadius());
+        $this->assertEquals(1, $obj0->getBorderWidth());
+        $this->assertEquals(null, $obj0->getClassName());
+        $this->assertEquals(null, $obj0->getColor());
+        $this->assertEquals(true, $obj0->getCrop());
+        $this->assertEquals(true, $obj0->getDefer());
+        $this->assertEquals(false, $obj0->getEnabled());
+        $this->assertEquals("{y}", $obj0->getFormat());
+        $this->assertEquals(null, $obj0->getFormatter());
+        $this->assertEquals(null, $obj0->getInside());
+        $this->assertEquals("justify", $obj0->getOverflow());
+        $this->assertEquals(5, $obj0->getPadding());
+        $this->assertEquals(0, $obj0->getRotation());
+        $this->assertEquals(false, $obj0->getShadow());
+        $this->assertEquals("square", $obj0->getShape());
+        $this->assertEquals(["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], $obj0->getStyle());
+        $this->assertEquals(false, $obj0->getUseHTML());
+        $this->assertEquals("top", $obj0->getVerticalAlign());
+        $this->assertEquals(0, $obj0->getX());
+        $this->assertEquals(15, $obj0->getY());
+        $this->assertEquals(2, $obj0->getZIndex());
     }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsDataLabels(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsDataLabels(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsDataLabels(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Solidgauge\HighchartsDataLabels(true);
 
-		$obj->setAlign("right");
+        $obj->setAlign("right");
 
-		$res1 = ["align" => "right"];
-		$this->assertEquals($res1, $obj->toArray());
+        $res1 = ["align" => "right"];
+        $this->assertEquals($res1, $obj->toArray());
 
-		$obj->setAllowOverlap(1);
+        $obj->setAllowOverlap(1);
 
-		$res2 = ["align" => "right", "allowOverlap" => 1];
-		$this->assertEquals($res2, $obj->toArray());
+        $res2 = ["align" => "right", "allowOverlap" => 1];
+        $this->assertEquals($res2, $obj->toArray());
 
-		$obj->setBackgroundColor("930f2a43179a7ae5fc25ed873223e99f");
+        $obj->setBackgroundColor("930f2a43179a7ae5fc25ed873223e99f");
 
-		$res3 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f"];
-		$this->assertEquals($res3, $obj->toArray());
+        $res3 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f"];
+        $this->assertEquals($res3, $obj->toArray());
 
-		$obj->setBorderColor("97da935a74593c55d78be9d1295aa994");
+        $obj->setBorderColor("97da935a74593c55d78be9d1295aa994");
 
-		$res4 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994"];
-		$this->assertEquals($res4, $obj->toArray());
+        $res4 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994"];
+        $this->assertEquals($res4, $obj->toArray());
 
-		$obj->setBorderRadius(56);
+        $obj->setBorderRadius(56);
 
-		$res5 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56];
-		$this->assertEquals($res5, $obj->toArray());
+        $res5 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56];
+        $this->assertEquals($res5, $obj->toArray());
 
-		$obj->setBorderWidth(0);
+        $obj->setBorderWidth(0);
 
-		$res6 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0];
-		$this->assertEquals($res6, $obj->toArray());
+        $res6 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0];
+        $this->assertEquals($res6, $obj->toArray());
 
-		$obj->setClassName("6f66e878c62db60568a3487869695820");
+        $obj->setClassName("6f66e878c62db60568a3487869695820");
 
-		$res7 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820"];
-		$this->assertEquals($res7, $obj->toArray());
+        $res7 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820"];
+        $this->assertEquals($res7, $obj->toArray());
 
-		$obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
+        $obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
-		$res8 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
-		$this->assertEquals($res8, $obj->toArray());
+        $res8 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
+        $this->assertEquals($res8, $obj->toArray());
 
-		$obj->setCrop(0);
+        $obj->setCrop(0);
 
-		$res9 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0];
-		$this->assertEquals($res9, $obj->toArray());
+        $res9 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0];
+        $this->assertEquals($res9, $obj->toArray());
 
-		$obj->setDefer(0);
+        $obj->setDefer(0);
 
-		$res10 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0];
-		$this->assertEquals($res10, $obj->toArray());
+        $res10 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0];
+        $this->assertEquals($res10, $obj->toArray());
 
-		$obj->setEnabled(0);
+        $obj->setEnabled(0);
 
-		$res11 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0];
-		$this->assertEquals($res11, $obj->toArray());
+        $res11 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0];
+        $this->assertEquals($res11, $obj->toArray());
 
-		$obj->setFormat("1ddcb92ade31c8fbd370001f9b29a7d9");
+        $obj->setFormat("1ddcb92ade31c8fbd370001f9b29a7d9");
 
-		$res12 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9"];
-		$this->assertEquals($res12, $obj->toArray());
+        $res12 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9"];
+        $this->assertEquals($res12, $obj->toArray());
 
-		$obj->setFormatter("f2ffc59487832cbad265a8fef2133592");
+        $obj->setFormatter("f2ffc59487832cbad265a8fef2133592");
 
-		$res13 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
-		$this->assertEquals($res13, $obj->toArray());
+        $res13 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
+        $this->assertEquals($res13, $obj->toArray());
 
-		$obj->setInside(0);
+        $obj->setInside(0);
 
-		$res14 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0];
-		$this->assertEquals($res14, $obj->toArray());
+        $res14 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0];
+        $this->assertEquals($res14, $obj->toArray());
 
-		$obj->setOverflow("none");
+        $obj->setOverflow("none");
 
-		$res15 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none"];
-		$this->assertEquals($res15, $obj->toArray());
+        $res15 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none"];
+        $this->assertEquals($res15, $obj->toArray());
 
-		$obj->setPadding(98);
+        $obj->setPadding(98);
 
-		$res16 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98];
-		$this->assertEquals($res16, $obj->toArray());
+        $res16 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98];
+        $this->assertEquals($res16, $obj->toArray());
 
-		$obj->setRotation(98);
+        $obj->setRotation(98);
 
-		$res17 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98];
-		$this->assertEquals($res17, $obj->toArray());
+        $res17 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98];
+        $this->assertEquals($res17, $obj->toArray());
 
-		$obj->setShadow(1);
+        $obj->setShadow(1);
 
-		$res18 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1];
-		$this->assertEquals($res18, $obj->toArray());
+        $res18 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1];
+        $this->assertEquals($res18, $obj->toArray());
 
-		$obj->setShape("8c73a98a300905900337f535531dfca6");
+        $obj->setShape("8c73a98a300905900337f535531dfca6");
 
-		$res19 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6"];
-		$this->assertEquals($res19, $obj->toArray());
+        $res19 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6"];
+        $this->assertEquals($res19, $obj->toArray());
 
-		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
+        $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-		$res20 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
-		$this->assertEquals($res20, $obj->toArray());
+        $res20 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+        $this->assertEquals($res20, $obj->toArray());
 
-		$obj->setUseHTML(1);
+        $obj->setUseHTML(1);
 
-		$res21 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1];
-		$this->assertEquals($res21, $obj->toArray());
+        $res21 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1];
+        $this->assertEquals($res21, $obj->toArray());
 
-		$obj->setVerticalAlign("ca9e085e0fcf449934cc13d9e60dd722");
+        $obj->setVerticalAlign("ca9e085e0fcf449934cc13d9e60dd722");
 
-		$res22 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "ca9e085e0fcf449934cc13d9e60dd722"];
-		$this->assertEquals($res22, $obj->toArray());
+        $res22 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "ca9e085e0fcf449934cc13d9e60dd722"];
+        $this->assertEquals($res22, $obj->toArray());
 
-		$obj->setX(72);
+        $obj->setX(72);
 
-		$res23 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "ca9e085e0fcf449934cc13d9e60dd722", "x" => 72];
-		$this->assertEquals($res23, $obj->toArray());
+        $res23 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "ca9e085e0fcf449934cc13d9e60dd722", "x" => 72];
+        $this->assertEquals($res23, $obj->toArray());
 
-		$obj->setY(47);
+        $obj->setY(47);
 
-		$res24 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "ca9e085e0fcf449934cc13d9e60dd722", "x" => 72, "y" => 47];
-		$this->assertEquals($res24, $obj->toArray());
+        $res24 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "ca9e085e0fcf449934cc13d9e60dd722", "x" => 72, "y" => 47];
+        $this->assertEquals($res24, $obj->toArray());
 
-		$obj->setZIndex(90);
+        $obj->setZIndex(90);
 
-		$res25 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "ca9e085e0fcf449934cc13d9e60dd722", "x" => 72, "y" => 47, "zIndex" => 90];
-		$this->assertEquals($res25, $obj->toArray());
-	}
+        $res25 = ["align" => "right", "allowOverlap" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 56, "borderWidth" => 0, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "crop" => 0, "defer" => 0, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 98, "rotation" => 98, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "ca9e085e0fcf449934cc13d9e60dd722", "x" => 72, "y" => 47, "zIndex" => 90];
+        $this->assertEquals($res25, $obj->toArray());
+    }
 
 }

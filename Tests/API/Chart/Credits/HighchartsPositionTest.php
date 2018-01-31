@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,68 +22,68 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsPositionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Credits\HighchartsPosition(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Credits\HighchartsPosition(true);
 
-		$this->assertEquals(null, $obj1->getAlign());
-		$this->assertEquals(null, $obj1->getVerticalAlign());
-		$this->assertEquals(null, $obj1->getX());
-		$this->assertEquals(null, $obj1->getY());
+        $this->assertEquals(null, $obj1->getAlign());
+        $this->assertEquals(null, $obj1->getVerticalAlign());
+        $this->assertEquals(null, $obj1->getX());
+        $this->assertEquals(null, $obj1->getY());
 
-		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Credits\HighchartsPosition(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Credits\HighchartsPosition(false);
 
-		$this->assertEquals("right", $obj0->getAlign());
-		$this->assertEquals("bottom", $obj0->getVerticalAlign());
-		$this->assertEquals(-10, $obj0->getX());
-		$this->assertEquals(-5, $obj0->getY());
+        $this->assertEquals("right", $obj0->getAlign());
+        $this->assertEquals("bottom", $obj0->getVerticalAlign());
+        $this->assertEquals(-10, $obj0->getX());
+        $this->assertEquals(-5, $obj0->getY());
     }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Credits\HighchartsPosition(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Credits\HighchartsPosition(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Credits\HighchartsPosition(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Credits\HighchartsPosition(true);
 
-		$obj->setAlign("right");
+        $obj->setAlign("right");
 
-		$res1 = ["align" => "right"];
-		$this->assertEquals($res1, $obj->toArray());
+        $res1 = ["align" => "right"];
+        $this->assertEquals($res1, $obj->toArray());
 
-		$obj->setVerticalAlign("bottom");
+        $obj->setVerticalAlign("bottom");
 
-		$res2 = ["align" => "right", "verticalAlign" => "bottom"];
-		$this->assertEquals($res2, $obj->toArray());
+        $res2 = ["align" => "right", "verticalAlign" => "bottom"];
+        $this->assertEquals($res2, $obj->toArray());
 
-		$obj->setX(72);
+        $obj->setX(72);
 
-		$res3 = ["align" => "right", "verticalAlign" => "bottom", "x" => 72];
-		$this->assertEquals($res3, $obj->toArray());
+        $res3 = ["align" => "right", "verticalAlign" => "bottom", "x" => 72];
+        $this->assertEquals($res3, $obj->toArray());
 
-		$obj->setY(47);
+        $obj->setY(47);
 
-		$res4 = ["align" => "right", "verticalAlign" => "bottom", "x" => 72, "y" => 47];
-		$this->assertEquals($res4, $obj->toArray());
-	}
+        $res4 = ["align" => "right", "verticalAlign" => "bottom", "x" => 72, "y" => 47];
+        $this->assertEquals($res4, $obj->toArray());
+    }
 
 }

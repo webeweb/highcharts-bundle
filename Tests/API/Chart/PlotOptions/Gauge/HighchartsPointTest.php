@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,73 +22,73 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(true);
 
-		$this->assertEquals(null, $obj1->getEvents());
+        $this->assertEquals(null, $obj1->getEvents());
     }
 
-	/**
-	 * Tests the clear() method.
-	 *
-	 * @return void
-	 */
-	public function testClear() {
+    /**
+     * Tests the clear() method.
+     *
+     * @return void
+     */
+    public function testClear() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(false);
 
-		$obj->newEvents();
+        $obj->newEvents();
 
-		$obj->clear();
+        $obj->clear();
 
-		$res = ["events" => []];
-		$this->assertEquals($res, $obj->toArray());
-	}
+        $res = ["events" => []];
+        $this->assertEquals($res, $obj->toArray());
+    }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the newEvents() method.
-	 *
-	 * @return void.
-	 */
-	public function testNewEvents() {
+    /**
+     * Tests the newEvents() method.
+     *
+     * @return void.
+     */
+    public function testNewEvents() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(false);
 
-		$res = $obj->newEvents();
-		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\Point\HighchartsEvents::class, $res);
-	}
+        $res = $obj->newEvents();
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\Point\HighchartsEvents::class, $res);
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPoint(true);
 
-		$obj->setEvents(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\Point\HighchartsEvents());
+        $obj->setEvents(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\Point\HighchartsEvents());
 
-		$res1 = ["events" => []];
-		$this->assertEquals($res1, $obj->toArray());
-	}
+        $res1 = ["events" => []];
+        $this->assertEquals($res1, $obj->toArray());
+    }
 
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,75 +22,75 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsConditionTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(true);
 
-		$this->assertEquals(null, $obj1->getCallback());
-		$this->assertEquals(null, $obj1->getMaxHeight());
-		$this->assertEquals(null, $obj1->getMaxWidth());
-		$this->assertEquals(null, $obj1->getMinHeight());
-		$this->assertEquals(null, $obj1->getMinWidth());
+        $this->assertEquals(null, $obj1->getCallback());
+        $this->assertEquals(null, $obj1->getMaxHeight());
+        $this->assertEquals(null, $obj1->getMaxWidth());
+        $this->assertEquals(null, $obj1->getMinHeight());
+        $this->assertEquals(null, $obj1->getMinWidth());
 
-		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(false);
 
-		$this->assertEquals(null, $obj0->getCallback());
-		$this->assertEquals(null, $obj0->getMaxHeight());
-		$this->assertEquals(null, $obj0->getMaxWidth());
-		$this->assertEquals(0, $obj0->getMinHeight());
-		$this->assertEquals(0, $obj0->getMinWidth());
+        $this->assertEquals(null, $obj0->getCallback());
+        $this->assertEquals(null, $obj0->getMaxHeight());
+        $this->assertEquals(null, $obj0->getMaxWidth());
+        $this->assertEquals(0, $obj0->getMinHeight());
+        $this->assertEquals(0, $obj0->getMinWidth());
     }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(true);
 
-		$obj->setCallback("924a8ceeac17f54d3be3f8cdf1c04eb2");
+        $obj->setCallback("924a8ceeac17f54d3be3f8cdf1c04eb2");
 
-		$res1 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2"];
-		$this->assertEquals($res1, $obj->toArray());
+        $res1 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2"];
+        $this->assertEquals($res1, $obj->toArray());
 
-		$obj->setMaxHeight(5);
+        $obj->setMaxHeight(5);
 
-		$res2 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 5];
-		$this->assertEquals($res2, $obj->toArray());
+        $res2 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 5];
+        $this->assertEquals($res2, $obj->toArray());
 
-		$obj->setMaxWidth(28);
+        $obj->setMaxWidth(28);
 
-		$res3 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 5, "maxWidth" => 28];
-		$this->assertEquals($res3, $obj->toArray());
+        $res3 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 5, "maxWidth" => 28];
+        $this->assertEquals($res3, $obj->toArray());
 
-		$obj->setMinHeight(36);
+        $obj->setMinHeight(36);
 
-		$res4 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 5, "maxWidth" => 28, "minHeight" => 36];
-		$this->assertEquals($res4, $obj->toArray());
+        $res4 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 5, "maxWidth" => 28, "minHeight" => 36];
+        $this->assertEquals($res4, $obj->toArray());
 
-		$obj->setMinWidth(87);
+        $obj->setMinWidth(87);
 
-		$res5 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 5, "maxWidth" => 28, "minHeight" => 36, "minWidth" => 87];
-		$this->assertEquals($res5, $obj->toArray());
-	}
+        $res5 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 5, "maxWidth" => 28, "minHeight" => 36, "minWidth" => 87];
+        $this->assertEquals($res5, $obj->toArray());
+    }
 
 }

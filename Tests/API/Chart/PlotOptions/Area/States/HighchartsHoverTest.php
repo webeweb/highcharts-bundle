@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,112 +22,112 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\HighchartsHover(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\HighchartsHover(true);
 
-		$this->assertEquals(null, $obj1->getAnimation());
-		$this->assertEquals(null, $obj1->getEnabled());
-		$this->assertEquals(null, $obj1->getHalo());
-		$this->assertEquals(null, $obj1->getLineWidth());
-		$this->assertEquals(null, $obj1->getLineWidthPlus());
-		$this->assertEquals(null, $obj1->getMarker());
+        $this->assertEquals(null, $obj1->getAnimation());
+        $this->assertEquals(null, $obj1->getEnabled());
+        $this->assertEquals(null, $obj1->getHalo());
+        $this->assertEquals(null, $obj1->getLineWidth());
+        $this->assertEquals(null, $obj1->getLineWidthPlus());
+        $this->assertEquals(null, $obj1->getMarker());
 
-		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\HighchartsHover(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\HighchartsHover(false);
 
-		$this->assertEquals(["duration" => 50], $obj0->getAnimation());
-		$this->assertEquals(true, $obj0->getEnabled());
-		$this->assertEquals(null, $obj0->getHalo());
-		$this->assertEquals(2, $obj0->getLineWidth());
-		$this->assertEquals(1, $obj0->getLineWidthPlus());
-		$this->assertEquals(null, $obj0->getMarker());
+        $this->assertEquals(["duration" => 50], $obj0->getAnimation());
+        $this->assertEquals(true, $obj0->getEnabled());
+        $this->assertEquals(null, $obj0->getHalo());
+        $this->assertEquals(2, $obj0->getLineWidth());
+        $this->assertEquals(1, $obj0->getLineWidthPlus());
+        $this->assertEquals(null, $obj0->getMarker());
     }
 
-	/**
-	 * Tests the clear() method.
-	 *
-	 * @return void
-	 */
-	public function testClear() {
+    /**
+     * Tests the clear() method.
+     *
+     * @return void
+     */
+    public function testClear() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\HighchartsHover(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\HighchartsHover(false);
 
-		$obj->newMarker();
+        $obj->newMarker();
 
-		$obj->clear();
+        $obj->clear();
 
-		$res = ["marker" => []];
-		$this->assertEquals($res, $obj->toArray());
-	}
+        $res = ["marker" => []];
+        $this->assertEquals($res, $obj->toArray());
+    }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\HighchartsHover(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\HighchartsHover(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the newMarker() method.
-	 *
-	 * @return void.
-	 */
-	public function testNewMarker() {
+    /**
+     * Tests the newMarker() method.
+     *
+     * @return void.
+     */
+    public function testNewMarker() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\HighchartsHover(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\HighchartsHover(false);
 
-		$res = $obj->newMarker();
-		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\Hover\HighchartsMarker::class, $res);
-	}
+        $res = $obj->newMarker();
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\Hover\HighchartsMarker::class, $res);
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\HighchartsHover(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\HighchartsHover(true);
 
-		$obj->setAnimation(1);
+        $obj->setAnimation(1);
 
-		$res1 = ["animation" => 1];
-		$this->assertEquals($res1, $obj->toArray());
+        $res1 = ["animation" => 1];
+        $this->assertEquals($res1, $obj->toArray());
 
-		$obj->setEnabled(1);
+        $obj->setEnabled(1);
 
-		$res2 = ["animation" => 1, "enabled" => 1];
-		$this->assertEquals($res2, $obj->toArray());
+        $res2 = ["animation" => 1, "enabled" => 1];
+        $this->assertEquals($res2, $obj->toArray());
 
-		$obj->setHalo(["halo" => "57f842286171094855e51fc3a541c1e2"]);
+        $obj->setHalo(["halo" => "57f842286171094855e51fc3a541c1e2"]);
 
-		$res3 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"]];
-		$this->assertEquals($res3, $obj->toArray());
+        $res3 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"]];
+        $this->assertEquals($res3, $obj->toArray());
 
-		$obj->setLineWidth(65);
+        $obj->setLineWidth(65);
 
-		$res4 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 65];
-		$this->assertEquals($res4, $obj->toArray());
+        $res4 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 65];
+        $this->assertEquals($res4, $obj->toArray());
 
-		$obj->setLineWidthPlus(28);
+        $obj->setLineWidthPlus(28);
 
-		$res5 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 65, "lineWidthPlus" => 28];
-		$this->assertEquals($res5, $obj->toArray());
+        $res5 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 65, "lineWidthPlus" => 28];
+        $this->assertEquals($res5, $obj->toArray());
 
-		$obj->setMarker(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\Hover\HighchartsMarker());
+        $obj->setMarker(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Area\States\Hover\HighchartsMarker());
 
-		$res6 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 65, "lineWidthPlus" => 28, "marker" => []];
-		$this->assertEquals($res6, $obj->toArray());
-	}
+        $res6 = ["animation" => 1, "enabled" => 1, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 65, "lineWidthPlus" => 28, "marker" => []];
+        $this->assertEquals($res6, $obj->toArray());
+    }
 
 }

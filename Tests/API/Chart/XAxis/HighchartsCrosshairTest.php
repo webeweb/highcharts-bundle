@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,82 +22,82 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsCrosshairTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(true);
 
-		$this->assertEquals(null, $obj1->getClassName());
-		$this->assertEquals(null, $obj1->getColor());
-		$this->assertEquals(null, $obj1->getDashStyle());
-		$this->assertEquals(null, $obj1->getSnap());
-		$this->assertEquals(null, $obj1->getWidth());
-		$this->assertEquals(null, $obj1->getZIndex());
+        $this->assertEquals(null, $obj1->getClassName());
+        $this->assertEquals(null, $obj1->getColor());
+        $this->assertEquals(null, $obj1->getDashStyle());
+        $this->assertEquals(null, $obj1->getSnap());
+        $this->assertEquals(null, $obj1->getWidth());
+        $this->assertEquals(null, $obj1->getZIndex());
 
-		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(false);
 
-		$this->assertEquals(null, $obj0->getClassName());
-		$this->assertEquals(null, $obj0->getColor());
-		$this->assertEquals("Solid", $obj0->getDashStyle());
-		$this->assertEquals(true, $obj0->getSnap());
-		$this->assertEquals(null, $obj0->getWidth());
-		$this->assertEquals(2, $obj0->getZIndex());
+        $this->assertEquals(null, $obj0->getClassName());
+        $this->assertEquals(null, $obj0->getColor());
+        $this->assertEquals("Solid", $obj0->getDashStyle());
+        $this->assertEquals(true, $obj0->getSnap());
+        $this->assertEquals(null, $obj0->getWidth());
+        $this->assertEquals(2, $obj0->getZIndex());
     }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsCrosshair(true);
 
-		$obj->setClassName("6f66e878c62db60568a3487869695820");
+        $obj->setClassName("6f66e878c62db60568a3487869695820");
 
-		$res1 = ["className" => "6f66e878c62db60568a3487869695820"];
-		$this->assertEquals($res1, $obj->toArray());
+        $res1 = ["className" => "6f66e878c62db60568a3487869695820"];
+        $this->assertEquals($res1, $obj->toArray());
 
-		$obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
+        $obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
-		$res2 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
-		$this->assertEquals($res2, $obj->toArray());
+        $res2 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
+        $this->assertEquals($res2, $obj->toArray());
 
-		$obj->setDashStyle("LongDashDotDot");
+        $obj->setDashStyle("LongDashDotDot");
 
-		$res3 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot"];
-		$this->assertEquals($res3, $obj->toArray());
+        $res3 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot"];
+        $this->assertEquals($res3, $obj->toArray());
 
-		$obj->setSnap(0);
+        $obj->setSnap(0);
 
-		$res4 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0];
-		$this->assertEquals($res4, $obj->toArray());
+        $res4 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0];
+        $this->assertEquals($res4, $obj->toArray());
 
-		$obj->setWidth(4);
+        $obj->setWidth(4);
 
-		$res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0, "width" => 4];
-		$this->assertEquals($res5, $obj->toArray());
+        $res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0, "width" => 4];
+        $this->assertEquals($res5, $obj->toArray());
 
-		$obj->setZIndex(64);
+        $obj->setZIndex(64);
 
-		$res6 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0, "width" => 4, "zIndex" => 64];
-		$this->assertEquals($res6, $obj->toArray());
-	}
+        $res6 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 0, "width" => 4, "zIndex" => 64];
+        $this->assertEquals($res6, $obj->toArray());
+    }
 
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,73 +22,73 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates(true);
 
-		$this->assertEquals(null, $obj1->getHover());
+        $this->assertEquals(null, $obj1->getHover());
     }
 
-	/**
-	 * Tests the clear() method.
-	 *
-	 * @return void
-	 */
-	public function testClear() {
+    /**
+     * Tests the clear() method.
+     *
+     * @return void
+     */
+    public function testClear() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates(false);
 
-		$obj->newHover();
+        $obj->newHover();
 
-		$obj->clear();
+        $obj->clear();
 
-		$res = ["hover" => []];
-		$this->assertEquals($res, $obj->toArray());
-	}
+        $res = ["hover" => []];
+        $this->assertEquals($res, $obj->toArray());
+    }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the newHover() method.
-	 *
-	 * @return void.
-	 */
-	public function testNewHover() {
+    /**
+     * Tests the newHover() method.
+     *
+     * @return void.
+     */
+    public function testNewHover() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates(false);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates(false);
 
-		$res = $obj->newHover();
-		$this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\States\HighchartsHover::class, $res);
-	}
+        $res = $obj->newHover();
+        $this->assertInstanceOf(\WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\States\HighchartsHover::class, $res);
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\HighchartsStates(true);
 
-		$obj->setHover(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\States\HighchartsHover());
+        $obj->setHover(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pie\States\HighchartsHover());
 
-		$res1 = ["hover" => []];
-		$this->assertEquals($res1, $obj->toArray());
-	}
+        $res1 = ["hover" => []];
+        $this->assertEquals($res1, $obj->toArray());
+    }
 
 }

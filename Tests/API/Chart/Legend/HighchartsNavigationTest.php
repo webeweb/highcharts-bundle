@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,82 +22,82 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation(true);
 
-		$this->assertEquals(null, $obj1->getActiveColor());
-		$this->assertEquals(null, $obj1->getAnimation());
-		$this->assertEquals(null, $obj1->getArrowSize());
-		$this->assertEquals(null, $obj1->getEnabled());
-		$this->assertEquals(null, $obj1->getInactiveColor());
-		$this->assertEquals(null, $obj1->getStyle());
+        $this->assertEquals(null, $obj1->getActiveColor());
+        $this->assertEquals(null, $obj1->getAnimation());
+        $this->assertEquals(null, $obj1->getArrowSize());
+        $this->assertEquals(null, $obj1->getEnabled());
+        $this->assertEquals(null, $obj1->getInactiveColor());
+        $this->assertEquals(null, $obj1->getStyle());
 
-		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation(false);
 
-		$this->assertEquals("#003399", $obj0->getActiveColor());
-		$this->assertEquals(true, $obj0->getAnimation());
-		$this->assertEquals(12, $obj0->getArrowSize());
-		$this->assertEquals(true, $obj0->getEnabled());
-		$this->assertEquals("#cccccc", $obj0->getInactiveColor());
-		$this->assertEquals(null, $obj0->getStyle());
+        $this->assertEquals("#003399", $obj0->getActiveColor());
+        $this->assertEquals(true, $obj0->getAnimation());
+        $this->assertEquals(12, $obj0->getArrowSize());
+        $this->assertEquals(true, $obj0->getEnabled());
+        $this->assertEquals("#cccccc", $obj0->getInactiveColor());
+        $this->assertEquals(null, $obj0->getStyle());
     }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation(true);
 
-		$obj->setActiveColor("e696f1ec7e5059eee9c79e452a2547cd");
+        $obj->setActiveColor("e696f1ec7e5059eee9c79e452a2547cd");
 
-		$res1 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd"];
-		$this->assertEquals($res1, $obj->toArray());
+        $res1 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd"];
+        $this->assertEquals($res1, $obj->toArray());
 
-		$obj->setAnimation(0);
+        $obj->setAnimation(0);
 
-		$res2 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0];
-		$this->assertEquals($res2, $obj->toArray());
+        $res2 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0];
+        $this->assertEquals($res2, $obj->toArray());
 
-		$obj->setArrowSize(73);
+        $obj->setArrowSize(73);
 
-		$res3 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 73];
-		$this->assertEquals($res3, $obj->toArray());
+        $res3 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 73];
+        $this->assertEquals($res3, $obj->toArray());
 
-		$obj->setEnabled(0);
+        $obj->setEnabled(0);
 
-		$res4 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 73, "enabled" => 0];
-		$this->assertEquals($res4, $obj->toArray());
+        $res4 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 73, "enabled" => 0];
+        $this->assertEquals($res4, $obj->toArray());
 
-		$obj->setInactiveColor("b3a75fd77d41e4b05a9ca48090851664");
+        $obj->setInactiveColor("b3a75fd77d41e4b05a9ca48090851664");
 
-		$res5 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 73, "enabled" => 0, "inactiveColor" => "b3a75fd77d41e4b05a9ca48090851664"];
-		$this->assertEquals($res5, $obj->toArray());
+        $res5 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 73, "enabled" => 0, "inactiveColor" => "b3a75fd77d41e4b05a9ca48090851664"];
+        $this->assertEquals($res5, $obj->toArray());
 
-		$obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
+        $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-		$res6 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 73, "enabled" => 0, "inactiveColor" => "b3a75fd77d41e4b05a9ca48090851664", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
-		$this->assertEquals($res6, $obj->toArray());
-	}
+        $res6 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 73, "enabled" => 0, "inactiveColor" => "b3a75fd77d41e4b05a9ca48090851664", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+        $this->assertEquals($res6, $obj->toArray());
+    }
 
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of the highcharts-bundle package.
  *
@@ -21,75 +22,75 @@ use PHPUnit_Framework_TestCase;
  */
 final class HighchartsPaneTest extends PHPUnit_Framework_TestCase {
 
-	/**
-	 * Tests the __construct() method.
-	 *
-	 * @return void
-	 */
-	public function testConstructor() {
+    /**
+     * Tests the __construct() method.
+     *
+     * @return void
+     */
+    public function testConstructor() {
 
-		$obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane(true);
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane(true);
 
-		$this->assertEquals(null, $obj1->getBackground());
-		$this->assertEquals(null, $obj1->getCenter());
-		$this->assertEquals(null, $obj1->getEndAngle());
-		$this->assertEquals(null, $obj1->getSize());
-		$this->assertEquals(null, $obj1->getStartAngle());
+        $this->assertEquals(null, $obj1->getBackground());
+        $this->assertEquals(null, $obj1->getCenter());
+        $this->assertEquals(null, $obj1->getEndAngle());
+        $this->assertEquals(null, $obj1->getSize());
+        $this->assertEquals(null, $obj1->getStartAngle());
 
-		$obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane(false);
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane(false);
 
-		$this->assertEquals(null, $obj0->getBackground());
-		$this->assertEquals(["50%", "50%"], $obj0->getCenter());
-		$this->assertEquals(null, $obj0->getEndAngle());
-		$this->assertEquals("85%", $obj0->getSize());
-		$this->assertEquals(null, $obj0->getStartAngle());
+        $this->assertEquals(null, $obj0->getBackground());
+        $this->assertEquals(["50%", "50%"], $obj0->getCenter());
+        $this->assertEquals(null, $obj0->getEndAngle());
+        $this->assertEquals("85%", $obj0->getSize());
+        $this->assertEquals(null, $obj0->getStartAngle());
     }
 
-	/**
-	 * Tests the jsonSerialize() method.
-	 *
-	 * @return void
-	 */
-	public function testJsonSerialize() {
+    /**
+     * Tests the jsonSerialize() method.
+     *
+     * @return void
+     */
+    public function testJsonSerialize() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane(true);
 
-		$this->assertEquals([], $obj->jsonSerialize());
-	}
+        $this->assertEquals([], $obj->jsonSerialize());
+    }
 
-	/**
-	 * Tests the toArray() method.
-	 *
-	 * @return void
-	 */
-	public function testToArray() {
+    /**
+     * Tests the toArray() method.
+     *
+     * @return void
+     */
+    public function testToArray() {
 
-		$obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane(true);
+        $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane(true);
 
-		$obj->setBackground(["background" => "d229bbf31eaeebc7c88897732d8b932d"]);
+        $obj->setBackground(["background" => "d229bbf31eaeebc7c88897732d8b932d"]);
 
-		$res1 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"]];
-		$this->assertEquals($res1, $obj->toArray());
+        $res1 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"]];
+        $this->assertEquals($res1, $obj->toArray());
 
-		$obj->setCenter(["center" => "adb115059e28d960fa8badfac5516667"]);
+        $obj->setCenter(["center" => "adb115059e28d960fa8badfac5516667"]);
 
-		$res2 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"]];
-		$this->assertEquals($res2, $obj->toArray());
+        $res2 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"]];
+        $this->assertEquals($res2, $obj->toArray());
 
-		$obj->setEndAngle(87);
+        $obj->setEndAngle(87);
 
-		$res3 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 87];
-		$this->assertEquals($res3, $obj->toArray());
+        $res3 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 87];
+        $this->assertEquals($res3, $obj->toArray());
 
-		$obj->setSize(60);
+        $obj->setSize(60);
 
-		$res4 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 87, "size" => 60];
-		$this->assertEquals($res4, $obj->toArray());
+        $res4 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 87, "size" => 60];
+        $this->assertEquals($res4, $obj->toArray());
 
-		$obj->setStartAngle(59);
+        $obj->setStartAngle(59);
 
-		$res5 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 87, "size" => 60, "startAngle" => 59];
-		$this->assertEquals($res5, $obj->toArray());
-	}
+        $res5 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 87, "size" => 60, "startAngle" => 59];
+        $this->assertEquals($res5, $obj->toArray());
+    }
 
 }
