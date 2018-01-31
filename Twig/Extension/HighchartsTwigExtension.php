@@ -125,7 +125,7 @@ final class HighchartsTwigExtension extends Twig_Extension {
     public function highchartsScriptFunction($script, $subdirectory = "code") {
 
         // Initialize the filename.
-        $filename = implode("/", [$subdirectory, $script . ".js"]);
+        $filename = implode("/", ["highcharts-5.0.14", $subdirectory, $script . ".js"]);
 
         // Initialize and check the filepath.
         $filepath = $this->getResourcesDirectory() . "/public/" . $filename;

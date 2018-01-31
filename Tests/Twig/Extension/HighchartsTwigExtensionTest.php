@@ -90,22 +90,22 @@ final class HighchartsTwigExtensionTest extends PHPUnit_Framework_TestCase {
             $obj->highchartsScriptFunction("inexistant-script");
         } catch (Exception $ex) {
             $this->assertInstanceOf(FileNotFoundException::class, $ex);
-            $this->assertEquals("The file \"code/inexistant-script.js\" is not found", $ex->getMessage());
+            $this->assertEquals("The file \"highcharts-5.0.14/code/inexistant-script.js\" is not found", $ex->getMessage());
         }
 
-        $res1 = "<script src=\"/bundles/highcharts/code/highcharts.js\" type=\"text/javascript\"></script>";
+        $res1 = "<script src=\"/bundles/highcharts/highcharts-5.0.14/code/highcharts.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($res1, $obj->highchartsScriptFunction("highcharts"));
 
-        $res2 = "<script src=\"/bundles/highcharts/code/modules/exporting.js\" type=\"text/javascript\"></script>";
+        $res2 = "<script src=\"/bundles/highcharts/highcharts-5.0.14/code/modules/exporting.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($res2, $obj->highchartsScriptFunction("modules/exporting"));
 
-        $res2_1 = "<script src=\"/bundles/highcharts/code/modules/exporting.js\" type=\"text/javascript\"></script>";
+        $res2_1 = "<script src=\"/bundles/highcharts/highcharts-5.0.14/code/modules/exporting.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($res2_1, $obj->highchartsScriptFunction("exporting", "code/modules"));
 
-        $res3 = "<script src=\"/bundles/highcharts/code/themes/dark-unica.js\" type=\"text/javascript\"></script>";
+        $res3 = "<script src=\"/bundles/highcharts/highcharts-5.0.14/code/themes/dark-unica.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($res3, $obj->highchartsScriptFunction("themes/dark-unica"));
 
-        $res3_1 = "<script src=\"/bundles/highcharts/code/themes/dark-unica.js\" type=\"text/javascript\"></script>";
+        $res3_1 = "<script src=\"/bundles/highcharts/highcharts-5.0.14/code/themes/dark-unica.js\" type=\"text/javascript\"></script>";
         $this->assertEquals($res3_1, $obj->highchartsScriptFunction("dark-unica", "code/themes"));
     }
 
