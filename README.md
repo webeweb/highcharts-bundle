@@ -10,6 +10,10 @@ to do the heavy lifting. The bundle include the excellent JS library
 
 Dry out your chart code by writing it all in PHP !
 
+Includes:
+
+- [Highcharts 5.14.0](https://www.highcharts.com/)
+
 ---
 
 ## Compatibility
