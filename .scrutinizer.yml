@@ -2,10 +2,11 @@
 checks:
     php:
         code_rating: true
-        duplication: true
+        duplication: false
 
 filter:
     excluded_paths:
+        - Resources/public/*
         - Tests/*
         - vendor/*
 
