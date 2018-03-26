@@ -31,7 +31,7 @@ final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Errorbar\HighchartsPoint(true);
 
-        $this->assertEquals(null, $obj1->getEvents());
+        $this->assertNull($obj1->getEvents());
     }
 
     /**

@@ -31,14 +31,14 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(true);
 
-        $this->assertEquals(null, $obj1->getButtonOptions());
-        $this->assertEquals(null, $obj1->getMenuItemHoverStyle());
-        $this->assertEquals(null, $obj1->getMenuItemStyle());
-        $this->assertEquals(null, $obj1->getMenuStyle());
+        $this->assertNull($obj1->getButtonOptions());
+        $this->assertNull($obj1->getMenuItemHoverStyle());
+        $this->assertNull($obj1->getMenuItemStyle());
+        $this->assertNull($obj1->getMenuStyle());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(false);
 
-        $this->assertEquals(null, $obj0->getButtonOptions());
+        $this->assertNull($obj0->getButtonOptions());
         $this->assertEquals(["background" => "#335cad", "color" => "#ffffff"], $obj0->getMenuItemHoverStyle());
         $this->assertEquals(["padding" => "0.5em 1em", "color" => "#333333", "background" => "none"], $obj0->getMenuItemStyle());
         $this->assertEquals(["border" => "1px solid #999999", "background" => "#ffffff", "padding" => "5px 0"], $obj0->getMenuStyle());

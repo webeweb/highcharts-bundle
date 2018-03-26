@@ -31,15 +31,15 @@ final class HighchartsResetZoomButtonTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(true);
 
-        $this->assertEquals(null, $obj1->getPosition());
-        $this->assertEquals(null, $obj1->getRelativeTo());
-        $this->assertEquals(null, $obj1->getTheme());
+        $this->assertNull($obj1->getPosition());
+        $this->assertNull($obj1->getRelativeTo());
+        $this->assertNull($obj1->getTheme());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(false);
 
-        $this->assertEquals(null, $obj0->getPosition());
+        $this->assertNull($obj0->getPosition());
         $this->assertEquals("plot", $obj0->getRelativeTo());
-        $this->assertEquals(null, $obj0->getTheme());
+        $this->assertNull($obj0->getTheme());
     }
 
     /**

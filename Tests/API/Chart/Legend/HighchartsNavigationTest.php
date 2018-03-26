@@ -31,12 +31,12 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation(true);
 
-        $this->assertEquals(null, $obj1->getActiveColor());
-        $this->assertEquals(null, $obj1->getAnimation());
-        $this->assertEquals(null, $obj1->getArrowSize());
-        $this->assertEquals(null, $obj1->getEnabled());
-        $this->assertEquals(null, $obj1->getInactiveColor());
-        $this->assertEquals(null, $obj1->getStyle());
+        $this->assertNull($obj1->getActiveColor());
+        $this->assertNull($obj1->getAnimation());
+        $this->assertNull($obj1->getArrowSize());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getInactiveColor());
+        $this->assertNull($obj1->getStyle());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsNavigation(false);
 
@@ -45,7 +45,7 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(12, $obj0->getArrowSize());
         $this->assertEquals(true, $obj0->getEnabled());
         $this->assertEquals("#cccccc", $obj0->getInactiveColor());
-        $this->assertEquals(null, $obj0->getStyle());
+        $this->assertNull($obj0->getStyle());
     }
 
     /**
@@ -74,29 +74,29 @@ final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
         $res1 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd"];
         $this->assertEquals($res1, $obj->toArray());
 
-        $obj->setAnimation(0);
+        $obj->setAnimation(1);
 
-        $res2 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0];
+        $res2 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 1];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setArrowSize(73);
+        $obj->setArrowSize(86);
 
-        $res3 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 73];
+        $res3 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 1, "arrowSize" => 86];
         $this->assertEquals($res3, $obj->toArray());
 
         $obj->setEnabled(0);
 
-        $res4 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 73, "enabled" => 0];
+        $res4 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 1, "arrowSize" => 86, "enabled" => 0];
         $this->assertEquals($res4, $obj->toArray());
 
         $obj->setInactiveColor("b3a75fd77d41e4b05a9ca48090851664");
 
-        $res5 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 73, "enabled" => 0, "inactiveColor" => "b3a75fd77d41e4b05a9ca48090851664"];
+        $res5 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 1, "arrowSize" => 86, "enabled" => 0, "inactiveColor" => "b3a75fd77d41e4b05a9ca48090851664"];
         $this->assertEquals($res5, $obj->toArray());
 
         $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-        $res6 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 0, "arrowSize" => 73, "enabled" => 0, "inactiveColor" => "b3a75fd77d41e4b05a9ca48090851664", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+        $res6 = ["activeColor" => "e696f1ec7e5059eee9c79e452a2547cd", "animation" => 1, "arrowSize" => 86, "enabled" => 0, "inactiveColor" => "b3a75fd77d41e4b05a9ca48090851664", "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
         $this->assertEquals($res6, $obj->toArray());
     }
 

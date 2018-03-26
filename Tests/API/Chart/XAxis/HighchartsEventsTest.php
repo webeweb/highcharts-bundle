@@ -31,11 +31,11 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsEvents(true);
 
-        $this->assertEquals(null, $obj1->getAfterBreaks());
-        $this->assertEquals(null, $obj1->getAfterSetExtremes());
-        $this->assertEquals(null, $obj1->getPointBreak());
-        $this->assertEquals(null, $obj1->getPointInBreak());
-        $this->assertEquals(null, $obj1->getSetExtremes());
+        $this->assertNull($obj1->getAfterBreaks());
+        $this->assertNull($obj1->getAfterSetExtremes());
+        $this->assertNull($obj1->getPointBreak());
+        $this->assertNull($obj1->getPointInBreak());
+        $this->assertNull($obj1->getSetExtremes());
     }
 
     /**

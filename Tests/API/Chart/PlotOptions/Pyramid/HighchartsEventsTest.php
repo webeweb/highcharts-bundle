@@ -31,14 +31,14 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pyramid\HighchartsEvents(true);
 
-        $this->assertEquals(null, $obj1->getAfterAnimate());
-        $this->assertEquals(null, $obj1->getCheckboxClick());
-        $this->assertEquals(null, $obj1->getClick());
-        $this->assertEquals(null, $obj1->getHide());
-        $this->assertEquals(null, $obj1->getLegendItemClick());
-        $this->assertEquals(null, $obj1->getMouseOut());
-        $this->assertEquals(null, $obj1->getMouseOver());
-        $this->assertEquals(null, $obj1->getShow());
+        $this->assertNull($obj1->getAfterAnimate());
+        $this->assertNull($obj1->getCheckboxClick());
+        $this->assertNull($obj1->getClick());
+        $this->assertNull($obj1->getHide());
+        $this->assertNull($obj1->getLegendItemClick());
+        $this->assertNull($obj1->getMouseOut());
+        $this->assertNull($obj1->getMouseOver());
+        $this->assertNull($obj1->getShow());
     }
 
     /**

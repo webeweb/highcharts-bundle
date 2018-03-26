@@ -31,17 +31,17 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsEvents(true);
 
-        $this->assertEquals(null, $obj1->getAddSeries());
-        $this->assertEquals(null, $obj1->getAfterPrint());
-        $this->assertEquals(null, $obj1->getBeforePrint());
-        $this->assertEquals(null, $obj1->getClick());
-        $this->assertEquals(null, $obj1->getDrilldown());
-        $this->assertEquals(null, $obj1->getDrillup());
-        $this->assertEquals(null, $obj1->getDrillupall());
-        $this->assertEquals(null, $obj1->getLoad());
-        $this->assertEquals(null, $obj1->getRedraw());
-        $this->assertEquals(null, $obj1->getRender());
-        $this->assertEquals(null, $obj1->getSelection());
+        $this->assertNull($obj1->getAddSeries());
+        $this->assertNull($obj1->getAfterPrint());
+        $this->assertNull($obj1->getBeforePrint());
+        $this->assertNull($obj1->getClick());
+        $this->assertNull($obj1->getDrilldown());
+        $this->assertNull($obj1->getDrillup());
+        $this->assertNull($obj1->getDrillupall());
+        $this->assertNull($obj1->getLoad());
+        $this->assertNull($obj1->getRedraw());
+        $this->assertNull($obj1->getRender());
+        $this->assertNull($obj1->getSelection());
     }
 
     /**

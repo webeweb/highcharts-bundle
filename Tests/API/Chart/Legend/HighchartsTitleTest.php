@@ -31,13 +31,13 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
 
-        $this->assertEquals(null, $obj1->getStyle());
-        $this->assertEquals(null, $obj1->getText());
+        $this->assertNull($obj1->getStyle());
+        $this->assertNull($obj1->getText());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(false);
 
         $this->assertEquals(["fontWeight" => "bold"], $obj0->getStyle());
-        $this->assertEquals(null, $obj0->getText());
+        $this->assertNull($obj0->getText());
     }
 
     /**

@@ -31,10 +31,10 @@ final class HighchartsFrameTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
 
-        $this->assertEquals(null, $obj1->getBack());
-        $this->assertEquals(null, $obj1->getBottom());
-        $this->assertEquals(null, $obj1->getSide());
-        $this->assertEquals(null, $obj1->getTop());
+        $this->assertNull($obj1->getBack());
+        $this->assertNull($obj1->getBottom());
+        $this->assertNull($obj1->getSide());
+        $this->assertNull($obj1->getTop());
     }
 
     /**

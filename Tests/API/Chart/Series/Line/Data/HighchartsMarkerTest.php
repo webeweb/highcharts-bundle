@@ -31,27 +31,27 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\Data\HighchartsMarker(true);
 
-        $this->assertEquals(null, $obj1->getEnabled());
-        $this->assertEquals(null, $obj1->getFillColor());
-        $this->assertEquals(null, $obj1->getHeight());
-        $this->assertEquals(null, $obj1->getLineColor());
-        $this->assertEquals(null, $obj1->getLineWidth());
-        $this->assertEquals(null, $obj1->getRadius());
-        $this->assertEquals(null, $obj1->getStates());
-        $this->assertEquals(null, $obj1->getSymbol());
-        $this->assertEquals(null, $obj1->getWidth());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getFillColor());
+        $this->assertNull($obj1->getHeight());
+        $this->assertNull($obj1->getLineColor());
+        $this->assertNull($obj1->getLineWidth());
+        $this->assertNull($obj1->getRadius());
+        $this->assertNull($obj1->getStates());
+        $this->assertNull($obj1->getSymbol());
+        $this->assertNull($obj1->getWidth());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\Data\HighchartsMarker(false);
 
-        $this->assertEquals(null, $obj0->getEnabled());
-        $this->assertEquals(null, $obj0->getFillColor());
-        $this->assertEquals(null, $obj0->getHeight());
+        $this->assertNull($obj0->getEnabled());
+        $this->assertNull($obj0->getFillColor());
+        $this->assertNull($obj0->getHeight());
         $this->assertEquals("#ffffff", $obj0->getLineColor());
         $this->assertEquals(0, $obj0->getLineWidth());
         $this->assertEquals(4, $obj0->getRadius());
-        $this->assertEquals(null, $obj0->getStates());
-        $this->assertEquals(null, $obj0->getSymbol());
-        $this->assertEquals(null, $obj0->getWidth());
+        $this->assertNull($obj0->getStates());
+        $this->assertNull($obj0->getSymbol());
+        $this->assertNull($obj0->getWidth());
     }
 
     /**
@@ -105,49 +105,49 @@ final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
 
         $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\Data\HighchartsMarker(true);
 
-        $obj->setEnabled(1);
+        $obj->setEnabled(0);
 
-        $res1 = ["enabled" => 1];
+        $res1 = ["enabled" => 0];
         $this->assertEquals($res1, $obj->toArray());
 
         $obj->setFillColor("1fde055d3ff900e04ca08bc82066d7fd");
 
-        $res2 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
+        $res2 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setHeight(81);
+        $obj->setHeight(78);
 
-        $res3 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 81];
+        $res3 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 78];
         $this->assertEquals($res3, $obj->toArray());
 
         $obj->setLineColor("c2580eebfdbdb9fc629f50cc147c3f63");
 
-        $res4 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 81, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
+        $res4 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 78, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
         $this->assertEquals($res4, $obj->toArray());
 
-        $obj->setLineWidth(17);
+        $obj->setLineWidth(97);
 
-        $res5 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 81, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 17];
+        $res5 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 78, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 97];
         $this->assertEquals($res5, $obj->toArray());
 
-        $obj->setRadius(8);
+        $obj->setRadius(78);
 
-        $res6 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 81, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 17, "radius" => 8];
+        $res6 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 78, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 97, "radius" => 78];
         $this->assertEquals($res6, $obj->toArray());
 
         $obj->setStates(new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\Data\Marker\HighchartsStates());
 
-        $res7 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 81, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 17, "radius" => 8, "states" => []];
+        $res7 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 78, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 97, "radius" => 78, "states" => []];
         $this->assertEquals($res7, $obj->toArray());
 
         $obj->setSymbol("triangle-down");
 
-        $res8 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 81, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 17, "radius" => 8, "states" => [], "symbol" => "triangle-down"];
+        $res8 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 78, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 97, "radius" => 78, "states" => [], "symbol" => "triangle-down"];
         $this->assertEquals($res8, $obj->toArray());
 
-        $obj->setWidth(14);
+        $obj->setWidth(43);
 
-        $res9 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 81, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 17, "radius" => 8, "states" => [], "symbol" => "triangle-down", "width" => 14];
+        $res9 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 78, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 97, "radius" => 78, "states" => [], "symbol" => "triangle-down", "width" => 43];
         $this->assertEquals($res9, $obj->toArray());
     }
 

@@ -31,29 +31,29 @@ final class HighchartsPlotBandsTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsPlotBands(true);
 
-        $this->assertEquals(null, $obj1->getBorderColor());
-        $this->assertEquals(null, $obj1->getBorderWidth());
-        $this->assertEquals(null, $obj1->getClassName());
-        $this->assertEquals(null, $obj1->getColor());
-        $this->assertEquals(null, $obj1->getEvents());
-        $this->assertEquals(null, $obj1->getFrom());
-        $this->assertEquals(null, $obj1->getId());
-        $this->assertEquals(null, $obj1->getLabel());
-        $this->assertEquals(null, $obj1->getTo());
-        $this->assertEquals(null, $obj1->getZIndex());
+        $this->assertNull($obj1->getBorderColor());
+        $this->assertNull($obj1->getBorderWidth());
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getEvents());
+        $this->assertNull($obj1->getFrom());
+        $this->assertNull($obj1->getId());
+        $this->assertNull($obj1->getLabel());
+        $this->assertNull($obj1->getTo());
+        $this->assertNull($obj1->getZIndex());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsPlotBands(false);
 
-        $this->assertEquals(null, $obj0->getBorderColor());
+        $this->assertNull($obj0->getBorderColor());
         $this->assertEquals(0, $obj0->getBorderWidth());
-        $this->assertEquals(null, $obj0->getClassName());
-        $this->assertEquals(null, $obj0->getColor());
-        $this->assertEquals(null, $obj0->getEvents());
-        $this->assertEquals(null, $obj0->getFrom());
-        $this->assertEquals(null, $obj0->getId());
-        $this->assertEquals(null, $obj0->getLabel());
-        $this->assertEquals(null, $obj0->getTo());
-        $this->assertEquals(null, $obj0->getZIndex());
+        $this->assertNull($obj0->getClassName());
+        $this->assertNull($obj0->getColor());
+        $this->assertNull($obj0->getEvents());
+        $this->assertNull($obj0->getFrom());
+        $this->assertNull($obj0->getId());
+        $this->assertNull($obj0->getLabel());
+        $this->assertNull($obj0->getTo());
+        $this->assertNull($obj0->getZIndex());
     }
 
     /**
@@ -112,49 +112,49 @@ final class HighchartsPlotBandsTest extends PHPUnit_Framework_TestCase {
         $res1 = ["borderColor" => "97da935a74593c55d78be9d1295aa994"];
         $this->assertEquals($res1, $obj->toArray());
 
-        $obj->setBorderWidth(91);
+        $obj->setBorderWidth(25);
 
-        $res2 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 91];
+        $res2 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 25];
         $this->assertEquals($res2, $obj->toArray());
 
         $obj->setClassName("6f66e878c62db60568a3487869695820");
 
-        $res3 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 91, "className" => "6f66e878c62db60568a3487869695820"];
+        $res3 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 25, "className" => "6f66e878c62db60568a3487869695820"];
         $this->assertEquals($res3, $obj->toArray());
 
         $obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
-        $res4 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 91, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
+        $res4 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 25, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
         $this->assertEquals($res4, $obj->toArray());
 
         $obj->setEvents(["events" => "16908b0605f2645dfcb4c3a8d248cef3"]);
 
-        $res5 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 91, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"]];
+        $res5 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 25, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"]];
         $this->assertEquals($res5, $obj->toArray());
 
-        $obj->setFrom(19);
+        $obj->setFrom(83);
 
-        $res6 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 91, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 19];
+        $res6 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 25, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 83];
         $this->assertEquals($res6, $obj->toArray());
 
         $obj->setId("b80bb7740288fda1f201890375a60c8f");
 
-        $res7 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 91, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 19, "id" => "b80bb7740288fda1f201890375a60c8f"];
+        $res7 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 25, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 83, "id" => "b80bb7740288fda1f201890375a60c8f"];
         $this->assertEquals($res7, $obj->toArray());
 
         $obj->setLabel(new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\PlotBands\HighchartsLabel());
 
-        $res8 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 91, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 19, "id" => "b80bb7740288fda1f201890375a60c8f", "label" => []];
+        $res8 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 25, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 83, "id" => "b80bb7740288fda1f201890375a60c8f", "label" => []];
         $this->assertEquals($res8, $obj->toArray());
 
-        $obj->setTo(35);
+        $obj->setTo(57);
 
-        $res9 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 91, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 19, "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "to" => 35];
+        $res9 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 25, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 83, "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "to" => 57];
         $this->assertEquals($res9, $obj->toArray());
 
-        $obj->setZIndex(94);
+        $obj->setZIndex(66);
 
-        $res10 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 91, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 19, "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "to" => 35, "zIndex" => 94];
+        $res10 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 25, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 83, "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "to" => 57, "zIndex" => 66];
         $this->assertEquals($res10, $obj->toArray());
     }
 

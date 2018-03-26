@@ -31,17 +31,17 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks(true);
 
-        $this->assertEquals(null, $obj1->getBreakSize());
-        $this->assertEquals(null, $obj1->getFrom());
-        $this->assertEquals(null, $obj1->getRepeat());
-        $this->assertEquals(null, $obj1->getTo());
+        $this->assertNull($obj1->getBreakSize());
+        $this->assertNull($obj1->getFrom());
+        $this->assertNull($obj1->getRepeat());
+        $this->assertNull($obj1->getTo());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks(false);
 
         $this->assertEquals(0, $obj0->getBreakSize());
-        $this->assertEquals(null, $obj0->getFrom());
+        $this->assertNull($obj0->getFrom());
         $this->assertEquals(0, $obj0->getRepeat());
-        $this->assertEquals(null, $obj0->getTo());
+        $this->assertNull($obj0->getTo());
     }
 
     /**
@@ -65,24 +65,24 @@ final class HighchartsBreaksTest extends PHPUnit_Framework_TestCase {
 
         $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsBreaks(true);
 
-        $obj->setBreakSize(73);
+        $obj->setBreakSize(25);
 
-        $res1 = ["breakSize" => 73];
+        $res1 = ["breakSize" => 25];
         $this->assertEquals($res1, $obj->toArray());
 
-        $obj->setFrom(79);
+        $obj->setFrom(25);
 
-        $res2 = ["breakSize" => 73, "from" => 79];
+        $res2 = ["breakSize" => 25, "from" => 25];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setRepeat(90);
+        $obj->setRepeat(72);
 
-        $res3 = ["breakSize" => 73, "from" => 79, "repeat" => 90];
+        $res3 = ["breakSize" => 25, "from" => 25, "repeat" => 72];
         $this->assertEquals($res3, $obj->toArray());
 
-        $obj->setTo(7);
+        $obj->setTo(65);
 
-        $res4 = ["breakSize" => 73, "from" => 79, "repeat" => 90, "to" => 7];
+        $res4 = ["breakSize" => 25, "from" => 25, "repeat" => 72, "to" => 65];
         $this->assertEquals($res4, $obj->toArray());
     }
 

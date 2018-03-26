@@ -31,14 +31,14 @@ final class HighchartsLevelsTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Treemap\HighchartsLevels(true);
 
-        $this->assertEquals(null, $obj1->getBorderColor());
-        $this->assertEquals(null, $obj1->getBorderDashStyle());
-        $this->assertEquals(null, $obj1->getBorderWidth());
-        $this->assertEquals(null, $obj1->getColor());
-        $this->assertEquals(null, $obj1->getDataLabels());
-        $this->assertEquals(null, $obj1->getLayoutAlgorithm());
-        $this->assertEquals(null, $obj1->getLayoutStartingDirection());
-        $this->assertEquals(null, $obj1->getLevel());
+        $this->assertNull($obj1->getBorderColor());
+        $this->assertNull($obj1->getBorderDashStyle());
+        $this->assertNull($obj1->getBorderWidth());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getDataLabels());
+        $this->assertNull($obj1->getLayoutAlgorithm());
+        $this->assertNull($obj1->getLayoutStartingDirection());
+        $this->assertNull($obj1->getLevel());
     }
 
     /**
@@ -72,34 +72,34 @@ final class HighchartsLevelsTest extends PHPUnit_Framework_TestCase {
         $res2 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81"];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setBorderWidth(11);
+        $obj->setBorderWidth(46);
 
-        $res3 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 11];
+        $res3 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 46];
         $this->assertEquals($res3, $obj->toArray());
 
         $obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
-        $res4 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 11, "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
+        $res4 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 46, "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
         $this->assertEquals($res4, $obj->toArray());
 
         $obj->setDataLabels(["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"]);
 
-        $res5 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 11, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"]];
+        $res5 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 46, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"]];
         $this->assertEquals($res5, $obj->toArray());
 
         $obj->setLayoutAlgorithm("strip");
 
-        $res6 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 11, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "layoutAlgorithm" => "strip"];
+        $res6 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 46, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "layoutAlgorithm" => "strip"];
         $this->assertEquals($res6, $obj->toArray());
 
         $obj->setLayoutStartingDirection("horizontal");
 
-        $res7 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 11, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "layoutAlgorithm" => "strip", "layoutStartingDirection" => "horizontal"];
+        $res7 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 46, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "layoutAlgorithm" => "strip", "layoutStartingDirection" => "horizontal"];
         $this->assertEquals($res7, $obj->toArray());
 
-        $obj->setLevel(12);
+        $obj->setLevel(30);
 
-        $res8 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 11, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "layoutAlgorithm" => "strip", "layoutStartingDirection" => "horizontal", "level" => 12];
+        $res8 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderDashStyle" => "8c4e9f2e21a77d83fc413d4c86d1cc81", "borderWidth" => 46, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "layoutAlgorithm" => "strip", "layoutStartingDirection" => "horizontal", "level" => 30];
         $this->assertEquals($res8, $obj->toArray());
     }
 

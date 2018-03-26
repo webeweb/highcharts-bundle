@@ -31,29 +31,29 @@ final class HighchartsPlotOptionsTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPlotOptions(true);
 
-        $this->assertEquals(null, $obj1->getArea());
-        $this->assertEquals(null, $obj1->getArearange());
-        $this->assertEquals(null, $obj1->getAreaspline());
-        $this->assertEquals(null, $obj1->getAreasplinerange());
-        $this->assertEquals(null, $obj1->getBar());
-        $this->assertEquals(null, $obj1->getBoxplot());
-        $this->assertEquals(null, $obj1->getBubble());
-        $this->assertEquals(null, $obj1->getColumn());
-        $this->assertEquals(null, $obj1->getColumnrange());
-        $this->assertEquals(null, $obj1->getErrorbar());
-        $this->assertEquals(null, $obj1->getFunnel());
-        $this->assertEquals(null, $obj1->getGauge());
-        $this->assertEquals(null, $obj1->getHeatmap());
-        $this->assertEquals(null, $obj1->getLine());
-        $this->assertEquals(null, $obj1->getPie());
-        $this->assertEquals(null, $obj1->getPolygon());
-        $this->assertEquals(null, $obj1->getPyramid());
-        $this->assertEquals(null, $obj1->getScatter());
-        $this->assertEquals(null, $obj1->getSeries());
-        $this->assertEquals(null, $obj1->getSolidgauge());
-        $this->assertEquals(null, $obj1->getSpline());
-        $this->assertEquals(null, $obj1->getTreemap());
-        $this->assertEquals(null, $obj1->getWaterfall());
+        $this->assertNull($obj1->getArea());
+        $this->assertNull($obj1->getArearange());
+        $this->assertNull($obj1->getAreaspline());
+        $this->assertNull($obj1->getAreasplinerange());
+        $this->assertNull($obj1->getBar());
+        $this->assertNull($obj1->getBoxplot());
+        $this->assertNull($obj1->getBubble());
+        $this->assertNull($obj1->getColumn());
+        $this->assertNull($obj1->getColumnrange());
+        $this->assertNull($obj1->getErrorbar());
+        $this->assertNull($obj1->getFunnel());
+        $this->assertNull($obj1->getGauge());
+        $this->assertNull($obj1->getHeatmap());
+        $this->assertNull($obj1->getLine());
+        $this->assertNull($obj1->getPie());
+        $this->assertNull($obj1->getPolygon());
+        $this->assertNull($obj1->getPyramid());
+        $this->assertNull($obj1->getScatter());
+        $this->assertNull($obj1->getSeries());
+        $this->assertNull($obj1->getSolidgauge());
+        $this->assertNull($obj1->getSpline());
+        $this->assertNull($obj1->getTreemap());
+        $this->assertNull($obj1->getWaterfall());
     }
 
     /**

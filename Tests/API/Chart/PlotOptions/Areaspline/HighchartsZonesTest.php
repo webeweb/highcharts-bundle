@@ -31,11 +31,11 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Areaspline\HighchartsZones(true);
 
-        $this->assertEquals(null, $obj1->getClassName());
-        $this->assertEquals(null, $obj1->getColor());
-        $this->assertEquals(null, $obj1->getDashStyle());
-        $this->assertEquals(null, $obj1->getFillColor());
-        $this->assertEquals(null, $obj1->getValue());
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getDashStyle());
+        $this->assertNull($obj1->getFillColor());
+        $this->assertNull($obj1->getValue());
     }
 
     /**
@@ -79,9 +79,9 @@ final class HighchartsZonesTest extends PHPUnit_Framework_TestCase {
         $res4 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
         $this->assertEquals($res4, $obj->toArray());
 
-        $obj->setValue(73);
+        $obj->setValue(98);
 
-        $res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "value" => 73];
+        $res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "value" => 98];
         $this->assertEquals($res5, $obj->toArray());
     }
 

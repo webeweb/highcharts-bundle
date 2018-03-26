@@ -31,37 +31,37 @@ final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Treemap\HighchartsData(true);
 
-        $this->assertEquals(null, $obj1->getClassName());
-        $this->assertEquals(null, $obj1->getColor());
-        $this->assertEquals(null, $obj1->getColorIndex());
-        $this->assertEquals(null, $obj1->getColorValue());
-        $this->assertEquals(null, $obj1->getDataLabels());
-        $this->assertEquals(null, $obj1->getDescription());
-        $this->assertEquals(null, $obj1->getDrilldown());
-        $this->assertEquals(null, $obj1->getEvents());
-        $this->assertEquals(null, $obj1->getId());
-        $this->assertEquals(null, $obj1->getLabelrank());
-        $this->assertEquals(null, $obj1->getName());
-        $this->assertEquals(null, $obj1->getParent());
-        $this->assertEquals(null, $obj1->getSelected());
-        $this->assertEquals(null, $obj1->getValue());
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getColorIndex());
+        $this->assertNull($obj1->getColorValue());
+        $this->assertNull($obj1->getDataLabels());
+        $this->assertNull($obj1->getDescription());
+        $this->assertNull($obj1->getDrilldown());
+        $this->assertNull($obj1->getEvents());
+        $this->assertNull($obj1->getId());
+        $this->assertNull($obj1->getLabelrank());
+        $this->assertNull($obj1->getName());
+        $this->assertNull($obj1->getParent());
+        $this->assertNull($obj1->getSelected());
+        $this->assertNull($obj1->getValue());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Treemap\HighchartsData(false);
 
-        $this->assertEquals(null, $obj0->getClassName());
-        $this->assertEquals(null, $obj0->getColor());
-        $this->assertEquals(null, $obj0->getColorIndex());
-        $this->assertEquals(null, $obj0->getColorValue());
-        $this->assertEquals(null, $obj0->getDataLabels());
-        $this->assertEquals(null, $obj0->getDescription());
-        $this->assertEquals(null, $obj0->getDrilldown());
-        $this->assertEquals(null, $obj0->getEvents());
-        $this->assertEquals(null, $obj0->getId());
-        $this->assertEquals(null, $obj0->getLabelrank());
-        $this->assertEquals(null, $obj0->getName());
-        $this->assertEquals(null, $obj0->getParent());
+        $this->assertNull($obj0->getClassName());
+        $this->assertNull($obj0->getColor());
+        $this->assertNull($obj0->getColorIndex());
+        $this->assertNull($obj0->getColorValue());
+        $this->assertNull($obj0->getDataLabels());
+        $this->assertNull($obj0->getDescription());
+        $this->assertNull($obj0->getDrilldown());
+        $this->assertNull($obj0->getEvents());
+        $this->assertNull($obj0->getId());
+        $this->assertNull($obj0->getLabelrank());
+        $this->assertNull($obj0->getName());
+        $this->assertNull($obj0->getParent());
         $this->assertEquals(false, $obj0->getSelected());
-        $this->assertEquals(null, $obj0->getValue());
+        $this->assertNull($obj0->getValue());
     }
 
     /**
@@ -125,64 +125,64 @@ final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
         $res2 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setColorIndex(7);
+        $obj->setColorIndex(62);
 
-        $res3 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 7];
+        $res3 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 62];
         $this->assertEquals($res3, $obj->toArray());
 
-        $obj->setColorValue(28);
+        $obj->setColorValue(31);
 
-        $res4 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 7, "colorValue" => 28];
+        $res4 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 62, "colorValue" => 31];
         $this->assertEquals($res4, $obj->toArray());
 
         $obj->setDataLabels(["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"]);
 
-        $res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 7, "colorValue" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"]];
+        $res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 62, "colorValue" => 31, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"]];
         $this->assertEquals($res5, $obj->toArray());
 
         $obj->setDescription("67daf92c833c41c95db874e18fcb2786");
 
-        $res6 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 7, "colorValue" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786"];
+        $res6 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 62, "colorValue" => 31, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786"];
         $this->assertEquals($res6, $obj->toArray());
 
         $obj->setDrilldown("e3fd48c72943315f737d8a814fda4fd1");
 
-        $res7 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 7, "colorValue" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1"];
+        $res7 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 62, "colorValue" => 31, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1"];
         $this->assertEquals($res7, $obj->toArray());
 
         $obj->setEvents(new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Treemap\Data\HighchartsEvents());
 
-        $res8 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 7, "colorValue" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => []];
+        $res8 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 62, "colorValue" => 31, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => []];
         $this->assertEquals($res8, $obj->toArray());
 
         $obj->setId("b80bb7740288fda1f201890375a60c8f");
 
-        $res9 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 7, "colorValue" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f"];
+        $res9 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 62, "colorValue" => 31, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f"];
         $this->assertEquals($res9, $obj->toArray());
 
-        $obj->setLabelrank(67);
+        $obj->setLabelrank(39);
 
-        $res10 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 7, "colorValue" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 67];
+        $res10 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 62, "colorValue" => 31, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 39];
         $this->assertEquals($res10, $obj->toArray());
 
         $obj->setName("b068931cc450442b63f5b3d276ea4297");
 
-        $res11 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 7, "colorValue" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 67, "name" => "b068931cc450442b63f5b3d276ea4297"];
+        $res11 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 62, "colorValue" => 31, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 39, "name" => "b068931cc450442b63f5b3d276ea4297"];
         $this->assertEquals($res11, $obj->toArray());
 
         $obj->setParent("d0e45878043844ffc41aac437e86b602");
 
-        $res12 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 7, "colorValue" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 67, "name" => "b068931cc450442b63f5b3d276ea4297", "parent" => "d0e45878043844ffc41aac437e86b602"];
+        $res12 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 62, "colorValue" => 31, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 39, "name" => "b068931cc450442b63f5b3d276ea4297", "parent" => "d0e45878043844ffc41aac437e86b602"];
         $this->assertEquals($res12, $obj->toArray());
 
         $obj->setSelected(0);
 
-        $res13 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 7, "colorValue" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 67, "name" => "b068931cc450442b63f5b3d276ea4297", "parent" => "d0e45878043844ffc41aac437e86b602", "selected" => 0];
+        $res13 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 62, "colorValue" => 31, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 39, "name" => "b068931cc450442b63f5b3d276ea4297", "parent" => "d0e45878043844ffc41aac437e86b602", "selected" => 0];
         $this->assertEquals($res13, $obj->toArray());
 
-        $obj->setValue(3);
+        $obj->setValue(39);
 
-        $res14 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 7, "colorValue" => 28, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 67, "name" => "b068931cc450442b63f5b3d276ea4297", "parent" => "d0e45878043844ffc41aac437e86b602", "selected" => 0, "value" => 3];
+        $res14 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 62, "colorValue" => 31, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 39, "name" => "b068931cc450442b63f5b3d276ea4297", "parent" => "d0e45878043844ffc41aac437e86b602", "selected" => 0, "value" => 39];
         $this->assertEquals($res14, $obj->toArray());
     }
 

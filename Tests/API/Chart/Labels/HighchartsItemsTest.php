@@ -31,8 +31,8 @@ final class HighchartsItemsTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Labels\HighchartsItems(true);
 
-        $this->assertEquals(null, $obj1->getHtml());
-        $this->assertEquals(null, $obj1->getStyle());
+        $this->assertNull($obj1->getHtml());
+        $this->assertNull($obj1->getStyle());
     }
 
     /**

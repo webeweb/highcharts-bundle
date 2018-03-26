@@ -31,31 +31,31 @@ final class HighchartsStackLabelsTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels(true);
 
-        $this->assertEquals(null, $obj1->getAlign());
-        $this->assertEquals(null, $obj1->getEnabled());
-        $this->assertEquals(null, $obj1->getFormat());
-        $this->assertEquals(null, $obj1->getFormatter());
-        $this->assertEquals(null, $obj1->getRotation());
-        $this->assertEquals(null, $obj1->getStyle());
-        $this->assertEquals(null, $obj1->getTextAlign());
-        $this->assertEquals(null, $obj1->getUseHTML());
-        $this->assertEquals(null, $obj1->getVerticalAlign());
-        $this->assertEquals(null, $obj1->getX());
-        $this->assertEquals(null, $obj1->getY());
+        $this->assertNull($obj1->getAlign());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getFormat());
+        $this->assertNull($obj1->getFormatter());
+        $this->assertNull($obj1->getRotation());
+        $this->assertNull($obj1->getStyle());
+        $this->assertNull($obj1->getTextAlign());
+        $this->assertNull($obj1->getUseHTML());
+        $this->assertNull($obj1->getVerticalAlign());
+        $this->assertNull($obj1->getX());
+        $this->assertNull($obj1->getY());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsStackLabels(false);
 
-        $this->assertEquals(null, $obj0->getAlign());
+        $this->assertNull($obj0->getAlign());
         $this->assertEquals(false, $obj0->getEnabled());
         $this->assertEquals("{total}", $obj0->getFormat());
-        $this->assertEquals(null, $obj0->getFormatter());
+        $this->assertNull($obj0->getFormatter());
         $this->assertEquals(0, $obj0->getRotation());
         $this->assertEquals(["color" => "#000000", "fontSize" => "11px", "fontWeight" => "bold", "textShadow" => "1px 1px contrast, -1px -1px contrast, -1px 1px contrast, 1px -1px contrast"], $obj0->getStyle());
-        $this->assertEquals(null, $obj0->getTextAlign());
+        $this->assertNull($obj0->getTextAlign());
         $this->assertEquals(false, $obj0->getUseHTML());
-        $this->assertEquals(null, $obj0->getVerticalAlign());
-        $this->assertEquals(null, $obj0->getX());
-        $this->assertEquals(null, $obj0->getY());
+        $this->assertNull($obj0->getVerticalAlign());
+        $this->assertNull($obj0->getX());
+        $this->assertNull($obj0->getY());
     }
 
     /**
@@ -99,39 +99,39 @@ final class HighchartsStackLabelsTest extends PHPUnit_Framework_TestCase {
         $res4 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
         $this->assertEquals($res4, $obj->toArray());
 
-        $obj->setRotation(24);
+        $obj->setRotation(88);
 
-        $res5 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 24];
+        $res5 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 88];
         $this->assertEquals($res5, $obj->toArray());
 
         $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-        $res6 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 24, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+        $res6 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 88, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
         $this->assertEquals($res6, $obj->toArray());
 
         $obj->setTextAlign("right");
 
-        $res7 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 24, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right"];
+        $res7 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 88, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right"];
         $this->assertEquals($res7, $obj->toArray());
 
         $obj->setUseHTML(0);
 
-        $res8 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 24, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 0];
+        $res8 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 88, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 0];
         $this->assertEquals($res8, $obj->toArray());
 
         $obj->setVerticalAlign("bottom");
 
-        $res9 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 24, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 0, "verticalAlign" => "bottom"];
+        $res9 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 88, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 0, "verticalAlign" => "bottom"];
         $this->assertEquals($res9, $obj->toArray());
 
-        $obj->setX(3);
+        $obj->setX(97);
 
-        $res10 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 24, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 0, "verticalAlign" => "bottom", "x" => 3];
+        $res10 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 88, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 0, "verticalAlign" => "bottom", "x" => 97];
         $this->assertEquals($res10, $obj->toArray());
 
-        $obj->setY(49);
+        $obj->setY(45);
 
-        $res11 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 24, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 0, "verticalAlign" => "bottom", "x" => 3, "y" => 49];
+        $res11 = ["align" => "right", "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "rotation" => 88, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "textAlign" => "right", "useHTML" => 0, "verticalAlign" => "bottom", "x" => 97, "y" => 45];
         $this->assertEquals($res11, $obj->toArray());
     }
 

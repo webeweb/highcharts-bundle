@@ -31,7 +31,7 @@ final class HighchartsStatesTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Heatmap\HighchartsStates(true);
 
-        $this->assertEquals(null, $obj1->getHover());
+        $this->assertNull($obj1->getHover());
     }
 
     /**

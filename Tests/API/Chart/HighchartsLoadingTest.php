@@ -31,10 +31,10 @@ final class HighchartsLoadingTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading(true);
 
-        $this->assertEquals(null, $obj1->getHideDuration());
-        $this->assertEquals(null, $obj1->getLabelStyle());
-        $this->assertEquals(null, $obj1->getShowDuration());
-        $this->assertEquals(null, $obj1->getStyle());
+        $this->assertNull($obj1->getHideDuration());
+        $this->assertNull($obj1->getLabelStyle());
+        $this->assertNull($obj1->getShowDuration());
+        $this->assertNull($obj1->getStyle());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading(false);
 
@@ -65,24 +65,24 @@ final class HighchartsLoadingTest extends PHPUnit_Framework_TestCase {
 
         $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLoading(true);
 
-        $obj->setHideDuration(82);
+        $obj->setHideDuration(62);
 
-        $res1 = ["hideDuration" => 82];
+        $res1 = ["hideDuration" => 62];
         $this->assertEquals($res1, $obj->toArray());
 
         $obj->setLabelStyle(["labelStyle" => "00faa433bf869443728e502b4f7c6850"]);
 
-        $res2 = ["hideDuration" => 82, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"]];
+        $res2 = ["hideDuration" => 62, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"]];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setShowDuration(24);
+        $obj->setShowDuration(34);
 
-        $res3 = ["hideDuration" => 82, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"], "showDuration" => 24];
+        $res3 = ["hideDuration" => 62, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"], "showDuration" => 34];
         $this->assertEquals($res3, $obj->toArray());
 
         $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-        $res4 = ["hideDuration" => 82, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"], "showDuration" => 24, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+        $res4 = ["hideDuration" => 62, "labelStyle" => ["labelStyle" => "00faa433bf869443728e502b4f7c6850"], "showDuration" => 34, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
         $this->assertEquals($res4, $obj->toArray());
     }
 

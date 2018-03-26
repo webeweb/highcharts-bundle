@@ -31,24 +31,24 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsLabels(true);
 
-        $this->assertEquals(null, $obj1->getAlign());
-        $this->assertEquals(null, $obj1->getAutoRotation());
-        $this->assertEquals(null, $obj1->getAutoRotationLimit());
-        $this->assertEquals(null, $obj1->getDistance());
-        $this->assertEquals(null, $obj1->getEnabled());
-        $this->assertEquals(null, $obj1->getFormat());
-        $this->assertEquals(null, $obj1->getFormatter());
-        $this->assertEquals(null, $obj1->getOverflow());
-        $this->assertEquals(null, $obj1->getPadding());
-        $this->assertEquals(null, $obj1->getReserveSpace());
-        $this->assertEquals(null, $obj1->getRotation());
-        $this->assertEquals(null, $obj1->getStaggerLines());
-        $this->assertEquals(null, $obj1->getStep());
-        $this->assertEquals(null, $obj1->getStyle());
-        $this->assertEquals(null, $obj1->getUseHTML());
-        $this->assertEquals(null, $obj1->getX());
-        $this->assertEquals(null, $obj1->getY());
-        $this->assertEquals(null, $obj1->getZIndex());
+        $this->assertNull($obj1->getAlign());
+        $this->assertNull($obj1->getAutoRotation());
+        $this->assertNull($obj1->getAutoRotationLimit());
+        $this->assertNull($obj1->getDistance());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getFormat());
+        $this->assertNull($obj1->getFormatter());
+        $this->assertNull($obj1->getOverflow());
+        $this->assertNull($obj1->getPadding());
+        $this->assertNull($obj1->getReserveSpace());
+        $this->assertNull($obj1->getRotation());
+        $this->assertNull($obj1->getStaggerLines());
+        $this->assertNull($obj1->getStep());
+        $this->assertNull($obj1->getStyle());
+        $this->assertNull($obj1->getUseHTML());
+        $this->assertNull($obj1->getX());
+        $this->assertNull($obj1->getY());
+        $this->assertNull($obj1->getZIndex());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsLabels(false);
 
@@ -58,16 +58,16 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(-25, $obj0->getDistance());
         $this->assertEquals(true, $obj0->getEnabled());
         $this->assertEquals("{value}", $obj0->getFormat());
-        $this->assertEquals(null, $obj0->getFormatter());
-        $this->assertEquals(null, $obj0->getOverflow());
+        $this->assertNull($obj0->getFormatter());
+        $this->assertNull($obj0->getOverflow());
         $this->assertEquals(5, $obj0->getPadding());
         $this->assertEquals(true, $obj0->getReserveSpace());
         $this->assertEquals(0, $obj0->getRotation());
-        $this->assertEquals(null, $obj0->getStaggerLines());
-        $this->assertEquals(null, $obj0->getStep());
+        $this->assertNull($obj0->getStaggerLines());
+        $this->assertNull($obj0->getStep());
         $this->assertEquals(["color" => "#666666", "cursor" => "default", "fontSize" => "11px"], $obj0->getStyle());
         $this->assertEquals(false, $obj0->getUseHTML());
-        $this->assertEquals(null, $obj0->getX());
+        $this->assertNull($obj0->getX());
         $this->assertEquals(3, $obj0->getY());
         $this->assertEquals(7, $obj0->getZIndex());
     }
@@ -103,84 +103,84 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
         $res2 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"]];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setAutoRotationLimit(97);
+        $obj->setAutoRotationLimit(4);
 
-        $res3 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97];
+        $res3 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4];
         $this->assertEquals($res3, $obj->toArray());
 
-        $obj->setDistance(52);
+        $obj->setDistance(46);
 
-        $res4 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52];
+        $res4 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46];
         $this->assertEquals($res4, $obj->toArray());
 
-        $obj->setEnabled(0);
+        $obj->setEnabled(1);
 
-        $res5 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52, "enabled" => 0];
+        $res5 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46, "enabled" => 1];
         $this->assertEquals($res5, $obj->toArray());
 
         $obj->setFormat("1ddcb92ade31c8fbd370001f9b29a7d9");
 
-        $res6 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9"];
+        $res6 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9"];
         $this->assertEquals($res6, $obj->toArray());
 
         $obj->setFormatter("f2ffc59487832cbad265a8fef2133592");
 
-        $res7 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
+        $res7 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592"];
         $this->assertEquals($res7, $obj->toArray());
 
         $obj->setOverflow("justify");
 
-        $res8 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify"];
+        $res8 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify"];
         $this->assertEquals($res8, $obj->toArray());
 
-        $obj->setPadding(88);
+        $obj->setPadding(30);
 
-        $res9 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 88];
+        $res9 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 30];
         $this->assertEquals($res9, $obj->toArray());
 
-        $obj->setReserveSpace(1);
+        $obj->setReserveSpace(0);
 
-        $res10 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 88, "reserveSpace" => 1];
+        $res10 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 30, "reserveSpace" => 0];
         $this->assertEquals($res10, $obj->toArray());
 
-        $obj->setRotation(43);
+        $obj->setRotation(50);
 
-        $res11 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 88, "reserveSpace" => 1, "rotation" => 43];
+        $res11 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 30, "reserveSpace" => 0, "rotation" => 50];
         $this->assertEquals($res11, $obj->toArray());
 
-        $obj->setStaggerLines(81);
+        $obj->setStaggerLines(97);
 
-        $res12 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 88, "reserveSpace" => 1, "rotation" => 43, "staggerLines" => 81];
+        $res12 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 30, "reserveSpace" => 0, "rotation" => 50, "staggerLines" => 97];
         $this->assertEquals($res12, $obj->toArray());
 
-        $obj->setStep(63);
+        $obj->setStep(54);
 
-        $res13 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 88, "reserveSpace" => 1, "rotation" => 43, "staggerLines" => 81, "step" => 63];
+        $res13 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 30, "reserveSpace" => 0, "rotation" => 50, "staggerLines" => 97, "step" => 54];
         $this->assertEquals($res13, $obj->toArray());
 
         $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-        $res14 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 88, "reserveSpace" => 1, "rotation" => 43, "staggerLines" => 81, "step" => 63, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+        $res14 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 30, "reserveSpace" => 0, "rotation" => 50, "staggerLines" => 97, "step" => 54, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
         $this->assertEquals($res14, $obj->toArray());
 
-        $obj->setUseHTML(0);
+        $obj->setUseHTML(1);
 
-        $res15 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 88, "reserveSpace" => 1, "rotation" => 43, "staggerLines" => 81, "step" => 63, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0];
+        $res15 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 30, "reserveSpace" => 0, "rotation" => 50, "staggerLines" => 97, "step" => 54, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1];
         $this->assertEquals($res15, $obj->toArray());
 
-        $obj->setX(34);
+        $obj->setX(67);
 
-        $res16 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 88, "reserveSpace" => 1, "rotation" => 43, "staggerLines" => 81, "step" => 63, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "x" => 34];
+        $res16 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 30, "reserveSpace" => 0, "rotation" => 50, "staggerLines" => 97, "step" => 54, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "x" => 67];
         $this->assertEquals($res16, $obj->toArray());
 
-        $obj->setY(13);
+        $obj->setY(58);
 
-        $res17 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 88, "reserveSpace" => 1, "rotation" => 43, "staggerLines" => 81, "step" => 63, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "x" => 34, "y" => 13];
+        $res17 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 30, "reserveSpace" => 0, "rotation" => 50, "staggerLines" => 97, "step" => 54, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "x" => 67, "y" => 58];
         $this->assertEquals($res17, $obj->toArray());
 
-        $obj->setZIndex(40);
+        $obj->setZIndex(8);
 
-        $res18 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 97, "distance" => 52, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 88, "reserveSpace" => 1, "rotation" => 43, "staggerLines" => 81, "step" => 63, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "x" => 34, "y" => 13, "zIndex" => 40];
+        $res18 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 4, "distance" => 46, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 30, "reserveSpace" => 0, "rotation" => 50, "staggerLines" => 97, "step" => 54, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "x" => 67, "y" => 58, "zIndex" => 8];
         $this->assertEquals($res18, $obj->toArray());
     }
 

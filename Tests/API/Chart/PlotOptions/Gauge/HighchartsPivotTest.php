@@ -31,10 +31,10 @@ final class HighchartsPivotTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(true);
 
-        $this->assertEquals(null, $obj1->getBackgroundColor());
-        $this->assertEquals(null, $obj1->getBorderColor());
-        $this->assertEquals(null, $obj1->getBorderWidth());
-        $this->assertEquals(null, $obj1->getRadius());
+        $this->assertNull($obj1->getBackgroundColor());
+        $this->assertNull($obj1->getBorderColor());
+        $this->assertNull($obj1->getBorderWidth());
+        $this->assertNull($obj1->getRadius());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(false);
 
@@ -75,14 +75,14 @@ final class HighchartsPivotTest extends PHPUnit_Framework_TestCase {
         $res2 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994"];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setBorderWidth(4);
+        $obj->setBorderWidth(60);
 
-        $res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 4];
+        $res3 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 60];
         $this->assertEquals($res3, $obj->toArray());
 
-        $obj->setRadius(42);
+        $obj->setRadius(67);
 
-        $res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 4, "radius" => 42];
+        $res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 60, "radius" => 67];
         $this->assertEquals($res4, $obj->toArray());
     }
 

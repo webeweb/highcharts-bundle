@@ -31,8 +31,8 @@ final class HighchartsTopTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsTop(true);
 
-        $this->assertEquals(null, $obj1->getColor());
-        $this->assertEquals(null, $obj1->getSize());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getSize());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsTop(false);
 
@@ -66,9 +66,9 @@ final class HighchartsTopTest extends PHPUnit_Framework_TestCase {
         $res1 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
         $this->assertEquals($res1, $obj->toArray());
 
-        $obj->setSize(82);
+        $obj->setSize(94);
 
-        $res2 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 82];
+        $res2 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 94];
         $this->assertEquals($res2, $obj->toArray());
     }
 

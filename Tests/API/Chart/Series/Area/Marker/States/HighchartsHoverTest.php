@@ -31,22 +31,22 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\Marker\States\HighchartsHover(true);
 
-        $this->assertEquals(null, $obj1->getEnabled());
-        $this->assertEquals(null, $obj1->getFillColor());
-        $this->assertEquals(null, $obj1->getLineColor());
-        $this->assertEquals(null, $obj1->getLineWidth());
-        $this->assertEquals(null, $obj1->getLineWidthPlus());
-        $this->assertEquals(null, $obj1->getRadius());
-        $this->assertEquals(null, $obj1->getRadiusPlus());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getFillColor());
+        $this->assertNull($obj1->getLineColor());
+        $this->assertNull($obj1->getLineWidth());
+        $this->assertNull($obj1->getLineWidthPlus());
+        $this->assertNull($obj1->getRadius());
+        $this->assertNull($obj1->getRadiusPlus());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\Marker\States\HighchartsHover(false);
 
         $this->assertEquals(true, $obj0->getEnabled());
-        $this->assertEquals(null, $obj0->getFillColor());
+        $this->assertNull($obj0->getFillColor());
         $this->assertEquals("#ffffff", $obj0->getLineColor());
         $this->assertEquals(0, $obj0->getLineWidth());
         $this->assertEquals(1, $obj0->getLineWidthPlus());
-        $this->assertEquals(null, $obj0->getRadius());
+        $this->assertNull($obj0->getRadius());
         $this->assertEquals(2, $obj0->getRadiusPlus());
     }
 
@@ -71,39 +71,39 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 
         $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\Marker\States\HighchartsHover(true);
 
-        $obj->setEnabled(0);
+        $obj->setEnabled(1);
 
-        $res1 = ["enabled" => 0];
+        $res1 = ["enabled" => 1];
         $this->assertEquals($res1, $obj->toArray());
 
         $obj->setFillColor("1fde055d3ff900e04ca08bc82066d7fd");
 
-        $res2 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
+        $res2 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd"];
         $this->assertEquals($res2, $obj->toArray());
 
         $obj->setLineColor("c2580eebfdbdb9fc629f50cc147c3f63");
 
-        $res3 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
+        $res3 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63"];
         $this->assertEquals($res3, $obj->toArray());
 
-        $obj->setLineWidth(85);
+        $obj->setLineWidth(12);
 
-        $res4 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 85];
+        $res4 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 12];
         $this->assertEquals($res4, $obj->toArray());
 
-        $obj->setLineWidthPlus(81);
+        $obj->setLineWidthPlus(11);
 
-        $res5 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 85, "lineWidthPlus" => 81];
+        $res5 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 12, "lineWidthPlus" => 11];
         $this->assertEquals($res5, $obj->toArray());
 
-        $obj->setRadius(75);
+        $obj->setRadius(39);
 
-        $res6 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 85, "lineWidthPlus" => 81, "radius" => 75];
+        $res6 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 12, "lineWidthPlus" => 11, "radius" => 39];
         $this->assertEquals($res6, $obj->toArray());
 
-        $obj->setRadiusPlus(49);
+        $obj->setRadiusPlus(75);
 
-        $res7 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 85, "lineWidthPlus" => 81, "radius" => 75, "radiusPlus" => 49];
+        $res7 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 12, "lineWidthPlus" => 11, "radius" => 39, "radiusPlus" => 75];
         $this->assertEquals($res7, $obj->toArray());
     }
 

@@ -31,14 +31,14 @@ final class HighchartsPositionTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition(true);
 
-        $this->assertEquals(null, $obj1->getAlign());
-        $this->assertEquals(null, $obj1->getVerticalAlign());
-        $this->assertEquals(null, $obj1->getX());
-        $this->assertEquals(null, $obj1->getY());
+        $this->assertNull($obj1->getAlign());
+        $this->assertNull($obj1->getVerticalAlign());
+        $this->assertNull($obj1->getX());
+        $this->assertNull($obj1->getY());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\ResetZoomButton\HighchartsPosition(false);
 
-        $this->assertEquals(null, $obj0->getAlign());
+        $this->assertNull($obj0->getAlign());
         $this->assertEquals("top", $obj0->getVerticalAlign());
         $this->assertEquals(-10, $obj0->getX());
         $this->assertEquals(10, $obj0->getY());
@@ -75,14 +75,14 @@ final class HighchartsPositionTest extends PHPUnit_Framework_TestCase {
         $res2 = ["align" => "f792d1afb0399dce47533bead9d71a8a", "verticalAlign" => "bottom"];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setX(83);
+        $obj->setX(42);
 
-        $res3 = ["align" => "f792d1afb0399dce47533bead9d71a8a", "verticalAlign" => "bottom", "x" => 83];
+        $res3 = ["align" => "f792d1afb0399dce47533bead9d71a8a", "verticalAlign" => "bottom", "x" => 42];
         $this->assertEquals($res3, $obj->toArray());
 
-        $obj->setY(34);
+        $obj->setY(54);
 
-        $res4 = ["align" => "f792d1afb0399dce47533bead9d71a8a", "verticalAlign" => "bottom", "x" => 83, "y" => 34];
+        $res4 = ["align" => "f792d1afb0399dce47533bead9d71a8a", "verticalAlign" => "bottom", "x" => 42, "y" => 54];
         $this->assertEquals($res4, $obj->toArray());
     }
 

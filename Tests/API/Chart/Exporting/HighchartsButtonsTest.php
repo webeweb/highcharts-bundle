@@ -31,7 +31,7 @@ final class HighchartsButtonsTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\HighchartsButtons(true);
 
-        $this->assertEquals(null, $obj1->getContextButton());
+        $this->assertNull($obj1->getContextButton());
     }
 
     /**

@@ -31,19 +31,19 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover(true);
 
-        $this->assertEquals(null, $obj1->getAnimation());
-        $this->assertEquals(null, $obj1->getBorderColor());
-        $this->assertEquals(null, $obj1->getBrightness());
-        $this->assertEquals(null, $obj1->getColor());
-        $this->assertEquals(null, $obj1->getEnabled());
-        $this->assertEquals(null, $obj1->getOpacity());
+        $this->assertNull($obj1->getAnimation());
+        $this->assertNull($obj1->getBorderColor());
+        $this->assertNull($obj1->getBrightness());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getOpacity());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover(false);
 
         $this->assertEquals(["duration" => 50], $obj0->getAnimation());
-        $this->assertEquals(null, $obj0->getBorderColor());
+        $this->assertNull($obj0->getBorderColor());
         $this->assertEquals(0.1, $obj0->getBrightness());
-        $this->assertEquals(null, $obj0->getColor());
+        $this->assertNull($obj0->getColor());
         $this->assertEquals(true, $obj0->getEnabled());
         $this->assertEquals(0.75, $obj0->getOpacity());
     }
@@ -79,24 +79,24 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
         $res2 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994"];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setBrightness(83);
+        $obj->setBrightness(46);
 
-        $res3 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 83];
+        $res3 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 46];
         $this->assertEquals($res3, $obj->toArray());
 
         $obj->setColor("70dda5dfb8053dc6d1c492574bce9bfd");
 
-        $res4 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 83, "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
+        $res4 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 46, "color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
         $this->assertEquals($res4, $obj->toArray());
 
-        $obj->setEnabled(0);
+        $obj->setEnabled(1);
 
-        $res5 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 83, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "enabled" => 0];
+        $res5 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 46, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "enabled" => 1];
         $this->assertEquals($res5, $obj->toArray());
 
-        $obj->setOpacity(4);
+        $obj->setOpacity(52);
 
-        $res6 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 83, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "enabled" => 0, "opacity" => 4];
+        $res6 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 46, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "enabled" => 1, "opacity" => 52];
         $this->assertEquals($res6, $obj->toArray());
     }
 

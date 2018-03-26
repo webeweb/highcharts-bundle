@@ -31,21 +31,21 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Spline\States\HighchartsHover(true);
 
-        $this->assertEquals(null, $obj1->getAnimation());
-        $this->assertEquals(null, $obj1->getEnabled());
-        $this->assertEquals(null, $obj1->getHalo());
-        $this->assertEquals(null, $obj1->getLineWidth());
-        $this->assertEquals(null, $obj1->getLineWidthPlus());
-        $this->assertEquals(null, $obj1->getMarker());
+        $this->assertNull($obj1->getAnimation());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getHalo());
+        $this->assertNull($obj1->getLineWidth());
+        $this->assertNull($obj1->getLineWidthPlus());
+        $this->assertNull($obj1->getMarker());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Spline\States\HighchartsHover(false);
 
         $this->assertEquals(["duration" => 50], $obj0->getAnimation());
         $this->assertEquals(true, $obj0->getEnabled());
-        $this->assertEquals(null, $obj0->getHalo());
+        $this->assertNull($obj0->getHalo());
         $this->assertEquals(2, $obj0->getLineWidth());
         $this->assertEquals(1, $obj0->getLineWidthPlus());
-        $this->assertEquals(null, $obj0->getMarker());
+        $this->assertNull($obj0->getMarker());
     }
 
     /**
@@ -99,34 +99,34 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 
         $obj = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Spline\States\HighchartsHover(true);
 
-        $obj->setAnimation(0);
+        $obj->setAnimation(1);
 
-        $res1 = ["animation" => 0];
+        $res1 = ["animation" => 1];
         $this->assertEquals($res1, $obj->toArray());
 
         $obj->setEnabled(0);
 
-        $res2 = ["animation" => 0, "enabled" => 0];
+        $res2 = ["animation" => 1, "enabled" => 0];
         $this->assertEquals($res2, $obj->toArray());
 
         $obj->setHalo(["halo" => "57f842286171094855e51fc3a541c1e2"]);
 
-        $res3 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"]];
+        $res3 = ["animation" => 1, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"]];
         $this->assertEquals($res3, $obj->toArray());
 
-        $obj->setLineWidth(47);
+        $obj->setLineWidth(95);
 
-        $res4 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 47];
+        $res4 = ["animation" => 1, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 95];
         $this->assertEquals($res4, $obj->toArray());
 
-        $obj->setLineWidthPlus(25);
+        $obj->setLineWidthPlus(58);
 
-        $res5 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 47, "lineWidthPlus" => 25];
+        $res5 = ["animation" => 1, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 95, "lineWidthPlus" => 58];
         $this->assertEquals($res5, $obj->toArray());
 
         $obj->setMarker(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Spline\States\Hover\HighchartsMarker());
 
-        $res6 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 47, "lineWidthPlus" => 25, "marker" => []];
+        $res6 = ["animation" => 1, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 95, "lineWidthPlus" => 58, "marker" => []];
         $this->assertEquals($res6, $obj->toArray());
     }
 

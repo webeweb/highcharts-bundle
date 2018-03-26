@@ -31,21 +31,21 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pyramid\States\HighchartsHover(true);
 
-        $this->assertEquals(null, $obj1->getAnimation());
-        $this->assertEquals(null, $obj1->getEnabled());
-        $this->assertEquals(null, $obj1->getHalo());
-        $this->assertEquals(null, $obj1->getLineWidth());
-        $this->assertEquals(null, $obj1->getLineWidthPlus());
-        $this->assertEquals(null, $obj1->getMarker());
+        $this->assertNull($obj1->getAnimation());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getHalo());
+        $this->assertNull($obj1->getLineWidth());
+        $this->assertNull($obj1->getLineWidthPlus());
+        $this->assertNull($obj1->getMarker());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pyramid\States\HighchartsHover(false);
 
         $this->assertEquals(["duration" => 50], $obj0->getAnimation());
         $this->assertEquals(true, $obj0->getEnabled());
-        $this->assertEquals(null, $obj0->getHalo());
+        $this->assertNull($obj0->getHalo());
         $this->assertEquals(2, $obj0->getLineWidth());
         $this->assertEquals(1, $obj0->getLineWidthPlus());
-        $this->assertEquals(null, $obj0->getMarker());
+        $this->assertNull($obj0->getMarker());
     }
 
     /**
@@ -114,19 +114,19 @@ final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
         $res3 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"]];
         $this->assertEquals($res3, $obj->toArray());
 
-        $obj->setLineWidth(15);
+        $obj->setLineWidth(36);
 
-        $res4 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 15];
+        $res4 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 36];
         $this->assertEquals($res4, $obj->toArray());
 
-        $obj->setLineWidthPlus(72);
+        $obj->setLineWidthPlus(66);
 
-        $res5 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 15, "lineWidthPlus" => 72];
+        $res5 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 36, "lineWidthPlus" => 66];
         $this->assertEquals($res5, $obj->toArray());
 
         $obj->setMarker(new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Pyramid\States\Hover\HighchartsMarker());
 
-        $res6 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 15, "lineWidthPlus" => 72, "marker" => []];
+        $res6 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 36, "lineWidthPlus" => 66, "marker" => []];
         $this->assertEquals($res6, $obj->toArray());
     }
 

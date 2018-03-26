@@ -31,12 +31,12 @@ final class HighchartsLabelsTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels(true);
 
-        $this->assertEquals(null, $obj1->getItems());
-        $this->assertEquals(null, $obj1->getStyle());
+        $this->assertNull($obj1->getItems());
+        $this->assertNull($obj1->getStyle());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLabels(false);
 
-        $this->assertEquals(null, $obj0->getItems());
+        $this->assertNull($obj0->getItems());
         $this->assertEquals(["color" => "#333333"], $obj0->getStyle());
     }
 

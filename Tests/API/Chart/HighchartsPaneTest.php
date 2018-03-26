@@ -31,19 +31,19 @@ final class HighchartsPaneTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane(true);
 
-        $this->assertEquals(null, $obj1->getBackground());
-        $this->assertEquals(null, $obj1->getCenter());
-        $this->assertEquals(null, $obj1->getEndAngle());
-        $this->assertEquals(null, $obj1->getSize());
-        $this->assertEquals(null, $obj1->getStartAngle());
+        $this->assertNull($obj1->getBackground());
+        $this->assertNull($obj1->getCenter());
+        $this->assertNull($obj1->getEndAngle());
+        $this->assertNull($obj1->getSize());
+        $this->assertNull($obj1->getStartAngle());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPane(false);
 
-        $this->assertEquals(null, $obj0->getBackground());
+        $this->assertNull($obj0->getBackground());
         $this->assertEquals(["50%", "50%"], $obj0->getCenter());
-        $this->assertEquals(null, $obj0->getEndAngle());
+        $this->assertNull($obj0->getEndAngle());
         $this->assertEquals("85%", $obj0->getSize());
-        $this->assertEquals(null, $obj0->getStartAngle());
+        $this->assertNull($obj0->getStartAngle());
     }
 
     /**
@@ -77,19 +77,19 @@ final class HighchartsPaneTest extends PHPUnit_Framework_TestCase {
         $res2 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"]];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setEndAngle(87);
+        $obj->setEndAngle(12);
 
-        $res3 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 87];
+        $res3 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 12];
         $this->assertEquals($res3, $obj->toArray());
 
-        $obj->setSize(60);
+        $obj->setSize(59);
 
-        $res4 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 87, "size" => 60];
+        $res4 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 12, "size" => 59];
         $this->assertEquals($res4, $obj->toArray());
 
-        $obj->setStartAngle(59);
+        $obj->setStartAngle(38);
 
-        $res5 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 87, "size" => 60, "startAngle" => 59];
+        $res5 = ["background" => ["background" => "d229bbf31eaeebc7c88897732d8b932d"], "center" => ["center" => "adb115059e28d960fa8badfac5516667"], "endAngle" => 12, "size" => 59, "startAngle" => 38];
         $this->assertEquals($res5, $obj->toArray());
     }
 

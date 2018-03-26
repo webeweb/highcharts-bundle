@@ -31,9 +31,9 @@ final class HighchartsKeyboardNavigationTest extends PHPUnit_Framework_TestCase 
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation(true);
 
-        $this->assertEquals(null, $obj1->getEnabled());
-        $this->assertEquals(null, $obj1->getSkipNullPoints());
-        $this->assertEquals(null, $obj1->getTabThroughChartElements());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getSkipNullPoints());
+        $this->assertNull($obj1->getTabThroughChartElements());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation(false);
 
@@ -68,14 +68,14 @@ final class HighchartsKeyboardNavigationTest extends PHPUnit_Framework_TestCase 
         $res1 = ["enabled" => 1];
         $this->assertEquals($res1, $obj->toArray());
 
-        $obj->setSkipNullPoints(1);
+        $obj->setSkipNullPoints(0);
 
-        $res2 = ["enabled" => 1, "skipNullPoints" => 1];
+        $res2 = ["enabled" => 1, "skipNullPoints" => 0];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setTabThroughChartElements(1);
+        $obj->setTabThroughChartElements(0);
 
-        $res3 = ["enabled" => 1, "skipNullPoints" => 1, "tabThroughChartElements" => 1];
+        $res3 = ["enabled" => 1, "skipNullPoints" => 0, "tabThroughChartElements" => 0];
         $this->assertEquals($res3, $obj->toArray());
     }
 

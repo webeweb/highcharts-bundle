@@ -31,13 +31,13 @@ final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Waterfall\Point\HighchartsEvents(true);
 
-        $this->assertEquals(null, $obj1->getClick());
-        $this->assertEquals(null, $obj1->getMouseOut());
-        $this->assertEquals(null, $obj1->getMouseOver());
-        $this->assertEquals(null, $obj1->getRemove());
-        $this->assertEquals(null, $obj1->getSelect());
-        $this->assertEquals(null, $obj1->getUnselect());
-        $this->assertEquals(null, $obj1->getUpdate());
+        $this->assertNull($obj1->getClick());
+        $this->assertNull($obj1->getMouseOut());
+        $this->assertNull($obj1->getMouseOver());
+        $this->assertNull($obj1->getRemove());
+        $this->assertNull($obj1->getSelect());
+        $this->assertNull($obj1->getUnselect());
+        $this->assertNull($obj1->getUpdate());
     }
 
     /**

@@ -31,15 +31,15 @@ final class HighchartsDrillUpButtonTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton(true);
 
-        $this->assertEquals(null, $obj1->getPosition());
-        $this->assertEquals(null, $obj1->getRelativeTo());
-        $this->assertEquals(null, $obj1->getTheme());
+        $this->assertNull($obj1->getPosition());
+        $this->assertNull($obj1->getRelativeTo());
+        $this->assertNull($obj1->getTheme());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton(false);
 
-        $this->assertEquals(null, $obj0->getPosition());
+        $this->assertNull($obj0->getPosition());
         $this->assertEquals("plotBox", $obj0->getRelativeTo());
-        $this->assertEquals(null, $obj0->getTheme());
+        $this->assertNull($obj0->getTheme());
     }
 
     /**

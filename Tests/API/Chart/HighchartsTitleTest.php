@@ -31,16 +31,16 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle(true);
 
-        $this->assertEquals(null, $obj1->getAlign());
-        $this->assertEquals(null, $obj1->getFloating());
-        $this->assertEquals(null, $obj1->getMargin());
-        $this->assertEquals(null, $obj1->getStyle());
-        $this->assertEquals(null, $obj1->getText());
-        $this->assertEquals(null, $obj1->getUseHTML());
-        $this->assertEquals(null, $obj1->getVerticalAlign());
-        $this->assertEquals(null, $obj1->getWidthAdjust());
-        $this->assertEquals(null, $obj1->getX());
-        $this->assertEquals(null, $obj1->getY());
+        $this->assertNull($obj1->getAlign());
+        $this->assertNull($obj1->getFloating());
+        $this->assertNull($obj1->getMargin());
+        $this->assertNull($obj1->getStyle());
+        $this->assertNull($obj1->getText());
+        $this->assertNull($obj1->getUseHTML());
+        $this->assertNull($obj1->getVerticalAlign());
+        $this->assertNull($obj1->getWidthAdjust());
+        $this->assertNull($obj1->getX());
+        $this->assertNull($obj1->getY());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle(false);
 
@@ -50,10 +50,10 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(["color" => "#333333", "fontSize" => "18px"], $obj0->getStyle());
         $this->assertEquals("Chart title", $obj0->getText());
         $this->assertEquals(false, $obj0->getUseHTML());
-        $this->assertEquals(null, $obj0->getVerticalAlign());
+        $this->assertNull($obj0->getVerticalAlign());
         $this->assertEquals(-44, $obj0->getWidthAdjust());
         $this->assertEquals(0, $obj0->getX());
-        $this->assertEquals(null, $obj0->getY());
+        $this->assertNull($obj0->getY());
     }
 
     /**
@@ -87,44 +87,44 @@ final class HighchartsTitleTest extends PHPUnit_Framework_TestCase {
         $res2 = ["align" => "right", "floating" => 1];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setMargin(81);
+        $obj->setMargin(79);
 
-        $res3 = ["align" => "right", "floating" => 1, "margin" => 81];
+        $res3 = ["align" => "right", "floating" => 1, "margin" => 79];
         $this->assertEquals($res3, $obj->toArray());
 
         $obj->setStyle(["style" => "a1b01e734b573fca08eb1a65e6df9a38"]);
 
-        $res4 = ["align" => "right", "floating" => 1, "margin" => 81, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
+        $res4 = ["align" => "right", "floating" => 1, "margin" => 79, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"]];
         $this->assertEquals($res4, $obj->toArray());
 
         $obj->setText("1cb251ec0d568de6a929b520c4aed8d1");
 
-        $res5 = ["align" => "right", "floating" => 1, "margin" => 81, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
+        $res5 = ["align" => "right", "floating" => 1, "margin" => 79, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
         $this->assertEquals($res5, $obj->toArray());
 
         $obj->setUseHTML(0);
 
-        $res6 = ["align" => "right", "floating" => 1, "margin" => 81, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0];
+        $res6 = ["align" => "right", "floating" => 1, "margin" => 79, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0];
         $this->assertEquals($res6, $obj->toArray());
 
         $obj->setVerticalAlign("bottom");
 
-        $res7 = ["align" => "right", "floating" => 1, "margin" => 81, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0, "verticalAlign" => "bottom"];
+        $res7 = ["align" => "right", "floating" => 1, "margin" => 79, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0, "verticalAlign" => "bottom"];
         $this->assertEquals($res7, $obj->toArray());
 
-        $obj->setWidthAdjust(3);
+        $obj->setWidthAdjust(92);
 
-        $res8 = ["align" => "right", "floating" => 1, "margin" => 81, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0, "verticalAlign" => "bottom", "widthAdjust" => 3];
+        $res8 = ["align" => "right", "floating" => 1, "margin" => 79, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0, "verticalAlign" => "bottom", "widthAdjust" => 92];
         $this->assertEquals($res8, $obj->toArray());
 
-        $obj->setX(33);
+        $obj->setX(91);
 
-        $res9 = ["align" => "right", "floating" => 1, "margin" => 81, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0, "verticalAlign" => "bottom", "widthAdjust" => 3, "x" => 33];
+        $res9 = ["align" => "right", "floating" => 1, "margin" => 79, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0, "verticalAlign" => "bottom", "widthAdjust" => 92, "x" => 91];
         $this->assertEquals($res9, $obj->toArray());
 
-        $obj->setY(84);
+        $obj->setY(60);
 
-        $res10 = ["align" => "right", "floating" => 1, "margin" => 81, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0, "verticalAlign" => "bottom", "widthAdjust" => 3, "x" => 33, "y" => 84];
+        $res10 = ["align" => "right", "floating" => 1, "margin" => 79, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0, "verticalAlign" => "bottom", "widthAdjust" => 92, "x" => 91, "y" => 60];
         $this->assertEquals($res10, $obj->toArray());
     }
 

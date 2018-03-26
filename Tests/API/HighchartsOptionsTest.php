@@ -31,8 +31,8 @@ final class HighchartsOptionsTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(true);
 
-        $this->assertEquals(null, $obj1->getGlobal());
-        $this->assertEquals(null, $obj1->getLang());
+        $this->assertNull($obj1->getGlobal());
+        $this->assertNull($obj1->getLang());
     }
 
     /**

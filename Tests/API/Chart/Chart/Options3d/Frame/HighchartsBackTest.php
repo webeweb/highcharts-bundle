@@ -31,9 +31,9 @@ final class HighchartsBackTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack(true);
 
-        $this->assertEquals(null, $obj1->getColor());
-        $this->assertEquals(null, $obj1->getSize());
-        $this->assertEquals(null, $obj1->getVisible());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getSize());
+        $this->assertNull($obj1->getVisible());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsBack(false);
 
@@ -68,14 +68,14 @@ final class HighchartsBackTest extends PHPUnit_Framework_TestCase {
         $res1 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd"];
         $this->assertEquals($res1, $obj->toArray());
 
-        $obj->setSize(82);
+        $obj->setSize(3);
 
-        $res2 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 82];
+        $res2 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 3];
         $this->assertEquals($res2, $obj->toArray());
 
         $obj->setVisible(false);
 
-        $res3 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 82, "visible" => false];
+        $res3 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 3, "visible" => false];
         $this->assertEquals($res3, $obj->toArray());
     }
 

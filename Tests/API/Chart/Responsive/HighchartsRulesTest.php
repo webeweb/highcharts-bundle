@@ -31,8 +31,8 @@ final class HighchartsRulesTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
 
-        $this->assertEquals(null, $obj1->getChartOptions());
-        $this->assertEquals(null, $obj1->getCondition());
+        $this->assertNull($obj1->getChartOptions());
+        $this->assertNull($obj1->getCondition());
     }
 
     /**

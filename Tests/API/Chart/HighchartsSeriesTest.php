@@ -31,33 +31,33 @@ final class HighchartsSeriesTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSeries(true);
 
-        $this->assertEquals(null, $obj1->getData());
-        $this->assertEquals(null, $obj1->getDataParser());
-        $this->assertEquals(null, $obj1->getDataURL());
-        $this->assertEquals(null, $obj1->getId());
-        $this->assertEquals(null, $obj1->getIndex());
-        $this->assertEquals(null, $obj1->getLegendIndex());
-        $this->assertEquals(null, $obj1->getName());
-        $this->assertEquals(null, $obj1->getStack());
-        $this->assertEquals(null, $obj1->getType());
-        $this->assertEquals(null, $obj1->getXAxis());
-        $this->assertEquals(null, $obj1->getYAxis());
-        $this->assertEquals(null, $obj1->getZIndex());
+        $this->assertNull($obj1->getData());
+        $this->assertNull($obj1->getDataParser());
+        $this->assertNull($obj1->getDataURL());
+        $this->assertNull($obj1->getId());
+        $this->assertNull($obj1->getIndex());
+        $this->assertNull($obj1->getLegendIndex());
+        $this->assertNull($obj1->getName());
+        $this->assertNull($obj1->getStack());
+        $this->assertNull($obj1->getType());
+        $this->assertNull($obj1->getXAxis());
+        $this->assertNull($obj1->getYAxis());
+        $this->assertNull($obj1->getZIndex());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSeries(false);
 
-        $this->assertEquals(null, $obj0->getData());
-        $this->assertEquals(null, $obj0->getDataParser());
-        $this->assertEquals(null, $obj0->getDataURL());
-        $this->assertEquals(null, $obj0->getId());
-        $this->assertEquals(null, $obj0->getIndex());
-        $this->assertEquals(null, $obj0->getLegendIndex());
-        $this->assertEquals(null, $obj0->getName());
-        $this->assertEquals(null, $obj0->getStack());
-        $this->assertEquals(null, $obj0->getType());
+        $this->assertNull($obj0->getData());
+        $this->assertNull($obj0->getDataParser());
+        $this->assertNull($obj0->getDataURL());
+        $this->assertNull($obj0->getId());
+        $this->assertNull($obj0->getIndex());
+        $this->assertNull($obj0->getLegendIndex());
+        $this->assertNull($obj0->getName());
+        $this->assertNull($obj0->getStack());
+        $this->assertNull($obj0->getType());
         $this->assertEquals("0", $obj0->getXAxis());
         $this->assertEquals("0", $obj0->getYAxis());
-        $this->assertEquals(null, $obj0->getZIndex());
+        $this->assertNull($obj0->getZIndex());
     }
 
     /**
@@ -101,44 +101,44 @@ final class HighchartsSeriesTest extends PHPUnit_Framework_TestCase {
         $res4 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f"];
         $this->assertEquals($res4, $obj->toArray());
 
-        $obj->setIndex(41);
+        $obj->setIndex(0);
 
-        $res5 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41];
+        $res5 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 0];
         $this->assertEquals($res5, $obj->toArray());
 
-        $obj->setLegendIndex(75);
+        $obj->setLegendIndex(39);
 
-        $res6 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41, "legendIndex" => 75];
+        $res6 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 0, "legendIndex" => 39];
         $this->assertEquals($res6, $obj->toArray());
 
         $obj->setName("b068931cc450442b63f5b3d276ea4297");
 
-        $res7 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41, "legendIndex" => 75, "name" => "b068931cc450442b63f5b3d276ea4297"];
+        $res7 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 0, "legendIndex" => 39, "name" => "b068931cc450442b63f5b3d276ea4297"];
         $this->assertEquals($res7, $obj->toArray());
 
         $obj->setStack("fac2a47adace059aff113283a03f6760");
 
-        $res8 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41, "legendIndex" => 75, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760"];
+        $res8 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 0, "legendIndex" => 39, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760"];
         $this->assertEquals($res8, $obj->toArray());
 
         $obj->setType("waterfall");
 
-        $res9 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41, "legendIndex" => 75, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall"];
+        $res9 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 0, "legendIndex" => 39, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall"];
         $this->assertEquals($res9, $obj->toArray());
 
-        $obj->setXAxis(66);
+        $obj->setXAxis(68);
 
-        $res10 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41, "legendIndex" => 75, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall", "xAxis" => 66];
+        $res10 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 0, "legendIndex" => 39, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall", "xAxis" => 68];
         $this->assertEquals($res10, $obj->toArray());
 
-        $obj->setYAxis(77);
+        $obj->setYAxis(5);
 
-        $res11 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41, "legendIndex" => 75, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall", "xAxis" => 66, "yAxis" => 77];
+        $res11 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 0, "legendIndex" => 39, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall", "xAxis" => 68, "yAxis" => 5];
         $this->assertEquals($res11, $obj->toArray());
 
-        $obj->setZIndex(91);
+        $obj->setZIndex(47);
 
-        $res12 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 41, "legendIndex" => 75, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall", "xAxis" => 66, "yAxis" => 77, "zIndex" => 91];
+        $res12 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 0, "legendIndex" => 39, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall", "xAxis" => 68, "yAxis" => 5, "zIndex" => 47];
         $this->assertEquals($res12, $obj->toArray());
     }
 

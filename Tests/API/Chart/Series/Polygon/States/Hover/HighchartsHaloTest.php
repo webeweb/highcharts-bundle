@@ -31,13 +31,13 @@ final class HighchartsHaloTest extends PHPUnit_Framework_TestCase {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Polygon\States\Hover\HighchartsHalo(true);
 
-        $this->assertEquals(null, $obj1->getAttributes());
-        $this->assertEquals(null, $obj1->getOpacity());
-        $this->assertEquals(null, $obj1->getSize());
+        $this->assertNull($obj1->getAttributes());
+        $this->assertNull($obj1->getOpacity());
+        $this->assertNull($obj1->getSize());
 
         $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Polygon\States\Hover\HighchartsHalo(false);
 
-        $this->assertEquals(null, $obj0->getAttributes());
+        $this->assertNull($obj0->getAttributes());
         $this->assertEquals(0.25, $obj0->getOpacity());
         $this->assertEquals(10, $obj0->getSize());
     }
@@ -73,9 +73,9 @@ final class HighchartsHaloTest extends PHPUnit_Framework_TestCase {
         $res2 = ["attributes" => ["attributes" => "736b91750e516139acc13c5eb6564f92"], "opacity" => 87];
         $this->assertEquals($res2, $obj->toArray());
 
-        $obj->setSize(24);
+        $obj->setSize(20);
 
-        $res3 = ["attributes" => ["attributes" => "736b91750e516139acc13c5eb6564f92"], "opacity" => 87, "size" => 24];
+        $res3 = ["attributes" => ["attributes" => "736b91750e516139acc13c5eb6564f92"], "opacity" => 87, "size" => 20];
         $this->assertEquals($res3, $obj->toArray());
     }
 
