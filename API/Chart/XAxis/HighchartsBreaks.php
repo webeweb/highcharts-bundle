@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\XAxis;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts breaks.
@@ -61,7 +62,7 @@ final class HighchartsBreaks implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -185,25 +186,17 @@ final class HighchartsBreaks implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the break size.
-        if (!is_null($this->breakSize)) {
-            $output["breakSize"] = $this->breakSize;
-        }
+        // Set the break size.
+        ArrayUtility::set($output, "breakSize", $this->breakSize, [null]);
 
-        // Check the from.
-        if (!is_null($this->from)) {
-            $output["from"] = $this->from;
-        }
+        // Set the from.
+        ArrayUtility::set($output, "from", $this->from, [null]);
 
-        // Check the repeat.
-        if (!is_null($this->repeat)) {
-            $output["repeat"] = $this->repeat;
-        }
+        // Set the repeat.
+        ArrayUtility::set($output, "repeat", $this->repeat, [null]);
 
-        // Check the to.
-        if (!is_null($this->to)) {
-            $output["to"] = $this->to;
-        }
+        // Set the to.
+        ArrayUtility::set($output, "to", $this->to, [null]);
 
         // Return the output.
         return $output;

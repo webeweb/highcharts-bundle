@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts plot options.
@@ -204,7 +205,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -217,27 +218,27 @@ final class HighchartsPlotOptions implements JsonSerializable {
     public function clear() {
 
         // Clear the area.
-        if (!is_null($this->area)) {
+        if (null !== $this->area) {
             $this->area->clear();
         }
 
         // Clear the arearange.
-        if (!is_null($this->arearange)) {
+        if (null !== $this->arearange) {
             $this->arearange->clear();
         }
 
         // Clear the areaspline.
-        if (!is_null($this->areaspline)) {
+        if (null !== $this->areaspline) {
             $this->areaspline->clear();
         }
 
         // Clear the areasplinerange.
-        if (!is_null($this->areasplinerange)) {
+        if (null !== $this->areasplinerange) {
             $this->areasplinerange->clear();
         }
 
         // Clear the bar.
-        if (!is_null($this->bar)) {
+        if (null !== $this->bar) {
             $this->bar->clear();
         }
 
@@ -248,7 +249,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
         $this->bubble = null;
 
         // Clear the column.
-        if (!is_null($this->column)) {
+        if (null !== $this->column) {
             $this->column->clear();
         }
 
@@ -268,12 +269,12 @@ final class HighchartsPlotOptions implements JsonSerializable {
         $this->heatmap = null;
 
         // Clear the line.
-        if (!is_null($this->line)) {
+        if (null !== $this->line) {
             $this->line->clear();
         }
 
         // Clear the pie.
-        if (!is_null($this->pie)) {
+        if (null !== $this->pie) {
             $this->pie->clear();
         }
 
@@ -284,12 +285,12 @@ final class HighchartsPlotOptions implements JsonSerializable {
         $this->pyramid = null;
 
         // Clear the scatter.
-        if (!is_null($this->scatter)) {
+        if (null !== $this->scatter) {
             $this->scatter->clear();
         }
 
         // Clear the series.
-        if (!is_null($this->series)) {
+        if (null !== $this->series) {
             $this->series->clear();
         }
 
@@ -297,7 +298,7 @@ final class HighchartsPlotOptions implements JsonSerializable {
         $this->solidgauge = null;
 
         // Clear the spline.
-        if (!is_null($this->spline)) {
+        if (null !== $this->spline) {
             $this->spline->clear();
         }
 
@@ -897,120 +898,96 @@ final class HighchartsPlotOptions implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the area.
-        if (!is_null($this->area)) {
-            $output["area"] = $this->area->toArray();
+        // Set the area.
+        if (null !== $this->area) {
+            ArrayUtility::set($output, "area", $this->area->toArray(), []);
         }
 
-        // Check the arearange.
-        if (!is_null($this->arearange)) {
-            $output["arearange"] = $this->arearange->toArray();
+        // Set the arearange.
+        if (null !== $this->arearange) {
+            ArrayUtility::set($output, "arearange", $this->arearange->toArray(), []);
         }
 
-        // Check the areaspline.
-        if (!is_null($this->areaspline)) {
-            $output["areaspline"] = $this->areaspline->toArray();
+        // Set the areaspline.
+        if (null !== $this->areaspline) {
+            ArrayUtility::set($output, "areaspline", $this->areaspline->toArray(), []);
         }
 
-        // Check the areasplinerange.
-        if (!is_null($this->areasplinerange)) {
-            $output["areasplinerange"] = $this->areasplinerange->toArray();
+        // Set the areasplinerange.
+        if (null !== $this->areasplinerange) {
+            ArrayUtility::set($output, "areasplinerange", $this->areasplinerange->toArray(), []);
         }
 
-        // Check the bar.
-        if (!is_null($this->bar)) {
-            $output["bar"] = $this->bar->toArray();
+        // Set the bar.
+        if (null !== $this->bar) {
+            ArrayUtility::set($output, "bar", $this->bar->toArray(), []);
         }
 
-        // Check the boxplot.
-        if (!is_null($this->boxplot)) {
-            $output["boxplot"] = $this->boxplot;
+        // Set the boxplot.
+        ArrayUtility::set($output, "boxplot", $this->boxplot, [null]);
+
+        // Set the bubble.
+        ArrayUtility::set($output, "bubble", $this->bubble, [null]);
+
+        // Set the column.
+        if (null !== $this->column) {
+            ArrayUtility::set($output, "column", $this->column->toArray(), []);
         }
 
-        // Check the bubble.
-        if (!is_null($this->bubble)) {
-            $output["bubble"] = $this->bubble;
+        // Set the columnrange.
+        ArrayUtility::set($output, "columnrange", $this->columnrange, [null]);
+
+        // Set the errorbar.
+        ArrayUtility::set($output, "errorbar", $this->errorbar, [null]);
+
+        // Set the funnel.
+        ArrayUtility::set($output, "funnel", $this->funnel, [null]);
+
+        // Set the gauge.
+        ArrayUtility::set($output, "gauge", $this->gauge, [null]);
+
+        // Set the heatmap.
+        ArrayUtility::set($output, "heatmap", $this->heatmap, [null]);
+
+        // Set the line.
+        if (null !== $this->line) {
+            ArrayUtility::set($output, "line", $this->line->toArray(), []);
         }
 
-        // Check the column.
-        if (!is_null($this->column)) {
-            $output["column"] = $this->column->toArray();
+        // Set the pie.
+        if (null !== $this->pie) {
+            ArrayUtility::set($output, "pie", $this->pie->toArray(), []);
         }
 
-        // Check the columnrange.
-        if (!is_null($this->columnrange)) {
-            $output["columnrange"] = $this->columnrange;
+        // Set the polygon.
+        ArrayUtility::set($output, "polygon", $this->polygon, [null]);
+
+        // Set the pyramid.
+        ArrayUtility::set($output, "pyramid", $this->pyramid, [null]);
+
+        // Set the scatter.
+        if (null !== $this->scatter) {
+            ArrayUtility::set($output, "scatter", $this->scatter->toArray(), []);
         }
 
-        // Check the errorbar.
-        if (!is_null($this->errorbar)) {
-            $output["errorbar"] = $this->errorbar;
+        // Set the series.
+        if (null !== $this->series) {
+            ArrayUtility::set($output, "series", $this->series->toArray(), []);
         }
 
-        // Check the funnel.
-        if (!is_null($this->funnel)) {
-            $output["funnel"] = $this->funnel;
+        // Set the solidgauge.
+        ArrayUtility::set($output, "solidgauge", $this->solidgauge, [null]);
+
+        // Set the spline.
+        if (null !== $this->spline) {
+            ArrayUtility::set($output, "spline", $this->spline->toArray(), []);
         }
 
-        // Check the gauge.
-        if (!is_null($this->gauge)) {
-            $output["gauge"] = $this->gauge;
-        }
+        // Set the treemap.
+        ArrayUtility::set($output, "treemap", $this->treemap, [null]);
 
-        // Check the heatmap.
-        if (!is_null($this->heatmap)) {
-            $output["heatmap"] = $this->heatmap;
-        }
-
-        // Check the line.
-        if (!is_null($this->line)) {
-            $output["line"] = $this->line->toArray();
-        }
-
-        // Check the pie.
-        if (!is_null($this->pie)) {
-            $output["pie"] = $this->pie->toArray();
-        }
-
-        // Check the polygon.
-        if (!is_null($this->polygon)) {
-            $output["polygon"] = $this->polygon;
-        }
-
-        // Check the pyramid.
-        if (!is_null($this->pyramid)) {
-            $output["pyramid"] = $this->pyramid;
-        }
-
-        // Check the scatter.
-        if (!is_null($this->scatter)) {
-            $output["scatter"] = $this->scatter->toArray();
-        }
-
-        // Check the series.
-        if (!is_null($this->series)) {
-            $output["series"] = $this->series->toArray();
-        }
-
-        // Check the solidgauge.
-        if (!is_null($this->solidgauge)) {
-            $output["solidgauge"] = $this->solidgauge;
-        }
-
-        // Check the spline.
-        if (!is_null($this->spline)) {
-            $output["spline"] = $this->spline->toArray();
-        }
-
-        // Check the treemap.
-        if (!is_null($this->treemap)) {
-            $output["treemap"] = $this->treemap;
-        }
-
-        // Check the waterfall.
-        if (!is_null($this->waterfall)) {
-            $output["waterfall"] = $this->waterfall;
-        }
+        // Set the waterfall.
+        ArrayUtility::set($output, "waterfall", $this->waterfall, [null]);
 
         // Return the output.
         return $output;

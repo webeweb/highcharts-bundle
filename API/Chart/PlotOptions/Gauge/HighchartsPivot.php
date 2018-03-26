@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts pivot.
@@ -61,7 +62,7 @@ final class HighchartsPivot implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -185,25 +186,17 @@ final class HighchartsPivot implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the background color.
-        if (!is_null($this->backgroundColor)) {
-            $output["backgroundColor"] = $this->backgroundColor;
-        }
+        // Set the background color.
+        ArrayUtility::set($output, "backgroundColor", $this->backgroundColor, [null]);
 
-        // Check the border color.
-        if (!is_null($this->borderColor)) {
-            $output["borderColor"] = $this->borderColor;
-        }
+        // Set the border color.
+        ArrayUtility::set($output, "borderColor", $this->borderColor, [null]);
 
-        // Check the border width.
-        if (!is_null($this->borderWidth)) {
-            $output["borderWidth"] = $this->borderWidth;
-        }
+        // Set the border width.
+        ArrayUtility::set($output, "borderWidth", $this->borderWidth, [null]);
 
-        // Check the radius.
-        if (!is_null($this->radius)) {
-            $output["radius"] = $this->radius;
-        }
+        // Set the radius.
+        ArrayUtility::set($output, "radius", $this->radius, [null]);
 
         // Return the output.
         return $output;

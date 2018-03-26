@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts condition.
@@ -69,7 +70,7 @@ final class HighchartsCondition implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -216,30 +217,20 @@ final class HighchartsCondition implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the callback.
-        if (!is_null($this->callback)) {
-            $output["callback"] = $this->callback;
-        }
+        // Set the callback.
+        ArrayUtility::set($output, "callback", $this->callback, [null]);
 
-        // Check the max height.
-        if (!is_null($this->maxHeight)) {
-            $output["maxHeight"] = $this->maxHeight;
-        }
+        // Set the max height.
+        ArrayUtility::set($output, "maxHeight", $this->maxHeight, [null]);
 
-        // Check the max width.
-        if (!is_null($this->maxWidth)) {
-            $output["maxWidth"] = $this->maxWidth;
-        }
+        // Set the max width.
+        ArrayUtility::set($output, "maxWidth", $this->maxWidth, [null]);
 
-        // Check the min height.
-        if (!is_null($this->minHeight)) {
-            $output["minHeight"] = $this->minHeight;
-        }
+        // Set the min height.
+        ArrayUtility::set($output, "minHeight", $this->minHeight, [null]);
 
-        // Check the min width.
-        if (!is_null($this->minWidth)) {
-            $output["minWidth"] = $this->minWidth;
-        }
+        // Set the min width.
+        ArrayUtility::set($output, "minWidth", $this->minWidth, [null]);
 
         // Return the output.
         return $output;

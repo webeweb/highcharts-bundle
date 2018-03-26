@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\XAxis;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts events.
@@ -68,7 +69,7 @@ final class HighchartsEvents implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -215,30 +216,20 @@ final class HighchartsEvents implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the after breaks.
-        if (!is_null($this->afterBreaks)) {
-            $output["afterBreaks"] = $this->afterBreaks;
-        }
+        // Set the after breaks.
+        ArrayUtility::set($output, "afterBreaks", $this->afterBreaks, [null]);
 
-        // Check the after set extremes.
-        if (!is_null($this->afterSetExtremes)) {
-            $output["afterSetExtremes"] = $this->afterSetExtremes;
-        }
+        // Set the after set extremes.
+        ArrayUtility::set($output, "afterSetExtremes", $this->afterSetExtremes, [null]);
 
-        // Check the point break.
-        if (!is_null($this->pointBreak)) {
-            $output["pointBreak"] = $this->pointBreak;
-        }
+        // Set the point break.
+        ArrayUtility::set($output, "pointBreak", $this->pointBreak, [null]);
 
-        // Check the point in break.
-        if (!is_null($this->pointInBreak)) {
-            $output["pointInBreak"] = $this->pointInBreak;
-        }
+        // Set the point in break.
+        ArrayUtility::set($output, "pointInBreak", $this->pointInBreak, [null]);
 
-        // Check the set extremes.
-        if (!is_null($this->setExtremes)) {
-            $output["setExtremes"] = $this->setExtremes;
-        }
+        // Set the set extremes.
+        ArrayUtility::set($output, "setExtremes", $this->setExtremes, [null]);
 
         // Return the output.
         return $output;

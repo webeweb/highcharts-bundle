@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Errorbar;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts data.
@@ -117,7 +118,7 @@ final class HighchartsData implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -142,7 +143,7 @@ final class HighchartsData implements JsonSerializable {
         $this->description = null;
 
         // Clear the events.
-        if (!is_null($this->events)) {
+        if (null !== $this->events) {
             $this->events->clear();
         }
 
@@ -437,65 +438,43 @@ final class HighchartsData implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the class name.
-        if (!is_null($this->className)) {
-            $output["className"] = $this->className;
+        // Set the class name.
+        ArrayUtility::set($output, "className", $this->className, [null]);
+
+        // Set the color.
+        ArrayUtility::set($output, "color", $this->color, [null]);
+
+        // Set the color index.
+        ArrayUtility::set($output, "colorIndex", $this->colorIndex, [null]);
+
+        // Set the description.
+        ArrayUtility::set($output, "description", $this->description, [null]);
+
+        // Set the events.
+        if (null !== $this->events) {
+            ArrayUtility::set($output, "events", $this->events->toArray(), []);
         }
 
-        // Check the color.
-        if (!is_null($this->color)) {
-            $output["color"] = $this->color;
-        }
+        // Set the high.
+        ArrayUtility::set($output, "high", $this->high, [null]);
 
-        // Check the color index.
-        if (!is_null($this->colorIndex)) {
-            $output["colorIndex"] = $this->colorIndex;
-        }
+        // Set the id.
+        ArrayUtility::set($output, "id", $this->id, [null]);
 
-        // Check the description.
-        if (!is_null($this->description)) {
-            $output["description"] = $this->description;
-        }
+        // Set the labelrank.
+        ArrayUtility::set($output, "labelrank", $this->labelrank, [null]);
 
-        // Check the events.
-        if (!is_null($this->events)) {
-            $output["events"] = $this->events->toArray();
-        }
+        // Set the low.
+        ArrayUtility::set($output, "low", $this->low, [null]);
 
-        // Check the high.
-        if (!is_null($this->high)) {
-            $output["high"] = $this->high;
-        }
+        // Set the name.
+        ArrayUtility::set($output, "name", $this->name, [null]);
 
-        // Check the id.
-        if (!is_null($this->id)) {
-            $output["id"] = $this->id;
-        }
+        // Set the selected.
+        ArrayUtility::set($output, "selected", $this->selected, [null]);
 
-        // Check the labelrank.
-        if (!is_null($this->labelrank)) {
-            $output["labelrank"] = $this->labelrank;
-        }
-
-        // Check the low.
-        if (!is_null($this->low)) {
-            $output["low"] = $this->low;
-        }
-
-        // Check the name.
-        if (!is_null($this->name)) {
-            $output["name"] = $this->name;
-        }
-
-        // Check the selected.
-        if (!is_null($this->selected)) {
-            $output["selected"] = $this->selected;
-        }
-
-        // Check the x.
-        if (!is_null($this->x)) {
-            $output["x"] = $this->x;
-        }
+        // Set the x.
+        ArrayUtility::set($output, "x", $this->x, [null]);
 
         // Return the output.
         return $output;

@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts legend.
@@ -310,7 +311,7 @@ final class HighchartsLegend implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -383,7 +384,7 @@ final class HighchartsLegend implements JsonSerializable {
         $this->maxHeight = null;
 
         // Clear the navigation.
-        if (!is_null($this->navigation)) {
+        if (null !== $this->navigation) {
             $this->navigation->clear();
         }
 
@@ -418,7 +419,7 @@ final class HighchartsLegend implements JsonSerializable {
         $this->symbolWidth = null;
 
         // Clear the title.
-        if (!is_null($this->title)) {
+        if (null !== $this->title) {
             $this->title->clear();
         }
 
@@ -812,8 +813,8 @@ final class HighchartsLegend implements JsonSerializable {
             case "center":
             case "left":
             case "right":
-                $this->align = $align;
-                break;
+            $this->align = $align;
+            break;
         }
         return $this;
     }
@@ -993,8 +994,8 @@ final class HighchartsLegend implements JsonSerializable {
         switch ($layout) {
             case "horizontal":
             case "vertical":
-                $this->layout = $layout;
-                break;
+            $this->layout = $layout;
+            break;
         }
         return $this;
     }
@@ -1187,8 +1188,8 @@ final class HighchartsLegend implements JsonSerializable {
             case "bottom":
             case "middle":
             case "top":
-                $this->verticalAlign = $verticalAlign;
-                break;
+            $this->verticalAlign = $verticalAlign;
+            break;
         }
         return $this;
     }
@@ -1236,190 +1237,120 @@ final class HighchartsLegend implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the align.
-        if (!is_null($this->align)) {
-            $output["align"] = $this->align;
+        // Set the align.
+        ArrayUtility::set($output, "align", $this->align, [null]);
+
+        // Set the background color.
+        ArrayUtility::set($output, "backgroundColor", $this->backgroundColor, [null]);
+
+        // Set the border color.
+        ArrayUtility::set($output, "borderColor", $this->borderColor, [null]);
+
+        // Set the border radius.
+        ArrayUtility::set($output, "borderRadius", $this->borderRadius, [null]);
+
+        // Set the border width.
+        ArrayUtility::set($output, "borderWidth", $this->borderWidth, [null]);
+
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
+
+        // Set the floating.
+        ArrayUtility::set($output, "floating", $this->floating, [null]);
+
+        // Set the item distance.
+        ArrayUtility::set($output, "itemDistance", $this->itemDistance, [null]);
+
+        // Set the item hidden style.
+        ArrayUtility::set($output, "itemHiddenStyle", $this->itemHiddenStyle, [null]);
+
+        // Set the item hover style.
+        ArrayUtility::set($output, "itemHoverStyle", $this->itemHoverStyle, [null]);
+
+        // Set the item margin bottom.
+        ArrayUtility::set($output, "itemMarginBottom", $this->itemMarginBottom, [null]);
+
+        // Set the item margin top.
+        ArrayUtility::set($output, "itemMarginTop", $this->itemMarginTop, [null]);
+
+        // Set the item style.
+        ArrayUtility::set($output, "itemStyle", $this->itemStyle, [null]);
+
+        // Set the item width.
+        ArrayUtility::set($output, "itemWidth", $this->itemWidth, [null]);
+
+        // Set the label format.
+        ArrayUtility::set($output, "labelFormat", $this->labelFormat, [null]);
+
+        // Set the label formatter.
+        ArrayUtility::set($output, "labelFormatter", $this->labelFormatter, [null]);
+
+        // Set the layout.
+        ArrayUtility::set($output, "layout", $this->layout, [null]);
+
+        // Set the line height.
+        ArrayUtility::set($output, "lineHeight", $this->lineHeight, [null]);
+
+        // Set the margin.
+        ArrayUtility::set($output, "margin", $this->margin, [null]);
+
+        // Set the max height.
+        ArrayUtility::set($output, "maxHeight", $this->maxHeight, [null]);
+
+        // Set the navigation.
+        if (null !== $this->navigation) {
+            ArrayUtility::set($output, "navigation", $this->navigation->toArray(), []);
         }
 
-        // Check the background color.
-        if (!is_null($this->backgroundColor)) {
-            $output["backgroundColor"] = $this->backgroundColor;
+        // Set the padding.
+        ArrayUtility::set($output, "padding", $this->padding, [null]);
+
+        // Set the reversed.
+        ArrayUtility::set($output, "reversed", $this->reversed, [null]);
+
+        // Set the rtl.
+        ArrayUtility::set($output, "rtl", $this->rtl, [null]);
+
+        // Set the shadow.
+        ArrayUtility::set($output, "shadow", $this->shadow, [null]);
+
+        // Set the square symbol.
+        ArrayUtility::set($output, "squareSymbol", $this->squareSymbol, [null]);
+
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
+
+        // Set the symbol height.
+        ArrayUtility::set($output, "symbolHeight", $this->symbolHeight, [null]);
+
+        // Set the symbol padding.
+        ArrayUtility::set($output, "symbolPadding", $this->symbolPadding, [null]);
+
+        // Set the symbol radius.
+        ArrayUtility::set($output, "symbolRadius", $this->symbolRadius, [null]);
+
+        // Set the symbol width.
+        ArrayUtility::set($output, "symbolWidth", $this->symbolWidth, [null]);
+
+        // Set the title.
+        if (null !== $this->title) {
+            ArrayUtility::set($output, "title", $this->title->toArray(), []);
         }
 
-        // Check the border color.
-        if (!is_null($this->borderColor)) {
-            $output["borderColor"] = $this->borderColor;
-        }
+        // Set the use HTML.
+        ArrayUtility::set($output, "useHTML", $this->useHTML, [null]);
 
-        // Check the border radius.
-        if (!is_null($this->borderRadius)) {
-            $output["borderRadius"] = $this->borderRadius;
-        }
+        // Set the vertical align.
+        ArrayUtility::set($output, "verticalAlign", $this->verticalAlign, [null]);
 
-        // Check the border width.
-        if (!is_null($this->borderWidth)) {
-            $output["borderWidth"] = $this->borderWidth;
-        }
+        // Set the width.
+        ArrayUtility::set($output, "width", $this->width, [null]);
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the x.
+        ArrayUtility::set($output, "x", $this->x, [null]);
 
-        // Check the floating.
-        if (!is_null($this->floating)) {
-            $output["floating"] = $this->floating;
-        }
-
-        // Check the item distance.
-        if (!is_null($this->itemDistance)) {
-            $output["itemDistance"] = $this->itemDistance;
-        }
-
-        // Check the item hidden style.
-        if (!is_null($this->itemHiddenStyle)) {
-            $output["itemHiddenStyle"] = $this->itemHiddenStyle;
-        }
-
-        // Check the item hover style.
-        if (!is_null($this->itemHoverStyle)) {
-            $output["itemHoverStyle"] = $this->itemHoverStyle;
-        }
-
-        // Check the item margin bottom.
-        if (!is_null($this->itemMarginBottom)) {
-            $output["itemMarginBottom"] = $this->itemMarginBottom;
-        }
-
-        // Check the item margin top.
-        if (!is_null($this->itemMarginTop)) {
-            $output["itemMarginTop"] = $this->itemMarginTop;
-        }
-
-        // Check the item style.
-        if (!is_null($this->itemStyle)) {
-            $output["itemStyle"] = $this->itemStyle;
-        }
-
-        // Check the item width.
-        if (!is_null($this->itemWidth)) {
-            $output["itemWidth"] = $this->itemWidth;
-        }
-
-        // Check the label format.
-        if (!is_null($this->labelFormat)) {
-            $output["labelFormat"] = $this->labelFormat;
-        }
-
-        // Check the label formatter.
-        if (!is_null($this->labelFormatter)) {
-            $output["labelFormatter"] = $this->labelFormatter;
-        }
-
-        // Check the layout.
-        if (!is_null($this->layout)) {
-            $output["layout"] = $this->layout;
-        }
-
-        // Check the line height.
-        if (!is_null($this->lineHeight)) {
-            $output["lineHeight"] = $this->lineHeight;
-        }
-
-        // Check the margin.
-        if (!is_null($this->margin)) {
-            $output["margin"] = $this->margin;
-        }
-
-        // Check the max height.
-        if (!is_null($this->maxHeight)) {
-            $output["maxHeight"] = $this->maxHeight;
-        }
-
-        // Check the navigation.
-        if (!is_null($this->navigation)) {
-            $output["navigation"] = $this->navigation->toArray();
-        }
-
-        // Check the padding.
-        if (!is_null($this->padding)) {
-            $output["padding"] = $this->padding;
-        }
-
-        // Check the reversed.
-        if (!is_null($this->reversed)) {
-            $output["reversed"] = $this->reversed;
-        }
-
-        // Check the rtl.
-        if (!is_null($this->rtl)) {
-            $output["rtl"] = $this->rtl;
-        }
-
-        // Check the shadow.
-        if (!is_null($this->shadow)) {
-            $output["shadow"] = $this->shadow;
-        }
-
-        // Check the square symbol.
-        if (!is_null($this->squareSymbol)) {
-            $output["squareSymbol"] = $this->squareSymbol;
-        }
-
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
-
-        // Check the symbol height.
-        if (!is_null($this->symbolHeight)) {
-            $output["symbolHeight"] = $this->symbolHeight;
-        }
-
-        // Check the symbol padding.
-        if (!is_null($this->symbolPadding)) {
-            $output["symbolPadding"] = $this->symbolPadding;
-        }
-
-        // Check the symbol radius.
-        if (!is_null($this->symbolRadius)) {
-            $output["symbolRadius"] = $this->symbolRadius;
-        }
-
-        // Check the symbol width.
-        if (!is_null($this->symbolWidth)) {
-            $output["symbolWidth"] = $this->symbolWidth;
-        }
-
-        // Check the title.
-        if (!is_null($this->title)) {
-            $output["title"] = $this->title->toArray();
-        }
-
-        // Check the use HTML.
-        if (!is_null($this->useHTML)) {
-            $output["useHTML"] = $this->useHTML;
-        }
-
-        // Check the vertical align.
-        if (!is_null($this->verticalAlign)) {
-            $output["verticalAlign"] = $this->verticalAlign;
-        }
-
-        // Check the width.
-        if (!is_null($this->width)) {
-            $output["width"] = $this->width;
-        }
-
-        // Check the x.
-        if (!is_null($this->x)) {
-            $output["x"] = $this->x;
-        }
-
-        // Check the y.
-        if (!is_null($this->y)) {
-            $output["y"] = $this->y;
-        }
+        // Set the y.
+        ArrayUtility::set($output, "y", $this->y, [null]);
 
         // Return the output.
         return $output;

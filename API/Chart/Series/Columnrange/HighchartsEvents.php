@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Columnrange;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts events.
@@ -89,7 +90,7 @@ final class HighchartsEvents implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -305,45 +306,29 @@ final class HighchartsEvents implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the after animate.
-        if (!is_null($this->afterAnimate)) {
-            $output["afterAnimate"] = $this->afterAnimate;
-        }
+        // Set the after animate.
+        ArrayUtility::set($output, "afterAnimate", $this->afterAnimate, [null]);
 
-        // Check the checkbox click.
-        if (!is_null($this->checkboxClick)) {
-            $output["checkboxClick"] = $this->checkboxClick;
-        }
+        // Set the checkbox click.
+        ArrayUtility::set($output, "checkboxClick", $this->checkboxClick, [null]);
 
-        // Check the click.
-        if (!is_null($this->click)) {
-            $output["click"] = $this->click;
-        }
+        // Set the click.
+        ArrayUtility::set($output, "click", $this->click, [null]);
 
-        // Check the hide.
-        if (!is_null($this->hide)) {
-            $output["hide"] = $this->hide;
-        }
+        // Set the hide.
+        ArrayUtility::set($output, "hide", $this->hide, [null]);
 
-        // Check the legend item click.
-        if (!is_null($this->legendItemClick)) {
-            $output["legendItemClick"] = $this->legendItemClick;
-        }
+        // Set the legend item click.
+        ArrayUtility::set($output, "legendItemClick", $this->legendItemClick, [null]);
 
-        // Check the mouse out.
-        if (!is_null($this->mouseOut)) {
-            $output["mouseOut"] = $this->mouseOut;
-        }
+        // Set the mouse out.
+        ArrayUtility::set($output, "mouseOut", $this->mouseOut, [null]);
 
-        // Check the mouse over.
-        if (!is_null($this->mouseOver)) {
-            $output["mouseOver"] = $this->mouseOver;
-        }
+        // Set the mouse over.
+        ArrayUtility::set($output, "mouseOver", $this->mouseOver, [null]);
 
-        // Check the show.
-        if (!is_null($this->show)) {
-            $output["show"] = $this->show;
-        }
+        // Set the show.
+        ArrayUtility::set($output, "show", $this->show, [null]);
 
         // Return the output.
         return $output;

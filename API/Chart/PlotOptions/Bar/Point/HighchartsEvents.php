@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bar\Point;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts events.
@@ -82,7 +83,7 @@ final class HighchartsEvents implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -275,40 +276,26 @@ final class HighchartsEvents implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the click.
-        if (!is_null($this->click)) {
-            $output["click"] = $this->click;
-        }
+        // Set the click.
+        ArrayUtility::set($output, "click", $this->click, [null]);
 
-        // Check the mouse out.
-        if (!is_null($this->mouseOut)) {
-            $output["mouseOut"] = $this->mouseOut;
-        }
+        // Set the mouse out.
+        ArrayUtility::set($output, "mouseOut", $this->mouseOut, [null]);
 
-        // Check the mouse over.
-        if (!is_null($this->mouseOver)) {
-            $output["mouseOver"] = $this->mouseOver;
-        }
+        // Set the mouse over.
+        ArrayUtility::set($output, "mouseOver", $this->mouseOver, [null]);
 
-        // Check the remove.
-        if (!is_null($this->remove)) {
-            $output["remove"] = $this->remove;
-        }
+        // Set the remove.
+        ArrayUtility::set($output, "remove", $this->remove, [null]);
 
-        // Check the select.
-        if (!is_null($this->select)) {
-            $output["select"] = $this->select;
-        }
+        // Set the select.
+        ArrayUtility::set($output, "select", $this->select, [null]);
 
-        // Check the unselect.
-        if (!is_null($this->unselect)) {
-            $output["unselect"] = $this->unselect;
-        }
+        // Set the unselect.
+        ArrayUtility::set($output, "unselect", $this->unselect, [null]);
 
-        // Check the update.
-        if (!is_null($this->update)) {
-            $output["update"] = $this->update;
-        }
+        // Set the update.
+        ArrayUtility::set($output, "update", $this->update, [null]);
 
         // Return the output.
         return $output;

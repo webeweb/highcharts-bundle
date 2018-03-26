@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\XAxis\PlotBands;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts label.
@@ -101,7 +102,7 @@ final class HighchartsLabel implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -340,50 +341,32 @@ final class HighchartsLabel implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the align.
-        if (!is_null($this->align)) {
-            $output["align"] = $this->align;
-        }
+        // Set the align.
+        ArrayUtility::set($output, "align", $this->align, [null]);
 
-        // Check the rotation.
-        if (!is_null($this->rotation)) {
-            $output["rotation"] = $this->rotation;
-        }
+        // Set the rotation.
+        ArrayUtility::set($output, "rotation", $this->rotation, [null]);
 
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
 
-        // Check the text.
-        if (!is_null($this->text)) {
-            $output["text"] = $this->text;
-        }
+        // Set the text.
+        ArrayUtility::set($output, "text", $this->text, [null]);
 
-        // Check the text align.
-        if (!is_null($this->textAlign)) {
-            $output["textAlign"] = $this->textAlign;
-        }
+        // Set the text align.
+        ArrayUtility::set($output, "textAlign", $this->textAlign, [null]);
 
-        // Check the use HTML.
-        if (!is_null($this->useHTML)) {
-            $output["useHTML"] = $this->useHTML;
-        }
+        // Set the use HTML.
+        ArrayUtility::set($output, "useHTML", $this->useHTML, [null]);
 
-        // Check the vertical align.
-        if (!is_null($this->verticalAlign)) {
-            $output["verticalAlign"] = $this->verticalAlign;
-        }
+        // Set the vertical align.
+        ArrayUtility::set($output, "verticalAlign", $this->verticalAlign, [null]);
 
-        // Check the x.
-        if (!is_null($this->x)) {
-            $output["x"] = $this->x;
-        }
+        // Set the x.
+        ArrayUtility::set($output, "x", $this->x, [null]);
 
-        // Check the y.
-        if (!is_null($this->y)) {
-            $output["y"] = $this->y;
-        }
+        // Set the y.
+        ArrayUtility::set($output, "y", $this->y, [null]);
 
         // Return the output.
         return $output;

@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts title.
@@ -106,7 +107,7 @@ final class HighchartsTitle implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -259,8 +260,8 @@ final class HighchartsTitle implements JsonSerializable {
             case "center":
             case "left":
             case "right":
-                $this->align = $align;
-                break;
+            $this->align = $align;
+            break;
         }
         return $this;
     }
@@ -331,8 +332,8 @@ final class HighchartsTitle implements JsonSerializable {
             case "bottom":
             case "middle":
             case "top":
-                $this->verticalAlign = $verticalAlign;
-                break;
+            $this->verticalAlign = $verticalAlign;
+            break;
         }
         return $this;
     }
@@ -380,55 +381,35 @@ final class HighchartsTitle implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the align.
-        if (!is_null($this->align)) {
-            $output["align"] = $this->align;
-        }
+        // Set the align.
+        ArrayUtility::set($output, "align", $this->align, [null]);
 
-        // Check the floating.
-        if (!is_null($this->floating)) {
-            $output["floating"] = $this->floating;
-        }
+        // Set the floating.
+        ArrayUtility::set($output, "floating", $this->floating, [null]);
 
-        // Check the margin.
-        if (!is_null($this->margin)) {
-            $output["margin"] = $this->margin;
-        }
+        // Set the margin.
+        ArrayUtility::set($output, "margin", $this->margin, [null]);
 
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
 
-        // Check the text.
-        if (!is_null($this->text)) {
-            $output["text"] = $this->text;
-        }
+        // Set the text.
+        ArrayUtility::set($output, "text", $this->text, [null]);
 
-        // Check the use HTML.
-        if (!is_null($this->useHTML)) {
-            $output["useHTML"] = $this->useHTML;
-        }
+        // Set the use HTML.
+        ArrayUtility::set($output, "useHTML", $this->useHTML, [null]);
 
-        // Check the vertical align.
-        if (!is_null($this->verticalAlign)) {
-            $output["verticalAlign"] = $this->verticalAlign;
-        }
+        // Set the vertical align.
+        ArrayUtility::set($output, "verticalAlign", $this->verticalAlign, [null]);
 
-        // Check the width adjust.
-        if (!is_null($this->widthAdjust)) {
-            $output["widthAdjust"] = $this->widthAdjust;
-        }
+        // Set the width adjust.
+        ArrayUtility::set($output, "widthAdjust", $this->widthAdjust, [null]);
 
-        // Check the x.
-        if (!is_null($this->x)) {
-            $output["x"] = $this->x;
-        }
+        // Set the x.
+        ArrayUtility::set($output, "x", $this->x, [null]);
 
-        // Check the y.
-        if (!is_null($this->y)) {
-            $output["y"] = $this->y;
-        }
+        // Set the y.
+        ArrayUtility::set($output, "y", $this->y, [null]);
 
         // Return the output.
         return $output;

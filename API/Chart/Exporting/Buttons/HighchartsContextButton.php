@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts context button.
@@ -173,7 +174,7 @@ final class HighchartsContextButton implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -422,8 +423,8 @@ final class HighchartsContextButton implements JsonSerializable {
             case "center":
             case "left":
             case "right":
-                $this->align = $align;
-                break;
+            $this->align = $align;
+            break;
         }
         return $this;
     }
@@ -486,8 +487,8 @@ final class HighchartsContextButton implements JsonSerializable {
             case "square":
             case "triangle":
             case "triangle-down":
-                $this->symbol = $symbol;
-                break;
+            $this->symbol = $symbol;
+            break;
         }
         return $this;
     }
@@ -591,8 +592,8 @@ final class HighchartsContextButton implements JsonSerializable {
             case "bottom":
             case "middle":
             case "top":
-                $this->verticalAlign = $verticalAlign;
-                break;
+            $this->verticalAlign = $verticalAlign;
+            break;
         }
         return $this;
     }
@@ -640,95 +641,59 @@ final class HighchartsContextButton implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the align.
-        if (!is_null($this->align)) {
-            $output["align"] = $this->align;
-        }
+        // Set the align.
+        ArrayUtility::set($output, "align", $this->align, [null]);
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
 
-        // Check the height.
-        if (!is_null($this->height)) {
-            $output["height"] = $this->height;
-        }
+        // Set the height.
+        ArrayUtility::set($output, "height", $this->height, [null]);
 
-        // Check the menu items.
-        if (!is_null($this->menuItems)) {
-            $output["menuItems"] = $this->menuItems;
-        }
+        // Set the menu items.
+        ArrayUtility::set($output, "menuItems", $this->menuItems, [null]);
 
-        // Check the onclick.
-        if (!is_null($this->onclick)) {
-            $output["onclick"] = $this->onclick;
-        }
+        // Set the onclick.
+        ArrayUtility::set($output, "onclick", $this->onclick, [null]);
 
-        // Check the symbol.
-        if (!is_null($this->symbol)) {
-            $output["symbol"] = $this->symbol;
-        }
+        // Set the symbol.
+        ArrayUtility::set($output, "symbol", $this->symbol, [null]);
 
-        // Check the symbol fill.
-        if (!is_null($this->symbolFill)) {
-            $output["symbolFill"] = $this->symbolFill;
-        }
+        // Set the symbol fill.
+        ArrayUtility::set($output, "symbolFill", $this->symbolFill, [null]);
 
-        // Check the symbol size.
-        if (!is_null($this->symbolSize)) {
-            $output["symbolSize"] = $this->symbolSize;
-        }
+        // Set the symbol size.
+        ArrayUtility::set($output, "symbolSize", $this->symbolSize, [null]);
 
-        // Check the symbol stroke.
-        if (!is_null($this->symbolStroke)) {
-            $output["symbolStroke"] = $this->symbolStroke;
-        }
+        // Set the symbol stroke.
+        ArrayUtility::set($output, "symbolStroke", $this->symbolStroke, [null]);
 
-        // Check the symbol stroke width.
-        if (!is_null($this->symbolStrokeWidth)) {
-            $output["symbolStrokeWidth"] = $this->symbolStrokeWidth;
-        }
+        // Set the symbol stroke width.
+        ArrayUtility::set($output, "symbolStrokeWidth", $this->symbolStrokeWidth, [null]);
 
-        // Check the symbol x.
-        if (!is_null($this->symbolX)) {
-            $output["symbolX"] = $this->symbolX;
-        }
+        // Set the symbol x.
+        ArrayUtility::set($output, "symbolX", $this->symbolX, [null]);
 
-        // Check the symbol y.
-        if (!is_null($this->symbolY)) {
-            $output["symbolY"] = $this->symbolY;
-        }
+        // Set the symbol y.
+        ArrayUtility::set($output, "symbolY", $this->symbolY, [null]);
 
-        // Check the text.
-        if (!is_null($this->text)) {
-            $output["text"] = $this->text;
-        }
+        // Set the text.
+        ArrayUtility::set($output, "text", $this->text, [null]);
 
-        // Check the theme.
-        if (!is_null($this->theme)) {
-            $output["theme"] = $this->theme;
-        }
+        // Set the theme.
+        ArrayUtility::set($output, "theme", $this->theme, [null]);
 
-        // Check the vertical align.
-        if (!is_null($this->verticalAlign)) {
-            $output["verticalAlign"] = $this->verticalAlign;
-        }
+        // Set the vertical align.
+        ArrayUtility::set($output, "verticalAlign", $this->verticalAlign, [null]);
 
-        // Check the width.
-        if (!is_null($this->width)) {
-            $output["width"] = $this->width;
-        }
+        // Set the width.
+        ArrayUtility::set($output, "width", $this->width, [null]);
 
-        // Check the x.
-        if (!is_null($this->x)) {
-            $output["x"] = $this->x;
-        }
+        // Set the x.
+        ArrayUtility::set($output, "x", $this->x, [null]);
 
-        // Check the y.
-        if (!is_null($this->y)) {
-            $output["y"] = $this->y;
-        }
+        // Set the y.
+        ArrayUtility::set($output, "y", $this->y, [null]);
 
         // Return the output.
         return $output;

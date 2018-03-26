@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Accessibility;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts keyboard navigation.
@@ -53,7 +54,7 @@ final class HighchartsKeyboardNavigation implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -154,20 +155,14 @@ final class HighchartsKeyboardNavigation implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
 
-        // Check the skip null points.
-        if (!is_null($this->skipNullPoints)) {
-            $output["skipNullPoints"] = $this->skipNullPoints;
-        }
+        // Set the skip null points.
+        ArrayUtility::set($output, "skipNullPoints", $this->skipNullPoints, [null]);
 
-        // Check the tab through chart elements.
-        if (!is_null($this->tabThroughChartElements)) {
-            $output["tabThroughChartElements"] = $this->tabThroughChartElements;
-        }
+        // Set the tab through chart elements.
+        ArrayUtility::set($output, "tabThroughChartElements", $this->tabThroughChartElements, [null]);
 
         // Return the output.
         return $output;

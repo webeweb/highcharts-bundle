@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Polygon\Marker;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts states.
@@ -43,7 +44,7 @@ final class HighchartsStates implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -56,12 +57,12 @@ final class HighchartsStates implements JsonSerializable {
     public function clear() {
 
         // Clear the hover.
-        if (!is_null($this->hover)) {
+        if (null !== $this->hover) {
             $this->hover->clear();
         }
 
         // Clear the select.
-        if (!is_null($this->select)) {
+        if (null !== $this->select) {
             $this->select->clear();
         }
     }
@@ -145,14 +146,14 @@ final class HighchartsStates implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the hover.
-        if (!is_null($this->hover)) {
-            $output["hover"] = $this->hover->toArray();
+        // Set the hover.
+        if (null !== $this->hover) {
+            ArrayUtility::set($output, "hover", $this->hover->toArray(), []);
         }
 
-        // Check the select.
-        if (!is_null($this->select)) {
-            $output["select"] = $this->select->toArray();
+        // Set the select.
+        if (null !== $this->select) {
+            ArrayUtility::set($output, "select", $this->select->toArray(), []);
         }
 
         // Return the output.

@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Legend;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts title.
@@ -45,7 +46,7 @@ final class HighchartsTitle implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -123,15 +124,11 @@ final class HighchartsTitle implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
 
-        // Check the text.
-        if (!is_null($this->text)) {
-            $output["text"] = $this->text;
-        }
+        // Set the text.
+        ArrayUtility::set($output, "text", $this->text, [null]);
 
         // Return the output.
         return $output;

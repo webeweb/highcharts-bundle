@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts credits.
@@ -65,7 +66,7 @@ final class HighchartsCredits implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -212,30 +213,20 @@ final class HighchartsCredits implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
 
-        // Check the href.
-        if (!is_null($this->href)) {
-            $output["href"] = $this->href;
-        }
+        // Set the href.
+        ArrayUtility::set($output, "href", $this->href, [null]);
 
-        // Check the position.
-        if (!is_null($this->position)) {
-            $output["position"] = $this->position;
-        }
+        // Set the position.
+        ArrayUtility::set($output, "position", $this->position, [null]);
 
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
 
-        // Check the text.
-        if (!is_null($this->text)) {
-            $output["text"] = $this->text;
-        }
+        // Set the text.
+        ArrayUtility::set($output, "text", $this->text, [null]);
 
         // Return the output.
         return $output;

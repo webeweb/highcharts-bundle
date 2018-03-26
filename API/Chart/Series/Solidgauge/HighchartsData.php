@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Solidgauge;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts data.
@@ -126,7 +127,7 @@ final class HighchartsData implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -154,7 +155,7 @@ final class HighchartsData implements JsonSerializable {
         $this->description = null;
 
         // Clear the events.
-        if (!is_null($this->events)) {
+        if (null !== $this->events) {
             $this->events->clear();
         }
 
@@ -469,70 +470,46 @@ final class HighchartsData implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the class name.
-        if (!is_null($this->className)) {
-            $output["className"] = $this->className;
+        // Set the class name.
+        ArrayUtility::set($output, "className", $this->className, [null]);
+
+        // Set the color.
+        ArrayUtility::set($output, "color", $this->color, [null]);
+
+        // Set the color index.
+        ArrayUtility::set($output, "colorIndex", $this->colorIndex, [null]);
+
+        // Set the data labels.
+        ArrayUtility::set($output, "dataLabels", $this->dataLabels, [null]);
+
+        // Set the description.
+        ArrayUtility::set($output, "description", $this->description, [null]);
+
+        // Set the events.
+        if (null !== $this->events) {
+            ArrayUtility::set($output, "events", $this->events->toArray(), []);
         }
 
-        // Check the color.
-        if (!is_null($this->color)) {
-            $output["color"] = $this->color;
-        }
+        // Set the id.
+        ArrayUtility::set($output, "id", $this->id, [null]);
 
-        // Check the color index.
-        if (!is_null($this->colorIndex)) {
-            $output["colorIndex"] = $this->colorIndex;
-        }
+        // Set the inner radius.
+        ArrayUtility::set($output, "innerRadius", $this->innerRadius, [null]);
 
-        // Check the data labels.
-        if (!is_null($this->dataLabels)) {
-            $output["dataLabels"] = $this->dataLabels;
-        }
+        // Set the labelrank.
+        ArrayUtility::set($output, "labelrank", $this->labelrank, [null]);
 
-        // Check the description.
-        if (!is_null($this->description)) {
-            $output["description"] = $this->description;
-        }
+        // Set the name.
+        ArrayUtility::set($output, "name", $this->name, [null]);
 
-        // Check the events.
-        if (!is_null($this->events)) {
-            $output["events"] = $this->events->toArray();
-        }
+        // Set the radius.
+        ArrayUtility::set($output, "radius", $this->radius, [null]);
 
-        // Check the id.
-        if (!is_null($this->id)) {
-            $output["id"] = $this->id;
-        }
+        // Set the selected.
+        ArrayUtility::set($output, "selected", $this->selected, [null]);
 
-        // Check the inner radius.
-        if (!is_null($this->innerRadius)) {
-            $output["innerRadius"] = $this->innerRadius;
-        }
-
-        // Check the labelrank.
-        if (!is_null($this->labelrank)) {
-            $output["labelrank"] = $this->labelrank;
-        }
-
-        // Check the name.
-        if (!is_null($this->name)) {
-            $output["name"] = $this->name;
-        }
-
-        // Check the radius.
-        if (!is_null($this->radius)) {
-            $output["radius"] = $this->radius;
-        }
-
-        // Check the selected.
-        if (!is_null($this->selected)) {
-            $output["selected"] = $this->selected;
-        }
-
-        // Check the y.
-        if (!is_null($this->y)) {
-            $output["y"] = $this->y;
-        }
+        // Set the y.
+        ArrayUtility::set($output, "y", $this->y, [null]);
 
         // Return the output.
         return $output;

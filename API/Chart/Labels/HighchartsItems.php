@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Labels;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts items.
@@ -43,7 +44,7 @@ final class HighchartsItems implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -121,15 +122,11 @@ final class HighchartsItems implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the html.
-        if (!is_null($this->html)) {
-            $output["html"] = $this->html;
-        }
+        // Set the html.
+        ArrayUtility::set($output, "html", $this->html, [null]);
 
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
 
         // Return the output.
         return $output;

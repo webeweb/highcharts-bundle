@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts events.
@@ -115,7 +116,7 @@ final class HighchartsEvents implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -400,60 +401,38 @@ final class HighchartsEvents implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the add series.
-        if (!is_null($this->addSeries)) {
-            $output["addSeries"] = $this->addSeries;
-        }
+        // Set the add series.
+        ArrayUtility::set($output, "addSeries", $this->addSeries, [null]);
 
-        // Check the after print.
-        if (!is_null($this->afterPrint)) {
-            $output["afterPrint"] = $this->afterPrint;
-        }
+        // Set the after print.
+        ArrayUtility::set($output, "afterPrint", $this->afterPrint, [null]);
 
-        // Check the before print.
-        if (!is_null($this->beforePrint)) {
-            $output["beforePrint"] = $this->beforePrint;
-        }
+        // Set the before print.
+        ArrayUtility::set($output, "beforePrint", $this->beforePrint, [null]);
 
-        // Check the click.
-        if (!is_null($this->click)) {
-            $output["click"] = $this->click;
-        }
+        // Set the click.
+        ArrayUtility::set($output, "click", $this->click, [null]);
 
-        // Check the drilldown.
-        if (!is_null($this->drilldown)) {
-            $output["drilldown"] = $this->drilldown;
-        }
+        // Set the drilldown.
+        ArrayUtility::set($output, "drilldown", $this->drilldown, [null]);
 
-        // Check the drillup.
-        if (!is_null($this->drillup)) {
-            $output["drillup"] = $this->drillup;
-        }
+        // Set the drillup.
+        ArrayUtility::set($output, "drillup", $this->drillup, [null]);
 
-        // Check the drillupall.
-        if (!is_null($this->drillupall)) {
-            $output["drillupall"] = $this->drillupall;
-        }
+        // Set the drillupall.
+        ArrayUtility::set($output, "drillupall", $this->drillupall, [null]);
 
-        // Check the load.
-        if (!is_null($this->load)) {
-            $output["load"] = $this->load;
-        }
+        // Set the load.
+        ArrayUtility::set($output, "load", $this->load, [null]);
 
-        // Check the redraw.
-        if (!is_null($this->redraw)) {
-            $output["redraw"] = $this->redraw;
-        }
+        // Set the redraw.
+        ArrayUtility::set($output, "redraw", $this->redraw, [null]);
 
-        // Check the render.
-        if (!is_null($this->render)) {
-            $output["render"] = $this->render;
-        }
+        // Set the render.
+        ArrayUtility::set($output, "render", $this->render, [null]);
 
-        // Check the selection.
-        if (!is_null($this->selection)) {
-            $output["selection"] = $this->selection;
-        }
+        // Set the selection.
+        ArrayUtility::set($output, "selection", $this->selection, [null]);
 
         // Return the output.
         return $output;

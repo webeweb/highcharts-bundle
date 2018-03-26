@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts top.
@@ -43,7 +44,7 @@ final class HighchartsTop implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -121,15 +122,11 @@ final class HighchartsTop implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the color.
-        if (!is_null($this->color)) {
-            $output["color"] = $this->color;
-        }
+        // Set the color.
+        ArrayUtility::set($output, "color", $this->color, [null]);
 
-        // Check the size.
-        if (!is_null($this->size)) {
-            $output["size"] = $this->size;
-        }
+        // Set the size.
+        ArrayUtility::set($output, "size", $this->size, [null]);
 
         // Return the output.
         return $output;

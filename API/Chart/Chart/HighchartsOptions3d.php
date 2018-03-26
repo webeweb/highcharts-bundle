@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts options3d.
@@ -93,7 +94,7 @@ final class HighchartsOptions3d implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -124,7 +125,7 @@ final class HighchartsOptions3d implements JsonSerializable {
         $this->fitToPlot = null;
 
         // Clear the frame.
-        if (!is_null($this->frame)) {
+        if (null !== $this->frame) {
             $this->frame->clear();
         }
 
@@ -244,8 +245,8 @@ final class HighchartsOptions3d implements JsonSerializable {
         switch ($axisLabelPosition) {
             case null:
             case "auto":
-                $this->axisLabelPosition = $axisLabelPosition;
-                break;
+            $this->axisLabelPosition = $axisLabelPosition;
+            break;
         }
         return $this;
     }
@@ -326,45 +327,31 @@ final class HighchartsOptions3d implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the alpha.
-        if (!is_null($this->alpha)) {
-            $output["alpha"] = $this->alpha;
+        // Set the alpha.
+        ArrayUtility::set($output, "alpha", $this->alpha, [null]);
+
+        // Set the axis label position.
+        ArrayUtility::set($output, "axisLabelPosition", $this->axisLabelPosition, [null]);
+
+        // Set the beta.
+        ArrayUtility::set($output, "beta", $this->beta, [null]);
+
+        // Set the depth.
+        ArrayUtility::set($output, "depth", $this->depth, [null]);
+
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
+
+        // Set the fit to plot.
+        ArrayUtility::set($output, "fitToPlot", $this->fitToPlot, [null]);
+
+        // Set the frame.
+        if (null !== $this->frame) {
+            ArrayUtility::set($output, "frame", $this->frame->toArray(), []);
         }
 
-        // Check the axis label position.
-        if (!is_null($this->axisLabelPosition)) {
-            $output["axisLabelPosition"] = $this->axisLabelPosition;
-        }
-
-        // Check the beta.
-        if (!is_null($this->beta)) {
-            $output["beta"] = $this->beta;
-        }
-
-        // Check the depth.
-        if (!is_null($this->depth)) {
-            $output["depth"] = $this->depth;
-        }
-
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
-
-        // Check the fit to plot.
-        if (!is_null($this->fitToPlot)) {
-            $output["fitToPlot"] = $this->fitToPlot;
-        }
-
-        // Check the frame.
-        if (!is_null($this->frame)) {
-            $output["frame"] = $this->frame->toArray();
-        }
-
-        // Check the view distance.
-        if (!is_null($this->viewDistance)) {
-            $output["viewDistance"] = $this->viewDistance;
-        }
+        // Set the view distance.
+        ArrayUtility::set($output, "viewDistance", $this->viewDistance, [null]);
 
         // Return the output.
         return $output;

@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts drilldown.
@@ -77,7 +78,7 @@ final class HighchartsDrilldown implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -247,35 +248,23 @@ final class HighchartsDrilldown implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the active axis label style.
-        if (!is_null($this->activeAxisLabelStyle)) {
-            $output["activeAxisLabelStyle"] = $this->activeAxisLabelStyle;
-        }
+        // Set the active axis label style.
+        ArrayUtility::set($output, "activeAxisLabelStyle", $this->activeAxisLabelStyle, [null]);
 
-        // Check the active data label style.
-        if (!is_null($this->activeDataLabelStyle)) {
-            $output["activeDataLabelStyle"] = $this->activeDataLabelStyle;
-        }
+        // Set the active data label style.
+        ArrayUtility::set($output, "activeDataLabelStyle", $this->activeDataLabelStyle, [null]);
 
-        // Check the allow point drilldown.
-        if (!is_null($this->allowPointDrilldown)) {
-            $output["allowPointDrilldown"] = $this->allowPointDrilldown;
-        }
+        // Set the allow point drilldown.
+        ArrayUtility::set($output, "allowPointDrilldown", $this->allowPointDrilldown, [null]);
 
-        // Check the animation.
-        if (!is_null($this->animation)) {
-            $output["animation"] = $this->animation;
-        }
+        // Set the animation.
+        ArrayUtility::set($output, "animation", $this->animation, [null]);
 
-        // Check the drill up button.
-        if (!is_null($this->drillUpButton)) {
-            $output["drillUpButton"] = $this->drillUpButton;
-        }
+        // Set the drill up button.
+        ArrayUtility::set($output, "drillUpButton", $this->drillUpButton, [null]);
 
-        // Check the series.
-        if (!is_null($this->series)) {
-            $output["series"] = $this->series;
-        }
+        // Set the series.
+        ArrayUtility::set($output, "series", $this->series, [null]);
 
         // Return the output.
         return $output;

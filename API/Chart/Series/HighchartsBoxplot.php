@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Series;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts boxplot.
@@ -519,7 +520,7 @@ final class HighchartsBoxplot implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -577,7 +578,7 @@ final class HighchartsBoxplot implements JsonSerializable {
         $this->enableMouseTracking = null;
 
         // Clear the events.
-        if (!is_null($this->events)) {
+        if (null !== $this->events) {
             $this->events->clear();
         }
 
@@ -636,7 +637,7 @@ final class HighchartsBoxplot implements JsonSerializable {
         $this->negativeColor = null;
 
         // Clear the point.
-        if (!is_null($this->point)) {
+        if (null !== $this->point) {
             $this->point->clear();
         }
 
@@ -677,7 +678,7 @@ final class HighchartsBoxplot implements JsonSerializable {
         $this->skipKeyboardNavigation = null;
 
         // Clear the states.
-        if (!is_null($this->states)) {
+        if (null !== $this->states) {
             $this->states->clear();
         }
 
@@ -1447,8 +1448,8 @@ final class HighchartsBoxplot implements JsonSerializable {
             case "help":
             case "none":
             case "pointer":
-                $this->cursor = $cursor;
-                break;
+            $this->cursor = $cursor;
+            break;
         }
         return $this;
     }
@@ -1562,8 +1563,8 @@ final class HighchartsBoxplot implements JsonSerializable {
         switch ($findNearestPointBy) {
             case "x":
             case "xy":
-                $this->findNearestPointBy = $findNearestPointBy;
-                break;
+            $this->findNearestPointBy = $findNearestPointBy;
+            break;
         }
         return $this;
     }
@@ -1778,8 +1779,8 @@ final class HighchartsBoxplot implements JsonSerializable {
             case "day":
             case "month":
             case "year":
-                $this->pointIntervalUnit = $pointIntervalUnit;
-                break;
+            $this->pointIntervalUnit = $pointIntervalUnit;
+            break;
         }
         return $this;
     }
@@ -1806,8 +1807,8 @@ final class HighchartsBoxplot implements JsonSerializable {
             case null:
             case "between":
             case "on":
-                $this->pointPlacement = $pointPlacement;
-                break;
+            $this->pointPlacement = $pointPlacement;
+            break;
         }
         return $this;
     }
@@ -1930,8 +1931,8 @@ final class HighchartsBoxplot implements JsonSerializable {
             case "ShortDashDotDot":
             case "ShortDot":
             case "Solid":
-                $this->stemDashStyle = $stemDashStyle;
-                break;
+            $this->stemDashStyle = $stemDashStyle;
+            break;
         }
         return $this;
     }
@@ -2005,8 +2006,8 @@ final class HighchartsBoxplot implements JsonSerializable {
             case "scatter":
             case "spline":
             case "waterfall":
-                $this->type = $type;
-                break;
+            $this->type = $type;
+            break;
         }
         return $this;
     }
@@ -2120,325 +2121,203 @@ final class HighchartsBoxplot implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the allow point select.
-        if (!is_null($this->allowPointSelect)) {
-            $output["allowPointSelect"] = $this->allowPointSelect;
+        // Set the allow point select.
+        ArrayUtility::set($output, "allowPointSelect", $this->allowPointSelect, [null]);
+
+        // Set the animation limit.
+        ArrayUtility::set($output, "animationLimit", $this->animationLimit, [null]);
+
+        // Set the class name.
+        ArrayUtility::set($output, "className", $this->className, [null]);
+
+        // Set the color.
+        ArrayUtility::set($output, "color", $this->color, [null]);
+
+        // Set the color by point.
+        ArrayUtility::set($output, "colorByPoint", $this->colorByPoint, [null]);
+
+        // Set the color index.
+        ArrayUtility::set($output, "colorIndex", $this->colorIndex, [null]);
+
+        // Set the colors.
+        ArrayUtility::set($output, "colors", $this->colors, [null]);
+
+        // Set the crisp.
+        ArrayUtility::set($output, "crisp", $this->crisp, [null]);
+
+        // Set the cursor.
+        ArrayUtility::set($output, "cursor", $this->cursor, [null]);
+
+        // Set the data.
+        ArrayUtility::set($output, "data", $this->data, [null]);
+
+        // Set the depth.
+        ArrayUtility::set($output, "depth", $this->depth, [null]);
+
+        // Set the description.
+        ArrayUtility::set($output, "description", $this->description, [null]);
+
+        // Set the edge color.
+        ArrayUtility::set($output, "edgeColor", $this->edgeColor, [null]);
+
+        // Set the edge width.
+        ArrayUtility::set($output, "edgeWidth", $this->edgeWidth, [null]);
+
+        // Set the enable mouse tracking.
+        ArrayUtility::set($output, "enableMouseTracking", $this->enableMouseTracking, [null]);
+
+        // Set the events.
+        if (null !== $this->events) {
+            ArrayUtility::set($output, "events", $this->events->toArray(), []);
         }
 
-        // Check the animation limit.
-        if (!is_null($this->animationLimit)) {
-            $output["animationLimit"] = $this->animationLimit;
+        // Set the expose element to a11y.
+        ArrayUtility::set($output, "exposeElementToA11y", $this->exposeElementToA11y, [null]);
+
+        // Set the fill color.
+        ArrayUtility::set($output, "fillColor", $this->fillColor, [null]);
+
+        // Set the find nearest point by.
+        ArrayUtility::set($output, "findNearestPointBy", $this->findNearestPointBy, [null]);
+
+        // Set the get extremes from all.
+        ArrayUtility::set($output, "getExtremesFromAll", $this->getExtremesFromAll, [null]);
+
+        // Set the group padding.
+        ArrayUtility::set($output, "groupPadding", $this->groupPadding, [null]);
+
+        // Set the group z padding.
+        ArrayUtility::set($output, "groupZPadding", $this->groupZPadding, [null]);
+
+        // Set the grouping.
+        ArrayUtility::set($output, "grouping", $this->grouping, [null]);
+
+        // Set the id.
+        ArrayUtility::set($output, "id", $this->id, [null]);
+
+        // Set the index.
+        ArrayUtility::set($output, "index", $this->index, [null]);
+
+        // Set the keys.
+        ArrayUtility::set($output, "keys", $this->keys, [null]);
+
+        // Set the legend index.
+        ArrayUtility::set($output, "legendIndex", $this->legendIndex, [null]);
+
+        // Set the line width.
+        ArrayUtility::set($output, "lineWidth", $this->lineWidth, [null]);
+
+        // Set the linked to.
+        ArrayUtility::set($output, "linkedTo", $this->linkedTo, [null]);
+
+        // Set the max point width.
+        ArrayUtility::set($output, "maxPointWidth", $this->maxPointWidth, [null]);
+
+        // Set the median color.
+        ArrayUtility::set($output, "medianColor", $this->medianColor, [null]);
+
+        // Set the median width.
+        ArrayUtility::set($output, "medianWidth", $this->medianWidth, [null]);
+
+        // Set the name.
+        ArrayUtility::set($output, "name", $this->name, [null]);
+
+        // Set the negative color.
+        ArrayUtility::set($output, "negativeColor", $this->negativeColor, [null]);
+
+        // Set the point.
+        if (null !== $this->point) {
+            ArrayUtility::set($output, "point", $this->point->toArray(), []);
         }
 
-        // Check the class name.
-        if (!is_null($this->className)) {
-            $output["className"] = $this->className;
+        // Set the point description formatter.
+        ArrayUtility::set($output, "pointDescriptionFormatter", $this->pointDescriptionFormatter, [null]);
+
+        // Set the point interval.
+        ArrayUtility::set($output, "pointInterval", $this->pointInterval, [null]);
+
+        // Set the point interval unit.
+        ArrayUtility::set($output, "pointIntervalUnit", $this->pointIntervalUnit, [null]);
+
+        // Set the point padding.
+        ArrayUtility::set($output, "pointPadding", $this->pointPadding, [null]);
+
+        // Set the point placement.
+        ArrayUtility::set($output, "pointPlacement", $this->pointPlacement, [null]);
+
+        // Set the point range.
+        ArrayUtility::set($output, "pointRange", $this->pointRange, [null]);
+
+        // Set the point start.
+        ArrayUtility::set($output, "pointStart", $this->pointStart, [null]);
+
+        // Set the point width.
+        ArrayUtility::set($output, "pointWidth", $this->pointWidth, [null]);
+
+        // Set the selected.
+        ArrayUtility::set($output, "selected", $this->selected, [null]);
+
+        // Set the show checkbox.
+        ArrayUtility::set($output, "showCheckbox", $this->showCheckbox, [null]);
+
+        // Set the show in legend.
+        ArrayUtility::set($output, "showInLegend", $this->showInLegend, [null]);
+
+        // Set the skip keyboard navigation.
+        ArrayUtility::set($output, "skipKeyboardNavigation", $this->skipKeyboardNavigation, [null]);
+
+        // Set the states.
+        if (null !== $this->states) {
+            ArrayUtility::set($output, "states", $this->states->toArray(), []);
         }
 
-        // Check the color.
-        if (!is_null($this->color)) {
-            $output["color"] = $this->color;
-        }
+        // Set the stem color.
+        ArrayUtility::set($output, "stemColor", $this->stemColor, [null]);
 
-        // Check the color by point.
-        if (!is_null($this->colorByPoint)) {
-            $output["colorByPoint"] = $this->colorByPoint;
-        }
+        // Set the stem dash style.
+        ArrayUtility::set($output, "stemDashStyle", $this->stemDashStyle, [null]);
 
-        // Check the color index.
-        if (!is_null($this->colorIndex)) {
-            $output["colorIndex"] = $this->colorIndex;
-        }
+        // Set the stem width.
+        ArrayUtility::set($output, "stemWidth", $this->stemWidth, [null]);
 
-        // Check the colors.
-        if (!is_null($this->colors)) {
-            $output["colors"] = $this->colors;
-        }
+        // Set the sticky tracking.
+        ArrayUtility::set($output, "stickyTracking", $this->stickyTracking, [null]);
 
-        // Check the crisp.
-        if (!is_null($this->crisp)) {
-            $output["crisp"] = $this->crisp;
-        }
+        // Set the tooltip.
+        ArrayUtility::set($output, "tooltip", $this->tooltip, [null]);
 
-        // Check the cursor.
-        if (!is_null($this->cursor)) {
-            $output["cursor"] = $this->cursor;
-        }
+        // Set the turbo threshold.
+        ArrayUtility::set($output, "turboThreshold", $this->turboThreshold, [null]);
 
-        // Check the data.
-        if (!is_null($this->data)) {
-            $output["data"] = $this->data;
-        }
+        // Set the type.
+        ArrayUtility::set($output, "type", $this->type, [null]);
 
-        // Check the depth.
-        if (!is_null($this->depth)) {
-            $output["depth"] = $this->depth;
-        }
+        // Set the visible.
+        ArrayUtility::set($output, "visible", $this->visible, [null]);
 
-        // Check the description.
-        if (!is_null($this->description)) {
-            $output["description"] = $this->description;
-        }
+        // Set the whisker color.
+        ArrayUtility::set($output, "whiskerColor", $this->whiskerColor, [null]);
 
-        // Check the edge color.
-        if (!is_null($this->edgeColor)) {
-            $output["edgeColor"] = $this->edgeColor;
-        }
+        // Set the whisker length.
+        ArrayUtility::set($output, "whiskerLength", $this->whiskerLength, [null]);
 
-        // Check the edge width.
-        if (!is_null($this->edgeWidth)) {
-            $output["edgeWidth"] = $this->edgeWidth;
-        }
+        // Set the whisker width.
+        ArrayUtility::set($output, "whiskerWidth", $this->whiskerWidth, [null]);
 
-        // Check the enable mouse tracking.
-        if (!is_null($this->enableMouseTracking)) {
-            $output["enableMouseTracking"] = $this->enableMouseTracking;
-        }
+        // Set the x axis.
+        ArrayUtility::set($output, "xAxis", $this->xAxis, [null]);
 
-        // Check the events.
-        if (!is_null($this->events)) {
-            $output["events"] = $this->events->toArray();
-        }
+        // Set the y axis.
+        ArrayUtility::set($output, "yAxis", $this->yAxis, [null]);
 
-        // Check the expose element to a11y.
-        if (!is_null($this->exposeElementToA11y)) {
-            $output["exposeElementToA11y"] = $this->exposeElementToA11y;
-        }
+        // Set the z index.
+        ArrayUtility::set($output, "zIndex", $this->zIndex, [null]);
 
-        // Check the fill color.
-        if (!is_null($this->fillColor)) {
-            $output["fillColor"] = $this->fillColor;
-        }
+        // Set the zone axis.
+        ArrayUtility::set($output, "zoneAxis", $this->zoneAxis, [null]);
 
-        // Check the find nearest point by.
-        if (!is_null($this->findNearestPointBy)) {
-            $output["findNearestPointBy"] = $this->findNearestPointBy;
-        }
-
-        // Check the get extremes from all.
-        if (!is_null($this->getExtremesFromAll)) {
-            $output["getExtremesFromAll"] = $this->getExtremesFromAll;
-        }
-
-        // Check the group padding.
-        if (!is_null($this->groupPadding)) {
-            $output["groupPadding"] = $this->groupPadding;
-        }
-
-        // Check the group z padding.
-        if (!is_null($this->groupZPadding)) {
-            $output["groupZPadding"] = $this->groupZPadding;
-        }
-
-        // Check the grouping.
-        if (!is_null($this->grouping)) {
-            $output["grouping"] = $this->grouping;
-        }
-
-        // Check the id.
-        if (!is_null($this->id)) {
-            $output["id"] = $this->id;
-        }
-
-        // Check the index.
-        if (!is_null($this->index)) {
-            $output["index"] = $this->index;
-        }
-
-        // Check the keys.
-        if (!is_null($this->keys)) {
-            $output["keys"] = $this->keys;
-        }
-
-        // Check the legend index.
-        if (!is_null($this->legendIndex)) {
-            $output["legendIndex"] = $this->legendIndex;
-        }
-
-        // Check the line width.
-        if (!is_null($this->lineWidth)) {
-            $output["lineWidth"] = $this->lineWidth;
-        }
-
-        // Check the linked to.
-        if (!is_null($this->linkedTo)) {
-            $output["linkedTo"] = $this->linkedTo;
-        }
-
-        // Check the max point width.
-        if (!is_null($this->maxPointWidth)) {
-            $output["maxPointWidth"] = $this->maxPointWidth;
-        }
-
-        // Check the median color.
-        if (!is_null($this->medianColor)) {
-            $output["medianColor"] = $this->medianColor;
-        }
-
-        // Check the median width.
-        if (!is_null($this->medianWidth)) {
-            $output["medianWidth"] = $this->medianWidth;
-        }
-
-        // Check the name.
-        if (!is_null($this->name)) {
-            $output["name"] = $this->name;
-        }
-
-        // Check the negative color.
-        if (!is_null($this->negativeColor)) {
-            $output["negativeColor"] = $this->negativeColor;
-        }
-
-        // Check the point.
-        if (!is_null($this->point)) {
-            $output["point"] = $this->point->toArray();
-        }
-
-        // Check the point description formatter.
-        if (!is_null($this->pointDescriptionFormatter)) {
-            $output["pointDescriptionFormatter"] = $this->pointDescriptionFormatter;
-        }
-
-        // Check the point interval.
-        if (!is_null($this->pointInterval)) {
-            $output["pointInterval"] = $this->pointInterval;
-        }
-
-        // Check the point interval unit.
-        if (!is_null($this->pointIntervalUnit)) {
-            $output["pointIntervalUnit"] = $this->pointIntervalUnit;
-        }
-
-        // Check the point padding.
-        if (!is_null($this->pointPadding)) {
-            $output["pointPadding"] = $this->pointPadding;
-        }
-
-        // Check the point placement.
-        if (!is_null($this->pointPlacement)) {
-            $output["pointPlacement"] = $this->pointPlacement;
-        }
-
-        // Check the point range.
-        if (!is_null($this->pointRange)) {
-            $output["pointRange"] = $this->pointRange;
-        }
-
-        // Check the point start.
-        if (!is_null($this->pointStart)) {
-            $output["pointStart"] = $this->pointStart;
-        }
-
-        // Check the point width.
-        if (!is_null($this->pointWidth)) {
-            $output["pointWidth"] = $this->pointWidth;
-        }
-
-        // Check the selected.
-        if (!is_null($this->selected)) {
-            $output["selected"] = $this->selected;
-        }
-
-        // Check the show checkbox.
-        if (!is_null($this->showCheckbox)) {
-            $output["showCheckbox"] = $this->showCheckbox;
-        }
-
-        // Check the show in legend.
-        if (!is_null($this->showInLegend)) {
-            $output["showInLegend"] = $this->showInLegend;
-        }
-
-        // Check the skip keyboard navigation.
-        if (!is_null($this->skipKeyboardNavigation)) {
-            $output["skipKeyboardNavigation"] = $this->skipKeyboardNavigation;
-        }
-
-        // Check the states.
-        if (!is_null($this->states)) {
-            $output["states"] = $this->states->toArray();
-        }
-
-        // Check the stem color.
-        if (!is_null($this->stemColor)) {
-            $output["stemColor"] = $this->stemColor;
-        }
-
-        // Check the stem dash style.
-        if (!is_null($this->stemDashStyle)) {
-            $output["stemDashStyle"] = $this->stemDashStyle;
-        }
-
-        // Check the stem width.
-        if (!is_null($this->stemWidth)) {
-            $output["stemWidth"] = $this->stemWidth;
-        }
-
-        // Check the sticky tracking.
-        if (!is_null($this->stickyTracking)) {
-            $output["stickyTracking"] = $this->stickyTracking;
-        }
-
-        // Check the tooltip.
-        if (!is_null($this->tooltip)) {
-            $output["tooltip"] = $this->tooltip;
-        }
-
-        // Check the turbo threshold.
-        if (!is_null($this->turboThreshold)) {
-            $output["turboThreshold"] = $this->turboThreshold;
-        }
-
-        // Check the type.
-        if (!is_null($this->type)) {
-            $output["type"] = $this->type;
-        }
-
-        // Check the visible.
-        if (!is_null($this->visible)) {
-            $output["visible"] = $this->visible;
-        }
-
-        // Check the whisker color.
-        if (!is_null($this->whiskerColor)) {
-            $output["whiskerColor"] = $this->whiskerColor;
-        }
-
-        // Check the whisker length.
-        if (!is_null($this->whiskerLength)) {
-            $output["whiskerLength"] = $this->whiskerLength;
-        }
-
-        // Check the whisker width.
-        if (!is_null($this->whiskerWidth)) {
-            $output["whiskerWidth"] = $this->whiskerWidth;
-        }
-
-        // Check the x axis.
-        if (!is_null($this->xAxis)) {
-            $output["xAxis"] = $this->xAxis;
-        }
-
-        // Check the y axis.
-        if (!is_null($this->yAxis)) {
-            $output["yAxis"] = $this->yAxis;
-        }
-
-        // Check the z index.
-        if (!is_null($this->zIndex)) {
-            $output["zIndex"] = $this->zIndex;
-        }
-
-        // Check the zone axis.
-        if (!is_null($this->zoneAxis)) {
-            $output["zoneAxis"] = $this->zoneAxis;
-        }
-
-        // Check the zones.
-        if (!is_null($this->zones)) {
-            $output["zones"] = $this->zones;
-        }
+        // Set the zones.
+        ArrayUtility::set($output, "zones", $this->zones, [null]);
 
         // Return the output.
         return $output;

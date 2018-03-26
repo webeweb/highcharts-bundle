@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts tooltip.
@@ -250,7 +251,7 @@ final class HighchartsTooltip implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -951,150 +952,92 @@ final class HighchartsTooltip implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the animation.
-        if (!is_null($this->animation)) {
-            $output["animation"] = $this->animation;
-        }
+        // Set the animation.
+        ArrayUtility::set($output, "animation", $this->animation, [null]);
 
-        // Check the background color.
-        if (!is_null($this->backgroundColor)) {
-            $output["backgroundColor"] = $this->backgroundColor;
-        }
+        // Set the background color.
+        ArrayUtility::set($output, "backgroundColor", $this->backgroundColor, [null]);
 
-        // Check the border color.
-        if (!is_null($this->borderColor)) {
-            $output["borderColor"] = $this->borderColor;
-        }
+        // Set the border color.
+        ArrayUtility::set($output, "borderColor", $this->borderColor, [null]);
 
-        // Check the border radius.
-        if (!is_null($this->borderRadius)) {
-            $output["borderRadius"] = $this->borderRadius;
-        }
+        // Set the border radius.
+        ArrayUtility::set($output, "borderRadius", $this->borderRadius, [null]);
 
-        // Check the border width.
-        if (!is_null($this->borderWidth)) {
-            $output["borderWidth"] = $this->borderWidth;
-        }
+        // Set the border width.
+        ArrayUtility::set($output, "borderWidth", $this->borderWidth, [null]);
 
-        // Check the crosshairs.
-        if (!is_null($this->crosshairs)) {
-            $output["crosshairs"] = $this->crosshairs;
-        }
+        // Set the crosshairs.
+        ArrayUtility::set($output, "crosshairs", $this->crosshairs, [null]);
 
-        // Check the date time label formats.
-        if (!is_null($this->dateTimeLabelFormats)) {
-            $output["dateTimeLabelFormats"] = $this->dateTimeLabelFormats;
-        }
+        // Set the date time label formats.
+        ArrayUtility::set($output, "dateTimeLabelFormats", $this->dateTimeLabelFormats, [null]);
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
 
-        // Check the follow pointer.
-        if (!is_null($this->followPointer)) {
-            $output["followPointer"] = $this->followPointer;
-        }
+        // Set the follow pointer.
+        ArrayUtility::set($output, "followPointer", $this->followPointer, [null]);
 
-        // Check the follow touch move.
-        if (!is_null($this->followTouchMove)) {
-            $output["followTouchMove"] = $this->followTouchMove;
-        }
+        // Set the follow touch move.
+        ArrayUtility::set($output, "followTouchMove", $this->followTouchMove, [null]);
 
-        // Check the footer format.
-        if (!is_null($this->footerFormat)) {
-            $output["footerFormat"] = $this->footerFormat;
-        }
+        // Set the footer format.
+        ArrayUtility::set($output, "footerFormat", $this->footerFormat, [null]);
 
-        // Check the formatter.
-        if (!is_null($this->formatter)) {
-            $output["formatter"] = $this->formatter;
-        }
+        // Set the formatter.
+        ArrayUtility::set($output, "formatter", $this->formatter, [null]);
 
-        // Check the header format.
-        if (!is_null($this->headerFormat)) {
-            $output["headerFormat"] = $this->headerFormat;
-        }
+        // Set the header format.
+        ArrayUtility::set($output, "headerFormat", $this->headerFormat, [null]);
 
-        // Check the hide delay.
-        if (!is_null($this->hideDelay)) {
-            $output["hideDelay"] = $this->hideDelay;
-        }
+        // Set the hide delay.
+        ArrayUtility::set($output, "hideDelay", $this->hideDelay, [null]);
 
-        // Check the padding.
-        if (!is_null($this->padding)) {
-            $output["padding"] = $this->padding;
-        }
+        // Set the padding.
+        ArrayUtility::set($output, "padding", $this->padding, [null]);
 
-        // Check the point format.
-        if (!is_null($this->pointFormat)) {
-            $output["pointFormat"] = $this->pointFormat;
-        }
+        // Set the point format.
+        ArrayUtility::set($output, "pointFormat", $this->pointFormat, [null]);
 
-        // Check the point formatter.
-        if (!is_null($this->pointFormatter)) {
-            $output["pointFormatter"] = $this->pointFormatter;
-        }
+        // Set the point formatter.
+        ArrayUtility::set($output, "pointFormatter", $this->pointFormatter, [null]);
 
-        // Check the positioner.
-        if (!is_null($this->positioner)) {
-            $output["positioner"] = $this->positioner;
-        }
+        // Set the positioner.
+        ArrayUtility::set($output, "positioner", $this->positioner, [null]);
 
-        // Check the shadow.
-        if (!is_null($this->shadow)) {
-            $output["shadow"] = $this->shadow;
-        }
+        // Set the shadow.
+        ArrayUtility::set($output, "shadow", $this->shadow, [null]);
 
-        // Check the shape.
-        if (!is_null($this->shape)) {
-            $output["shape"] = $this->shape;
-        }
+        // Set the shape.
+        ArrayUtility::set($output, "shape", $this->shape, [null]);
 
-        // Check the shared.
-        if (!is_null($this->shared)) {
-            $output["shared"] = $this->shared;
-        }
+        // Set the shared.
+        ArrayUtility::set($output, "shared", $this->shared, [null]);
 
-        // Check the snap.
-        if (!is_null($this->snap)) {
-            $output["snap"] = $this->snap;
-        }
+        // Set the snap.
+        ArrayUtility::set($output, "snap", $this->snap, [null]);
 
-        // Check the split.
-        if (!is_null($this->split)) {
-            $output["split"] = $this->split;
-        }
+        // Set the split.
+        ArrayUtility::set($output, "split", $this->split, [null]);
 
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
 
-        // Check the use HTML.
-        if (!is_null($this->useHTML)) {
-            $output["useHTML"] = $this->useHTML;
-        }
+        // Set the use HTML.
+        ArrayUtility::set($output, "useHTML", $this->useHTML, [null]);
 
-        // Check the value decimals.
-        if (!is_null($this->valueDecimals)) {
-            $output["valueDecimals"] = $this->valueDecimals;
-        }
+        // Set the value decimals.
+        ArrayUtility::set($output, "valueDecimals", $this->valueDecimals, [null]);
 
-        // Check the value prefix.
-        if (!is_null($this->valuePrefix)) {
-            $output["valuePrefix"] = $this->valuePrefix;
-        }
+        // Set the value prefix.
+        ArrayUtility::set($output, "valuePrefix", $this->valuePrefix, [null]);
 
-        // Check the value suffix.
-        if (!is_null($this->valueSuffix)) {
-            $output["valueSuffix"] = $this->valueSuffix;
-        }
+        // Set the value suffix.
+        ArrayUtility::set($output, "valueSuffix", $this->valueSuffix, [null]);
 
-        // Check the x date format.
-        if (!is_null($this->xDateFormat)) {
-            $output["xDateFormat"] = $this->xDateFormat;
-        }
+        // Set the x date format.
+        ArrayUtility::set($output, "xDateFormat", $this->xDateFormat, [null]);
 
         // Return the output.
         return $output;

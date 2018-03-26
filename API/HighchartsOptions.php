@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts options.
@@ -43,7 +44,7 @@ final class HighchartsOptions implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -56,12 +57,12 @@ final class HighchartsOptions implements JsonSerializable {
     public function clear() {
 
         // Clear the global.
-        if (!is_null($this->global)) {
+        if (null !== $this->global) {
             $this->global->clear();
         }
 
         // Clear the lang.
-        if (!is_null($this->lang)) {
+        if (null !== $this->lang) {
             $this->lang->clear();
         }
     }
@@ -145,14 +146,14 @@ final class HighchartsOptions implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the global.
-        if (!is_null($this->global)) {
-            $output["global"] = $this->global->toArray();
+        // Set the global.
+        if (null !== $this->global) {
+            ArrayUtility::set($output, "global", $this->global->toArray(), []);
         }
 
-        // Check the lang.
-        if (!is_null($this->lang)) {
-            $output["lang"] = $this->lang->toArray();
+        // Set the lang.
+        if (null !== $this->lang) {
+            ArrayUtility::set($output, "lang", $this->lang->toArray(), []);
         }
 
         // Return the output.

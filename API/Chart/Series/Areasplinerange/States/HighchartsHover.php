@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Areasplinerange\States;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts hover.
@@ -76,7 +77,7 @@ final class HighchartsHover implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -104,7 +105,7 @@ final class HighchartsHover implements JsonSerializable {
         $this->lineWidthPlus = null;
 
         // Clear the marker.
-        if (!is_null($this->marker)) {
+        if (null !== $this->marker) {
             $this->marker->clear();
         }
     }
@@ -260,34 +261,24 @@ final class HighchartsHover implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the animation.
-        if (!is_null($this->animation)) {
-            $output["animation"] = $this->animation;
-        }
+        // Set the animation.
+        ArrayUtility::set($output, "animation", $this->animation, [null]);
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
 
-        // Check the halo.
-        if (!is_null($this->halo)) {
-            $output["halo"] = $this->halo;
-        }
+        // Set the halo.
+        ArrayUtility::set($output, "halo", $this->halo, [null]);
 
-        // Check the line width.
-        if (!is_null($this->lineWidth)) {
-            $output["lineWidth"] = $this->lineWidth;
-        }
+        // Set the line width.
+        ArrayUtility::set($output, "lineWidth", $this->lineWidth, [null]);
 
-        // Check the line width plus.
-        if (!is_null($this->lineWidthPlus)) {
-            $output["lineWidthPlus"] = $this->lineWidthPlus;
-        }
+        // Set the line width plus.
+        ArrayUtility::set($output, "lineWidthPlus", $this->lineWidthPlus, [null]);
 
-        // Check the marker.
-        if (!is_null($this->marker)) {
-            $output["marker"] = $this->marker->toArray();
+        // Set the marker.
+        if (null !== $this->marker) {
+            ArrayUtility::set($output, "marker", $this->marker->toArray(), []);
         }
 
         // Return the output.

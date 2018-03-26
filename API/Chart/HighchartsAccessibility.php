@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts accessibility.
@@ -109,7 +110,7 @@ final class HighchartsAccessibility implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -371,55 +372,35 @@ final class HighchartsAccessibility implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the describe single series.
-        if (!is_null($this->describeSingleSeries)) {
-            $output["describeSingleSeries"] = $this->describeSingleSeries;
-        }
+        // Set the describe single series.
+        ArrayUtility::set($output, "describeSingleSeries", $this->describeSingleSeries, [null]);
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
 
-        // Check the keyboard navigation.
-        if (!is_null($this->keyboardNavigation)) {
-            $output["keyboardNavigation"] = $this->keyboardNavigation;
-        }
+        // Set the keyboard navigation.
+        ArrayUtility::set($output, "keyboardNavigation", $this->keyboardNavigation, [null]);
 
-        // Check the on table anchor click.
-        if (!is_null($this->onTableAnchorClick)) {
-            $output["onTableAnchorClick"] = $this->onTableAnchorClick;
-        }
+        // Set the on table anchor click.
+        ArrayUtility::set($output, "onTableAnchorClick", $this->onTableAnchorClick, [null]);
 
-        // Check the point date format.
-        if (!is_null($this->pointDateFormat)) {
-            $output["pointDateFormat"] = $this->pointDateFormat;
-        }
+        // Set the point date format.
+        ArrayUtility::set($output, "pointDateFormat", $this->pointDateFormat, [null]);
 
-        // Check the point date formatter.
-        if (!is_null($this->pointDateFormatter)) {
-            $output["pointDateFormatter"] = $this->pointDateFormatter;
-        }
+        // Set the point date formatter.
+        ArrayUtility::set($output, "pointDateFormatter", $this->pointDateFormatter, [null]);
 
-        // Check the point description formatter.
-        if (!is_null($this->pointDescriptionFormatter)) {
-            $output["pointDescriptionFormatter"] = $this->pointDescriptionFormatter;
-        }
+        // Set the point description formatter.
+        ArrayUtility::set($output, "pointDescriptionFormatter", $this->pointDescriptionFormatter, [null]);
 
-        // Check the point description threshold.
-        if (!is_null($this->pointDescriptionThreshold)) {
-            $output["pointDescriptionThreshold"] = $this->pointDescriptionThreshold;
-        }
+        // Set the point description threshold.
+        ArrayUtility::set($output, "pointDescriptionThreshold", $this->pointDescriptionThreshold, [null]);
 
-        // Check the screen reader section formatter.
-        if (!is_null($this->screenReaderSectionFormatter)) {
-            $output["screenReaderSectionFormatter"] = $this->screenReaderSectionFormatter;
-        }
+        // Set the screen reader section formatter.
+        ArrayUtility::set($output, "screenReaderSectionFormatter", $this->screenReaderSectionFormatter, [null]);
 
-        // Check the series description formatter.
-        if (!is_null($this->seriesDescriptionFormatter)) {
-            $output["seriesDescriptionFormatter"] = $this->seriesDescriptionFormatter;
-        }
+        // Set the series description formatter.
+        ArrayUtility::set($output, "seriesDescriptionFormatter", $this->seriesDescriptionFormatter, [null]);
 
         // Return the output.
         return $output;

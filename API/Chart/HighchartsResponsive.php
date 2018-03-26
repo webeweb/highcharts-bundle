@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts responsive.
@@ -37,7 +38,7 @@ final class HighchartsResponsive implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -92,10 +93,8 @@ final class HighchartsResponsive implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the rules.
-        if (!is_null($this->rules)) {
-            $output["rules"] = $this->rules;
-        }
+        // Set the rules.
+        ArrayUtility::set($output, "rules", $this->rules, [null]);
 
         // Return the output.
         return $output;

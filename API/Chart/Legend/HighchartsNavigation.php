@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Legend;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts navigation.
@@ -77,7 +78,7 @@ final class HighchartsNavigation implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -247,35 +248,23 @@ final class HighchartsNavigation implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the active color.
-        if (!is_null($this->activeColor)) {
-            $output["activeColor"] = $this->activeColor;
-        }
+        // Set the active color.
+        ArrayUtility::set($output, "activeColor", $this->activeColor, [null]);
 
-        // Check the animation.
-        if (!is_null($this->animation)) {
-            $output["animation"] = $this->animation;
-        }
+        // Set the animation.
+        ArrayUtility::set($output, "animation", $this->animation, [null]);
 
-        // Check the arrow size.
-        if (!is_null($this->arrowSize)) {
-            $output["arrowSize"] = $this->arrowSize;
-        }
+        // Set the arrow size.
+        ArrayUtility::set($output, "arrowSize", $this->arrowSize, [null]);
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
 
-        // Check the inactive color.
-        if (!is_null($this->inactiveColor)) {
-            $output["inactiveColor"] = $this->inactiveColor;
-        }
+        // Set the inactive color.
+        ArrayUtility::set($output, "inactiveColor", $this->inactiveColor, [null]);
 
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
 
         // Return the output.
         return $output;

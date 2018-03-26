@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\YAxis;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts stack labels.
@@ -117,7 +118,7 @@ final class HighchartsStackLabels implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -282,8 +283,8 @@ final class HighchartsStackLabels implements JsonSerializable {
             case "center":
             case "left":
             case "right":
-                $this->align = $align;
-                break;
+            $this->align = $align;
+            break;
         }
         return $this;
     }
@@ -354,8 +355,8 @@ final class HighchartsStackLabels implements JsonSerializable {
             case "center":
             case "left":
             case "right":
-                $this->textAlign = $textAlign;
-                break;
+            $this->textAlign = $textAlign;
+            break;
         }
         return $this;
     }
@@ -382,8 +383,8 @@ final class HighchartsStackLabels implements JsonSerializable {
             case "bottom":
             case "middle":
             case "top":
-                $this->verticalAlign = $verticalAlign;
-                break;
+            $this->verticalAlign = $verticalAlign;
+            break;
         }
         return $this;
     }
@@ -420,60 +421,38 @@ final class HighchartsStackLabels implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the align.
-        if (!is_null($this->align)) {
-            $output["align"] = $this->align;
-        }
+        // Set the align.
+        ArrayUtility::set($output, "align", $this->align, [null]);
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
 
-        // Check the format.
-        if (!is_null($this->format)) {
-            $output["format"] = $this->format;
-        }
+        // Set the format.
+        ArrayUtility::set($output, "format", $this->format, [null]);
 
-        // Check the formatter.
-        if (!is_null($this->formatter)) {
-            $output["formatter"] = $this->formatter;
-        }
+        // Set the formatter.
+        ArrayUtility::set($output, "formatter", $this->formatter, [null]);
 
-        // Check the rotation.
-        if (!is_null($this->rotation)) {
-            $output["rotation"] = $this->rotation;
-        }
+        // Set the rotation.
+        ArrayUtility::set($output, "rotation", $this->rotation, [null]);
 
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
 
-        // Check the text align.
-        if (!is_null($this->textAlign)) {
-            $output["textAlign"] = $this->textAlign;
-        }
+        // Set the text align.
+        ArrayUtility::set($output, "textAlign", $this->textAlign, [null]);
 
-        // Check the use HTML.
-        if (!is_null($this->useHTML)) {
-            $output["useHTML"] = $this->useHTML;
-        }
+        // Set the use HTML.
+        ArrayUtility::set($output, "useHTML", $this->useHTML, [null]);
 
-        // Check the vertical align.
-        if (!is_null($this->verticalAlign)) {
-            $output["verticalAlign"] = $this->verticalAlign;
-        }
+        // Set the vertical align.
+        ArrayUtility::set($output, "verticalAlign", $this->verticalAlign, [null]);
 
-        // Check the x.
-        if (!is_null($this->x)) {
-            $output["x"] = $this->x;
-        }
+        // Set the x.
+        ArrayUtility::set($output, "x", $this->x, [null]);
 
-        // Check the y.
-        if (!is_null($this->y)) {
-            $output["y"] = $this->y;
-        }
+        // Set the y.
+        ArrayUtility::set($output, "y", $this->y, [null]);
 
         // Return the output.
         return $output;

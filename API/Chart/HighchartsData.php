@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts data.
@@ -189,7 +190,7 @@ final class HighchartsData implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -499,8 +500,8 @@ final class HighchartsData implements JsonSerializable {
             case "dd/mm/YYYY":
             case "mm/dd/YY":
             case "mm/dd/YYYY":
-                $this->dateFormat = $dateFormat;
-                break;
+            $this->dateFormat = $dateFormat;
+            break;
         }
         return $this;
     }
@@ -691,105 +692,65 @@ final class HighchartsData implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the columns.
-        if (!is_null($this->columns)) {
-            $output["columns"] = $this->columns;
-        }
+        // Set the columns.
+        ArrayUtility::set($output, "columns", $this->columns, [null]);
 
-        // Check the complete.
-        if (!is_null($this->complete)) {
-            $output["complete"] = $this->complete;
-        }
+        // Set the complete.
+        ArrayUtility::set($output, "complete", $this->complete, [null]);
 
-        // Check the csv.
-        if (!is_null($this->csv)) {
-            $output["csv"] = $this->csv;
-        }
+        // Set the csv.
+        ArrayUtility::set($output, "csv", $this->csv, [null]);
 
-        // Check the date format.
-        if (!is_null($this->dateFormat)) {
-            $output["dateFormat"] = $this->dateFormat;
-        }
+        // Set the date format.
+        ArrayUtility::set($output, "dateFormat", $this->dateFormat, [null]);
 
-        // Check the decimal point.
-        if (!is_null($this->decimalPoint)) {
-            $output["decimalPoint"] = $this->decimalPoint;
-        }
+        // Set the decimal point.
+        ArrayUtility::set($output, "decimalPoint", $this->decimalPoint, [null]);
 
-        // Check the end column.
-        if (!is_null($this->endColumn)) {
-            $output["endColumn"] = $this->endColumn;
-        }
+        // Set the end column.
+        ArrayUtility::set($output, "endColumn", $this->endColumn, [null]);
 
-        // Check the end row.
-        if (!is_null($this->endRow)) {
-            $output["endRow"] = $this->endRow;
-        }
+        // Set the end row.
+        ArrayUtility::set($output, "endRow", $this->endRow, [null]);
 
-        // Check the first row as names.
-        if (!is_null($this->firstRowAsNames)) {
-            $output["firstRowAsNames"] = $this->firstRowAsNames;
-        }
+        // Set the first row as names.
+        ArrayUtility::set($output, "firstRowAsNames", $this->firstRowAsNames, [null]);
 
-        // Check the google spreadsheet key.
-        if (!is_null($this->googleSpreadsheetKey)) {
-            $output["googleSpreadsheetKey"] = $this->googleSpreadsheetKey;
-        }
+        // Set the google spreadsheet key.
+        ArrayUtility::set($output, "googleSpreadsheetKey", $this->googleSpreadsheetKey, [null]);
 
-        // Check the google spreadsheet worksheet.
-        if (!is_null($this->googleSpreadsheetWorksheet)) {
-            $output["googleSpreadsheetWorksheet"] = $this->googleSpreadsheetWorksheet;
-        }
+        // Set the google spreadsheet worksheet.
+        ArrayUtility::set($output, "googleSpreadsheetWorksheet", $this->googleSpreadsheetWorksheet, [null]);
 
-        // Check the item delimiter.
-        if (!is_null($this->itemDelimiter)) {
-            $output["itemDelimiter"] = $this->itemDelimiter;
-        }
+        // Set the item delimiter.
+        ArrayUtility::set($output, "itemDelimiter", $this->itemDelimiter, [null]);
 
-        // Check the line delimiter.
-        if (!is_null($this->lineDelimiter)) {
-            $output["lineDelimiter"] = $this->lineDelimiter;
-        }
+        // Set the line delimiter.
+        ArrayUtility::set($output, "lineDelimiter", $this->lineDelimiter, [null]);
 
-        // Check the parse date.
-        if (!is_null($this->parseDate)) {
-            $output["parseDate"] = $this->parseDate;
-        }
+        // Set the parse date.
+        ArrayUtility::set($output, "parseDate", $this->parseDate, [null]);
 
-        // Check the parsed.
-        if (!is_null($this->parsed)) {
-            $output["parsed"] = $this->parsed;
-        }
+        // Set the parsed.
+        ArrayUtility::set($output, "parsed", $this->parsed, [null]);
 
-        // Check the rows.
-        if (!is_null($this->rows)) {
-            $output["rows"] = $this->rows;
-        }
+        // Set the rows.
+        ArrayUtility::set($output, "rows", $this->rows, [null]);
 
-        // Check the series mapping.
-        if (!is_null($this->seriesMapping)) {
-            $output["seriesMapping"] = $this->seriesMapping;
-        }
+        // Set the series mapping.
+        ArrayUtility::set($output, "seriesMapping", $this->seriesMapping, [null]);
 
-        // Check the start column.
-        if (!is_null($this->startColumn)) {
-            $output["startColumn"] = $this->startColumn;
-        }
+        // Set the start column.
+        ArrayUtility::set($output, "startColumn", $this->startColumn, [null]);
 
-        // Check the start row.
-        if (!is_null($this->startRow)) {
-            $output["startRow"] = $this->startRow;
-        }
+        // Set the start row.
+        ArrayUtility::set($output, "startRow", $this->startRow, [null]);
 
-        // Check the switch rows and columns.
-        if (!is_null($this->switchRowsAndColumns)) {
-            $output["switchRowsAndColumns"] = $this->switchRowsAndColumns;
-        }
+        // Set the switch rows and columns.
+        ArrayUtility::set($output, "switchRowsAndColumns", $this->switchRowsAndColumns, [null]);
 
-        // Check the table.
-        if (!is_null($this->table)) {
-            $output["table"] = $this->table;
-        }
+        // Set the table.
+        ArrayUtility::set($output, "table", $this->table, [null]);
 
         // Return the output.
         return $output;

@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Treemap\States;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts hover.
@@ -74,7 +75,7 @@ final class HighchartsHover implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -244,35 +245,23 @@ final class HighchartsHover implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the animation.
-        if (!is_null($this->animation)) {
-            $output["animation"] = $this->animation;
-        }
+        // Set the animation.
+        ArrayUtility::set($output, "animation", $this->animation, [null]);
 
-        // Check the border color.
-        if (!is_null($this->borderColor)) {
-            $output["borderColor"] = $this->borderColor;
-        }
+        // Set the border color.
+        ArrayUtility::set($output, "borderColor", $this->borderColor, [null]);
 
-        // Check the brightness.
-        if (!is_null($this->brightness)) {
-            $output["brightness"] = $this->brightness;
-        }
+        // Set the brightness.
+        ArrayUtility::set($output, "brightness", $this->brightness, [null]);
 
-        // Check the color.
-        if (!is_null($this->color)) {
-            $output["color"] = $this->color;
-        }
+        // Set the color.
+        ArrayUtility::set($output, "color", $this->color, [null]);
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
 
-        // Check the opacity.
-        if (!is_null($this->opacity)) {
-            $output["opacity"] = $this->opacity;
-        }
+        // Set the opacity.
+        ArrayUtility::set($output, "opacity", $this->opacity, [null]);
 
         // Return the output.
         return $output;

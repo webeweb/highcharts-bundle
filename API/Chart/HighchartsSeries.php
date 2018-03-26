@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts series.
@@ -118,7 +119,7 @@ final class HighchartsSeries implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -401,8 +402,8 @@ final class HighchartsSeries implements JsonSerializable {
             case "scatter":
             case "spline":
             case "waterfall":
-                $this->type = $type;
-                break;
+            $this->type = $type;
+            break;
         }
         return $this;
     }
@@ -450,65 +451,41 @@ final class HighchartsSeries implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the data.
-        if (!is_null($this->data)) {
-            $output["data"] = $this->data;
-        }
+        // Set the data.
+        ArrayUtility::set($output, "data", $this->data, [null]);
 
-        // Check the data parser.
-        if (!is_null($this->dataParser)) {
-            $output["dataParser"] = $this->dataParser;
-        }
+        // Set the data parser.
+        ArrayUtility::set($output, "dataParser", $this->dataParser, [null]);
 
-        // Check the data URL.
-        if (!is_null($this->dataURL)) {
-            $output["dataURL"] = $this->dataURL;
-        }
+        // Set the data URL.
+        ArrayUtility::set($output, "dataURL", $this->dataURL, [null]);
 
-        // Check the id.
-        if (!is_null($this->id)) {
-            $output["id"] = $this->id;
-        }
+        // Set the id.
+        ArrayUtility::set($output, "id", $this->id, [null]);
 
-        // Check the index.
-        if (!is_null($this->index)) {
-            $output["index"] = $this->index;
-        }
+        // Set the index.
+        ArrayUtility::set($output, "index", $this->index, [null]);
 
-        // Check the legend index.
-        if (!is_null($this->legendIndex)) {
-            $output["legendIndex"] = $this->legendIndex;
-        }
+        // Set the legend index.
+        ArrayUtility::set($output, "legendIndex", $this->legendIndex, [null]);
 
-        // Check the name.
-        if (!is_null($this->name)) {
-            $output["name"] = $this->name;
-        }
+        // Set the name.
+        ArrayUtility::set($output, "name", $this->name, [null]);
 
-        // Check the stack.
-        if (!is_null($this->stack)) {
-            $output["stack"] = $this->stack;
-        }
+        // Set the stack.
+        ArrayUtility::set($output, "stack", $this->stack, [null]);
 
-        // Check the type.
-        if (!is_null($this->type)) {
-            $output["type"] = $this->type;
-        }
+        // Set the type.
+        ArrayUtility::set($output, "type", $this->type, [null]);
 
-        // Check the x axis.
-        if (!is_null($this->xAxis)) {
-            $output["xAxis"] = $this->xAxis;
-        }
+        // Set the x axis.
+        ArrayUtility::set($output, "xAxis", $this->xAxis, [null]);
 
-        // Check the y axis.
-        if (!is_null($this->yAxis)) {
-            $output["yAxis"] = $this->yAxis;
-        }
+        // Set the y axis.
+        ArrayUtility::set($output, "yAxis", $this->yAxis, [null]);
 
-        // Check the z index.
-        if (!is_null($this->zIndex)) {
-            $output["zIndex"] = $this->zIndex;
-        }
+        // Set the z index.
+        ArrayUtility::set($output, "zIndex", $this->zIndex, [null]);
 
         // Return the output.
         return $output;

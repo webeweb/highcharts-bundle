@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\YAxis;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts plot lines.
@@ -96,7 +97,7 @@ final class HighchartsPlotLines implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -124,7 +125,7 @@ final class HighchartsPlotLines implements JsonSerializable {
         $this->id = null;
 
         // Clear the label.
-        if (!is_null($this->label)) {
+        if (null !== $this->label) {
             $this->label->clear();
         }
 
@@ -279,8 +280,8 @@ final class HighchartsPlotLines implements JsonSerializable {
             case "ShortDashDotDot":
             case "ShortDot":
             case "Solid":
-                $this->dashStyle = $dashStyle;
-                break;
+            $this->dashStyle = $dashStyle;
+            break;
         }
         return $this;
     }
@@ -361,50 +362,34 @@ final class HighchartsPlotLines implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the class name.
-        if (!is_null($this->className)) {
-            $output["className"] = $this->className;
+        // Set the class name.
+        ArrayUtility::set($output, "className", $this->className, [null]);
+
+        // Set the color.
+        ArrayUtility::set($output, "color", $this->color, [null]);
+
+        // Set the dash style.
+        ArrayUtility::set($output, "dashStyle", $this->dashStyle, [null]);
+
+        // Set the events.
+        ArrayUtility::set($output, "events", $this->events, [null]);
+
+        // Set the id.
+        ArrayUtility::set($output, "id", $this->id, [null]);
+
+        // Set the label.
+        if (null !== $this->label) {
+            ArrayUtility::set($output, "label", $this->label->toArray(), []);
         }
 
-        // Check the color.
-        if (!is_null($this->color)) {
-            $output["color"] = $this->color;
-        }
+        // Set the value.
+        ArrayUtility::set($output, "value", $this->value, [null]);
 
-        // Check the dash style.
-        if (!is_null($this->dashStyle)) {
-            $output["dashStyle"] = $this->dashStyle;
-        }
+        // Set the width.
+        ArrayUtility::set($output, "width", $this->width, [null]);
 
-        // Check the events.
-        if (!is_null($this->events)) {
-            $output["events"] = $this->events;
-        }
-
-        // Check the id.
-        if (!is_null($this->id)) {
-            $output["id"] = $this->id;
-        }
-
-        // Check the label.
-        if (!is_null($this->label)) {
-            $output["label"] = $this->label->toArray();
-        }
-
-        // Check the value.
-        if (!is_null($this->value)) {
-            $output["value"] = $this->value;
-        }
-
-        // Check the width.
-        if (!is_null($this->width)) {
-            $output["width"] = $this->width;
-        }
-
-        // Check the z index.
-        if (!is_null($this->zIndex)) {
-            $output["zIndex"] = $this->zIndex;
-        }
+        // Set the z index.
+        ArrayUtility::set($output, "zIndex", $this->zIndex, [null]);
 
         // Return the output.
         return $output;

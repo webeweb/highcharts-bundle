@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts chart.
@@ -367,7 +368,7 @@ final class HighchartsChart implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -410,7 +411,7 @@ final class HighchartsChart implements JsonSerializable {
         $this->description = null;
 
         // Clear the events.
-        if (!is_null($this->events)) {
+        if (null !== $this->events) {
             $this->events->clear();
         }
 
@@ -439,7 +440,7 @@ final class HighchartsChart implements JsonSerializable {
         $this->marginTop = null;
 
         // Clear the options3d.
-        if (!is_null($this->options3d)) {
+        if (null !== $this->options3d) {
             $this->options3d->clear();
         }
 
@@ -477,7 +478,7 @@ final class HighchartsChart implements JsonSerializable {
         $this->renderTo = null;
 
         // Clear the reset zoom button.
-        if (!is_null($this->resetZoomButton)) {
+        if (null !== $this->resetZoomButton) {
             $this->resetZoomButton->clear();
         }
 
@@ -1069,8 +1070,8 @@ final class HighchartsChart implements JsonSerializable {
             case "line":
             case "pie":
             case "spline":
-                $this->defaultSeriesType = $defaultSeriesType;
-                break;
+            $this->defaultSeriesType = $defaultSeriesType;
+            break;
         }
         return $this;
     }
@@ -1209,8 +1210,8 @@ final class HighchartsChart implements JsonSerializable {
             case "ctrl":
             case "meta":
             case "shift":
-                $this->panKey = $panKey;
-                break;
+            $this->panKey = $panKey;
+            break;
         }
         return $this;
     }
@@ -1237,8 +1238,8 @@ final class HighchartsChart implements JsonSerializable {
             case "x":
             case "xy":
             case "y":
-                $this->pinchType = $pinchType;
-                break;
+            $this->pinchType = $pinchType;
+            break;
         }
         return $this;
     }
@@ -1471,8 +1472,8 @@ final class HighchartsChart implements JsonSerializable {
             case "spline":
             case "treemap":
             case "waterfall":
-                $this->type = $type;
-                break;
+            $this->type = $type;
+            break;
         }
         return $this;
     }
@@ -1511,8 +1512,8 @@ final class HighchartsChart implements JsonSerializable {
             case "x":
             case "xy":
             case "y":
-                $this->zoomType = $zoomType;
-                break;
+            $this->zoomType = $zoomType;
+            break;
         }
         return $this;
     }
@@ -1527,230 +1528,146 @@ final class HighchartsChart implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the align ticks.
-        if (!is_null($this->alignTicks)) {
-            $output["alignTicks"] = $this->alignTicks;
+        // Set the align ticks.
+        ArrayUtility::set($output, "alignTicks", $this->alignTicks, [null]);
+
+        // Set the animation.
+        ArrayUtility::set($output, "animation", $this->animation, [null]);
+
+        // Set the background color.
+        ArrayUtility::set($output, "backgroundColor", $this->backgroundColor, [null]);
+
+        // Set the border color.
+        ArrayUtility::set($output, "borderColor", $this->borderColor, [null]);
+
+        // Set the border radius.
+        ArrayUtility::set($output, "borderRadius", $this->borderRadius, [null]);
+
+        // Set the border width.
+        ArrayUtility::set($output, "borderWidth", $this->borderWidth, [null]);
+
+        // Set the class name.
+        ArrayUtility::set($output, "className", $this->className, [null]);
+
+        // Set the color count.
+        ArrayUtility::set($output, "colorCount", $this->colorCount, [null]);
+
+        // Set the default series type.
+        ArrayUtility::set($output, "defaultSeriesType", $this->defaultSeriesType, [null]);
+
+        // Set the description.
+        ArrayUtility::set($output, "description", $this->description, [null]);
+
+        // Set the events.
+        if (null !== $this->events) {
+            ArrayUtility::set($output, "events", $this->events->toArray(), []);
         }
 
-        // Check the animation.
-        if (!is_null($this->animation)) {
-            $output["animation"] = $this->animation;
+        // Set the height.
+        ArrayUtility::set($output, "height", $this->height, [null]);
+
+        // Set the ignore hidden series.
+        ArrayUtility::set($output, "ignoreHiddenSeries", $this->ignoreHiddenSeries, [null]);
+
+        // Set the inverted.
+        ArrayUtility::set($output, "inverted", $this->inverted, [null]);
+
+        // Set the margin.
+        ArrayUtility::set($output, "margin", $this->margin, [null]);
+
+        // Set the margin bottom.
+        ArrayUtility::set($output, "marginBottom", $this->marginBottom, [null]);
+
+        // Set the margin left.
+        ArrayUtility::set($output, "marginLeft", $this->marginLeft, [null]);
+
+        // Set the margin right.
+        ArrayUtility::set($output, "marginRight", $this->marginRight, [null]);
+
+        // Set the margin top.
+        ArrayUtility::set($output, "marginTop", $this->marginTop, [null]);
+
+        // Set the options3d.
+        if (null !== $this->options3d) {
+            ArrayUtility::set($output, "options3d", $this->options3d->toArray(), []);
         }
 
-        // Check the background color.
-        if (!is_null($this->backgroundColor)) {
-            $output["backgroundColor"] = $this->backgroundColor;
+        // Set the pan key.
+        ArrayUtility::set($output, "panKey", $this->panKey, [null]);
+
+        // Set the panning.
+        ArrayUtility::set($output, "panning", $this->panning, [null]);
+
+        // Set the pinch type.
+        ArrayUtility::set($output, "pinchType", $this->pinchType, [null]);
+
+        // Set the plot background color.
+        ArrayUtility::set($output, "plotBackgroundColor", $this->plotBackgroundColor, [null]);
+
+        // Set the plot background image.
+        ArrayUtility::set($output, "plotBackgroundImage", $this->plotBackgroundImage, [null]);
+
+        // Set the plot border color.
+        ArrayUtility::set($output, "plotBorderColor", $this->plotBorderColor, [null]);
+
+        // Set the plot border width.
+        ArrayUtility::set($output, "plotBorderWidth", $this->plotBorderWidth, [null]);
+
+        // Set the plot shadow.
+        ArrayUtility::set($output, "plotShadow", $this->plotShadow, [null]);
+
+        // Set the polar.
+        ArrayUtility::set($output, "polar", $this->polar, [null]);
+
+        // Set the reflow.
+        ArrayUtility::set($output, "reflow", $this->reflow, [null]);
+
+        // Set the render to.
+        ArrayUtility::set($output, "renderTo", $this->renderTo, [null]);
+
+        // Set the reset zoom button.
+        if (null !== $this->resetZoomButton) {
+            ArrayUtility::set($output, "resetZoomButton", $this->resetZoomButton->toArray(), []);
         }
 
-        // Check the border color.
-        if (!is_null($this->borderColor)) {
-            $output["borderColor"] = $this->borderColor;
-        }
+        // Set the selection marker fill.
+        ArrayUtility::set($output, "selectionMarkerFill", $this->selectionMarkerFill, [null]);
 
-        // Check the border radius.
-        if (!is_null($this->borderRadius)) {
-            $output["borderRadius"] = $this->borderRadius;
-        }
+        // Set the shadow.
+        ArrayUtility::set($output, "shadow", $this->shadow, [null]);
 
-        // Check the border width.
-        if (!is_null($this->borderWidth)) {
-            $output["borderWidth"] = $this->borderWidth;
-        }
+        // Set the show axes.
+        ArrayUtility::set($output, "showAxes", $this->showAxes, [null]);
 
-        // Check the class name.
-        if (!is_null($this->className)) {
-            $output["className"] = $this->className;
-        }
+        // Set the spacing.
+        ArrayUtility::set($output, "spacing", $this->spacing, [null]);
 
-        // Check the color count.
-        if (!is_null($this->colorCount)) {
-            $output["colorCount"] = $this->colorCount;
-        }
+        // Set the spacing bottom.
+        ArrayUtility::set($output, "spacingBottom", $this->spacingBottom, [null]);
 
-        // Check the default series type.
-        if (!is_null($this->defaultSeriesType)) {
-            $output["defaultSeriesType"] = $this->defaultSeriesType;
-        }
+        // Set the spacing left.
+        ArrayUtility::set($output, "spacingLeft", $this->spacingLeft, [null]);
 
-        // Check the description.
-        if (!is_null($this->description)) {
-            $output["description"] = $this->description;
-        }
+        // Set the spacing right.
+        ArrayUtility::set($output, "spacingRight", $this->spacingRight, [null]);
 
-        // Check the events.
-        if (!is_null($this->events)) {
-            $output["events"] = $this->events->toArray();
-        }
+        // Set the spacing top.
+        ArrayUtility::set($output, "spacingTop", $this->spacingTop, [null]);
 
-        // Check the height.
-        if (!is_null($this->height)) {
-            $output["height"] = $this->height;
-        }
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
 
-        // Check the ignore hidden series.
-        if (!is_null($this->ignoreHiddenSeries)) {
-            $output["ignoreHiddenSeries"] = $this->ignoreHiddenSeries;
-        }
+        // Set the type.
+        ArrayUtility::set($output, "type", $this->type, [null]);
 
-        // Check the inverted.
-        if (!is_null($this->inverted)) {
-            $output["inverted"] = $this->inverted;
-        }
+        // Set the type description.
+        ArrayUtility::set($output, "typeDescription", $this->typeDescription, [null]);
 
-        // Check the margin.
-        if (!is_null($this->margin)) {
-            $output["margin"] = $this->margin;
-        }
+        // Set the width.
+        ArrayUtility::set($output, "width", $this->width, [null]);
 
-        // Check the margin bottom.
-        if (!is_null($this->marginBottom)) {
-            $output["marginBottom"] = $this->marginBottom;
-        }
-
-        // Check the margin left.
-        if (!is_null($this->marginLeft)) {
-            $output["marginLeft"] = $this->marginLeft;
-        }
-
-        // Check the margin right.
-        if (!is_null($this->marginRight)) {
-            $output["marginRight"] = $this->marginRight;
-        }
-
-        // Check the margin top.
-        if (!is_null($this->marginTop)) {
-            $output["marginTop"] = $this->marginTop;
-        }
-
-        // Check the options3d.
-        if (!is_null($this->options3d)) {
-            $output["options3d"] = $this->options3d->toArray();
-        }
-
-        // Check the pan key.
-        if (!is_null($this->panKey)) {
-            $output["panKey"] = $this->panKey;
-        }
-
-        // Check the panning.
-        if (!is_null($this->panning)) {
-            $output["panning"] = $this->panning;
-        }
-
-        // Check the pinch type.
-        if (!is_null($this->pinchType)) {
-            $output["pinchType"] = $this->pinchType;
-        }
-
-        // Check the plot background color.
-        if (!is_null($this->plotBackgroundColor)) {
-            $output["plotBackgroundColor"] = $this->plotBackgroundColor;
-        }
-
-        // Check the plot background image.
-        if (!is_null($this->plotBackgroundImage)) {
-            $output["plotBackgroundImage"] = $this->plotBackgroundImage;
-        }
-
-        // Check the plot border color.
-        if (!is_null($this->plotBorderColor)) {
-            $output["plotBorderColor"] = $this->plotBorderColor;
-        }
-
-        // Check the plot border width.
-        if (!is_null($this->plotBorderWidth)) {
-            $output["plotBorderWidth"] = $this->plotBorderWidth;
-        }
-
-        // Check the plot shadow.
-        if (!is_null($this->plotShadow)) {
-            $output["plotShadow"] = $this->plotShadow;
-        }
-
-        // Check the polar.
-        if (!is_null($this->polar)) {
-            $output["polar"] = $this->polar;
-        }
-
-        // Check the reflow.
-        if (!is_null($this->reflow)) {
-            $output["reflow"] = $this->reflow;
-        }
-
-        // Check the render to.
-        if (!is_null($this->renderTo)) {
-            $output["renderTo"] = $this->renderTo;
-        }
-
-        // Check the reset zoom button.
-        if (!is_null($this->resetZoomButton)) {
-            $output["resetZoomButton"] = $this->resetZoomButton->toArray();
-        }
-
-        // Check the selection marker fill.
-        if (!is_null($this->selectionMarkerFill)) {
-            $output["selectionMarkerFill"] = $this->selectionMarkerFill;
-        }
-
-        // Check the shadow.
-        if (!is_null($this->shadow)) {
-            $output["shadow"] = $this->shadow;
-        }
-
-        // Check the show axes.
-        if (!is_null($this->showAxes)) {
-            $output["showAxes"] = $this->showAxes;
-        }
-
-        // Check the spacing.
-        if (!is_null($this->spacing)) {
-            $output["spacing"] = $this->spacing;
-        }
-
-        // Check the spacing bottom.
-        if (!is_null($this->spacingBottom)) {
-            $output["spacingBottom"] = $this->spacingBottom;
-        }
-
-        // Check the spacing left.
-        if (!is_null($this->spacingLeft)) {
-            $output["spacingLeft"] = $this->spacingLeft;
-        }
-
-        // Check the spacing right.
-        if (!is_null($this->spacingRight)) {
-            $output["spacingRight"] = $this->spacingRight;
-        }
-
-        // Check the spacing top.
-        if (!is_null($this->spacingTop)) {
-            $output["spacingTop"] = $this->spacingTop;
-        }
-
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
-
-        // Check the type.
-        if (!is_null($this->type)) {
-            $output["type"] = $this->type;
-        }
-
-        // Check the type description.
-        if (!is_null($this->typeDescription)) {
-            $output["typeDescription"] = $this->typeDescription;
-        }
-
-        // Check the width.
-        if (!is_null($this->width)) {
-            $output["width"] = $this->width;
-        }
-
-        // Check the zoom type.
-        if (!is_null($this->zoomType)) {
-            $output["zoomType"] = $this->zoomType;
-        }
+        // Set the zoom type.
+        ArrayUtility::set($output, "zoomType", $this->zoomType, [null]);
 
         // Return the output.
         return $output;

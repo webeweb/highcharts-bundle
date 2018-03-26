@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Arearange;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts data labels.
@@ -239,7 +240,7 @@ final class HighchartsDataLabels implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -596,8 +597,8 @@ final class HighchartsDataLabels implements JsonSerializable {
             case "center":
             case "left":
             case "right":
-                $this->align = $align;
-                break;
+            $this->align = $align;
+            break;
         }
         return $this;
     }
@@ -755,8 +756,8 @@ final class HighchartsDataLabels implements JsonSerializable {
         switch ($overflow) {
             case "justify":
             case "none":
-                $this->overflow = $overflow;
-                break;
+            $this->overflow = $overflow;
+            break;
         }
         return $this;
     }
@@ -838,8 +839,8 @@ final class HighchartsDataLabels implements JsonSerializable {
             case "bottom":
             case "middle":
             case "top":
-                $this->verticalAlign = $verticalAlign;
-                break;
+            $this->verticalAlign = $verticalAlign;
+            break;
         }
         return $this;
     }
@@ -909,140 +910,86 @@ final class HighchartsDataLabels implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the align.
-        if (!is_null($this->align)) {
-            $output["align"] = $this->align;
-        }
+        // Set the align.
+        ArrayUtility::set($output, "align", $this->align, [null]);
 
-        // Check the allow overlap.
-        if (!is_null($this->allowOverlap)) {
-            $output["allowOverlap"] = $this->allowOverlap;
-        }
+        // Set the allow overlap.
+        ArrayUtility::set($output, "allowOverlap", $this->allowOverlap, [null]);
 
-        // Check the background color.
-        if (!is_null($this->backgroundColor)) {
-            $output["backgroundColor"] = $this->backgroundColor;
-        }
+        // Set the background color.
+        ArrayUtility::set($output, "backgroundColor", $this->backgroundColor, [null]);
 
-        // Check the border color.
-        if (!is_null($this->borderColor)) {
-            $output["borderColor"] = $this->borderColor;
-        }
+        // Set the border color.
+        ArrayUtility::set($output, "borderColor", $this->borderColor, [null]);
 
-        // Check the border radius.
-        if (!is_null($this->borderRadius)) {
-            $output["borderRadius"] = $this->borderRadius;
-        }
+        // Set the border radius.
+        ArrayUtility::set($output, "borderRadius", $this->borderRadius, [null]);
 
-        // Check the border width.
-        if (!is_null($this->borderWidth)) {
-            $output["borderWidth"] = $this->borderWidth;
-        }
+        // Set the border width.
+        ArrayUtility::set($output, "borderWidth", $this->borderWidth, [null]);
 
-        // Check the class name.
-        if (!is_null($this->className)) {
-            $output["className"] = $this->className;
-        }
+        // Set the class name.
+        ArrayUtility::set($output, "className", $this->className, [null]);
 
-        // Check the color.
-        if (!is_null($this->color)) {
-            $output["color"] = $this->color;
-        }
+        // Set the color.
+        ArrayUtility::set($output, "color", $this->color, [null]);
 
-        // Check the crop.
-        if (!is_null($this->crop)) {
-            $output["crop"] = $this->crop;
-        }
+        // Set the crop.
+        ArrayUtility::set($output, "crop", $this->crop, [null]);
 
-        // Check the defer.
-        if (!is_null($this->defer)) {
-            $output["defer"] = $this->defer;
-        }
+        // Set the defer.
+        ArrayUtility::set($output, "defer", $this->defer, [null]);
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
 
-        // Check the format.
-        if (!is_null($this->format)) {
-            $output["format"] = $this->format;
-        }
+        // Set the format.
+        ArrayUtility::set($output, "format", $this->format, [null]);
 
-        // Check the formatter.
-        if (!is_null($this->formatter)) {
-            $output["formatter"] = $this->formatter;
-        }
+        // Set the formatter.
+        ArrayUtility::set($output, "formatter", $this->formatter, [null]);
 
-        // Check the inside.
-        if (!is_null($this->inside)) {
-            $output["inside"] = $this->inside;
-        }
+        // Set the inside.
+        ArrayUtility::set($output, "inside", $this->inside, [null]);
 
-        // Check the overflow.
-        if (!is_null($this->overflow)) {
-            $output["overflow"] = $this->overflow;
-        }
+        // Set the overflow.
+        ArrayUtility::set($output, "overflow", $this->overflow, [null]);
 
-        // Check the padding.
-        if (!is_null($this->padding)) {
-            $output["padding"] = $this->padding;
-        }
+        // Set the padding.
+        ArrayUtility::set($output, "padding", $this->padding, [null]);
 
-        // Check the rotation.
-        if (!is_null($this->rotation)) {
-            $output["rotation"] = $this->rotation;
-        }
+        // Set the rotation.
+        ArrayUtility::set($output, "rotation", $this->rotation, [null]);
 
-        // Check the shadow.
-        if (!is_null($this->shadow)) {
-            $output["shadow"] = $this->shadow;
-        }
+        // Set the shadow.
+        ArrayUtility::set($output, "shadow", $this->shadow, [null]);
 
-        // Check the shape.
-        if (!is_null($this->shape)) {
-            $output["shape"] = $this->shape;
-        }
+        // Set the shape.
+        ArrayUtility::set($output, "shape", $this->shape, [null]);
 
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
 
-        // Check the use HTML.
-        if (!is_null($this->useHTML)) {
-            $output["useHTML"] = $this->useHTML;
-        }
+        // Set the use HTML.
+        ArrayUtility::set($output, "useHTML", $this->useHTML, [null]);
 
-        // Check the vertical align.
-        if (!is_null($this->verticalAlign)) {
-            $output["verticalAlign"] = $this->verticalAlign;
-        }
+        // Set the vertical align.
+        ArrayUtility::set($output, "verticalAlign", $this->verticalAlign, [null]);
 
-        // Check the x high.
-        if (!is_null($this->xHigh)) {
-            $output["xHigh"] = $this->xHigh;
-        }
+        // Set the x high.
+        ArrayUtility::set($output, "xHigh", $this->xHigh, [null]);
 
-        // Check the x low.
-        if (!is_null($this->xLow)) {
-            $output["xLow"] = $this->xLow;
-        }
+        // Set the x low.
+        ArrayUtility::set($output, "xLow", $this->xLow, [null]);
 
-        // Check the y high.
-        if (!is_null($this->yHigh)) {
-            $output["yHigh"] = $this->yHigh;
-        }
+        // Set the y high.
+        ArrayUtility::set($output, "yHigh", $this->yHigh, [null]);
 
-        // Check the y low.
-        if (!is_null($this->yLow)) {
-            $output["yLow"] = $this->yLow;
-        }
+        // Set the y low.
+        ArrayUtility::set($output, "yLow", $this->yLow, [null]);
 
-        // Check the z index.
-        if (!is_null($this->zIndex)) {
-            $output["zIndex"] = $this->zIndex;
-        }
+        // Set the z index.
+        ArrayUtility::set($output, "zIndex", $this->zIndex, [null]);
 
         // Return the output.
         return $output;

@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Series;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts treemap.
@@ -458,7 +459,7 @@ final class HighchartsTreemap implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -519,7 +520,7 @@ final class HighchartsTreemap implements JsonSerializable {
         $this->data = null;
 
         // Clear the data labels.
-        if (!is_null($this->dataLabels)) {
+        if (null !== $this->dataLabels) {
             $this->dataLabels->clear();
         }
 
@@ -530,7 +531,7 @@ final class HighchartsTreemap implements JsonSerializable {
         $this->enableMouseTracking = null;
 
         // Clear the events.
-        if (!is_null($this->events)) {
+        if (null !== $this->events) {
             $this->events->clear();
         }
 
@@ -586,7 +587,7 @@ final class HighchartsTreemap implements JsonSerializable {
         $this->opacity = null;
 
         // Clear the point.
-        if (!is_null($this->point)) {
+        if (null !== $this->point) {
             $this->point->clear();
         }
 
@@ -612,7 +613,7 @@ final class HighchartsTreemap implements JsonSerializable {
         $this->sortIndex = null;
 
         // Clear the states.
-        if (!is_null($this->states)) {
+        if (null !== $this->states) {
             $this->states->clear();
         }
 
@@ -620,7 +621,7 @@ final class HighchartsTreemap implements JsonSerializable {
         $this->stickyTracking = null;
 
         // Clear the tooltip.
-        if (!is_null($this->tooltip)) {
+        if (null !== $this->tooltip) {
             $this->tooltip->clear();
         }
 
@@ -1222,8 +1223,8 @@ final class HighchartsTreemap implements JsonSerializable {
         switch ($allowDrillToNode) {
             case "false":
             case "true":
-                $this->allowDrillToNode = $allowDrillToNode;
-                break;
+            $this->allowDrillToNode = $allowDrillToNode;
+            break;
         }
         return $this;
     }
@@ -1385,8 +1386,8 @@ final class HighchartsTreemap implements JsonSerializable {
             case "help":
             case "none":
             case "pointer":
-                $this->cursor = $cursor;
-                break;
+            $this->cursor = $cursor;
+            break;
         }
         return $this;
     }
@@ -1467,8 +1468,8 @@ final class HighchartsTreemap implements JsonSerializable {
         switch ($findNearestPointBy) {
             case "x":
             case "xy":
-                $this->findNearestPointBy = $findNearestPointBy;
-                break;
+            $this->findNearestPointBy = $findNearestPointBy;
+            break;
         }
         return $this;
     }
@@ -1527,8 +1528,8 @@ final class HighchartsTreemap implements JsonSerializable {
         switch ($interactByLeaf) {
             case false:
             case true:
-                $this->interactByLeaf = $interactByLeaf;
-                break;
+            $this->interactByLeaf = $interactByLeaf;
+            break;
         }
         return $this;
     }
@@ -1556,8 +1557,8 @@ final class HighchartsTreemap implements JsonSerializable {
             case "squarified":
             case "strip":
             case "stripes":
-                $this->layoutAlgorithm = $layoutAlgorithm;
-                break;
+            $this->layoutAlgorithm = $layoutAlgorithm;
+            break;
         }
         return $this;
     }
@@ -1572,8 +1573,8 @@ final class HighchartsTreemap implements JsonSerializable {
         switch ($layoutStartingDirection) {
             case "horizontal":
             case "vertical":
-                $this->layoutStartingDirection = $layoutStartingDirection;
-                break;
+            $this->layoutStartingDirection = $layoutStartingDirection;
+            break;
         }
         return $this;
     }
@@ -1599,8 +1600,8 @@ final class HighchartsTreemap implements JsonSerializable {
         switch ($levelIsConstant) {
             case "false":
             case "true":
-                $this->levelIsConstant = $levelIsConstant;
-                break;
+            $this->levelIsConstant = $levelIsConstant;
+            break;
         }
         return $this;
     }
@@ -1817,8 +1818,8 @@ final class HighchartsTreemap implements JsonSerializable {
             case "scatter":
             case "spline":
             case "waterfall":
-                $this->type = $type;
-                break;
+            $this->type = $type;
+            break;
         }
         return $this;
     }
@@ -1899,285 +1900,183 @@ final class HighchartsTreemap implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the allow drill to node.
-        if (!is_null($this->allowDrillToNode)) {
-            $output["allowDrillToNode"] = $this->allowDrillToNode;
+        // Set the allow drill to node.
+        ArrayUtility::set($output, "allowDrillToNode", $this->allowDrillToNode, [null]);
+
+        // Set the allow point select.
+        ArrayUtility::set($output, "allowPointSelect", $this->allowPointSelect, [null]);
+
+        // Set the alternate starting direction.
+        ArrayUtility::set($output, "alternateStartingDirection", $this->alternateStartingDirection, [null]);
+
+        // Set the animation.
+        ArrayUtility::set($output, "animation", $this->animation, [null]);
+
+        // Set the animation limit.
+        ArrayUtility::set($output, "animationLimit", $this->animationLimit, [null]);
+
+        // Set the border color.
+        ArrayUtility::set($output, "borderColor", $this->borderColor, [null]);
+
+        // Set the border width.
+        ArrayUtility::set($output, "borderWidth", $this->borderWidth, [null]);
+
+        // Set the class name.
+        ArrayUtility::set($output, "className", $this->className, [null]);
+
+        // Set the color.
+        ArrayUtility::set($output, "color", $this->color, [null]);
+
+        // Set the color by point.
+        ArrayUtility::set($output, "colorByPoint", $this->colorByPoint, [null]);
+
+        // Set the color index.
+        ArrayUtility::set($output, "colorIndex", $this->colorIndex, [null]);
+
+        // Set the colors.
+        ArrayUtility::set($output, "colors", $this->colors, [null]);
+
+        // Set the crisp.
+        ArrayUtility::set($output, "crisp", $this->crisp, [null]);
+
+        // Set the crop threshold.
+        ArrayUtility::set($output, "cropThreshold", $this->cropThreshold, [null]);
+
+        // Set the cursor.
+        ArrayUtility::set($output, "cursor", $this->cursor, [null]);
+
+        // Set the data.
+        ArrayUtility::set($output, "data", $this->data, [null]);
+
+        // Set the data labels.
+        if (null !== $this->dataLabels) {
+            ArrayUtility::set($output, "dataLabels", $this->dataLabels->toArray(), []);
         }
 
-        // Check the allow point select.
-        if (!is_null($this->allowPointSelect)) {
-            $output["allowPointSelect"] = $this->allowPointSelect;
+        // Set the description.
+        ArrayUtility::set($output, "description", $this->description, [null]);
+
+        // Set the enable mouse tracking.
+        ArrayUtility::set($output, "enableMouseTracking", $this->enableMouseTracking, [null]);
+
+        // Set the events.
+        if (null !== $this->events) {
+            ArrayUtility::set($output, "events", $this->events->toArray(), []);
         }
 
-        // Check the alternate starting direction.
-        if (!is_null($this->alternateStartingDirection)) {
-            $output["alternateStartingDirection"] = $this->alternateStartingDirection;
+        // Set the expose element to a11y.
+        ArrayUtility::set($output, "exposeElementToA11y", $this->exposeElementToA11y, [null]);
+
+        // Set the find nearest point by.
+        ArrayUtility::set($output, "findNearestPointBy", $this->findNearestPointBy, [null]);
+
+        // Set the get extremes from all.
+        ArrayUtility::set($output, "getExtremesFromAll", $this->getExtremesFromAll, [null]);
+
+        // Set the id.
+        ArrayUtility::set($output, "id", $this->id, [null]);
+
+        // Set the ignore hidden point.
+        ArrayUtility::set($output, "ignoreHiddenPoint", $this->ignoreHiddenPoint, [null]);
+
+        // Set the index.
+        ArrayUtility::set($output, "index", $this->index, [null]);
+
+        // Set the interact by leaf.
+        ArrayUtility::set($output, "interactByLeaf", $this->interactByLeaf, [null]);
+
+        // Set the keys.
+        ArrayUtility::set($output, "keys", $this->keys, [null]);
+
+        // Set the layout algorithm.
+        ArrayUtility::set($output, "layoutAlgorithm", $this->layoutAlgorithm, [null]);
+
+        // Set the layout starting direction.
+        ArrayUtility::set($output, "layoutStartingDirection", $this->layoutStartingDirection, [null]);
+
+        // Set the legend index.
+        ArrayUtility::set($output, "legendIndex", $this->legendIndex, [null]);
+
+        // Set the level is constant.
+        ArrayUtility::set($output, "levelIsConstant", $this->levelIsConstant, [null]);
+
+        // Set the levels.
+        ArrayUtility::set($output, "levels", $this->levels, [null]);
+
+        // Set the linked to.
+        ArrayUtility::set($output, "linkedTo", $this->linkedTo, [null]);
+
+        // Set the max point width.
+        ArrayUtility::set($output, "maxPointWidth", $this->maxPointWidth, [null]);
+
+        // Set the name.
+        ArrayUtility::set($output, "name", $this->name, [null]);
+
+        // Set the opacity.
+        ArrayUtility::set($output, "opacity", $this->opacity, [null]);
+
+        // Set the point.
+        if (null !== $this->point) {
+            ArrayUtility::set($output, "point", $this->point->toArray(), []);
         }
 
-        // Check the animation.
-        if (!is_null($this->animation)) {
-            $output["animation"] = $this->animation;
+        // Set the point description formatter.
+        ArrayUtility::set($output, "pointDescriptionFormatter", $this->pointDescriptionFormatter, [null]);
+
+        // Set the selected.
+        ArrayUtility::set($output, "selected", $this->selected, [null]);
+
+        // Set the shadow.
+        ArrayUtility::set($output, "shadow", $this->shadow, [null]);
+
+        // Set the show checkbox.
+        ArrayUtility::set($output, "showCheckbox", $this->showCheckbox, [null]);
+
+        // Set the show in legend.
+        ArrayUtility::set($output, "showInLegend", $this->showInLegend, [null]);
+
+        // Set the skip keyboard navigation.
+        ArrayUtility::set($output, "skipKeyboardNavigation", $this->skipKeyboardNavigation, [null]);
+
+        // Set the sort index.
+        ArrayUtility::set($output, "sortIndex", $this->sortIndex, [null]);
+
+        // Set the states.
+        if (null !== $this->states) {
+            ArrayUtility::set($output, "states", $this->states->toArray(), []);
         }
 
-        // Check the animation limit.
-        if (!is_null($this->animationLimit)) {
-            $output["animationLimit"] = $this->animationLimit;
+        // Set the sticky tracking.
+        ArrayUtility::set($output, "stickyTracking", $this->stickyTracking, [null]);
+
+        // Set the tooltip.
+        if (null !== $this->tooltip) {
+            ArrayUtility::set($output, "tooltip", $this->tooltip->toArray(), []);
         }
 
-        // Check the border color.
-        if (!is_null($this->borderColor)) {
-            $output["borderColor"] = $this->borderColor;
-        }
+        // Set the turbo threshold.
+        ArrayUtility::set($output, "turboThreshold", $this->turboThreshold, [null]);
 
-        // Check the border width.
-        if (!is_null($this->borderWidth)) {
-            $output["borderWidth"] = $this->borderWidth;
-        }
+        // Set the type.
+        ArrayUtility::set($output, "type", $this->type, [null]);
 
-        // Check the class name.
-        if (!is_null($this->className)) {
-            $output["className"] = $this->className;
-        }
+        // Set the visible.
+        ArrayUtility::set($output, "visible", $this->visible, [null]);
 
-        // Check the color.
-        if (!is_null($this->color)) {
-            $output["color"] = $this->color;
-        }
+        // Set the x axis.
+        ArrayUtility::set($output, "xAxis", $this->xAxis, [null]);
 
-        // Check the color by point.
-        if (!is_null($this->colorByPoint)) {
-            $output["colorByPoint"] = $this->colorByPoint;
-        }
+        // Set the y axis.
+        ArrayUtility::set($output, "yAxis", $this->yAxis, [null]);
 
-        // Check the color index.
-        if (!is_null($this->colorIndex)) {
-            $output["colorIndex"] = $this->colorIndex;
-        }
+        // Set the z index.
+        ArrayUtility::set($output, "zIndex", $this->zIndex, [null]);
 
-        // Check the colors.
-        if (!is_null($this->colors)) {
-            $output["colors"] = $this->colors;
-        }
+        // Set the zone axis.
+        ArrayUtility::set($output, "zoneAxis", $this->zoneAxis, [null]);
 
-        // Check the crisp.
-        if (!is_null($this->crisp)) {
-            $output["crisp"] = $this->crisp;
-        }
-
-        // Check the crop threshold.
-        if (!is_null($this->cropThreshold)) {
-            $output["cropThreshold"] = $this->cropThreshold;
-        }
-
-        // Check the cursor.
-        if (!is_null($this->cursor)) {
-            $output["cursor"] = $this->cursor;
-        }
-
-        // Check the data.
-        if (!is_null($this->data)) {
-            $output["data"] = $this->data;
-        }
-
-        // Check the data labels.
-        if (!is_null($this->dataLabels)) {
-            $output["dataLabels"] = $this->dataLabels->toArray();
-        }
-
-        // Check the description.
-        if (!is_null($this->description)) {
-            $output["description"] = $this->description;
-        }
-
-        // Check the enable mouse tracking.
-        if (!is_null($this->enableMouseTracking)) {
-            $output["enableMouseTracking"] = $this->enableMouseTracking;
-        }
-
-        // Check the events.
-        if (!is_null($this->events)) {
-            $output["events"] = $this->events->toArray();
-        }
-
-        // Check the expose element to a11y.
-        if (!is_null($this->exposeElementToA11y)) {
-            $output["exposeElementToA11y"] = $this->exposeElementToA11y;
-        }
-
-        // Check the find nearest point by.
-        if (!is_null($this->findNearestPointBy)) {
-            $output["findNearestPointBy"] = $this->findNearestPointBy;
-        }
-
-        // Check the get extremes from all.
-        if (!is_null($this->getExtremesFromAll)) {
-            $output["getExtremesFromAll"] = $this->getExtremesFromAll;
-        }
-
-        // Check the id.
-        if (!is_null($this->id)) {
-            $output["id"] = $this->id;
-        }
-
-        // Check the ignore hidden point.
-        if (!is_null($this->ignoreHiddenPoint)) {
-            $output["ignoreHiddenPoint"] = $this->ignoreHiddenPoint;
-        }
-
-        // Check the index.
-        if (!is_null($this->index)) {
-            $output["index"] = $this->index;
-        }
-
-        // Check the interact by leaf.
-        if (!is_null($this->interactByLeaf)) {
-            $output["interactByLeaf"] = $this->interactByLeaf;
-        }
-
-        // Check the keys.
-        if (!is_null($this->keys)) {
-            $output["keys"] = $this->keys;
-        }
-
-        // Check the layout algorithm.
-        if (!is_null($this->layoutAlgorithm)) {
-            $output["layoutAlgorithm"] = $this->layoutAlgorithm;
-        }
-
-        // Check the layout starting direction.
-        if (!is_null($this->layoutStartingDirection)) {
-            $output["layoutStartingDirection"] = $this->layoutStartingDirection;
-        }
-
-        // Check the legend index.
-        if (!is_null($this->legendIndex)) {
-            $output["legendIndex"] = $this->legendIndex;
-        }
-
-        // Check the level is constant.
-        if (!is_null($this->levelIsConstant)) {
-            $output["levelIsConstant"] = $this->levelIsConstant;
-        }
-
-        // Check the levels.
-        if (!is_null($this->levels)) {
-            $output["levels"] = $this->levels;
-        }
-
-        // Check the linked to.
-        if (!is_null($this->linkedTo)) {
-            $output["linkedTo"] = $this->linkedTo;
-        }
-
-        // Check the max point width.
-        if (!is_null($this->maxPointWidth)) {
-            $output["maxPointWidth"] = $this->maxPointWidth;
-        }
-
-        // Check the name.
-        if (!is_null($this->name)) {
-            $output["name"] = $this->name;
-        }
-
-        // Check the opacity.
-        if (!is_null($this->opacity)) {
-            $output["opacity"] = $this->opacity;
-        }
-
-        // Check the point.
-        if (!is_null($this->point)) {
-            $output["point"] = $this->point->toArray();
-        }
-
-        // Check the point description formatter.
-        if (!is_null($this->pointDescriptionFormatter)) {
-            $output["pointDescriptionFormatter"] = $this->pointDescriptionFormatter;
-        }
-
-        // Check the selected.
-        if (!is_null($this->selected)) {
-            $output["selected"] = $this->selected;
-        }
-
-        // Check the shadow.
-        if (!is_null($this->shadow)) {
-            $output["shadow"] = $this->shadow;
-        }
-
-        // Check the show checkbox.
-        if (!is_null($this->showCheckbox)) {
-            $output["showCheckbox"] = $this->showCheckbox;
-        }
-
-        // Check the show in legend.
-        if (!is_null($this->showInLegend)) {
-            $output["showInLegend"] = $this->showInLegend;
-        }
-
-        // Check the skip keyboard navigation.
-        if (!is_null($this->skipKeyboardNavigation)) {
-            $output["skipKeyboardNavigation"] = $this->skipKeyboardNavigation;
-        }
-
-        // Check the sort index.
-        if (!is_null($this->sortIndex)) {
-            $output["sortIndex"] = $this->sortIndex;
-        }
-
-        // Check the states.
-        if (!is_null($this->states)) {
-            $output["states"] = $this->states->toArray();
-        }
-
-        // Check the sticky tracking.
-        if (!is_null($this->stickyTracking)) {
-            $output["stickyTracking"] = $this->stickyTracking;
-        }
-
-        // Check the tooltip.
-        if (!is_null($this->tooltip)) {
-            $output["tooltip"] = $this->tooltip->toArray();
-        }
-
-        // Check the turbo threshold.
-        if (!is_null($this->turboThreshold)) {
-            $output["turboThreshold"] = $this->turboThreshold;
-        }
-
-        // Check the type.
-        if (!is_null($this->type)) {
-            $output["type"] = $this->type;
-        }
-
-        // Check the visible.
-        if (!is_null($this->visible)) {
-            $output["visible"] = $this->visible;
-        }
-
-        // Check the x axis.
-        if (!is_null($this->xAxis)) {
-            $output["xAxis"] = $this->xAxis;
-        }
-
-        // Check the y axis.
-        if (!is_null($this->yAxis)) {
-            $output["yAxis"] = $this->yAxis;
-        }
-
-        // Check the z index.
-        if (!is_null($this->zIndex)) {
-            $output["zIndex"] = $this->zIndex;
-        }
-
-        // Check the zone axis.
-        if (!is_null($this->zoneAxis)) {
-            $output["zoneAxis"] = $this->zoneAxis;
-        }
-
-        // Check the zones.
-        if (!is_null($this->zones)) {
-            $output["zones"] = $this->zones;
-        }
+        // Set the zones.
+        ArrayUtility::set($output, "zones", $this->zones, [null]);
 
         // Return the output.
         return $output;

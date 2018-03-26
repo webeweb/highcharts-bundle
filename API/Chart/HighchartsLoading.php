@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts loading.
@@ -61,7 +62,7 @@ final class HighchartsLoading implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -185,25 +186,17 @@ final class HighchartsLoading implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the hide duration.
-        if (!is_null($this->hideDuration)) {
-            $output["hideDuration"] = $this->hideDuration;
-        }
+        // Set the hide duration.
+        ArrayUtility::set($output, "hideDuration", $this->hideDuration, [null]);
 
-        // Check the label style.
-        if (!is_null($this->labelStyle)) {
-            $output["labelStyle"] = $this->labelStyle;
-        }
+        // Set the label style.
+        ArrayUtility::set($output, "labelStyle", $this->labelStyle, [null]);
 
-        // Check the show duration.
-        if (!is_null($this->showDuration)) {
-            $output["showDuration"] = $this->showDuration;
-        }
+        // Set the show duration.
+        ArrayUtility::set($output, "showDuration", $this->showDuration, [null]);
 
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
 
         // Return the output.
         return $output;

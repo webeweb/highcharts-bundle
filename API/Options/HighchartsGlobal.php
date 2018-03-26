@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Options;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts global.
@@ -84,7 +85,7 @@ final class HighchartsGlobal implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -279,40 +280,26 @@ final class HighchartsGlobal implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the date.
-        if (!is_null($this->date)) {
-            $output["Date"] = $this->date;
-        }
+        // Set the date.
+        ArrayUtility::set($output, "Date", $this->date, [null]);
 
-        // Check the VML radial gradient URL.
-        if (!is_null($this->vMLRadialGradientURL)) {
-            $output["VMLRadialGradientURL"] = $this->vMLRadialGradientURL;
-        }
+        // Set the VML radial gradient URL.
+        ArrayUtility::set($output, "VMLRadialGradientURL", $this->vMLRadialGradientURL, [null]);
 
-        // Check the canvas tools URL.
-        if (!is_null($this->canvasToolsURL)) {
-            $output["canvasToolsURL"] = $this->canvasToolsURL;
-        }
+        // Set the canvas tools URL.
+        ArrayUtility::set($output, "canvasToolsURL", $this->canvasToolsURL, [null]);
 
-        // Check the get timezone offset.
-        if (!is_null($this->getTimezoneOffset)) {
-            $output["getTimezoneOffset"] = $this->getTimezoneOffset;
-        }
+        // Set the get timezone offset.
+        ArrayUtility::set($output, "getTimezoneOffset", $this->getTimezoneOffset, [null]);
 
-        // Check the timezone.
-        if (!is_null($this->timezone)) {
-            $output["timezone"] = $this->timezone;
-        }
+        // Set the timezone.
+        ArrayUtility::set($output, "timezone", $this->timezone, [null]);
 
-        // Check the timezone offset.
-        if (!is_null($this->timezoneOffset)) {
-            $output["timezoneOffset"] = $this->timezoneOffset;
-        }
+        // Set the timezone offset.
+        ArrayUtility::set($output, "timezoneOffset", $this->timezoneOffset, [null]);
 
-        // Check the use UTC.
-        if (!is_null($this->useUTC)) {
-            $output["useUTC"] = $this->useUTC;
-        }
+        // Set the use UTC.
+        ArrayUtility::set($output, "useUTC", $this->useUTC, [null]);
 
         // Return the output.
         return $output;

@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Pyramid;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts states.
@@ -36,7 +37,7 @@ final class HighchartsStates implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -49,7 +50,7 @@ final class HighchartsStates implements JsonSerializable {
     public function clear() {
 
         // Clear the hover.
-        if (!is_null($this->hover)) {
+        if (null !== $this->hover) {
             $this->hover->clear();
         }
     }
@@ -103,9 +104,9 @@ final class HighchartsStates implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the hover.
-        if (!is_null($this->hover)) {
-            $output["hover"] = $this->hover->toArray();
+        // Set the hover.
+        if (null !== $this->hover) {
+            ArrayUtility::set($output, "hover", $this->hover->toArray(), []);
         }
 
         // Return the output.

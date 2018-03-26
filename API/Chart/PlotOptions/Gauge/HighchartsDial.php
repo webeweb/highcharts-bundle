@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts dial.
@@ -93,7 +94,7 @@ final class HighchartsDial implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -309,45 +310,29 @@ final class HighchartsDial implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the background color.
-        if (!is_null($this->backgroundColor)) {
-            $output["backgroundColor"] = $this->backgroundColor;
-        }
+        // Set the background color.
+        ArrayUtility::set($output, "backgroundColor", $this->backgroundColor, [null]);
 
-        // Check the base length.
-        if (!is_null($this->baseLength)) {
-            $output["baseLength"] = $this->baseLength;
-        }
+        // Set the base length.
+        ArrayUtility::set($output, "baseLength", $this->baseLength, [null]);
 
-        // Check the base width.
-        if (!is_null($this->baseWidth)) {
-            $output["baseWidth"] = $this->baseWidth;
-        }
+        // Set the base width.
+        ArrayUtility::set($output, "baseWidth", $this->baseWidth, [null]);
 
-        // Check the border color.
-        if (!is_null($this->borderColor)) {
-            $output["borderColor"] = $this->borderColor;
-        }
+        // Set the border color.
+        ArrayUtility::set($output, "borderColor", $this->borderColor, [null]);
 
-        // Check the border width.
-        if (!is_null($this->borderWidth)) {
-            $output["borderWidth"] = $this->borderWidth;
-        }
+        // Set the border width.
+        ArrayUtility::set($output, "borderWidth", $this->borderWidth, [null]);
 
-        // Check the radius.
-        if (!is_null($this->radius)) {
-            $output["radius"] = $this->radius;
-        }
+        // Set the radius.
+        ArrayUtility::set($output, "radius", $this->radius, [null]);
 
-        // Check the rear length.
-        if (!is_null($this->rearLength)) {
-            $output["rearLength"] = $this->rearLength;
-        }
+        // Set the rear length.
+        ArrayUtility::set($output, "rearLength", $this->rearLength, [null]);
 
-        // Check the top width.
-        if (!is_null($this->topWidth)) {
-            $output["topWidth"] = $this->topWidth;
-        }
+        // Set the top width.
+        ArrayUtility::set($output, "topWidth", $this->topWidth, [null]);
 
         // Return the output.
         return $output;

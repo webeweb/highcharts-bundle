@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\ZAxis;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts labels.
@@ -163,7 +164,7 @@ final class HighchartsLabels implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -413,8 +414,8 @@ final class HighchartsLabels implements JsonSerializable {
             case "center":
             case "left":
             case "right":
-                $this->align = $align;
-                break;
+            $this->align = $align;
+            break;
         }
         return $this;
     }
@@ -496,8 +497,8 @@ final class HighchartsLabels implements JsonSerializable {
         switch ($overflow) {
             case null:
             case "justify":
-                $this->overflow = $overflow;
-                break;
+            $this->overflow = $overflow;
+            break;
         }
         return $this;
     }
@@ -622,95 +623,59 @@ final class HighchartsLabels implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the align.
-        if (!is_null($this->align)) {
-            $output["align"] = $this->align;
-        }
+        // Set the align.
+        ArrayUtility::set($output, "align", $this->align, [null]);
 
-        // Check the auto rotation.
-        if (!is_null($this->autoRotation)) {
-            $output["autoRotation"] = $this->autoRotation;
-        }
+        // Set the auto rotation.
+        ArrayUtility::set($output, "autoRotation", $this->autoRotation, [null]);
 
-        // Check the auto rotation limit.
-        if (!is_null($this->autoRotationLimit)) {
-            $output["autoRotationLimit"] = $this->autoRotationLimit;
-        }
+        // Set the auto rotation limit.
+        ArrayUtility::set($output, "autoRotationLimit", $this->autoRotationLimit, [null]);
 
-        // Check the distance.
-        if (!is_null($this->distance)) {
-            $output["distance"] = $this->distance;
-        }
+        // Set the distance.
+        ArrayUtility::set($output, "distance", $this->distance, [null]);
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
 
-        // Check the format.
-        if (!is_null($this->format)) {
-            $output["format"] = $this->format;
-        }
+        // Set the format.
+        ArrayUtility::set($output, "format", $this->format, [null]);
 
-        // Check the formatter.
-        if (!is_null($this->formatter)) {
-            $output["formatter"] = $this->formatter;
-        }
+        // Set the formatter.
+        ArrayUtility::set($output, "formatter", $this->formatter, [null]);
 
-        // Check the overflow.
-        if (!is_null($this->overflow)) {
-            $output["overflow"] = $this->overflow;
-        }
+        // Set the overflow.
+        ArrayUtility::set($output, "overflow", $this->overflow, [null]);
 
-        // Check the padding.
-        if (!is_null($this->padding)) {
-            $output["padding"] = $this->padding;
-        }
+        // Set the padding.
+        ArrayUtility::set($output, "padding", $this->padding, [null]);
 
-        // Check the reserve space.
-        if (!is_null($this->reserveSpace)) {
-            $output["reserveSpace"] = $this->reserveSpace;
-        }
+        // Set the reserve space.
+        ArrayUtility::set($output, "reserveSpace", $this->reserveSpace, [null]);
 
-        // Check the rotation.
-        if (!is_null($this->rotation)) {
-            $output["rotation"] = $this->rotation;
-        }
+        // Set the rotation.
+        ArrayUtility::set($output, "rotation", $this->rotation, [null]);
 
-        // Check the stagger lines.
-        if (!is_null($this->staggerLines)) {
-            $output["staggerLines"] = $this->staggerLines;
-        }
+        // Set the stagger lines.
+        ArrayUtility::set($output, "staggerLines", $this->staggerLines, [null]);
 
-        // Check the step.
-        if (!is_null($this->step)) {
-            $output["step"] = $this->step;
-        }
+        // Set the step.
+        ArrayUtility::set($output, "step", $this->step, [null]);
 
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
 
-        // Check the use HTML.
-        if (!is_null($this->useHTML)) {
-            $output["useHTML"] = $this->useHTML;
-        }
+        // Set the use HTML.
+        ArrayUtility::set($output, "useHTML", $this->useHTML, [null]);
 
-        // Check the x.
-        if (!is_null($this->x)) {
-            $output["x"] = $this->x;
-        }
+        // Set the x.
+        ArrayUtility::set($output, "x", $this->x, [null]);
 
-        // Check the y.
-        if (!is_null($this->y)) {
-            $output["y"] = $this->y;
-        }
+        // Set the y.
+        ArrayUtility::set($output, "y", $this->y, [null]);
 
-        // Check the z index.
-        if (!is_null($this->zIndex)) {
-            $output["zIndex"] = $this->zIndex;
-        }
+        // Set the z index.
+        ArrayUtility::set($output, "zIndex", $this->zIndex, [null]);
 
         // Return the output.
         return $output;

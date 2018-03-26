@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts frame.
@@ -61,7 +62,7 @@ final class HighchartsFrame implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -74,17 +75,17 @@ final class HighchartsFrame implements JsonSerializable {
     public function clear() {
 
         // Clear the back.
-        if (!is_null($this->back)) {
+        if (null !== $this->back) {
             $this->back->clear();
         }
 
         // Clear the bottom.
-        if (!is_null($this->bottom)) {
+        if (null !== $this->bottom) {
             $this->bottom->clear();
         }
 
         // Clear the side.
-        if (!is_null($this->side)) {
+        if (null !== $this->side) {
             $this->side->clear();
         }
 
@@ -221,25 +222,23 @@ final class HighchartsFrame implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the back.
-        if (!is_null($this->back)) {
-            $output["back"] = $this->back->toArray();
+        // Set the back.
+        if (null !== $this->back) {
+            ArrayUtility::set($output, "back", $this->back->toArray(), []);
         }
 
-        // Check the bottom.
-        if (!is_null($this->bottom)) {
-            $output["bottom"] = $this->bottom->toArray();
+        // Set the bottom.
+        if (null !== $this->bottom) {
+            ArrayUtility::set($output, "bottom", $this->bottom->toArray(), []);
         }
 
-        // Check the side.
-        if (!is_null($this->side)) {
-            $output["side"] = $this->side->toArray();
+        // Set the side.
+        if (null !== $this->side) {
+            ArrayUtility::set($output, "side", $this->side->toArray(), []);
         }
 
-        // Check the top.
-        if (!is_null($this->top)) {
-            $output["top"] = $this->top;
-        }
+        // Set the top.
+        ArrayUtility::set($output, "top", $this->top, [null]);
 
         // Return the output.
         return $output;

@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Areasplinerange;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts zones.
@@ -69,7 +70,7 @@ final class HighchartsZones implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -216,30 +217,20 @@ final class HighchartsZones implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the class name.
-        if (!is_null($this->className)) {
-            $output["className"] = $this->className;
-        }
+        // Set the class name.
+        ArrayUtility::set($output, "className", $this->className, [null]);
 
-        // Check the color.
-        if (!is_null($this->color)) {
-            $output["color"] = $this->color;
-        }
+        // Set the color.
+        ArrayUtility::set($output, "color", $this->color, [null]);
 
-        // Check the dash style.
-        if (!is_null($this->dashStyle)) {
-            $output["dashStyle"] = $this->dashStyle;
-        }
+        // Set the dash style.
+        ArrayUtility::set($output, "dashStyle", $this->dashStyle, [null]);
 
-        // Check the fill color.
-        if (!is_null($this->fillColor)) {
-            $output["fillColor"] = $this->fillColor;
-        }
+        // Set the fill color.
+        ArrayUtility::set($output, "fillColor", $this->fillColor, [null]);
 
-        // Check the value.
-        if (!is_null($this->value)) {
-            $output["value"] = $this->value;
-        }
+        // Set the value.
+        ArrayUtility::set($output, "value", $this->value, [null]);
 
         // Return the output.
         return $output;

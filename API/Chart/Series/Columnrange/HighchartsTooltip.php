@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Columnrange;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts tooltip.
@@ -138,7 +139,7 @@ final class HighchartsTooltip implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -492,75 +493,47 @@ final class HighchartsTooltip implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the date time label formats.
-        if (!is_null($this->dateTimeLabelFormats)) {
-            $output["dateTimeLabelFormats"] = $this->dateTimeLabelFormats;
-        }
+        // Set the date time label formats.
+        ArrayUtility::set($output, "dateTimeLabelFormats", $this->dateTimeLabelFormats, [null]);
 
-        // Check the follow pointer.
-        if (!is_null($this->followPointer)) {
-            $output["followPointer"] = $this->followPointer;
-        }
+        // Set the follow pointer.
+        ArrayUtility::set($output, "followPointer", $this->followPointer, [null]);
 
-        // Check the follow touch move.
-        if (!is_null($this->followTouchMove)) {
-            $output["followTouchMove"] = $this->followTouchMove;
-        }
+        // Set the follow touch move.
+        ArrayUtility::set($output, "followTouchMove", $this->followTouchMove, [null]);
 
-        // Check the footer format.
-        if (!is_null($this->footerFormat)) {
-            $output["footerFormat"] = $this->footerFormat;
-        }
+        // Set the footer format.
+        ArrayUtility::set($output, "footerFormat", $this->footerFormat, [null]);
 
-        // Check the header format.
-        if (!is_null($this->headerFormat)) {
-            $output["headerFormat"] = $this->headerFormat;
-        }
+        // Set the header format.
+        ArrayUtility::set($output, "headerFormat", $this->headerFormat, [null]);
 
-        // Check the hide delay.
-        if (!is_null($this->hideDelay)) {
-            $output["hideDelay"] = $this->hideDelay;
-        }
+        // Set the hide delay.
+        ArrayUtility::set($output, "hideDelay", $this->hideDelay, [null]);
 
-        // Check the padding.
-        if (!is_null($this->padding)) {
-            $output["padding"] = $this->padding;
-        }
+        // Set the padding.
+        ArrayUtility::set($output, "padding", $this->padding, [null]);
 
-        // Check the point format.
-        if (!is_null($this->pointFormat)) {
-            $output["pointFormat"] = $this->pointFormat;
-        }
+        // Set the point format.
+        ArrayUtility::set($output, "pointFormat", $this->pointFormat, [null]);
 
-        // Check the point formatter.
-        if (!is_null($this->pointFormatter)) {
-            $output["pointFormatter"] = $this->pointFormatter;
-        }
+        // Set the point formatter.
+        ArrayUtility::set($output, "pointFormatter", $this->pointFormatter, [null]);
 
-        // Check the split.
-        if (!is_null($this->split)) {
-            $output["split"] = $this->split;
-        }
+        // Set the split.
+        ArrayUtility::set($output, "split", $this->split, [null]);
 
-        // Check the value decimals.
-        if (!is_null($this->valueDecimals)) {
-            $output["valueDecimals"] = $this->valueDecimals;
-        }
+        // Set the value decimals.
+        ArrayUtility::set($output, "valueDecimals", $this->valueDecimals, [null]);
 
-        // Check the value prefix.
-        if (!is_null($this->valuePrefix)) {
-            $output["valuePrefix"] = $this->valuePrefix;
-        }
+        // Set the value prefix.
+        ArrayUtility::set($output, "valuePrefix", $this->valuePrefix, [null]);
 
-        // Check the value suffix.
-        if (!is_null($this->valueSuffix)) {
-            $output["valueSuffix"] = $this->valueSuffix;
-        }
+        // Set the value suffix.
+        ArrayUtility::set($output, "valueSuffix", $this->valueSuffix, [null]);
 
-        // Check the x date format.
-        if (!is_null($this->xDateFormat)) {
-            $output["xDateFormat"] = $this->xDateFormat;
-        }
+        // Set the x date format.
+        ArrayUtility::set($output, "xDateFormat", $this->xDateFormat, [null]);
 
         // Return the output.
         return $output;

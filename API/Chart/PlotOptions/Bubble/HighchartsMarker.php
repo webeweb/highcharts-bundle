@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Bubble;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts marker.
@@ -88,7 +89,7 @@ final class HighchartsMarker implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -116,7 +117,7 @@ final class HighchartsMarker implements JsonSerializable {
         $this->lineWidth = null;
 
         // Clear the states.
-        if (!is_null($this->states)) {
+        if (null !== $this->states) {
             $this->states->clear();
         }
 
@@ -297,8 +298,8 @@ final class HighchartsMarker implements JsonSerializable {
             case "square":
             case "triangle":
             case "triangle-down":
-                $this->symbol = $symbol;
-                break;
+            $this->symbol = $symbol;
+            break;
         }
         return $this;
     }
@@ -324,45 +325,31 @@ final class HighchartsMarker implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
+
+        // Set the fill color.
+        ArrayUtility::set($output, "fillColor", $this->fillColor, [null]);
+
+        // Set the height.
+        ArrayUtility::set($output, "height", $this->height, [null]);
+
+        // Set the line color.
+        ArrayUtility::set($output, "lineColor", $this->lineColor, [null]);
+
+        // Set the line width.
+        ArrayUtility::set($output, "lineWidth", $this->lineWidth, [null]);
+
+        // Set the states.
+        if (null !== $this->states) {
+            ArrayUtility::set($output, "states", $this->states->toArray(), []);
         }
 
-        // Check the fill color.
-        if (!is_null($this->fillColor)) {
-            $output["fillColor"] = $this->fillColor;
-        }
+        // Set the symbol.
+        ArrayUtility::set($output, "symbol", $this->symbol, [null]);
 
-        // Check the height.
-        if (!is_null($this->height)) {
-            $output["height"] = $this->height;
-        }
-
-        // Check the line color.
-        if (!is_null($this->lineColor)) {
-            $output["lineColor"] = $this->lineColor;
-        }
-
-        // Check the line width.
-        if (!is_null($this->lineWidth)) {
-            $output["lineWidth"] = $this->lineWidth;
-        }
-
-        // Check the states.
-        if (!is_null($this->states)) {
-            $output["states"] = $this->states->toArray();
-        }
-
-        // Check the symbol.
-        if (!is_null($this->symbol)) {
-            $output["symbol"] = $this->symbol;
-        }
-
-        // Check the width.
-        if (!is_null($this->width)) {
-            $output["width"] = $this->width;
-        }
+        // Set the width.
+        ArrayUtility::set($output, "width", $this->width, [null]);
 
         // Return the output.
         return $output;

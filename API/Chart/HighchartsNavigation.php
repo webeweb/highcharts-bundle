@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts navigation.
@@ -60,7 +61,7 @@ final class HighchartsNavigation implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -73,7 +74,7 @@ final class HighchartsNavigation implements JsonSerializable {
     public function clear() {
 
         // Clear the button options.
-        if (!is_null($this->buttonOptions)) {
+        if (null !== $this->buttonOptions) {
             $this->buttonOptions->clear();
         }
 
@@ -196,25 +197,19 @@ final class HighchartsNavigation implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the button options.
-        if (!is_null($this->buttonOptions)) {
-            $output["buttonOptions"] = $this->buttonOptions->toArray();
+        // Set the button options.
+        if (null !== $this->buttonOptions) {
+            ArrayUtility::set($output, "buttonOptions", $this->buttonOptions->toArray(), []);
         }
 
-        // Check the menu item hover style.
-        if (!is_null($this->menuItemHoverStyle)) {
-            $output["menuItemHoverStyle"] = $this->menuItemHoverStyle;
-        }
+        // Set the menu item hover style.
+        ArrayUtility::set($output, "menuItemHoverStyle", $this->menuItemHoverStyle, [null]);
 
-        // Check the menu item style.
-        if (!is_null($this->menuItemStyle)) {
-            $output["menuItemStyle"] = $this->menuItemStyle;
-        }
+        // Set the menu item style.
+        ArrayUtility::set($output, "menuItemStyle", $this->menuItemStyle, [null]);
 
-        // Check the menu style.
-        if (!is_null($this->menuStyle)) {
-            $output["menuStyle"] = $this->menuStyle;
-        }
+        // Set the menu style.
+        ArrayUtility::set($output, "menuStyle", $this->menuStyle, [null]);
 
         // Return the output.
         return $output;

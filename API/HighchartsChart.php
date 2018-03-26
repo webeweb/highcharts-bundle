@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts chart.
@@ -198,7 +199,7 @@ final class HighchartsChart implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -211,12 +212,12 @@ final class HighchartsChart implements JsonSerializable {
     public function clear() {
 
         // Clear the accessibility.
-        if (!is_null($this->accessibility)) {
+        if (null !== $this->accessibility) {
             $this->accessibility->clear();
         }
 
         // Clear the chart.
-        if (!is_null($this->chart)) {
+        if (null !== $this->chart) {
             $this->chart->clear();
         }
 
@@ -224,12 +225,12 @@ final class HighchartsChart implements JsonSerializable {
         $this->colors = null;
 
         // Clear the credits.
-        if (!is_null($this->credits)) {
+        if (null !== $this->credits) {
             $this->credits->clear();
         }
 
         // Clear the data.
-        if (!is_null($this->data)) {
+        if (null !== $this->data) {
             $this->data->clear();
         }
 
@@ -237,37 +238,37 @@ final class HighchartsChart implements JsonSerializable {
         $this->defs = null;
 
         // Clear the drilldown.
-        if (!is_null($this->drilldown)) {
+        if (null !== $this->drilldown) {
             $this->drilldown->clear();
         }
 
         // Clear the exporting.
-        if (!is_null($this->exporting)) {
+        if (null !== $this->exporting) {
             $this->exporting->clear();
         }
 
         // Clear the labels.
-        if (!is_null($this->labels)) {
+        if (null !== $this->labels) {
             $this->labels->clear();
         }
 
         // Clear the legend.
-        if (!is_null($this->legend)) {
+        if (null !== $this->legend) {
             $this->legend->clear();
         }
 
         // Clear the loading.
-        if (!is_null($this->loading)) {
+        if (null !== $this->loading) {
             $this->loading->clear();
         }
 
         // Clear the navigation.
-        if (!is_null($this->navigation)) {
+        if (null !== $this->navigation) {
             $this->navigation->clear();
         }
 
         // Clear the no data.
-        if (!is_null($this->noData)) {
+        if (null !== $this->noData) {
             $this->noData->clear();
         }
 
@@ -275,12 +276,12 @@ final class HighchartsChart implements JsonSerializable {
         $this->pane = null;
 
         // Clear the plot options.
-        if (!is_null($this->plotOptions)) {
+        if (null !== $this->plotOptions) {
             $this->plotOptions->clear();
         }
 
         // Clear the responsive.
-        if (!is_null($this->responsive)) {
+        if (null !== $this->responsive) {
             $this->responsive->clear();
         }
 
@@ -288,17 +289,17 @@ final class HighchartsChart implements JsonSerializable {
         $this->series = null;
 
         // Clear the subtitle.
-        if (!is_null($this->subtitle)) {
+        if (null !== $this->subtitle) {
             $this->subtitle->clear();
         }
 
         // Clear the title.
-        if (!is_null($this->title)) {
+        if (null !== $this->title) {
             $this->title->clear();
         }
 
         // Clear the tooltip.
-        if (!is_null($this->tooltip)) {
+        if (null !== $this->tooltip) {
             $this->tooltip->clear();
         }
 
@@ -309,7 +310,7 @@ final class HighchartsChart implements JsonSerializable {
         $this->yAxis = null;
 
         // Clear the z axis.
-        if (!is_null($this->zAxis)) {
+        if (null !== $this->zAxis) {
             $this->zAxis->clear();
         }
     }
@@ -963,119 +964,107 @@ final class HighchartsChart implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the accessibility.
-        if (!is_null($this->accessibility)) {
-            $output["accessibility"] = $this->accessibility->toArray();
+        // Set the accessibility.
+        if (null !== $this->accessibility) {
+            ArrayUtility::set($output, "accessibility", $this->accessibility->toArray(), []);
         }
 
-        // Check the chart.
-        if (!is_null($this->chart)) {
-            $output["chart"] = $this->chart->toArray();
+        // Set the chart.
+        if (null !== $this->chart) {
+            ArrayUtility::set($output, "chart", $this->chart->toArray(), []);
         }
 
-        // Check the colors.
-        if (!is_null($this->colors)) {
-            $output["colors"] = $this->colors;
+        // Set the colors.
+        ArrayUtility::set($output, "colors", $this->colors, [null]);
+
+        // Set the credits.
+        if (null !== $this->credits) {
+            ArrayUtility::set($output, "credits", $this->credits->toArray(), []);
         }
 
-        // Check the credits.
-        if (!is_null($this->credits)) {
-            $output["credits"] = $this->credits->toArray();
+        // Set the data.
+        if (null !== $this->data) {
+            ArrayUtility::set($output, "data", $this->data->toArray(), []);
         }
 
-        // Check the data.
-        if (!is_null($this->data)) {
-            $output["data"] = $this->data->toArray();
+        // Set the defs.
+        ArrayUtility::set($output, "defs", $this->defs, [null]);
+
+        // Set the drilldown.
+        if (null !== $this->drilldown) {
+            ArrayUtility::set($output, "drilldown", $this->drilldown->toArray(), []);
         }
 
-        // Check the defs.
-        if (!is_null($this->defs)) {
-            $output["defs"] = $this->defs;
+        // Set the exporting.
+        if (null !== $this->exporting) {
+            ArrayUtility::set($output, "exporting", $this->exporting->toArray(), []);
         }
 
-        // Check the drilldown.
-        if (!is_null($this->drilldown)) {
-            $output["drilldown"] = $this->drilldown->toArray();
+        // Set the labels.
+        if (null !== $this->labels) {
+            ArrayUtility::set($output, "labels", $this->labels->toArray(), []);
         }
 
-        // Check the exporting.
-        if (!is_null($this->exporting)) {
-            $output["exporting"] = $this->exporting->toArray();
+        // Set the legend.
+        if (null !== $this->legend) {
+            ArrayUtility::set($output, "legend", $this->legend->toArray(), []);
         }
 
-        // Check the labels.
-        if (!is_null($this->labels)) {
-            $output["labels"] = $this->labels->toArray();
+        // Set the loading.
+        if (null !== $this->loading) {
+            ArrayUtility::set($output, "loading", $this->loading->toArray(), []);
         }
 
-        // Check the legend.
-        if (!is_null($this->legend)) {
-            $output["legend"] = $this->legend->toArray();
+        // Set the navigation.
+        if (null !== $this->navigation) {
+            ArrayUtility::set($output, "navigation", $this->navigation->toArray(), []);
         }
 
-        // Check the loading.
-        if (!is_null($this->loading)) {
-            $output["loading"] = $this->loading->toArray();
+        // Set the no data.
+        if (null !== $this->noData) {
+            ArrayUtility::set($output, "noData", $this->noData->toArray(), []);
         }
 
-        // Check the navigation.
-        if (!is_null($this->navigation)) {
-            $output["navigation"] = $this->navigation->toArray();
+        // Set the pane.
+        ArrayUtility::set($output, "pane", $this->pane, [null]);
+
+        // Set the plot options.
+        if (null !== $this->plotOptions) {
+            ArrayUtility::set($output, "plotOptions", $this->plotOptions->toArray(), []);
         }
 
-        // Check the no data.
-        if (!is_null($this->noData)) {
-            $output["noData"] = $this->noData->toArray();
+        // Set the responsive.
+        if (null !== $this->responsive) {
+            ArrayUtility::set($output, "responsive", $this->responsive->toArray(), []);
         }
 
-        // Check the pane.
-        if (!is_null($this->pane)) {
-            $output["pane"] = $this->pane;
+        // Set the series.
+        ArrayUtility::set($output, "series", $this->series, [null]);
+
+        // Set the subtitle.
+        if (null !== $this->subtitle) {
+            ArrayUtility::set($output, "subtitle", $this->subtitle->toArray(), []);
         }
 
-        // Check the plot options.
-        if (!is_null($this->plotOptions)) {
-            $output["plotOptions"] = $this->plotOptions->toArray();
+        // Set the title.
+        if (null !== $this->title) {
+            ArrayUtility::set($output, "title", $this->title->toArray(), []);
         }
 
-        // Check the responsive.
-        if (!is_null($this->responsive)) {
-            $output["responsive"] = $this->responsive->toArray();
+        // Set the tooltip.
+        if (null !== $this->tooltip) {
+            ArrayUtility::set($output, "tooltip", $this->tooltip->toArray(), []);
         }
 
-        // Check the series.
-        if (!is_null($this->series)) {
-            $output["series"] = $this->series;
-        }
+        // Set the x axis.
+        ArrayUtility::set($output, "xAxis", $this->xAxis, [null]);
 
-        // Check the subtitle.
-        if (!is_null($this->subtitle)) {
-            $output["subtitle"] = $this->subtitle->toArray();
-        }
+        // Set the y axis.
+        ArrayUtility::set($output, "yAxis", $this->yAxis, [null]);
 
-        // Check the title.
-        if (!is_null($this->title)) {
-            $output["title"] = $this->title->toArray();
-        }
-
-        // Check the tooltip.
-        if (!is_null($this->tooltip)) {
-            $output["tooltip"] = $this->tooltip->toArray();
-        }
-
-        // Check the x axis.
-        if (!is_null($this->xAxis)) {
-            $output["xAxis"] = $this->xAxis;
-        }
-
-        // Check the y axis.
-        if (!is_null($this->yAxis)) {
-            $output["yAxis"] = $this->yAxis;
-        }
-
-        // Check the z axis.
-        if (!is_null($this->zAxis)) {
-            $output["zAxis"] = $this->zAxis->toArray();
+        // Set the z axis.
+        if (null !== $this->zAxis) {
+            ArrayUtility::set($output, "zAxis", $this->zAxis->toArray(), []);
         }
 
         // Return the output.

@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\ZAxis;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts plot bands.
@@ -102,7 +103,7 @@ final class HighchartsPlotBands implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -136,7 +137,7 @@ final class HighchartsPlotBands implements JsonSerializable {
         $this->id = null;
 
         // Clear the label.
-        if (!is_null($this->label)) {
+        if (null !== $this->label) {
             $this->label->clear();
         }
 
@@ -376,55 +377,37 @@ final class HighchartsPlotBands implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the border color.
-        if (!is_null($this->borderColor)) {
-            $output["borderColor"] = $this->borderColor;
+        // Set the border color.
+        ArrayUtility::set($output, "borderColor", $this->borderColor, [null]);
+
+        // Set the border width.
+        ArrayUtility::set($output, "borderWidth", $this->borderWidth, [null]);
+
+        // Set the class name.
+        ArrayUtility::set($output, "className", $this->className, [null]);
+
+        // Set the color.
+        ArrayUtility::set($output, "color", $this->color, [null]);
+
+        // Set the events.
+        ArrayUtility::set($output, "events", $this->events, [null]);
+
+        // Set the from.
+        ArrayUtility::set($output, "from", $this->from, [null]);
+
+        // Set the id.
+        ArrayUtility::set($output, "id", $this->id, [null]);
+
+        // Set the label.
+        if (null !== $this->label) {
+            ArrayUtility::set($output, "label", $this->label->toArray(), []);
         }
 
-        // Check the border width.
-        if (!is_null($this->borderWidth)) {
-            $output["borderWidth"] = $this->borderWidth;
-        }
+        // Set the to.
+        ArrayUtility::set($output, "to", $this->to, [null]);
 
-        // Check the class name.
-        if (!is_null($this->className)) {
-            $output["className"] = $this->className;
-        }
-
-        // Check the color.
-        if (!is_null($this->color)) {
-            $output["color"] = $this->color;
-        }
-
-        // Check the events.
-        if (!is_null($this->events)) {
-            $output["events"] = $this->events;
-        }
-
-        // Check the from.
-        if (!is_null($this->from)) {
-            $output["from"] = $this->from;
-        }
-
-        // Check the id.
-        if (!is_null($this->id)) {
-            $output["id"] = $this->id;
-        }
-
-        // Check the label.
-        if (!is_null($this->label)) {
-            $output["label"] = $this->label->toArray();
-        }
-
-        // Check the to.
-        if (!is_null($this->to)) {
-            $output["to"] = $this->to;
-        }
-
-        // Check the z index.
-        if (!is_null($this->zIndex)) {
-            $output["zIndex"] = $this->zIndex;
-        }
+        // Set the z index.
+        ArrayUtility::set($output, "zIndex", $this->zIndex, [null]);
 
         // Return the output.
         return $output;

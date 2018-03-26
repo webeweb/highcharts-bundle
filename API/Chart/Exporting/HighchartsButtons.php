@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Exporting;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts buttons.
@@ -36,7 +37,7 @@ final class HighchartsButtons implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -49,7 +50,7 @@ final class HighchartsButtons implements JsonSerializable {
     public function clear() {
 
         // Clear the context button.
-        if (!is_null($this->contextButton)) {
+        if (null !== $this->contextButton) {
             $this->contextButton->clear();
         }
     }
@@ -103,9 +104,9 @@ final class HighchartsButtons implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the context button.
-        if (!is_null($this->contextButton)) {
-            $output["contextButton"] = $this->contextButton->toArray();
+        // Set the context button.
+        if (null !== $this->contextButton) {
+            ArrayUtility::set($output, "contextButton", $this->contextButton->toArray(), []);
         }
 
         // Return the output.

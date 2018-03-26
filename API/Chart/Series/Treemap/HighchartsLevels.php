@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Treemap;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts levels.
@@ -93,7 +94,7 @@ final class HighchartsLevels implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -278,8 +279,8 @@ final class HighchartsLevels implements JsonSerializable {
             case "squarified":
             case "strip":
             case "stripes":
-                $this->layoutAlgorithm = $layoutAlgorithm;
-                break;
+            $this->layoutAlgorithm = $layoutAlgorithm;
+            break;
         }
         return $this;
     }
@@ -294,8 +295,8 @@ final class HighchartsLevels implements JsonSerializable {
         switch ($layoutStartingDirection) {
             case "horizontal":
             case "vertical":
-                $this->layoutStartingDirection = $layoutStartingDirection;
-                break;
+            $this->layoutStartingDirection = $layoutStartingDirection;
+            break;
         }
         return $this;
     }
@@ -321,45 +322,29 @@ final class HighchartsLevels implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the border color.
-        if (!is_null($this->borderColor)) {
-            $output["borderColor"] = $this->borderColor;
-        }
+        // Set the border color.
+        ArrayUtility::set($output, "borderColor", $this->borderColor, [null]);
 
-        // Check the border dash style.
-        if (!is_null($this->borderDashStyle)) {
-            $output["borderDashStyle"] = $this->borderDashStyle;
-        }
+        // Set the border dash style.
+        ArrayUtility::set($output, "borderDashStyle", $this->borderDashStyle, [null]);
 
-        // Check the border width.
-        if (!is_null($this->borderWidth)) {
-            $output["borderWidth"] = $this->borderWidth;
-        }
+        // Set the border width.
+        ArrayUtility::set($output, "borderWidth", $this->borderWidth, [null]);
 
-        // Check the color.
-        if (!is_null($this->color)) {
-            $output["color"] = $this->color;
-        }
+        // Set the color.
+        ArrayUtility::set($output, "color", $this->color, [null]);
 
-        // Check the data labels.
-        if (!is_null($this->dataLabels)) {
-            $output["dataLabels"] = $this->dataLabels;
-        }
+        // Set the data labels.
+        ArrayUtility::set($output, "dataLabels", $this->dataLabels, [null]);
 
-        // Check the layout algorithm.
-        if (!is_null($this->layoutAlgorithm)) {
-            $output["layoutAlgorithm"] = $this->layoutAlgorithm;
-        }
+        // Set the layout algorithm.
+        ArrayUtility::set($output, "layoutAlgorithm", $this->layoutAlgorithm, [null]);
 
-        // Check the layout starting direction.
-        if (!is_null($this->layoutStartingDirection)) {
-            $output["layoutStartingDirection"] = $this->layoutStartingDirection;
-        }
+        // Set the layout starting direction.
+        ArrayUtility::set($output, "layoutStartingDirection", $this->layoutStartingDirection, [null]);
 
-        // Check the level.
-        if (!is_null($this->level)) {
-            $output["level"] = $this->level;
-        }
+        // Set the level.
+        ArrayUtility::set($output, "level", $this->level, [null]);
 
         // Return the output.
         return $output;

@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Drilldown;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts drill up button.
@@ -53,7 +54,7 @@ final class HighchartsDrillUpButton implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -154,20 +155,14 @@ final class HighchartsDrillUpButton implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the position.
-        if (!is_null($this->position)) {
-            $output["position"] = $this->position;
-        }
+        // Set the position.
+        ArrayUtility::set($output, "position", $this->position, [null]);
 
-        // Check the relative to.
-        if (!is_null($this->relativeTo)) {
-            $output["relativeTo"] = $this->relativeTo;
-        }
+        // Set the relative to.
+        ArrayUtility::set($output, "relativeTo", $this->relativeTo, [null]);
 
-        // Check the theme.
-        if (!is_null($this->theme)) {
-            $output["theme"] = $this->theme;
-        }
+        // Set the theme.
+        ArrayUtility::set($output, "theme", $this->theme, [null]);
 
         // Return the output.
         return $output;

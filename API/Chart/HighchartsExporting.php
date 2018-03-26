@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts exporting.
@@ -163,7 +164,7 @@ final class HighchartsExporting implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -179,7 +180,7 @@ final class HighchartsExporting implements JsonSerializable {
         $this->allowHTML = null;
 
         // Clear the buttons.
-        if (!is_null($this->buttons)) {
+        if (null !== $this->buttons) {
             $this->buttons->clear();
         }
 
@@ -567,8 +568,8 @@ final class HighchartsExporting implements JsonSerializable {
             case "image/jpeg":
             case "image/png":
             case "image/svg+xml":
-                $this->type = $type;
-                break;
+            $this->type = $type;
+            break;
         }
         return $this;
     }
@@ -605,90 +606,58 @@ final class HighchartsExporting implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the allow HTML.
-        if (!is_null($this->allowHTML)) {
-            $output["allowHTML"] = $this->allowHTML;
+        // Set the allow HTML.
+        ArrayUtility::set($output, "allowHTML", $this->allowHTML, [null]);
+
+        // Set the buttons.
+        if (null !== $this->buttons) {
+            ArrayUtility::set($output, "buttons", $this->buttons->toArray(), []);
         }
 
-        // Check the buttons.
-        if (!is_null($this->buttons)) {
-            $output["buttons"] = $this->buttons->toArray();
-        }
+        // Set the chart options.
+        ArrayUtility::set($output, "chartOptions", $this->chartOptions, [null]);
 
-        // Check the chart options.
-        if (!is_null($this->chartOptions)) {
-            $output["chartOptions"] = $this->chartOptions;
-        }
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the error.
+        ArrayUtility::set($output, "error", $this->error, [null]);
 
-        // Check the error.
-        if (!is_null($this->error)) {
-            $output["error"] = $this->error;
-        }
+        // Set the fallback to export server.
+        ArrayUtility::set($output, "fallbackToExportServer", $this->fallbackToExportServer, [null]);
 
-        // Check the fallback to export server.
-        if (!is_null($this->fallbackToExportServer)) {
-            $output["fallbackToExportServer"] = $this->fallbackToExportServer;
-        }
+        // Set the filename.
+        ArrayUtility::set($output, "filename", $this->filename, [null]);
 
-        // Check the filename.
-        if (!is_null($this->filename)) {
-            $output["filename"] = $this->filename;
-        }
+        // Set the form attributes.
+        ArrayUtility::set($output, "formAttributes", $this->formAttributes, [null]);
 
-        // Check the form attributes.
-        if (!is_null($this->formAttributes)) {
-            $output["formAttributes"] = $this->formAttributes;
-        }
+        // Set the lib URL.
+        ArrayUtility::set($output, "libURL", $this->libURL, [null]);
 
-        // Check the lib URL.
-        if (!is_null($this->libURL)) {
-            $output["libURL"] = $this->libURL;
-        }
+        // Set the menu item definitions.
+        ArrayUtility::set($output, "menuItemDefinitions", $this->menuItemDefinitions, [null]);
 
-        // Check the menu item definitions.
-        if (!is_null($this->menuItemDefinitions)) {
-            $output["menuItemDefinitions"] = $this->menuItemDefinitions;
-        }
+        // Set the print max width.
+        ArrayUtility::set($output, "printMaxWidth", $this->printMaxWidth, [null]);
 
-        // Check the print max width.
-        if (!is_null($this->printMaxWidth)) {
-            $output["printMaxWidth"] = $this->printMaxWidth;
-        }
+        // Set the scale.
+        ArrayUtility::set($output, "scale", $this->scale, [null]);
 
-        // Check the scale.
-        if (!is_null($this->scale)) {
-            $output["scale"] = $this->scale;
-        }
+        // Set the source height.
+        ArrayUtility::set($output, "sourceHeight", $this->sourceHeight, [null]);
 
-        // Check the source height.
-        if (!is_null($this->sourceHeight)) {
-            $output["sourceHeight"] = $this->sourceHeight;
-        }
+        // Set the source width.
+        ArrayUtility::set($output, "sourceWidth", $this->sourceWidth, [null]);
 
-        // Check the source width.
-        if (!is_null($this->sourceWidth)) {
-            $output["sourceWidth"] = $this->sourceWidth;
-        }
+        // Set the type.
+        ArrayUtility::set($output, "type", $this->type, [null]);
 
-        // Check the type.
-        if (!is_null($this->type)) {
-            $output["type"] = $this->type;
-        }
+        // Set the url.
+        ArrayUtility::set($output, "url", $this->url, [null]);
 
-        // Check the url.
-        if (!is_null($this->url)) {
-            $output["url"] = $this->url;
-        }
-
-        // Check the width.
-        if (!is_null($this->width)) {
-            $output["width"] = $this->width;
-        }
+        // Set the width.
+        ArrayUtility::set($output, "width", $this->width, [null]);
 
         // Return the output.
         return $output;

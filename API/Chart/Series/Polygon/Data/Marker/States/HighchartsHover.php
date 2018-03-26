@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Polygon\Data\Marker\States;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts hover.
@@ -80,7 +81,7 @@ final class HighchartsHover implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -273,40 +274,26 @@ final class HighchartsHover implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
 
-        // Check the fill color.
-        if (!is_null($this->fillColor)) {
-            $output["fillColor"] = $this->fillColor;
-        }
+        // Set the fill color.
+        ArrayUtility::set($output, "fillColor", $this->fillColor, [null]);
 
-        // Check the line color.
-        if (!is_null($this->lineColor)) {
-            $output["lineColor"] = $this->lineColor;
-        }
+        // Set the line color.
+        ArrayUtility::set($output, "lineColor", $this->lineColor, [null]);
 
-        // Check the line width.
-        if (!is_null($this->lineWidth)) {
-            $output["lineWidth"] = $this->lineWidth;
-        }
+        // Set the line width.
+        ArrayUtility::set($output, "lineWidth", $this->lineWidth, [null]);
 
-        // Check the line width plus.
-        if (!is_null($this->lineWidthPlus)) {
-            $output["lineWidthPlus"] = $this->lineWidthPlus;
-        }
+        // Set the line width plus.
+        ArrayUtility::set($output, "lineWidthPlus", $this->lineWidthPlus, [null]);
 
-        // Check the radius.
-        if (!is_null($this->radius)) {
-            $output["radius"] = $this->radius;
-        }
+        // Set the radius.
+        ArrayUtility::set($output, "radius", $this->radius, [null]);
 
-        // Check the radius plus.
-        if (!is_null($this->radiusPlus)) {
-            $output["radiusPlus"] = $this->radiusPlus;
-        }
+        // Set the radius plus.
+        ArrayUtility::set($output, "radiusPlus", $this->radiusPlus, [null]);
 
         // Return the output.
         return $output;

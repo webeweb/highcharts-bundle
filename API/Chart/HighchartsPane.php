@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts pane.
@@ -68,7 +69,7 @@ final class HighchartsPane implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -215,30 +216,20 @@ final class HighchartsPane implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the background.
-        if (!is_null($this->background)) {
-            $output["background"] = $this->background;
-        }
+        // Set the background.
+        ArrayUtility::set($output, "background", $this->background, [null]);
 
-        // Check the center.
-        if (!is_null($this->center)) {
-            $output["center"] = $this->center;
-        }
+        // Set the center.
+        ArrayUtility::set($output, "center", $this->center, [null]);
 
-        // Check the end angle.
-        if (!is_null($this->endAngle)) {
-            $output["endAngle"] = $this->endAngle;
-        }
+        // Set the end angle.
+        ArrayUtility::set($output, "endAngle", $this->endAngle, [null]);
 
-        // Check the size.
-        if (!is_null($this->size)) {
-            $output["size"] = $this->size;
-        }
+        // Set the size.
+        ArrayUtility::set($output, "size", $this->size, [null]);
 
-        // Check the start angle.
-        if (!is_null($this->startAngle)) {
-            $output["startAngle"] = $this->startAngle;
-        }
+        // Set the start angle.
+        ArrayUtility::set($output, "startAngle", $this->startAngle, [null]);
 
         // Return the output.
         return $output;

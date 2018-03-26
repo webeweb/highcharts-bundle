@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts no data.
@@ -61,7 +62,7 @@ final class HighchartsNoData implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -185,25 +186,17 @@ final class HighchartsNoData implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the attr.
-        if (!is_null($this->attr)) {
-            $output["attr"] = $this->attr;
-        }
+        // Set the attr.
+        ArrayUtility::set($output, "attr", $this->attr, [null]);
 
-        // Check the position.
-        if (!is_null($this->position)) {
-            $output["position"] = $this->position;
-        }
+        // Set the position.
+        ArrayUtility::set($output, "position", $this->position, [null]);
 
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
 
-        // Check the use HTML.
-        if (!is_null($this->useHTML)) {
-            $output["useHTML"] = $this->useHTML;
-        }
+        // Set the use HTML.
+        ArrayUtility::set($output, "useHTML", $this->useHTML, [null]);
 
         // Return the output.
         return $output;

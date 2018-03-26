@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Options;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts lang.
@@ -185,7 +186,7 @@ final class HighchartsLang implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -677,105 +678,65 @@ final class HighchartsLang implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the context button title.
-        if (!is_null($this->contextButtonTitle)) {
-            $output["contextButtonTitle"] = $this->contextButtonTitle;
-        }
+        // Set the context button title.
+        ArrayUtility::set($output, "contextButtonTitle", $this->contextButtonTitle, [null]);
 
-        // Check the decimal point.
-        if (!is_null($this->decimalPoint)) {
-            $output["decimalPoint"] = $this->decimalPoint;
-        }
+        // Set the decimal point.
+        ArrayUtility::set($output, "decimalPoint", $this->decimalPoint, [null]);
 
-        // Check the download JPEG.
-        if (!is_null($this->downloadJPEG)) {
-            $output["downloadJPEG"] = $this->downloadJPEG;
-        }
+        // Set the download JPEG.
+        ArrayUtility::set($output, "downloadJPEG", $this->downloadJPEG, [null]);
 
-        // Check the download PDF.
-        if (!is_null($this->downloadPDF)) {
-            $output["downloadPDF"] = $this->downloadPDF;
-        }
+        // Set the download PDF.
+        ArrayUtility::set($output, "downloadPDF", $this->downloadPDF, [null]);
 
-        // Check the download PNG.
-        if (!is_null($this->downloadPNG)) {
-            $output["downloadPNG"] = $this->downloadPNG;
-        }
+        // Set the download PNG.
+        ArrayUtility::set($output, "downloadPNG", $this->downloadPNG, [null]);
 
-        // Check the download SVG.
-        if (!is_null($this->downloadSVG)) {
-            $output["downloadSVG"] = $this->downloadSVG;
-        }
+        // Set the download SVG.
+        ArrayUtility::set($output, "downloadSVG", $this->downloadSVG, [null]);
 
-        // Check the drill up text.
-        if (!is_null($this->drillUpText)) {
-            $output["drillUpText"] = $this->drillUpText;
-        }
+        // Set the drill up text.
+        ArrayUtility::set($output, "drillUpText", $this->drillUpText, [null]);
 
-        // Check the invalid date.
-        if (!is_null($this->invalidDate)) {
-            $output["invalidDate"] = $this->invalidDate;
-        }
+        // Set the invalid date.
+        ArrayUtility::set($output, "invalidDate", $this->invalidDate, [null]);
 
-        // Check the loading.
-        if (!is_null($this->loading)) {
-            $output["loading"] = $this->loading;
-        }
+        // Set the loading.
+        ArrayUtility::set($output, "loading", $this->loading, [null]);
 
-        // Check the months.
-        if (!is_null($this->months)) {
-            $output["months"] = $this->months;
-        }
+        // Set the months.
+        ArrayUtility::set($output, "months", $this->months, [null]);
 
-        // Check the no data.
-        if (!is_null($this->noData)) {
-            $output["noData"] = $this->noData;
-        }
+        // Set the no data.
+        ArrayUtility::set($output, "noData", $this->noData, [null]);
 
-        // Check the numeric symbol magnitude.
-        if (!is_null($this->numericSymbolMagnitude)) {
-            $output["numericSymbolMagnitude"] = $this->numericSymbolMagnitude;
-        }
+        // Set the numeric symbol magnitude.
+        ArrayUtility::set($output, "numericSymbolMagnitude", $this->numericSymbolMagnitude, [null]);
 
-        // Check the numeric symbols.
-        if (!is_null($this->numericSymbols)) {
-            $output["numericSymbols"] = $this->numericSymbols;
-        }
+        // Set the numeric symbols.
+        ArrayUtility::set($output, "numericSymbols", $this->numericSymbols, [null]);
 
-        // Check the print chart.
-        if (!is_null($this->printChart)) {
-            $output["printChart"] = $this->printChart;
-        }
+        // Set the print chart.
+        ArrayUtility::set($output, "printChart", $this->printChart, [null]);
 
-        // Check the reset zoom.
-        if (!is_null($this->resetZoom)) {
-            $output["resetZoom"] = $this->resetZoom;
-        }
+        // Set the reset zoom.
+        ArrayUtility::set($output, "resetZoom", $this->resetZoom, [null]);
 
-        // Check the reset zoom title.
-        if (!is_null($this->resetZoomTitle)) {
-            $output["resetZoomTitle"] = $this->resetZoomTitle;
-        }
+        // Set the reset zoom title.
+        ArrayUtility::set($output, "resetZoomTitle", $this->resetZoomTitle, [null]);
 
-        // Check the short months.
-        if (!is_null($this->shortMonths)) {
-            $output["shortMonths"] = $this->shortMonths;
-        }
+        // Set the short months.
+        ArrayUtility::set($output, "shortMonths", $this->shortMonths, [null]);
 
-        // Check the short weekdays.
-        if (!is_null($this->shortWeekdays)) {
-            $output["shortWeekdays"] = $this->shortWeekdays;
-        }
+        // Set the short weekdays.
+        ArrayUtility::set($output, "shortWeekdays", $this->shortWeekdays, [null]);
 
-        // Check the thousands sep.
-        if (!is_null($this->thousandsSep)) {
-            $output["thousandsSep"] = $this->thousandsSep;
-        }
+        // Set the thousands sep.
+        ArrayUtility::set($output, "thousandsSep", $this->thousandsSep, [null]);
 
-        // Check the weekdays.
-        if (!is_null($this->weekdays)) {
-            $output["weekdays"] = $this->weekdays;
-        }
+        // Set the weekdays.
+        ArrayUtility::set($output, "weekdays", $this->weekdays, [null]);
 
         // Return the output.
         return $output;

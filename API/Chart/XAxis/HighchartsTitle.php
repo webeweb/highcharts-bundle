@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\XAxis;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts title.
@@ -103,7 +104,7 @@ final class HighchartsTitle implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -257,8 +258,8 @@ final class HighchartsTitle implements JsonSerializable {
             case "high":
             case "low":
             case "middle":
-                $this->align = $align;
-                break;
+            $this->align = $align;
+            break;
         }
         return $this;
     }
@@ -373,55 +374,35 @@ final class HighchartsTitle implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the align.
-        if (!is_null($this->align)) {
-            $output["align"] = $this->align;
-        }
+        // Set the align.
+        ArrayUtility::set($output, "align", $this->align, [null]);
 
-        // Check the enabled.
-        if (!is_null($this->enabled)) {
-            $output["enabled"] = $this->enabled;
-        }
+        // Set the enabled.
+        ArrayUtility::set($output, "enabled", $this->enabled, [null]);
 
-        // Check the margin.
-        if (!is_null($this->margin)) {
-            $output["margin"] = $this->margin;
-        }
+        // Set the margin.
+        ArrayUtility::set($output, "margin", $this->margin, [null]);
 
-        // Check the offset.
-        if (!is_null($this->offset)) {
-            $output["offset"] = $this->offset;
-        }
+        // Set the offset.
+        ArrayUtility::set($output, "offset", $this->offset, [null]);
 
-        // Check the reserve space.
-        if (!is_null($this->reserveSpace)) {
-            $output["reserveSpace"] = $this->reserveSpace;
-        }
+        // Set the reserve space.
+        ArrayUtility::set($output, "reserveSpace", $this->reserveSpace, [null]);
 
-        // Check the rotation.
-        if (!is_null($this->rotation)) {
-            $output["rotation"] = $this->rotation;
-        }
+        // Set the rotation.
+        ArrayUtility::set($output, "rotation", $this->rotation, [null]);
 
-        // Check the style.
-        if (!is_null($this->style)) {
-            $output["style"] = $this->style;
-        }
+        // Set the style.
+        ArrayUtility::set($output, "style", $this->style, [null]);
 
-        // Check the text.
-        if (!is_null($this->text)) {
-            $output["text"] = $this->text;
-        }
+        // Set the text.
+        ArrayUtility::set($output, "text", $this->text, [null]);
 
-        // Check the x.
-        if (!is_null($this->x)) {
-            $output["x"] = $this->x;
-        }
+        // Set the x.
+        ArrayUtility::set($output, "x", $this->x, [null]);
 
-        // Check the y.
-        if (!is_null($this->y)) {
-            $output["y"] = $this->y;
-        }
+        // Set the y.
+        ArrayUtility::set($output, "y", $this->y, [null]);
 
         // Return the output.
         return $output;

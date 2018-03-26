@@ -12,6 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart;
 
 use JsonSerializable;
+use WBW\Library\Core\Utility\ArrayUtility;
 
 /**
  * Highcharts y axis.
@@ -547,7 +548,7 @@ final class HighchartsYAxis implements JsonSerializable {
      * @param boolean $ignoreDefaultValues Ignore the default values.
      */
     public function __construct($ignoreDefaultValues = true) {
-        if ($ignoreDefaultValues === true) {
+        if (true === $ignoreDefaultValues) {
             $this->clear();
         }
     }
@@ -581,7 +582,7 @@ final class HighchartsYAxis implements JsonSerializable {
         $this->className = null;
 
         // Clear the crosshair.
-        if (!is_null($this->crosshair)) {
+        if (null !== $this->crosshair) {
             $this->crosshair->clear();
         }
 
@@ -595,7 +596,7 @@ final class HighchartsYAxis implements JsonSerializable {
         $this->endOnTick = null;
 
         // Clear the events.
-        if (!is_null($this->events)) {
+        if (null !== $this->events) {
             $this->events->clear();
         }
 
@@ -621,7 +622,7 @@ final class HighchartsYAxis implements JsonSerializable {
         $this->id = null;
 
         // Clear the labels.
-        if (!is_null($this->labels)) {
+        if (null !== $this->labels) {
             $this->labels->clear();
         }
 
@@ -719,7 +720,7 @@ final class HighchartsYAxis implements JsonSerializable {
         $this->softMin = null;
 
         // Clear the stack labels.
-        if (!is_null($this->stackLabels)) {
+        if (null !== $this->stackLabels) {
             $this->stackLabels->clear();
         }
 
@@ -763,7 +764,7 @@ final class HighchartsYAxis implements JsonSerializable {
         $this->tickmarkPlacement = null;
 
         // Clear the title.
-        if (!is_null($this->title)) {
+        if (null !== $this->title) {
             $this->title->clear();
         }
 
@@ -1643,8 +1644,8 @@ final class HighchartsYAxis implements JsonSerializable {
             case "ShortDashDotDot":
             case "ShortDot":
             case "Solid":
-                $this->gridLineDashStyle = $gridLineDashStyle;
-                break;
+            $this->gridLineDashStyle = $gridLineDashStyle;
+            break;
         }
         return $this;
     }
@@ -1659,8 +1660,8 @@ final class HighchartsYAxis implements JsonSerializable {
         switch ($gridLineInterpolation) {
             case "circle":
             case "polygon":
-                $this->gridLineInterpolation = $gridLineInterpolation;
-                break;
+            $this->gridLineInterpolation = $gridLineInterpolation;
+            break;
         }
         return $this;
     }
@@ -1872,8 +1873,8 @@ final class HighchartsYAxis implements JsonSerializable {
             case "ShortDashDotDot":
             case "ShortDot":
             case "Solid":
-                $this->minorGridLineDashStyle = $minorGridLineDashStyle;
-                break;
+            $this->minorGridLineDashStyle = $minorGridLineDashStyle;
+            break;
         }
         return $this;
     }
@@ -1932,8 +1933,8 @@ final class HighchartsYAxis implements JsonSerializable {
         switch ($minorTickPosition) {
             case "inside":
             case "outside":
-                $this->minorTickPosition = $minorTickPosition;
-                break;
+            $this->minorTickPosition = $minorTickPosition;
+            break;
         }
         return $this;
     }
@@ -2179,8 +2180,8 @@ final class HighchartsYAxis implements JsonSerializable {
         switch ($tickPosition) {
             case "inside":
             case "outside":
-                $this->tickPosition = $tickPosition;
-                break;
+            $this->tickPosition = $tickPosition;
+            break;
         }
         return $this;
     }
@@ -2229,8 +2230,8 @@ final class HighchartsYAxis implements JsonSerializable {
             case null:
             case "between":
             case "on":
-                $this->tickmarkPlacement = $tickmarkPlacement;
-                break;
+            $this->tickmarkPlacement = $tickmarkPlacement;
+            break;
         }
         return $this;
     }
@@ -2258,8 +2259,8 @@ final class HighchartsYAxis implements JsonSerializable {
             case "datetime":
             case "linear":
             case "logarithmic":
-                $this->type = $type;
-                break;
+            $this->type = $type;
+            break;
         }
         return $this;
     }
@@ -2307,355 +2308,225 @@ final class HighchartsYAxis implements JsonSerializable {
         // Initialize the output.
         $output = [];
 
-        // Check the allow decimals.
-        if (!is_null($this->allowDecimals)) {
-            $output["allowDecimals"] = $this->allowDecimals;
-        }
+        // Set the allow decimals.
+        ArrayUtility::set($output, "allowDecimals", $this->allowDecimals, [null]);
 
-        // Check the alternate grid color.
-        if (!is_null($this->alternateGridColor)) {
-            $output["alternateGridColor"] = $this->alternateGridColor;
-        }
+        // Set the alternate grid color.
+        ArrayUtility::set($output, "alternateGridColor", $this->alternateGridColor, [null]);
 
-        // Check the angle.
-        if (!is_null($this->angle)) {
-            $output["angle"] = $this->angle;
-        }
+        // Set the angle.
+        ArrayUtility::set($output, "angle", $this->angle, [null]);
 
-        // Check the breaks.
-        if (!is_null($this->breaks)) {
-            $output["breaks"] = $this->breaks;
-        }
+        // Set the breaks.
+        ArrayUtility::set($output, "breaks", $this->breaks, [null]);
 
-        // Check the categories.
-        if (!is_null($this->categories)) {
-            $output["categories"] = $this->categories;
-        }
+        // Set the categories.
+        ArrayUtility::set($output, "categories", $this->categories, [null]);
 
-        // Check the ceiling.
-        if (!is_null($this->ceiling)) {
-            $output["ceiling"] = $this->ceiling;
-        }
+        // Set the ceiling.
+        ArrayUtility::set($output, "ceiling", $this->ceiling, [null]);
 
-        // Check the class name.
-        if (!is_null($this->className)) {
-            $output["className"] = $this->className;
-        }
+        // Set the class name.
+        ArrayUtility::set($output, "className", $this->className, [null]);
 
-        // Check the crosshair.
-        if (!is_null($this->crosshair)) {
-            $output["crosshair"] = $this->crosshair->toArray();
+        // Set the crosshair.
+        if (null !== $this->crosshair) {
+            ArrayUtility::set($output, "crosshair", $this->crosshair->toArray(), []);
         }
 
-        // Check the date time label formats.
-        if (!is_null($this->dateTimeLabelFormats)) {
-            $output["dateTimeLabelFormats"] = $this->dateTimeLabelFormats;
-        }
+        // Set the date time label formats.
+        ArrayUtility::set($output, "dateTimeLabelFormats", $this->dateTimeLabelFormats, [null]);
 
-        // Check the description.
-        if (!is_null($this->description)) {
-            $output["description"] = $this->description;
-        }
+        // Set the description.
+        ArrayUtility::set($output, "description", $this->description, [null]);
 
-        // Check the end on tick.
-        if (!is_null($this->endOnTick)) {
-            $output["endOnTick"] = $this->endOnTick;
-        }
+        // Set the end on tick.
+        ArrayUtility::set($output, "endOnTick", $this->endOnTick, [null]);
 
-        // Check the events.
-        if (!is_null($this->events)) {
-            $output["events"] = $this->events->toArray();
+        // Set the events.
+        if (null !== $this->events) {
+            ArrayUtility::set($output, "events", $this->events->toArray(), []);
         }
 
-        // Check the floor.
-        if (!is_null($this->floor)) {
-            $output["floor"] = $this->floor;
-        }
+        // Set the floor.
+        ArrayUtility::set($output, "floor", $this->floor, [null]);
 
-        // Check the grid line color.
-        if (!is_null($this->gridLineColor)) {
-            $output["gridLineColor"] = $this->gridLineColor;
-        }
+        // Set the grid line color.
+        ArrayUtility::set($output, "gridLineColor", $this->gridLineColor, [null]);
 
-        // Check the grid line dash style.
-        if (!is_null($this->gridLineDashStyle)) {
-            $output["gridLineDashStyle"] = $this->gridLineDashStyle;
-        }
+        // Set the grid line dash style.
+        ArrayUtility::set($output, "gridLineDashStyle", $this->gridLineDashStyle, [null]);
 
-        // Check the grid line interpolation.
-        if (!is_null($this->gridLineInterpolation)) {
-            $output["gridLineInterpolation"] = $this->gridLineInterpolation;
-        }
+        // Set the grid line interpolation.
+        ArrayUtility::set($output, "gridLineInterpolation", $this->gridLineInterpolation, [null]);
 
-        // Check the grid line width.
-        if (!is_null($this->gridLineWidth)) {
-            $output["gridLineWidth"] = $this->gridLineWidth;
-        }
+        // Set the grid line width.
+        ArrayUtility::set($output, "gridLineWidth", $this->gridLineWidth, [null]);
 
-        // Check the grid z index.
-        if (!is_null($this->gridZIndex)) {
-            $output["gridZIndex"] = $this->gridZIndex;
-        }
+        // Set the grid z index.
+        ArrayUtility::set($output, "gridZIndex", $this->gridZIndex, [null]);
 
-        // Check the id.
-        if (!is_null($this->id)) {
-            $output["id"] = $this->id;
-        }
+        // Set the id.
+        ArrayUtility::set($output, "id", $this->id, [null]);
 
-        // Check the labels.
-        if (!is_null($this->labels)) {
-            $output["labels"] = $this->labels->toArray();
+        // Set the labels.
+        if (null !== $this->labels) {
+            ArrayUtility::set($output, "labels", $this->labels->toArray(), []);
         }
 
-        // Check the line color.
-        if (!is_null($this->lineColor)) {
-            $output["lineColor"] = $this->lineColor;
-        }
+        // Set the line color.
+        ArrayUtility::set($output, "lineColor", $this->lineColor, [null]);
 
-        // Check the line width.
-        if (!is_null($this->lineWidth)) {
-            $output["lineWidth"] = $this->lineWidth;
-        }
+        // Set the line width.
+        ArrayUtility::set($output, "lineWidth", $this->lineWidth, [null]);
 
-        // Check the linked to.
-        if (!is_null($this->linkedTo)) {
-            $output["linkedTo"] = $this->linkedTo;
-        }
+        // Set the linked to.
+        ArrayUtility::set($output, "linkedTo", $this->linkedTo, [null]);
 
-        // Check the max.
-        if (!is_null($this->max)) {
-            $output["max"] = $this->max;
-        }
+        // Set the max.
+        ArrayUtility::set($output, "max", $this->max, [null]);
 
-        // Check the max color.
-        if (!is_null($this->maxColor)) {
-            $output["maxColor"] = $this->maxColor;
-        }
+        // Set the max color.
+        ArrayUtility::set($output, "maxColor", $this->maxColor, [null]);
 
-        // Check the max padding.
-        if (!is_null($this->maxPadding)) {
-            $output["maxPadding"] = $this->maxPadding;
-        }
+        // Set the max padding.
+        ArrayUtility::set($output, "maxPadding", $this->maxPadding, [null]);
 
-        // Check the max zoom.
-        if (!is_null($this->maxZoom)) {
-            $output["maxZoom"] = $this->maxZoom;
-        }
+        // Set the max zoom.
+        ArrayUtility::set($output, "maxZoom", $this->maxZoom, [null]);
 
-        // Check the min.
-        if (!is_null($this->min)) {
-            $output["min"] = $this->min;
-        }
+        // Set the min.
+        ArrayUtility::set($output, "min", $this->min, [null]);
 
-        // Check the min color.
-        if (!is_null($this->minColor)) {
-            $output["minColor"] = $this->minColor;
-        }
+        // Set the min color.
+        ArrayUtility::set($output, "minColor", $this->minColor, [null]);
 
-        // Check the min padding.
-        if (!is_null($this->minPadding)) {
-            $output["minPadding"] = $this->minPadding;
-        }
+        // Set the min padding.
+        ArrayUtility::set($output, "minPadding", $this->minPadding, [null]);
 
-        // Check the min range.
-        if (!is_null($this->minRange)) {
-            $output["minRange"] = $this->minRange;
-        }
+        // Set the min range.
+        ArrayUtility::set($output, "minRange", $this->minRange, [null]);
 
-        // Check the min tick interval.
-        if (!is_null($this->minTickInterval)) {
-            $output["minTickInterval"] = $this->minTickInterval;
-        }
+        // Set the min tick interval.
+        ArrayUtility::set($output, "minTickInterval", $this->minTickInterval, [null]);
 
-        // Check the minor grid line color.
-        if (!is_null($this->minorGridLineColor)) {
-            $output["minorGridLineColor"] = $this->minorGridLineColor;
-        }
+        // Set the minor grid line color.
+        ArrayUtility::set($output, "minorGridLineColor", $this->minorGridLineColor, [null]);
 
-        // Check the minor grid line dash style.
-        if (!is_null($this->minorGridLineDashStyle)) {
-            $output["minorGridLineDashStyle"] = $this->minorGridLineDashStyle;
-        }
+        // Set the minor grid line dash style.
+        ArrayUtility::set($output, "minorGridLineDashStyle", $this->minorGridLineDashStyle, [null]);
 
-        // Check the minor grid line width.
-        if (!is_null($this->minorGridLineWidth)) {
-            $output["minorGridLineWidth"] = $this->minorGridLineWidth;
-        }
+        // Set the minor grid line width.
+        ArrayUtility::set($output, "minorGridLineWidth", $this->minorGridLineWidth, [null]);
 
-        // Check the minor tick color.
-        if (!is_null($this->minorTickColor)) {
-            $output["minorTickColor"] = $this->minorTickColor;
-        }
+        // Set the minor tick color.
+        ArrayUtility::set($output, "minorTickColor", $this->minorTickColor, [null]);
 
-        // Check the minor tick interval.
-        if (!is_null($this->minorTickInterval)) {
-            $output["minorTickInterval"] = $this->minorTickInterval;
-        }
+        // Set the minor tick interval.
+        ArrayUtility::set($output, "minorTickInterval", $this->minorTickInterval, [null]);
 
-        // Check the minor tick length.
-        if (!is_null($this->minorTickLength)) {
-            $output["minorTickLength"] = $this->minorTickLength;
-        }
+        // Set the minor tick length.
+        ArrayUtility::set($output, "minorTickLength", $this->minorTickLength, [null]);
 
-        // Check the minor tick position.
-        if (!is_null($this->minorTickPosition)) {
-            $output["minorTickPosition"] = $this->minorTickPosition;
-        }
+        // Set the minor tick position.
+        ArrayUtility::set($output, "minorTickPosition", $this->minorTickPosition, [null]);
 
-        // Check the minor tick width.
-        if (!is_null($this->minorTickWidth)) {
-            $output["minorTickWidth"] = $this->minorTickWidth;
-        }
+        // Set the minor tick width.
+        ArrayUtility::set($output, "minorTickWidth", $this->minorTickWidth, [null]);
 
-        // Check the offset.
-        if (!is_null($this->offset)) {
-            $output["offset"] = $this->offset;
-        }
+        // Set the offset.
+        ArrayUtility::set($output, "offset", $this->offset, [null]);
 
-        // Check the opposite.
-        if (!is_null($this->opposite)) {
-            $output["opposite"] = $this->opposite;
-        }
+        // Set the opposite.
+        ArrayUtility::set($output, "opposite", $this->opposite, [null]);
 
-        // Check the plot bands.
-        if (!is_null($this->plotBands)) {
-            $output["plotBands"] = $this->plotBands;
-        }
+        // Set the plot bands.
+        ArrayUtility::set($output, "plotBands", $this->plotBands, [null]);
 
-        // Check the plot lines.
-        if (!is_null($this->plotLines)) {
-            $output["plotLines"] = $this->plotLines;
-        }
+        // Set the plot lines.
+        ArrayUtility::set($output, "plotLines", $this->plotLines, [null]);
 
-        // Check the reversed.
-        if (!is_null($this->reversed)) {
-            $output["reversed"] = $this->reversed;
-        }
+        // Set the reversed.
+        ArrayUtility::set($output, "reversed", $this->reversed, [null]);
 
-        // Check the reversed stacks.
-        if (!is_null($this->reversedStacks)) {
-            $output["reversedStacks"] = $this->reversedStacks;
-        }
+        // Set the reversed stacks.
+        ArrayUtility::set($output, "reversedStacks", $this->reversedStacks, [null]);
 
-        // Check the show empty.
-        if (!is_null($this->showEmpty)) {
-            $output["showEmpty"] = $this->showEmpty;
-        }
+        // Set the show empty.
+        ArrayUtility::set($output, "showEmpty", $this->showEmpty, [null]);
 
-        // Check the show first label.
-        if (!is_null($this->showFirstLabel)) {
-            $output["showFirstLabel"] = $this->showFirstLabel;
-        }
+        // Set the show first label.
+        ArrayUtility::set($output, "showFirstLabel", $this->showFirstLabel, [null]);
 
-        // Check the show last label.
-        if (!is_null($this->showLastLabel)) {
-            $output["showLastLabel"] = $this->showLastLabel;
-        }
+        // Set the show last label.
+        ArrayUtility::set($output, "showLastLabel", $this->showLastLabel, [null]);
 
-        // Check the soft max.
-        if (!is_null($this->softMax)) {
-            $output["softMax"] = $this->softMax;
-        }
+        // Set the soft max.
+        ArrayUtility::set($output, "softMax", $this->softMax, [null]);
 
-        // Check the soft min.
-        if (!is_null($this->softMin)) {
-            $output["softMin"] = $this->softMin;
-        }
+        // Set the soft min.
+        ArrayUtility::set($output, "softMin", $this->softMin, [null]);
 
-        // Check the stack labels.
-        if (!is_null($this->stackLabels)) {
-            $output["stackLabels"] = $this->stackLabels->toArray();
+        // Set the stack labels.
+        if (null !== $this->stackLabels) {
+            ArrayUtility::set($output, "stackLabels", $this->stackLabels->toArray(), []);
         }
 
-        // Check the start of week.
-        if (!is_null($this->startOfWeek)) {
-            $output["startOfWeek"] = $this->startOfWeek;
-        }
+        // Set the start of week.
+        ArrayUtility::set($output, "startOfWeek", $this->startOfWeek, [null]);
 
-        // Check the start on tick.
-        if (!is_null($this->startOnTick)) {
-            $output["startOnTick"] = $this->startOnTick;
-        }
+        // Set the start on tick.
+        ArrayUtility::set($output, "startOnTick", $this->startOnTick, [null]);
 
-        // Check the stops.
-        if (!is_null($this->stops)) {
-            $output["stops"] = $this->stops;
-        }
+        // Set the stops.
+        ArrayUtility::set($output, "stops", $this->stops, [null]);
 
-        // Check the tick amount.
-        if (!is_null($this->tickAmount)) {
-            $output["tickAmount"] = $this->tickAmount;
-        }
+        // Set the tick amount.
+        ArrayUtility::set($output, "tickAmount", $this->tickAmount, [null]);
 
-        // Check the tick color.
-        if (!is_null($this->tickColor)) {
-            $output["tickColor"] = $this->tickColor;
-        }
+        // Set the tick color.
+        ArrayUtility::set($output, "tickColor", $this->tickColor, [null]);
 
-        // Check the tick interval.
-        if (!is_null($this->tickInterval)) {
-            $output["tickInterval"] = $this->tickInterval;
-        }
+        // Set the tick interval.
+        ArrayUtility::set($output, "tickInterval", $this->tickInterval, [null]);
 
-        // Check the tick length.
-        if (!is_null($this->tickLength)) {
-            $output["tickLength"] = $this->tickLength;
-        }
+        // Set the tick length.
+        ArrayUtility::set($output, "tickLength", $this->tickLength, [null]);
 
-        // Check the tick pixel interval.
-        if (!is_null($this->tickPixelInterval)) {
-            $output["tickPixelInterval"] = $this->tickPixelInterval;
-        }
+        // Set the tick pixel interval.
+        ArrayUtility::set($output, "tickPixelInterval", $this->tickPixelInterval, [null]);
 
-        // Check the tick position.
-        if (!is_null($this->tickPosition)) {
-            $output["tickPosition"] = $this->tickPosition;
-        }
+        // Set the tick position.
+        ArrayUtility::set($output, "tickPosition", $this->tickPosition, [null]);
 
-        // Check the tick positioner.
-        if (!is_null($this->tickPositioner)) {
-            $output["tickPositioner"] = $this->tickPositioner;
-        }
+        // Set the tick positioner.
+        ArrayUtility::set($output, "tickPositioner", $this->tickPositioner, [null]);
 
-        // Check the tick positions.
-        if (!is_null($this->tickPositions)) {
-            $output["tickPositions"] = $this->tickPositions;
-        }
+        // Set the tick positions.
+        ArrayUtility::set($output, "tickPositions", $this->tickPositions, [null]);
 
-        // Check the tick width.
-        if (!is_null($this->tickWidth)) {
-            $output["tickWidth"] = $this->tickWidth;
-        }
+        // Set the tick width.
+        ArrayUtility::set($output, "tickWidth", $this->tickWidth, [null]);
 
-        // Check the tickmark placement.
-        if (!is_null($this->tickmarkPlacement)) {
-            $output["tickmarkPlacement"] = $this->tickmarkPlacement;
-        }
+        // Set the tickmark placement.
+        ArrayUtility::set($output, "tickmarkPlacement", $this->tickmarkPlacement, [null]);
 
-        // Check the title.
-        if (!is_null($this->title)) {
-            $output["title"] = $this->title->toArray();
+        // Set the title.
+        if (null !== $this->title) {
+            ArrayUtility::set($output, "title", $this->title->toArray(), []);
         }
 
-        // Check the type.
-        if (!is_null($this->type)) {
-            $output["type"] = $this->type;
-        }
+        // Set the type.
+        ArrayUtility::set($output, "type", $this->type, [null]);
 
-        // Check the unique names.
-        if (!is_null($this->uniqueNames)) {
-            $output["uniqueNames"] = $this->uniqueNames;
-        }
+        // Set the unique names.
+        ArrayUtility::set($output, "uniqueNames", $this->uniqueNames, [null]);
 
-        // Check the units.
-        if (!is_null($this->units)) {
-            $output["units"] = $this->units;
-        }
+        // Set the units.
+        ArrayUtility::set($output, "units", $this->units, [null]);
 
-        // Check the visible.
-        if (!is_null($this->visible)) {
-            $output["visible"] = $this->visible;
-        }
+        // Set the visible.
+        ArrayUtility::set($output, "visible", $this->visible, [null]);
 
         // Return the output.
         return $output;
