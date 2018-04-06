@@ -18,8 +18,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @author webeweb <https://github.com/webeweb/>
  * @package WBW\Bundle\HighchartsBundle
- * @final
  */
-final class HighchartsBundle extends Bundle {
+class HighchartsBundle extends Bundle {
 
 }
