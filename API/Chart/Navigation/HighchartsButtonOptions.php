@@ -12,7 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Navigation;
 
 use JsonSerializable;
-use WBW\Library\Core\Utility\ArrayUtility;
+use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Highcharts button options.

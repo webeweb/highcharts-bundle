@@ -12,7 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\Series\Column;
 
 use JsonSerializable;
-use WBW\Library\Core\Utility\ArrayUtility;
+use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Highcharts states.

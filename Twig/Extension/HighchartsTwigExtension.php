@@ -16,7 +16,7 @@ use Twig_SimpleFunction;
 use WBW\Bundle\HighchartsBundle\API\HighchartsChart;
 use WBW\Bundle\HighchartsBundle\API\HighchartsOptions;
 use WBW\Bundle\HighchartsBundle\Wrapper\HighchartsWrapper;
-use WBW\Library\Core\Exception\File\FileNotFoundException;
+use WBW\Library\Core\Exception\IO\FileNotFoundException;
 
 /**
  * Highcharts Twig extension.

@@ -12,7 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Treemap\States;
 
 use JsonSerializable;
-use WBW\Library\Core\Utility\ArrayUtility;
+use WBW\Library\Core\Utility\Argument\ArrayUtility;
 
 /**
  * Highcharts hover.

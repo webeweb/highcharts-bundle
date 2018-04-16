@@ -15,7 +15,7 @@ use PHPUnit_Framework_TestCase;
 use Symfony\Component\Translation\TranslatorInterface;
 use Symfony\Component\Yaml\Yaml;
 use WBW\Bundle\HighchartsBundle\Provider\HighchartsLangProvider;
-use WBW\Library\Core\Utility\FileUtility;
+use WBW\Library\Core\Utility\IO\FileUtility;
 
 /**
  * Highcharts lang provider test.
