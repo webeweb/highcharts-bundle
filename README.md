@@ -39,15 +39,15 @@ Then, enable the bundle by adding it to the list of registered bundles
 in the `app/AppKernel.php` file of your project:
 
 ```php
-	public function registerBundles() {
-		$bundles = [
+    public function registerBundles() {
+        $bundles = [
             // ...
             new WBW\Bundle\HighchartsBundle\HighchartsBundle(),
         ];
 
-		// ...
+        // ...
 
-		return $bundles;
+        return $bundles;
     }
 ```
 
@@ -64,36 +64,36 @@ $ php bin/console assets:install
 In your controller ...
 
 ```php
-	// Prepare the data.
-	$data = [["name" => "Female", "y" => 25 ], ["name" => "Male", "y" => 25], ["name" => "Unknown", "y" => 50]];
+    // Prepare the data.
+    $data = [["name" => "Female", "y" => 25 ], ["name" => "Male", "y" => 25], ["name" => "Unknown", "y" => 50]];
 
-	// Initialize the series.
-	$series = [["colorByPoint" => true, "data" => $data, "name" => "Gender distribution"]];
+    // Initialize the series.
+    $series = [["colorByPoint" => true, "data" => $data, "name" => "Gender distribution"]];
 
-	// Initialize the chart.
-	$chart = new HighchartsChart;
-	$chart->newChart()->setType("pie");
-	$chart->newPlotOptions()->newPie()
-		->setAllowPointSelect(true)
-		->setCursor("pointer")
-		->setShowInLegend(true)
-		->newDataLabels()->setEnabled(true);
-	$chart->setSeries($series);
-	$chart->newTitle()->setText("Gender distribution");
-	$chart->newTooltip()->setPointFormat("{series.name}: <b>{point.percentage:.1f}%</b>");
+    // Initialize the chart.
+    $chart = new HighchartsChart;
+    $chart->newChart()->setType("pie");
+    $chart->newPlotOptions()->newPie()
+        ->setAllowPointSelect(true)
+        ->setCursor("pointer")
+        ->setShowInLegend(true)
+        ->newDataLabels()->setEnabled(true);
+    $chart->setSeries($series);
+    $chart->newTitle()->setText("Gender distribution");
+    $chart->newTooltip()->setPointFormat("{series.name}: <b>{point.percentage:.1f}%</b>");
 
-	return $this->render('::your_template.html.twig', [
-		'chart' => $chart
-	]);
+    return $this->render('::your_template.html.twig', [
+        'chart' => $chart
+    ]);
 ```
 
 In your template ...
 
 ```html
-	<div id="Container"></div>
-	{{ highchartsScript('highcharts') }}
-	{{ highchartsScript('modules/exporting') }}
-	{{ highchartsChart('Container', chart) }}
+    <div id="Container"></div>
+    {{ highchartsScript('highcharts') }}
+    {{ highchartsScript('modules/exporting') }}
+    {{ highchartsChart('Container', chart) }}
 ```
 
 ---
