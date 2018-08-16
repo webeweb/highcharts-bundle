@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Exception;
 
-use Exception;
+use WBW\Library\Core\Exception\AbstractCoreException;
 
 /**
  * Abstract Highcharts exception.
@@ -20,17 +20,15 @@ use Exception;
  * @package WBW\Bundle\HighchartsBundle\Exception
  * @abstract
  */
-abstract class AbstractHighchartsException extends Exception {
+abstract class AbstractHighchartsException extends AbstractCoreException {
 
-	/**
-	 * Constructor.
-	 *
-	 * @param string $message The message.
-	 * @param integer $code The code.
-	 * @param Exception $previous The previous exception.
-	 */
-	public function __construct($message, $code = 0, Exception $previous = null) {
-		parent::__construct($message, $code, $previous);
-	}
+    /**
+     * Constructor.
+     *
+     * @param string $message The message.
+     */
+    public function __construct($message) {
+        parent::__construct($message);
+    }
 
 }
