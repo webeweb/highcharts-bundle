@@ -24,7 +24,7 @@
     </filter>
     <testsuites>
         <testsuite name="webeweb/highcharts-bundle">
-            <directory>./Tests</directory>
+            <directory suffix="Test.php">./Tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
