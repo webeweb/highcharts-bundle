@@ -114,7 +114,7 @@ stable version of this package:
 ```bash
 $ mkdir highcharts-bundle
 $ cd highcharts-bundle
-$ git clone git@github.com:webeweb/highcharts-bundle.git .
+$ git clone https://github.com/webeweb/highcharts-bundle.git .
 $ composer install
 ```
 
