@@ -112,9 +112,8 @@ Open a command console and execute the following commands to download the latest
 stable version of this package:
 
 ```bash
-$ mkdir highcharts-bundle
+$ git clone https://github.com/webeweb/highcharts-bundle.git
 $ cd highcharts-bundle
-$ git clone https://github.com/webeweb/highcharts-bundle.git .
 $ composer install
 ```
 
