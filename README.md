@@ -1,12 +1,13 @@
 highcharts-bundle
 =================
 
-[![Build Status](https://travis-ci.org/webeweb/highcharts-bundle.svg?branch=master)](https://travis-ci.org/webeweb/highcharts-bundle)
-[![Coverage Status](https://coveralls.io/repos/github/webeweb/highcharts-bundle/badge.svg?branch=master)](https://coveralls.io/github/webeweb/highcharts-bundle?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/webeweb/highcharts-bundle/v/stable)](https://packagist.org/packages/webeweb/highcharts-bundle)
-[![Latest Unstable Version](https://poser.pugx.org/webeweb/highcharts-bundle/v/unstable)](https://packagist.org/packages/webeweb/highcharts-bundle)
-[![License](https://poser.pugx.org/webeweb/highcharts-bundle/license)](https://packagist.org/packages/webeweb/highcharts-bundle)
-[![composer.lock](https://poser.pugx.org/webeweb/highcharts-bundle/composerlock)](https://packagist.org/packages/webeweb/highcharts-bundle)
+[![Build Status](https://img.shields.io/travis/webeweb/highcharts-bundle/master.svg?style=flat-square)](https://travis-ci.org/webeweb/highcharts-bundle)
+[![Coverage Status](https://img.shields.io/coveralls/webeweb/highcharts-bundle/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/highcharts-bundle?branch=master)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/highcharts-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/highcharts-bundle/?branch=master)
+[![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/highcharts-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/highcharts-bundle)
+[![Latest Unstable Version](https://img.shields.io/packagist/vpre/webeweb/highcharts-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/highcharts-bundle)
+[![License](https://img.shields.io/packagist/l/webeweb/highcharts-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/highcharts-bundle)
+[![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/highcharts-bundle)
 
 `highcharts-bundle` eases the use of highcharts to display rich graphs and
 charts in your Symfony 2 application by providing Twig extensions and PHP
@@ -23,9 +24,8 @@ Includes:
 
 ## Compatibility
 
-[![PHP](https://img.shields.io/badge/PHP-%5E5.6%7C%5E7.0-blue.svg)](http://php.net)
-[![HHVM](https://img.shields.io/badge/HHVM-ready-orange.svg)](https://hhvm.com/)
-[![Symfony](https://img.shields.io/badge/Symfony-%5E2.6%7C%5E3.0-brightgreen.svg)](https://symfony.com)
+[![PHP](https://img.shields.io/packagist/php-v/webeweb/highcharts-bundle.svg?style=flat-square)](http://php.net)
+[![Symfony](https://img.shields.io/badge/symfony-%5E2.6%7C%5E3.0-brightness.svg?style=flat-square)](https://symfony.com)
 
 ---
 
