@@ -127,7 +127,7 @@ $ vendor/bin/phpunit
 
 ## License
 
-`highcharts-bundle` is released under the LGPL License. See the bundled [LICENSE](LICENSE)
+`highcharts-bundle` is released under the MIT License. See the bundled [LICENSE](LICENSE)
 file for details.
 
 Please note that the Highcharts JS library is **not** free for commercial use,
