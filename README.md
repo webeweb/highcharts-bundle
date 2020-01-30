@@ -20,14 +20,13 @@ Includes:
 
 - [Highcharts 5.14.0](https://www.highcharts.com/)
 
----
+If you like this package, pay me a beer (or a coffee)
+[![paypal.me](https://img.shields.io/badge/paypal.me-webeweb-0070ba.svg?style=flat-square&logo=paypal)](https://www.paypal.me/webeweb)
 
 ## Compatibility
 
 [![PHP](https://img.shields.io/packagist/php-v/webeweb/highcharts-bundle.svg?style=flat-square)](http://php.net)
 [![Symfony](https://img.shields.io/badge/symfony-%5E2.6%7C%5E3.0-brightness.svg?style=flat-square)](https://symfony.com)
-
----
 
 ## Installation
 
@@ -63,8 +62,6 @@ Once the bundle is added then do:
 ```bash
 $ php bin/console assets:install
 ```
-
----
 
 ## Usage
 
@@ -103,8 +100,6 @@ In your template ...
     {{ highchartsChart('Container', chart) }}
 ```
 
----
-
 ## Testing
 
 To test the package, is better to clone this repository on your computer.
@@ -123,8 +118,6 @@ Once all required libraries are installed then do:
 $ vendor/bin/phpunit
 ```
 
----
-
 ## License
 
 `highcharts-bundle` is released under the MIT License. See the bundled [LICENSE](LICENSE)
@@ -134,3 +127,8 @@ Please note that the Highcharts JS library is **not** free for commercial use,
 see their [FAQ](http://shop.highsoft.com/faq) for more details on what constitutes
 a non-commercial project or their [product page](http://shop.highsoft.com/highcharts.html)
 for details on pricing.
+
+## Donate
+
+If you like this work, please consider donating at
+[![paypal.me](https://img.shields.io/badge/paypal.me-webeweb-0070ba.svg?style=flat-square&logo=paypal)](https://www.paypal.me/webeweb)
