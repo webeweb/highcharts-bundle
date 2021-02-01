@@ -11,8 +11,8 @@
 
 namespace WBW\Bundle\HighchartsBundle\Twig\Extension;
 
-use Twig_Extension;
-use Twig_SimpleFunction;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 use WBW\Bundle\HighchartsBundle\API\HighchartsChart;
 use WBW\Bundle\HighchartsBundle\API\HighchartsOptions;
 use WBW\Bundle\HighchartsBundle\Wrapper\HighchartsWrapper;
@@ -25,7 +25,7 @@ use WBW\Library\Core\Exception\IO\FileNotFoundException;
  * @package WBW\Bundle\HighchartsBundle\Twig\Extension
  * @final
  */
-final class HighchartsTwigExtension extends Twig_Extension {
+final class HighchartsTwigExtension extends AbstractExtension {
 
     /**
      * Service name.
@@ -70,13 +70,13 @@ final class HighchartsTwigExtension extends Twig_Extension {
     /**
      * Get the Twig functions.
      *
-     * @return Twig_SimpleFunction[] Returns the Twig functions.
+     * @return TwigFunction[] Returns the Twig functions.
      */
     public function getFunctions() {
         return [
-            new Twig_SimpleFunction('highchartsChart', [$this, 'highchartsChartFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('highchartsScript', [$this, 'highchartsScriptFunction'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('highchartsSetOptions', [$this, 'highchartsSetOptionsFunction'], ['is_safe' => ['html']]),
+            new TwigFunction('highchartsChart', [$this, 'highchartsChartFunction'], ['is_safe' => ['html']]),
+            new TwigFunction('highchartsScript', [$this, 'highchartsScriptFunction'], ['is_safe' => ['html']]),
+            new TwigFunction('highchartsSetOptions', [$this, 'highchartsSetOptionsFunction'], ['is_safe' => ['html']]),
         ];
     }
 
