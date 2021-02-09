@@ -1,8 +1,8 @@
 highcharts-bundle
 =================
 
-[![Build Status](https://img.shields.io/travis/webeweb/highcharts-bundle/master.svg?style=flat-square)](https://travis-ci.org/webeweb/highcharts-bundle)
-[![Coverage Status](https://img.shields.io/coveralls/webeweb/highcharts-bundle/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/highcharts-bundle?branch=master)
+[![Build Status](https://img.shields.io/github/workflow/status/webeweb/highcharts-bundle/build?style=flat-square)](https://github.com/webeweb/highcharts-bundle/actions)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/webeweb/highcharts-bundle/master.svg?style=flat-square)](https://coveralls.io/github/webeweb/highcharts-bundle?branch=master)
 [![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/quality/g/webeweb/highcharts-bundle/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/webeweb/highcharts-bundle/?branch=master)
 [![Latest Stable Version](https://img.shields.io/packagist/v/webeweb/highcharts-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/highcharts-bundle)
 [![Latest Unstable Version](https://img.shields.io/packagist/vpre/webeweb/highcharts-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/highcharts-bundle)
