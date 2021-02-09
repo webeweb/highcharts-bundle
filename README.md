@@ -28,8 +28,6 @@ If you like this package, pay me a beer (or a coffee)
 [![PHP](https://img.shields.io/packagist/php-v/webeweb/highcharts-bundle.svg?style=flat-square)](http://php.net)
 [![Symfony](https://img.shields.io/badge/symfony-%5E2.6%7C%5E3.0-brightness.svg?style=flat-square)](https://symfony.com)
 
-Use v2.0 for [![Symfony](https://img.shields.io/badge/symfony-%5E4.0-brightness.svg?style=flat-square)](https://symfony.com)
-
 ## Installation
 
 Open a command console, enter your project directory and execute the following
