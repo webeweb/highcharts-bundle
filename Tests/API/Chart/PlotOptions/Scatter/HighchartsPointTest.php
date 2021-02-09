@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Scatter;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts point test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Scatter
  * @version 5.0.14
  */
-final class HighchartsPointTest extends PHPUnit_Framework_TestCase {
+final class HighchartsPointTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

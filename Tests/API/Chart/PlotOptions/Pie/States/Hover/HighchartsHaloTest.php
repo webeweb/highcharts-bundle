@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Pie\States\Hover;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts halo test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Pie\States\Hover
  * @version 5.0.14
  */
-final class HighchartsHaloTest extends PHPUnit_Framework_TestCase {
+final class HighchartsHaloTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

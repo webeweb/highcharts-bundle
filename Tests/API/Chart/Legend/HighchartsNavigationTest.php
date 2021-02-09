@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Legend;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts navigation test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Legend
  * @version 5.0.14
  */
-final class HighchartsNavigationTest extends PHPUnit_Framework_TestCase {
+final class HighchartsNavigationTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

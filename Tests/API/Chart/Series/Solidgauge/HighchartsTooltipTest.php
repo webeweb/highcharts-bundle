@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Solidgauge;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts tooltip test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Solidgauge
  * @version 5.0.14
  */
-final class HighchartsTooltipTest extends PHPUnit_Framework_TestCase {
+final class HighchartsTooltipTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

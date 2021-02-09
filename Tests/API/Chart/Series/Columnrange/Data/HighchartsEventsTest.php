@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Columnrange\Data;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts events test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Columnrange\Data
  * @version 5.0.14
  */
-final class HighchartsEventsTest extends PHPUnit_Framework_TestCase {
+final class HighchartsEventsTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

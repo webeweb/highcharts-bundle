@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Chart\ResetZoomButton;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts position test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Chart\ResetZoomButton
  * @version 5.0.14
  */
-final class HighchartsPositionTest extends PHPUnit_Framework_TestCase {
+final class HighchartsPositionTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

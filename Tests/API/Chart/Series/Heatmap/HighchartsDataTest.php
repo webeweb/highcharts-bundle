@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Heatmap;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts data test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Heatmap
  * @version 5.0.14
  */
-final class HighchartsDataTest extends PHPUnit_Framework_TestCase {
+final class HighchartsDataTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

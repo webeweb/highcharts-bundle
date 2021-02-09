@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\YAxis;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts crosshair test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\YAxis
  * @version 5.0.14
  */
-final class HighchartsCrosshairTest extends PHPUnit_Framework_TestCase {
+final class HighchartsCrosshairTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

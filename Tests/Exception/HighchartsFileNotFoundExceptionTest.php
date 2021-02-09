@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\Exception;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 use WBW\Bundle\HighchartsBundle\Exception\HighchartsFileNotFoundException;
 
 /**
@@ -21,7 +21,7 @@ use WBW\Bundle\HighchartsBundle\Exception\HighchartsFileNotFoundException;
  * @package WBW\Bundle\HighchartsBundle\Exception
  * @final
  */
-final class HighchartsFileNotFoundExceptionTest extends PHPUnit_Framework_TestCase {
+final class HighchartsFileNotFoundExceptionTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

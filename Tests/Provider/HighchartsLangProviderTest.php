@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\Provider;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 use Symfony\Component\Translation\TranslatorInterface;
 use Symfony\Component\Yaml\Yaml;
 use WBW\Bundle\HighchartsBundle\Provider\HighchartsLangProvider;
@@ -24,7 +24,7 @@ use WBW\Library\Core\Utility\IO\FileUtility;
  * @package WBW\Bundle\HighchartsBundle\Tests\Provider
  * @final
  */
-final class HighchartsLangProviderTest extends PHPUnit_Framework_TestCase {
+final class HighchartsLangProviderTest extends AbstractTestCase {
 
     /**
      * Locale.

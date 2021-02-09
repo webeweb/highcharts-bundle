@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts waterfall test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions
  * @version 5.0.14
  */
-final class HighchartsWaterfallTest extends PHPUnit_Framework_TestCase {
+final class HighchartsWaterfallTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

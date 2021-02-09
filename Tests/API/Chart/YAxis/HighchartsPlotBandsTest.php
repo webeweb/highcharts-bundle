@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\YAxis;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts plot bands test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\YAxis
  * @version 5.0.14
  */
-final class HighchartsPlotBandsTest extends PHPUnit_Framework_TestCase {
+final class HighchartsPlotBandsTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

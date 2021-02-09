@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts funnel test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series
  * @version 5.0.14
  */
-final class HighchartsFunnelTest extends PHPUnit_Framework_TestCase {
+final class HighchartsFunnelTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

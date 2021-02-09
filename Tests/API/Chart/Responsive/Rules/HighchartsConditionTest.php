@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Responsive\Rules;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts condition test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Responsive\Rules
  * @version 5.0.14
  */
-final class HighchartsConditionTest extends PHPUnit_Framework_TestCase {
+final class HighchartsConditionTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

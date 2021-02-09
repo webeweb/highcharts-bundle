@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\XAxis;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts plot lines test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\XAxis
  * @version 5.0.14
  */
-final class HighchartsPlotLinesTest extends PHPUnit_Framework_TestCase {
+final class HighchartsPlotLinesTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

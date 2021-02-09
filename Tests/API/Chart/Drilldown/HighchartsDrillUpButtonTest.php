@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Drilldown;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts drill up button test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Drilldown
  * @version 5.0.14
  */
-final class HighchartsDrillUpButtonTest extends PHPUnit_Framework_TestCase {
+final class HighchartsDrillUpButtonTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

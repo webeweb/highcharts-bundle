@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Responsive;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts rules test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Responsive
  * @version 5.0.14
  */
-final class HighchartsRulesTest extends PHPUnit_Framework_TestCase {
+final class HighchartsRulesTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

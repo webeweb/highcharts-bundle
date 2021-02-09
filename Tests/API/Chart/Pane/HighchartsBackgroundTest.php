@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Pane;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts background test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Pane
  * @version 5.0.14
  */
-final class HighchartsBackgroundTest extends PHPUnit_Framework_TestCase {
+final class HighchartsBackgroundTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

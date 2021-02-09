@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Options;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts global test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Options
  * @version 5.0.14
  */
-final class HighchartsGlobalTest extends PHPUnit_Framework_TestCase {
+final class HighchartsGlobalTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

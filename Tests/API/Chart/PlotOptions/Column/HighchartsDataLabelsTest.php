@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Column;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts data labels test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\PlotOptions\Column
  * @version 5.0.14
  */
-final class HighchartsDataLabelsTest extends PHPUnit_Framework_TestCase {
+final class HighchartsDataLabelsTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

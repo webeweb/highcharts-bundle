@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\DependencyInjection;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\HttpKernel\KernelInterface;
@@ -27,7 +27,7 @@ use WBW\Bundle\HighchartsBundle\Twig\Extension\HighchartsTwigExtension;
  * @package WBW\Bundle\HighchartsBundle\Tests\DependencyInjection
  * @final
  */
-final class HighchartsExtensionTest extends PHPUnit_Framework_TestCase {
+final class HighchartsExtensionTest extends AbstractTestCase {
 
     /**
      * Tests the load() method.

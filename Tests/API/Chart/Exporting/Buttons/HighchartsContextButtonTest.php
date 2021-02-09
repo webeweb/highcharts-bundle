@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Exporting\Buttons;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts context button test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Exporting\Buttons
  * @version 5.0.14
  */
-final class HighchartsContextButtonTest extends PHPUnit_Framework_TestCase {
+final class HighchartsContextButtonTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

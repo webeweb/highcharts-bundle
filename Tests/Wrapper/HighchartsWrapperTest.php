@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\Wrapper;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 use WBW\Bundle\HighchartsBundle\Wrapper\HighchartsWrapper;
 
 /**
@@ -21,7 +21,7 @@ use WBW\Bundle\HighchartsBundle\Wrapper\HighchartsWrapper;
  * @package WBW\Bundle\HighchartsBundle\Tests\Wrapper
  * @final
  */
-final class HighchartsWrapperTest extends PHPUnit_Framework_TestCase {
+final class HighchartsWrapperTest extends AbstractTestCase {
 
     /**
      * Tests the unwrap() method.

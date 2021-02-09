@@ -12,7 +12,7 @@
 namespace WBW\Bundle\HighchartsBundle\Tests\Twig\Extension;
 
 use Exception;
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 use Twig_Node;
 use Twig_SimpleFunction;
 use WBW\Bundle\HighchartsBundle\API\HighchartsChart;
@@ -27,7 +27,7 @@ use WBW\Library\Core\Exception\IO\FileNotFoundException;
  * @package WBW\Bundle\HighchartsBundle\Tests\Wrapper
  * @final
  */
-final class HighchartsTwigExtensionTest extends PHPUnit_Framework_TestCase {
+final class HighchartsTwigExtensionTest extends AbstractTestCase {
 
     /**
      * Tests the getFunctions() method.

@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Polygon\States\Hover;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts marker test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Polygon\States\Hover
  * @version 5.0.14
  */
-final class HighchartsMarkerTest extends PHPUnit_Framework_TestCase {
+final class HighchartsMarkerTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

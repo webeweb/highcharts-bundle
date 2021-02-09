@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Chart;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts options3d test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Chart
  * @version 5.0.14
  */
-final class HighchartsOptions3dTest extends PHPUnit_Framework_TestCase {
+final class HighchartsOptions3dTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.

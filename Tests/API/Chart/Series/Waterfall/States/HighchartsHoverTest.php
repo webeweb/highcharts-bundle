@@ -11,7 +11,7 @@
 
 namespace WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Waterfall\States;
 
-use PHPUnit_Framework_TestCase;
+use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 
 /**
  * Highcharts hover test.
@@ -20,7 +20,7 @@ use PHPUnit_Framework_TestCase;
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Waterfall\States
  * @version 5.0.14
  */
-final class HighchartsHoverTest extends PHPUnit_Framework_TestCase {
+final class HighchartsHoverTest extends AbstractTestCase {
 
     /**
      * Tests the __construct() method.
