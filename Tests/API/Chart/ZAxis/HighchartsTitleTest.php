@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,40 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsTitleTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle(true);
-
-        $this->assertNull($obj1->getAlign());
-        $this->assertNull($obj1->getEnabled());
-        $this->assertNull($obj1->getMargin());
-        $this->assertNull($obj1->getOffset());
-        $this->assertNull($obj1->getReserveSpace());
-        $this->assertNull($obj1->getRotation());
-        $this->assertNull($obj1->getStyle());
-        $this->assertNull($obj1->getText());
-        $this->assertNull($obj1->getX());
-        $this->assertNull($obj1->getY());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle(false);
-
-        $this->assertEquals("middle", $obj0->getAlign());
-        $this->assertEquals("middle", $obj0->getEnabled());
-        $this->assertNull($obj0->getMargin());
-        $this->assertNull($obj0->getOffset());
-        $this->assertEquals(true, $obj0->getReserveSpace());
-        $this->assertEquals(0, $obj0->getRotation());
-        $this->assertEquals(["color" => "#666666"], $obj0->getStyle());
-        $this->assertNull($obj0->getText());
-        $this->assertEquals(0, $obj0->getX());
-        $this->assertNull($obj0->getY());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -126,6 +92,40 @@ final class HighchartsTitleTest extends AbstractTestCase {
 
         $res10 = ["align" => "high", "enabled" => "a10311459433adf322f2590a4987c423", "margin" => 22, "offset" => 63, "reserveSpace" => 0, "rotation" => 52, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "x" => 44, "y" => 2];
         $this->assertEquals($res10, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle(true);
+
+        $this->assertNull($obj1->getAlign());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getMargin());
+        $this->assertNull($obj1->getOffset());
+        $this->assertNull($obj1->getReserveSpace());
+        $this->assertNull($obj1->getRotation());
+        $this->assertNull($obj1->getStyle());
+        $this->assertNull($obj1->getText());
+        $this->assertNull($obj1->getX());
+        $this->assertNull($obj1->getY());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsTitle(false);
+
+        $this->assertEquals("middle", $obj0->getAlign());
+        $this->assertEquals("middle", $obj0->getEnabled());
+        $this->assertNull($obj0->getMargin());
+        $this->assertNull($obj0->getOffset());
+        $this->assertEquals(true, $obj0->getReserveSpace());
+        $this->assertEquals(0, $obj0->getRotation());
+        $this->assertEquals(["color" => "#666666"], $obj0->getStyle());
+        $this->assertNull($obj0->getText());
+        $this->assertEquals(0, $obj0->getX());
+        $this->assertNull($obj0->getY());
     }
 
 }

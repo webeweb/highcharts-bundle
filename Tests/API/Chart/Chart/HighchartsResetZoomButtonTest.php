@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,26 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsResetZoomButtonTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(true);
-
-        $this->assertNull($obj1->getPosition());
-        $this->assertNull($obj1->getRelativeTo());
-        $this->assertNull($obj1->getTheme());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(false);
-
-        $this->assertNull($obj0->getPosition());
-        $this->assertEquals("plot", $obj0->getRelativeTo());
-        $this->assertNull($obj0->getTheme());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -77,6 +57,26 @@ final class HighchartsResetZoomButtonTest extends AbstractTestCase {
 
         $res3 = ["position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"], "relativeTo" => "chart", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"]];
         $this->assertEquals($res3, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(true);
+
+        $this->assertNull($obj1->getPosition());
+        $this->assertNull($obj1->getRelativeTo());
+        $this->assertNull($obj1->getTheme());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsResetZoomButton(false);
+
+        $this->assertNull($obj0->getPosition());
+        $this->assertEquals("plot", $obj0->getRelativeTo());
+        $this->assertNull($obj0->getTheme());
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,54 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsExportingTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting(true);
-
-        $this->assertNull($obj1->getAllowHTML());
-        $this->assertNull($obj1->getButtons());
-        $this->assertNull($obj1->getChartOptions());
-        $this->assertNull($obj1->getEnabled());
-        $this->assertNull($obj1->getError());
-        $this->assertNull($obj1->getFallbackToExportServer());
-        $this->assertNull($obj1->getFilename());
-        $this->assertNull($obj1->getFormAttributes());
-        $this->assertNull($obj1->getLibURL());
-        $this->assertNull($obj1->getMenuItemDefinitions());
-        $this->assertNull($obj1->getPrintMaxWidth());
-        $this->assertNull($obj1->getScale());
-        $this->assertNull($obj1->getSourceHeight());
-        $this->assertNull($obj1->getSourceWidth());
-        $this->assertNull($obj1->getType());
-        $this->assertNull($obj1->getUrl());
-        $this->assertNull($obj1->getWidth());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting(false);
-
-        $this->assertEquals(false, $obj0->getAllowHTML());
-        $this->assertNull($obj0->getButtons());
-        $this->assertNull($obj0->getChartOptions());
-        $this->assertEquals(true, $obj0->getEnabled());
-        $this->assertNull($obj0->getError());
-        $this->assertEquals(true, $obj0->getFallbackToExportServer());
-        $this->assertEquals("chart", $obj0->getFilename());
-        $this->assertNull($obj0->getFormAttributes());
-        $this->assertEquals("https://code.highcharts.com/{version}/lib", $obj0->getLibURL());
-        $this->assertNull($obj0->getMenuItemDefinitions());
-        $this->assertEquals(780, $obj0->getPrintMaxWidth());
-        $this->assertEquals(2, $obj0->getScale());
-        $this->assertNull($obj0->getSourceHeight());
-        $this->assertNull($obj0->getSourceWidth());
-        $this->assertEquals("image/png", $obj0->getType());
-        $this->assertEquals("https://export.highcharts.com", $obj0->getUrl());
-        $this->assertNull($obj0->getWidth());
-    }
 
     /**
      * Tests clear()
@@ -205,6 +157,54 @@ final class HighchartsExportingTest extends AbstractTestCase {
 
         $res17 = ["allowHTML" => 0, "buttons" => [], "chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "enabled" => 0, "error" => "cb5e100e5a9a3e7f6d1fd97512215282", "fallbackToExportServer" => 0, "filename" => "435ed7e9f07f740abf511a62c00eef6e", "formAttributes" => ["formAttributes" => "7b7fc4307d3a34d310ab661dc7febf59"], "libURL" => "98a3bf7bf973c3ec4655c15c5a4d650e", "menuItemDefinitions" => ["menuItemDefinitions" => "09a79ad3f58b50c3087cd936eabb5cc3"], "printMaxWidth" => 89, "scale" => 51, "sourceHeight" => 24, "sourceWidth" => 57, "type" => "image/svg+xml", "url" => "572d4e421e5e6b9bc11d815e8a027112", "width" => 89];
         $this->assertEquals($res17, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting(true);
+
+        $this->assertNull($obj1->getAllowHTML());
+        $this->assertNull($obj1->getButtons());
+        $this->assertNull($obj1->getChartOptions());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getError());
+        $this->assertNull($obj1->getFallbackToExportServer());
+        $this->assertNull($obj1->getFilename());
+        $this->assertNull($obj1->getFormAttributes());
+        $this->assertNull($obj1->getLibURL());
+        $this->assertNull($obj1->getMenuItemDefinitions());
+        $this->assertNull($obj1->getPrintMaxWidth());
+        $this->assertNull($obj1->getScale());
+        $this->assertNull($obj1->getSourceHeight());
+        $this->assertNull($obj1->getSourceWidth());
+        $this->assertNull($obj1->getType());
+        $this->assertNull($obj1->getUrl());
+        $this->assertNull($obj1->getWidth());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsExporting(false);
+
+        $this->assertEquals(false, $obj0->getAllowHTML());
+        $this->assertNull($obj0->getButtons());
+        $this->assertNull($obj0->getChartOptions());
+        $this->assertEquals(true, $obj0->getEnabled());
+        $this->assertNull($obj0->getError());
+        $this->assertEquals(true, $obj0->getFallbackToExportServer());
+        $this->assertEquals("chart", $obj0->getFilename());
+        $this->assertNull($obj0->getFormAttributes());
+        $this->assertEquals("https://code.highcharts.com/{version}/lib", $obj0->getLibURL());
+        $this->assertNull($obj0->getMenuItemDefinitions());
+        $this->assertEquals(780, $obj0->getPrintMaxWidth());
+        $this->assertEquals(2, $obj0->getScale());
+        $this->assertNull($obj0->getSourceHeight());
+        $this->assertNull($obj0->getSourceWidth());
+        $this->assertEquals("image/png", $obj0->getType());
+        $this->assertEquals("https://export.highcharts.com", $obj0->getUrl());
+        $this->assertNull($obj0->getWidth());
     }
 
 }

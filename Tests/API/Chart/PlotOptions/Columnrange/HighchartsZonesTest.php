@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,22 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsZonesTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Columnrange\HighchartsZones(true);
-
-        $this->assertNull($obj1->getClassName());
-        $this->assertNull($obj1->getColor());
-        $this->assertNull($obj1->getDashStyle());
-        $this->assertNull($obj1->getFillColor());
-        $this->assertNull($obj1->getValue());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -83,6 +67,22 @@ final class HighchartsZonesTest extends AbstractTestCase {
 
         $res5 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "5ad5e24042182b1974cdf57345defe8e", "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "value" => 33];
         $this->assertEquals($res5, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Columnrange\HighchartsZones(true);
+
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getDashStyle());
+        $this->assertNull($obj1->getFillColor());
+        $this->assertNull($obj1->getValue());
     }
 
 }

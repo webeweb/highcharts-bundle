@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,110 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsChartTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsChart(true);
-
-        $this->assertNull($obj1->getAlignTicks());
-        $this->assertNull($obj1->getAnimation());
-        $this->assertNull($obj1->getBackgroundColor());
-        $this->assertNull($obj1->getBorderColor());
-        $this->assertNull($obj1->getBorderRadius());
-        $this->assertNull($obj1->getBorderWidth());
-        $this->assertNull($obj1->getClassName());
-        $this->assertNull($obj1->getColorCount());
-        $this->assertNull($obj1->getDefaultSeriesType());
-        $this->assertNull($obj1->getDescription());
-        $this->assertNull($obj1->getEvents());
-        $this->assertNull($obj1->getHeight());
-        $this->assertNull($obj1->getIgnoreHiddenSeries());
-        $this->assertNull($obj1->getInverted());
-        $this->assertNull($obj1->getMargin());
-        $this->assertNull($obj1->getMarginBottom());
-        $this->assertNull($obj1->getMarginLeft());
-        $this->assertNull($obj1->getMarginRight());
-        $this->assertNull($obj1->getMarginTop());
-        $this->assertNull($obj1->getOptions3d());
-        $this->assertNull($obj1->getPanKey());
-        $this->assertNull($obj1->getPanning());
-        $this->assertNull($obj1->getPinchType());
-        $this->assertNull($obj1->getPlotBackgroundColor());
-        $this->assertNull($obj1->getPlotBackgroundImage());
-        $this->assertNull($obj1->getPlotBorderColor());
-        $this->assertNull($obj1->getPlotBorderWidth());
-        $this->assertNull($obj1->getPlotShadow());
-        $this->assertNull($obj1->getPolar());
-        $this->assertNull($obj1->getReflow());
-        $this->assertNull($obj1->getRenderTo());
-        $this->assertNull($obj1->getResetZoomButton());
-        $this->assertNull($obj1->getSelectionMarkerFill());
-        $this->assertNull($obj1->getShadow());
-        $this->assertNull($obj1->getShowAxes());
-        $this->assertNull($obj1->getSpacing());
-        $this->assertNull($obj1->getSpacingBottom());
-        $this->assertNull($obj1->getSpacingLeft());
-        $this->assertNull($obj1->getSpacingRight());
-        $this->assertNull($obj1->getSpacingTop());
-        $this->assertNull($obj1->getStyle());
-        $this->assertNull($obj1->getType());
-        $this->assertNull($obj1->getTypeDescription());
-        $this->assertNull($obj1->getWidth());
-        $this->assertNull($obj1->getZoomType());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsChart(false);
-
-        $this->assertEquals(true, $obj0->getAlignTicks());
-        $this->assertEquals(true, $obj0->getAnimation());
-        $this->assertEquals("#FFFFFF", $obj0->getBackgroundColor());
-        $this->assertEquals("#335cad", $obj0->getBorderColor());
-        $this->assertEquals(0, $obj0->getBorderRadius());
-        $this->assertEquals(0, $obj0->getBorderWidth());
-        $this->assertNull($obj0->getClassName());
-        $this->assertEquals(10, $obj0->getColorCount());
-        $this->assertEquals("line", $obj0->getDefaultSeriesType());
-        $this->assertNull($obj0->getDescription());
-        $this->assertNull($obj0->getEvents());
-        $this->assertNull($obj0->getHeight());
-        $this->assertEquals(true, $obj0->getIgnoreHiddenSeries());
-        $this->assertEquals(false, $obj0->getInverted());
-        $this->assertNull($obj0->getMargin());
-        $this->assertNull($obj0->getMarginBottom());
-        $this->assertNull($obj0->getMarginLeft());
-        $this->assertNull($obj0->getMarginRight());
-        $this->assertNull($obj0->getMarginTop());
-        $this->assertNull($obj0->getOptions3d());
-        $this->assertNull($obj0->getPanKey());
-        $this->assertEquals(false, $obj0->getPanning());
-        $this->assertNull($obj0->getPinchType());
-        $this->assertNull($obj0->getPlotBackgroundColor());
-        $this->assertNull($obj0->getPlotBackgroundImage());
-        $this->assertEquals("#cccccc", $obj0->getPlotBorderColor());
-        $this->assertEquals(0, $obj0->getPlotBorderWidth());
-        $this->assertEquals(false, $obj0->getPlotShadow());
-        $this->assertEquals(false, $obj0->getPolar());
-        $this->assertEquals(true, $obj0->getReflow());
-        $this->assertNull($obj0->getRenderTo());
-        $this->assertNull($obj0->getResetZoomButton());
-        $this->assertEquals("rgba(51,92,173,0.25)", $obj0->getSelectionMarkerFill());
-        $this->assertEquals(false, $obj0->getShadow());
-        $this->assertEquals(false, $obj0->getShowAxes());
-        $this->assertEquals([10, 10, 15, 10], $obj0->getSpacing());
-        $this->assertEquals(15, $obj0->getSpacingBottom());
-        $this->assertEquals(10, $obj0->getSpacingLeft());
-        $this->assertEquals(10, $obj0->getSpacingRight());
-        $this->assertEquals(10, $obj0->getSpacingTop());
-        $this->assertEquals(["fontFamily" => "\"Lucida Grande\", \"Lucida Sans Unicode\", Verdana, Arial, Helvetica, sans-serif", "fontSize" => "12px"], $obj0->getStyle());
-        $this->assertEquals("line", $obj0->getType());
-        $this->assertNull($obj0->getTypeDescription());
-        $this->assertNull($obj0->getWidth());
-        $this->assertNull($obj0->getZoomType());
-    }
 
     /**
      * Tests clear()
@@ -429,6 +325,110 @@ final class HighchartsChartTest extends AbstractTestCase {
 
         $res45 = ["alignTicks" => 0, "animation" => 1, "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 78, "borderWidth" => 51, "className" => "6f66e878c62db60568a3487869695820", "colorCount" => 17, "defaultSeriesType" => "pie", "description" => "67daf92c833c41c95db874e18fcb2786", "events" => [], "height" => 86, "ignoreHiddenSeries" => 0, "inverted" => 1, "margin" => ["margin" => "d42f4851e770aa0f758b01388874f67b"], "marginBottom" => 68, "marginLeft" => 37, "marginRight" => 56, "marginTop" => 72, "options3d" => [], "panKey" => "shift", "panning" => 0, "pinchType" => "xy", "plotBackgroundColor" => "c2f8b5b51823d8d11973591af04340d5", "plotBackgroundImage" => "dace675e2a249a414ee3940daf49807f", "plotBorderColor" => "76ac5d1e39e38330d708ac4e5f27162d", "plotBorderWidth" => 27, "plotShadow" => 1, "polar" => 1, "reflow" => 1, "renderTo" => "6cdf914b87eb7733ae56819ec32f386e", "resetZoomButton" => [], "selectionMarkerFill" => "b837c10405112fa4a26778688bd27245", "shadow" => 1, "showAxes" => 0, "spacing" => ["spacing" => "348b374e34b64661f5976e46c7a5c08a"], "spacingBottom" => 52, "spacingLeft" => 82, "spacingRight" => 25, "spacingTop" => 73, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "type" => "waterfall", "typeDescription" => "03c3ff624590aba1e18136e967cc7455", "width" => 63, "zoomType" => "xy"];
         $this->assertEquals($res45, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsChart(true);
+
+        $this->assertNull($obj1->getAlignTicks());
+        $this->assertNull($obj1->getAnimation());
+        $this->assertNull($obj1->getBackgroundColor());
+        $this->assertNull($obj1->getBorderColor());
+        $this->assertNull($obj1->getBorderRadius());
+        $this->assertNull($obj1->getBorderWidth());
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getColorCount());
+        $this->assertNull($obj1->getDefaultSeriesType());
+        $this->assertNull($obj1->getDescription());
+        $this->assertNull($obj1->getEvents());
+        $this->assertNull($obj1->getHeight());
+        $this->assertNull($obj1->getIgnoreHiddenSeries());
+        $this->assertNull($obj1->getInverted());
+        $this->assertNull($obj1->getMargin());
+        $this->assertNull($obj1->getMarginBottom());
+        $this->assertNull($obj1->getMarginLeft());
+        $this->assertNull($obj1->getMarginRight());
+        $this->assertNull($obj1->getMarginTop());
+        $this->assertNull($obj1->getOptions3d());
+        $this->assertNull($obj1->getPanKey());
+        $this->assertNull($obj1->getPanning());
+        $this->assertNull($obj1->getPinchType());
+        $this->assertNull($obj1->getPlotBackgroundColor());
+        $this->assertNull($obj1->getPlotBackgroundImage());
+        $this->assertNull($obj1->getPlotBorderColor());
+        $this->assertNull($obj1->getPlotBorderWidth());
+        $this->assertNull($obj1->getPlotShadow());
+        $this->assertNull($obj1->getPolar());
+        $this->assertNull($obj1->getReflow());
+        $this->assertNull($obj1->getRenderTo());
+        $this->assertNull($obj1->getResetZoomButton());
+        $this->assertNull($obj1->getSelectionMarkerFill());
+        $this->assertNull($obj1->getShadow());
+        $this->assertNull($obj1->getShowAxes());
+        $this->assertNull($obj1->getSpacing());
+        $this->assertNull($obj1->getSpacingBottom());
+        $this->assertNull($obj1->getSpacingLeft());
+        $this->assertNull($obj1->getSpacingRight());
+        $this->assertNull($obj1->getSpacingTop());
+        $this->assertNull($obj1->getStyle());
+        $this->assertNull($obj1->getType());
+        $this->assertNull($obj1->getTypeDescription());
+        $this->assertNull($obj1->getWidth());
+        $this->assertNull($obj1->getZoomType());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsChart(false);
+
+        $this->assertEquals(true, $obj0->getAlignTicks());
+        $this->assertEquals(true, $obj0->getAnimation());
+        $this->assertEquals("#FFFFFF", $obj0->getBackgroundColor());
+        $this->assertEquals("#335cad", $obj0->getBorderColor());
+        $this->assertEquals(0, $obj0->getBorderRadius());
+        $this->assertEquals(0, $obj0->getBorderWidth());
+        $this->assertNull($obj0->getClassName());
+        $this->assertEquals(10, $obj0->getColorCount());
+        $this->assertEquals("line", $obj0->getDefaultSeriesType());
+        $this->assertNull($obj0->getDescription());
+        $this->assertNull($obj0->getEvents());
+        $this->assertNull($obj0->getHeight());
+        $this->assertEquals(true, $obj0->getIgnoreHiddenSeries());
+        $this->assertEquals(false, $obj0->getInverted());
+        $this->assertNull($obj0->getMargin());
+        $this->assertNull($obj0->getMarginBottom());
+        $this->assertNull($obj0->getMarginLeft());
+        $this->assertNull($obj0->getMarginRight());
+        $this->assertNull($obj0->getMarginTop());
+        $this->assertNull($obj0->getOptions3d());
+        $this->assertNull($obj0->getPanKey());
+        $this->assertEquals(false, $obj0->getPanning());
+        $this->assertNull($obj0->getPinchType());
+        $this->assertNull($obj0->getPlotBackgroundColor());
+        $this->assertNull($obj0->getPlotBackgroundImage());
+        $this->assertEquals("#cccccc", $obj0->getPlotBorderColor());
+        $this->assertEquals(0, $obj0->getPlotBorderWidth());
+        $this->assertEquals(false, $obj0->getPlotShadow());
+        $this->assertEquals(false, $obj0->getPolar());
+        $this->assertEquals(true, $obj0->getReflow());
+        $this->assertNull($obj0->getRenderTo());
+        $this->assertNull($obj0->getResetZoomButton());
+        $this->assertEquals("rgba(51,92,173,0.25)", $obj0->getSelectionMarkerFill());
+        $this->assertEquals(false, $obj0->getShadow());
+        $this->assertEquals(false, $obj0->getShowAxes());
+        $this->assertEquals([10, 10, 15, 10], $obj0->getSpacing());
+        $this->assertEquals(15, $obj0->getSpacingBottom());
+        $this->assertEquals(10, $obj0->getSpacingLeft());
+        $this->assertEquals(10, $obj0->getSpacingRight());
+        $this->assertEquals(10, $obj0->getSpacingTop());
+        $this->assertEquals(["fontFamily" => "\"Lucida Grande\", \"Lucida Sans Unicode\", Verdana, Arial, Helvetica, sans-serif", "fontSize" => "12px"], $obj0->getStyle());
+        $this->assertEquals("line", $obj0->getType());
+        $this->assertNull($obj0->getTypeDescription());
+        $this->assertNull($obj0->getWidth());
+        $this->assertNull($obj0->getZoomType());
     }
 
 }

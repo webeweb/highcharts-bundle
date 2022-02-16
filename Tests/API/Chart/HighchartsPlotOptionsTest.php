@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,40 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsPlotOptionsTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPlotOptions(true);
-
-        $this->assertNull($obj1->getArea());
-        $this->assertNull($obj1->getArearange());
-        $this->assertNull($obj1->getAreaspline());
-        $this->assertNull($obj1->getAreasplinerange());
-        $this->assertNull($obj1->getBar());
-        $this->assertNull($obj1->getBoxplot());
-        $this->assertNull($obj1->getBubble());
-        $this->assertNull($obj1->getColumn());
-        $this->assertNull($obj1->getColumnrange());
-        $this->assertNull($obj1->getErrorbar());
-        $this->assertNull($obj1->getFunnel());
-        $this->assertNull($obj1->getGauge());
-        $this->assertNull($obj1->getHeatmap());
-        $this->assertNull($obj1->getLine());
-        $this->assertNull($obj1->getPie());
-        $this->assertNull($obj1->getPolygon());
-        $this->assertNull($obj1->getPyramid());
-        $this->assertNull($obj1->getScatter());
-        $this->assertNull($obj1->getSeries());
-        $this->assertNull($obj1->getSolidgauge());
-        $this->assertNull($obj1->getSpline());
-        $this->assertNull($obj1->getTreemap());
-        $this->assertNull($obj1->getWaterfall());
-    }
 
     /**
      * Tests clear()
@@ -361,6 +327,40 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
 
         $res23 = ["area" => [], "arearange" => [], "areaspline" => [], "areasplinerange" => [], "bar" => [], "boxplot" => ["boxplot" => "75c65735f185835c9a02e33d5695a84e"], "bubble" => ["bubble" => "a3fa9e0b6b24b1cada4b756c0d240444"], "column" => [], "columnrange" => ["columnrange" => "14a2c3aec90f10d7025019b3cbbff7cf"], "errorbar" => ["errorbar" => "116ed3b58f547a9f12d94e7750c71017"], "funnel" => ["funnel" => "688d02b8ffc0740fc790871148d11e8c"], "gauge" => ["gauge" => "37e1a9c3ba6042b79266687d13f3c5ff"], "heatmap" => ["heatmap" => "d922f01521180610c5e000ed93d40af2"], "line" => [], "pie" => [], "polygon" => ["polygon" => "e4fdf3290654756def4e6816fddce608"], "pyramid" => ["pyramid" => "437233c74e25fe505293cd2e8ecc2696"], "scatter" => [], "series" => [], "solidgauge" => ["solidgauge" => "2b4610ac598c4c804779328d03893529"], "spline" => [], "treemap" => ["treemap" => "de4c250c4ad732f21f9be50a607ab230"], "waterfall" => ["waterfall" => "911b1ca4b34d45a115afee01b1e4fbb9"]];
         $this->assertEquals($res23, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPlotOptions(true);
+
+        $this->assertNull($obj1->getArea());
+        $this->assertNull($obj1->getArearange());
+        $this->assertNull($obj1->getAreaspline());
+        $this->assertNull($obj1->getAreasplinerange());
+        $this->assertNull($obj1->getBar());
+        $this->assertNull($obj1->getBoxplot());
+        $this->assertNull($obj1->getBubble());
+        $this->assertNull($obj1->getColumn());
+        $this->assertNull($obj1->getColumnrange());
+        $this->assertNull($obj1->getErrorbar());
+        $this->assertNull($obj1->getFunnel());
+        $this->assertNull($obj1->getGauge());
+        $this->assertNull($obj1->getHeatmap());
+        $this->assertNull($obj1->getLine());
+        $this->assertNull($obj1->getPie());
+        $this->assertNull($obj1->getPolygon());
+        $this->assertNull($obj1->getPyramid());
+        $this->assertNull($obj1->getScatter());
+        $this->assertNull($obj1->getSeries());
+        $this->assertNull($obj1->getSolidgauge());
+        $this->assertNull($obj1->getSpline());
+        $this->assertNull($obj1->getTreemap());
+        $this->assertNull($obj1->getWaterfall());
     }
 
 }

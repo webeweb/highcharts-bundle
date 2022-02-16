@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,28 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsBreaksTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsBreaks(true);
-
-        $this->assertNull($obj1->getBreakSize());
-        $this->assertNull($obj1->getFrom());
-        $this->assertNull($obj1->getRepeat());
-        $this->assertNull($obj1->getTo());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsBreaks(false);
-
-        $this->assertEquals(0, $obj0->getBreakSize());
-        $this->assertNull($obj0->getFrom());
-        $this->assertEquals(0, $obj0->getRepeat());
-        $this->assertNull($obj0->getTo());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -84,6 +62,28 @@ final class HighchartsBreaksTest extends AbstractTestCase {
 
         $res4 = ["breakSize" => 21, "from" => 12, "repeat" => 57, "to" => 4];
         $this->assertEquals($res4, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsBreaks(true);
+
+        $this->assertNull($obj1->getBreakSize());
+        $this->assertNull($obj1->getFrom());
+        $this->assertNull($obj1->getRepeat());
+        $this->assertNull($obj1->getTo());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsBreaks(false);
+
+        $this->assertEquals(0, $obj0->getBreakSize());
+        $this->assertNull($obj0->getFrom());
+        $this->assertEquals(0, $obj0->getRepeat());
+        $this->assertNull($obj0->getTo());
     }
 
 }

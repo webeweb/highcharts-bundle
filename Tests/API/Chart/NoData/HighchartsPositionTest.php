@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,28 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsPositionTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition(true);
-
-        $this->assertNull($obj1->getAlign());
-        $this->assertNull($obj1->getVerticalAlign());
-        $this->assertNull($obj1->getX());
-        $this->assertNull($obj1->getY());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition(false);
-
-        $this->assertEquals("center", $obj0->getAlign());
-        $this->assertEquals("middle", $obj0->getVerticalAlign());
-        $this->assertEquals(0, $obj0->getX());
-        $this->assertEquals(0, $obj0->getY());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -84,6 +62,28 @@ final class HighchartsPositionTest extends AbstractTestCase {
 
         $res4 = ["align" => "right", "verticalAlign" => "bottom", "x" => 15, "y" => 92];
         $this->assertEquals($res4, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition(true);
+
+        $this->assertNull($obj1->getAlign());
+        $this->assertNull($obj1->getVerticalAlign());
+        $this->assertNull($obj1->getX());
+        $this->assertNull($obj1->getY());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\NoData\HighchartsPosition(false);
+
+        $this->assertEquals("center", $obj0->getAlign());
+        $this->assertEquals("middle", $obj0->getVerticalAlign());
+        $this->assertEquals(0, $obj0->getX());
+        $this->assertEquals(0, $obj0->getY());
     }
 
 }

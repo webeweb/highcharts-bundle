@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,24 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsTopTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsTop(true);
-
-        $this->assertNull($obj1->getColor());
-        $this->assertNull($obj1->getSize());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsTop(false);
-
-        $this->assertEquals("transparent", $obj0->getColor());
-        $this->assertEquals(1, $obj0->getSize());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -70,6 +52,24 @@ final class HighchartsTopTest extends AbstractTestCase {
 
         $res2 = ["color" => "70dda5dfb8053dc6d1c492574bce9bfd", "size" => 94];
         $this->assertEquals($res2, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsTop(true);
+
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getSize());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\Frame\HighchartsTop(false);
+
+        $this->assertEquals("transparent", $obj0->getColor());
+        $this->assertEquals(1, $obj0->getSize());
     }
 
 }

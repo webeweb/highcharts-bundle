@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,19 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsOptionsTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(true);
-
-        $this->assertNull($obj1->getGlobal());
-        $this->assertNull($obj1->getLang());
-    }
 
     /**
      * Tests clear()
@@ -109,6 +96,19 @@ final class HighchartsOptionsTest extends AbstractTestCase {
 
         $res2 = ["global" => [], "lang" => []];
         $this->assertEquals($res2, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\HighchartsOptions(true);
+
+        $this->assertNull($obj1->getGlobal());
+        $this->assertNull($obj1->getLang());
     }
 
 }

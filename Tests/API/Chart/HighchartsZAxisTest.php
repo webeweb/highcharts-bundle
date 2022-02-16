@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,144 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsZAxisTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis(true);
-
-        $this->assertNull($obj1->getAllowDecimals());
-        $this->assertNull($obj1->getAlternateGridColor());
-        $this->assertNull($obj1->getCategories());
-        $this->assertNull($obj1->getCeiling());
-        $this->assertNull($obj1->getClassName());
-        $this->assertNull($obj1->getCrosshair());
-        $this->assertNull($obj1->getDateTimeLabelFormats());
-        $this->assertNull($obj1->getDescription());
-        $this->assertNull($obj1->getEndOnTick());
-        $this->assertNull($obj1->getEvents());
-        $this->assertNull($obj1->getFloor());
-        $this->assertNull($obj1->getGridLineColor());
-        $this->assertNull($obj1->getGridLineDashStyle());
-        $this->assertNull($obj1->getGridLineWidth());
-        $this->assertNull($obj1->getGridZIndex());
-        $this->assertNull($obj1->getId());
-        $this->assertNull($obj1->getLabels());
-        $this->assertNull($obj1->getLineColor());
-        $this->assertNull($obj1->getLineWidth());
-        $this->assertNull($obj1->getLinkedTo());
-        $this->assertNull($obj1->getMax());
-        $this->assertNull($obj1->getMaxPadding());
-        $this->assertNull($obj1->getMaxZoom());
-        $this->assertNull($obj1->getMin());
-        $this->assertNull($obj1->getMinPadding());
-        $this->assertNull($obj1->getMinRange());
-        $this->assertNull($obj1->getMinTickInterval());
-        $this->assertNull($obj1->getMinorGridLineColor());
-        $this->assertNull($obj1->getMinorGridLineDashStyle());
-        $this->assertNull($obj1->getMinorGridLineWidth());
-        $this->assertNull($obj1->getMinorTickColor());
-        $this->assertNull($obj1->getMinorTickInterval());
-        $this->assertNull($obj1->getMinorTickLength());
-        $this->assertNull($obj1->getMinorTickPosition());
-        $this->assertNull($obj1->getMinorTickWidth());
-        $this->assertNull($obj1->getOffset());
-        $this->assertNull($obj1->getOpposite());
-        $this->assertNull($obj1->getPlotBands());
-        $this->assertNull($obj1->getPlotLines());
-        $this->assertNull($obj1->getReversed());
-        $this->assertNull($obj1->getShowEmpty());
-        $this->assertNull($obj1->getShowFirstLabel());
-        $this->assertNull($obj1->getShowLastLabel());
-        $this->assertNull($obj1->getSoftMax());
-        $this->assertNull($obj1->getSoftMin());
-        $this->assertNull($obj1->getStartOfWeek());
-        $this->assertNull($obj1->getStartOnTick());
-        $this->assertNull($obj1->getTickAmount());
-        $this->assertNull($obj1->getTickColor());
-        $this->assertNull($obj1->getTickInterval());
-        $this->assertNull($obj1->getTickLength());
-        $this->assertNull($obj1->getTickPixelInterval());
-        $this->assertNull($obj1->getTickPosition());
-        $this->assertNull($obj1->getTickPositioner());
-        $this->assertNull($obj1->getTickPositions());
-        $this->assertNull($obj1->getTickWidth());
-        $this->assertNull($obj1->getTickmarkPlacement());
-        $this->assertNull($obj1->getTitle());
-        $this->assertNull($obj1->getType());
-        $this->assertNull($obj1->getUniqueNames());
-        $this->assertNull($obj1->getUnits());
-        $this->assertNull($obj1->getVisible());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis(false);
-
-        $this->assertEquals(true, $obj0->getAllowDecimals());
-        $this->assertNull($obj0->getAlternateGridColor());
-        $this->assertNull($obj0->getCategories());
-        $this->assertNull($obj0->getCeiling());
-        $this->assertNull($obj0->getClassName());
-        $this->assertNull($obj0->getCrosshair());
-        $this->assertNull($obj0->getDateTimeLabelFormats());
-        $this->assertNull($obj0->getDescription());
-        $this->assertEquals(false, $obj0->getEndOnTick());
-        $this->assertNull($obj0->getEvents());
-        $this->assertNull($obj0->getFloor());
-        $this->assertEquals("#e6e6e6", $obj0->getGridLineColor());
-        $this->assertEquals("Solid", $obj0->getGridLineDashStyle());
-        $this->assertEquals(0, $obj0->getGridLineWidth());
-        $this->assertEquals(1, $obj0->getGridZIndex());
-        $this->assertNull($obj0->getId());
-        $this->assertNull($obj0->getLabels());
-        $this->assertEquals("#ccd6eb", $obj0->getLineColor());
-        $this->assertEquals(1, $obj0->getLineWidth());
-        $this->assertNull($obj0->getLinkedTo());
-        $this->assertNull($obj0->getMax());
-        $this->assertEquals(0.01, $obj0->getMaxPadding());
-        $this->assertNull($obj0->getMaxZoom());
-        $this->assertNull($obj0->getMin());
-        $this->assertEquals(0.01, $obj0->getMinPadding());
-        $this->assertNull($obj0->getMinRange());
-        $this->assertNull($obj0->getMinTickInterval());
-        $this->assertEquals("#f2f2f2", $obj0->getMinorGridLineColor());
-        $this->assertEquals("Solid", $obj0->getMinorGridLineDashStyle());
-        $this->assertEquals(1, $obj0->getMinorGridLineWidth());
-        $this->assertEquals("#999999", $obj0->getMinorTickColor());
-        $this->assertNull($obj0->getMinorTickInterval());
-        $this->assertEquals(2, $obj0->getMinorTickLength());
-        $this->assertEquals("outside", $obj0->getMinorTickPosition());
-        $this->assertEquals(0, $obj0->getMinorTickWidth());
-        $this->assertEquals(0, $obj0->getOffset());
-        $this->assertEquals(false, $obj0->getOpposite());
-        $this->assertNull($obj0->getPlotBands());
-        $this->assertNull($obj0->getPlotLines());
-        $this->assertEquals(false, $obj0->getReversed());
-        $this->assertEquals(true, $obj0->getShowEmpty());
-        $this->assertEquals(true, $obj0->getShowFirstLabel());
-        $this->assertEquals(true, $obj0->getShowLastLabel());
-        $this->assertNull($obj0->getSoftMax());
-        $this->assertNull($obj0->getSoftMin());
-        $this->assertEquals(1, $obj0->getStartOfWeek());
-        $this->assertEquals(false, $obj0->getStartOnTick());
-        $this->assertNull($obj0->getTickAmount());
-        $this->assertEquals("#ccd6eb", $obj0->getTickColor());
-        $this->assertNull($obj0->getTickInterval());
-        $this->assertEquals(10, $obj0->getTickLength());
-        $this->assertNull($obj0->getTickPixelInterval());
-        $this->assertEquals("outside", $obj0->getTickPosition());
-        $this->assertNull($obj0->getTickPositioner());
-        $this->assertNull($obj0->getTickPositions());
-        $this->assertEquals(1, $obj0->getTickWidth());
-        $this->assertNull($obj0->getTickmarkPlacement());
-        $this->assertNull($obj0->getTitle());
-        $this->assertEquals("linear", $obj0->getType());
-        $this->assertEquals(true, $obj0->getUniqueNames());
-        $this->assertNull($obj0->getUnits());
-        $this->assertEquals(true, $obj0->getVisible());
-    }
 
     /**
      * Tests clear()
@@ -562,6 +424,144 @@ final class HighchartsZAxisTest extends AbstractTestCase {
 
         $res62 = ["allowDecimals" => 0, "alternateGridColor" => "e4c3a98e933a4f898d10c74d6b0cc3e9", "categories" => ["categories" => "b0b5ccb4a195a07fd3eed14affb8695f"], "ceiling" => 79, "className" => "6f66e878c62db60568a3487869695820", "crosshair" => [], "dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "description" => "67daf92c833c41c95db874e18fcb2786", "endOnTick" => 0, "events" => [], "floor" => 65, "gridLineColor" => "fa817119e014d62cd3eeb4aef3821870", "gridLineDashStyle" => "LongDashDotDot", "gridLineWidth" => 17, "gridZIndex" => 93, "id" => "b80bb7740288fda1f201890375a60c8f", "labels" => [], "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 6, "linkedTo" => 36, "max" => 86, "maxPadding" => 76, "maxZoom" => 84, "min" => 15, "minPadding" => 87, "minRange" => 58, "minTickInterval" => 13, "minorGridLineColor" => "02d67903f43b194a260f6e05958c6f60", "minorGridLineDashStyle" => "LongDashDotDot", "minorGridLineWidth" => 42, "minorTickColor" => "58f14daeca50e29794caa541286c45b5", "minorTickInterval" => "bec8a7be3cd5e2a8eff4a3ee2f5c7e2d", "minorTickLength" => 21, "minorTickPosition" => "outside", "minorTickWidth" => 47, "offset" => 28, "opposite" => 0, "plotBands" => ["plotBands" => "a6eb9963a4bde85c1ff1d28632fe012d"], "plotLines" => ["plotLines" => "ca27823684c96816234d7d97344db89c"], "reversed" => 0, "showEmpty" => 1, "showFirstLabel" => 0, "showLastLabel" => 1, "softMax" => 51, "softMin" => 76, "startOfWeek" => 38, "startOnTick" => 0, "tickAmount" => 11, "tickColor" => "3569a8266538a625569574b2c96e237c", "tickInterval" => 97, "tickLength" => 93, "tickPixelInterval" => 39, "tickPosition" => "outside", "tickPositioner" => "c6a22a267ac93652e3443f821bb369bd", "tickPositions" => ["tickPositions" => "8c5d1b19e77eea01652836867fe6d741"], "tickWidth" => 75, "tickmarkPlacement" => "between", "title" => [], "type" => "category", "uniqueNames" => 1, "units" => ["units" => "b98b3dfbd27e710e6c3ceeae58770b52"], "visible" => 0];
         $this->assertEquals($res62, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis(true);
+
+        $this->assertNull($obj1->getAllowDecimals());
+        $this->assertNull($obj1->getAlternateGridColor());
+        $this->assertNull($obj1->getCategories());
+        $this->assertNull($obj1->getCeiling());
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getCrosshair());
+        $this->assertNull($obj1->getDateTimeLabelFormats());
+        $this->assertNull($obj1->getDescription());
+        $this->assertNull($obj1->getEndOnTick());
+        $this->assertNull($obj1->getEvents());
+        $this->assertNull($obj1->getFloor());
+        $this->assertNull($obj1->getGridLineColor());
+        $this->assertNull($obj1->getGridLineDashStyle());
+        $this->assertNull($obj1->getGridLineWidth());
+        $this->assertNull($obj1->getGridZIndex());
+        $this->assertNull($obj1->getId());
+        $this->assertNull($obj1->getLabels());
+        $this->assertNull($obj1->getLineColor());
+        $this->assertNull($obj1->getLineWidth());
+        $this->assertNull($obj1->getLinkedTo());
+        $this->assertNull($obj1->getMax());
+        $this->assertNull($obj1->getMaxPadding());
+        $this->assertNull($obj1->getMaxZoom());
+        $this->assertNull($obj1->getMin());
+        $this->assertNull($obj1->getMinPadding());
+        $this->assertNull($obj1->getMinRange());
+        $this->assertNull($obj1->getMinTickInterval());
+        $this->assertNull($obj1->getMinorGridLineColor());
+        $this->assertNull($obj1->getMinorGridLineDashStyle());
+        $this->assertNull($obj1->getMinorGridLineWidth());
+        $this->assertNull($obj1->getMinorTickColor());
+        $this->assertNull($obj1->getMinorTickInterval());
+        $this->assertNull($obj1->getMinorTickLength());
+        $this->assertNull($obj1->getMinorTickPosition());
+        $this->assertNull($obj1->getMinorTickWidth());
+        $this->assertNull($obj1->getOffset());
+        $this->assertNull($obj1->getOpposite());
+        $this->assertNull($obj1->getPlotBands());
+        $this->assertNull($obj1->getPlotLines());
+        $this->assertNull($obj1->getReversed());
+        $this->assertNull($obj1->getShowEmpty());
+        $this->assertNull($obj1->getShowFirstLabel());
+        $this->assertNull($obj1->getShowLastLabel());
+        $this->assertNull($obj1->getSoftMax());
+        $this->assertNull($obj1->getSoftMin());
+        $this->assertNull($obj1->getStartOfWeek());
+        $this->assertNull($obj1->getStartOnTick());
+        $this->assertNull($obj1->getTickAmount());
+        $this->assertNull($obj1->getTickColor());
+        $this->assertNull($obj1->getTickInterval());
+        $this->assertNull($obj1->getTickLength());
+        $this->assertNull($obj1->getTickPixelInterval());
+        $this->assertNull($obj1->getTickPosition());
+        $this->assertNull($obj1->getTickPositioner());
+        $this->assertNull($obj1->getTickPositions());
+        $this->assertNull($obj1->getTickWidth());
+        $this->assertNull($obj1->getTickmarkPlacement());
+        $this->assertNull($obj1->getTitle());
+        $this->assertNull($obj1->getType());
+        $this->assertNull($obj1->getUniqueNames());
+        $this->assertNull($obj1->getUnits());
+        $this->assertNull($obj1->getVisible());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsZAxis(false);
+
+        $this->assertEquals(true, $obj0->getAllowDecimals());
+        $this->assertNull($obj0->getAlternateGridColor());
+        $this->assertNull($obj0->getCategories());
+        $this->assertNull($obj0->getCeiling());
+        $this->assertNull($obj0->getClassName());
+        $this->assertNull($obj0->getCrosshair());
+        $this->assertNull($obj0->getDateTimeLabelFormats());
+        $this->assertNull($obj0->getDescription());
+        $this->assertEquals(false, $obj0->getEndOnTick());
+        $this->assertNull($obj0->getEvents());
+        $this->assertNull($obj0->getFloor());
+        $this->assertEquals("#e6e6e6", $obj0->getGridLineColor());
+        $this->assertEquals("Solid", $obj0->getGridLineDashStyle());
+        $this->assertEquals(0, $obj0->getGridLineWidth());
+        $this->assertEquals(1, $obj0->getGridZIndex());
+        $this->assertNull($obj0->getId());
+        $this->assertNull($obj0->getLabels());
+        $this->assertEquals("#ccd6eb", $obj0->getLineColor());
+        $this->assertEquals(1, $obj0->getLineWidth());
+        $this->assertNull($obj0->getLinkedTo());
+        $this->assertNull($obj0->getMax());
+        $this->assertEquals(0.01, $obj0->getMaxPadding());
+        $this->assertNull($obj0->getMaxZoom());
+        $this->assertNull($obj0->getMin());
+        $this->assertEquals(0.01, $obj0->getMinPadding());
+        $this->assertNull($obj0->getMinRange());
+        $this->assertNull($obj0->getMinTickInterval());
+        $this->assertEquals("#f2f2f2", $obj0->getMinorGridLineColor());
+        $this->assertEquals("Solid", $obj0->getMinorGridLineDashStyle());
+        $this->assertEquals(1, $obj0->getMinorGridLineWidth());
+        $this->assertEquals("#999999", $obj0->getMinorTickColor());
+        $this->assertNull($obj0->getMinorTickInterval());
+        $this->assertEquals(2, $obj0->getMinorTickLength());
+        $this->assertEquals("outside", $obj0->getMinorTickPosition());
+        $this->assertEquals(0, $obj0->getMinorTickWidth());
+        $this->assertEquals(0, $obj0->getOffset());
+        $this->assertEquals(false, $obj0->getOpposite());
+        $this->assertNull($obj0->getPlotBands());
+        $this->assertNull($obj0->getPlotLines());
+        $this->assertEquals(false, $obj0->getReversed());
+        $this->assertEquals(true, $obj0->getShowEmpty());
+        $this->assertEquals(true, $obj0->getShowFirstLabel());
+        $this->assertEquals(true, $obj0->getShowLastLabel());
+        $this->assertNull($obj0->getSoftMax());
+        $this->assertNull($obj0->getSoftMin());
+        $this->assertEquals(1, $obj0->getStartOfWeek());
+        $this->assertEquals(false, $obj0->getStartOnTick());
+        $this->assertNull($obj0->getTickAmount());
+        $this->assertEquals("#ccd6eb", $obj0->getTickColor());
+        $this->assertNull($obj0->getTickInterval());
+        $this->assertEquals(10, $obj0->getTickLength());
+        $this->assertNull($obj0->getTickPixelInterval());
+        $this->assertEquals("outside", $obj0->getTickPosition());
+        $this->assertNull($obj0->getTickPositioner());
+        $this->assertNull($obj0->getTickPositions());
+        $this->assertEquals(1, $obj0->getTickWidth());
+        $this->assertNull($obj0->getTickmarkPlacement());
+        $this->assertNull($obj0->getTitle());
+        $this->assertEquals("linear", $obj0->getType());
+        $this->assertEquals(true, $obj0->getUniqueNames());
+        $this->assertNull($obj0->getUnits());
+        $this->assertEquals(true, $obj0->getVisible());
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,48 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsTooltipTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsTooltip(true);
-
-        $this->assertNull($obj1->getDateTimeLabelFormats());
-        $this->assertNull($obj1->getFollowPointer());
-        $this->assertNull($obj1->getFollowTouchMove());
-        $this->assertNull($obj1->getFooterFormat());
-        $this->assertNull($obj1->getHeaderFormat());
-        $this->assertNull($obj1->getHideDelay());
-        $this->assertNull($obj1->getPadding());
-        $this->assertNull($obj1->getPointFormat());
-        $this->assertNull($obj1->getPointFormatter());
-        $this->assertNull($obj1->getSplit());
-        $this->assertNull($obj1->getValueDecimals());
-        $this->assertNull($obj1->getValuePrefix());
-        $this->assertNull($obj1->getValueSuffix());
-        $this->assertNull($obj1->getXDateFormat());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsTooltip(false);
-
-        $this->assertNull($obj0->getDateTimeLabelFormats());
-        $this->assertEquals(false, $obj0->getFollowPointer());
-        $this->assertEquals(true, $obj0->getFollowTouchMove());
-        $this->assertEquals("false", $obj0->getFooterFormat());
-        $this->assertNull($obj0->getHeaderFormat());
-        $this->assertEquals(500, $obj0->getHideDelay());
-        $this->assertEquals(8, $obj0->getPadding());
-        $this->assertEquals("<span style=\"color:{point.color}\">\\u25CF</span> {series.name}: <b>{point.y}</b><br/>", $obj0->getPointFormat());
-        $this->assertNull($obj0->getPointFormatter());
-        $this->assertEquals(false, $obj0->getSplit());
-        $this->assertNull($obj0->getValueDecimals());
-        $this->assertNull($obj0->getValuePrefix());
-        $this->assertNull($obj0->getValueSuffix());
-        $this->assertNull($obj0->getXDateFormat());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -154,6 +112,48 @@ final class HighchartsTooltipTest extends AbstractTestCase {
 
         $res14 = ["dateTimeLabelFormats" => ["dateTimeLabelFormats" => "e9db9b38c23127a66165e1d8cefd5ad8"], "followPointer" => 1, "followTouchMove" => 1, "footerFormat" => "1ac32e030fc5ef01e703d5419170690e", "headerFormat" => "937148825f6c7c8ed3376d1834b17ac6", "hideDelay" => 66, "padding" => 81, "pointFormat" => "332dd3de68dc71de0745837cbc13e217", "pointFormatter" => "d0b51d7b9a5189f718d161b366d33044", "split" => 1, "valueDecimals" => 69, "valuePrefix" => "5fde1c8b25eb2ea19ff8377e62564818", "valueSuffix" => "bf995908ddff004471c953d8062bd1db", "xDateFormat" => "e24debfa0bc8408e1dda05cbd537a072"];
         $this->assertEquals($res14, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsTooltip(true);
+
+        $this->assertNull($obj1->getDateTimeLabelFormats());
+        $this->assertNull($obj1->getFollowPointer());
+        $this->assertNull($obj1->getFollowTouchMove());
+        $this->assertNull($obj1->getFooterFormat());
+        $this->assertNull($obj1->getHeaderFormat());
+        $this->assertNull($obj1->getHideDelay());
+        $this->assertNull($obj1->getPadding());
+        $this->assertNull($obj1->getPointFormat());
+        $this->assertNull($obj1->getPointFormatter());
+        $this->assertNull($obj1->getSplit());
+        $this->assertNull($obj1->getValueDecimals());
+        $this->assertNull($obj1->getValuePrefix());
+        $this->assertNull($obj1->getValueSuffix());
+        $this->assertNull($obj1->getXDateFormat());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Arearange\HighchartsTooltip(false);
+
+        $this->assertNull($obj0->getDateTimeLabelFormats());
+        $this->assertEquals(false, $obj0->getFollowPointer());
+        $this->assertEquals(true, $obj0->getFollowTouchMove());
+        $this->assertEquals("false", $obj0->getFooterFormat());
+        $this->assertNull($obj0->getHeaderFormat());
+        $this->assertEquals(500, $obj0->getHideDelay());
+        $this->assertEquals(8, $obj0->getPadding());
+        $this->assertEquals("<span style=\"color:{point.color}\">\\u25CF</span> {series.name}: <b>{point.y}</b><br/>", $obj0->getPointFormat());
+        $this->assertNull($obj0->getPointFormatter());
+        $this->assertEquals(false, $obj0->getSplit());
+        $this->assertNull($obj0->getValueDecimals());
+        $this->assertNull($obj0->getValuePrefix());
+        $this->assertNull($obj0->getValueSuffix());
+        $this->assertNull($obj0->getXDateFormat());
     }
 
 }

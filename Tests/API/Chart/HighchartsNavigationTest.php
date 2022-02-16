@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,28 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsNavigationTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(true);
-
-        $this->assertNull($obj1->getButtonOptions());
-        $this->assertNull($obj1->getMenuItemHoverStyle());
-        $this->assertNull($obj1->getMenuItemStyle());
-        $this->assertNull($obj1->getMenuStyle());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(false);
-
-        $this->assertNull($obj0->getButtonOptions());
-        $this->assertEquals(["background" => "#335cad", "color" => "#ffffff"], $obj0->getMenuItemHoverStyle());
-        $this->assertEquals(["padding" => "0.5em 1em", "color" => "#333333", "background" => "none"], $obj0->getMenuItemStyle());
-        $this->assertEquals(["border" => "1px solid #999999", "background" => "#ffffff", "padding" => "5px 0"], $obj0->getMenuStyle());
-    }
 
     /**
      * Tests clear()
@@ -114,6 +92,28 @@ final class HighchartsNavigationTest extends AbstractTestCase {
 
         $res4 = ["buttonOptions" => [], "menuItemHoverStyle" => ["menuItemHoverStyle" => "738353ce3a8073c77c55688c6c6b93a7"], "menuItemStyle" => ["menuItemStyle" => "7f4568e3984521d6ee378690e14b6ddd"], "menuStyle" => ["menuStyle" => "3d01f86004efb7ca78ff6e1d90c86b27"]];
         $this->assertEquals($res4, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(true);
+
+        $this->assertNull($obj1->getButtonOptions());
+        $this->assertNull($obj1->getMenuItemHoverStyle());
+        $this->assertNull($obj1->getMenuItemStyle());
+        $this->assertNull($obj1->getMenuStyle());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsNavigation(false);
+
+        $this->assertNull($obj0->getButtonOptions());
+        $this->assertEquals(["background" => "#335cad", "color" => "#ffffff"], $obj0->getMenuItemHoverStyle());
+        $this->assertEquals(["padding" => "0.5em 1em", "color" => "#333333", "background" => "none"], $obj0->getMenuItemStyle());
+        $this->assertEquals(["border" => "1px solid #999999", "background" => "#ffffff", "padding" => "5px 0"], $obj0->getMenuStyle());
     }
 
 }

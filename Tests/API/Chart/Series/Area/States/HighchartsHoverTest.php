@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,32 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsHoverTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(true);
-
-        $this->assertNull($obj1->getAnimation());
-        $this->assertNull($obj1->getEnabled());
-        $this->assertNull($obj1->getHalo());
-        $this->assertNull($obj1->getLineWidth());
-        $this->assertNull($obj1->getLineWidthPlus());
-        $this->assertNull($obj1->getMarker());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(false);
-
-        $this->assertEquals(["duration" => 50], $obj0->getAnimation());
-        $this->assertEquals(true, $obj0->getEnabled());
-        $this->assertNull($obj0->getHalo());
-        $this->assertEquals(2, $obj0->getLineWidth());
-        $this->assertEquals(1, $obj0->getLineWidthPlus());
-        $this->assertNull($obj0->getMarker());
-    }
 
     /**
      * Tests clear()
@@ -128,6 +102,32 @@ final class HighchartsHoverTest extends AbstractTestCase {
 
         $res6 = ["animation" => 0, "enabled" => 0, "halo" => ["halo" => "57f842286171094855e51fc3a541c1e2"], "lineWidth" => 72, "lineWidthPlus" => 17, "marker" => []];
         $this->assertEquals($res6, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(true);
+
+        $this->assertNull($obj1->getAnimation());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getHalo());
+        $this->assertNull($obj1->getLineWidth());
+        $this->assertNull($obj1->getLineWidthPlus());
+        $this->assertNull($obj1->getMarker());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Area\States\HighchartsHover(false);
+
+        $this->assertEquals(["duration" => 50], $obj0->getAnimation());
+        $this->assertEquals(true, $obj0->getEnabled());
+        $this->assertNull($obj0->getHalo());
+        $this->assertEquals(2, $obj0->getLineWidth());
+        $this->assertEquals(1, $obj0->getLineWidthPlus());
+        $this->assertNull($obj0->getMarker());
     }
 
 }

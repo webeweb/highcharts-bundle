@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,98 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsGaugeTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge(true);
-
-        $this->assertNull($obj1->getAnimation());
-        $this->assertNull($obj1->getAnimationLimit());
-        $this->assertNull($obj1->getClassName());
-        $this->assertNull($obj1->getColor());
-        $this->assertNull($obj1->getColorIndex());
-        $this->assertNull($obj1->getCursor());
-        $this->assertNull($obj1->getData());
-        $this->assertNull($obj1->getDataLabels());
-        $this->assertNull($obj1->getDescription());
-        $this->assertNull($obj1->getDial());
-        $this->assertNull($obj1->getEnableMouseTracking());
-        $this->assertNull($obj1->getEvents());
-        $this->assertNull($obj1->getExposeElementToA11y());
-        $this->assertNull($obj1->getFindNearestPointBy());
-        $this->assertNull($obj1->getGetExtremesFromAll());
-        $this->assertNull($obj1->getId());
-        $this->assertNull($obj1->getIndex());
-        $this->assertNull($obj1->getKeys());
-        $this->assertNull($obj1->getLegendIndex());
-        $this->assertNull($obj1->getLinkedTo());
-        $this->assertNull($obj1->getName());
-        $this->assertNull($obj1->getNegativeColor());
-        $this->assertNull($obj1->getOvershoot());
-        $this->assertNull($obj1->getPivot());
-        $this->assertNull($obj1->getPoint());
-        $this->assertNull($obj1->getPointDescriptionFormatter());
-        $this->assertNull($obj1->getSelected());
-        $this->assertNull($obj1->getShowCheckbox());
-        $this->assertNull($obj1->getShowInLegend());
-        $this->assertNull($obj1->getSkipKeyboardNavigation());
-        $this->assertNull($obj1->getStickyTracking());
-        $this->assertNull($obj1->getThreshold());
-        $this->assertNull($obj1->getTooltip());
-        $this->assertNull($obj1->getType());
-        $this->assertNull($obj1->getVisible());
-        $this->assertNull($obj1->getWrap());
-        $this->assertNull($obj1->getXAxis());
-        $this->assertNull($obj1->getYAxis());
-        $this->assertNull($obj1->getZIndex());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge(false);
-
-        $this->assertEquals(true, $obj0->getAnimation());
-        $this->assertNull($obj0->getAnimationLimit());
-        $this->assertNull($obj0->getClassName());
-        $this->assertNull($obj0->getColor());
-        $this->assertNull($obj0->getColorIndex());
-        $this->assertNull($obj0->getCursor());
-        $this->assertNull($obj0->getData());
-        $this->assertNull($obj0->getDataLabels());
-        $this->assertNull($obj0->getDescription());
-        $this->assertNull($obj0->getDial());
-        $this->assertEquals(true, $obj0->getEnableMouseTracking());
-        $this->assertNull($obj0->getEvents());
-        $this->assertNull($obj0->getExposeElementToA11y());
-        $this->assertNull($obj0->getFindNearestPointBy());
-        $this->assertEquals(false, $obj0->getGetExtremesFromAll());
-        $this->assertNull($obj0->getId());
-        $this->assertNull($obj0->getIndex());
-        $this->assertNull($obj0->getKeys());
-        $this->assertNull($obj0->getLegendIndex());
-        $this->assertNull($obj0->getLinkedTo());
-        $this->assertNull($obj0->getName());
-        $this->assertNull($obj0->getNegativeColor());
-        $this->assertEquals(0, $obj0->getOvershoot());
-        $this->assertNull($obj0->getPivot());
-        $this->assertNull($obj0->getPoint());
-        $this->assertNull($obj0->getPointDescriptionFormatter());
-        $this->assertEquals(false, $obj0->getSelected());
-        $this->assertEquals(false, $obj0->getShowCheckbox());
-        $this->assertNull($obj0->getShowInLegend());
-        $this->assertNull($obj0->getSkipKeyboardNavigation());
-        $this->assertEquals(true, $obj0->getStickyTracking());
-        $this->assertEquals(0, $obj0->getThreshold());
-        $this->assertNull($obj0->getTooltip());
-        $this->assertNull($obj0->getType());
-        $this->assertEquals(true, $obj0->getVisible());
-        $this->assertEquals(true, $obj0->getWrap());
-        $this->assertEquals("0", $obj0->getXAxis());
-        $this->assertEquals("0", $obj0->getYAxis());
-        $this->assertNull($obj0->getZIndex());
-    }
 
     /**
      * Tests clear()
@@ -373,6 +281,98 @@ final class HighchartsGaugeTest extends AbstractTestCase {
 
         $res39 = ["animation" => 0, "animationLimit" => 44, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 18, "cursor" => "crosshair", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "dial" => ["dial" => "6de514dbc026d5badb01f8ea18ffcc9b"], "enableMouseTracking" => 0, "events" => [], "exposeElementToA11y" => 1, "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 16, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "legendIndex" => 54, "linkedTo" => "914fab47afc86331ec62837807a29419", "name" => "b068931cc450442b63f5b3d276ea4297", "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "overshoot" => 38, "pivot" => ["pivot" => "dca758fd47f2bcd3bbf3f20bbfe2e975"], "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "selected" => 1, "showCheckbox" => 0, "showInLegend" => 0, "skipKeyboardNavigation" => 0, "stickyTracking" => 0, "threshold" => 73, "tooltip" => ["tooltip" => "ddbfc1b6aa0ad4d79c5dac7aa3b44888"], "type" => "waterfall", "visible" => 1, "wrap" => 0, "xAxis" => 99, "yAxis" => 62, "zIndex" => 99];
         $this->assertEquals($res39, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge(true);
+
+        $this->assertNull($obj1->getAnimation());
+        $this->assertNull($obj1->getAnimationLimit());
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getColorIndex());
+        $this->assertNull($obj1->getCursor());
+        $this->assertNull($obj1->getData());
+        $this->assertNull($obj1->getDataLabels());
+        $this->assertNull($obj1->getDescription());
+        $this->assertNull($obj1->getDial());
+        $this->assertNull($obj1->getEnableMouseTracking());
+        $this->assertNull($obj1->getEvents());
+        $this->assertNull($obj1->getExposeElementToA11y());
+        $this->assertNull($obj1->getFindNearestPointBy());
+        $this->assertNull($obj1->getGetExtremesFromAll());
+        $this->assertNull($obj1->getId());
+        $this->assertNull($obj1->getIndex());
+        $this->assertNull($obj1->getKeys());
+        $this->assertNull($obj1->getLegendIndex());
+        $this->assertNull($obj1->getLinkedTo());
+        $this->assertNull($obj1->getName());
+        $this->assertNull($obj1->getNegativeColor());
+        $this->assertNull($obj1->getOvershoot());
+        $this->assertNull($obj1->getPivot());
+        $this->assertNull($obj1->getPoint());
+        $this->assertNull($obj1->getPointDescriptionFormatter());
+        $this->assertNull($obj1->getSelected());
+        $this->assertNull($obj1->getShowCheckbox());
+        $this->assertNull($obj1->getShowInLegend());
+        $this->assertNull($obj1->getSkipKeyboardNavigation());
+        $this->assertNull($obj1->getStickyTracking());
+        $this->assertNull($obj1->getThreshold());
+        $this->assertNull($obj1->getTooltip());
+        $this->assertNull($obj1->getType());
+        $this->assertNull($obj1->getVisible());
+        $this->assertNull($obj1->getWrap());
+        $this->assertNull($obj1->getXAxis());
+        $this->assertNull($obj1->getYAxis());
+        $this->assertNull($obj1->getZIndex());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsGauge(false);
+
+        $this->assertEquals(true, $obj0->getAnimation());
+        $this->assertNull($obj0->getAnimationLimit());
+        $this->assertNull($obj0->getClassName());
+        $this->assertNull($obj0->getColor());
+        $this->assertNull($obj0->getColorIndex());
+        $this->assertNull($obj0->getCursor());
+        $this->assertNull($obj0->getData());
+        $this->assertNull($obj0->getDataLabels());
+        $this->assertNull($obj0->getDescription());
+        $this->assertNull($obj0->getDial());
+        $this->assertEquals(true, $obj0->getEnableMouseTracking());
+        $this->assertNull($obj0->getEvents());
+        $this->assertNull($obj0->getExposeElementToA11y());
+        $this->assertNull($obj0->getFindNearestPointBy());
+        $this->assertEquals(false, $obj0->getGetExtremesFromAll());
+        $this->assertNull($obj0->getId());
+        $this->assertNull($obj0->getIndex());
+        $this->assertNull($obj0->getKeys());
+        $this->assertNull($obj0->getLegendIndex());
+        $this->assertNull($obj0->getLinkedTo());
+        $this->assertNull($obj0->getName());
+        $this->assertNull($obj0->getNegativeColor());
+        $this->assertEquals(0, $obj0->getOvershoot());
+        $this->assertNull($obj0->getPivot());
+        $this->assertNull($obj0->getPoint());
+        $this->assertNull($obj0->getPointDescriptionFormatter());
+        $this->assertEquals(false, $obj0->getSelected());
+        $this->assertEquals(false, $obj0->getShowCheckbox());
+        $this->assertNull($obj0->getShowInLegend());
+        $this->assertNull($obj0->getSkipKeyboardNavigation());
+        $this->assertEquals(true, $obj0->getStickyTracking());
+        $this->assertEquals(0, $obj0->getThreshold());
+        $this->assertNull($obj0->getTooltip());
+        $this->assertNull($obj0->getType());
+        $this->assertEquals(true, $obj0->getVisible());
+        $this->assertEquals(true, $obj0->getWrap());
+        $this->assertEquals("0", $obj0->getXAxis());
+        $this->assertEquals("0", $obj0->getYAxis());
+        $this->assertNull($obj0->getZIndex());
     }
 
 }

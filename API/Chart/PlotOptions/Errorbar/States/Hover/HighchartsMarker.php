@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -70,7 +70,7 @@ final class HighchartsMarker implements JsonSerializable {
     /**
      * States.
      *
-     * @var 
+     * @var
      */
     private $states;
 

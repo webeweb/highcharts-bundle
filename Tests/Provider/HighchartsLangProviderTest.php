@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -49,7 +49,7 @@ final class HighchartsLangProviderTest extends AbstractTestCase {
         $getLocale = function() {
             return $this->locale;
         };
-        $translate = function ($id, array $parameters = [], $domain = null, $locale = null) {
+        $translate = function($id, array $parameters = [], $domain = null, $locale = null) {
 
             // Initialize the YAML filename.
             $filename = getcwd() . "/Resources/translations/" . implode(".", [$domain, $locale, "yml"]);

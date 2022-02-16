@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,36 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsOptions3dTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(true);
-
-        $this->assertNull($obj1->getAlpha());
-        $this->assertNull($obj1->getAxisLabelPosition());
-        $this->assertNull($obj1->getBeta());
-        $this->assertNull($obj1->getDepth());
-        $this->assertNull($obj1->getEnabled());
-        $this->assertNull($obj1->getFitToPlot());
-        $this->assertNull($obj1->getFrame());
-        $this->assertNull($obj1->getViewDistance());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(false);
-
-        $this->assertEquals(0, $obj0->getAlpha());
-        $this->assertNull($obj0->getAxisLabelPosition());
-        $this->assertEquals(0, $obj0->getBeta());
-        $this->assertEquals(100, $obj0->getDepth());
-        $this->assertEquals(false, $obj0->getEnabled());
-        $this->assertEquals(true, $obj0->getFitToPlot());
-        $this->assertNull($obj0->getFrame());
-        $this->assertEquals(100, $obj0->getViewDistance());
-    }
 
     /**
      * Tests clear()
@@ -142,6 +112,36 @@ final class HighchartsOptions3dTest extends AbstractTestCase {
 
         $res8 = ["alpha" => 7, "axisLabelPosition" => "auto", "beta" => 89, "depth" => 72, "enabled" => 1, "fitToPlot" => 1, "frame" => [], "viewDistance" => 67];
         $this->assertEquals($res8, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(true);
+
+        $this->assertNull($obj1->getAlpha());
+        $this->assertNull($obj1->getAxisLabelPosition());
+        $this->assertNull($obj1->getBeta());
+        $this->assertNull($obj1->getDepth());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getFitToPlot());
+        $this->assertNull($obj1->getFrame());
+        $this->assertNull($obj1->getViewDistance());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\HighchartsOptions3d(false);
+
+        $this->assertEquals(0, $obj0->getAlpha());
+        $this->assertNull($obj0->getAxisLabelPosition());
+        $this->assertEquals(0, $obj0->getBeta());
+        $this->assertEquals(100, $obj0->getDepth());
+        $this->assertEquals(false, $obj0->getEnabled());
+        $this->assertEquals(true, $obj0->getFitToPlot());
+        $this->assertNull($obj0->getFrame());
+        $this->assertEquals(100, $obj0->getViewDistance());
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,40 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsPlotBandsTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsPlotBands(true);
-
-        $this->assertNull($obj1->getBorderColor());
-        $this->assertNull($obj1->getBorderWidth());
-        $this->assertNull($obj1->getClassName());
-        $this->assertNull($obj1->getColor());
-        $this->assertNull($obj1->getEvents());
-        $this->assertNull($obj1->getFrom());
-        $this->assertNull($obj1->getId());
-        $this->assertNull($obj1->getLabel());
-        $this->assertNull($obj1->getTo());
-        $this->assertNull($obj1->getZIndex());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsPlotBands(false);
-
-        $this->assertNull($obj0->getBorderColor());
-        $this->assertEquals(0, $obj0->getBorderWidth());
-        $this->assertNull($obj0->getClassName());
-        $this->assertNull($obj0->getColor());
-        $this->assertNull($obj0->getEvents());
-        $this->assertNull($obj0->getFrom());
-        $this->assertNull($obj0->getId());
-        $this->assertNull($obj0->getLabel());
-        $this->assertNull($obj0->getTo());
-        $this->assertNull($obj0->getZIndex());
-    }
 
     /**
      * Tests clear()
@@ -156,6 +122,40 @@ final class HighchartsPlotBandsTest extends AbstractTestCase {
 
         $res10 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 93, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 67, "id" => "b80bb7740288fda1f201890375a60c8f", "label" => [], "to" => 95, "zIndex" => 52];
         $this->assertEquals($res10, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsPlotBands(true);
+
+        $this->assertNull($obj1->getBorderColor());
+        $this->assertNull($obj1->getBorderWidth());
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getEvents());
+        $this->assertNull($obj1->getFrom());
+        $this->assertNull($obj1->getId());
+        $this->assertNull($obj1->getLabel());
+        $this->assertNull($obj1->getTo());
+        $this->assertNull($obj1->getZIndex());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\ZAxis\HighchartsPlotBands(false);
+
+        $this->assertNull($obj0->getBorderColor());
+        $this->assertEquals(0, $obj0->getBorderWidth());
+        $this->assertNull($obj0->getClassName());
+        $this->assertNull($obj0->getColor());
+        $this->assertNull($obj0->getEvents());
+        $this->assertNull($obj0->getFrom());
+        $this->assertNull($obj0->getId());
+        $this->assertNull($obj0->getLabel());
+        $this->assertNull($obj0->getTo());
+        $this->assertNull($obj0->getZIndex());
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,26 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsDrillUpButtonTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton(true);
-
-        $this->assertNull($obj1->getPosition());
-        $this->assertNull($obj1->getRelativeTo());
-        $this->assertNull($obj1->getTheme());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton(false);
-
-        $this->assertNull($obj0->getPosition());
-        $this->assertEquals("plotBox", $obj0->getRelativeTo());
-        $this->assertNull($obj0->getTheme());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -77,6 +57,26 @@ final class HighchartsDrillUpButtonTest extends AbstractTestCase {
 
         $res3 = ["position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"], "relativeTo" => "d098f82c4a6c152bd581295856dc869a", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"]];
         $this->assertEquals($res3, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton(true);
+
+        $this->assertNull($obj1->getPosition());
+        $this->assertNull($obj1->getRelativeTo());
+        $this->assertNull($obj1->getTheme());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Drilldown\HighchartsDrillUpButton(false);
+
+        $this->assertNull($obj0->getPosition());
+        $this->assertEquals("plotBox", $obj0->getRelativeTo());
+        $this->assertNull($obj0->getTheme());
     }
 
 }

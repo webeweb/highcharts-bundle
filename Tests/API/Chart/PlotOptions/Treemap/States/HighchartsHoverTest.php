@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,32 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsHoverTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover(true);
-
-        $this->assertNull($obj1->getAnimation());
-        $this->assertNull($obj1->getBorderColor());
-        $this->assertNull($obj1->getBrightness());
-        $this->assertNull($obj1->getColor());
-        $this->assertNull($obj1->getEnabled());
-        $this->assertNull($obj1->getOpacity());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover(false);
-
-        $this->assertEquals(["duration" => 50], $obj0->getAnimation());
-        $this->assertNull($obj0->getBorderColor());
-        $this->assertEquals(0.1, $obj0->getBrightness());
-        $this->assertNull($obj0->getColor());
-        $this->assertEquals(true, $obj0->getEnabled());
-        $this->assertEquals(0.75, $obj0->getOpacity());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -98,6 +72,32 @@ final class HighchartsHoverTest extends AbstractTestCase {
 
         $res6 = ["animation" => 1, "borderColor" => "97da935a74593c55d78be9d1295aa994", "brightness" => 46, "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "enabled" => 1, "opacity" => 52];
         $this->assertEquals($res6, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover(true);
+
+        $this->assertNull($obj1->getAnimation());
+        $this->assertNull($obj1->getBorderColor());
+        $this->assertNull($obj1->getBrightness());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getOpacity());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Treemap\States\HighchartsHover(false);
+
+        $this->assertEquals(["duration" => 50], $obj0->getAnimation());
+        $this->assertNull($obj0->getBorderColor());
+        $this->assertEquals(0.1, $obj0->getBrightness());
+        $this->assertNull($obj0->getColor());
+        $this->assertEquals(true, $obj0->getEnabled());
+        $this->assertEquals(0.75, $obj0->getOpacity());
     }
 
 }

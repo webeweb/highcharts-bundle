@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,25 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsEventsTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Scatter\HighchartsEvents(true);
-
-        $this->assertNull($obj1->getAfterAnimate());
-        $this->assertNull($obj1->getCheckboxClick());
-        $this->assertNull($obj1->getClick());
-        $this->assertNull($obj1->getHide());
-        $this->assertNull($obj1->getLegendItemClick());
-        $this->assertNull($obj1->getMouseOut());
-        $this->assertNull($obj1->getMouseOver());
-        $this->assertNull($obj1->getShow());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -101,6 +82,25 @@ final class HighchartsEventsTest extends AbstractTestCase {
 
         $res8 = ["afterAnimate" => "ebdf113b6f659f6f3ea3c6b93e658235", "checkboxClick" => "27e3160a9be50f7b44b7bb9086d94964", "click" => "a8affc088cbca89fa20dbd98c91362e4", "hide" => "a88f05b6c963e145a45b58c47cd42a41", "legendItemClick" => "56c962f18312c892a25fdf27904bd24b", "mouseOut" => "efc487f286f5bca976fafe58cb6e7895", "mouseOver" => "1f1a5f011c50a092eb06446d724dd573", "show" => "a7dd12b1dab17d25467b0b0a4c8d4a92"];
         $this->assertEquals($res8, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Scatter\HighchartsEvents(true);
+
+        $this->assertNull($obj1->getAfterAnimate());
+        $this->assertNull($obj1->getCheckboxClick());
+        $this->assertNull($obj1->getClick());
+        $this->assertNull($obj1->getHide());
+        $this->assertNull($obj1->getLegendItemClick());
+        $this->assertNull($obj1->getMouseOut());
+        $this->assertNull($obj1->getMouseOver());
+        $this->assertNull($obj1->getShow());
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,148 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsBoxplotTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsBoxplot(true);
-
-        $this->assertNull($obj1->getAllowPointSelect());
-        $this->assertNull($obj1->getAnimationLimit());
-        $this->assertNull($obj1->getClassName());
-        $this->assertNull($obj1->getColor());
-        $this->assertNull($obj1->getColorByPoint());
-        $this->assertNull($obj1->getColorIndex());
-        $this->assertNull($obj1->getColors());
-        $this->assertNull($obj1->getCrisp());
-        $this->assertNull($obj1->getCursor());
-        $this->assertNull($obj1->getData());
-        $this->assertNull($obj1->getDepth());
-        $this->assertNull($obj1->getDescription());
-        $this->assertNull($obj1->getEdgeColor());
-        $this->assertNull($obj1->getEdgeWidth());
-        $this->assertNull($obj1->getEnableMouseTracking());
-        $this->assertNull($obj1->getEvents());
-        $this->assertNull($obj1->getExposeElementToA11y());
-        $this->assertNull($obj1->getFillColor());
-        $this->assertNull($obj1->getFindNearestPointBy());
-        $this->assertNull($obj1->getGetExtremesFromAll());
-        $this->assertNull($obj1->getGroupPadding());
-        $this->assertNull($obj1->getGroupZPadding());
-        $this->assertNull($obj1->getGrouping());
-        $this->assertNull($obj1->getId());
-        $this->assertNull($obj1->getIndex());
-        $this->assertNull($obj1->getKeys());
-        $this->assertNull($obj1->getLegendIndex());
-        $this->assertNull($obj1->getLineWidth());
-        $this->assertNull($obj1->getLinkedTo());
-        $this->assertNull($obj1->getMaxPointWidth());
-        $this->assertNull($obj1->getMedianColor());
-        $this->assertNull($obj1->getMedianWidth());
-        $this->assertNull($obj1->getName());
-        $this->assertNull($obj1->getNegativeColor());
-        $this->assertNull($obj1->getPoint());
-        $this->assertNull($obj1->getPointDescriptionFormatter());
-        $this->assertNull($obj1->getPointInterval());
-        $this->assertNull($obj1->getPointIntervalUnit());
-        $this->assertNull($obj1->getPointPadding());
-        $this->assertNull($obj1->getPointPlacement());
-        $this->assertNull($obj1->getPointRange());
-        $this->assertNull($obj1->getPointStart());
-        $this->assertNull($obj1->getPointWidth());
-        $this->assertNull($obj1->getSelected());
-        $this->assertNull($obj1->getShowCheckbox());
-        $this->assertNull($obj1->getShowInLegend());
-        $this->assertNull($obj1->getSkipKeyboardNavigation());
-        $this->assertNull($obj1->getStates());
-        $this->assertNull($obj1->getStemColor());
-        $this->assertNull($obj1->getStemDashStyle());
-        $this->assertNull($obj1->getStemWidth());
-        $this->assertNull($obj1->getStickyTracking());
-        $this->assertNull($obj1->getTooltip());
-        $this->assertNull($obj1->getTurboThreshold());
-        $this->assertNull($obj1->getType());
-        $this->assertNull($obj1->getVisible());
-        $this->assertNull($obj1->getWhiskerColor());
-        $this->assertNull($obj1->getWhiskerLength());
-        $this->assertNull($obj1->getWhiskerWidth());
-        $this->assertNull($obj1->getXAxis());
-        $this->assertNull($obj1->getYAxis());
-        $this->assertNull($obj1->getZIndex());
-        $this->assertNull($obj1->getZoneAxis());
-        $this->assertNull($obj1->getZones());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsBoxplot(false);
-
-        $this->assertEquals(false, $obj0->getAllowPointSelect());
-        $this->assertNull($obj0->getAnimationLimit());
-        $this->assertNull($obj0->getClassName());
-        $this->assertNull($obj0->getColor());
-        $this->assertEquals(false, $obj0->getColorByPoint());
-        $this->assertNull($obj0->getColorIndex());
-        $this->assertNull($obj0->getColors());
-        $this->assertEquals(true, $obj0->getCrisp());
-        $this->assertNull($obj0->getCursor());
-        $this->assertNull($obj0->getData());
-        $this->assertEquals(25, $obj0->getDepth());
-        $this->assertNull($obj0->getDescription());
-        $this->assertNull($obj0->getEdgeColor());
-        $this->assertEquals(1, $obj0->getEdgeWidth());
-        $this->assertEquals(true, $obj0->getEnableMouseTracking());
-        $this->assertNull($obj0->getEvents());
-        $this->assertNull($obj0->getExposeElementToA11y());
-        $this->assertEquals("#ffffff", $obj0->getFillColor());
-        $this->assertNull($obj0->getFindNearestPointBy());
-        $this->assertEquals(false, $obj0->getGetExtremesFromAll());
-        $this->assertEquals(0.2, $obj0->getGroupPadding());
-        $this->assertEquals(1, $obj0->getGroupZPadding());
-        $this->assertEquals(true, $obj0->getGrouping());
-        $this->assertNull($obj0->getId());
-        $this->assertNull($obj0->getIndex());
-        $this->assertNull($obj0->getKeys());
-        $this->assertNull($obj0->getLegendIndex());
-        $this->assertEquals(1, $obj0->getLineWidth());
-        $this->assertNull($obj0->getLinkedTo());
-        $this->assertNull($obj0->getMaxPointWidth());
-        $this->assertNull($obj0->getMedianColor());
-        $this->assertEquals(2, $obj0->getMedianWidth());
-        $this->assertNull($obj0->getName());
-        $this->assertNull($obj0->getNegativeColor());
-        $this->assertNull($obj0->getPoint());
-        $this->assertNull($obj0->getPointDescriptionFormatter());
-        $this->assertEquals(1, $obj0->getPointInterval());
-        $this->assertNull($obj0->getPointIntervalUnit());
-        $this->assertEquals(0.1, $obj0->getPointPadding());
-        $this->assertNull($obj0->getPointPlacement());
-        $this->assertNull($obj0->getPointRange());
-        $this->assertEquals(0, $obj0->getPointStart());
-        $this->assertNull($obj0->getPointWidth());
-        $this->assertEquals(false, $obj0->getSelected());
-        $this->assertEquals(false, $obj0->getShowCheckbox());
-        $this->assertEquals(true, $obj0->getShowInLegend());
-        $this->assertNull($obj0->getSkipKeyboardNavigation());
-        $this->assertNull($obj0->getStates());
-        $this->assertNull($obj0->getStemColor());
-        $this->assertEquals("Solid", $obj0->getStemDashStyle());
-        $this->assertNull($obj0->getStemWidth());
-        $this->assertEquals(true, $obj0->getStickyTracking());
-        $this->assertNull($obj0->getTooltip());
-        $this->assertEquals(1000, $obj0->getTurboThreshold());
-        $this->assertNull($obj0->getType());
-        $this->assertEquals(true, $obj0->getVisible());
-        $this->assertNull($obj0->getWhiskerColor());
-        $this->assertEquals("50%", $obj0->getWhiskerLength());
-        $this->assertEquals(2, $obj0->getWhiskerWidth());
-        $this->assertEquals("0", $obj0->getXAxis());
-        $this->assertEquals("0", $obj0->getYAxis());
-        $this->assertNull($obj0->getZIndex());
-        $this->assertEquals("y", $obj0->getZoneAxis());
-        $this->assertNull($obj0->getZones());
-    }
 
     /**
      * Tests clear()
@@ -562,6 +420,148 @@ final class HighchartsBoxplotTest extends AbstractTestCase {
 
         $res64 = ["allowPointSelect" => 0, "animationLimit" => 57, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorByPoint" => 0, "colorIndex" => 72, "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "crisp" => 0, "cursor" => "crosshair", "data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "depth" => 29, "description" => "67daf92c833c41c95db874e18fcb2786", "edgeColor" => "acbab0d2e7e54e5a7a32fc80409601fc", "edgeWidth" => 25, "enableMouseTracking" => 1, "events" => [], "exposeElementToA11y" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "findNearestPointBy" => "xy", "getExtremesFromAll" => 0, "groupPadding" => 86, "groupZPadding" => 58, "grouping" => 1, "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 50, "keys" => ["keys" => "14f802e1fba977727845e8872c1743a7"], "legendIndex" => 80, "lineWidth" => 29, "linkedTo" => "914fab47afc86331ec62837807a29419", "maxPointWidth" => 5, "medianColor" => "c7dbc658d3d58056469f6d2d5a8a3626", "medianWidth" => 81, "name" => "b068931cc450442b63f5b3d276ea4297", "negativeColor" => "52fe4d3a854b01e25193b4f35fc2040e", "point" => [], "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointInterval" => 51, "pointIntervalUnit" => "year", "pointPadding" => 11, "pointPlacement" => "between", "pointRange" => 0, "pointStart" => 11, "pointWidth" => 85, "selected" => 0, "showCheckbox" => 1, "showInLegend" => 1, "skipKeyboardNavigation" => 0, "states" => [], "stemColor" => "98696f23b6ed2a881042dfa365a28d23", "stemDashStyle" => "LongDashDotDot", "stemWidth" => 13, "stickyTracking" => 0, "tooltip" => ["tooltip" => "ddbfc1b6aa0ad4d79c5dac7aa3b44888"], "turboThreshold" => 22, "type" => "waterfall", "visible" => 0, "whiskerColor" => "3176f361ab524a038497eb1a6c93df38", "whiskerLength" => 45, "whiskerWidth" => 79, "xAxis" => 47, "yAxis" => 16, "zIndex" => 17, "zoneAxis" => "88421adabea658556aa3ab6c6181afad", "zones" => ["zones" => "26f94136f5db8afd4e9df1e512f7fdc5"]];
         $this->assertEquals($res64, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsBoxplot(true);
+
+        $this->assertNull($obj1->getAllowPointSelect());
+        $this->assertNull($obj1->getAnimationLimit());
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getColorByPoint());
+        $this->assertNull($obj1->getColorIndex());
+        $this->assertNull($obj1->getColors());
+        $this->assertNull($obj1->getCrisp());
+        $this->assertNull($obj1->getCursor());
+        $this->assertNull($obj1->getData());
+        $this->assertNull($obj1->getDepth());
+        $this->assertNull($obj1->getDescription());
+        $this->assertNull($obj1->getEdgeColor());
+        $this->assertNull($obj1->getEdgeWidth());
+        $this->assertNull($obj1->getEnableMouseTracking());
+        $this->assertNull($obj1->getEvents());
+        $this->assertNull($obj1->getExposeElementToA11y());
+        $this->assertNull($obj1->getFillColor());
+        $this->assertNull($obj1->getFindNearestPointBy());
+        $this->assertNull($obj1->getGetExtremesFromAll());
+        $this->assertNull($obj1->getGroupPadding());
+        $this->assertNull($obj1->getGroupZPadding());
+        $this->assertNull($obj1->getGrouping());
+        $this->assertNull($obj1->getId());
+        $this->assertNull($obj1->getIndex());
+        $this->assertNull($obj1->getKeys());
+        $this->assertNull($obj1->getLegendIndex());
+        $this->assertNull($obj1->getLineWidth());
+        $this->assertNull($obj1->getLinkedTo());
+        $this->assertNull($obj1->getMaxPointWidth());
+        $this->assertNull($obj1->getMedianColor());
+        $this->assertNull($obj1->getMedianWidth());
+        $this->assertNull($obj1->getName());
+        $this->assertNull($obj1->getNegativeColor());
+        $this->assertNull($obj1->getPoint());
+        $this->assertNull($obj1->getPointDescriptionFormatter());
+        $this->assertNull($obj1->getPointInterval());
+        $this->assertNull($obj1->getPointIntervalUnit());
+        $this->assertNull($obj1->getPointPadding());
+        $this->assertNull($obj1->getPointPlacement());
+        $this->assertNull($obj1->getPointRange());
+        $this->assertNull($obj1->getPointStart());
+        $this->assertNull($obj1->getPointWidth());
+        $this->assertNull($obj1->getSelected());
+        $this->assertNull($obj1->getShowCheckbox());
+        $this->assertNull($obj1->getShowInLegend());
+        $this->assertNull($obj1->getSkipKeyboardNavigation());
+        $this->assertNull($obj1->getStates());
+        $this->assertNull($obj1->getStemColor());
+        $this->assertNull($obj1->getStemDashStyle());
+        $this->assertNull($obj1->getStemWidth());
+        $this->assertNull($obj1->getStickyTracking());
+        $this->assertNull($obj1->getTooltip());
+        $this->assertNull($obj1->getTurboThreshold());
+        $this->assertNull($obj1->getType());
+        $this->assertNull($obj1->getVisible());
+        $this->assertNull($obj1->getWhiskerColor());
+        $this->assertNull($obj1->getWhiskerLength());
+        $this->assertNull($obj1->getWhiskerWidth());
+        $this->assertNull($obj1->getXAxis());
+        $this->assertNull($obj1->getYAxis());
+        $this->assertNull($obj1->getZIndex());
+        $this->assertNull($obj1->getZoneAxis());
+        $this->assertNull($obj1->getZones());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\HighchartsBoxplot(false);
+
+        $this->assertEquals(false, $obj0->getAllowPointSelect());
+        $this->assertNull($obj0->getAnimationLimit());
+        $this->assertNull($obj0->getClassName());
+        $this->assertNull($obj0->getColor());
+        $this->assertEquals(false, $obj0->getColorByPoint());
+        $this->assertNull($obj0->getColorIndex());
+        $this->assertNull($obj0->getColors());
+        $this->assertEquals(true, $obj0->getCrisp());
+        $this->assertNull($obj0->getCursor());
+        $this->assertNull($obj0->getData());
+        $this->assertEquals(25, $obj0->getDepth());
+        $this->assertNull($obj0->getDescription());
+        $this->assertNull($obj0->getEdgeColor());
+        $this->assertEquals(1, $obj0->getEdgeWidth());
+        $this->assertEquals(true, $obj0->getEnableMouseTracking());
+        $this->assertNull($obj0->getEvents());
+        $this->assertNull($obj0->getExposeElementToA11y());
+        $this->assertEquals("#ffffff", $obj0->getFillColor());
+        $this->assertNull($obj0->getFindNearestPointBy());
+        $this->assertEquals(false, $obj0->getGetExtremesFromAll());
+        $this->assertEquals(0.2, $obj0->getGroupPadding());
+        $this->assertEquals(1, $obj0->getGroupZPadding());
+        $this->assertEquals(true, $obj0->getGrouping());
+        $this->assertNull($obj0->getId());
+        $this->assertNull($obj0->getIndex());
+        $this->assertNull($obj0->getKeys());
+        $this->assertNull($obj0->getLegendIndex());
+        $this->assertEquals(1, $obj0->getLineWidth());
+        $this->assertNull($obj0->getLinkedTo());
+        $this->assertNull($obj0->getMaxPointWidth());
+        $this->assertNull($obj0->getMedianColor());
+        $this->assertEquals(2, $obj0->getMedianWidth());
+        $this->assertNull($obj0->getName());
+        $this->assertNull($obj0->getNegativeColor());
+        $this->assertNull($obj0->getPoint());
+        $this->assertNull($obj0->getPointDescriptionFormatter());
+        $this->assertEquals(1, $obj0->getPointInterval());
+        $this->assertNull($obj0->getPointIntervalUnit());
+        $this->assertEquals(0.1, $obj0->getPointPadding());
+        $this->assertNull($obj0->getPointPlacement());
+        $this->assertNull($obj0->getPointRange());
+        $this->assertEquals(0, $obj0->getPointStart());
+        $this->assertNull($obj0->getPointWidth());
+        $this->assertEquals(false, $obj0->getSelected());
+        $this->assertEquals(false, $obj0->getShowCheckbox());
+        $this->assertEquals(true, $obj0->getShowInLegend());
+        $this->assertNull($obj0->getSkipKeyboardNavigation());
+        $this->assertNull($obj0->getStates());
+        $this->assertNull($obj0->getStemColor());
+        $this->assertEquals("Solid", $obj0->getStemDashStyle());
+        $this->assertNull($obj0->getStemWidth());
+        $this->assertEquals(true, $obj0->getStickyTracking());
+        $this->assertNull($obj0->getTooltip());
+        $this->assertEquals(1000, $obj0->getTurboThreshold());
+        $this->assertNull($obj0->getType());
+        $this->assertEquals(true, $obj0->getVisible());
+        $this->assertNull($obj0->getWhiskerColor());
+        $this->assertEquals("50%", $obj0->getWhiskerLength());
+        $this->assertEquals(2, $obj0->getWhiskerWidth());
+        $this->assertEquals("0", $obj0->getXAxis());
+        $this->assertEquals("0", $obj0->getYAxis());
+        $this->assertNull($obj0->getZIndex());
+        $this->assertEquals("y", $obj0->getZoneAxis());
+        $this->assertNull($obj0->getZones());
     }
 
 }

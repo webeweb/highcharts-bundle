@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,30 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsCreditsTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits(true);
-
-        $this->assertNull($obj1->getEnabled());
-        $this->assertNull($obj1->getHref());
-        $this->assertNull($obj1->getPosition());
-        $this->assertNull($obj1->getStyle());
-        $this->assertNull($obj1->getText());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits(false);
-
-        $this->assertEquals(true, $obj0->getEnabled());
-        $this->assertEquals("http://www.highcharts.com", $obj0->getHref());
-        $this->assertNull($obj0->getPosition());
-        $this->assertEquals(["cursor" => "pointer", "color" => "#999999", "fontSize" => "10px"], $obj0->getStyle());
-        $this->assertEquals("Highcharts.com", $obj0->getText());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -91,6 +67,30 @@ final class HighchartsCreditsTest extends AbstractTestCase {
 
         $res5 = ["enabled" => 0, "href" => "e8fab833730f3a939d0b3812fe043b5d", "position" => ["position" => "4757fe07fd492a8be0ea6a760d683d6e"], "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
         $this->assertEquals($res5, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits(true);
+
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getHref());
+        $this->assertNull($obj1->getPosition());
+        $this->assertNull($obj1->getStyle());
+        $this->assertNull($obj1->getText());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsCredits(false);
+
+        $this->assertEquals(true, $obj0->getEnabled());
+        $this->assertEquals("http://www.highcharts.com", $obj0->getHref());
+        $this->assertNull($obj0->getPosition());
+        $this->assertEquals(["cursor" => "pointer", "color" => "#999999", "fontSize" => "10px"], $obj0->getStyle());
+        $this->assertEquals("Highcharts.com", $obj0->getText());
     }
 
 }

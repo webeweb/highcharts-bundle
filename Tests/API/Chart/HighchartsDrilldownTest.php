@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,32 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsDrilldownTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsDrilldown(true);
-
-        $this->assertNull($obj1->getActiveAxisLabelStyle());
-        $this->assertNull($obj1->getActiveDataLabelStyle());
-        $this->assertNull($obj1->getAllowPointDrilldown());
-        $this->assertNull($obj1->getAnimation());
-        $this->assertNull($obj1->getDrillUpButton());
-        $this->assertNull($obj1->getSeries());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsDrilldown(false);
-
-        $this->assertEquals(["cursor" => "pointer", "color" => "#003399", "fontWeight" => "bold", "textDecoration" => "underline"], $obj0->getActiveAxisLabelStyle());
-        $this->assertEquals(["cursor" => "pointer", "color" => "#003399", "fontWeight" => "bold", "textDecoration" => "underline"], $obj0->getActiveDataLabelStyle());
-        $this->assertEquals(true, $obj0->getAllowPointDrilldown());
-        $this->assertNull($obj0->getAnimation());
-        $this->assertNull($obj0->getDrillUpButton());
-        $this->assertNull($obj0->getSeries());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -98,6 +72,32 @@ final class HighchartsDrilldownTest extends AbstractTestCase {
 
         $res6 = ["activeAxisLabelStyle" => ["activeAxisLabelStyle" => "f6426021dea292777130e7d2cc629230"], "activeDataLabelStyle" => ["activeDataLabelStyle" => "6bbd917f9c79f378651e96cac7e7dcf8"], "allowPointDrilldown" => 1, "animation" => 0, "drillUpButton" => ["drillUpButton" => "096589e2a6ac96efa1520bbe5ff3e68b"], "series" => ["series" => "bef99584217af744e404ed44a33af589"]];
         $this->assertEquals($res6, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsDrilldown(true);
+
+        $this->assertNull($obj1->getActiveAxisLabelStyle());
+        $this->assertNull($obj1->getActiveDataLabelStyle());
+        $this->assertNull($obj1->getAllowPointDrilldown());
+        $this->assertNull($obj1->getAnimation());
+        $this->assertNull($obj1->getDrillUpButton());
+        $this->assertNull($obj1->getSeries());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsDrilldown(false);
+
+        $this->assertEquals(["cursor" => "pointer", "color" => "#003399", "fontWeight" => "bold", "textDecoration" => "underline"], $obj0->getActiveAxisLabelStyle());
+        $this->assertEquals(["cursor" => "pointer", "color" => "#003399", "fontWeight" => "bold", "textDecoration" => "underline"], $obj0->getActiveDataLabelStyle());
+        $this->assertEquals(true, $obj0->getAllowPointDrilldown());
+        $this->assertNull($obj0->getAnimation());
+        $this->assertNull($obj0->getDrillUpButton());
+        $this->assertNull($obj0->getSeries());
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,76 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsDataLabelsTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Pie\HighchartsDataLabels(true);
-
-        $this->assertNull($obj1->getBackgroundColor());
-        $this->assertNull($obj1->getBorderColor());
-        $this->assertNull($obj1->getBorderRadius());
-        $this->assertNull($obj1->getBorderWidth());
-        $this->assertNull($obj1->getClassName());
-        $this->assertNull($obj1->getColor());
-        $this->assertNull($obj1->getConnectorColor());
-        $this->assertNull($obj1->getConnectorPadding());
-        $this->assertNull($obj1->getConnectorWidth());
-        $this->assertNull($obj1->getCrop());
-        $this->assertNull($obj1->getDefer());
-        $this->assertNull($obj1->getDistance());
-        $this->assertNull($obj1->getEnabled());
-        $this->assertNull($obj1->getFormat());
-        $this->assertNull($obj1->getFormatter());
-        $this->assertNull($obj1->getInside());
-        $this->assertNull($obj1->getOverflow());
-        $this->assertNull($obj1->getPadding());
-        $this->assertNull($obj1->getRotation());
-        $this->assertNull($obj1->getShadow());
-        $this->assertNull($obj1->getShape());
-        $this->assertNull($obj1->getSoftConnector());
-        $this->assertNull($obj1->getStyle());
-        $this->assertNull($obj1->getUseHTML());
-        $this->assertNull($obj1->getVerticalAlign());
-        $this->assertNull($obj1->getX());
-        $this->assertNull($obj1->getY());
-        $this->assertNull($obj1->getZIndex());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Pie\HighchartsDataLabels(false);
-
-        $this->assertNull($obj0->getBackgroundColor());
-        $this->assertNull($obj0->getBorderColor());
-        $this->assertEquals(0, $obj0->getBorderRadius());
-        $this->assertEquals(0, $obj0->getBorderWidth());
-        $this->assertNull($obj0->getClassName());
-        $this->assertNull($obj0->getColor());
-        $this->assertEquals("{point.color}", $obj0->getConnectorColor());
-        $this->assertEquals(5, $obj0->getConnectorPadding());
-        $this->assertEquals(1, $obj0->getConnectorWidth());
-        $this->assertEquals(true, $obj0->getCrop());
-        $this->assertEquals(true, $obj0->getDefer());
-        $this->assertEquals(30, $obj0->getDistance());
-        $this->assertEquals(true, $obj0->getEnabled());
-        $this->assertEquals("{y}", $obj0->getFormat());
-        $this->assertNull($obj0->getFormatter());
-        $this->assertNull($obj0->getInside());
-        $this->assertEquals("justify", $obj0->getOverflow());
-        $this->assertEquals(5, $obj0->getPadding());
-        $this->assertEquals(0, $obj0->getRotation());
-        $this->assertEquals(false, $obj0->getShadow());
-        $this->assertEquals("square", $obj0->getShape());
-        $this->assertEquals(true, $obj0->getSoftConnector());
-        $this->assertEquals(["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], $obj0->getStyle());
-        $this->assertEquals(false, $obj0->getUseHTML());
-        $this->assertNull($obj0->getVerticalAlign());
-        $this->assertEquals(0, $obj0->getX());
-        $this->assertEquals(-6, $obj0->getY());
-        $this->assertEquals(6, $obj0->getZIndex());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -252,6 +182,76 @@ final class HighchartsDataLabelsTest extends AbstractTestCase {
 
         $res28 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 58, "borderWidth" => 79, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "connectorColor" => "8bf77ed7251dc34fbae6786923398a9d", "connectorPadding" => 67, "connectorWidth" => 96, "crop" => 1, "defer" => 0, "distance" => 70, "enabled" => 0, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "inside" => 0, "overflow" => "none", "padding" => 34, "rotation" => 65, "shadow" => 1, "shape" => "8c73a98a300905900337f535531dfca6", "softConnector" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 1, "verticalAlign" => "bottom", "x" => 73, "y" => 75, "zIndex" => 52];
         $this->assertEquals($res28, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Pie\HighchartsDataLabels(true);
+
+        $this->assertNull($obj1->getBackgroundColor());
+        $this->assertNull($obj1->getBorderColor());
+        $this->assertNull($obj1->getBorderRadius());
+        $this->assertNull($obj1->getBorderWidth());
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getConnectorColor());
+        $this->assertNull($obj1->getConnectorPadding());
+        $this->assertNull($obj1->getConnectorWidth());
+        $this->assertNull($obj1->getCrop());
+        $this->assertNull($obj1->getDefer());
+        $this->assertNull($obj1->getDistance());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getFormat());
+        $this->assertNull($obj1->getFormatter());
+        $this->assertNull($obj1->getInside());
+        $this->assertNull($obj1->getOverflow());
+        $this->assertNull($obj1->getPadding());
+        $this->assertNull($obj1->getRotation());
+        $this->assertNull($obj1->getShadow());
+        $this->assertNull($obj1->getShape());
+        $this->assertNull($obj1->getSoftConnector());
+        $this->assertNull($obj1->getStyle());
+        $this->assertNull($obj1->getUseHTML());
+        $this->assertNull($obj1->getVerticalAlign());
+        $this->assertNull($obj1->getX());
+        $this->assertNull($obj1->getY());
+        $this->assertNull($obj1->getZIndex());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Pie\HighchartsDataLabels(false);
+
+        $this->assertNull($obj0->getBackgroundColor());
+        $this->assertNull($obj0->getBorderColor());
+        $this->assertEquals(0, $obj0->getBorderRadius());
+        $this->assertEquals(0, $obj0->getBorderWidth());
+        $this->assertNull($obj0->getClassName());
+        $this->assertNull($obj0->getColor());
+        $this->assertEquals("{point.color}", $obj0->getConnectorColor());
+        $this->assertEquals(5, $obj0->getConnectorPadding());
+        $this->assertEquals(1, $obj0->getConnectorWidth());
+        $this->assertEquals(true, $obj0->getCrop());
+        $this->assertEquals(true, $obj0->getDefer());
+        $this->assertEquals(30, $obj0->getDistance());
+        $this->assertEquals(true, $obj0->getEnabled());
+        $this->assertEquals("{y}", $obj0->getFormat());
+        $this->assertNull($obj0->getFormatter());
+        $this->assertNull($obj0->getInside());
+        $this->assertEquals("justify", $obj0->getOverflow());
+        $this->assertEquals(5, $obj0->getPadding());
+        $this->assertEquals(0, $obj0->getRotation());
+        $this->assertEquals(false, $obj0->getShadow());
+        $this->assertEquals("square", $obj0->getShape());
+        $this->assertEquals(true, $obj0->getSoftConnector());
+        $this->assertEquals(["color" => "contrast", "fontSize" => "11px", "fontWeight" => "bold", "textOutline" => "1px contrast"], $obj0->getStyle());
+        $this->assertEquals(false, $obj0->getUseHTML());
+        $this->assertNull($obj0->getVerticalAlign());
+        $this->assertEquals(0, $obj0->getX());
+        $this->assertEquals(-6, $obj0->getY());
+        $this->assertEquals(6, $obj0->getZIndex());
     }
 
 }

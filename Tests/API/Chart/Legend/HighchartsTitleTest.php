@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,24 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsTitleTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
-
-        $this->assertNull($obj1->getStyle());
-        $this->assertNull($obj1->getText());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(false);
-
-        $this->assertEquals(["fontWeight" => "bold"], $obj0->getStyle());
-        $this->assertNull($obj0->getText());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -70,6 +52,24 @@ final class HighchartsTitleTest extends AbstractTestCase {
 
         $res2 = ["style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1"];
         $this->assertEquals($res2, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(true);
+
+        $this->assertNull($obj1->getStyle());
+        $this->assertNull($obj1->getText());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Legend\HighchartsTitle(false);
+
+        $this->assertEquals(["fontWeight" => "bold"], $obj0->getStyle());
+        $this->assertNull($obj0->getText());
     }
 
 }

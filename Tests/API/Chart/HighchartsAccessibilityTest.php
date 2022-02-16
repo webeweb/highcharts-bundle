@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,40 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsAccessibilityTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsAccessibility(true);
-
-        $this->assertNull($obj1->getDescribeSingleSeries());
-        $this->assertNull($obj1->getEnabled());
-        $this->assertNull($obj1->getKeyboardNavigation());
-        $this->assertNull($obj1->getOnTableAnchorClick());
-        $this->assertNull($obj1->getPointDateFormat());
-        $this->assertNull($obj1->getPointDateFormatter());
-        $this->assertNull($obj1->getPointDescriptionFormatter());
-        $this->assertNull($obj1->getPointDescriptionThreshold());
-        $this->assertNull($obj1->getScreenReaderSectionFormatter());
-        $this->assertNull($obj1->getSeriesDescriptionFormatter());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsAccessibility(false);
-
-        $this->assertEquals(false, $obj0->getDescribeSingleSeries());
-        $this->assertEquals(true, $obj0->getEnabled());
-        $this->assertNull($obj0->getKeyboardNavigation());
-        $this->assertNull($obj0->getOnTableAnchorClick());
-        $this->assertNull($obj0->getPointDateFormat());
-        $this->assertNull($obj0->getPointDateFormatter());
-        $this->assertNull($obj0->getPointDescriptionFormatter());
-        $this->assertEquals(30, $obj0->getPointDescriptionThreshold());
-        $this->assertNull($obj0->getScreenReaderSectionFormatter());
-        $this->assertNull($obj0->getSeriesDescriptionFormatter());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -126,6 +92,40 @@ final class HighchartsAccessibilityTest extends AbstractTestCase {
 
         $res10 = ["describeSingleSeries" => 1, "enabled" => 1, "keyboardNavigation" => ["keyboardNavigation" => "75e7fd90e03918c9d6c3a6c0e7ebb9b7"], "onTableAnchorClick" => "65528797add8c35fe2ed3ba46ec9e1ee", "pointDateFormat" => "2a505d87116bc7c91a57716b84e2eb8e", "pointDateFormatter" => "7f0aa6cf2926725674efea2c087a716e", "pointDescriptionFormatter" => "b5fd0c15b3ca81f726e2c7b93907ba36", "pointDescriptionThreshold" => 6, "screenReaderSectionFormatter" => "73356fbe3da4d20b3022c13763b1973b", "seriesDescriptionFormatter" => "3ce4fcfe8febdd161d40ae4f253e827f"];
         $this->assertEquals($res10, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsAccessibility(true);
+
+        $this->assertNull($obj1->getDescribeSingleSeries());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getKeyboardNavigation());
+        $this->assertNull($obj1->getOnTableAnchorClick());
+        $this->assertNull($obj1->getPointDateFormat());
+        $this->assertNull($obj1->getPointDateFormatter());
+        $this->assertNull($obj1->getPointDescriptionFormatter());
+        $this->assertNull($obj1->getPointDescriptionThreshold());
+        $this->assertNull($obj1->getScreenReaderSectionFormatter());
+        $this->assertNull($obj1->getSeriesDescriptionFormatter());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsAccessibility(false);
+
+        $this->assertEquals(false, $obj0->getDescribeSingleSeries());
+        $this->assertEquals(true, $obj0->getEnabled());
+        $this->assertNull($obj0->getKeyboardNavigation());
+        $this->assertNull($obj0->getOnTableAnchorClick());
+        $this->assertNull($obj0->getPointDateFormat());
+        $this->assertNull($obj0->getPointDateFormatter());
+        $this->assertNull($obj0->getPointDescriptionFormatter());
+        $this->assertEquals(30, $obj0->getPointDescriptionThreshold());
+        $this->assertNull($obj0->getScreenReaderSectionFormatter());
+        $this->assertNull($obj0->getSeriesDescriptionFormatter());
     }
 
 }

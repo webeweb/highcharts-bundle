@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,48 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsDataTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\HighchartsData(true);
-
-        $this->assertNull($obj1->getClassName());
-        $this->assertNull($obj1->getColor());
-        $this->assertNull($obj1->getColorIndex());
-        $this->assertNull($obj1->getDataLabels());
-        $this->assertNull($obj1->getDescription());
-        $this->assertNull($obj1->getDrilldown());
-        $this->assertNull($obj1->getEvents());
-        $this->assertNull($obj1->getId());
-        $this->assertNull($obj1->getLabelrank());
-        $this->assertNull($obj1->getMarker());
-        $this->assertNull($obj1->getName());
-        $this->assertNull($obj1->getSelected());
-        $this->assertNull($obj1->getX());
-        $this->assertNull($obj1->getY());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\HighchartsData(false);
-
-        $this->assertNull($obj0->getClassName());
-        $this->assertNull($obj0->getColor());
-        $this->assertNull($obj0->getColorIndex());
-        $this->assertNull($obj0->getDataLabels());
-        $this->assertNull($obj0->getDescription());
-        $this->assertNull($obj0->getDrilldown());
-        $this->assertNull($obj0->getEvents());
-        $this->assertNull($obj0->getId());
-        $this->assertNull($obj0->getLabelrank());
-        $this->assertNull($obj0->getMarker());
-        $this->assertNull($obj0->getName());
-        $this->assertEquals(false, $obj0->getSelected());
-        $this->assertNull($obj0->getX());
-        $this->assertNull($obj0->getY());
-    }
 
     /**
      * Tests clear()
@@ -198,6 +156,48 @@ final class HighchartsDataTest extends AbstractTestCase {
 
         $res14 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 36, "dataLabels" => ["dataLabels" => "d4d108fe6659fac79420fa083ef3adf2"], "description" => "67daf92c833c41c95db874e18fcb2786", "drilldown" => "e3fd48c72943315f737d8a814fda4fd1", "events" => [], "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 77, "marker" => [], "name" => "b068931cc450442b63f5b3d276ea4297", "selected" => 0, "x" => 90, "y" => 51];
         $this->assertEquals($res14, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\HighchartsData(true);
+
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getColorIndex());
+        $this->assertNull($obj1->getDataLabels());
+        $this->assertNull($obj1->getDescription());
+        $this->assertNull($obj1->getDrilldown());
+        $this->assertNull($obj1->getEvents());
+        $this->assertNull($obj1->getId());
+        $this->assertNull($obj1->getLabelrank());
+        $this->assertNull($obj1->getMarker());
+        $this->assertNull($obj1->getName());
+        $this->assertNull($obj1->getSelected());
+        $this->assertNull($obj1->getX());
+        $this->assertNull($obj1->getY());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Line\HighchartsData(false);
+
+        $this->assertNull($obj0->getClassName());
+        $this->assertNull($obj0->getColor());
+        $this->assertNull($obj0->getColorIndex());
+        $this->assertNull($obj0->getDataLabels());
+        $this->assertNull($obj0->getDescription());
+        $this->assertNull($obj0->getDrilldown());
+        $this->assertNull($obj0->getEvents());
+        $this->assertNull($obj0->getId());
+        $this->assertNull($obj0->getLabelrank());
+        $this->assertNull($obj0->getMarker());
+        $this->assertNull($obj0->getName());
+        $this->assertEquals(false, $obj0->getSelected());
+        $this->assertNull($obj0->getX());
+        $this->assertNull($obj0->getY());
     }
 
 }

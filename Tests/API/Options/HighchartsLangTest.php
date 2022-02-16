@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,60 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsLangTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang(true);
-
-        $this->assertNull($obj1->getContextButtonTitle());
-        $this->assertNull($obj1->getDecimalPoint());
-        $this->assertNull($obj1->getDownloadJPEG());
-        $this->assertNull($obj1->getDownloadPDF());
-        $this->assertNull($obj1->getDownloadPNG());
-        $this->assertNull($obj1->getDownloadSVG());
-        $this->assertNull($obj1->getDrillUpText());
-        $this->assertNull($obj1->getInvalidDate());
-        $this->assertNull($obj1->getLoading());
-        $this->assertNull($obj1->getMonths());
-        $this->assertNull($obj1->getNoData());
-        $this->assertNull($obj1->getNumericSymbolMagnitude());
-        $this->assertNull($obj1->getNumericSymbols());
-        $this->assertNull($obj1->getPrintChart());
-        $this->assertNull($obj1->getResetZoom());
-        $this->assertNull($obj1->getResetZoomTitle());
-        $this->assertNull($obj1->getShortMonths());
-        $this->assertNull($obj1->getShortWeekdays());
-        $this->assertNull($obj1->getThousandsSep());
-        $this->assertNull($obj1->getWeekdays());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang(false);
-
-        $this->assertEquals("Chart context menu", $obj0->getContextButtonTitle());
-        $this->assertEquals(".", $obj0->getDecimalPoint());
-        $this->assertEquals("Download JPEG image", $obj0->getDownloadJPEG());
-        $this->assertEquals("Download PDF document", $obj0->getDownloadPDF());
-        $this->assertEquals("Download PNG image", $obj0->getDownloadPNG());
-        $this->assertEquals("Download SVG vector image", $obj0->getDownloadSVG());
-        $this->assertEquals("Back to {series.name}", $obj0->getDrillUpText());
-        $this->assertNull($obj0->getInvalidDate());
-        $this->assertEquals("Loading...", $obj0->getLoading());
-        $this->assertEquals(["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], $obj0->getMonths());
-        $this->assertEquals("No data to display", $obj0->getNoData());
-        $this->assertEquals(1000, $obj0->getNumericSymbolMagnitude());
-        $this->assertEquals(["k", "M", "G", "T", "P", "E"], $obj0->getNumericSymbols());
-        $this->assertEquals("Print chart", $obj0->getPrintChart());
-        $this->assertEquals("Reset zoom", $obj0->getResetZoom());
-        $this->assertEquals("Reset zoom level 1:1", $obj0->getResetZoomTitle());
-        $this->assertEquals(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], $obj0->getShortMonths());
-        $this->assertNull($obj0->getShortWeekdays());
-        $this->assertNull($obj0->getThousandsSep());
-        $this->assertEquals(["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], $obj0->getWeekdays());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -196,6 +142,60 @@ final class HighchartsLangTest extends AbstractTestCase {
 
         $res20 = ["contextButtonTitle" => "7a5efd58f7f05365b0f3f4b9573d73a9", "decimalPoint" => "7d9af7a21241609a979bda8ca517044c", "downloadJPEG" => "35ef8afd48b58aed282a3dbcc908d9f6", "downloadPDF" => "aa023eae5abd2e0879bec81e092e66d5", "downloadPNG" => "e1df48f80c5798d2f9c4d6d547716ae0", "downloadSVG" => "003855f2b7922a03bcb46e7b43b22bc7", "drillUpText" => "7398f774f17ac4f9f0eb0b21c9a88990", "invalidDate" => "bdb500c6e404d6c0ca66ff50b8d61885", "loading" => "a14fa2166ed698f3d04061f57e5ab9b9", "months" => ["months" => "da36cfaf48b9e19896e23e1207040d1e"], "noData" => "a63552597cd61a815eed873c5235c18e", "numericSymbolMagnitude" => 60, "numericSymbols" => ["numericSymbols" => "e1dfcadcb412bd09f22c6686e6801994"], "printChart" => "864d4f633659213ec0e69fc169a4bac1", "resetZoom" => "3b4f63d9335b37193695773c54d06634", "resetZoomTitle" => "4644b6dcf8cb64bc947a3d7617d98cdd", "shortMonths" => ["shortMonths" => "7cfa6eb2e9f41003ac5c121106dc32c1"], "shortWeekdays" => ["shortWeekdays" => "f232077d652edee073a547d6f8c9dbaa"], "thousandsSep" => "62ca5281092a9f16f951c5b81a9e25f9", "weekdays" => ["weekdays" => "92b9604ffb8fe10577de981be625a6d1"]];
         $this->assertEquals($res20, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang(true);
+
+        $this->assertNull($obj1->getContextButtonTitle());
+        $this->assertNull($obj1->getDecimalPoint());
+        $this->assertNull($obj1->getDownloadJPEG());
+        $this->assertNull($obj1->getDownloadPDF());
+        $this->assertNull($obj1->getDownloadPNG());
+        $this->assertNull($obj1->getDownloadSVG());
+        $this->assertNull($obj1->getDrillUpText());
+        $this->assertNull($obj1->getInvalidDate());
+        $this->assertNull($obj1->getLoading());
+        $this->assertNull($obj1->getMonths());
+        $this->assertNull($obj1->getNoData());
+        $this->assertNull($obj1->getNumericSymbolMagnitude());
+        $this->assertNull($obj1->getNumericSymbols());
+        $this->assertNull($obj1->getPrintChart());
+        $this->assertNull($obj1->getResetZoom());
+        $this->assertNull($obj1->getResetZoomTitle());
+        $this->assertNull($obj1->getShortMonths());
+        $this->assertNull($obj1->getShortWeekdays());
+        $this->assertNull($obj1->getThousandsSep());
+        $this->assertNull($obj1->getWeekdays());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsLang(false);
+
+        $this->assertEquals("Chart context menu", $obj0->getContextButtonTitle());
+        $this->assertEquals(".", $obj0->getDecimalPoint());
+        $this->assertEquals("Download JPEG image", $obj0->getDownloadJPEG());
+        $this->assertEquals("Download PDF document", $obj0->getDownloadPDF());
+        $this->assertEquals("Download PNG image", $obj0->getDownloadPNG());
+        $this->assertEquals("Download SVG vector image", $obj0->getDownloadSVG());
+        $this->assertEquals("Back to {series.name}", $obj0->getDrillUpText());
+        $this->assertNull($obj0->getInvalidDate());
+        $this->assertEquals("Loading...", $obj0->getLoading());
+        $this->assertEquals(["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], $obj0->getMonths());
+        $this->assertEquals("No data to display", $obj0->getNoData());
+        $this->assertEquals(1000, $obj0->getNumericSymbolMagnitude());
+        $this->assertEquals(["k", "M", "G", "T", "P", "E"], $obj0->getNumericSymbols());
+        $this->assertEquals("Print chart", $obj0->getPrintChart());
+        $this->assertEquals("Reset zoom", $obj0->getResetZoom());
+        $this->assertEquals("Reset zoom level 1:1", $obj0->getResetZoomTitle());
+        $this->assertEquals(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], $obj0->getShortMonths());
+        $this->assertNull($obj0->getShortWeekdays());
+        $this->assertNull($obj0->getThousandsSep());
+        $this->assertEquals(["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], $obj0->getWeekdays());
     }
 
 }

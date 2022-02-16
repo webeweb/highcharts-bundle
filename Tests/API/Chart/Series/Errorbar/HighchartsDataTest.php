@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,44 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsDataTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Errorbar\HighchartsData(true);
-
-        $this->assertNull($obj1->getClassName());
-        $this->assertNull($obj1->getColor());
-        $this->assertNull($obj1->getColorIndex());
-        $this->assertNull($obj1->getDescription());
-        $this->assertNull($obj1->getEvents());
-        $this->assertNull($obj1->getHigh());
-        $this->assertNull($obj1->getId());
-        $this->assertNull($obj1->getLabelrank());
-        $this->assertNull($obj1->getLow());
-        $this->assertNull($obj1->getName());
-        $this->assertNull($obj1->getSelected());
-        $this->assertNull($obj1->getX());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Errorbar\HighchartsData(false);
-
-        $this->assertNull($obj0->getClassName());
-        $this->assertNull($obj0->getColor());
-        $this->assertNull($obj0->getColorIndex());
-        $this->assertNull($obj0->getDescription());
-        $this->assertNull($obj0->getEvents());
-        $this->assertNull($obj0->getHigh());
-        $this->assertNull($obj0->getId());
-        $this->assertNull($obj0->getLabelrank());
-        $this->assertNull($obj0->getLow());
-        $this->assertNull($obj0->getName());
-        $this->assertEquals(false, $obj0->getSelected());
-        $this->assertNull($obj0->getX());
-    }
 
     /**
      * Tests clear()
@@ -170,6 +132,44 @@ final class HighchartsDataTest extends AbstractTestCase {
 
         $res12 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "colorIndex" => 58, "description" => "67daf92c833c41c95db874e18fcb2786", "events" => [], "high" => 55, "id" => "b80bb7740288fda1f201890375a60c8f", "labelrank" => 84, "low" => 53, "name" => "b068931cc450442b63f5b3d276ea4297", "selected" => 1, "x" => 35];
         $this->assertEquals($res12, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Errorbar\HighchartsData(true);
+
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getColorIndex());
+        $this->assertNull($obj1->getDescription());
+        $this->assertNull($obj1->getEvents());
+        $this->assertNull($obj1->getHigh());
+        $this->assertNull($obj1->getId());
+        $this->assertNull($obj1->getLabelrank());
+        $this->assertNull($obj1->getLow());
+        $this->assertNull($obj1->getName());
+        $this->assertNull($obj1->getSelected());
+        $this->assertNull($obj1->getX());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Errorbar\HighchartsData(false);
+
+        $this->assertNull($obj0->getClassName());
+        $this->assertNull($obj0->getColor());
+        $this->assertNull($obj0->getColorIndex());
+        $this->assertNull($obj0->getDescription());
+        $this->assertNull($obj0->getEvents());
+        $this->assertNull($obj0->getHigh());
+        $this->assertNull($obj0->getId());
+        $this->assertNull($obj0->getLabelrank());
+        $this->assertNull($obj0->getLow());
+        $this->assertNull($obj0->getName());
+        $this->assertEquals(false, $obj0->getSelected());
+        $this->assertNull($obj0->getX());
     }
 
 }

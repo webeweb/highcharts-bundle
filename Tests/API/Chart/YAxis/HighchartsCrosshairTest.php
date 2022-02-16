@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,32 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsCrosshairTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsCrosshair(true);
-
-        $this->assertNull($obj1->getClassName());
-        $this->assertNull($obj1->getColor());
-        $this->assertNull($obj1->getDashStyle());
-        $this->assertNull($obj1->getSnap());
-        $this->assertNull($obj1->getWidth());
-        $this->assertNull($obj1->getZIndex());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsCrosshair(false);
-
-        $this->assertNull($obj0->getClassName());
-        $this->assertNull($obj0->getColor());
-        $this->assertEquals("Solid", $obj0->getDashStyle());
-        $this->assertEquals(true, $obj0->getSnap());
-        $this->assertNull($obj0->getWidth());
-        $this->assertEquals(2, $obj0->getZIndex());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -98,6 +72,32 @@ final class HighchartsCrosshairTest extends AbstractTestCase {
 
         $res6 = ["className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "dashStyle" => "LongDashDotDot", "snap" => 1, "width" => 10, "zIndex" => 19];
         $this->assertEquals($res6, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsCrosshair(true);
+
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getDashStyle());
+        $this->assertNull($obj1->getSnap());
+        $this->assertNull($obj1->getWidth());
+        $this->assertNull($obj1->getZIndex());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsCrosshair(false);
+
+        $this->assertNull($obj0->getClassName());
+        $this->assertNull($obj0->getColor());
+        $this->assertEquals("Solid", $obj0->getDashStyle());
+        $this->assertEquals(true, $obj0->getSnap());
+        $this->assertNull($obj0->getWidth());
+        $this->assertEquals(2, $obj0->getZIndex());
     }
 
 }

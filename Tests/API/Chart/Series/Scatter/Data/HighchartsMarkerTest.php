@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,38 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsMarkerTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Scatter\Data\HighchartsMarker(true);
-
-        $this->assertNull($obj1->getEnabled());
-        $this->assertNull($obj1->getFillColor());
-        $this->assertNull($obj1->getHeight());
-        $this->assertNull($obj1->getLineColor());
-        $this->assertNull($obj1->getLineWidth());
-        $this->assertNull($obj1->getRadius());
-        $this->assertNull($obj1->getStates());
-        $this->assertNull($obj1->getSymbol());
-        $this->assertNull($obj1->getWidth());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Scatter\Data\HighchartsMarker(false);
-
-        $this->assertNull($obj0->getEnabled());
-        $this->assertNull($obj0->getFillColor());
-        $this->assertNull($obj0->getHeight());
-        $this->assertEquals("#ffffff", $obj0->getLineColor());
-        $this->assertEquals(0, $obj0->getLineWidth());
-        $this->assertEquals(4, $obj0->getRadius());
-        $this->assertNull($obj0->getStates());
-        $this->assertNull($obj0->getSymbol());
-        $this->assertNull($obj0->getWidth());
-    }
 
     /**
      * Tests clear()
@@ -149,6 +117,38 @@ final class HighchartsMarkerTest extends AbstractTestCase {
 
         $res9 = ["enabled" => 1, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "height" => 34, "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 30, "radius" => 7, "states" => [], "symbol" => "triangle-down", "width" => 1];
         $this->assertEquals($res9, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Scatter\Data\HighchartsMarker(true);
+
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getFillColor());
+        $this->assertNull($obj1->getHeight());
+        $this->assertNull($obj1->getLineColor());
+        $this->assertNull($obj1->getLineWidth());
+        $this->assertNull($obj1->getRadius());
+        $this->assertNull($obj1->getStates());
+        $this->assertNull($obj1->getSymbol());
+        $this->assertNull($obj1->getWidth());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Scatter\Data\HighchartsMarker(false);
+
+        $this->assertNull($obj0->getEnabled());
+        $this->assertNull($obj0->getFillColor());
+        $this->assertNull($obj0->getHeight());
+        $this->assertEquals("#ffffff", $obj0->getLineColor());
+        $this->assertEquals(0, $obj0->getLineWidth());
+        $this->assertEquals(4, $obj0->getRadius());
+        $this->assertNull($obj0->getStates());
+        $this->assertNull($obj0->getSymbol());
+        $this->assertNull($obj0->getWidth());
     }
 
 }

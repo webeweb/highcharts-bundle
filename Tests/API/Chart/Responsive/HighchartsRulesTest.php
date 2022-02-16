@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,19 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsRulesTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
-
-        $this->assertNull($obj1->getChartOptions());
-        $this->assertNull($obj1->getCondition());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -65,6 +52,19 @@ final class HighchartsRulesTest extends AbstractTestCase {
 
         $res2 = ["chartOptions" => ["chartOptions" => "0788f6dc968cd56a32e6d11f1134e345"], "condition" => ["condition" => "3f9178c25b78ed8bed19091bcb62e266"]];
         $this->assertEquals($res2, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\HighchartsRules(true);
+
+        $this->assertNull($obj1->getChartOptions());
+        $this->assertNull($obj1->getCondition());
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,30 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsConditionTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(true);
-
-        $this->assertNull($obj1->getCallback());
-        $this->assertNull($obj1->getMaxHeight());
-        $this->assertNull($obj1->getMaxWidth());
-        $this->assertNull($obj1->getMinHeight());
-        $this->assertNull($obj1->getMinWidth());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(false);
-
-        $this->assertNull($obj0->getCallback());
-        $this->assertNull($obj0->getMaxHeight());
-        $this->assertNull($obj0->getMaxWidth());
-        $this->assertEquals(0, $obj0->getMinHeight());
-        $this->assertEquals(0, $obj0->getMinWidth());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -91,6 +67,30 @@ final class HighchartsConditionTest extends AbstractTestCase {
 
         $res5 = ["callback" => "924a8ceeac17f54d3be3f8cdf1c04eb2", "maxHeight" => 16, "maxWidth" => 85, "minHeight" => 13, "minWidth" => 100];
         $this->assertEquals($res5, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(true);
+
+        $this->assertNull($obj1->getCallback());
+        $this->assertNull($obj1->getMaxHeight());
+        $this->assertNull($obj1->getMaxWidth());
+        $this->assertNull($obj1->getMinHeight());
+        $this->assertNull($obj1->getMinWidth());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules\HighchartsCondition(false);
+
+        $this->assertNull($obj0->getCallback());
+        $this->assertNull($obj0->getMaxHeight());
+        $this->assertNull($obj0->getMaxWidth());
+        $this->assertEquals(0, $obj0->getMinHeight());
+        $this->assertEquals(0, $obj0->getMinWidth());
     }
 
 }

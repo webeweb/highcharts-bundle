@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,38 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsLabelTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\PlotLines\HighchartsLabel(true);
-
-        $this->assertNull($obj1->getAlign());
-        $this->assertNull($obj1->getRotation());
-        $this->assertNull($obj1->getStyle());
-        $this->assertNull($obj1->getText());
-        $this->assertNull($obj1->getTextAlign());
-        $this->assertNull($obj1->getUseHTML());
-        $this->assertNull($obj1->getVerticalAlign());
-        $this->assertNull($obj1->getX());
-        $this->assertNull($obj1->getY());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\PlotLines\HighchartsLabel(false);
-
-        $this->assertEquals("left", $obj0->getAlign());
-        $this->assertNull($obj0->getRotation());
-        $this->assertNull($obj0->getStyle());
-        $this->assertNull($obj0->getText());
-        $this->assertNull($obj0->getTextAlign());
-        $this->assertEquals(false, $obj0->getUseHTML());
-        $this->assertEquals("top", $obj0->getVerticalAlign());
-        $this->assertNull($obj0->getX());
-        $this->assertNull($obj0->getY());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -119,6 +87,38 @@ final class HighchartsLabelTest extends AbstractTestCase {
 
         $res9 = ["align" => "f792d1afb0399dce47533bead9d71a8a", "rotation" => 29, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "textAlign" => "6e1fcbf7c065b2e7fef4cdc9bae3fe53", "useHTML" => 0, "verticalAlign" => "bottom", "x" => 81, "y" => 1];
         $this->assertEquals($res9, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\PlotLines\HighchartsLabel(true);
+
+        $this->assertNull($obj1->getAlign());
+        $this->assertNull($obj1->getRotation());
+        $this->assertNull($obj1->getStyle());
+        $this->assertNull($obj1->getText());
+        $this->assertNull($obj1->getTextAlign());
+        $this->assertNull($obj1->getUseHTML());
+        $this->assertNull($obj1->getVerticalAlign());
+        $this->assertNull($obj1->getX());
+        $this->assertNull($obj1->getY());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\PlotLines\HighchartsLabel(false);
+
+        $this->assertEquals("left", $obj0->getAlign());
+        $this->assertNull($obj0->getRotation());
+        $this->assertNull($obj0->getStyle());
+        $this->assertNull($obj0->getText());
+        $this->assertNull($obj0->getTextAlign());
+        $this->assertEquals(false, $obj0->getUseHTML());
+        $this->assertEquals("top", $obj0->getVerticalAlign());
+        $this->assertNull($obj0->getX());
+        $this->assertNull($obj0->getY());
     }
 
 }

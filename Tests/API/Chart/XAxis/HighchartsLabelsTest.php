@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,56 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsLabelsTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsLabels(true);
-
-        $this->assertNull($obj1->getAlign());
-        $this->assertNull($obj1->getAutoRotation());
-        $this->assertNull($obj1->getAutoRotationLimit());
-        $this->assertNull($obj1->getDistance());
-        $this->assertNull($obj1->getEnabled());
-        $this->assertNull($obj1->getFormat());
-        $this->assertNull($obj1->getFormatter());
-        $this->assertNull($obj1->getOverflow());
-        $this->assertNull($obj1->getPadding());
-        $this->assertNull($obj1->getReserveSpace());
-        $this->assertNull($obj1->getRotation());
-        $this->assertNull($obj1->getStaggerLines());
-        $this->assertNull($obj1->getStep());
-        $this->assertNull($obj1->getStyle());
-        $this->assertNull($obj1->getUseHTML());
-        $this->assertNull($obj1->getX());
-        $this->assertNull($obj1->getY());
-        $this->assertNull($obj1->getZIndex());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsLabels(false);
-
-        $this->assertNull($obj0->getAlign());
-        $this->assertEquals([-45], $obj0->getAutoRotation());
-        $this->assertEquals(80, $obj0->getAutoRotationLimit());
-        $this->assertEquals(15, $obj0->getDistance());
-        $this->assertEquals(true, $obj0->getEnabled());
-        $this->assertEquals("{value}", $obj0->getFormat());
-        $this->assertNull($obj0->getFormatter());
-        $this->assertNull($obj0->getOverflow());
-        $this->assertEquals(5, $obj0->getPadding());
-        $this->assertEquals(true, $obj0->getReserveSpace());
-        $this->assertEquals(0, $obj0->getRotation());
-        $this->assertNull($obj0->getStaggerLines());
-        $this->assertNull($obj0->getStep());
-        $this->assertEquals(["color" => "#666666", "cursor" => "default", "fontSize" => "11px"], $obj0->getStyle());
-        $this->assertEquals(false, $obj0->getUseHTML());
-        $this->assertEquals(0, $obj0->getX());
-        $this->assertNull($obj0->getY());
-        $this->assertEquals(7, $obj0->getZIndex());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -182,6 +132,56 @@ final class HighchartsLabelsTest extends AbstractTestCase {
 
         $res18 = ["align" => "right", "autoRotation" => ["autoRotation" => "df2870a8069e229823782cfb008a95ed"], "autoRotationLimit" => 78, "distance" => 72, "enabled" => 1, "format" => "1ddcb92ade31c8fbd370001f9b29a7d9", "formatter" => "f2ffc59487832cbad265a8fef2133592", "overflow" => "justify", "padding" => 32, "reserveSpace" => 1, "rotation" => 84, "staggerLines" => 51, "step" => 53, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "useHTML" => 0, "x" => 41, "y" => 36, "zIndex" => 74];
         $this->assertEquals($res18, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsLabels(true);
+
+        $this->assertNull($obj1->getAlign());
+        $this->assertNull($obj1->getAutoRotation());
+        $this->assertNull($obj1->getAutoRotationLimit());
+        $this->assertNull($obj1->getDistance());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getFormat());
+        $this->assertNull($obj1->getFormatter());
+        $this->assertNull($obj1->getOverflow());
+        $this->assertNull($obj1->getPadding());
+        $this->assertNull($obj1->getReserveSpace());
+        $this->assertNull($obj1->getRotation());
+        $this->assertNull($obj1->getStaggerLines());
+        $this->assertNull($obj1->getStep());
+        $this->assertNull($obj1->getStyle());
+        $this->assertNull($obj1->getUseHTML());
+        $this->assertNull($obj1->getX());
+        $this->assertNull($obj1->getY());
+        $this->assertNull($obj1->getZIndex());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\XAxis\HighchartsLabels(false);
+
+        $this->assertNull($obj0->getAlign());
+        $this->assertEquals([-45], $obj0->getAutoRotation());
+        $this->assertEquals(80, $obj0->getAutoRotationLimit());
+        $this->assertEquals(15, $obj0->getDistance());
+        $this->assertEquals(true, $obj0->getEnabled());
+        $this->assertEquals("{value}", $obj0->getFormat());
+        $this->assertNull($obj0->getFormatter());
+        $this->assertNull($obj0->getOverflow());
+        $this->assertEquals(5, $obj0->getPadding());
+        $this->assertEquals(true, $obj0->getReserveSpace());
+        $this->assertEquals(0, $obj0->getRotation());
+        $this->assertNull($obj0->getStaggerLines());
+        $this->assertNull($obj0->getStep());
+        $this->assertEquals(["color" => "#666666", "cursor" => "default", "fontSize" => "11px"], $obj0->getStyle());
+        $this->assertEquals(false, $obj0->getUseHTML());
+        $this->assertEquals(0, $obj0->getX());
+        $this->assertNull($obj0->getY());
+        $this->assertEquals(7, $obj0->getZIndex());
     }
 
 }

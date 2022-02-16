@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,24 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsEventsTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Areaspline\Point\HighchartsEvents(true);
-
-        $this->assertNull($obj1->getClick());
-        $this->assertNull($obj1->getMouseOut());
-        $this->assertNull($obj1->getMouseOver());
-        $this->assertNull($obj1->getRemove());
-        $this->assertNull($obj1->getSelect());
-        $this->assertNull($obj1->getUnselect());
-        $this->assertNull($obj1->getUpdate());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -95,6 +77,24 @@ final class HighchartsEventsTest extends AbstractTestCase {
 
         $res7 = ["click" => "a8affc088cbca89fa20dbd98c91362e4", "mouseOut" => "efc487f286f5bca976fafe58cb6e7895", "mouseOver" => "1f1a5f011c50a092eb06446d724dd573", "remove" => "0f6969d7052da9261e31ddb6e88c136e", "select" => "99938282f04071859941e18f16efcf42", "unselect" => "223f2d725e5f4ddb92b585d87421adbd", "update" => "3ac340832f29c11538fbe2d6f75e8bcc"];
         $this->assertEquals($res7, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Areaspline\Point\HighchartsEvents(true);
+
+        $this->assertNull($obj1->getClick());
+        $this->assertNull($obj1->getMouseOut());
+        $this->assertNull($obj1->getMouseOver());
+        $this->assertNull($obj1->getRemove());
+        $this->assertNull($obj1->getSelect());
+        $this->assertNull($obj1->getUnselect());
+        $this->assertNull($obj1->getUpdate());
     }
 
 }

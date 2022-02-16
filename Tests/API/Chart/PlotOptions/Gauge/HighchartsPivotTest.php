@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,28 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsPivotTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(true);
-
-        $this->assertNull($obj1->getBackgroundColor());
-        $this->assertNull($obj1->getBorderColor());
-        $this->assertNull($obj1->getBorderWidth());
-        $this->assertNull($obj1->getRadius());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(false);
-
-        $this->assertEquals("#000000", $obj0->getBackgroundColor());
-        $this->assertEquals("#cccccc", $obj0->getBorderColor());
-        $this->assertEquals(0, $obj0->getBorderWidth());
-        $this->assertEquals(5, $obj0->getRadius());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -84,6 +62,28 @@ final class HighchartsPivotTest extends AbstractTestCase {
 
         $res4 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 60, "radius" => 67];
         $this->assertEquals($res4, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(true);
+
+        $this->assertNull($obj1->getBackgroundColor());
+        $this->assertNull($obj1->getBorderColor());
+        $this->assertNull($obj1->getBorderWidth());
+        $this->assertNull($obj1->getRadius());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\Gauge\HighchartsPivot(false);
+
+        $this->assertEquals("#000000", $obj0->getBackgroundColor());
+        $this->assertEquals("#cccccc", $obj0->getBorderColor());
+        $this->assertEquals(0, $obj0->getBorderWidth());
+        $this->assertEquals(5, $obj0->getRadius());
     }
 
 }

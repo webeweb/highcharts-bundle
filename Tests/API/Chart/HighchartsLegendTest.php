@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,94 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsLegendTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(true);
-
-        $this->assertNull($obj1->getAlign());
-        $this->assertNull($obj1->getBackgroundColor());
-        $this->assertNull($obj1->getBorderColor());
-        $this->assertNull($obj1->getBorderRadius());
-        $this->assertNull($obj1->getBorderWidth());
-        $this->assertNull($obj1->getEnabled());
-        $this->assertNull($obj1->getFloating());
-        $this->assertNull($obj1->getItemDistance());
-        $this->assertNull($obj1->getItemHiddenStyle());
-        $this->assertNull($obj1->getItemHoverStyle());
-        $this->assertNull($obj1->getItemMarginBottom());
-        $this->assertNull($obj1->getItemMarginTop());
-        $this->assertNull($obj1->getItemStyle());
-        $this->assertNull($obj1->getItemWidth());
-        $this->assertNull($obj1->getLabelFormat());
-        $this->assertNull($obj1->getLabelFormatter());
-        $this->assertNull($obj1->getLayout());
-        $this->assertNull($obj1->getLineHeight());
-        $this->assertNull($obj1->getMargin());
-        $this->assertNull($obj1->getMaxHeight());
-        $this->assertNull($obj1->getNavigation());
-        $this->assertNull($obj1->getPadding());
-        $this->assertNull($obj1->getReversed());
-        $this->assertNull($obj1->getRtl());
-        $this->assertNull($obj1->getShadow());
-        $this->assertNull($obj1->getSquareSymbol());
-        $this->assertNull($obj1->getStyle());
-        $this->assertNull($obj1->getSymbolHeight());
-        $this->assertNull($obj1->getSymbolPadding());
-        $this->assertNull($obj1->getSymbolRadius());
-        $this->assertNull($obj1->getSymbolWidth());
-        $this->assertNull($obj1->getTitle());
-        $this->assertNull($obj1->getUseHTML());
-        $this->assertNull($obj1->getVerticalAlign());
-        $this->assertNull($obj1->getWidth());
-        $this->assertNull($obj1->getX());
-        $this->assertNull($obj1->getY());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(false);
-
-        $this->assertEquals("center", $obj0->getAlign());
-        $this->assertNull($obj0->getBackgroundColor());
-        $this->assertEquals("#999999", $obj0->getBorderColor());
-        $this->assertEquals(0, $obj0->getBorderRadius());
-        $this->assertEquals(0, $obj0->getBorderWidth());
-        $this->assertEquals(true, $obj0->getEnabled());
-        $this->assertEquals(false, $obj0->getFloating());
-        $this->assertEquals(20, $obj0->getItemDistance());
-        $this->assertEquals(["color" => "#cccccc"], $obj0->getItemHiddenStyle());
-        $this->assertEquals(["color" => "#000000"], $obj0->getItemHoverStyle());
-        $this->assertEquals(0, $obj0->getItemMarginBottom());
-        $this->assertEquals(0, $obj0->getItemMarginTop());
-        $this->assertEquals(["color" => "#333333", "cursor" => "pointer", "fontSize" => "12px", "fontWeight" => "bold", "textOverflow" => "ellipsis"], $obj0->getItemStyle());
-        $this->assertNull($obj0->getItemWidth());
-        $this->assertEquals("{name}", $obj0->getLabelFormat());
-        $this->assertNull($obj0->getLabelFormatter());
-        $this->assertEquals("horizontal", $obj0->getLayout());
-        $this->assertEquals(16, $obj0->getLineHeight());
-        $this->assertEquals(12, $obj0->getMargin());
-        $this->assertNull($obj0->getMaxHeight());
-        $this->assertNull($obj0->getNavigation());
-        $this->assertEquals(8, $obj0->getPadding());
-        $this->assertEquals(false, $obj0->getReversed());
-        $this->assertEquals(false, $obj0->getRtl());
-        $this->assertEquals(false, $obj0->getShadow());
-        $this->assertEquals(true, $obj0->getSquareSymbol());
-        $this->assertNull($obj0->getStyle());
-        $this->assertNull($obj0->getSymbolHeight());
-        $this->assertEquals(5, $obj0->getSymbolPadding());
-        $this->assertNull($obj0->getSymbolRadius());
-        $this->assertNull($obj0->getSymbolWidth());
-        $this->assertNull($obj0->getTitle());
-        $this->assertEquals(false, $obj0->getUseHTML());
-        $this->assertEquals("bottom", $obj0->getVerticalAlign());
-        $this->assertNull($obj0->getWidth());
-        $this->assertEquals(0, $obj0->getX());
-        $this->assertEquals(0, $obj0->getY());
-    }
 
     /**
      * Tests clear()
@@ -359,6 +271,94 @@ final class HighchartsLegendTest extends AbstractTestCase {
 
         $res37 = ["align" => "right", "backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderRadius" => 81, "borderWidth" => 29, "enabled" => 0, "floating" => 0, "itemDistance" => 95, "itemHiddenStyle" => ["itemHiddenStyle" => "85396c3e708111e2ae389e4a131b1ff8"], "itemHoverStyle" => ["itemHoverStyle" => "91e12ccdec8780b32ab867d3568c2b0c"], "itemMarginBottom" => 64, "itemMarginTop" => 90, "itemStyle" => ["itemStyle" => "5428035d6f7481541cf715e0f3e29604"], "itemWidth" => 67, "labelFormat" => "201bbcba25ee83a321df388c0f4a889d", "labelFormatter" => "9078f7787367cf94543b3bc9e92d9692", "layout" => "vertical", "lineHeight" => 10, "margin" => 41, "maxHeight" => 49, "navigation" => [], "padding" => 36, "reversed" => 0, "rtl" => 0, "shadow" => 0, "squareSymbol" => 1, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "symbolHeight" => 61, "symbolPadding" => 64, "symbolRadius" => 89, "symbolWidth" => 82, "title" => [], "useHTML" => 1, "verticalAlign" => "bottom", "width" => 50, "x" => 100, "y" => 92];
         $this->assertEquals($res37, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(true);
+
+        $this->assertNull($obj1->getAlign());
+        $this->assertNull($obj1->getBackgroundColor());
+        $this->assertNull($obj1->getBorderColor());
+        $this->assertNull($obj1->getBorderRadius());
+        $this->assertNull($obj1->getBorderWidth());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getFloating());
+        $this->assertNull($obj1->getItemDistance());
+        $this->assertNull($obj1->getItemHiddenStyle());
+        $this->assertNull($obj1->getItemHoverStyle());
+        $this->assertNull($obj1->getItemMarginBottom());
+        $this->assertNull($obj1->getItemMarginTop());
+        $this->assertNull($obj1->getItemStyle());
+        $this->assertNull($obj1->getItemWidth());
+        $this->assertNull($obj1->getLabelFormat());
+        $this->assertNull($obj1->getLabelFormatter());
+        $this->assertNull($obj1->getLayout());
+        $this->assertNull($obj1->getLineHeight());
+        $this->assertNull($obj1->getMargin());
+        $this->assertNull($obj1->getMaxHeight());
+        $this->assertNull($obj1->getNavigation());
+        $this->assertNull($obj1->getPadding());
+        $this->assertNull($obj1->getReversed());
+        $this->assertNull($obj1->getRtl());
+        $this->assertNull($obj1->getShadow());
+        $this->assertNull($obj1->getSquareSymbol());
+        $this->assertNull($obj1->getStyle());
+        $this->assertNull($obj1->getSymbolHeight());
+        $this->assertNull($obj1->getSymbolPadding());
+        $this->assertNull($obj1->getSymbolRadius());
+        $this->assertNull($obj1->getSymbolWidth());
+        $this->assertNull($obj1->getTitle());
+        $this->assertNull($obj1->getUseHTML());
+        $this->assertNull($obj1->getVerticalAlign());
+        $this->assertNull($obj1->getWidth());
+        $this->assertNull($obj1->getX());
+        $this->assertNull($obj1->getY());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(false);
+
+        $this->assertEquals("center", $obj0->getAlign());
+        $this->assertNull($obj0->getBackgroundColor());
+        $this->assertEquals("#999999", $obj0->getBorderColor());
+        $this->assertEquals(0, $obj0->getBorderRadius());
+        $this->assertEquals(0, $obj0->getBorderWidth());
+        $this->assertEquals(true, $obj0->getEnabled());
+        $this->assertEquals(false, $obj0->getFloating());
+        $this->assertEquals(20, $obj0->getItemDistance());
+        $this->assertEquals(["color" => "#cccccc"], $obj0->getItemHiddenStyle());
+        $this->assertEquals(["color" => "#000000"], $obj0->getItemHoverStyle());
+        $this->assertEquals(0, $obj0->getItemMarginBottom());
+        $this->assertEquals(0, $obj0->getItemMarginTop());
+        $this->assertEquals(["color" => "#333333", "cursor" => "pointer", "fontSize" => "12px", "fontWeight" => "bold", "textOverflow" => "ellipsis"], $obj0->getItemStyle());
+        $this->assertNull($obj0->getItemWidth());
+        $this->assertEquals("{name}", $obj0->getLabelFormat());
+        $this->assertNull($obj0->getLabelFormatter());
+        $this->assertEquals("horizontal", $obj0->getLayout());
+        $this->assertEquals(16, $obj0->getLineHeight());
+        $this->assertEquals(12, $obj0->getMargin());
+        $this->assertNull($obj0->getMaxHeight());
+        $this->assertNull($obj0->getNavigation());
+        $this->assertEquals(8, $obj0->getPadding());
+        $this->assertEquals(false, $obj0->getReversed());
+        $this->assertEquals(false, $obj0->getRtl());
+        $this->assertEquals(false, $obj0->getShadow());
+        $this->assertEquals(true, $obj0->getSquareSymbol());
+        $this->assertNull($obj0->getStyle());
+        $this->assertNull($obj0->getSymbolHeight());
+        $this->assertEquals(5, $obj0->getSymbolPadding());
+        $this->assertNull($obj0->getSymbolRadius());
+        $this->assertNull($obj0->getSymbolWidth());
+        $this->assertNull($obj0->getTitle());
+        $this->assertEquals(false, $obj0->getUseHTML());
+        $this->assertEquals("bottom", $obj0->getVerticalAlign());
+        $this->assertNull($obj0->getWidth());
+        $this->assertEquals(0, $obj0->getX());
+        $this->assertEquals(0, $obj0->getY());
     }
 
 }

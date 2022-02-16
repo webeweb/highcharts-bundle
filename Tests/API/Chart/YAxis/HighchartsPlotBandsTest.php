@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,46 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsPlotBandsTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands(true);
-
-        $this->assertNull($obj1->getBorderColor());
-        $this->assertNull($obj1->getBorderWidth());
-        $this->assertNull($obj1->getClassName());
-        $this->assertNull($obj1->getColor());
-        $this->assertNull($obj1->getEvents());
-        $this->assertNull($obj1->getFrom());
-        $this->assertNull($obj1->getId());
-        $this->assertNull($obj1->getInnerRadius());
-        $this->assertNull($obj1->getLabel());
-        $this->assertNull($obj1->getOuterRadius());
-        $this->assertNull($obj1->getThickness());
-        $this->assertNull($obj1->getTo());
-        $this->assertNull($obj1->getZIndex());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands(false);
-
-        $this->assertNull($obj0->getBorderColor());
-        $this->assertEquals(0, $obj0->getBorderWidth());
-        $this->assertNull($obj0->getClassName());
-        $this->assertNull($obj0->getColor());
-        $this->assertNull($obj0->getEvents());
-        $this->assertNull($obj0->getFrom());
-        $this->assertNull($obj0->getId());
-        $this->assertNull($obj0->getInnerRadius());
-        $this->assertNull($obj0->getLabel());
-        $this->assertEquals("100%", $obj0->getOuterRadius());
-        $this->assertEquals("10", $obj0->getThickness());
-        $this->assertNull($obj0->getTo());
-        $this->assertNull($obj0->getZIndex());
-    }
 
     /**
      * Tests clear()
@@ -177,6 +137,46 @@ final class HighchartsPlotBandsTest extends AbstractTestCase {
 
         $res13 = ["borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 62, "className" => "6f66e878c62db60568a3487869695820", "color" => "70dda5dfb8053dc6d1c492574bce9bfd", "events" => ["events" => "16908b0605f2645dfcb4c3a8d248cef3"], "from" => 67, "id" => "b80bb7740288fda1f201890375a60c8f", "innerRadius" => 47, "label" => [], "outerRadius" => 82, "thickness" => 0, "to" => 57, "zIndex" => 68];
         $this->assertEquals($res13, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands(true);
+
+        $this->assertNull($obj1->getBorderColor());
+        $this->assertNull($obj1->getBorderWidth());
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getColor());
+        $this->assertNull($obj1->getEvents());
+        $this->assertNull($obj1->getFrom());
+        $this->assertNull($obj1->getId());
+        $this->assertNull($obj1->getInnerRadius());
+        $this->assertNull($obj1->getLabel());
+        $this->assertNull($obj1->getOuterRadius());
+        $this->assertNull($obj1->getThickness());
+        $this->assertNull($obj1->getTo());
+        $this->assertNull($obj1->getZIndex());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\YAxis\HighchartsPlotBands(false);
+
+        $this->assertNull($obj0->getBorderColor());
+        $this->assertEquals(0, $obj0->getBorderWidth());
+        $this->assertNull($obj0->getClassName());
+        $this->assertNull($obj0->getColor());
+        $this->assertNull($obj0->getEvents());
+        $this->assertNull($obj0->getFrom());
+        $this->assertNull($obj0->getId());
+        $this->assertNull($obj0->getInnerRadius());
+        $this->assertNull($obj0->getLabel());
+        $this->assertEquals("100%", $obj0->getOuterRadius());
+        $this->assertEquals("10", $obj0->getThickness());
+        $this->assertNull($obj0->getTo());
+        $this->assertNull($obj0->getZIndex());
     }
 
 }

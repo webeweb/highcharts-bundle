@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,36 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsDialTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsDial(true);
-
-        $this->assertNull($obj1->getBackgroundColor());
-        $this->assertNull($obj1->getBaseLength());
-        $this->assertNull($obj1->getBaseWidth());
-        $this->assertNull($obj1->getBorderColor());
-        $this->assertNull($obj1->getBorderWidth());
-        $this->assertNull($obj1->getRadius());
-        $this->assertNull($obj1->getRearLength());
-        $this->assertNull($obj1->getTopWidth());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsDial(false);
-
-        $this->assertEquals("#000000", $obj0->getBackgroundColor());
-        $this->assertEquals("70%", $obj0->getBaseLength());
-        $this->assertEquals(3, $obj0->getBaseWidth());
-        $this->assertEquals("#cccccc", $obj0->getBorderColor());
-        $this->assertEquals(0, $obj0->getBorderWidth());
-        $this->assertEquals("80%", $obj0->getRadius());
-        $this->assertEquals("10%", $obj0->getRearLength());
-        $this->assertEquals(1, $obj0->getTopWidth());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -112,6 +82,36 @@ final class HighchartsDialTest extends AbstractTestCase {
 
         $res8 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "baseLength" => "908389f95bb7d5ec0ee86df707120146", "baseWidth" => 47, "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 12, "radius" => "fc021d54683383e5078ab9fefc4d53c8", "rearLength" => "cfeff8818f149d68732253aca8a5c4bf", "topWidth" => 30];
         $this->assertEquals($res8, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsDial(true);
+
+        $this->assertNull($obj1->getBackgroundColor());
+        $this->assertNull($obj1->getBaseLength());
+        $this->assertNull($obj1->getBaseWidth());
+        $this->assertNull($obj1->getBorderColor());
+        $this->assertNull($obj1->getBorderWidth());
+        $this->assertNull($obj1->getRadius());
+        $this->assertNull($obj1->getRearLength());
+        $this->assertNull($obj1->getTopWidth());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Gauge\HighchartsDial(false);
+
+        $this->assertEquals("#000000", $obj0->getBackgroundColor());
+        $this->assertEquals("70%", $obj0->getBaseLength());
+        $this->assertEquals(3, $obj0->getBaseWidth());
+        $this->assertEquals("#cccccc", $obj0->getBorderColor());
+        $this->assertEquals(0, $obj0->getBorderWidth());
+        $this->assertEquals("80%", $obj0->getRadius());
+        $this->assertEquals("10%", $obj0->getRearLength());
+        $this->assertEquals(1, $obj0->getTopWidth());
     }
 
 }

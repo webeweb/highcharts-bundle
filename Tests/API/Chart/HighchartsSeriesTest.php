@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,44 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsSeriesTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSeries(true);
-
-        $this->assertNull($obj1->getData());
-        $this->assertNull($obj1->getDataParser());
-        $this->assertNull($obj1->getDataURL());
-        $this->assertNull($obj1->getId());
-        $this->assertNull($obj1->getIndex());
-        $this->assertNull($obj1->getLegendIndex());
-        $this->assertNull($obj1->getName());
-        $this->assertNull($obj1->getStack());
-        $this->assertNull($obj1->getType());
-        $this->assertNull($obj1->getXAxis());
-        $this->assertNull($obj1->getYAxis());
-        $this->assertNull($obj1->getZIndex());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSeries(false);
-
-        $this->assertNull($obj0->getData());
-        $this->assertNull($obj0->getDataParser());
-        $this->assertNull($obj0->getDataURL());
-        $this->assertNull($obj0->getId());
-        $this->assertNull($obj0->getIndex());
-        $this->assertNull($obj0->getLegendIndex());
-        $this->assertNull($obj0->getName());
-        $this->assertNull($obj0->getStack());
-        $this->assertNull($obj0->getType());
-        $this->assertEquals("0", $obj0->getXAxis());
-        $this->assertEquals("0", $obj0->getYAxis());
-        $this->assertNull($obj0->getZIndex());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -140,6 +102,44 @@ final class HighchartsSeriesTest extends AbstractTestCase {
 
         $res12 = ["data" => ["data" => "8d777f385d3dfec8815d20f7496026dc"], "dataParser" => "26911c12e7a30f2bebc2a377f4f64a22", "dataURL" => "2ebe18c8193e5056fb035560a9469c0a", "id" => "b80bb7740288fda1f201890375a60c8f", "index" => 0, "legendIndex" => 39, "name" => "b068931cc450442b63f5b3d276ea4297", "stack" => "fac2a47adace059aff113283a03f6760", "type" => "waterfall", "xAxis" => 68, "yAxis" => 5, "zIndex" => 47];
         $this->assertEquals($res12, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSeries(true);
+
+        $this->assertNull($obj1->getData());
+        $this->assertNull($obj1->getDataParser());
+        $this->assertNull($obj1->getDataURL());
+        $this->assertNull($obj1->getId());
+        $this->assertNull($obj1->getIndex());
+        $this->assertNull($obj1->getLegendIndex());
+        $this->assertNull($obj1->getName());
+        $this->assertNull($obj1->getStack());
+        $this->assertNull($obj1->getType());
+        $this->assertNull($obj1->getXAxis());
+        $this->assertNull($obj1->getYAxis());
+        $this->assertNull($obj1->getZIndex());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsSeries(false);
+
+        $this->assertNull($obj0->getData());
+        $this->assertNull($obj0->getDataParser());
+        $this->assertNull($obj0->getDataURL());
+        $this->assertNull($obj0->getId());
+        $this->assertNull($obj0->getIndex());
+        $this->assertNull($obj0->getLegendIndex());
+        $this->assertNull($obj0->getName());
+        $this->assertNull($obj0->getStack());
+        $this->assertNull($obj0->getType());
+        $this->assertEquals("0", $obj0->getXAxis());
+        $this->assertEquals("0", $obj0->getYAxis());
+        $this->assertNull($obj0->getZIndex());
     }
 
 }

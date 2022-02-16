@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,56 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsContextButtonTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(true);
-
-        $this->assertNull($obj1->getAlign());
-        $this->assertNull($obj1->getEnabled());
-        $this->assertNull($obj1->getHeight());
-        $this->assertNull($obj1->getMenuItems());
-        $this->assertNull($obj1->getOnclick());
-        $this->assertNull($obj1->getSymbol());
-        $this->assertNull($obj1->getSymbolFill());
-        $this->assertNull($obj1->getSymbolSize());
-        $this->assertNull($obj1->getSymbolStroke());
-        $this->assertNull($obj1->getSymbolStrokeWidth());
-        $this->assertNull($obj1->getSymbolX());
-        $this->assertNull($obj1->getSymbolY());
-        $this->assertNull($obj1->getText());
-        $this->assertNull($obj1->getTheme());
-        $this->assertNull($obj1->getVerticalAlign());
-        $this->assertNull($obj1->getWidth());
-        $this->assertNull($obj1->getX());
-        $this->assertNull($obj1->getY());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(false);
-
-        $this->assertEquals("right", $obj0->getAlign());
-        $this->assertEquals(true, $obj0->getEnabled());
-        $this->assertEquals(20, $obj0->getHeight());
-        $this->assertNull($obj0->getMenuItems());
-        $this->assertNull($obj0->getOnclick());
-        $this->assertEquals("menu", $obj0->getSymbol());
-        $this->assertEquals("#666666", $obj0->getSymbolFill());
-        $this->assertEquals(14, $obj0->getSymbolSize());
-        $this->assertEquals("#666666", $obj0->getSymbolStroke());
-        $this->assertEquals(1, $obj0->getSymbolStrokeWidth());
-        $this->assertEquals(12.5, $obj0->getSymbolX());
-        $this->assertEquals(10.5, $obj0->getSymbolY());
-        $this->assertNull($obj0->getText());
-        $this->assertNull($obj0->getTheme());
-        $this->assertEquals("top", $obj0->getVerticalAlign());
-        $this->assertEquals(24, $obj0->getWidth());
-        $this->assertEquals(-10, $obj0->getX());
-        $this->assertEquals(0, $obj0->getY());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -182,6 +132,56 @@ final class HighchartsContextButtonTest extends AbstractTestCase {
 
         $res18 = ["align" => "right", "enabled" => 1, "height" => 9, "menuItems" => ["menuItems" => "3081c7ff634acf2d84cebc0fe12eef3f"], "onclick" => "c0bb2196426022e8adf9a5b6d34fd45e", "symbol" => "menu", "symbolFill" => "91c9eea38e42d2f606dbfea1e027bfbf", "symbolSize" => 80, "symbolStroke" => "07f92b4194c5eb604aeb59004eeaab2a", "symbolStrokeWidth" => 21, "symbolX" => 82, "symbolY" => 83, "text" => "1cb251ec0d568de6a929b520c4aed8d1", "theme" => ["theme" => "f484570d7cf557020e11ace406901b10"], "verticalAlign" => "bottom", "width" => 82, "x" => 86, "y" => 10];
         $this->assertEquals($res18, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(true);
+
+        $this->assertNull($obj1->getAlign());
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getHeight());
+        $this->assertNull($obj1->getMenuItems());
+        $this->assertNull($obj1->getOnclick());
+        $this->assertNull($obj1->getSymbol());
+        $this->assertNull($obj1->getSymbolFill());
+        $this->assertNull($obj1->getSymbolSize());
+        $this->assertNull($obj1->getSymbolStroke());
+        $this->assertNull($obj1->getSymbolStrokeWidth());
+        $this->assertNull($obj1->getSymbolX());
+        $this->assertNull($obj1->getSymbolY());
+        $this->assertNull($obj1->getText());
+        $this->assertNull($obj1->getTheme());
+        $this->assertNull($obj1->getVerticalAlign());
+        $this->assertNull($obj1->getWidth());
+        $this->assertNull($obj1->getX());
+        $this->assertNull($obj1->getY());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(false);
+
+        $this->assertEquals("right", $obj0->getAlign());
+        $this->assertEquals(true, $obj0->getEnabled());
+        $this->assertEquals(20, $obj0->getHeight());
+        $this->assertNull($obj0->getMenuItems());
+        $this->assertNull($obj0->getOnclick());
+        $this->assertEquals("menu", $obj0->getSymbol());
+        $this->assertEquals("#666666", $obj0->getSymbolFill());
+        $this->assertEquals(14, $obj0->getSymbolSize());
+        $this->assertEquals("#666666", $obj0->getSymbolStroke());
+        $this->assertEquals(1, $obj0->getSymbolStrokeWidth());
+        $this->assertEquals(12.5, $obj0->getSymbolX());
+        $this->assertEquals(10.5, $obj0->getSymbolY());
+        $this->assertNull($obj0->getText());
+        $this->assertNull($obj0->getTheme());
+        $this->assertEquals("top", $obj0->getVerticalAlign());
+        $this->assertEquals(24, $obj0->getWidth());
+        $this->assertEquals(-10, $obj0->getX());
+        $this->assertEquals(0, $obj0->getY());
     }
 
 }

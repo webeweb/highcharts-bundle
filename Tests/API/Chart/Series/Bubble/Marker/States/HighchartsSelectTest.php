@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,30 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsSelectTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\Marker\States\HighchartsSelect(true);
-
-        $this->assertNull($obj1->getEnabled());
-        $this->assertNull($obj1->getFillColor());
-        $this->assertNull($obj1->getLineColor());
-        $this->assertNull($obj1->getLineWidth());
-        $this->assertNull($obj1->getRadius());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\Marker\States\HighchartsSelect(false);
-
-        $this->assertEquals(true, $obj0->getEnabled());
-        $this->assertNull($obj0->getFillColor());
-        $this->assertEquals("#000000", $obj0->getLineColor());
-        $this->assertEquals(0, $obj0->getLineWidth());
-        $this->assertNull($obj0->getRadius());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -91,6 +67,30 @@ final class HighchartsSelectTest extends AbstractTestCase {
 
         $res5 = ["enabled" => 0, "fillColor" => "1fde055d3ff900e04ca08bc82066d7fd", "lineColor" => "c2580eebfdbdb9fc629f50cc147c3f63", "lineWidth" => 51, "radius" => 3];
         $this->assertEquals($res5, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\Marker\States\HighchartsSelect(true);
+
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getFillColor());
+        $this->assertNull($obj1->getLineColor());
+        $this->assertNull($obj1->getLineWidth());
+        $this->assertNull($obj1->getRadius());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Bubble\Marker\States\HighchartsSelect(false);
+
+        $this->assertEquals(true, $obj0->getEnabled());
+        $this->assertNull($obj0->getFillColor());
+        $this->assertEquals("#000000", $obj0->getLineColor());
+        $this->assertEquals(0, $obj0->getLineWidth());
+        $this->assertNull($obj0->getRadius());
     }
 
 }

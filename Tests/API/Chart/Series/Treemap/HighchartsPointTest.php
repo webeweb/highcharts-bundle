@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,18 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsPointTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Treemap\HighchartsPoint(true);
-
-        $this->assertNull($obj1->getEvents());
-    }
 
     /**
      * Tests clear()
@@ -89,6 +77,18 @@ final class HighchartsPointTest extends AbstractTestCase {
 
         $res1 = ["events" => []];
         $this->assertEquals($res1, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Treemap\HighchartsPoint(true);
+
+        $this->assertNull($obj1->getEvents());
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,40 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsTitleTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle(true);
-
-        $this->assertNull($obj1->getAlign());
-        $this->assertNull($obj1->getFloating());
-        $this->assertNull($obj1->getMargin());
-        $this->assertNull($obj1->getStyle());
-        $this->assertNull($obj1->getText());
-        $this->assertNull($obj1->getUseHTML());
-        $this->assertNull($obj1->getVerticalAlign());
-        $this->assertNull($obj1->getWidthAdjust());
-        $this->assertNull($obj1->getX());
-        $this->assertNull($obj1->getY());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle(false);
-
-        $this->assertEquals("center", $obj0->getAlign());
-        $this->assertEquals(false, $obj0->getFloating());
-        $this->assertEquals(15, $obj0->getMargin());
-        $this->assertEquals(["color" => "#333333", "fontSize" => "18px"], $obj0->getStyle());
-        $this->assertEquals("Chart title", $obj0->getText());
-        $this->assertEquals(false, $obj0->getUseHTML());
-        $this->assertNull($obj0->getVerticalAlign());
-        $this->assertEquals(-44, $obj0->getWidthAdjust());
-        $this->assertEquals(0, $obj0->getX());
-        $this->assertNull($obj0->getY());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -126,6 +92,40 @@ final class HighchartsTitleTest extends AbstractTestCase {
 
         $res10 = ["align" => "right", "floating" => 1, "margin" => 79, "style" => ["style" => "a1b01e734b573fca08eb1a65e6df9a38"], "text" => "1cb251ec0d568de6a929b520c4aed8d1", "useHTML" => 0, "verticalAlign" => "bottom", "widthAdjust" => 92, "x" => 91, "y" => 60];
         $this->assertEquals($res10, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle(true);
+
+        $this->assertNull($obj1->getAlign());
+        $this->assertNull($obj1->getFloating());
+        $this->assertNull($obj1->getMargin());
+        $this->assertNull($obj1->getStyle());
+        $this->assertNull($obj1->getText());
+        $this->assertNull($obj1->getUseHTML());
+        $this->assertNull($obj1->getVerticalAlign());
+        $this->assertNull($obj1->getWidthAdjust());
+        $this->assertNull($obj1->getX());
+        $this->assertNull($obj1->getY());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsTitle(false);
+
+        $this->assertEquals("center", $obj0->getAlign());
+        $this->assertEquals(false, $obj0->getFloating());
+        $this->assertEquals(15, $obj0->getMargin());
+        $this->assertEquals(["color" => "#333333", "fontSize" => "18px"], $obj0->getStyle());
+        $this->assertEquals("Chart title", $obj0->getText());
+        $this->assertEquals(false, $obj0->getUseHTML());
+        $this->assertNull($obj0->getVerticalAlign());
+        $this->assertEquals(-44, $obj0->getWidthAdjust());
+        $this->assertEquals(0, $obj0->getX());
+        $this->assertNull($obj0->getY());
     }
 
 }

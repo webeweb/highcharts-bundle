@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,26 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsKeyboardNavigationTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation(true);
-
-        $this->assertNull($obj1->getEnabled());
-        $this->assertNull($obj1->getSkipNullPoints());
-        $this->assertNull($obj1->getTabThroughChartElements());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation(false);
-
-        $this->assertEquals(true, $obj0->getEnabled());
-        $this->assertEquals(false, $obj0->getSkipNullPoints());
-        $this->assertEquals(true, $obj0->getTabThroughChartElements());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -77,6 +57,26 @@ final class HighchartsKeyboardNavigationTest extends AbstractTestCase {
 
         $res3 = ["enabled" => 1, "skipNullPoints" => 0, "tabThroughChartElements" => 0];
         $this->assertEquals($res3, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation(true);
+
+        $this->assertNull($obj1->getEnabled());
+        $this->assertNull($obj1->getSkipNullPoints());
+        $this->assertNull($obj1->getTabThroughChartElements());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Accessibility\HighchartsKeyboardNavigation(false);
+
+        $this->assertEquals(true, $obj0->getEnabled());
+        $this->assertEquals(false, $obj0->getSkipNullPoints());
+        $this->assertEquals(true, $obj0->getTabThroughChartElements());
     }
 
 }

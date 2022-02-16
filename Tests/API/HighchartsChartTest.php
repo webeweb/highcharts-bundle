@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,66 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsChartTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(true);
-
-        $this->assertNull($obj1->getAccessibility());
-        $this->assertNull($obj1->getChart());
-        $this->assertNull($obj1->getColors());
-        $this->assertNull($obj1->getCredits());
-        $this->assertNull($obj1->getData());
-        $this->assertNull($obj1->getDefs());
-        $this->assertNull($obj1->getDrilldown());
-        $this->assertNull($obj1->getExporting());
-        $this->assertNull($obj1->getLabels());
-        $this->assertNull($obj1->getLegend());
-        $this->assertNull($obj1->getLoading());
-        $this->assertNull($obj1->getNavigation());
-        $this->assertNull($obj1->getNoData());
-        $this->assertNull($obj1->getPane());
-        $this->assertNull($obj1->getPlotOptions());
-        $this->assertNull($obj1->getResponsive());
-        $this->assertNull($obj1->getSeries());
-        $this->assertNull($obj1->getSubtitle());
-        $this->assertNull($obj1->getTitle());
-        $this->assertNull($obj1->getTooltip());
-        $this->assertNull($obj1->getXAxis());
-        $this->assertNull($obj1->getYAxis());
-        $this->assertNull($obj1->getZAxis());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
-
-        $this->assertNull($obj0->getAccessibility());
-        $this->assertNull($obj0->getChart());
-        $this->assertEquals(["#7cb5ec", "#434348", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"], $obj0->getColors());
-        $this->assertNull($obj0->getCredits());
-        $this->assertNull($obj0->getData());
-        $this->assertNull($obj0->getDefs());
-        $this->assertNull($obj0->getDrilldown());
-        $this->assertNull($obj0->getExporting());
-        $this->assertNull($obj0->getLabels());
-        $this->assertNull($obj0->getLegend());
-        $this->assertNull($obj0->getLoading());
-        $this->assertNull($obj0->getNavigation());
-        $this->assertNull($obj0->getNoData());
-        $this->assertNull($obj0->getPane());
-        $this->assertNull($obj0->getPlotOptions());
-        $this->assertNull($obj0->getResponsive());
-        $this->assertNull($obj0->getSeries());
-        $this->assertNull($obj0->getSubtitle());
-        $this->assertNull($obj0->getTitle());
-        $this->assertNull($obj0->getTooltip());
-        $this->assertNull($obj0->getXAxis());
-        $this->assertNull($obj0->getYAxis());
-        $this->assertNull($obj0->getZAxis());
-    }
 
     /**
      * Tests clear()
@@ -471,6 +411,66 @@ final class HighchartsChartTest extends AbstractTestCase {
 
         $res23 = ["accessibility" => [], "chart" => [], "colors" => ["colors" => "62848e3ce5804aa985513a7922ff87b2"], "credits" => [], "data" => [], "defs" => ["defs" => "cd8fc2597193b4c938e7ff50062936e3"], "drilldown" => [], "exporting" => [], "labels" => [], "legend" => [], "loading" => [], "navigation" => [], "noData" => [], "pane" => ["pane" => "c6c6ce72f4dff102e38d74f7143a2ea8"], "plotOptions" => [], "responsive" => [], "series" => ["series" => "bef99584217af744e404ed44a33af589"], "subtitle" => [], "title" => [], "tooltip" => [], "xAxis" => ["xAxis" => "b919a806dedef37999b45653bdde66c6"], "yAxis" => ["yAxis" => "f3cd431f5ac1725ea18774e5c02f2889"], "zAxis" => []];
         $this->assertEquals($res23, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(true);
+
+        $this->assertNull($obj1->getAccessibility());
+        $this->assertNull($obj1->getChart());
+        $this->assertNull($obj1->getColors());
+        $this->assertNull($obj1->getCredits());
+        $this->assertNull($obj1->getData());
+        $this->assertNull($obj1->getDefs());
+        $this->assertNull($obj1->getDrilldown());
+        $this->assertNull($obj1->getExporting());
+        $this->assertNull($obj1->getLabels());
+        $this->assertNull($obj1->getLegend());
+        $this->assertNull($obj1->getLoading());
+        $this->assertNull($obj1->getNavigation());
+        $this->assertNull($obj1->getNoData());
+        $this->assertNull($obj1->getPane());
+        $this->assertNull($obj1->getPlotOptions());
+        $this->assertNull($obj1->getResponsive());
+        $this->assertNull($obj1->getSeries());
+        $this->assertNull($obj1->getSubtitle());
+        $this->assertNull($obj1->getTitle());
+        $this->assertNull($obj1->getTooltip());
+        $this->assertNull($obj1->getXAxis());
+        $this->assertNull($obj1->getYAxis());
+        $this->assertNull($obj1->getZAxis());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(false);
+
+        $this->assertNull($obj0->getAccessibility());
+        $this->assertNull($obj0->getChart());
+        $this->assertEquals(["#7cb5ec", "#434348", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"], $obj0->getColors());
+        $this->assertNull($obj0->getCredits());
+        $this->assertNull($obj0->getData());
+        $this->assertNull($obj0->getDefs());
+        $this->assertNull($obj0->getDrilldown());
+        $this->assertNull($obj0->getExporting());
+        $this->assertNull($obj0->getLabels());
+        $this->assertNull($obj0->getLegend());
+        $this->assertNull($obj0->getLoading());
+        $this->assertNull($obj0->getNavigation());
+        $this->assertNull($obj0->getNoData());
+        $this->assertNull($obj0->getPane());
+        $this->assertNull($obj0->getPlotOptions());
+        $this->assertNull($obj0->getResponsive());
+        $this->assertNull($obj0->getSeries());
+        $this->assertNull($obj0->getSubtitle());
+        $this->assertNull($obj0->getTitle());
+        $this->assertNull($obj0->getTooltip());
+        $this->assertNull($obj0->getXAxis());
+        $this->assertNull($obj0->getYAxis());
+        $this->assertNull($obj0->getZAxis());
     }
 
 }

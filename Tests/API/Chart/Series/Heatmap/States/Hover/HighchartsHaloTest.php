@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,26 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsHaloTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\States\Hover\HighchartsHalo(true);
-
-        $this->assertNull($obj1->getAttributes());
-        $this->assertNull($obj1->getOpacity());
-        $this->assertNull($obj1->getSize());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\States\Hover\HighchartsHalo(false);
-
-        $this->assertNull($obj0->getAttributes());
-        $this->assertEquals(0.25, $obj0->getOpacity());
-        $this->assertEquals(10, $obj0->getSize());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -77,6 +57,26 @@ final class HighchartsHaloTest extends AbstractTestCase {
 
         $res3 = ["attributes" => ["attributes" => "736b91750e516139acc13c5eb6564f92"], "opacity" => 29, "size" => 67];
         $this->assertEquals($res3, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\States\Hover\HighchartsHalo(true);
+
+        $this->assertNull($obj1->getAttributes());
+        $this->assertNull($obj1->getOpacity());
+        $this->assertNull($obj1->getSize());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Series\Heatmap\States\Hover\HighchartsHalo(false);
+
+        $this->assertNull($obj0->getAttributes());
+        $this->assertEquals(0.25, $obj0->getOpacity());
+        $this->assertEquals(10, $obj0->getSize());
     }
 
 }

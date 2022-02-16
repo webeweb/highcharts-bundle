@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,34 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsGlobalTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal(true);
-
-        $this->assertNull($obj1->getDate());
-        $this->assertNull($obj1->getVMLRadialGradientURL());
-        $this->assertNull($obj1->getCanvasToolsURL());
-        $this->assertNull($obj1->getGetTimezoneOffset());
-        $this->assertNull($obj1->getTimezone());
-        $this->assertNull($obj1->getTimezoneOffset());
-        $this->assertNull($obj1->getUseUTC());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal(false);
-
-        $this->assertNull($obj0->getDate());
-        $this->assertEquals("http://code.highcharts.com/{version}/gfx/vml-radial-gradient.png", $obj0->getVMLRadialGradientURL());
-        $this->assertEquals("http://code.highcharts.com/{version}/modules/canvas-tools.js", $obj0->getCanvasToolsURL());
-        $this->assertNull($obj0->getGetTimezoneOffset());
-        $this->assertNull($obj0->getTimezone());
-        $this->assertEquals(0, $obj0->getTimezoneOffset());
-        $this->assertEquals(true, $obj0->getUseUTC());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -105,6 +77,34 @@ final class HighchartsGlobalTest extends AbstractTestCase {
 
         $res7 = ["Date" => ["Date" => "44749712dbec183e983dcd78a7736c41"], "VMLRadialGradientURL" => "4fff8f495410c9be27e06b48ed58de29", "canvasToolsURL" => "a676408d51fa75bb7824a5b404b76cd7", "getTimezoneOffset" => "bc2cf98d144cf7852b57fe1dc90d1199", "timezone" => "b2c6cc48f97ccd71b16d31d88fc177a6", "timezoneOffset" => 82, "useUTC" => 1];
         $this->assertEquals($res7, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal(true);
+
+        $this->assertNull($obj1->getDate());
+        $this->assertNull($obj1->getVMLRadialGradientURL());
+        $this->assertNull($obj1->getCanvasToolsURL());
+        $this->assertNull($obj1->getGetTimezoneOffset());
+        $this->assertNull($obj1->getTimezone());
+        $this->assertNull($obj1->getTimezoneOffset());
+        $this->assertNull($obj1->getUseUTC());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Options\HighchartsGlobal(false);
+
+        $this->assertNull($obj0->getDate());
+        $this->assertEquals("http://code.highcharts.com/{version}/gfx/vml-radial-gradient.png", $obj0->getVMLRadialGradientURL());
+        $this->assertEquals("http://code.highcharts.com/{version}/modules/canvas-tools.js", $obj0->getCanvasToolsURL());
+        $this->assertNull($obj0->getGetTimezoneOffset());
+        $this->assertNull($obj0->getTimezone());
+        $this->assertEquals(0, $obj0->getTimezoneOffset());
+        $this->assertEquals(true, $obj0->getUseUTC());
     }
 
 }

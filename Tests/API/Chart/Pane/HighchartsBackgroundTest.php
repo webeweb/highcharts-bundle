@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
  * This file is part of the highcharts-bundle package.
  *
  * (c) 2017 WEBEWEB
@@ -21,34 +21,6 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
  * @version 5.0.14
  */
 final class HighchartsBackgroundTest extends AbstractTestCase {
-
-    /**
-     * Tests __construct()
-     *
-     * @return void
-     */
-    public function test__construct() {
-
-        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground(true);
-
-        $this->assertNull($obj1->getBackgroundColor());
-        $this->assertNull($obj1->getBorderColor());
-        $this->assertNull($obj1->getBorderWidth());
-        $this->assertNull($obj1->getClassName());
-        $this->assertNull($obj1->getInnerRadius());
-        $this->assertNull($obj1->getOuterRadius());
-        $this->assertNull($obj1->getShape());
-
-        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground(false);
-
-        $this->assertNull($obj0->getBackgroundColor());
-        $this->assertEquals("#cccccc", $obj0->getBorderColor());
-        $this->assertEquals(1, $obj0->getBorderWidth());
-        $this->assertEquals("highcharts-pane", $obj0->getClassName());
-        $this->assertEquals("0", $obj0->getInnerRadius());
-        $this->assertEquals("105%", $obj0->getOuterRadius());
-        $this->assertEquals("solid", $obj0->getShape());
-    }
 
     /**
      * Tests jsonSerialize()
@@ -105,6 +77,34 @@ final class HighchartsBackgroundTest extends AbstractTestCase {
 
         $res7 = ["backgroundColor" => "930f2a43179a7ae5fc25ed873223e99f", "borderColor" => "97da935a74593c55d78be9d1295aa994", "borderWidth" => 47, "className" => "6f66e878c62db60568a3487869695820", "innerRadius" => 44, "outerRadius" => 36, "shape" => "arc"];
         $this->assertEquals($res7, $obj->toArray());
+    }
+
+    /**
+     * Tests __construct()
+     *
+     * @return void
+     */
+    public function test__construct() {
+
+        $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground(true);
+
+        $this->assertNull($obj1->getBackgroundColor());
+        $this->assertNull($obj1->getBorderColor());
+        $this->assertNull($obj1->getBorderWidth());
+        $this->assertNull($obj1->getClassName());
+        $this->assertNull($obj1->getInnerRadius());
+        $this->assertNull($obj1->getOuterRadius());
+        $this->assertNull($obj1->getShape());
+
+        $obj0 = new \WBW\Bundle\HighchartsBundle\API\Chart\Pane\HighchartsBackground(false);
+
+        $this->assertNull($obj0->getBackgroundColor());
+        $this->assertEquals("#cccccc", $obj0->getBorderColor());
+        $this->assertEquals(1, $obj0->getBorderWidth());
+        $this->assertEquals("highcharts-pane", $obj0->getClassName());
+        $this->assertEquals("0", $obj0->getInnerRadius());
+        $this->assertEquals("105%", $obj0->getOuterRadius());
+        $this->assertEquals("solid", $obj0->getShape());
     }
 
 }
