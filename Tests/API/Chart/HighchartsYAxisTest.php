@@ -23,11 +23,11 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 final class HighchartsYAxisTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */
-    public function testConstructor() {
+    public function test__construct() {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsYAxis(true);
 
@@ -177,7 +177,7 @@ final class HighchartsYAxisTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the clear() method.
+     * Tests clear()
      *
      * @return void
      */
@@ -198,7 +198,7 @@ final class HighchartsYAxisTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -210,7 +210,7 @@ final class HighchartsYAxisTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newCrosshair() method.
+     * Tests newCrosshair()
      *
      * @return void.
      */
@@ -223,7 +223,7 @@ final class HighchartsYAxisTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newEvents() method.
+     * Tests newEvents()
      *
      * @return void.
      */
@@ -236,7 +236,7 @@ final class HighchartsYAxisTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newLabels() method.
+     * Tests newLabels()
      *
      * @return void.
      */
@@ -249,7 +249,7 @@ final class HighchartsYAxisTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newStackLabels() method.
+     * Tests newStackLabels()
      *
      * @return void.
      */
@@ -262,7 +262,7 @@ final class HighchartsYAxisTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newTitle() method.
+     * Tests newTitle()
      *
      * @return void.
      */
@@ -275,7 +275,7 @@ final class HighchartsYAxisTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the toArray() method.
+     * Tests toArray()
      *
      * @return void
      */

@@ -30,7 +30,7 @@ use WBW\Library\Core\Exception\IO\FileNotFoundException;
 final class HighchartsTwigExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the getFunctions() method.
+     * Tests getFunctions()
      *
      * @return void
      */
@@ -57,7 +57,7 @@ final class HighchartsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the highchartsChartFunction() method.
+     * Tests highchartsChartFunction()
      *
      * @return void
      */
@@ -78,7 +78,7 @@ final class HighchartsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the highchartsScriptFunction() method.
+     * Tests highchartsScriptFunction()
      *
      * @return void
      */
@@ -110,7 +110,7 @@ final class HighchartsTwigExtensionTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the highchartsSetOptionsFunction() method.
+     * Tests highchartsSetOptionsFunction()
      *
      * @return void
      */

@@ -23,11 +23,11 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 final class HighchartsChartTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */
-    public function testConstructor() {
+    public function test__construct() {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\HighchartsChart(true);
 
@@ -83,7 +83,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the clear() method.
+     * Tests clear()
      *
      * @return void
      */
@@ -116,7 +116,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -128,7 +128,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newAccessibility() method.
+     * Tests newAccessibility()
      *
      * @return void.
      */
@@ -141,7 +141,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newChart() method.
+     * Tests newChart()
      *
      * @return void.
      */
@@ -154,7 +154,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newCredits() method.
+     * Tests newCredits()
      *
      * @return void.
      */
@@ -167,7 +167,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newData() method.
+     * Tests newData()
      *
      * @return void.
      */
@@ -180,7 +180,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newDrilldown() method.
+     * Tests newDrilldown()
      *
      * @return void.
      */
@@ -193,7 +193,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newExporting() method.
+     * Tests newExporting()
      *
      * @return void.
      */
@@ -206,7 +206,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newLabels() method.
+     * Tests newLabels()
      *
      * @return void.
      */
@@ -219,7 +219,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newLegend() method.
+     * Tests newLegend()
      *
      * @return void.
      */
@@ -232,7 +232,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newLoading() method.
+     * Tests newLoading()
      *
      * @return void.
      */
@@ -245,7 +245,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newNavigation() method.
+     * Tests newNavigation()
      *
      * @return void.
      */
@@ -258,7 +258,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newNoData() method.
+     * Tests newNoData()
      *
      * @return void.
      */
@@ -271,7 +271,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newPlotOptions() method.
+     * Tests newPlotOptions()
      *
      * @return void.
      */
@@ -284,7 +284,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newResponsive() method.
+     * Tests newResponsive()
      *
      * @return void.
      */
@@ -297,7 +297,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newSubtitle() method.
+     * Tests newSubtitle()
      *
      * @return void.
      */
@@ -310,7 +310,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newTitle() method.
+     * Tests newTitle()
      *
      * @return void.
      */
@@ -323,7 +323,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newTooltip() method.
+     * Tests newTooltip()
      *
      * @return void.
      */
@@ -336,7 +336,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newZAxis() method.
+     * Tests newZAxis()
      *
      * @return void.
      */
@@ -349,7 +349,7 @@ final class HighchartsChartTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the toArray() method.
+     * Tests toArray()
      *
      * @return void
      */

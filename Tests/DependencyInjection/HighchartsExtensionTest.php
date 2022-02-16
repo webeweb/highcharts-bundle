@@ -30,7 +30,7 @@ use WBW\Bundle\HighchartsBundle\Twig\Extension\HighchartsTwigExtension;
 final class HighchartsExtensionTest extends AbstractTestCase {
 
     /**
-     * Tests the load() method.
+     * Tests load()
      *
      * @return void
      */

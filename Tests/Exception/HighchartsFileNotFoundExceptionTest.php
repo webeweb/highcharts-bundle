@@ -24,7 +24,7 @@ use WBW\Bundle\HighchartsBundle\Exception\HighchartsFileNotFoundException;
 final class HighchartsFileNotFoundExceptionTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */

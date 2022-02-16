@@ -23,11 +23,11 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 final class HighchartsFrameTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */
-    public function testConstructor() {
+    public function test__construct() {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d\HighchartsFrame(true);
 
@@ -38,7 +38,7 @@ final class HighchartsFrameTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the clear() method.
+     * Tests clear()
      *
      * @return void
      */
@@ -57,7 +57,7 @@ final class HighchartsFrameTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -69,7 +69,7 @@ final class HighchartsFrameTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newBack() method.
+     * Tests newBack()
      *
      * @return void.
      */
@@ -82,7 +82,7 @@ final class HighchartsFrameTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newBottom() method.
+     * Tests newBottom()
      *
      * @return void.
      */
@@ -95,7 +95,7 @@ final class HighchartsFrameTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newSide() method.
+     * Tests newSide()
      *
      * @return void.
      */
@@ -108,7 +108,7 @@ final class HighchartsFrameTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the toArray() method.
+     * Tests toArray()
      *
      * @return void
      */

@@ -24,7 +24,7 @@ use WBW\Bundle\HighchartsBundle\Wrapper\HighchartsWrapper;
 final class HighchartsWrapperTest extends AbstractTestCase {
 
     /**
-     * Tests the unwrap() method.
+     * Tests unwrap()
      *
      * @return void
      */
@@ -42,7 +42,7 @@ final class HighchartsWrapperTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the wrap() method.
+     * Tests wrap()
      *
      * @return void
      */

@@ -23,11 +23,11 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 final class HighchartsPyramidTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */
-    public function testConstructor() {
+    public function test__construct() {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\PlotOptions\HighchartsPyramid(true);
 
@@ -109,7 +109,7 @@ final class HighchartsPyramidTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the clear() method.
+     * Tests clear()
      *
      * @return void
      */
@@ -129,7 +129,7 @@ final class HighchartsPyramidTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -141,7 +141,7 @@ final class HighchartsPyramidTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newDataLabels() method.
+     * Tests newDataLabels()
      *
      * @return void.
      */
@@ -154,7 +154,7 @@ final class HighchartsPyramidTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newEvents() method.
+     * Tests newEvents()
      *
      * @return void.
      */
@@ -167,7 +167,7 @@ final class HighchartsPyramidTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newPoint() method.
+     * Tests newPoint()
      *
      * @return void.
      */
@@ -180,7 +180,7 @@ final class HighchartsPyramidTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newStates() method.
+     * Tests newStates()
      *
      * @return void.
      */
@@ -193,7 +193,7 @@ final class HighchartsPyramidTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the toArray() method.
+     * Tests toArray()
      *
      * @return void
      */

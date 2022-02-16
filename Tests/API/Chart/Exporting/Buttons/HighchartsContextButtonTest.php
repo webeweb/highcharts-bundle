@@ -23,11 +23,11 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 final class HighchartsContextButtonTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */
-    public function testConstructor() {
+    public function test__construct() {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\Exporting\Buttons\HighchartsContextButton(true);
 
@@ -73,7 +73,7 @@ final class HighchartsContextButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -85,7 +85,7 @@ final class HighchartsContextButtonTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the toArray() method.
+     * Tests toArray()
      *
      * @return void
      */

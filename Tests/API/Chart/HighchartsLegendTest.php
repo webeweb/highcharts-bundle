@@ -23,11 +23,11 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 final class HighchartsLegendTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */
-    public function testConstructor() {
+    public function test__construct() {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsLegend(true);
 
@@ -111,7 +111,7 @@ final class HighchartsLegendTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the clear() method.
+     * Tests clear()
      *
      * @return void
      */
@@ -129,7 +129,7 @@ final class HighchartsLegendTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -141,7 +141,7 @@ final class HighchartsLegendTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newNavigation() method.
+     * Tests newNavigation()
      *
      * @return void.
      */
@@ -154,7 +154,7 @@ final class HighchartsLegendTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newTitle() method.
+     * Tests newTitle()
      *
      * @return void.
      */
@@ -167,7 +167,7 @@ final class HighchartsLegendTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the toArray() method.
+     * Tests toArray()
      *
      * @return void
      */

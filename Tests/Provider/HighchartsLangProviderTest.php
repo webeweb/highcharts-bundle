@@ -81,7 +81,7 @@ final class HighchartsLangProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getMonths() method.
+     * Tests getMonths()
      *
      * @return void.
      */
@@ -121,7 +121,7 @@ final class HighchartsLangProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getMonths() method.
+     * Tests getMonths()
      *
      * @return void.
      */
@@ -141,7 +141,7 @@ final class HighchartsLangProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getShortMonths() method.
+     * Tests getShortMonths()
      *
      * @return void.
      */
@@ -161,7 +161,7 @@ final class HighchartsLangProviderTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the getWeekdays() method.
+     * Tests getWeekdays()
      *
      * @return void.
      */

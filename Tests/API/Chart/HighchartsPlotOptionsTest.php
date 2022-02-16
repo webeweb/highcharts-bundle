@@ -23,11 +23,11 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 final class HighchartsPlotOptionsTest extends AbstractTestCase {
 
     /**
-     * Tests the __construct() method.
+     * Tests __construct()
      *
      * @return void
      */
-    public function testConstructor() {
+    public function test__construct() {
 
         $obj1 = new \WBW\Bundle\HighchartsBundle\API\Chart\HighchartsPlotOptions(true);
 
@@ -57,7 +57,7 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the clear() method.
+     * Tests clear()
      *
      * @return void
      */
@@ -84,7 +84,7 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the jsonSerialize() method.
+     * Tests jsonSerialize()
      *
      * @return void
      */
@@ -96,7 +96,7 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newArea() method.
+     * Tests newArea()
      *
      * @return void.
      */
@@ -109,7 +109,7 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newArearange() method.
+     * Tests newArearange()
      *
      * @return void.
      */
@@ -122,7 +122,7 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newAreaspline() method.
+     * Tests newAreaspline()
      *
      * @return void.
      */
@@ -135,7 +135,7 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newAreasplinerange() method.
+     * Tests newAreasplinerange()
      *
      * @return void.
      */
@@ -148,7 +148,7 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newBar() method.
+     * Tests newBar()
      *
      * @return void.
      */
@@ -161,7 +161,7 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newColumn() method.
+     * Tests newColumn()
      *
      * @return void.
      */
@@ -174,7 +174,7 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newLine() method.
+     * Tests newLine()
      *
      * @return void.
      */
@@ -187,7 +187,7 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newPie() method.
+     * Tests newPie()
      *
      * @return void.
      */
@@ -200,7 +200,7 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newScatter() method.
+     * Tests newScatter()
      *
      * @return void.
      */
@@ -213,7 +213,7 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newSeries() method.
+     * Tests newSeries()
      *
      * @return void.
      */
@@ -226,7 +226,7 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the newSpline() method.
+     * Tests newSpline()
      *
      * @return void.
      */
@@ -239,7 +239,7 @@ final class HighchartsPlotOptionsTest extends AbstractTestCase {
     }
 
     /**
-     * Tests the toArray() method.
+     * Tests toArray()
      *
      * @return void
      */
