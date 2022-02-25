@@ -17,7 +17,7 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
 /**
  * Highcharts events.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HighchartsBundle\API\Chart\ZAxis
  * @version 5.0.14
  * @final

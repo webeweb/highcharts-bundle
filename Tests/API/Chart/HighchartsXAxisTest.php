@@ -16,7 +16,7 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 /**
  * Highcharts x axis test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart
  * @version 5.0.14
  */

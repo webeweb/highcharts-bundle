@@ -16,7 +16,7 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 /**
  * Highcharts halo test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Series\Bar\States\Hover
  * @version 5.0.14
  */

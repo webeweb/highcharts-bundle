@@ -14,7 +14,7 @@ namespace WBW\Bundle\HighchartsBundle\Wrapper;
 /**
  * Highcharts wrapper.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HighchartsBundle\Wrapper
  * @final
  */

@@ -17,7 +17,7 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
 /**
  * Highcharts condition.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HighchartsBundle\API\Chart\Responsive\Rules
  * @version 5.0.14
  * @final

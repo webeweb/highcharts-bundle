@@ -16,7 +16,7 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 /**
  * Highcharts events test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\XAxis
  * @version 5.0.14
  */

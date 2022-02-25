@@ -17,7 +17,7 @@ use WBW\Library\Core\Utility\Argument\ArrayUtility;
 /**
  * Highcharts frame.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HighchartsBundle\API\Chart\Chart\Options3d
  * @version 5.0.14
  * @final

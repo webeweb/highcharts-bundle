@@ -13,7 +13,7 @@ namespace WBW\Bundle\HighchartsBundle\Exception;
 /**
  * Highcharts file not found exception.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HighchartsBundle\Exception
  * @final
  */

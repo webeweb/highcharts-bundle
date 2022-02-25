@@ -16,7 +16,7 @@ use WBW\Bundle\HighchartsBundle\Tests\AbstractTestCase;
 /**
  * Highcharts drill up button test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HighchartsBundle\Tests\API\Chart\Drilldown
  * @version 5.0.14
  */

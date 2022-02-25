@@ -17,7 +17,7 @@ use WBW\Bundle\HighchartsBundle\Exception\HighchartsFileNotFoundException;
 /**
  * Highcharts file not found exception test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HighchartsBundle\Exception
  * @final
  */

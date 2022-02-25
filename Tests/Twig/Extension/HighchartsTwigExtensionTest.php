@@ -23,7 +23,7 @@ use WBW\Library\Core\Exception\IO\FileNotFoundException;
 /**
  * Highcharts Twig extension test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HighchartsBundle\Tests\Wrapper
  * @final
  */

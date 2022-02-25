@@ -17,7 +17,7 @@ use WBW\Bundle\HighchartsBundle\Wrapper\HighchartsWrapper;
 /**
  * Highcharts wrapper test.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HighchartsBundle\Tests\Wrapper
  * @final
  */

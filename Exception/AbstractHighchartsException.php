@@ -16,7 +16,7 @@ use WBW\Library\Core\Exception\AbstractCoreException;
 /**
  * Abstract Highcharts exception.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HighchartsBundle\Exception
  * @abstract
  */

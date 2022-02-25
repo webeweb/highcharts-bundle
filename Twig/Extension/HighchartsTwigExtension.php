@@ -21,7 +21,7 @@ use WBW\Library\Core\Exception\IO\FileNotFoundException;
 /**
  * Highcharts Twig extension.
  *
- * @author webeweb <https://github.com/webeweb/>
+ * @author webeweb <https://github.com/webeweb>
  * @package WBW\Bundle\HighchartsBundle\Twig\Extension
  * @final
  */
