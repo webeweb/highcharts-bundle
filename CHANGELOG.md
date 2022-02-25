@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+### master
+
+- Improve PHPDoc
+
 ### [1.9.0](https://github.com/webeweb/highcharts-bundle/tree/v1.9.0) (2021-02-09)
 
 > IMPORTANT NOTICE: The following Symfony versions are now supported
