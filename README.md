@@ -9,6 +9,8 @@ highcharts-bundle
 [![License](https://img.shields.io/packagist/l/webeweb/highcharts-bundle.svg?style=flat-square)](https://packagist.org/packages/webeweb/highcharts-bundle)
 [![composer.lock](https://img.shields.io/badge/.lock-uncommited-important.svg?style=flat-square)](https://packagist.org/packages/webeweb/highcharts-bundle)
 
+> IMPORTANT NOTICE: This package is no longer maintained.
+
 `highcharts-bundle` eases the use of highcharts to display rich graphs and
 charts in your Symfony 2 application by providing Twig extensions and PHP
 objects to do the heavy lifting. The bundle include the excellent JS library
